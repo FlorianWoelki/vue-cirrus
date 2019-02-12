@@ -1,15 +1,25 @@
 {
   "name": "vue-cirrus",
   "version": "0.1.0",
+  "description": "",
+  "main": "src/main.js",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --target lib --name vue-cirrus ./src/components/_globals.js",
+    "build-bundle": "vue-cli-service build --target lib --name vue-cirrus ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "vue": "^2.5.22"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
