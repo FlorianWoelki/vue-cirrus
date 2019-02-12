@@ -10,7 +10,6 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name vue-cirrus ./src/components/_globals.js",
-    "build-bundle": "vue-cli-service build --target lib --name vue-cirrus ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
