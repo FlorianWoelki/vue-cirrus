@@ -1,7 +1,10 @@
 {
   "name": "vue-cirrus",
+  "author": "",
+  "license": "MIT",
+  "keywords": ["vue", "components", "cirrus", "framework"],
   "version": "0.1.0",
-  "description": "",
+  "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "src/main.js",
   "private": true,
   "scripts": {
