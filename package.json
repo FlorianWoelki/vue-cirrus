@@ -31,5 +31,10 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "browsersList": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
