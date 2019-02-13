@@ -2,7 +2,12 @@
   "name": "vue-cirrus",
   "author": "",
   "license": "MIT",
-  "keywords": ["vue", "components", "cirrus", "framework"],
+  "keywords": [
+    "vue",
+    "components",
+    "cirrus",
+    "framework"
+  ],
   "version": "0.1.0",
   "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "src/main.js",
@@ -28,6 +33,7 @@
     "@vue/cli-service": "^3.4.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "cirrus-ui": "^0.5.4",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
