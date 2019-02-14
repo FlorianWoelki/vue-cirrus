@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import TestComponent from './TestComponent.vue';
+import Button from './Button.vue';
 
 const Components = {
-  TestComponent,
+  Button,
 };
 
 Object.keys(Components).forEach(name => Vue.component(name, Components[name]));
