@@ -25,9 +25,12 @@ export default {
   },
   computed: {
     classes() {
+      const buttonStyles = ['accent', 'outline', 'outline-inverted', 'transparent', 'light', 'dark', 'black'];
+      const btnStyle = buttonStyles.includes(this.btnStyle) ? this.btnStyle : null;
+
       const classes = {
         'btn-animated': this.animated,
-        [`btn-${this.btnStyle}`]: true,
+        [`btn-${this.btnStyle}`]: btnStyle != null,
       };
 
       return classes;
