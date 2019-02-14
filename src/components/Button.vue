@@ -18,27 +18,19 @@ export default {
       type: Boolean,
       default: false,
     },
-    accent: {
-      type: Boolean,
-      default: false,
-    },
-    outline: {
-      type: Boolean,
-      default: false,
-    },
-    invertedOutline: {
-      type: Boolean,
-      default: false,
+    btnStyle: {
+      type: String,
+      default: '', // can be accent, outline, inverted-outline
     },
   },
   computed: {
     classes() {
-      return {
+      const classes = {
         'btn-animated': this.animated,
-        'btn-accent': this.accent,
-        'btn-outline': this.outline,
-        'btn-outline-inverted': this.invertedOutline,
+        [`btn-${this.btnStyle}`]: true,
       };
+
+      return classes;
     },
   },
 };
