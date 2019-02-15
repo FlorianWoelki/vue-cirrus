@@ -8,6 +8,10 @@
     <Button btnStyle="light">Light Gray button</Button>
     <Button btnStyle="dark">Dark Gray button</Button>
     <Button btnStyle="black">Black button</Button>
+    <Button tiny>Tiny button</Button>
+    <Button small>Small button</Button>
+    <Button large>Large button</Button>
+    <Button extraLarge>Extralarge button</Button>
   </div>
 </template>
 

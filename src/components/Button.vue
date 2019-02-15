@@ -1,8 +1,4 @@
 <template>
-  <!--
-    TODO: Implement transparent, light gray, dark gray, black buttons &
-    sizes
-  -->
   <button
     :class=classes
   >
@@ -20,7 +16,23 @@ export default {
     },
     btnStyle: {
       type: String,
-      default: '', // can be accent, outline, inverted-outline
+      default: '',
+    },
+    tiny: {
+      type: Boolean,
+      default: false,
+    },
+    small: {
+      type: Boolean,
+      default: false,
+    },
+    large: {
+      type: Boolean,
+      default: false,
+    },
+    extraLarge: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -31,6 +43,10 @@ export default {
       const classes = {
         'btn-animated': this.animated,
         [`btn-${this.btnStyle}`]: btnStyle != null,
+        'btn-tiny': this.tiny,
+        'btn-small': this.small,
+        'btn-large': this.large,
+        'btn-xlarge': this.extraLarge,
       };
 
       return classes;
