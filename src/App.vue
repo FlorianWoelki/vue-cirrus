@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Demo from './components/Demo.vue';
+import Demo from './Demo.vue';
 
 export default {
   name: 'app',

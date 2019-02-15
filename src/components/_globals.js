@@ -1,10 +1,12 @@
 import Vue from 'vue';
-import Button from './Button.vue';
 
-const Components = {
-  Button,
-};
+const requireComponent = require.context('.', false, /V[\w-]+.vue$/);
 
-Object.keys(Components).forEach(name => Vue.component(name, Components[name]));
+requireComponent.keys().forEach((filename) => {
+  const componentConfig = requireComponent(filename);
+  const componentName = `${filename.replace(/^\.\//, '').replace(/\.\w+$/, '').toLowerCase().replace('v', 'v-')}`;
 
-export default Components;
+  Vue.component(componentName, componentConfig.default || componentConfig);
+});
+
+export default Vue;

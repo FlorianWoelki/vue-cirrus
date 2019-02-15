@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: 'Button',
   props: {
     animated: {
       type: Boolean,
