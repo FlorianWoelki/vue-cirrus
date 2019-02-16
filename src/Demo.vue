@@ -12,6 +12,12 @@
     <v-btn small>Small button</v-btn>
     <v-btn large>Large button</v-btn>
     <v-btn extraLarge>Extralarge button</v-btn>
+
+    <v-bgroup filled>
+      <v-btn btnStyle="accent">First</v-btn>
+      <v-btn btnStyle="accent">Second</v-btn>
+      <v-btn btnStyle="accent">Third</v-btn>
+    </v-bgroup>
   </div>
 </template>
 
