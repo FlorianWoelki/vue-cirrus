@@ -1,11 +1,14 @@
 <template>
   <div class="demo">
-    <v-row fluid wrap>
-      <v-col c12 noSpace>
+    <v-row>
+      <v-col c4>
         <v-btn animated>Animated button</v-btn>
       </v-col>
-      <v-col c12 noSpace>
+      <v-col c4>
         <v-btn animated btnStyle="accent">Animated accent button</v-btn>
+      </v-col>
+      <v-col c4>
+        <v-btn animated loadingLeft>Loading Button</v-btn>
       </v-col>
     </v-row>
 

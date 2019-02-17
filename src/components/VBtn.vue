@@ -33,6 +33,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    loadingLeft: {
+      type: Boolean,
+      default: false,
+    },
+    loadingRight: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
@@ -46,6 +54,8 @@ export default {
         'btn-small': this.small,
         'btn-large': this.large,
         'btn-xlarge': this.extraLarge,
+        'animated loading loading-left': this.loadingLeft,
+        'animated loading loading-right': this.loadingRight,
       };
 
       return classes;
