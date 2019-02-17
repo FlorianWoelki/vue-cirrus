@@ -1,6 +1,6 @@
 {
   "name": "vue-cirrus",
-  "author": "",
+  "author": "Florian Woelki",
   "license": "MIT",
   "keywords": [
     "vue",
@@ -11,7 +11,7 @@
   "version": "0.1.0",
   "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "src/main.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name vue-cirrus ./src/components/_globals.js",
