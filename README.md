@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://github.com/FlorianWoelki/vue-cirrus/blob/master/img/vue-cirrus.png" width="200"></p>
+<p align="center"><img src="https://i.imgur.com/Jwu0XrO.png" width="200"></p>
 <h1 align="center">Vue Cirrus</h1>
 
 <p align="center">
