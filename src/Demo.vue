@@ -35,6 +35,10 @@
         <v-link oc>Opposite Center Link</v-link>
       </v-col>
     </v-row>
+
+    <v-code lang="java">
+      System.out.println("Hello World");
+    </v-code>
   </div>
 </template>
 
