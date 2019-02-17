@@ -15,7 +15,12 @@
 </template>
 
 <script>
+import Layout from '../mixins/layout';
+
 export default {
+  mixins: [
+    Layout,
+  ],
   props: {
     href: {
       type: String,
@@ -68,19 +73,22 @@ export default {
   },
   computed: {
     classes() {
-      return {
-        'u u-LR': this.ltr,
-        'u u-RL': this.rtl,
-        'u u-C': this.c,
-        'utb utb-LR': this.oltr,
-        'utb utb-RL': this.ortl,
-        'utb utb-C': this.oc,
-        'utb utb-OLR': this.olr,
-        'utb utb-ORL': this.orl,
-        'utb utb-OLR sq': this.squared,
-        'utb utb-OLR delay': this.dSquared,
-        underline: this.underlined,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        {
+          'u u-LR': this.ltr,
+          'u u-RL': this.rtl,
+          'u u-C': this.c,
+          'utb utb-LR': this.oltr,
+          'utb utb-RL': this.ortl,
+          'utb utb-C': this.oc,
+          'utb utb-OLR': this.olr,
+          'utb utb-ORL': this.orl,
+          'utb utb-OLR sq': this.squared,
+          'utb utb-OLR delay': this.dSquared,
+          underline: this.underlined,
+        },
+      );
     },
   },
 };

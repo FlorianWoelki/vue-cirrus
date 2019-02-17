@@ -95,7 +95,7 @@ export default {
   },
 
   computed: {
-    layoutClasses() {
+    layoutMixins() {
       return {
         'this-inline': this.lInline,
         'this-inline-block': this.lInlineBlock,

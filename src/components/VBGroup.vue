@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import Layout from '../mixins/layout';
+
 export default {
+  mixins: [
+    Layout,
+  ],
   props: {
     filled: {
       type: Boolean,
@@ -14,10 +19,13 @@ export default {
   },
   computed: {
     classes() {
-      return {
-        'btn-group': true,
-        'btn-group-fill': this.filled,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        {
+          'btn-group': true,
+          'btn-group-fill': this.filled,
+        },
+      );
     },
   },
 };

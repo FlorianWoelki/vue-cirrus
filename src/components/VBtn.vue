@@ -7,7 +7,12 @@
 </template>
 
 <script>
+import Layout from '../mixins/layout';
+
 export default {
+  mixins: [
+    Layout,
+  ],
   props: {
     animated: {
       type: Boolean,
@@ -58,7 +63,10 @@ export default {
         'animated loading loading-right': this.loadingRight,
       };
 
-      return classes;
+      return Object.assign(
+        this.layoutMixins,
+        classes,
+      );
     },
   },
 };
