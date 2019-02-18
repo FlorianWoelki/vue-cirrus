@@ -42,6 +42,19 @@
     <v-code lang="java">
       System.out.println("Hello World");
     </v-code>
+
+    <a href="#modal">
+      <v-btn>Modal Dialog</v-btn>
+    </a>
+    <v-modal large zoomOut>
+      <v-mbody>
+        <h6>Hello Modal Dialog</h6>
+      </v-mbody>
+      <v-mfooter>
+        <v-btn pullLeft>Close</v-btn>
+        <v-btn pullRight btnStyle="accent">Share</v-btn>
+      </v-mfooter>
+    </v-modal>
   </div>
 </template>
 
