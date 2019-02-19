@@ -3,6 +3,10 @@
 <h1 align="center">Vue Cirrus</h1>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
+</p>
+
+<p align="center">
 A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh. These are the Vue Components for this CSS framework. The official Cirrus framework can be found <a href="https://github.com/Spiderpig86/Cirrus">here</a>.
 </p>
 
