@@ -1,6 +1,7 @@
 <template>
   <button
     :class=classes
+    :data-tooltip=tooltipData
   >
     <slot></slot>
   </button>
@@ -8,10 +9,12 @@
 
 <script>
 import Layout from '../mixins/layout';
+import Tooltip from '../mixins/tooltip';
 
 export default {
   mixins: [
     Layout,
+    Tooltip,
   ],
   props: {
     animated: {
@@ -65,6 +68,7 @@ export default {
 
       return Object.assign(
         this.layoutMixins,
+        this.tooltipMixins,
         classes,
       );
     },

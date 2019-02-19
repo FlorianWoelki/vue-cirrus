@@ -2,7 +2,7 @@
   <div class="demo">
     <v-row>
       <v-col c4>
-        <v-btn animated center>Animated button</v-btn>
+        <v-btn animated center tooltipText="Hello World" tooltipBottomLeft>Animated button</v-btn>
       </v-col>
       <v-col c4>
         <v-btn animated btnStyle="accent">Animated accent button</v-btn>

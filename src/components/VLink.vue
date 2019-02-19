@@ -1,6 +1,6 @@
 <template>
   <span v-if="squared" class="usquare">
-    <a :href=href :class=classes>
+    <a :href=href :class=classes :data-tooltip=tooltipData>
       <slot></slot>
     </a>
   </span>
@@ -16,10 +16,12 @@
 
 <script>
 import Layout from '../mixins/layout';
+import Tooltip from '../mixins/tooltip';
 
 export default {
   mixins: [
     Layout,
+    Tooltip,
   ],
   props: {
     href: {
@@ -75,6 +77,7 @@ export default {
     classes() {
       return Object.assign(
         this.layoutMixins,
+        this.tooltipMixins,
         {
           'u u-LR': this.ltr,
           'u u-RL': this.rtl,
