@@ -39,7 +39,9 @@
       </v-col>
     </v-row>
 
-    <v-code lang="java">
+    <v-code lang="java" keywords="int,float">
+      int test = 0;
+      float a = 1;
       System.out.println("Hello World");
     </v-code>
 
