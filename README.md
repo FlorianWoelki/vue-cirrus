@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/FlorianWoelki/vue-cirrus.svg"></a>
 </p>
 
 <p align="center">
