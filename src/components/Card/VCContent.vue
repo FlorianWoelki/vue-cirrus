@@ -1,8 +1,27 @@
 <template>
-  <div v-if="!this.$parent.animated" class="content">
-    <slot></slot>
-  </div>
-  <div v-else class="card-body content">
+  <div :class=classes>
     <slot></slot>
   </div>
 </template>
+
+<script>
+import Layout from '@/mixins/layout';
+
+export default {
+  mixins: [
+    Layout,
+  ],
+
+  computed: {
+    classes() {
+      return Object.assign(
+        this.layoutMixins,
+        {
+          'card-body': this.$parent.animated,
+          content: true,
+        },
+      );
+    },
+  },
+};
+</script>
