@@ -7,6 +7,8 @@
       <v-tab selected>Test 4</v-tab>
     </v-tabs>
 
+    <v-avatar large text="fw"></v-avatar>
+
     <v-row>
       <v-col c4>
         <v-btn animated center tooltipText="Hello World" tooltipBottomLeft>Animated button</v-btn>
