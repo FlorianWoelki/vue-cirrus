@@ -1,5 +1,12 @@
 <template>
   <div class="demo">
+    <v-tabs>
+      <v-tab>Test 1</v-tab>
+      <v-tab link="#">Test 2</v-tab>
+      <v-tab>Test 3</v-tab>
+      <v-tab selected>Test 4</v-tab>
+    </v-tabs>
+
     <v-row>
       <v-col c4>
         <v-btn animated center tooltipText="Hello World" tooltipBottomLeft>Animated button</v-btn>
