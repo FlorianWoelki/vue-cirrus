@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Layout from '../mixins/layout';
-import Tooltip from '../mixins/tooltip';
+import Layout from '@/mixins/layout';
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [

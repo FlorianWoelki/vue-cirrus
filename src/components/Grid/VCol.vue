@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Layout from '../mixins/layout';
+import Layout from '@/mixins/layout';
 
 export default {
   mixins: [

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Layout from '../mixins/layout';
+import Layout from '@/mixins/layout';
 
 export default {
   mixins: [
@@ -13,7 +13,11 @@ export default {
   ],
 
   props: {
-    filled: {
+    fluid: {
+      type: Boolean,
+      default: false,
+    },
+    wrap: {
       type: Boolean,
       default: false,
     },
@@ -24,8 +28,9 @@ export default {
       return Object.assign(
         this.layoutMixins,
         {
-          'btn-group': true,
-          'btn-group-fill': this.filled,
+          row: true,
+          'fluid-container': this.fluid,
+          wrap: this.wrap,
         },
       );
     },
