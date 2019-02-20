@@ -1,0 +1,52 @@
+<template>
+  <div :class=classes :data-tooltip=tooltipData>
+    <slot></slot>
+    <button v-if="closable" class="btn-close"></button>
+  </div>
+</template>
+
+<script>
+import Layout from '../mixins/layout';
+import Tooltip from '../mixins/tooltip';
+
+export default {
+  mixins: [
+    Layout,
+    Tooltip,
+  ],
+
+  props: {
+    success: {
+      type: Boolean,
+      default: false,
+    },
+    warning: {
+      type: Boolean,
+      default: false,
+    },
+    error: {
+      type: Boolean,
+      default: false,
+    },
+    closable: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  computed: {
+    classes() {
+      return Object.assign(
+        this.layoutMixins,
+        this.tooltipMixins,
+        {
+          toast: true,
+          success: this.success,
+          warning: this.warning,
+          error: this.error,
+        },
+      );
+    },
+  },
+};
+</script>

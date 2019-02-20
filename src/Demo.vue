@@ -61,6 +61,8 @@
         <v-btn pullRight btnStyle="accent">Share</v-btn>
       </v-mfooter>
     </v-modal>
+
+    <v-toast tooltipText="Hello">Testing</v-toast>
   </div>
 </template>
 
