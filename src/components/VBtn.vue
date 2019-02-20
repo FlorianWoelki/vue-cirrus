@@ -51,7 +51,7 @@ export default {
       default: false,
     },
   },
-  
+
   computed: {
     classes() {
       const buttonStyles = ['accent', 'outline', 'outline-inverted', 'transparent', 'light', 'dark', 'black'];

@@ -74,7 +74,7 @@ export default {
       default: false,
     },
   },
-  
+
   computed: {
     classes() {
       return Object.assign(
