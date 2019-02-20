@@ -23,6 +23,7 @@ export default {
     Layout,
     Tooltip,
   ],
+
   props: {
     href: {
       type: String,
@@ -73,6 +74,7 @@ export default {
       default: false,
     },
   },
+  
   computed: {
     classes() {
       return Object.assign(

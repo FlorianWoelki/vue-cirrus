@@ -11,6 +11,7 @@ export default {
   mixins: [
     Layout,
   ],
+
   props: {
     fluid: {
       type: Boolean,
@@ -21,6 +22,7 @@ export default {
       default: false,
     },
   },
+  
   computed: {
     classes() {
       return Object.assign(

@@ -11,6 +11,7 @@ export default {
   mixins: [
     Layout,
   ],
+
   props: {
     c1: {
       type: Boolean,
@@ -129,6 +130,7 @@ export default {
       default: false,
     },
   },
+  
   computed: {
     classes() {
       return Object.assign(

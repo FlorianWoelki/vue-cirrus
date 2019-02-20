@@ -16,6 +16,7 @@ export default {
     Layout,
     Tooltip,
   ],
+
   props: {
     animated: {
       type: Boolean,
@@ -50,6 +51,7 @@ export default {
       default: false,
     },
   },
+  
   computed: {
     classes() {
       const buttonStyles = ['accent', 'outline', 'outline-inverted', 'transparent', 'light', 'dark', 'black'];
