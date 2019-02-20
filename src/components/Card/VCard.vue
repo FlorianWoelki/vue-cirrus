@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div v-if="!animated" class="card">
     <div class="card-container">
       <div
         class="card-image"
@@ -20,11 +20,36 @@
       </div>
     </div>
   </div>
+  <div v-else class="card slide-up">
+    <div class="card-container">
+      <div class="card-image" :style=image></div>
+    </div>
+    <div class="mobile-title">
+      <div class="content">
+        <div class="tile">
+          <div class="tile-container">
+            <p class="tile-title">{{title}}</p>
+            <p class="tile-subtitle">{{subtitle}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <slot></slot>
+
+    <div class="card-footer content">
+      <span>{{footerText}}</span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
+    animated: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: '',

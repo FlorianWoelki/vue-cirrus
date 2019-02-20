@@ -9,15 +9,10 @@
 
     <v-row>
       <v-col o4 c4>
-        <v-card title="Title" subtitle="Subtitle" footerText="Footer text">
+        <v-card animated title="Title" subtitle="Subtitle" footerText="Footer text">
           <v-ccontent>
-            <p>Text and other content is embedded in the content div here.
-              Embed the card-image in the card-container above.</p>
+            <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
           </v-ccontent>
-          <v-cbuttons>
-            <button class="uppercase">Button</button>
-            <button class="uppercase">Go here</button>
-          </v-cbuttons>
         </v-card>
       </v-col>
     </v-row>
