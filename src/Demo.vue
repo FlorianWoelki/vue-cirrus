@@ -45,6 +45,8 @@
       int hello = 1;
       float a = 1;
       System.out.println("Hello World");
+
+      console.log('Testing');
     </v-code>
 
     <a href="#modal">

@@ -30,7 +30,7 @@ export default {
     let currentHTML = document.getElementById(`${this.lang}-code`).innerHTML;
 
     // Colorize all strings
-    currentHTML = currentHTML.replace(/".*?"/g, '<span class="quote">$&</span>');
+    currentHTML = currentHTML.replace(/("|').*?("|')/g, '<span class="quote">$&</span>');
 
     // Colorize all keywords
     let regexKeywords = '';
