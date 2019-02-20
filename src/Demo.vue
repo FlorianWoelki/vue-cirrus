@@ -8,12 +8,18 @@
     </v-tabs>
 
     <v-row>
-      <v-col o4 c4>
+      <v-col c4>
         <v-card animated title="Title" subtitle="Subtitle" footerText="Footer text">
           <v-ccontent>
             <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
           </v-ccontent>
         </v-card>
+      </v-col>
+
+      <v-col c4>
+        <v-mincard title="Google Chrome">
+          <p>Hello here is some text for this card wrapped inside a link.</p>
+        </v-mincard>
       </v-col>
     </v-row>
 
