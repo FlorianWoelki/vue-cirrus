@@ -29,15 +29,18 @@ export default {
     const keywords = this.keywords.split(',');
     let currentHTML = document.getElementById(`${this.lang}-code`).innerHTML;
 
-    const regexp = /".*?"/g;
-    const matches = regexp.exec(currentHTML);
-    matches.forEach((match) => {
-      currentHTML = currentHTML.replace(match, `<span class="quote">${match}</span>`);
-    });
+    // Colorize all strings
+    currentHTML = currentHTML.replace(/".*?"/g, '<span class="quote">$&</span>');
 
-    keywords.forEach((keyword) => {
-      currentHTML = currentHTML.replace(keyword, `<span class="keyword">${keyword}</span>`);
-    });
+    // Colorize all keywords
+    let regexKeywords = '';
+    for (let i = 0; i < keywords.length; i += 1) {
+      const keyword = keywords[i].trim();
+      regexKeywords += i === keywords.length - 1 ? keyword : `${keyword}|`;
+    }
+
+    const regexp = new RegExp(`\\b(${regexKeywords})\\b`, 'g');
+    currentHTML = currentHTML.replace(regexp, '<span class="keyword">$1</span>');
 
     document.getElementById(`${this.lang}-code`).innerHTML = currentHTML;
   },

@@ -40,7 +40,9 @@
     </v-row>
 
     <v-code lang="java" keywords="int,float">
+      System.out.println("integrated World");
       int test = 0;
+      int hello = 1;
       float a = 1;
       System.out.println("Hello World");
     </v-code>
