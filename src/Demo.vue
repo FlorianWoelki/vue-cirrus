@@ -1,5 +1,19 @@
 <template>
   <div class="demo">
+    <v-sidebar>
+      <v-sbitems title="Hello">
+        <v-sbitem>Web</v-sbitem>
+        <v-sbitem>HTML</v-sbitem>
+        <v-sbitem>CSS</v-sbitem>
+      </v-sbitems>
+      <v-sbcontent>
+        <h3>TEST</h3>
+        <div class="divider"></div>
+        <p>Testing some shit</p>
+      </v-sbcontent>
+    </v-sidebar>
+
+    <!--
     <v-tabs>
       <v-tab>Test 1</v-tab>
       <v-tab link="#">Test 2</v-tab>
@@ -88,6 +102,7 @@
     </v-modal>
 
     <v-toast tooltipText="Hello">Testing</v-toast>
+    -->
   </div>
 </template>
 
