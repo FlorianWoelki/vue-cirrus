@@ -1,6 +1,8 @@
 <template>
   <div class="demo">
-    <v-next-prev nextText="Next Text" prevText="Previous Text" center></v-next-prev>
+    <div class="content">
+      <v-next-prev nextText="Next Text" prevText="Previous Text" center></v-next-prev>
+    </div>
 
     <!--
     <v-sidebar>
