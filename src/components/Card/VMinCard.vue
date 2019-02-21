@@ -3,7 +3,7 @@
     <div class="content">
       <div class="row">
         <img :src=imgSrc class="level" :id=imgId />
-        <p :id=projectname class="title level">{{title}}</p>
+        <p :id=projectName class="title level">{{title}}</p>
         <slot></slot>
       </div>
     </div>
@@ -20,6 +20,10 @@ export default {
     imgId: {
       type: String,
       default: 'projectlogo',
+    },
+    projectName: {
+      type: String,
+      default: 'projectname',
     },
     titleId: {
       type: String,
