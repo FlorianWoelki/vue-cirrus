@@ -1,7 +1,7 @@
 <template>
   <div class="demo">
     <v-sidebar>
-      <v-sbitems title="Hello">
+      <v-sbitems title="Hello" hoverEffect>
         <v-sbitem>Web</v-sbitem>
         <v-sbitem>HTML</v-sbitem>
         <v-sbitem>CSS</v-sbitem>

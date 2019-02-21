@@ -18,6 +18,10 @@ export default {
       type: String,
       default: '',
     },
+    hoverEffect: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
