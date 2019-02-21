@@ -1,8 +1,31 @@
 <template>
   <div class="demo">
+    <v-navbar title="Logo">
+      <div class="nav-left">
+        <v-nav-dropdown>
+          <v-nav-dropdown-item text="Test1" />
+          <v-nav-dropdown-item text="Test2" />
+          <v-nav-dropdown-item text="Test3" />
+        </v-nav-dropdown>
+      </div>
+
+      <div class="nav-right">
+        <v-navbar-item selected text="Selected" />
+        <v-navbar-item text="Link 1" />
+
+        <v-nav-dropdown animated>
+          <v-nav-dropdown-item text="Test4" />
+          <v-nav-dropdown-item text="Test5" />
+          <v-nav-dropdown-item text="Test6" />
+        </v-nav-dropdown>
+      </div>
+    </v-navbar>
+
+    <!--
     <div class="content">
       <v-next-prev nextText="Next Text" prevText="Previous Text" center></v-next-prev>
     </div>
+    -->
 
     <!--
     <v-sidebar>
