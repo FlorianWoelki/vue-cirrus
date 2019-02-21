@@ -1,5 +1,10 @@
 <template>
   <div class="demo">
+    <div class="content">
+      <v-nextprev nextText="Next Text" prevText="Previous Text"></v-nextprev>
+    </div>
+
+    <!--
     <v-sidebar>
       <v-sbitems title="Hello" hoverEffect>
         <v-sbitem>Web</v-sbitem>
@@ -8,10 +13,11 @@
       </v-sbitems>
       <v-sbcontent>
         <h3>TEST</h3>
+
         <div class="divider"></div>
-        <p>Testing some shit</p>
       </v-sbcontent>
     </v-sidebar>
+    -->
 
     <!--
     <v-tabs>
