@@ -1,21 +1,19 @@
 <template>
   <div class="demo">
-    <div class="content">
-      <v-nextprev nextText="Next Text" prevText="Previous Text"></v-nextprev>
-    </div>
+    <v-next-prev nextText="Next Text" prevText="Previous Text" center></v-next-prev>
 
     <!--
     <v-sidebar>
-      <v-sbitems title="Hello" hoverEffect>
-        <v-sbitem>Web</v-sbitem>
-        <v-sbitem>HTML</v-sbitem>
-        <v-sbitem>CSS</v-sbitem>
-      </v-sbitems>
-      <v-sbcontent>
+      <v-sidebar-items title="Hello" hoverEffect>
+        <v-sidebar-item>Web</v-sidebar-item>
+        <v-sidebar-item>HTML</v-sidebar-item>
+        <v-sidebar-item>CSS</v-sidebar-item>
+      </v-sidebar-items>
+      <v-sidebar-content>
         <h3>TEST</h3>
 
         <div class="divider"></div>
-      </v-sbcontent>
+      </v-sidebar-content>
     </v-sidebar>
     -->
 
@@ -30,16 +28,16 @@
     <v-row>
       <v-col c4>
         <v-card animated title="Title" subtitle="Subtitle" footerText="Footer text">
-          <v-ccontent>
+          <v-card-content>
             <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-          </v-ccontent>
+          </v-card-content>
         </v-card>
       </v-col>
 
       <v-col c4>
-        <v-mincard title="Google Chrome">
+        <v-min-card title="Google Chrome">
           <p>Hello here is some text for this card wrapped inside a link.</p>
-        </v-mincard>
+        </v-min-card>
       </v-col>
     </v-row>
 
@@ -57,11 +55,11 @@
       </v-col>
     </v-row>
 
-    <v-bgroup filled>
+    <v-btn-group filled>
       <v-btn btnStyle="accent">First</v-btn>
       <v-btn btnStyle="accent">Second</v-btn>
       <v-btn btnStyle="accent">Third</v-btn>
-    </v-bgroup>
+    </v-btn-group>
 
     <v-row>
       <v-col c2>
@@ -98,13 +96,13 @@
       <v-btn>Modal Dialog</v-btn>
     </a>
     <v-modal large zoomOut>
-      <v-mbody>
+      <v-modal-body>
         <h6>Hello Modal Dialog</h6>
-      </v-mbody>
-      <v-mfooter>
+      </v-modal-body>
+      <v-modal-footer>
         <v-btn pullLeft>Close</v-btn>
         <v-btn pullRight btnStyle="accent">Share</v-btn>
-      </v-mfooter>
+      </v-modal-footer>
     </v-modal>
 
     <v-toast tooltipText="Hello">Testing</v-toast>

@@ -7,6 +7,7 @@ requireComponent.keys().forEach((filename) => {
   const componentName = `${filename.replace(/^\.\//, '')
     .replace(/\.\w+$/, '')
     .replace(/(.+)\//, '')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
     .toLowerCase()
     .replace('v', 'v-')}`;
 
