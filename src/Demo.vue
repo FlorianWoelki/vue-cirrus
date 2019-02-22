@@ -18,6 +18,12 @@
           <v-nav-dropdown-item text="Test5" />
           <v-nav-dropdown-item text="Test6" />
         </v-nav-dropdown>
+
+        <v-nav-dropdown clickable dropdownId="clickable-dropdown">
+          <v-nav-dropdown-item text="Test4" />
+          <v-nav-dropdown-item text="Test5" />
+          <v-nav-dropdown-item text="Test6" />
+        </v-nav-dropdown>
       </div>
     </v-navbar>
 
