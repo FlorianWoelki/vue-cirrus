@@ -129,6 +129,46 @@ export default {
       type: Boolean,
       default: false,
     },
+    w10: {
+      type: Boolean,
+      default: false,
+    },
+    w20: {
+      type: Boolean,
+      default: false,
+    },
+    w30: {
+      type: Boolean,
+      default: false,
+    },
+    w40: {
+      type: Boolean,
+      default: false,
+    },
+    w50: {
+      type: Boolean,
+      default: false,
+    },
+    w60: {
+      type: Boolean,
+      default: false,
+    },
+    w70: {
+      type: Boolean,
+      default: false,
+    },
+    w80: {
+      type: Boolean,
+      default: false,
+    },
+    w90: {
+      type: Boolean,
+      default: false,
+    },
+    w100: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -165,6 +205,16 @@ export default {
           'offset-10': this.o10,
           'offset-11': this.o11,
           'offset-12': this.o12,
+          'w-10': this.w10,
+          'w-20': this.w20,
+          'w-30': this.w30,
+          'w-40': this.w40,
+          'w-50': this.w50,
+          'w-60': this.w60,
+          'w-70': this.w70,
+          'w-80': this.w80,
+          'w-90': this.w90,
+          'w-100': this.w100,
         },
       );
     },
