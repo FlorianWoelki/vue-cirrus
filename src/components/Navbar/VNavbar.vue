@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div :class=classes>
     <div class="header-brand">
       <div class="nav-item no-hover">
         <a>
@@ -19,6 +19,19 @@ export default {
     title: {
       type: String,
       default: '',
+    },
+    fixed: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  computed: {
+    classes() {
+      return {
+        header: true,
+        'header-fixed': this.fixed,
+      };
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <v-navbar title="Logo">
+    <v-navbar title="Logo" fixed>
       <div class="nav-left">
         <v-nav-dropdown>
           <v-nav-dropdown-item text="Test1" />
@@ -26,6 +26,19 @@
         </v-nav-dropdown>
       </div>
     </v-navbar>
+    <section class="padtop">
+      <v-space xlarge></v-space>
+      <div class="content">
+        <h3>Lorem Ipsum</h3>
+        <div class="divider"></div>
+        <p v-for="n in 10" :key=n>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Minus sequi ab quae repudiandae consequuntur iusto,
+          voluptas doloremque aperiam facilis quaerat aliquid,
+          neque consequatur dolorum architecto quasi quos explicabo consectetur? Non.
+        </p>
+      </div>
+    </section>
 
     <!--
     <div class="content">
