@@ -24,6 +24,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+    clear: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -31,6 +39,8 @@ export default {
       return {
         header: true,
         'header-fixed': this.fixed,
+        'header-dark': this.dark,
+        'header-clear': this.clear,
       };
     },
   },
