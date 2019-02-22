@@ -30,6 +30,7 @@
       <v-space xlarge></v-space>
       <div class="content">
         <h3>Lorem Ipsum</h3>
+        <v-btn bounceIn infinite>Animated Btn</v-btn>
         <div class="divider"></div>
         <p v-for="n in 10" :key=n>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.

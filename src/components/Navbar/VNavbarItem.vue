@@ -7,11 +7,13 @@
 <script>
 import Layout from '@/mixins/layout';
 import Tooltip from '@/mixins/tooltip';
+import Animations from '@/mixins/animations';
 
 export default {
   mixins: [
     Layout,
     Tooltip,
+    Animations,
   ],
 
   props: {
@@ -34,6 +36,7 @@ export default {
       return Object.assign(
         this.layoutMixins,
         this.tooltipMixins,
+        this.animationsMixins,
         {
           'nav-item': true,
           selected: this.selected,
