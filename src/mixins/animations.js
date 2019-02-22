@@ -20,6 +20,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    hoverGrow: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -31,6 +35,7 @@ export default {
         bounce: this.bounce,
         pulse: this.pulse,
         fadeIn: this.fadeIn,
+        'hover-grow': this.hoverGrow,
       };
     },
   },
