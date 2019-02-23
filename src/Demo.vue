@@ -27,10 +27,65 @@
       </div>
     </v-navbar>
     <section class="padtop">
-      <v-space xlarge></v-space>
+      <v-space xlarge />
       <div class="content">
         <h3>Lorem Ipsum</h3>
-        <v-btn hoverGrow>Animated Btn</v-btn>
+
+        <v-space xlarge />
+        <v-row>
+          <v-col c6>
+            <v-tile>
+              <v-tile-icon>
+                <v-avatar text="FW" />
+              </v-tile-icon>
+
+              <v-tile-content
+                title="Robert Downey Jr just poked you."
+                subtitle="Poke him back or view on facebook."
+                info="6 seconds ago"
+              />
+
+              <v-tile-buttons>
+                <v-btn btnStyle="transparent">XXX</v-btn>
+              </v-tile-buttons>
+            </v-tile>
+          </v-col>
+          <v-col c6>
+            <v-tile>
+              <v-tile-icon>
+                <v-avatar text="DT" />
+              </v-tile-icon>
+
+              <v-tile-content
+                title="Polarity.exe"
+                subtitle="953KB / 1.1MB - 3 seconds..."
+              />
+
+              <v-tile-buttons>
+                <v-btn btnStyle="transparent">XXX</v-btn>
+              </v-tile-buttons>
+            </v-tile>
+          </v-col>
+        </v-row>
+        <v-col c6>
+          <v-tile>
+            <v-tile-icon>
+              <v-avatar text="SD" />
+            </v-tile-icon>
+
+            <v-tile-content
+              title="Meeting Scheduled"
+              subtitle="You have a scheduled meeting in 1 hour."
+            />
+
+            <v-tile-buttons>
+              <v-btn btnStyle="accent">A</v-btn>
+              <v-btn>X</v-btn>
+            </v-tile-buttons>
+          </v-tile>
+        </v-col>
+        <v-space xlarge />
+
         <div class="divider"></div>
         <p v-for="n in 10" :key=n>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
