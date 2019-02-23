@@ -1,1 +1,1 @@
-mv dist/* .
+npm run build && mv dist/* .
