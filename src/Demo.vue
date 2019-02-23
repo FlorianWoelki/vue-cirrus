@@ -33,6 +33,25 @@
 
         <v-space xlarge />
         <v-row>
+          <v-col c6 o2>
+            <v-simple-card title="Test Title">
+              <v-card-content>
+                <p>This is some sample text spam spam spam spam spam spam spam.
+                <a href="#">#place</a><a href="#">#holder</a><a href="#">@Cirrus</a></p>
+              </v-card-content>
+              <div class="card-footer level content">6:32 PM - 3 Jul 18</div>
+              <v-card-buttons center>
+                <button class="btn">Cancel</button>
+                <button class="btn">Save</button>
+                <button class="btn">Post</button>
+              </v-card-buttons>
+            </v-simple-card>
+          </v-col>
+        </v-row>
+        <v-space xlarge />
+
+        <v-space xlarge />
+        <v-row>
           <v-col c6>
             <v-tile>
               <v-tile-icon>
