@@ -1,5 +1,5 @@
 {
-  "name": "vue-cirrus",
+  "name": "vue-cirrus-gh-page",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://github.com/FlorianWoelki/vue-cirrus",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.5.22",
+    "vue-cirrus": "^0.1.5",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

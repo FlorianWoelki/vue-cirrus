@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <HelloWorld  />
+    <HelloWorld />
+    <v-btn animated loadingLeft>Button</v-btn>
   </div>
 </template>
 
