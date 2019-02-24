@@ -25,6 +25,7 @@ npm install vue-cirrus
 ```
 3. Import all vue cirrus components in your main.js file
 ```javascript
+import 'vue-cirrus/dist/vue-cirrus.css';
 import 'vue-cirrus';
 ```
 4. Test, if it works by including the following in a vue file
