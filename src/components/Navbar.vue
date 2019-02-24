@@ -2,10 +2,10 @@
   <v-navbar dark title="Vue Cirrus">
     <div class="nav-left">
       <v-navbar-item link="https://github.com/FlorianWoelki/vue-cirrus">
-        <i class="fab fa-github fa-lg"></i>
+        <i class="nav-icon fab fa-github fa-lg"></i>
       </v-navbar-item>
       <v-navbar-item link="https://www.npmjs.com/package/vue-cirrus">
-        <i class="fab fa-npm fa-lg"></i>
+        <i class="nav-icon fab fa-npm fa-lg"></i>
       </v-navbar-item>
     </div>
 
@@ -34,3 +34,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.nav-icon {
+  margin-top: 10px;
+}
+</style>
