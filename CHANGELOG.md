@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.51] - 2019-02-24
+### Changed
+- Fixed issues with dropdown (not customizable)
+
+
 ## [0.1.5] - 2019-02-21
 ### Added
 - Added Sidebar
@@ -14,9 +19,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Fixed MinCard component issue
 - Renamed components
-
-### Removed
-/
 
 
 ## [0.1.4] - 2019-02-21
@@ -32,8 +34,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Formatted code and overall components
 
-### Removed
-/
 
 [0.1.4]: https://www.npmjs.com/package/vue-cirrus/v/0.1.4
 [0.1.5]: https://www.npmjs.com/package/vue-cirrus/v/0.1.5
+[0.1.51]: https://www.npmjs.com/package/vue-cirrus/v/0.1.51
