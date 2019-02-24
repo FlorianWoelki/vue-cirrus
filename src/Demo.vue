@@ -3,26 +3,29 @@
     <v-navbar title="Logo" fixed>
       <div class="nav-left">
         <v-nav-dropdown>
-          <v-nav-dropdown-item text="Test1" />
-          <v-nav-dropdown-item text="Test2" />
-          <v-nav-dropdown-item text="Test3" />
+          <template v-slot:title><i>Dropdown</i></template>
+          <v-nav-dropdown-item>Test 1</v-nav-dropdown-item>
+          <v-nav-dropdown-item>Test 2</v-nav-dropdown-item>
+          <v-nav-dropdown-item>Test 3</v-nav-dropdown-item>
         </v-nav-dropdown>
       </div>
 
       <div class="nav-right">
-        <v-navbar-item selected text="Selected" />
-        <v-navbar-item text="Link 1" />
+        <v-navbar-item selected>Selected</v-navbar-item>
+        <v-navbar-item>Link 1</v-navbar-item>
 
         <v-nav-dropdown animated>
-          <v-nav-dropdown-item text="Test4" />
-          <v-nav-dropdown-item text="Test5" />
-          <v-nav-dropdown-item text="Test6" />
+          <template v-slot:title><b>Dropdown</b></template>
+          <v-nav-dropdown-item><h1>Test 1</h1></v-nav-dropdown-item>
+          <v-nav-dropdown-item><b>Test 2</b></v-nav-dropdown-item>
+          <v-nav-dropdown-item>Test 3</v-nav-dropdown-item>
         </v-nav-dropdown>
 
         <v-nav-dropdown clickable dropdownId="clickable-dropdown">
-          <v-nav-dropdown-item text="Test4" />
-          <v-nav-dropdown-item text="Test5" />
-          <v-nav-dropdown-item text="Test6" />
+          <template v-slot:title><u>Dropdown</u></template>
+          <v-nav-dropdown-item>Test 3</v-nav-dropdown-item>
+          <v-nav-dropdown-item>Test 4</v-nav-dropdown-item>
+          <v-nav-dropdown-item>Test 5</v-nav-dropdown-item>
         </v-nav-dropdown>
       </div>
     </v-navbar>

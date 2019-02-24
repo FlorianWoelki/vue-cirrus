@@ -1,6 +1,5 @@
 <template>
   <div :class=classes>
-
   </div>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <li :class=classes role="menu-item" :data-tooltip=tooltipData>
-    <a :href=link>{{text}}</a>
+    <a :href=link>
+      <slot></slot>
+    </a>
   </li>
 </template>
 
@@ -18,10 +20,6 @@ export default {
     link: {
       type: String,
       default: '#',
-    },
-    text: {
-      type: String,
-      default: '',
     },
   },
 

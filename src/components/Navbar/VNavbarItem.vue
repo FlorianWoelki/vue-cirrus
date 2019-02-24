@@ -1,6 +1,8 @@
 <template>
   <div :class=classes :data-tooltip=tooltipData>
-    <a :href=link>{{text}}</a>
+    <a :href=link>
+      <slot></slot>
+    </a>
   </div>
 </template>
 
@@ -20,10 +22,6 @@ export default {
     selected: {
       type: Boolean,
       default: false,
-    },
-    text: {
-      type: String,
-      default: '',
     },
     link: {
       type: String,
