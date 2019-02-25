@@ -36,3 +36,9 @@
     </v-row>
   </section>
 </template>
+
+<style>
+#getting-started {
+  padding-top: 100px;
+}
+</style>

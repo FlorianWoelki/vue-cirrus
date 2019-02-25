@@ -3,12 +3,7 @@
     <Navbar />
 
     <section class="padtop">
-      <!-- Replace with v-spacer.. is not working.. -->
-      <v-space xlarge />
-      <v-space xlarge />
-      <div class="content">
-        <router-view />
-      </div>
+      <router-view />
     </section>
   </div>
 </template>

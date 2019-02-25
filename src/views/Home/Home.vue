@@ -2,7 +2,9 @@
   <div class="home">
     <Head />
 
-    <GettingStarted />
+    <div class="content">
+      <GettingStarted />
+    </div>
   </div>
 </template>
 
