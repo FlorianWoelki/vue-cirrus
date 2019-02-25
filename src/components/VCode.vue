@@ -1,5 +1,6 @@
 <template>
   <pre>
+    <div :id=feedbackId class="copy-feedback">Copied!</div>
     <code :id=codeId :class=classes :data-lang=dataLang :keywords=keywords @click="copy">
       <slot></slot>
     </code>
@@ -45,7 +46,15 @@ export default {
 
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        // TODO: Add feedback for copying code
+
+        // Display feedback
+        const feedback = document.getElementById(`${this.lang}-feedback`);
+        feedback.style.opacity = 1;
+        copyText.style.filter = 'blur(2px)';
+        setTimeout(() => {
+          feedback.style.opacity = 0;
+          copyText.style.filter = 'blur(0)';
+        }, 800);
       }
     },
   },
@@ -54,6 +63,9 @@ export default {
     codeId() {
       return `${this.lang}-code`;
     },
+    feedbackId() {
+      return `${this.lang}-feedback`;
+    },
     dataLang() {
       return `${this.lang} ${this.copyable ? '(Copy)' : ''}`;
     },
@@ -61,6 +73,7 @@ export default {
       return {
         code: true,
         copyable: this.copyable,
+        'feedback-blur': this.copyable,
       };
     },
   },
@@ -109,5 +122,34 @@ code {
   position: relative;
   overflow: auto;
   border-radius: 3px;
+}
+.copy-feedback {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 1;
+
+  opacity: 0;
+  -webkit-transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -ms-transition: all .8s ease-in-out;
+  -o-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+.feedback-blur {
+  -webkit-filter: blur(0);
+  -moz-filter: blur(0);
+  -ms-filter: blur(0);
+  -o-filter: blur(0);
+  filter: blur(0);
+
+  -webkit-transition: .8s ease-in-out;
+  -moz-transition: .8s ease-in-out;
+  -ms-transition: .8s ease-in-out;
+  -o-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
 }
 </style>
