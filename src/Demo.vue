@@ -34,7 +34,7 @@
       <div class="content">
         <h3>Lorem Ipsum</h3>
 
-        <v-code lang="java" keywords="int,float">
+        <v-code lang="java" keywords="int,float" copyable>
           <pre>System.out.println("integrated World");</pre>
           <pre>int test = 0;</pre>
           <pre>int hello = 1;</pre>
@@ -42,6 +42,10 @@
           <pre>System.out.println("Hello World");</pre>
 
           <pre>console.log('Testing');</pre>
+        </v-code>
+
+        <v-code lang="console" keywords="npm" copyable>
+          <pre>npm install --save vue-cirrus</pre>
         </v-code>
 
         <v-space xlarge />
