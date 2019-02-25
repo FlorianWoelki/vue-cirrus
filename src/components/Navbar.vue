@@ -1,5 +1,5 @@
 <template>
-  <v-navbar dark title="Vue Cirrus">
+  <v-navbar dark fixed title="Vue Cirrus">
     <div class="nav-left">
       <v-navbar-item link="https://github.com/FlorianWoelki/vue-cirrus">
         <i class="nav-icon fab fa-github fa-lg"></i>
