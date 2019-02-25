@@ -4,6 +4,12 @@
 
     <div class="content">
       <GettingStarted />
+
+      <a href="#">
+        <v-btn animated btnStyle="accent">
+          <i class="fas fa-arrow-circle-right fa-lg"></i> Check out the Components
+        </v-btn>
+      </a>
     </div>
   </div>
 </template>
