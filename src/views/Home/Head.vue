@@ -5,7 +5,7 @@
         <div class="content text-center">
           <img
             id="logo"
-            src="https://github.com/FlorianWoelki/vue-cirrus/blob/master/img/vue-cirrus.png?raw=true"
+            src="@/assets/vue-cirrus.png"
             alt="vue-cirrus-logo"
           >
           <h1>Vue Cirrus</h1>
@@ -29,7 +29,8 @@
   height: 100vh;
 }
 .head #splash-img {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://cdn.pixabay.com/photo/2018/05/04/09/14/natural-3373519_1280.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+              url('../../assets/head-background.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
