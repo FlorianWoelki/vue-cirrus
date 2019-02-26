@@ -17,7 +17,17 @@
       </v-col>
     </v-row>
 
-    <v-divider short />
+    <v-frame>
+      <v-frame-header>
+        <h1 class="frame-title text-center">HEADER</h1>
+      </v-frame-header>
+      <v-frame-body>
+        <h1 class="frame-title text-center">BODY</h1>
+      </v-frame-body>
+      <v-frame-footer>
+        <h1 class="frame-title text-center">FOOTER</h1>
+      </v-frame-footer>
+    </v-frame>
 
     <!--
     <v-navbar title="Logo" fixed>
