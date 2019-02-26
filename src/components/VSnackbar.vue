@@ -5,7 +5,15 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
   data() {
     return {
       isActive: false,
@@ -54,12 +62,16 @@ export default {
 
   computed: {
     classes() {
-      return {
-        snackbar: true,
-        left: this.left,
-        right: this.right,
-        center: this.center,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          snackbar: true,
+          left: this.left,
+          right: this.right,
+          center: this.center,
+        },
+      );
     },
   },
 };
