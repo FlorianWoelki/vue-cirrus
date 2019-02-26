@@ -5,29 +5,31 @@
     </v-parallax>
 
     <v-row>
-      <v-col c5 o5>
-        <v-pagination>
-          <v-pagination-item disabled>Prev</v-pagination-item>
-          <v-pagination-item selected>1</v-pagination-item>
-          <v-pagination-item>2</v-pagination-item>
-          <v-pagination-item>3</v-pagination-item>
-          <v-pagination-item>4</v-pagination-item>
-          <v-pagination-item>Next</v-pagination-item>
-        </v-pagination>
+      <v-col c5 o4>
+        <v-frame>
+          <v-frame-header>
+            <v-avatar text="FW"></v-avatar>
+            <p class="text-center frame-title">Florian Woelki</p>
+            <p class="text-center frame-subtitle">Youngest Thing on the earth</p>
+            <v-tabs fill>
+              <v-tab>Favorites</v-tab>
+              <v-tab selected>Profile</v-tab>
+              <v-tab>Pins</v-tab>
+            </v-tabs>
+          </v-frame-header>
+          <v-frame-body>
+            <p>Some Text Some Text Some Text Some Text</p>
+            <p>Some Text Some Text Some Text Some Text</p>
+            <p>Some Text Some Text Some Text Some Text</p>
+            <p>Some Text Some Text Some Text Some Text</p>
+          </v-frame-body>
+          <v-frame-footer>
+            <v-divider />
+            <p>~ Something like a footer</p>
+          </v-frame-footer>
+        </v-frame>
       </v-col>
     </v-row>
-
-    <v-frame>
-      <v-frame-header>
-        <h1 class="frame-title text-center">HEADER</h1>
-      </v-frame-header>
-      <v-frame-body>
-        <h1 class="frame-title text-center">BODY</h1>
-      </v-frame-body>
-      <v-frame-footer>
-        <h1 class="frame-title text-center">FOOTER</h1>
-      </v-frame-footer>
-    </v-frame>
 
     <!--
     <v-navbar title="Logo" fixed>
