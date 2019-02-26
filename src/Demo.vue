@@ -1,5 +1,18 @@
 <template>
   <div class="demo">
+    <v-row>
+      <v-col c5 o5>
+        <v-pagination>
+          <v-pagination-item disabled>Prev</v-pagination-item>
+          <v-pagination-item selected>1</v-pagination-item>
+          <v-pagination-item>2</v-pagination-item>
+          <v-pagination-item>3</v-pagination-item>
+          <v-pagination-item>4</v-pagination-item>
+          <v-pagination-item>Next</v-pagination-item>
+        </v-pagination>
+      </v-col>
+    </v-row>
+
     <!--
     <v-navbar title="Logo" fixed>
       <div class="nav-left">
@@ -139,6 +152,7 @@
     </div>
     -->
 
+    <!--
     <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item>Web</v-sidebar-item>
@@ -164,6 +178,7 @@
         </v-snackbar>
       </v-sidebar-content>
     </v-sidebar>
+    -->
 
     <!--
     <v-tabs>
