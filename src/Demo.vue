@@ -155,6 +155,13 @@
           sed voluptas sequi quas iusto optio beatae, obcaecati
           repudiandae expedita ullam accusamus fugiat?
         </p>
+
+        <v-toast>Testing</v-toast>
+
+        <v-btn :onClick="() => { snackbar = !snackbar; }">Show snackbar</v-btn>
+        <v-snackbar top v-model="snackbar">
+          This is a usefull snackbar :)
+        </v-snackbar>
       </v-sidebar-content>
     </v-sidebar>
 
@@ -254,5 +261,10 @@
 <script>
 export default {
   name: 'Demo',
+  data() {
+    return {
+      snackbar: false,
+    };
+  },
 };
 </script>
