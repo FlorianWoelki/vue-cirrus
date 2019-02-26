@@ -2,6 +2,7 @@
   <button
     :class=classes
     :data-tooltip=tooltipData
+    @click="onClick"
   >
     <slot></slot>
   </button>
@@ -20,6 +21,10 @@ export default {
   ],
 
   props: {
+    onClick: {
+      type: Function,
+      default: () => 1,
+    },
     animated: {
       type: Boolean,
       default: false,
