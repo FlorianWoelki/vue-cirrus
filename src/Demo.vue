@@ -1,5 +1,6 @@
 <template>
   <div class="demo">
+    <!--
     <v-navbar title="Logo" fixed>
       <div class="nav-left">
         <v-nav-dropdown>
@@ -132,13 +133,12 @@
       </div>
     </section>
 
-    <!--
+
     <div class="content">
       <v-next-prev nextText="Next Text" prevText="Previous Text" center></v-next-prev>
     </div>
     -->
 
-    <!--
     <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item>Web</v-sidebar-item>
@@ -146,12 +146,17 @@
         <v-sidebar-item>CSS</v-sidebar-item>
       </v-sidebar-items>
       <v-sidebar-content>
-        <h3>TEST</h3>
-
+        <h3>Test</h3>
         <div class="divider"></div>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nam, neque at provident voluptatibus ipsa libero quaerat ad
+          sed voluptas sequi quas iusto optio beatae, obcaecati
+          repudiandae expedita ullam accusamus fugiat?
+        </p>
       </v-sidebar-content>
     </v-sidebar>
-    -->
 
     <!--
     <v-tabs>
