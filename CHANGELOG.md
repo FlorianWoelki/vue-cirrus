@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.52] - 2019-02-26
+### Added
+- Added copyable code with animation
+- Added hamburger menu for mobile view in navbar component
+- Added GitHub page
+
+### Changed
+- Fixed some issues with the code component
+
+
 ## [0.1.51] - 2019-02-24
 ### Changed
 - Fixed issues with dropdown (not customizable)
@@ -38,3 +48,4 @@ All notable changes to this project will be documented in this file.
 [0.1.4]: https://www.npmjs.com/package/vue-cirrus/v/0.1.4
 [0.1.5]: https://www.npmjs.com/package/vue-cirrus/v/0.1.5
 [0.1.51]: https://www.npmjs.com/package/vue-cirrus/v/0.1.51
+[0.1.52]: https://www.npmjs.com/package/vue-cirrus/v/0.1.52
