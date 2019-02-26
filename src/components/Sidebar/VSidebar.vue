@@ -1,5 +1,13 @@
 <template>
   <div :class=classes>
+    <div class="tree-nav-header">
+      <a href="#sidebar" class="hide-desktop">
+        <span class="icon">
+          <p>Sidebar</p>
+        </span>
+      </a>
+    </div>
+
     <slot></slot>
   </div>
 </template>
