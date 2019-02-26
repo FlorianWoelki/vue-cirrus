@@ -20,7 +20,7 @@ export default {
     classes() {
       return {
         space: true,
-        large: this.large,
+        large: this.large && !this.xlarge,
         'x-large': this.xlarge,
       };
     },
