@@ -1,5 +1,9 @@
 <template>
   <div class="demo">
+    <v-parallax src="https://www.w3schools.com/w3css/img_lights.jpg">
+      <h1 class="white uppercase">Test</h1>
+    </v-parallax>
+
     <v-row>
       <v-col c5 o5>
         <v-pagination>
