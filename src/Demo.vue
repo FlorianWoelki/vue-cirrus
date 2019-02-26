@@ -17,6 +17,8 @@
       </v-col>
     </v-row>
 
+    <v-divider short />
+
     <!--
     <v-navbar title="Logo" fixed>
       <div class="nav-left">
