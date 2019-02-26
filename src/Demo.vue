@@ -159,7 +159,7 @@
         <v-toast>Testing</v-toast>
 
         <v-btn :onClick="() => { snackbar = !snackbar; }">Show snackbar</v-btn>
-        <v-snackbar top v-model="snackbar">
+        <v-snackbar right v-model="snackbar">
           This is a usefull snackbar :)
         </v-snackbar>
       </v-sidebar-content>

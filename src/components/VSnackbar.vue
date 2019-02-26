@@ -17,6 +17,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    left: {
+      type: Boolean,
+      default: false,
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -44,6 +56,9 @@ export default {
     classes() {
       return {
         snackbar: true,
+        left: this.left,
+        right: this.right,
+        center: this.center,
       };
     },
   },
@@ -62,8 +77,17 @@ export default {
   padding: 16px;
   position: fixed;
   z-index: 1;
-  left: 50%;
   bottom: 30px;
+}
+
+.snackbar.center {
+  left: 50%;
+}
+.snackbar.left {
+  left: 141px;
+}
+.snackbar.right {
+  right: 18px;
 }
 
 .snackbar.show {
