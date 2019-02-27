@@ -24,18 +24,29 @@ export default {
       type: Boolean,
       default: false,
     },
+    loadingLeft: {
+      type: Boolean,
+      default: false,
+    },
+    loadingRight: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
     animationsMixins() {
       return {
-        animated: this.fadeIn || this.bounceIn || this.bounce || this.pulse,
+        animated: this.fadeIn || this.bounceIn || this.bounce
+                || this.pulse || this.loadingLeft || this.loadingRight,
         'infinite alternate': this.infinite,
         bounceIn: this.bounceIn,
         bounce: this.bounce,
         pulse: this.pulse,
         fadeIn: this.fadeIn,
         'hover-grow': this.hoverGrow,
+        'loading loading-left': this.loadingLeft,
+        'loading loading-right': this.loadingRight,
       };
     },
   },
