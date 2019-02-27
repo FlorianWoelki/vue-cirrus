@@ -1,5 +1,7 @@
 <template>
   <div class="demo">
+    <v-footer title="Hello World" subtitle="Hello"></v-footer>
+    <!--
     <v-row>
       <v-col c4 o4>
         <v-dropdown>
@@ -18,6 +20,7 @@
         </v-dropdown>
       </v-col>
     </v-row>
+    -->
 
     <!--
     <v-parallax src="https://www.w3schools.com/w3css/img_lights.jpg">
