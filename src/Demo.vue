@@ -1,9 +1,28 @@
 <template>
   <div class="demo">
+    <v-row>
+      <v-col c4 o4>
+        <v-dropdown btnText="Hello World">
+          <v-dropdown-item>
+            Google Chrome
+          </v-dropdown-item>
+          <v-dropdown-item>
+            Firefox
+          </v-dropdown-item>
+          <v-dropdown-item>
+            IE
+          </v-dropdown-item>
+        </v-dropdown>
+      </v-col>
+    </v-row>
+
+    <!--
     <v-parallax src="https://www.w3schools.com/w3css/img_lights.jpg">
       <h1 class="white uppercase">Test</h1>
     </v-parallax>
+    -->
 
+    <!--
     <v-row>
       <v-col c5 o4>
         <v-frame>
@@ -30,7 +49,7 @@
         </v-frame>
       </v-col>
     </v-row>
-
+    -->
     <!--
     <v-navbar title="Logo" fixed>
       <div class="nav-left">
