@@ -1,6 +1,8 @@
 <template>
   <div class="demo">
+    <!--
     <v-footer title="Hello World" subtitle="Hello"></v-footer>
+    -->
     <!--
     <v-row>
       <v-col c4 o4>
