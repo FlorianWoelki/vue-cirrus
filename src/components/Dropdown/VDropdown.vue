@@ -1,5 +1,5 @@
 <template>
-  <div :class=dropdownClasses>
+  <div :class=dropdownClasses :data-tooltip=tooltipData>
     <v-btn class="btn-dropdown">
       {{this.btnText}}
     </v-btn>
@@ -12,11 +12,13 @@
 <script>
 import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [
     Layout,
     Animations,
+    Tooltip,
   ],
 
   props: {
@@ -39,6 +41,7 @@ export default {
       return Object.assign(
         this.layoutMixins,
         this.animationsMixins,
+        this.tooltipMixins,
         {
           'menu-dropdown': true,
           'dropdown-right': this.right,

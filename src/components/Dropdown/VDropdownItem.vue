@@ -1,5 +1,5 @@
 <template>
-  <li :class=classes>
+  <li :class=classes :data-tooltip=tooltipData>
     <a :href=link>
       <slot></slot>
     </a>
@@ -9,11 +9,13 @@
 <script>
 import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [
     Layout,
     Animations,
+    Tooltip,
   ],
 
   props: {
@@ -28,6 +30,7 @@ export default {
       return Object.assign(
         this.layoutMixins,
         this.animationsMixins,
+        this.tooltipMixins,
         {
           'menu-item': true,
         },
