@@ -10,7 +10,15 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
   props: {
     btnText: {
       type: String,
@@ -28,11 +36,15 @@ export default {
 
   computed: {
     dropdownClasses() {
-      return {
-        'menu-dropdown': true,
-        'dropdown-right': this.right,
-        'dropdown-left': this.left,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          'menu-dropdown': true,
+          'dropdown-right': this.right,
+          'dropdown-left': this.left,
+        },
+      );
     },
   },
 };
