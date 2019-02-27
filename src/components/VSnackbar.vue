@@ -25,15 +25,27 @@ export default {
       type: Boolean,
       default: false,
     },
-    left: {
+    bottomLeft: {
       type: Boolean,
       default: false,
     },
-    right: {
+    bottomRight: {
       type: Boolean,
       default: false,
     },
-    center: {
+    bottomCenter: {
+      type: Boolean,
+      default: false,
+    },
+    topLeft: {
+      type: Boolean,
+      default: false,
+    },
+    topRight: {
+      type: Boolean,
+      default: false,
+    },
+    topCenter: {
       type: Boolean,
       default: false,
     },
@@ -67,9 +79,12 @@ export default {
         this.animationsMixins,
         {
           snackbar: true,
-          left: this.left,
-          right: this.right,
-          center: this.center,
+          'bottom-left': this.bottomLeft,
+          'bottom-right': this.bottomRight,
+          'bottom-center': this.bottomCenter,
+          'top-left': this.topLeft,
+          'top-right': this.topRight,
+          'top-center': this.topCenter,
         },
       );
     },
@@ -89,39 +104,82 @@ export default {
   padding: 16px;
   position: fixed;
   z-index: 1;
-  bottom: 30px;
 }
 
-.snackbar.center {
+.snackbar.top-center {
+  top: 15px;
   left: 50%;
 }
-.snackbar.left {
+.snackbar.top-left {
+  top: 15px;
   left: 141px;
 }
-.snackbar.right {
+.snackbar.top-right {
+  top: 15px;
   right: 18px;
 }
 
-.snackbar.show {
+.snackbar.bottom-center {
+  bottom: 30px;
+  left: 50%;
+}
+.snackbar.bottom-left {
+  bottom: 30px;
+  left: 141px;
+}
+.snackbar.bottom-right {
+  bottom: 30px;
+  right: 18px;
+}
+
+.snackbar.bottom-center.show,
+.snackbar.bottom-left.show,
+.snackbar.bottom-right.show {
   visibility: visible;
   /* TODO: Add other animation */
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
 }
 
-@-webkit-keyframes fadein {
+.snackbar.top-center.show,
+.snackbar.top-left.show,
+.snackbar.top-right.show {
+  visibility: visible;
+  /* TODO: Add other animation */
+  animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadeinTop {
+  from {top: 0; opacity: 0;}
+  to {top: 15px; opacity: 1;}
+}
+@keyframes fadeinTop {
+  from {top: 0; opacity: 0;}
+  to {top: 15px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeoutTop {
+  from {top: 15px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+@keyframes fadeoutTop {
+  from {top: 15px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@-webkit-keyframes fadeinBottom {
   from {bottom: 0; opacity: 0;}
   to {bottom: 30px; opacity: 1;}
 }
-@keyframes fadein {
+@keyframes fadeinBottom {
   from {bottom: 0; opacity: 0;}
   to {bottom: 30px; opacity: 1;}
 }
 
-@-webkit-keyframes fadeout {
+@-webkit-keyframes fadeoutBottom {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
-@keyframes fadeout {
+@keyframes fadeoutBottom {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }

@@ -1,5 +1,7 @@
 <template>
   <div class="demo">
+    <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
+    <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
     <!--
     <v-footer title="Hello World" subtitle="Hello"></v-footer>
     -->
