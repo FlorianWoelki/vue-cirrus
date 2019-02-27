@@ -1,7 +1,17 @@
 <template>
   <div class="demo">
+    <v-placeholder title="Super title" subtitle="Awesome some text subtitle">
+      <v-placeholder-commands>
+        <v-btn-group>
+          <v-btn btnStyle="accent">Test</v-btn>
+          <v-btn btnStyle="accent">Things</v-btn>
+        </v-btn-group>
+      </v-placeholder-commands>
+    </v-placeholder>
+    <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
     <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
+    -->
     <!--
     <v-footer title="Hello World" subtitle="Hello"></v-footer>
     -->
