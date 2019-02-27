@@ -1,8 +1,6 @@
 <template>
   <div :class=dropdownClasses :data-tooltip=tooltipData>
-    <v-btn class="btn-dropdown">
-      {{this.btnText}}
-    </v-btn>
+    <slot name="dropdownBtn"></slot>
     <ul class="menu">
       <slot></slot>
     </ul>
@@ -22,10 +20,6 @@ export default {
   ],
 
   props: {
-    btnText: {
-      type: String,
-      default: 'Dropdown',
-    },
     right: {
       type: Boolean,
       default: false,

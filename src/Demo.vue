@@ -2,7 +2,10 @@
   <div class="demo">
     <v-row>
       <v-col c4 o4>
-        <v-dropdown btnText="Hello World">
+        <v-dropdown>
+          <template v-slot:dropdownBtn>
+            <v-dropdown-btn>Hello!</v-dropdown-btn>
+          </template>
           <v-dropdown-item>
             Google Chrome
           </v-dropdown-item>
