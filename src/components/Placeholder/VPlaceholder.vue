@@ -11,11 +11,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: '',
+      default: 'Coming Soon',
     },
     subtitle: {
       type: String,
-      default: '',
+      default: 'We are currently working on this segment! :)',
     },
   },
 };
