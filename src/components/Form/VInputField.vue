@@ -1,5 +1,6 @@
 <template>
-  <div v-if="!select" class="input-control">
+  <input v-if=noControl :type=type :class=inputClasses :placeholder=placeholder />
+  <div v-else-if=!select class="input-control">
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
     <input :type=type :class=inputClasses :placeholder=placeholder />
@@ -15,6 +16,10 @@
 <script>
 export default {
   props: {
+    noControl: {
+      type: Boolean,
+      default: false,
+    },
     select: {
       type: Boolean,
       default: false,

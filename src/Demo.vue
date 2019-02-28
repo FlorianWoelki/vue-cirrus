@@ -9,6 +9,12 @@
         infoText="We won't spam!!!"
       ></v-input-field>
       <v-text-area placeholder="I'm a text area"></v-text-area>
+
+      <v-form-group>
+        <v-label>$</v-label>
+        <v-input-field noControl placeholder="Test input field"></v-input-field>
+        <v-btn>Go</v-btn>
+      </v-form-group>
     </div>
     <!--
     <v-sidebar>
