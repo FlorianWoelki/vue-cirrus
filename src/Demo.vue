@@ -2,7 +2,7 @@
   <div class="demo">
         <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
-        <v-sidebar-item>Web</v-sidebar-item>
+        <v-sidebar-item></v-sidebar-item>
         <v-sidebar-item>HTML</v-sidebar-item>
         <v-sidebar-item>CSS</v-sidebar-item>
         <v-sidebar-item>
