@@ -1,20 +1,36 @@
 <template>
-  <input v-if=noControl :type=type :class=inputClasses :placeholder=placeholder />
-  <div v-else-if=!select class="input-control">
+  <input
+    v-if=noControl
+    :data-tooltip=tooltipData
+    :type=type
+    :class=inputClasses
+    :placeholder=placeholder
+  />
+  <div v-else-if=!select :data-tooltip=tooltipData class="input-control">
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
     <input :type=type :class=inputClasses :placeholder=placeholder />
     <span v-if=infoText class="info text-center">{{infoText}}</span>
   </div>
   <div v-else class="input-control">
-    <select :class=inputClasses>
+    <select :class=inputClasses :data-tooltip=tooltipData>
       <slot></slot>
     </select>
   </div>
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+    Tooltip,
+  ],
+
   props: {
     noControl: {
       type: Boolean,
@@ -80,16 +96,21 @@ export default {
 
   computed: {
     inputClasses() {
-      return {
-        select: this.select,
-        'input-xsmall': this.xsmall,
-        'input-small': this.small,
-        'input-large': this.large,
-        'input-xlarge': this.xlarge,
-        'input-focused': this.focused,
-        'text-success input-success': this.success,
-        'text-error input-error': this.error,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        this.tooltipMixins,
+        {
+          select: this.select,
+          'input-xsmall': this.xsmall,
+          'input-small': this.small,
+          'input-large': this.large,
+          'input-xlarge': this.xlarge,
+          'input-focused': this.focused,
+          'text-success input-success': this.success,
+          'text-error input-error': this.error,
+        },
+      );
     },
     infoClasses() {
       return {

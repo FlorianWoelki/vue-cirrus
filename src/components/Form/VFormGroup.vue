@@ -5,7 +5,27 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
+  computed: {
+    classes() {
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          'form-group': true,
+        },
+      );
+    },
+  },
+
   mounted() {
     const nodes = document.getElementsByClassName('form-group');
     for (let i = 0; i < nodes.length; i += 1) {
