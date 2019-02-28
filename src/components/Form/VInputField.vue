@@ -1,15 +1,24 @@
 <template>
-  <div class="input-control">
+  <div v-if="!select" class="input-control">
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
     <input :type=type :class=inputClasses :placeholder=placeholder />
     <span v-if=infoText class="info text-center">{{infoText}}</span>
+  </div>
+  <div v-else class="input-control">
+    <select :class=inputClasses>
+      <slot></slot>
+    </select>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    select: {
+      type: Boolean,
+      default: false,
+    },
     type: {
       type: String,
       default: 'text',
@@ -67,6 +76,7 @@ export default {
   computed: {
     inputClasses() {
       return {
+        select: this.select,
         'input-xsmall': this.xsmall,
         'input-small': this.small,
         'input-large': this.large,
