@@ -8,6 +8,7 @@
         placeholder="Test input field"
         infoText="We won't spam!!!"
       ></v-input-field>
+      <v-text-area placeholder="I'm a text area"></v-text-area>
     </div>
     <!--
     <v-sidebar>
