@@ -1,17 +1,32 @@
 <template>
-  <div :class=classes>
+  <div v-if="!dropdown" :class=classes>
     <label :for=forId class="tree-item-header">
       <slot></slot>
     </label>
+  </div>
+  <div v-else>
+    <li class="menu-item">
+      <a :href=link>
+        <slot></slot>
+      </a>
+    </li>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    link: {
+      type: String,
+      default: '#',
+    },
     forId: {
       type: String,
       default: 'treeitem',
+    },
+    dropdown: {
+      type: Boolean,
+      default: false,
     },
   },
 

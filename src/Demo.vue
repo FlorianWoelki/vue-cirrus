@@ -1,13 +1,29 @@
 <template>
   <div class="demo">
-    <v-placeholder title="Super title" subtitle="Awesome some text subtitle">
-      <v-placeholder-commands>
-        <v-btn-group>
-          <v-btn btnStyle="accent">Test</v-btn>
-          <v-btn btnStyle="accent">Things</v-btn>
-        </v-btn-group>
-      </v-placeholder-commands>
-    </v-placeholder>
+        <v-sidebar>
+      <v-sidebar-items title="Hello" hoverEffect>
+        <v-sidebar-item>Web</v-sidebar-item>
+        <v-sidebar-item>HTML</v-sidebar-item>
+        <v-sidebar-item>CSS</v-sidebar-item>
+        <v-sidebar-item>
+          <v-sidebar-dropdown title="Mixins">
+            <v-sidebar-item dropdown>a</v-sidebar-item>
+            <v-sidebar-item dropdown>b</v-sidebar-item>
+            <v-sidebar-item dropdown>c</v-sidebar-item>
+          </v-sidebar-dropdown>
+        </v-sidebar-item>
+      </v-sidebar-items>
+      <v-sidebar-content>
+        <v-placeholder title="Super title" subtitle="Awesome some text subtitle">
+          <v-placeholder-commands>
+            <v-btn-group>
+              <v-btn btnStyle="accent">Test</v-btn>
+              <v-btn btnStyle="accent">Things</v-btn>
+            </v-btn-group>
+          </v-placeholder-commands>
+        </v-placeholder>
+      </v-sidebar-content>
+    </v-sidebar>
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
     <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
