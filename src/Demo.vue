@@ -1,6 +1,16 @@
 <template>
   <div class="demo">
-        <v-sidebar>
+    <div class="content">
+      <v-input-field
+        title="Email Adress"
+        subtitle="Enter your email adress here"
+        subtitleInline
+        placeholder="Test input field"
+        infoText="We won't spam!!!"
+      ></v-input-field>
+    </div>
+    <!--
+    <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item></v-sidebar-item>
         <v-sidebar-item>HTML</v-sidebar-item>
@@ -24,6 +34,7 @@
         </v-placeholder>
       </v-sidebar-content>
     </v-sidebar>
+    -->
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
     <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
