@@ -1,28 +1,9 @@
 <template>
   <v-sidebar>
     <v-sidebar-items title="Components" hoverEffect>
-      <v-sidebar-item>Buttons</v-sidebar-item>
-      <v-sidebar-item>Cards</v-sidebar-item>
-      <v-sidebar-item>Dropdown</v-sidebar-item>
-      <v-sidebar-item>Frames</v-sidebar-item>
-      <v-sidebar-item>Grid</v-sidebar-item>
-      <v-sidebar-item>Modals</v-sidebar-item>
-      <v-sidebar-item>Navbar</v-sidebar-item>
-      <v-sidebar-item>Pagination</v-sidebar-item>
-      <v-sidebar-item>Placeholder</v-sidebar-item>
-      <v-sidebar-item>Sidebar</v-sidebar-item>
-      <v-sidebar-item>Tabs</v-sidebar-item>
-      <v-sidebar-item>Tiles</v-sidebar-item>
-      <v-sidebar-item>Avatars</v-sidebar-item>
-      <v-sidebar-item>Code</v-sidebar-item>
-      <v-sidebar-item>Dividers</v-sidebar-item>
-      <v-sidebar-item>Footer</v-sidebar-item>
-      <v-sidebar-item>Links</v-sidebar-item>
-      <v-sidebar-item>NextPrev</v-sidebar-item>
-      <v-sidebar-item>Parallax</v-sidebar-item>
-      <v-sidebar-item>Snackbars</v-sidebar-item>
-      <v-sidebar-item>Spaces</v-sidebar-item>
-      <v-sidebar-item>Toasts</v-sidebar-item>
+      <v-sidebar-item v-for="component in components" :key=component>
+        {{component}}
+      </v-sidebar-item>
       <v-divider />
       <v-sidebar-item>
         <input type="checkbox" id="mixins" class="hide" name="mixinsTree">
@@ -60,3 +41,16 @@
     </v-sidebar-content>
   </v-sidebar>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      components: ['Buttons', 'Cards', 'Dropdown', 'Frames', 'Grid',
+        'Modals', 'Navbar', 'Pagination', 'Placeholder', 'Sidebar',
+        'Tabs', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
+        'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts'],
+    };
+  },
+};
+</script>
