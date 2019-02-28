@@ -1,22 +1,6 @@
 <template>
   <div class="demo">
-    <div class="content">
-      <v-input-field
-        title="Email Adress"
-        subtitle="Enter your email adress here"
-        subtitleInline
-        placeholder="Test input field"
-        infoText="We won't spam!!!"
-      ></v-input-field>
-      <v-text-area placeholder="I'm a text area"></v-text-area>
 
-      <v-form-group>
-        <v-label>$</v-label>
-        <v-input-field noControl placeholder="Test input field"></v-input-field>
-        <v-btn>Go</v-btn>
-      </v-form-group>
-    </div>
-    <!--
     <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item></v-sidebar-item>
@@ -31,17 +15,32 @@
         </v-sidebar-item>
       </v-sidebar-items>
       <v-sidebar-content>
-        <v-placeholder title="Super title" subtitle="Awesome some text subtitle">
-          <v-placeholder-commands>
-            <v-btn-group>
-              <v-btn btnStyle="accent">Test</v-btn>
-              <v-btn btnStyle="accent">Things</v-btn>
-            </v-btn-group>
-          </v-placeholder-commands>
-        </v-placeholder>
+        <div class="content">
+          <v-input-field
+            title="Email Adress"
+            subtitle="Enter your email adress here"
+            subtitleInline
+            placeholder="Test input field"
+            infoText="We won't spam!!!"
+          ></v-input-field>
+          <v-text-area placeholder="I'm a text area"></v-text-area>
+
+          <v-badge content="3">
+            <span>Test Badges</span>
+          </v-badge>
+          <v-badge accent left content="12" color="black">
+            <span>Another One</span>
+          </v-badge>
+
+          <v-form-group>
+            <v-label>$</v-label>
+            <v-input-field noControl placeholder="Test input field"></v-input-field>
+            <v-btn>Go</v-btn>
+          </v-form-group>
+        </div>
       </v-sidebar-content>
     </v-sidebar>
-    -->
+
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
     <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
