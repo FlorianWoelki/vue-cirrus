@@ -32,3 +32,17 @@ export default {
   },
 };
 </script>
+
+<style>
+footer .divider {
+  background: rgba(238, 238, 238, 0.2);
+  height: 1px;
+}
+footer ul a {
+  display: block;
+}
+footer ul a li:hover {
+  color: #fff;
+  transition: all .3s;
+}
+</style>
