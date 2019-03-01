@@ -21,6 +21,18 @@ export default {
   },
 
   props: {
+    accent: {
+      type: Boolean,
+      default: false,
+    },
+    gray: {
+      type: Boolean,
+      default: false,
+    },
+    black: {
+      type: Boolean,
+      default: false,
+    },
     value: {
       type: Boolean,
       default: false,
@@ -85,6 +97,9 @@ export default {
           'top-left': this.topLeft,
           'top-right': this.topRight,
           'top-center': this.topCenter,
+          'accent-snackbar': this.accent,
+          'darkgray-snackbar': this.darkgray,
+          'black-snackbar': this.black,
         },
       );
     },
@@ -98,12 +113,26 @@ export default {
   min-width: 250px;
   margin-left: -125px;
   background-color: #333;
-  color: #fff;
+  color: #eee;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
   position: fixed;
   z-index: 1;
+}
+
+.snackbar.accent-snackbar {
+  background: #f03d4d;
+  color: #fff;
+  border-color: #c21b2b;
+}
+.snackbar.darkgray-snackbar {
+  background: #444;
+  color: #fff;
+}
+.snackbar.black-snackbar {
+  background: #000;
+  color: #fff;
 }
 
 .snackbar.top-center {
