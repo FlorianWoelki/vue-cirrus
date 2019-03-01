@@ -49,7 +49,8 @@ export default {
       components: ['Buttons', 'Cards', 'Dropdown', 'Frames', 'Grid',
         'Modals', 'Navbar', 'Pagination', 'Placeholder', 'Sidebar',
         'Tabs', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
-        'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts'],
+        'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
+        'Badges', 'Fullscreen'],
     };
   },
 };
