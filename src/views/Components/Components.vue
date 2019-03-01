@@ -6,26 +6,11 @@
       </v-sidebar-item>
       <v-divider />
       <v-sidebar-item>
-        <input type="checkbox" id="mixins" class="hide" name="mixinsTree">
-        <label for="mixins" class="tree-item-header">
-          <span class="icon">
-            <i class="fa fa-chevron-right small" aria-hidden="true"></i>
-          </span>
-          Mixins
-        </label>
-        <div class="tree-item-body">
-          <ul class="menu">
-            <li class="menu-item">
-              <a>Layout</a>
-            </li>
-            <li class="menu-item">
-              <a>Tooltips</a>
-            </li>
-            <li class="menu-item">
-              <a>Animations</a>
-            </li>
-          </ul>
-        </div>
+        <v-sidebar-dropdown title="Mixins">
+          <v-sidebar-item dropdown>Layout</v-sidebar-item>
+          <v-sidebar-item dropdown>Tooltips</v-sidebar-item>
+          <v-sidebar-item dropdown>Animations</v-sidebar-item>
+        </v-sidebar-dropdown>
       </v-sidebar-item>
     </v-sidebar-items>
     <v-sidebar-content>
