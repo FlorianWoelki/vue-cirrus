@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.7] - 2019-03-01
+### 🔨 Added
+- Added sidebar dropdown item
+- Added default title and subtitle for placeholder
+- Added input field component
+- Added dropdown select menu component
+- Added text area component
+- Added badges
+- Added fullscreen component
+
+### ⚡️ Changed
+- Updated colors for snackbar
+
+
 ## [0.1.6] - 2019-02-27
 ### 🔨 Added
 - Added button click event with :onClick
@@ -70,3 +84,4 @@ All notable changes to this project will be documented in this file.
 [0.1.51]: https://www.npmjs.com/package/vue-cirrus/v/0.1.51
 [0.1.52]: https://www.npmjs.com/package/vue-cirrus/v/0.1.52
 [0.1.6]: https://www.npmjs.com/package/vue-cirrus/v/0.1.6
+[0.1.7]: https://www.npmjs.com/package/vue-cirrus/v/0.1.7
