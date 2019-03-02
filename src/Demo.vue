@@ -1,10 +1,9 @@
 <template>
   <div class="demo">
-    <!--
     <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item></v-sidebar-item>
-        <v-sidebar-item>HTML</v-sidebar-item>
+        <v-sidebar-item link="html">HTML</v-sidebar-item>
         <v-sidebar-item>CSS</v-sidebar-item>
         <v-sidebar-item>
           <v-sidebar-dropdown title="Mixins">
@@ -25,13 +24,6 @@
           ></v-input-field>
           <v-text-area placeholder="I'm a text area"></v-text-area>
 
-          <v-badge content="3">
-            <span>Test Badges</span>
-          </v-badge>
-          <v-badge accent left content="12" color="black">
-            <span>Another One</span>
-          </v-badge>
-
           <v-form-group>
             <v-label>$</v-label>
             <v-input-field noControl placeholder="Test input field"></v-input-field>
@@ -41,7 +33,6 @@
         </div>
       </v-sidebar-content>
     </v-sidebar>
-    -->
 
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
