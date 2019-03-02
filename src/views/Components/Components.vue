@@ -14,14 +14,14 @@
       </v-sidebar-item>
     </v-sidebar-items>
     <v-sidebar-content>
-      <h3>Test</h3>
+      <h3>Components</h3>
       <v-divider />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Rerum ex, beatae veniam assumenda tempora totam quos
-        consectetur reprehenderit vero animi odio autem, numquam
-        laboriosam. Doloribus repudiandae autem illum architecto accusamus?
+        Welcome to the components page.
+      </p>
+      <p>
+        On the sidebar you can see all current developed components.
       </p>
     </v-sidebar-content>
   </v-sidebar>
