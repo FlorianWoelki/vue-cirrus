@@ -15,6 +15,7 @@
       </v-sidebar-items>
       <v-sidebar-content>
         <div class="content">
+          <!--
           <v-input-field
             title="Email Adress"
             subtitle="Enter your email adress here"
@@ -30,6 +31,11 @@
             <v-btn :onClick="() => { snackbar = !snackbar; }">Go</v-btn>
           </v-form-group>
           <v-snackbar lightgray bottomCenter v-model="snackbar">Colored Snackbar!</v-snackbar>
+          -->
+
+          <v-code lang="html">
+            <pre v-html="code"></pre>
+          </v-code>
         </div>
       </v-sidebar-content>
     </v-sidebar>
@@ -362,6 +368,8 @@ export default {
   data() {
     return {
       snackbar: false,
+      code: `<xmp><div>Helo World</div>
+<h1 class="Hello World">Hello World</h1></xmp>`,
     };
   },
 };

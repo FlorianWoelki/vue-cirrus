@@ -79,26 +79,30 @@ export default {
   },
 
   mounted() {
-    const keywords = this.keywords.split(',');
-    let currentHTML = document.getElementById(`${this.lang}-code`).innerHTML;
+    if (this.keywords.length !== 0) {
+      const keywords = this.keywords.split(',');
+      let currentHTML = document.getElementById(`${this.lang}-code`).innerHTML;
 
-    // Colorize all strings
-    currentHTML = currentHTML.replace(/("|').*?("|')/g, '<span class="quote">$&</span>');
+      // TODO: HTML colorizing is not working.
 
-    // Colorize all keywords
-    let regexKeywords = '';
-    for (let i = 0; i < keywords.length; i += 1) {
-      const keyword = keywords[i].trim();
-      regexKeywords += i === keywords.length - 1 ? keyword : `${keyword}|`;
-    }
+      // Colorize all strings
+      currentHTML = currentHTML.replace(/("|').*?("|')/g, '<span class="quote">$&</span>');
 
-    const regexp = new RegExp(`\\b(${regexKeywords})\\b`, 'g');
-    currentHTML = currentHTML.replace(regexp, '<span class="keyword">$1</span>');
+      // Colorize all keywords
+      let regexKeywords = '';
+      for (let i = 0; i < keywords.length; i += 1) {
+        const keyword = keywords[i].trim();
+        regexKeywords += i === keywords.length - 1 ? keyword : `${keyword}|`;
+      }
 
-    document.getElementById(`${this.lang}-code`).innerHTML = currentHTML;
+      const regexp = new RegExp(`\\b(${regexKeywords})\\b`, 'g');
+      currentHTML = currentHTML.replace(regexp, '<span class="keyword">$1</span>');
 
-    if (this.copyable) {
-      document.getElementById(`${this.lang}-code`).style.cursor = 'pointer';
+      document.getElementById(`${this.lang}-code`).innerHTML = currentHTML;
+
+      if (this.copyable) {
+        document.getElementById(`${this.lang}-code`).style.cursor = 'pointer';
+      }
     }
   },
 };
