@@ -1,11 +1,5 @@
 <template>
   <div class="demo">
-    <v-fullscreen link="https://ak9.picdn.net/shutterstock/videos/18405259/thumb/1.jpg">
-      <div class="content text-center">
-        <h1 class="white uppercase">Testing some fullscreen images</h1>
-      </div>
-    </v-fullscreen>
-
     <!--
     <v-sidebar>
       <v-sidebar-items title="Hello" hoverEffect>

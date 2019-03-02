@@ -33,7 +33,7 @@ export default {
       type: String,
       default: '',
     },
-    tiny: {
+    xsmall: {
       type: Boolean,
       default: false,
     },
@@ -45,7 +45,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    extraLarge: {
+    xlarge: {
       type: Boolean,
       default: false,
     },
@@ -67,10 +67,10 @@ export default {
       const classes = {
         'btn-animated': this.animated,
         [`btn-${this.btnStyle}`]: btnStyle != null,
-        'btn-tiny': this.tiny,
+        'btn-tiny': this.xsmall,
         'btn-small': this.small,
         'btn-large': this.large,
-        'btn-xlarge': this.extraLarge,
+        'btn-xlarge': this.xlarge,
         'animated loading loading-left': this.loadingLeft,
         'animated loading loading-right': this.loadingRight,
       };
