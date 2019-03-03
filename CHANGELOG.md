@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.71] - 2019-03-01
+### ⚡️ Changed
+- Fixed some styling issues with footer
+- Renamed button sizes
+- Fixed issue with href in sidebar item
+- Fixed issue with v-code component
+
+
 ## [0.1.7] - 2019-03-01
 ### 🔨 Added
 - Added sidebar dropdown item
@@ -85,3 +93,4 @@ All notable changes to this project will be documented in this file.
 [0.1.52]: https://www.npmjs.com/package/vue-cirrus/v/0.1.52
 [0.1.6]: https://www.npmjs.com/package/vue-cirrus/v/0.1.6
 [0.1.7]: https://www.npmjs.com/package/vue-cirrus/v/0.1.7
+[0.1.71]: https://www.npmjs.com/package/vue-cirrus/v/0.1.71
