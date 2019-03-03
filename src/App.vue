@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <section class="padtop">
-      <router-view />
-    </section>
+    <router-view />
   </div>
 </template>

@@ -37,5 +37,12 @@ export default {
     ButtonSizes,
     LoadingButtons,
   },
+
+  mounted() {
+    const classes = document.getElementsByClassName('copy-feedback');
+    while (classes[0]) {
+      classes[0].parentNode.removeChild(classes[0]);
+    }
+  },
 };
 </script>

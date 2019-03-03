@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col c6>
-      <v-code lang="Vue" keywords="keyword">
+      <v-code lang="Vue">
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
