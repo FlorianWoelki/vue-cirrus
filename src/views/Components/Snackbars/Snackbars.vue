@@ -15,12 +15,23 @@
       </v-col>
     </v-row>
 
-    <v-space xlarge v-for="i in 3" :key=i />
+    <v-space xlarge />
+
+    <h6>API (props)</h6>
+    <API />
+
+    <v-space xlarge v-for="i in 2" :key=i />
   </section>
 </template>
 
 <script>
+import API from '@/views/Components/Snackbars/API.vue';
+
 export default {
+  components: {
+    API,
+  },
+
   data() {
     return {
       snackbar: false,
