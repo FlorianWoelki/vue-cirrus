@@ -13,6 +13,7 @@ import Sidebar from '@/components/Sidebar.vue';
 import Buttons from '@/views/Components/Buttons/Buttons.vue';
 import Cards from '@/views/Components/Cards/Cards.vue';
 import Snackbars from '@/views/Components/Snackbars/Snackbars.vue';
+import Avatars from '@/views/Components/Avatars/Avatars.vue';
 
 export default {
   components: {
@@ -20,6 +21,7 @@ export default {
     Cards,
     Buttons,
     Snackbars,
+    Avatars,
   },
 
   data() {
@@ -36,6 +38,8 @@ export default {
         this.currentView = 'Buttons';
       } else if (this.$route.params.name === 'Snackbars') {
         this.currentView = 'Snackbars';
+      } else if (this.$route.params.name === 'Avatars') {
+        this.currentView = 'Avatars';
       }
     },
   },
