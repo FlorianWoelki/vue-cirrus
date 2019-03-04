@@ -7,7 +7,7 @@
     </thead>
     <tbody>
       <!-- TODO: Add mixins -->
-      <tr v-for="prop in props" :key=prop.name>
+      <tr v-for="prop in props" :key=prop>
         <td>{{prop[0]}}</td>
         <td>{{prop[1]}}</td>
         <td>{{prop[2]}}</td>
