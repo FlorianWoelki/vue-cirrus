@@ -10,18 +10,10 @@
 
 <script>
 import Sidebar from '@/components/Sidebar.vue';
-import Buttons from '@/views/Components/Buttons/Buttons.vue';
-import Cards from '@/views/Components/Cards/Cards.vue';
-import Snackbars from '@/views/Components/Snackbars/Snackbars.vue';
-import Avatars from '@/views/Components/Avatars/Avatars.vue';
 
 export default {
   components: {
     Sidebar,
-    Cards,
-    Buttons,
-    Snackbars,
-    Avatars,
   },
 
   data() {

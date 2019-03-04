@@ -33,7 +33,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-avatar text="FW"></v-avatar></xmp>`,
+      code: '<xmp><v-avatar text="FW"></v-avatar></xmp>',
     };
   },
 };
