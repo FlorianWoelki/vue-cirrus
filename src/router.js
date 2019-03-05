@@ -6,18 +6,6 @@ import ComponentsRouter from './views/ComponentsRouter.vue';
 
 Vue.use(Router);
 
-// Load all component views
-const requireComponent = require.context('@/views/Components/', true, /V[\w-]+.vue$/);
-requireComponent.keys().forEach((filename) => {
-  const componentConfig = requireComponent(filename);
-  const componentName = `${filename.replace(/^\.\//, '')
-    .replace(/\.\w+$/, '')
-    .replace(/(.+)\//, '')
-    .replace('V', '')}`;
-
-  Vue.component(componentName, componentConfig.default || componentConfig);
-});
-
 export default new Router({
   routes: [
     {
