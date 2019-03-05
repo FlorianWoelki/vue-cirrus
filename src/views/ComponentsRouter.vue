@@ -11,6 +11,8 @@
 <script>
 import Sidebar from '@/components/Sidebar.vue';
 
+import components from '../components';
+
 export default {
   components: {
     Sidebar,
@@ -24,15 +26,11 @@ export default {
 
   watch: {
     $route() {
-      if (this.$route.params.name === 'Cards') {
-        this.currentView = 'Cards';
-      } else if (this.$route.params.name === 'Buttons') {
-        this.currentView = 'Buttons';
-      } else if (this.$route.params.name === 'Snackbars') {
-        this.currentView = 'Snackbars';
-      } else if (this.$route.params.name === 'Avatars') {
-        this.currentView = 'Avatars';
-      }
+      components.components.forEach((component) => {
+        if (this.$route.params.name === component) {
+          this.currentView = component;
+        }
+      });
     },
   },
 };

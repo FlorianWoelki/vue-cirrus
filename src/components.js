@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
 const requireComponent = require.context('@/views/Components/', true, /V[\w-]+.vue$/);
+const components = [];
 
 requireComponent.keys().forEach((filename) => {
   const componentConfig = requireComponent(filename);
@@ -9,7 +10,10 @@ requireComponent.keys().forEach((filename) => {
     .replace(/(.+)\//, '')
     .replace('V', '')}`;
 
+  components.push(componentName);
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
 
-export default Vue;
+export default {
+  components,
+};
