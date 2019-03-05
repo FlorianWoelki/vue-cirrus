@@ -17,14 +17,14 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API />
+    <API :data=props />
 
     <v-space xlarge v-for="i in 2" :key=i />
   </section>
 </template>
 
 <script>
-import API from '@/views/Components/Toasts/API.vue';
+import API from '@/views/Components/API.vue';
 
 export default {
   components: {
@@ -33,6 +33,12 @@ export default {
   data() {
     return {
       code: '<xmp><v-toast>My Toast!</v-toast></xmp>',
+      props: {
+        success: ['success', 'false', 'Boolean', 'Success colored toast'],
+        warning: ['warning', 'false', 'Boolean', 'Warning colored toast'],
+        error: ['error', 'false', 'Boolean', 'Error colored toast'],
+        closable: ['closable', 'false', 'Boolean', 'Closable icon in the top right'],
+      },
     };
   },
 };

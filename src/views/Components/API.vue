@@ -19,18 +19,11 @@
 
 <script>
 export default {
+  props: ['data'],
   data() {
     return {
       headers: ['Name', 'Default', 'Type', 'Description'],
-      props: {
-        src: ['src', 'Empty', 'String', 'Avatar image source'],
-        text: ['text', 'Empty', 'String', 'Avatar text'],
-        padded: ['padded', 'false', 'Boolean', 'Enable padding around avatar'],
-        xsmall: ['xsmall', 'false', 'Boolean', 'Avatar xsmall size'],
-        small: ['small', 'false', 'Boolean', 'Avatar small size'],
-        large: ['large', 'false', 'Boolean', 'Avatar large size'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'Avatar xlarge size'],
-      },
+      props: this.data,
     };
   },
 };

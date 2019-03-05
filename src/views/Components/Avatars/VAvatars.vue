@@ -17,14 +17,14 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API />
+    <API :data=props />
 
     <v-space xlarge v-for="i in 2" :key=i />
   </section>
 </template>
 
 <script>
-import API from '@/views/Components/Avatars/API.vue';
+import API from '@/views/Components/API.vue';
 
 export default {
   components: {
@@ -34,6 +34,15 @@ export default {
   data() {
     return {
       code: '<xmp><v-avatar text="FW"></v-avatar></xmp>',
+      props: {
+        src: ['src', 'Empty', 'String', 'Avatar image source'],
+        text: ['text', 'Empty', 'String', 'Avatar text'],
+        padded: ['padded', 'false', 'Boolean', 'Enable padding around avatar'],
+        xsmall: ['xsmall', 'false', 'Boolean', 'Avatar xsmall size'],
+        small: ['small', 'false', 'Boolean', 'Avatar small size'],
+        large: ['large', 'false', 'Boolean', 'Avatar large size'],
+        xlarge: ['xlarge', 'false', 'Boolean', 'Avatar xlarge size'],
+      },
     };
   },
 };

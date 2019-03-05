@@ -25,7 +25,7 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API />
+    <API :data=props />
 
     <v-space xlarge v-for="i in 2" :key=i />
   </section>
@@ -36,7 +36,7 @@ import SimpleButtons from '@/views/Components/Buttons/SimpleButtons.vue';
 import StyledButtons from '@/views/Components/Buttons/StyledButtons.vue';
 import ButtonSizes from '@/views/Components/Buttons/ButtonSizes.vue';
 import LoadingButtons from '@/views/Components/Buttons/LoadingButtons.vue';
-import API from '@/views/Components/Buttons/API.vue';
+import API from '@/views/Components/API.vue';
 
 export default {
   components: {
@@ -45,6 +45,22 @@ export default {
     ButtonSizes,
     LoadingButtons,
     API,
+  },
+
+  data() {
+    return {
+      props: {
+        onClick: ['onClick', 'null', 'Function', 'Button click event'],
+        animated: ['animated', 'false', 'Boolean', 'Button click animation'],
+        btnStyle: ['btnStyle', 'Empty', 'String', 'Button color'],
+        xsmall: ['xsmall', 'false', 'Boolean', 'Button xsmall size'],
+        small: ['small', 'false', 'Boolean', 'Button small size'],
+        large: ['large', 'false', 'Boolean', 'Button large size'],
+        xlarge: ['xlarge', 'false', 'Boolean', 'Button xlarge size'],
+        loadingLeft: ['loadingLeft', 'false', 'Boolean', 'Loading left animation'],
+        loadingRight: ['loadingRight', 'false', 'Boolean', 'Loading right animation'],
+      },
+    };
   },
 
   mounted() {
