@@ -1,7 +1,7 @@
 <template>
   <section class="badges">
     <h5>Tiles</h5>
-    <p>Easily split up your layout with dividers!</p>
+    <p>Create simple tiles with Vue-Cirrus.</p>
 
     <v-row>
       <v-col c6>
