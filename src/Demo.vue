@@ -40,6 +40,9 @@
       </v-sidebar-content>
     </v-sidebar>
 
+    <v-spinner>
+    </v-spinner>
+
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
     <v-snackbar topLeft v-model="snackbar">Testing</v-snackbar>
