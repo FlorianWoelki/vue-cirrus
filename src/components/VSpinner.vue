@@ -1,5 +1,5 @@
 <template>
-  <div class="loader-wrapper">
+  <div id="spinner" class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
 </template>
@@ -15,11 +15,23 @@ export default {
       type: Number,
       default: 1000,
     },
+    backgroundColor: {
+      type: String,
+      default: '#242f3f',
+    },
+    fillColor: {
+      type: String,
+      default: '#fff',
+    },
   },
 
   mounted() {
+    document.getElementById('spinner').style.backgroundColor = this.backgroundColor;
+    document.getElementsByClassName('loader-inner')[0].style.backgroundColor = this.fillColor;
+    document.getElementsByClassName('loader')[0].style.borderColor = this.fillColor;
+
     setTimeout(() => {
-      const s = document.getElementsByClassName('loader-wrapper')[0].style;
+      const s = document.getElementById('spinner').style;
       s.opacity = 1;
       const { fadeOut } = this.$props;
       (function fade() { (s.opacity -= 0.1) < 0 ? s.display = 'none' : setTimeout(fade, fadeOut); })(); // eslint-disable-line
@@ -28,19 +40,13 @@ export default {
 };
 </script>
 
-
 <style scoped>
-body {
-  background-color: #242F3F;
-}
-
 .loader-wrapper {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #242f3f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +57,7 @@ body {
   width: 30px;
   height: 30px;
   position: relative;
-  border: 4px solid #Fff;
+  border: 4px solid rgb(255, 255, 255);
   animation: loader 2s infinite ease;
 }
 
@@ -59,7 +65,6 @@ body {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
 

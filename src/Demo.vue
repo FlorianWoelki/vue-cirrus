@@ -49,8 +49,7 @@
       </v-sidebar-content>
     </v-sidebar>
 
-    <v-spinner>
-    </v-spinner>
+    <v-spinner backgroundColor="#000" fillColor="red" />
 
     <!--
     <v-btn :onClick="() => { snackbar = !snackbar; }">Click to snack!</v-btn>
