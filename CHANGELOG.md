@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [0.1.71] - 2019-03-01
+### 🔨 Added
+- Spinner component
+
+### ⚡️ Changed
+- Fixed overflow in v-code
+
+
+## [0.1.71] - 2019-03-01
 ### ⚡️ Changed
 - Fixed some styling issues with footer
 - Renamed button sizes
@@ -94,3 +102,4 @@ All notable changes to this project will be documented in this file.
 [0.1.6]: https://www.npmjs.com/package/vue-cirrus/v/0.1.6
 [0.1.7]: https://www.npmjs.com/package/vue-cirrus/v/0.1.7
 [0.1.71]: https://www.npmjs.com/package/vue-cirrus/v/0.1.71
+[0.1.72]: https://www.npmjs.com/package/vue-cirrus/v/0.1.72
