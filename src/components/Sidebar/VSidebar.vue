@@ -20,6 +20,10 @@ export default {
     Layout,
   ],
 
+  beforeCreate() {
+    document.body.className = 'sidebar';
+  },
+
   computed: {
     classes() {
       return Object.assign(
@@ -32,3 +36,9 @@ export default {
   },
 };
 </script>
+
+<style>
+body.sidebar {
+  overflow-y: hidden;
+}
+</style>

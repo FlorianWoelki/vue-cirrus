@@ -4,7 +4,9 @@
       <v-sidebar-items title="Hello" hoverEffect>
         <v-sidebar-item></v-sidebar-item>
         <v-sidebar-item link="html">HTML</v-sidebar-item>
-        <v-sidebar-item>CSS</v-sidebar-item>
+        <v-sidebar-item link="css">CSS</v-sidebar-item>
+        <v-sidebar-item link="js">JS</v-sidebar-item>
+        <v-sidebar-item link="c">C</v-sidebar-item>
         <v-sidebar-item>
           <v-sidebar-dropdown title="Mixins">
             <v-sidebar-item dropdown>a</v-sidebar-item>
@@ -15,6 +17,17 @@
       </v-sidebar-items>
       <v-sidebar-content>
         <div class="content">
+          <v-row v-for="i in 3" :key=i>
+            <v-col c6>
+              <v-code :lang="'html-' + i" copyable>
+                <pre v-html="code"></pre>
+              </v-code>
+            </v-col>
+            <v-col c6>
+              <h2>testest</h2>
+            </v-col>
+          </v-row>
+
           <!--
           <v-input-field
             title="Email Adress"
@@ -32,10 +45,6 @@
           </v-form-group>
           <v-snackbar lightgray bottomCenter v-model="snackbar">Colored Snackbar!</v-snackbar>
           -->
-
-          <v-code lang="html">
-            <pre v-html="code"></pre>
-          </v-code>
         </div>
       </v-sidebar-content>
     </v-sidebar>
