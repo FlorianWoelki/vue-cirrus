@@ -1,7 +1,7 @@
 <template>
   <section class="badges">
-    <h5>Dividers</h5>
-    <p>Easily split up your layout with dividers!</p>
+    <h5>NextPrev</h5>
+    <p>It is so easy to create stylus next and previous buttons!</p>
 
     <v-row>
       <v-col c6>
