@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       components: ['Buttons', 'Cards', 'Dropdown', 'Frames', 'Grid',
-        'Modals', 'Navbar', 'Pagination', 'Placeholder', 'Sidebar',
+        'Modals', 'Navbar', 'Pagination', 'Placeholder', 'Sidebars',
         'Tabs', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
         'Badges', 'Fullscreen'],
