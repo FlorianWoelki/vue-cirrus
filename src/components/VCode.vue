@@ -1,9 +1,9 @@
 <template>
   <pre>
     <div :id=feedbackId class="copy-feedback">Copied!</div>
-    <code :id=codeId :class=classes :data-lang=dataLang :keywords=keywords @click="copy">
-      <slot></slot>
-    </code>
+    <pre>
+      <code :id=codeId :class=classes @click="copy"><slot></slot></code>
+    </pre>
   </pre>
 </template>
 
@@ -11,10 +11,6 @@
 export default {
   props: {
     lang: {
-      type: String,
-      default: '',
-    },
-    keywords: {
       type: String,
       default: '',
     },
@@ -59,6 +55,14 @@ export default {
     },
   },
 
+  mounted() {
+    document.getElementById(this.codeId).classList.add(`language-${this.lang}`);
+
+    if (this.copyable) {
+      document.getElementById(`${this.lang}-code`).style.cursor = 'pointer';
+    }
+  },
+
   computed: {
     codeId() {
       return `${this.lang}-code`;
@@ -71,62 +75,15 @@ export default {
     },
     classes() {
       return {
-        code: true,
         copyable: this.copyable,
         'feedback-blur': this.copyable,
       };
     },
   },
-
-  mounted() {
-    if (this.keywords.length !== 0) {
-      const keywords = this.keywords.split(',');
-      let currentHTML = document.getElementById(`${this.lang}-code`).innerHTML;
-
-      // TODO: HTML colorizing is not working.
-
-      // Colorize all strings
-      currentHTML = currentHTML.replace(/("|').*?("|')/g, '<span class="quote">$&</span>');
-
-      // Colorize all keywords
-      let regexKeywords = '';
-      for (let i = 0; i < keywords.length; i += 1) {
-        const keyword = keywords[i].trim();
-        regexKeywords += i === keywords.length - 1 ? keyword : `${keyword}|`;
-      }
-
-      const regexp = new RegExp(`\\b(${regexKeywords})\\b`, 'g');
-      currentHTML = currentHTML.replace(regexp, '<span class="keyword">$1</span>');
-
-      document.getElementById(`${this.lang}-code`).innerHTML = currentHTML;
-
-      if (this.copyable) {
-        document.getElementById(`${this.lang}-code`).style.cursor = 'pointer';
-      }
-    }
-  },
 };
 </script>
 
 <style>
-.code {
-  display: block;
-  color: #333;
-  background: #f6f8fa !important;
-  max-height: 500px;
-}
-.code .keyword {
-  color: #2980b9;
-  font-weight: 900;
-}
-.code .quote {
-  color: #63a35c;
-}
-code {
-  position: relative;
-  overflow: auto;
-  border-radius: 3px;
-}
 .copy-feedback {
   font-family: Montserrat, sans-serif;
   font-size: 24px;
