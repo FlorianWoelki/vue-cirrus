@@ -25,10 +25,6 @@ export default {
       type: String,
       default: 'projectname',
     },
-    titleId: {
-      type: String,
-      default: 'projectname',
-    },
     title: {
       type: String,
       default: '',
