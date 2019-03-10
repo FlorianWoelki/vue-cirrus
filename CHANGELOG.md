@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.8] - 2019-03-10
+### 🔨 Added
+- GitHub page
+
+### ⚡️ Changed
+- Code component is now fully working
+- Removed not necessary props
+
+
 ## [0.1.71] - 2019-03-01
 ### 🔨 Added
 - Spinner component
@@ -103,3 +112,4 @@ All notable changes to this project will be documented in this file.
 [0.1.7]: https://www.npmjs.com/package/vue-cirrus/v/0.1.7
 [0.1.71]: https://www.npmjs.com/package/vue-cirrus/v/0.1.71
 [0.1.72]: https://www.npmjs.com/package/vue-cirrus/v/0.1.72
+[0.1.8]: https://www.npmjs.com/package/vue-cirrus/v/0.1.8
