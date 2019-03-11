@@ -26,6 +26,7 @@
             </v-col>
             <v-col c6>
               <h2>testest</h2>
+              <v-btn accent>Test</v-btn>
             </v-col>
           </v-row>
         </div>

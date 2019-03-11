@@ -29,9 +29,33 @@ export default {
       type: Boolean,
       default: false,
     },
-    btnStyle: {
-      type: String,
-      default: '',
+    accent: {
+      type: Boolean,
+      default: false,
+    },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
+    outlineInverted: {
+      type: Boolean,
+      default: false,
+    },
+    transparent: {
+      type: Boolean,
+      default: false,
+    },
+    light: {
+      type: Boolean,
+      default: false,
+    },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+    black: {
+      type: Boolean,
+      default: false,
     },
     xsmall: {
       type: Boolean,
@@ -61,12 +85,15 @@ export default {
 
   computed: {
     classes() {
-      const buttonStyles = ['accent', 'outline', 'outline-inverted', 'transparent', 'light', 'dark', 'black'];
-      const btnStyle = buttonStyles.includes(this.btnStyle) ? this.btnStyle : null;
-
       const classes = {
         'btn-animated': this.animated,
-        [`btn-${this.btnStyle}`]: btnStyle != null,
+        'btn-accent': this.accent,
+        'btn-outline': this.outline,
+        'btn-outline-inverted': this.outlineInverted,
+        'btn-transparent': this.transparent,
+        'btn-light': this.light,
+        'btn-dark': this.dark,
+        'btn-black': this.black,
         'btn-tiny': this.xsmall,
         'btn-small': this.small,
         'btn-large': this.large,
