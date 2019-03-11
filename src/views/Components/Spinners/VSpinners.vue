@@ -9,8 +9,8 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col c6 style="margin-top: 25px;">
-        <p>Spinner effect</p>
+      <v-col center c6 style="margin-top: 125px;">
+        <p>You have seen the spinner effect on loading this component</p>
         <v-spinner />
       </v-col>
     </v-row>
