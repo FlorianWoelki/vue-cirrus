@@ -19,7 +19,7 @@ export default {
   ],
 
   props: {
-    selected: {
+    active: {
       type: Boolean,
       default: false,
     },
@@ -37,7 +37,7 @@ export default {
         this.animationsMixins,
         {
           'nav-item': true,
-          selected: this.selected,
+          active: this.active,
         },
       );
     },
