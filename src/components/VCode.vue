@@ -23,7 +23,7 @@ export default {
   methods: {
     copy() {
       if (this.copyable) {
-        const copyText = document.getElementById(`${this.lang}-code`);
+        const copyText = document.getElementById(this.codeId);
 
         let range;
         let selection;
@@ -44,7 +44,7 @@ export default {
         window.getSelection().removeAllRanges();
 
         // Display feedback
-        const feedback = document.getElementById(`${this.lang}-feedback`);
+        const feedback = document.getElementById(this.feedbackId);
         feedback.style.opacity = 1;
         copyText.style.filter = 'blur(2px)';
         setTimeout(() => {
@@ -59,16 +59,16 @@ export default {
     document.getElementById(this.codeId).classList.add(`language-${this.lang}`);
 
     if (this.copyable) {
-      document.getElementById(`${this.lang}-code`).style.cursor = 'pointer';
+      document.getElementById(this.codeId).style.cursor = 'pointer';
     }
   },
 
   computed: {
     codeId() {
-      return `${this.lang}-code`;
+      return `${this.lang}-code-${Math.random() * (10 - 1) + 1}`;
     },
     feedbackId() {
-      return `${this.lang}-feedback`;
+      return `${this.lang}-feedback-${Math.random() * (10 - 1) + 1}`;
     },
     dataLang() {
       return `${this.lang} ${this.copyable ? '(Copy)' : ''}`;
