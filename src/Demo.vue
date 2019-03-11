@@ -16,7 +16,7 @@
         </v-sidebar-item>
       </v-sidebar-items>
       <v-sidebar-content>
-        <div class="content">
+        <v-container>
           <v-row>
             <v-col c6>
               <v-code lang="javascript" copyable>function(test) {
@@ -29,7 +29,7 @@
               <v-btn accent>Test</v-btn>
             </v-col>
           </v-row>
-        </div>
+        </v-container>
       </v-sidebar-content>
     </v-sidebar>
   </div>
