@@ -1,10 +1,12 @@
 <template>
   <v-sidebar>
     <v-sidebar-items title="Components" hoverEffect>
-      <v-sidebar-item v-for="component in components" :key=component>
-        <router-link :to="'/components/' + component">
-          {{component}}
-        </router-link>
+      <v-sidebar-item
+        v-for="component in components"
+        :key=component
+        :link="'#/components/' + component"
+      >
+        {{component}}
       </v-sidebar-item>
       <v-divider />
       <v-sidebar-item>
