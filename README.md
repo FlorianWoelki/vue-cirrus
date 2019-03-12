@@ -33,3 +33,8 @@ import 'vue-cirrus';
 ```html
 <v-btn animated loadingLeft>Button Test</v-btn>
 ```
+
+## Acknowledgements
+Thank you to the following libraries for making this library possible.
+- [Cirrus](https://spiderpig86.github.io/Cirrus/)
+- [prism](https://prismjs.com/)
