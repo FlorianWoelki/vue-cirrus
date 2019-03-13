@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.82] - 2019-03-13
+### ⚡️ Changed
+- Fixed code highlighting (only works with javascript for now!)
+
+
 ## [0.1.81] - 2019-03-13
 ### 🔨 Added
 - Added container component
