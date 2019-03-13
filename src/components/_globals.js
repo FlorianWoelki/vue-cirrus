@@ -1,6 +1,4 @@
 import Vue from 'vue';
-import '@/prism.min.css';
-import '@/code-style.css';
 
 const requireComponent = require.context('.', true, /V[\w-]+.vue$/);
 
