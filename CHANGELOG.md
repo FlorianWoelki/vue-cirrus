@@ -130,3 +130,4 @@ All notable changes to this project will be documented in this file.
 [0.1.72]: https://www.npmjs.com/package/vue-cirrus/v/0.1.72
 [0.1.8]: https://www.npmjs.com/package/vue-cirrus/v/0.1.8
 [0.1.81]: https://www.npmjs.com/package/vue-cirrus/v/0.1.81
+[0.1.82]: https://www.npmjs.com/package/vue-cirrus/v/0.1.82
