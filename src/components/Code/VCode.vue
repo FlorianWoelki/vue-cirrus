@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import javascript from './javascript';
+
 export default {
   props: {
     lang: {
@@ -55,31 +57,11 @@ export default {
   mounted() {
     let codeElements = document.getElementById(this.codeId).innerHTML;
 
-    const strReg1 = /"(.*?)"/g;
-    const strReg2 = /'(.*?)'/g;
-    const specialReg = /\b(typeof|instanceof|import|as|from|export|await|new|if|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g;
-    const specialJsGlobReg = /\b(document|window|Array|String|Object|Number|\$)(?=[^\w])/g;
-    const specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|function|async|var|const|let)(?=[^\w])/g;
-    const specialMethReg = /\b(indexOf|match|replace|toString|length)(?=[^\w])/g;
-    const specialPhpReg = /\b(define|echo|print_r|var_dump)(?=[^\w])/g;
-    const specialCommentReg = /(\/\*.*\*\/)/g;
-    const inlineCommentReg = /(\/\/.*)/g;
-
-    const htmlTagReg = /(&lt;[^&]*&gt;)/g;
-
-    const sqlReg = /\b(CREATE|ALL|DATABASE|TABLE|GRANT|PRIVILEGES|IDENTIFIED|FLUSH|SELECT|UPDATE|DELETE|INSERT|FROM|WHERE|ORDER|BY|GROUP|LIMIT|INNER|OUTER|AS|ON|COUNT|CASE|TO|IF|WHEN|BETWEEN|AND|OR)(?=[^\w])/g;
-
-    codeElements = codeElements.replace(strReg1, '<span class="string">"$1"</span>');
-    codeElements = codeElements.replace(strReg2, "<span class=\"string\">'$1'</span>");
-    codeElements = codeElements.replace(specialReg, '<span class="special">$1</span>');
-    codeElements = codeElements.replace(specialJsGlobReg, '<span class="special-js-glob">$1</span>');
-    codeElements = codeElements.replace(specialJsReg, '<span class="special-js">$1</span>');
-    codeElements = codeElements.replace(specialMethReg, '<span class="special-js-meth">$1</span>');
-    codeElements = codeElements.replace(htmlTagReg, '<span class="special-html">$1</span>');
-    codeElements = codeElements.replace(sqlReg, '<span class="special-sql">$1</span>');
-    codeElements = codeElements.replace(specialPhpReg, '<span class="special-php">$1</span>');
-    codeElements = codeElements.replace(specialCommentReg, '<span class="special-comment">$1</span>');
-    codeElements = codeElements.replace(inlineCommentReg, '<span class="special-comment">$1</span>');
+    if (this.lang.toLowerCase() === 'javascript') {
+      Object.keys(javascript).forEach((key) => {
+        codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$1</span>`);
+      });
+    }
 
     document.getElementById(this.codeId).innerHTML = codeElements;
 
@@ -142,9 +124,6 @@ code .special-html {
 }
 code .special-sql {
     color: #1D968C;
-}
-code .special-php{
-    color: #597EA7;
 }
 
 .copy-feedback {

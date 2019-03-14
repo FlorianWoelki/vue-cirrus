@@ -19,7 +19,7 @@
         <v-container>
           <v-row>
             <v-col c6>
-              <v-code lang="javascript" copyable>function typeOf(value) {
+              <v-code lang="JavaScript" copyable>function typeOf(value) {
   var s = typeof value;
   if (s === 'object') {
     if (value) {
