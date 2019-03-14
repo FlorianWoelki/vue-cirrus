@@ -57,9 +57,9 @@ export default {
 
     const strReg1 = /"(.*?)"/g;
     const strReg2 = /'(.*?)'/g;
-    const specialReg = /\b(import|as|from|export|await|new|if|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g;
+    const specialReg = /\b(typeof|instanceof|import|as|from|export|await|new|if|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g;
     const specialJsGlobReg = /\b(document|window|Array|String|Object|Number|\$)(?=[^\w])/g;
-    const specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|typeof|instanceof|function|async|var|const|let)(?=[^\w])/g;
+    const specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|function|async|var|const|let)(?=[^\w])/g;
     const specialMethReg = /\b(indexOf|match|replace|toString|length)(?=[^\w])/g;
     const specialPhpReg = /\b(define|echo|print_r|var_dump)(?=[^\w])/g;
     const specialCommentReg = /(\/\*.*\*\/)/g;
@@ -119,32 +119,32 @@ code {
   border-radius: 3px;
 }
 code .string {
-    color:#63a35c;
+    color: #63a35c;
 }
 code .special {
-    color:#D6665D;
+    color: #8e44ad;
 }
 code .special-js {
-    color:#2980b9;
+    color: #2980b9;
 }
 code .special-js-glob {
-    color:#63a35c;
-    font-weight:bold;
+    color: #63a35c;
+    font-weight: bold;
 }
 code .special-comment{
-    color:#aaa;
+    color: #aaa;
 }
 code .special-js-meth {
-    color:#E46D8A;
+    color: #E46D8A;
 }
 code .special-html {
-    color:#E4D95F;
+    color: #E4D95F;
 }
 code .special-sql {
-    color:#1D968C;
+    color: #1D968C;
 }
 code .special-php{
-    color:#597EA7;
+    color: #597EA7;
 }
 
 .copy-feedback {
