@@ -25,16 +25,13 @@ export default {
       if (this.copyable) {
         const copyText = document.getElementById(this.codeId);
 
-        let range;
-        let selection;
-
         if (document.body.createTextRange) {
-          range = document.body.createTextRange();
+          const range = document.body.createTextRange();
           range.moveToElementText(copyText);
           range.select();
         } else if (window.getSelection) {
-          selection = window.getSelection();
-          range = document.createRange();
+          const selection = window.getSelection();
+          const range = document.createRange();
           range.selectNodeContents(copyText);
           selection.removeAllRanges();
           selection.addRange(range);
@@ -60,9 +57,9 @@ export default {
 
     const strReg1 = /"(.*?)"/g;
     const strReg2 = /'(.*?)'/g;
-    const specialReg = /\b(new|var|if|else|return|do|function|while|switch|for|foreach|in|continue|break)(?=[^\w])/g;
+    const specialReg = /\b(import|as|from|export|await|new|if|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g;
     const specialJsGlobReg = /\b(document|window|Array|String|Object|Number|\$)(?=[^\w])/g;
-    const specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|typeof|instanceof)(?=[^\w])/g;
+    const specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|typeof|instanceof|function|async|var|const|let)(?=[^\w])/g;
     const specialMethReg = /\b(indexOf|match|replace|toString|length)(?=[^\w])/g;
     const specialPhpReg = /\b(define|echo|print_r|var_dump)(?=[^\w])/g;
     const specialCommentReg = /(\/\*.*\*\/)/g;
