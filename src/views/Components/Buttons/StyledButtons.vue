@@ -9,24 +9,24 @@
       <v-row>
         <v-row center>
           <v-col center c3>
-            <v-btn btnStyle="accent">Button</v-btn>
+            <v-btn accent>Button</v-btn>
           </v-col>
           <v-col center c3>
-            <v-btn btnStyle="outline-inverted">Button</v-btn>
+            <v-btn outlineInverted>Button</v-btn>
           </v-col>
           <v-col center c3>
-            <v-btn btnStyle="transparent">Button</v-btn>
+            <v-btn transparent>Button</v-btn>
           </v-col>
         </v-row>
         <v-row center>
           <v-col center c3>
-            <v-btn btnStyle="light">Button</v-btn>
+            <v-btn light>Button</v-btn>
           </v-col>
           <v-col center c3>
-            <v-btn btnStyle="dark">Button</v-btn>
+            <v-btn dark>Button</v-btn>
           </v-col>
           <v-col center c3>
-            <v-btn btnStyle="black">Button</v-btn>
+            <v-btn black>Button</v-btn>
           </v-col>
         </v-row>
       </v-row>
@@ -38,12 +38,12 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-btn btnStyle="accent">Button</v-btn>
-<v-btn btnStyle="outline-inverted">Button</v-btn>
-<v-btn btnStyle="transparent">Button</v-btn>
-<v-btn btnStyle="light">Button</v-btn>
-<v-btn btnStyle="dark">Button</v-btn>
-<v-btn btnStyle="black">Button</v-btn></xmp>`,
+      code: `<xmp><v-btn accent>Button</v-btn>
+<v-btn outlineInverted>Button</v-btn>
+<v-btn transparent>Button</v-btn>
+<v-btn light>Button</v-btn>
+<v-btn dark>Button</v-btn>
+<v-btn black>Button</v-btn></xmp>`,
     };
   },
 };

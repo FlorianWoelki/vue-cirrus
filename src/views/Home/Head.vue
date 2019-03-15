@@ -13,7 +13,7 @@
           <v-btn
             animated
             center
-            btnStyle="outline"
+            outline
             id="btn-getting-started"
           >
             Getting Started
