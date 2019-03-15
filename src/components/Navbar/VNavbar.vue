@@ -2,17 +2,24 @@
   <div :class=classes>
     <div class="header-brand">
       <div class="nav-item no-hover">
-        <a>
+        <a :href=brandLink>
           <h6 class="title">{{title}}</h6>
         </a>
       </div>
-      <div class="nav-item nav-btn" id="header-btn">
+      <div
+        v-if=!disableMobileNavbar
+        class="nav-item nav-btn"
+        id="header-btn"
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
-    <div class="header-nav" id="header-menu">
+    <div
+      class="header-nav"
+      id="header-menu"
+    >
       <slot></slot>
     </div>
   </div>
@@ -25,6 +32,10 @@ export default {
       type: String,
       default: '',
     },
+    brandLink: {
+      type: String,
+      default: '!#',
+    },
     fixed: {
       type: Boolean,
       default: false,
@@ -34,6 +45,10 @@ export default {
       default: false,
     },
     clear: {
+      type: Boolean,
+      default: false,
+    },
+    disableMobileNavbar: {
       type: Boolean,
       default: false,
     },
