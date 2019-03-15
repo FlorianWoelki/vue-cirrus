@@ -19,8 +19,18 @@
         <v-container>
           <v-row>
             <v-col c6>
-              <v-code lang="javascript" copyable>function(test) {
-  console.log("Hello World");
+              <v-code lang="JavaScript" copyable>function typeOf(value) {
+  var s = typeof value;
+  if (s === 'object') {
+    if (value) {
+      if (value instanceof Array) {
+        s = 'array';
+      }
+    } else {
+      s = 'null';
+    }
+  }
+  return s;
 }
               </v-code>
             </v-col>

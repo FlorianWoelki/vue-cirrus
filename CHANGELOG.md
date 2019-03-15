@@ -1,6 +1,22 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.82] - 2019-03-13
+### ⚡️ Changed
+- Fixed code highlighting (only works with javascript for now!)
+
+
+## [0.1.81] - 2019-03-13
+### 🔨 Added
+- Added container component
+
+### ⚡️ Changed
+- Styling props of v-btn has changed (no need to use btnStyle anymore)
+- Fixed active navbar item (selected class not exists)
+- Fixed multiple copyable code components with the same name
+- Fixed colored code
+
+
 ## [0.1.8] - 2019-03-10
 ### 🔨 Added
 - GitHub page
@@ -113,3 +129,5 @@ All notable changes to this project will be documented in this file.
 [0.1.71]: https://www.npmjs.com/package/vue-cirrus/v/0.1.71
 [0.1.72]: https://www.npmjs.com/package/vue-cirrus/v/0.1.72
 [0.1.8]: https://www.npmjs.com/package/vue-cirrus/v/0.1.8
+[0.1.81]: https://www.npmjs.com/package/vue-cirrus/v/0.1.81
+[0.1.82]: https://www.npmjs.com/package/vue-cirrus/v/0.1.82

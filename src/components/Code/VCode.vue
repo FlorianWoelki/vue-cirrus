@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import javascript from './javascript';
+
 export default {
   props: {
     lang: {
@@ -25,16 +27,13 @@ export default {
       if (this.copyable) {
         const copyText = document.getElementById(this.codeId);
 
-        let range;
-        let selection;
-
         if (document.body.createTextRange) {
-          range = document.body.createTextRange();
+          const range = document.body.createTextRange();
           range.moveToElementText(copyText);
           range.select();
         } else if (window.getSelection) {
-          selection = window.getSelection();
-          range = document.createRange();
+          const selection = window.getSelection();
+          const range = document.createRange();
           range.selectNodeContents(copyText);
           selection.removeAllRanges();
           selection.addRange(range);
@@ -56,7 +55,15 @@ export default {
   },
 
   mounted() {
-    document.getElementById(this.codeId).classList.add(`language-${this.lang}`);
+    let codeElements = document.getElementById(this.codeId).innerHTML;
+
+    if (this.lang.toLowerCase() === 'javascript') {
+      Object.keys(javascript).forEach((key) => {
+        codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$1</span>`);
+      });
+    }
+
+    document.getElementById(this.codeId).innerHTML = codeElements;
 
     if (this.copyable) {
       document.getElementById(this.codeId).style.cursor = 'pointer';
@@ -84,6 +91,41 @@ export default {
 </script>
 
 <style>
+code {
+  display: block;
+  color: #333;
+  background: #f6f8fa !important;
+  max-height: 500px;
+  position: relative;
+  overflow: auto;
+  border-radius: 3px;
+}
+code .string {
+    color: #63a35c;
+}
+code .special {
+    color: #8e44ad;
+}
+code .special-js {
+    color: #2980b9;
+}
+code .special-js-glob {
+    color: #63a35c;
+    font-weight: bold;
+}
+code .special-comment{
+    color: #aaa;
+}
+code .special-js-meth {
+    color: #E46D8A;
+}
+code .special-html {
+    color: #E4D95F;
+}
+code .special-sql {
+    color: #1D968C;
+}
+
 .copy-feedback {
   font-family: Montserrat, sans-serif;
   font-size: 24px;
