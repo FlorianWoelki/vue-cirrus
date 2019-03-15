@@ -5,8 +5,15 @@
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
-    <v-col center c6 style="margin-top: 25px;">
-      <v-min-card title="Google Chrome" imgId="image">
+    <v-col
+      center
+      c6
+      style="margin-top: 25px;"
+    >
+      <v-min-card
+        title="Google Chrome"
+        imgId="image"
+      >
         <p>Here is some basic card text for the minimized card</p>
       </v-min-card>
     </v-col>

@@ -9,7 +9,11 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6 style="margin-top: 125px;">
+      <v-col
+        center
+        c6
+        style="margin-top: 125px;"
+      >
         <p>You have seen the spinner effect on loading this component</p>
         <v-spinner />
       </v-col>
@@ -20,7 +24,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

@@ -9,7 +9,10 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col c6 style="margin-top: 150px;">
+      <v-col
+        c6
+        style="margin-top: 150px;"
+      >
         <v-row>
           <v-col c4>Column 1</v-col>
           <v-col c4>Column 2</v-col>
@@ -23,7 +26,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

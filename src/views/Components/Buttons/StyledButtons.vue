@@ -5,27 +5,48 @@
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
-    <v-col c6 style="margin-top: 100px;">
+    <v-col
+      c6
+      style="margin-top: 100px;"
+    >
       <v-row>
         <v-row center>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn accent>Button</v-btn>
           </v-col>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn outlineInverted>Button</v-btn>
           </v-col>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn transparent>Button</v-btn>
           </v-col>
         </v-row>
         <v-row center>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn light>Button</v-btn>
           </v-col>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn dark>Button</v-btn>
           </v-col>
-          <v-col center c3>
+          <v-col
+            center
+            c3
+          >
             <v-btn black>Button</v-btn>
           </v-col>
         </v-row>

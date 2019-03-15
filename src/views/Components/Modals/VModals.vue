@@ -9,17 +9,27 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6 style="margin-top: 180px;">
+      <v-col
+        center
+        c6
+        style="margin-top: 180px;"
+      >
         <a href="#modal">
           <v-btn btnStyle="accent">Open Modal</v-btn>
         </a>
-        <v-modal large zoomOut>
+        <v-modal
+          large
+          zoomOut
+        >
           <v-modal-body>
             <h6>Hello Modal Dialog</h6>
           </v-modal-body>
           <v-modal-footer style="padding-bottom: 80px;">
             <v-btn pullLeft>Close</v-btn>
-            <v-btn pullRight btnStyle="accent">Share</v-btn>
+            <v-btn
+              pullRight
+              btnStyle="accent"
+            >Share</v-btn>
           </v-modal-footer>
         </v-modal>
       </v-col>
@@ -30,7 +40,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

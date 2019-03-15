@@ -5,12 +5,21 @@
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
-    <v-col c6 style="margin-top: 90px;">
+    <v-col
+      c6
+      style="margin-top: 90px;"
+    >
       <v-row>
-        <v-col center c6>
+        <v-col
+          center
+          c6
+        >
           <v-btn loadingLeft>Loading Left Button</v-btn>
         </v-col>
-        <v-col center c6>
+        <v-col
+          center
+          c6
+        >
           <v-btn loadingRight>Loading Right Button</v-btn>
         </v-col>
       </v-row>

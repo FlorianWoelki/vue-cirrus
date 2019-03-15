@@ -8,12 +8,21 @@
 
     <v-row>
       <v-col c6>
-        <v-code lang="Vue" style="margin-top: 100px;">
+        <v-code
+          lang="Vue"
+          style="margin-top: 100px;"
+        >
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6>
-        <v-parallax src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg" style="height: 500px;">
+      <v-col
+        center
+        c6
+      >
+        <v-parallax
+          src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg"
+          style="height: 500px;"
+        >
           <h1>Hello World</h1>
         </v-parallax>
       </v-col>
@@ -24,7 +33,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

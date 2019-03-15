@@ -9,21 +9,46 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col c6 style="margin-top: 225px;">
+      <v-col
+        c6
+        style="margin-top: 225px;"
+      >
         <v-row center>
-          <v-col c1><v-link ltr>Link</v-link></v-col>
-          <v-col c1><v-link rtl>Link</v-link></v-col>
-          <v-col c1><v-link c>Link</v-link></v-col>
-          <v-col c1><v-link oltr>Link</v-link></v-col>
-          <v-col c1><v-link ortl>Link</v-link></v-col>
-          <v-col c1><v-link oc>Link</v-link></v-col>
+          <v-col c1>
+            <v-link ltr>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link rtl>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link c>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link oltr>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link ortl>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link oc>Link</v-link>
+          </v-col>
         </v-row>
         <v-row center>
-          <v-col c1><v-link underlined>Link</v-link></v-col>
-          <v-col c1><v-link olr>Link</v-link></v-col>
-          <v-col c1><v-link orl>Link</v-link></v-col>
-          <v-col c1><v-link squared>Link</v-link></v-col>
-          <v-col c1><v-link dSquared>Link</v-link></v-col>
+          <v-col c1>
+            <v-link underlined>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link olr>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link orl>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link squared>Link</v-link>
+          </v-col>
+          <v-col c1>
+            <v-link dSquared>Link</v-link>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
@@ -33,7 +58,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

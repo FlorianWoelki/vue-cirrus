@@ -9,9 +9,16 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6 style="margin-top: 100px;">
+      <v-col
+        center
+        c6
+        style="margin-top: 100px;"
+      >
         <v-btn :onClick="() => { snackbar = !snackbar; }">Show!</v-btn>
-        <v-snackbar bottomCenter v-model="snackbar">Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          bottomCenter
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
       </v-col>
     </v-row>
 
@@ -20,7 +27,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

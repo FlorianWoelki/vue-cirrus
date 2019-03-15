@@ -9,8 +9,14 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col c6 style="margin-top: 50px;">
-        <v-next-prev prevText="Prev Text" nextText="Next Text" />
+      <v-col
+        c6
+        style="margin-top: 50px;"
+      >
+        <v-next-prev
+          prevText="Prev Text"
+          nextText="Next Text"
+        />
       </v-col>
     </v-row>
 
@@ -19,7 +25,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

@@ -9,7 +9,11 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6 style="margin-top: 150px;">
+      <v-col
+        center
+        c6
+        style="margin-top: 150px;"
+      >
         <v-dropdown>
           <template v-slot:dropdownBtn>
             <v-dropdown-btn>Dropdown</v-dropdown-btn>
@@ -32,7 +36,11 @@
     <h6>API (props/slots)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

@@ -9,7 +9,11 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6 style="margin-top: 150px;">
+      <v-col
+        center
+        c6
+        style="margin-top: 150px;"
+      >
         <v-pagination>
           <v-pagination-item disabled>Prev</v-pagination-item>
           <v-pagination-item selected>1</v-pagination-item>
@@ -24,7 +28,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

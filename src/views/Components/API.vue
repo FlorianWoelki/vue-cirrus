@@ -2,12 +2,18 @@
   <table class="table striped">
     <thead>
       <tr>
-        <th v-for="header in headers" :key=header>{{header}}</th>
+        <th
+          v-for="header in headers"
+          :key=header
+        >{{header}}</th>
       </tr>
     </thead>
     <tbody>
       <!-- TODO: Add mixins -->
-      <tr v-for="prop in props" :key=prop[0]>
+      <tr
+        v-for="prop in props"
+        :key=prop[0]
+      >
         <td>{{prop[0]}}</td>
         <td>{{prop[1]}}</td>
         <td>{{prop[2]}}</td>

@@ -5,21 +5,36 @@
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
-    <v-col c6 style="margin-top: 66px;">
+    <v-col
+      c6
+      style="margin-top: 66px;"
+    >
       <v-row>
         <v-row center>
-          <v-col center c6>
+          <v-col
+            center
+            c6
+          >
             <v-btn xsmall>Button</v-btn>
           </v-col>
-          <v-col center c6>
+          <v-col
+            center
+            c6
+          >
             <v-btn small>Button</v-btn>
           </v-col>
         </v-row>
         <v-row center>
-          <v-col center c6>
+          <v-col
+            center
+            c6
+          >
             <v-btn large>Button</v-btn>
           </v-col>
-          <v-col center c6>
+          <v-col
+            center
+            c6
+          >
             <v-btn xlarge>Button</v-btn>
           </v-col>
         </v-row>

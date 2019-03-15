@@ -8,12 +8,21 @@
 
     <v-row>
       <v-col c6>
-        <v-code lang="Vue" style="margin-top: 125px;">
+        <v-code
+          lang="Vue"
+          style="margin-top: 125px;"
+        >
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col center c6>
-        <v-footer title="Company" subtitle="Awesome company footer">
+      <v-col
+        center
+        c6
+      >
+        <v-footer
+          title="Company"
+          subtitle="Awesome company footer"
+        >
           <h1>Some awesome footerrish.</h1>
         </v-footer>
       </v-col>
@@ -24,7 +33,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

@@ -9,8 +9,14 @@
           <pre v-html="code"></pre>
         </v-code>
       </v-col>
-      <v-col c4 o1>
-        <v-code lang="JavaScript" keywords="const,if,console">
+      <v-col
+        c4
+        o1
+      >
+        <v-code
+          lang="JavaScript"
+          keywords="const,if,console"
+        >
           <pre v-html="javascriptCode"></pre>
         </v-code>
       </v-col>
@@ -21,7 +27,11 @@
     <h6>API (props)</h6>
     <API :data=props />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space
+      xlarge
+      v-for="i in 2"
+      :key=i
+    />
   </section>
 </template>
 

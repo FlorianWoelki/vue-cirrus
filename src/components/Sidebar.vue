@@ -1,6 +1,9 @@
 <template>
   <v-sidebar>
-    <v-sidebar-items title="Components" hoverEffect>
+    <v-sidebar-items
+      title="Components"
+      hoverEffect
+    >
       <v-sidebar-item
         v-for="component in components"
         :key=component

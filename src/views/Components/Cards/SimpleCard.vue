@@ -5,7 +5,11 @@
         <pre v-html="code"></pre>
       </v-code>
     </v-col>
-    <v-col center c6 style="margin-top: 100px;">
+    <v-col
+      center
+      c6
+      style="margin-top: 100px;"
+    >
       <v-simple-card title="Card Title">
         <v-card-content>
           <p>This is some basic simple card text</p>
