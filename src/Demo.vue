@@ -1,7 +1,10 @@
 <template>
   <div class="demo">
     <v-sidebar>
-      <v-sidebar-items title="Hello" hoverEffect>
+      <v-sidebar-items
+        title="Hello"
+        hoverEffect
+      >
         <v-sidebar-item></v-sidebar-item>
         <v-sidebar-item link="html">HTML</v-sidebar-item>
         <v-sidebar-item link="css">CSS</v-sidebar-item>
@@ -18,26 +21,17 @@
       <v-sidebar-content>
         <v-container>
           <v-row>
-            <v-col c6>
-              <v-code lang="JavaScript" copyable>function typeOf(value) {
-  var s = typeof value;
-  if (s === 'object') {
-    if (value) {
-      if (value instanceof Array) {
-        s = 'array';
-      }
-    } else {
-      s = 'null';
-    }
-  }
-  return s;
-}
-              </v-code>
-            </v-col>
-            <v-col c6>
-              <h2>testest</h2>
-              <v-btn accent>Test</v-btn>
-            </v-col>
+            <v-drop-caps>
+              Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit.
+              Quasi rerum voluptates ad soluta doloribus natus,
+              unde ipsa vel officia excepturi incidunt quidem
+              ipsum consequatur? Nisi totam dolorem a fugit itaque.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Temporibus molestiae eveniet tempore nihil, error facere?
+              Possimus quod atque unde ea tempore, deserunt quo voluptates
+              minus, repudiandae commodi fuga placeat optio?
+            </v-drop-caps>
           </v-row>
         </v-container>
       </v-sidebar-content>
