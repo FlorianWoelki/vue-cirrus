@@ -21,7 +21,7 @@
       <v-sidebar-content>
         <v-container>
           <v-row>
-            <v-drop-caps>
+            <v-drop-caps letterColor="purple">
               Lorem ipsum dolor sit,
               amet consectetur adipisicing elit.
               Quasi rerum voluptates ad soluta doloribus natus,
