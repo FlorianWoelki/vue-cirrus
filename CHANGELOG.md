@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.83] - 2019-03-16
 
+### 🔨 Added
+
+- Added brandLink and disableMobileNavbar property for Navbar component
+- Added DropCaps component
+
+### ⚡️ Changed
+
+- Updated list of keyword highlights for JavaScript
+- Updated colors for JavaScript
+- Formatted code component
+
 ## [0.1.82] - 2019-03-13
 
 ### ⚡️ Changed
