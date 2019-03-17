@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.84] - 2019-03-17
+
+### 🔨 Added
+
+- Added SearchBar component
+
+### ⚡️ Changed
+
+- Added mixins to drop caps component
+- Updated html syntax highlighter
+- Fixed language name
+
 ## [0.1.83] - 2019-03-16
 
 ### 🔨 Added
@@ -165,3 +177,4 @@ All notable changes to this project will be documented in this file.
 [0.1.81]: https://www.npmjs.com/package/vue-cirrus/v/0.1.81
 [0.1.82]: https://www.npmjs.com/package/vue-cirrus/v/0.1.82
 [0.1.83]: https://www.npmjs.com/package/vue-cirrus/v/0.1.83
+[0.1.84]: https://www.npmjs.com/package/vue-cirrus/v/0.1.84
