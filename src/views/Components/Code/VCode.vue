@@ -15,10 +15,10 @@
       >
         <v-code
           lang="JavaScript"
-          keywords="const,if,console"
-        >
-          <pre v-html="javascriptCode"></pre>
-        </v-code>
+        >const myBool = true;
+if (myBool) {
+  console.log("Bool is true!");
+}</v-code>
       </v-col>
     </v-row>
 
@@ -45,16 +45,12 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-fullscreen link="image.png">
-  <h1>Hello World</h1>
-</v-fullscreen></xmp>`,
-      javascriptCode: `const myBool = true;
+      code: `<xmp><v-code lang="JavaScript">const myBool = true;
 if (myBool) {
   console.log("Bool is true!");
-}`,
+}</v-code></xmp>`,
       props: {
-        lang: ['lang', 'empty', 'String', 'Language for this code segment'],
-        keywords: ['keywords', 'empty', 'String', 'Keywords for this code segment that gets colored (Not working correctly with html code)'],
+        lang: ['lang', 'empty', 'String', 'Language for this code segment (Supported languages: html, javascript)'],
         copyable: ['copyable', 'false', 'Boolean', 'If code segment is copyable'],
       },
     };
