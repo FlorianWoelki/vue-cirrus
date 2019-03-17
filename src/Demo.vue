@@ -23,6 +23,10 @@
           <v-row>
             <v-code lang="html">
               <h1>test</h1><br />
+              <h6
+                class="test-title"
+                name="Title"
+              >tiel</h6> <br />
               <v-btn accent>test</v-btn>
             </v-code>
             <v-drop-caps letterColor="purple">

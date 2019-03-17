@@ -65,7 +65,7 @@ export default {
     } else if (this.lang.toLowerCase() === 'html') {
       codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
       Object.keys(html).forEach((key) => {
-        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$1</span>`);
+        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
       });
     }
 
