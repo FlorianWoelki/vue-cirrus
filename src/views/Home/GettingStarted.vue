@@ -28,22 +28,19 @@
         lang="HTML"
         copyable
       >
-        <xmp>
-          <link
-            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
-            rel="stylesheet"
-          >
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-            rel="stylesheet"
-          >
-
-          <link
-            href="https://unpkg.com/cirrus-ui"
-            type="text/css"
-            rel="stylesheet"
-          />
-        </xmp>
+        <link
+          href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+          rel="stylesheet"
+        > <br />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+          rel="stylesheet"
+        > <br />
+        <link
+          href="https://unpkg.com/cirrus-ui"
+          type="text/css"
+          rel="stylesheet"
+        />
       </v-code>
       <p>Import all Vue Cirrus components by importing it in your main.js file.</p>
       <v-code

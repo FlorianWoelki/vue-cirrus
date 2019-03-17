@@ -69,9 +69,11 @@ export default {
 </v-navbar></xmp>`,
       props: {
         title: ['title', 'empty', 'String', '(Navbar) Title of navbar'],
+        brandLink: ['brandLink', '!#', 'String', '(Navbar) Link for the brand name'],
         fixed: ['fixed', 'false', 'Boolean', '(Navbar) If the navbar is fixed on top'],
         dark: ['dark', 'false', 'Boolean', '(Navbar) If the navbar has the dark style'],
         clear: ['clear', 'false', 'Boolean', '(Navbar) If the navbar has the clear style'],
+        disableMobileNavbar: ['disableMobileNavbar', 'false', 'Boolean', '(Navbar) Disables the automatic generated mobile navbar'],
         animated: ['animated', 'false', 'Boolean', '(NavDropdown) If the dropdown is animated'],
         clickable: ['clickable', 'false', 'Boolean', '(NavDropdown) If the dropdown is clickable'],
         dropdownId: ['dropdownId', 'empty', 'String', '(NavDropdown) Id for the dropdown'],
