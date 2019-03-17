@@ -32,6 +32,10 @@
               Possimus quod atque unde ea tempore, deserunt quo voluptates
               minus, repudiandae commodi fuga placeat optio?
             </v-drop-caps>
+            <v-search-bar
+              v-model=searchingWord
+              :searchAction=click
+            >Search Me</v-search-bar>
           </v-row>
         </v-container>
       </v-sidebar-content>
@@ -47,7 +51,13 @@ export default {
       snackbar: false,
       code: `<xmp><div>Helo World</div>
 <h1 class="Hello World">Hello World</h1></xmp>`,
+      searchingWord: '',
     };
+  },
+  methods: {
+    click() {
+      console.log('Searching...', this.searchingWord);
+    },
   },
 };
 </script>
