@@ -21,6 +21,10 @@
       <v-sidebar-content>
         <v-container>
           <v-row>
+            <v-code lang="html">
+              <h1>test</h1><br />
+              <v-btn accent>test</v-btn>
+            </v-code>
             <v-drop-caps letterColor="purple">
               Lorem ipsum dolor sit,
               amet consectetur adipisicing elit.

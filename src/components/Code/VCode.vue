@@ -9,6 +9,7 @@
 
 <script>
 import javascript from './javascript';
+import html from './html';
 
 export default {
   props: {
@@ -61,6 +62,11 @@ export default {
       Object.keys(javascript).forEach((key) => {
         codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$1</span>`);
       });
+    } else if (this.lang.toLowerCase() === 'html') {
+      codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
+      Object.keys(html).forEach((key) => {
+        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$1</span>`);
+      });
     }
 
     document.getElementById(this.codeId).innerHTML = codeElements;
@@ -105,6 +111,9 @@ code .string {
 }
 code .special {
     color: #8e44ad;
+}
+code .html {
+    color: #2980b9;
 }
 code .special-js {
     color: #2980b9;
