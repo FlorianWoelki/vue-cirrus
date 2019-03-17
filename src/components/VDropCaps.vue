@@ -1,14 +1,22 @@
 <template>
   <div
     :id=id
-    class="drop-caps"
+    :class=classes
   >
     <slot></slot>
   </div>
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
   props: {
     letterColor: {
       type: String,
@@ -28,6 +36,18 @@ export default {
     }
 
     document.getElementById(this.id).innerHTML = newInnerHTML;
+  },
+
+  computed: {
+    classes() {
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          'drop-caps': true,
+        },
+      );
+    },
   },
 };
 </script>
