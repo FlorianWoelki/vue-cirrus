@@ -15,10 +15,10 @@
 
     <div class="nav-right">
       <v-navbar-item>
-        <a href="/#/components">
+        <router-link to="/components">
           <i class="fas fa-file-alt fa-lg"></i>
           Docs
-        </a>
+        </router-link>
       </v-navbar-item>
     </div>
   </v-navbar>
