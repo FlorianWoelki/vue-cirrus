@@ -1,6 +1,9 @@
 <template>
   <div class="head">
-    <div id="splash-img" class="hero fullscreen hero-img parallax-img">
+    <div
+      id="splash-img"
+      class="hero fullscreen hero-img parallax-img"
+    >
       <div class="hero-body white">
         <div class="content text-center">
           <img
@@ -10,14 +13,31 @@
           >
           <h1>Vue Cirrus</h1>
           <h6 class="light">The Vue library for the modern Cirrus CSS framework.</h6>
-          <v-btn
-            animated
-            center
-            outline
-            id="btn-getting-started"
-          >
-            Getting Started
-          </v-btn>
+          <v-row>
+            <v-col c6>
+              <router-link to='/components'>
+                <v-btn
+                  animated
+                  center
+                  outline
+                >
+                  Getting Started
+                </v-btn>
+              </router-link>
+            </v-col>
+            <v-col c6>
+              <router-link to='/playground'>
+                <v-btn
+                  animated
+                  center
+                  outline
+                  id="btn-playground"
+                >
+                  Check Playground
+                </v-btn>
+              </router-link>
+            </v-col>
+          </v-row>
         </div>
       </div>
     </div>
@@ -39,7 +59,7 @@
 #logo {
   max-width: 200px;
 }
-#btn-getting-started {
+.head button {
   margin-top: 100px;
 }
 </style>

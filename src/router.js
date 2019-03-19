@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home/Home.vue';
 import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
+import Playground from './views/Playground.vue';
 
 Vue.use(Router);
 
@@ -21,6 +22,10 @@ export default new Router({
     {
       path: '/components/:name',
       component: ComponentsRouter,
+    },
+    {
+      path: '/playground',
+      component: Playground,
     },
   ],
 });
