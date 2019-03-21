@@ -11,7 +11,7 @@
       <v-col
         center
         c6
-        style="margin-top: 65px;"
+        style="margin-top: 85px;"
       >
         <v-input-field
           large
@@ -48,7 +48,10 @@
 export default {
   data() {
     return {
-      normalInputFieldCode: '<xmp><v-input-field large placeholder="Search ..."></v-input-field></xmp>',
+      normalInputFieldCode: `<xmp><v-input-field
+  large
+  placeholder="Search ..."
+></v-input-field></xmp>`,
       titleInputFieldCode: `<xmp><v-input-field
   title="Title"
   subtitle="Subtitle"
