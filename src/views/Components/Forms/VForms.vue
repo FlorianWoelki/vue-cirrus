@@ -8,6 +8,10 @@
 
     <v-space xlarge />
 
+    <VSearchBars />
+
+    <v-space xlarge />
+
     <h6>API (props)</h6>
     <API :data=props />
 
@@ -22,6 +26,7 @@
 <script>
 import InputFields from './VInputFields.vue';
 import TextAreas from './VTextAreas.vue';
+import VSearchBars from './VSearchBars.vue';
 import API from '@/views/Components/API.vue';
 
 export default {
@@ -29,6 +34,7 @@ export default {
     API,
     InputFields,
     TextAreas,
+    VSearchBars,
   },
   data() {
     return {
@@ -48,6 +54,8 @@ export default {
         small: ['small', 'false', 'Boolean', '(InputField) small size'],
         large: ['large', 'false', 'Boolean', '(InputField) large size'],
         xlarge: ['xlarge', 'false', 'Boolean', '(InputField) xlarge size'],
+        inputPlaceholder: ['inputPlaceholder', 'Search', 'String', '(SearchBar) What the input placeholder will be'],
+        searchAction: ['searchAction', 'empty', 'Function', '(SearchBar) Function executed when clicking on the search button'],
       },
     };
   },
