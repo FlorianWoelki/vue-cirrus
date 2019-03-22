@@ -97,6 +97,10 @@ export default {
 </script>
 
 <style>
+pre {
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+}
 code {
   display: block;
   color: #333;
