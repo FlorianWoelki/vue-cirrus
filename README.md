@@ -80,4 +80,5 @@ import 'vue-cirrus';
 Thank you to the following libraries for making this library possible.
 
 - [Cirrus](https://spiderpig86.github.io/Cirrus/)
-- [prism](https://prismjs.com/)
+- [Vue](https://vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/)
