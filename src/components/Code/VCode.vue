@@ -60,7 +60,7 @@ export default {
 
     if (this.lang.toLowerCase() === 'javascript') {
       Object.keys(javascript).forEach((key) => {
-        codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$1</span>`);
+        codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$&</span>`);
       });
     } else if (this.lang.toLowerCase() === 'html') {
       codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
