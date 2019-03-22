@@ -21,6 +21,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -90,6 +94,7 @@ export default {
       return {
         copyable: this.copyable,
         'feedback-blur': this.copyable,
+        dark: this.dark,
       };
     },
   },
@@ -110,33 +115,56 @@ code {
   overflow: auto;
   border-radius: 3px;
 }
+code.dark {
+  color: white;
+  background: #2d2d2d !important;
+}
+
 code .string {
-    color: #63a35c;
+  color: #63a35c;
 }
+code.dark .string {
+  color: #7ec699;
+}
+
 code .special {
-    color: #8e44ad;
+  color: #8e44ad;
 }
+
 code .html {
-    color: #2980b9;
+  color: #2980b9;
 }
+code.dark .html {
+  color: #e2777a;
+}
+
 code .special-js {
-    color: #2980b9;
+  color: #2980b9;
 }
+code.dark .special-js {
+  color: #e2777a;
+}
+
 code .special-js-glob {
-    color: #63a35c;
-    font-weight: bold;
+  color: #63a35c;
+  font-weight: bold;
 }
+code.dark .special-js-glob {
+  color: #7ec699;
+  font-weight: bold;
+}
+
 code .special-comment{
-    color: #aaa;
+  color: #aaa;
 }
 code .special-js-meth {
-    color: #E46D8A;
+  color: #E46D8A;
 }
 code .special-html {
-    color: #E4D95F;
+  color: #E4D95F;
 }
 code .special-sql {
-    color: #1D968C;
+  color: #1D968C;
 }
 
 .copy-feedback {

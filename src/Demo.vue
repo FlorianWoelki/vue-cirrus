@@ -7,7 +7,7 @@
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
           totam dignissimos?
         </p>
-        <v-code lang="html">
+        <v-code dark lang="html">
           <h1>test</h1><br />
           <h6
             class="test-title"
@@ -30,7 +30,7 @@
           v-model=searchingWord
           :searchAction=click
         >Search Me</v-search-bar>
-        <v-code lang="javascript">function(test) {
+        <v-code dark lang="javascript">function(test) {
   console.log("Hello World");
 }</v-code>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
