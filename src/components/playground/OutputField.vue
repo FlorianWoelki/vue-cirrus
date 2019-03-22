@@ -1,5 +1,9 @@
 <template>
   <section class="output-field">
-    <p>Awesome output field</p>
+    <v-row>
+      <v-col center c12>
+        <p>Awesome output field</p>
+      </v-col>
+    </v-row>
   </section>
 </template>
