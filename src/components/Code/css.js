@@ -11,6 +11,10 @@ export default {
     exp: /\.\w*/g,
     class: 'special-js',
   },
+  attributes: {
+    exp: /.+?(?=:)/g,
+    class: 'special-sql',
+  },
   css: {
     exp: /.+?(?={)/g,
     class: 'special-html',

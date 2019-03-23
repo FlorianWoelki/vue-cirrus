@@ -38,7 +38,7 @@
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
           totam dignissimos?
         </p>
-        <v-code lang="css">html {
+        <v-code dark lang="css">html {
   color: #fff;
   background-color: dark;
 }
