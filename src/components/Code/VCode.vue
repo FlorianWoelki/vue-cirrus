@@ -10,6 +10,7 @@
 <script>
 import javascript from './javascript';
 import html from './html';
+import css from './css';
 
 export default {
   props: {
@@ -70,6 +71,10 @@ export default {
       codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
       Object.keys(html).forEach((key) => {
         codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
+      });
+    } else if (this.lang.toLowerCase() === 'css') {
+      Object.keys(css).forEach((key) => {
+        codeElements = codeElements.replace(css[key].exp, `<span class="${css[key].class}">$&</span>`);
       });
     }
 
@@ -160,9 +165,14 @@ code .special-comment{
 code .special-js-meth {
   color: #E46D8A;
 }
+
 code .special-html {
+  color: #9b901a;
+}
+code.dark .special-html {
   color: #E4D95F;
 }
+
 code .special-sql {
   color: #1D968C;
 }

@@ -38,6 +38,15 @@
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
           totam dignissimos?
         </p>
+        <v-code lang="css">html {
+  color: #fff;
+  background-color: dark;
+}
+
+.hello {
+  cursor: pointer;
+  font-family: 'Arial';
+}</v-code>
       </v-row>
     </v-container>
   </div>
