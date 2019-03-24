@@ -14,9 +14,7 @@
       <v-code
         lang="Console"
         copyable
-      >
-        <pre>npm install --save vue-cirrus</pre>
-      </v-code>
+      >npm install --save vue-cirrus</v-code>
     </v-row>
     <v-row>
       <h6>Setting Up</h6>
@@ -46,10 +44,8 @@
       <v-code
         lang="JavaScript"
         copyable
-      >
-        <pre>import 'vue-cirrus/dist/vue-cirrus.css';</pre>
-        <pre>import 'vue-cirrus';</pre>
-      </v-code>
+      >import 'vue-cirrus/dist/vue-cirrus.css';
+import 'vue-cirrus';</v-code>
       <p>That's it. You can now start exploring!</p>
     </v-row>
   </section>
