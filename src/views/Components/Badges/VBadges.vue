@@ -6,13 +6,13 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <pre v-html="code"></pre>
+          <span v-html="code"></span>
         </v-code>
       </v-col>
       <v-col
         center
         c6
-        style="margin-top: 100px;"
+        style="margin-top: 50px;"
       >
         <v-badge content="3">
           <p>Paragraph Text</p>

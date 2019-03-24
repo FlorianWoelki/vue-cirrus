@@ -5,13 +5,13 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <pre v-html="normalInputFieldCode"></pre>
+          <span v-html="normalInputFieldCode"></span>
         </v-code>
       </v-col>
       <v-col
         center
         c6
-        style="margin-top: 85px;"
+        style="margin-top: 55px;"
       >
         <v-input-field
           large
@@ -23,13 +23,13 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <pre v-html="titleInputFieldCode"></pre>
+          <span v-html="titleInputFieldCode"></span>
         </v-code>
       </v-col>
       <v-col
         center
         c6
-        style="margin-top: 100px;"
+        style="margin-top: 60px;"
       >
         <v-input-field
           title="Title"

@@ -6,12 +6,12 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <pre v-html="code"></pre>
+          <span v-html="code"></span>
         </v-code>
       </v-col>
       <v-col
         c6
-        style="margin-top: 225px;"
+        style="margin-top: 175px;"
       >
         <v-tile>
           <v-tile-icon>

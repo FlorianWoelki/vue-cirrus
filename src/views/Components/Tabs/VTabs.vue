@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <pre v-html="code"></pre>
+          <span v-html="code"></span>
         </v-code>
       </v-col>
       <v-col
