@@ -5,7 +5,7 @@
         lang="Vue"
         style="margin-top: 50px;"
       >
-        <pre v-html="code"></pre>
+        <span v-html="code"></span>
       </v-code>
     </v-col>
     <v-col
