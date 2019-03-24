@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.85] - 2019-03-24
+
+### 🔨 Added
+- Added dark mode for code component
+- Added css code highlighting
+
+### ⚡️ Changed
+
+- Updated README file
+- Updated margin of code component
+- Fixed string issue with javascript code component
+
 ## [0.1.84] - 2019-03-17
 
 ### 🔨 Added
@@ -178,3 +190,4 @@ All notable changes to this project will be documented in this file.
 [0.1.82]: https://www.npmjs.com/package/vue-cirrus/v/0.1.82
 [0.1.83]: https://www.npmjs.com/package/vue-cirrus/v/0.1.83
 [0.1.84]: https://www.npmjs.com/package/vue-cirrus/v/0.1.84
+[0.1.85]: https://www.npmjs.com/package/vue-cirrus/v/0.1.85
