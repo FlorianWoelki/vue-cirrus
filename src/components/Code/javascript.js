@@ -8,7 +8,7 @@ export default {
     class: 'string',
   },
   specialWords: {
-    exp: /\b(typeof|instanceof|import|as|from|export|await|new|if|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g,
+    exp: /\b(typeof|instanceof|import|as|from|export|await|new|if|true|false|else|return|do|while|switch|for|foreach|in|continue|break)(?=[^\w])/g,
     class: 'special',
   },
   specialJsGlob: {

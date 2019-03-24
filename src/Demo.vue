@@ -32,6 +32,10 @@
         >Search Me</v-search-bar>
         <v-code dark lang="javascript">function(test) {
   console.log("Hello World");
+  if (true) {
+    // print something out
+    console.log("Helo World");
+  }
 }</v-code>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Ea delectus ullam aut? Veritatis cum earum eaque atque quam inventore,

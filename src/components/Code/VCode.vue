@@ -135,6 +135,9 @@ code.dark .string {
 code .special {
   color: #8e44ad;
 }
+code.dark .special {
+  color: #74b9ff;
+}
 
 code .html {
   color: #2980b9;
