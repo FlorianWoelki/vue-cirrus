@@ -2,13 +2,10 @@
   <v-row>
     <v-col c6>
       <v-code lang="Vue">
-        <pre v-html="code"></pre>
+        <span v-html="code"></span>
       </v-code>
     </v-col>
-    <v-col
-      c6
-      style="margin-top: 66px;"
-    >
+    <v-col c6>
       <v-row>
         <v-row center>
           <v-col
