@@ -20,10 +20,10 @@
         c6
       >
         <v-parallax
-          src="https://paulmason.name/media/demos/full-screen-background-image/background.jpg"
+          src="https://images.fineartamerica.com/images-medium-large-5/ampang-kuala-lumpur-city-skyline-at-night-blurred-background-jpldesigns.jpg"
           style="height: 500px;"
         >
-          <h1>Hello World</h1>
+          <h1 class="white">Hello World</h1>
         </v-parallax>
       </v-col>
     </v-row>
