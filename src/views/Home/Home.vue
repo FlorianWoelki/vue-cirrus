@@ -4,7 +4,7 @@
     <Head />
 
     <div class="content">
-      <GettingStarted />
+      <GettingStarted style="margin-top: 100px;" />
 
       <a href="#/components">
         <v-btn animated accent>

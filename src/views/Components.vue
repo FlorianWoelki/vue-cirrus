@@ -1,23 +1,17 @@
 <template>
   <Sidebar>
-    <h3>Components</h3>
-    <v-divider />
-
-    <p>
-      Welcome to the components page.
-    </p>
-    <p>
-      On the sidebar you can see all current developed components.
-    </p>
+    <GettingStarted />
   </Sidebar>
 </template>
 
 <script>
+import GettingStarted from '@/views/Home/GettingStarted.vue';
 import Sidebar from '@/components/Sidebar.vue';
 
 export default {
   components: {
     Sidebar,
+    GettingStarted,
   },
 };
 </script>

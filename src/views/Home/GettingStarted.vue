@@ -50,9 +50,3 @@ import 'vue-cirrus';</v-code>
     </v-row>
   </section>
 </template>
-
-<style>
-#getting-started {
-  padding-top: 100px;
-}
-</style>
