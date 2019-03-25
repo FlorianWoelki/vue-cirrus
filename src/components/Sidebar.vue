@@ -5,7 +5,7 @@
       hoverEffect
     >
       <v-sidebar-item
-        v-for="component in components"
+        v-for="component in sortedComponentList"
         :key=component
         :link="'#/components/' + component"
       >
@@ -36,6 +36,12 @@ export default {
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
         'Badges', 'Fullscreen', 'Spinners'],
     };
+  },
+
+  computed: {
+    sortedComponentList() {
+      return this.components.slice().sort();
+    },
   },
 };
 </script>
