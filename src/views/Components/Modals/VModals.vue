@@ -61,13 +61,19 @@ export default {
       code: `<xmp><a href="#modal">
   <v-btn btnStyle="accent">Open Modal</v-btn>
 </a>
-<v-modal large zoomOut>
+<v-modal
+  large
+  zoomOut
+>
   <v-modal-body>
     <h6>Hello Modal Dialog</h6>
   </v-modal-body>
   <v-modal-footer style="padding-bottom: 80px;">
     <v-btn pullLeft>Close</v-btn>
-    <v-btn pullRight btnStyle="accent">Share</v-btn>
+    <v-btn
+      pullRight
+      btnStyle="accent"
+    >Share</v-btn>
   </v-modal-footer>
 </v-modal></xmp>`,
       props: {

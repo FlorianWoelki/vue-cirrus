@@ -42,7 +42,10 @@ export default {
 
   data() {
     return {
-      code: '<xmp><v-next-prev prevText="Prev Text" nextText="Next Text" /></xmp>',
+      code: `<xmp><v-next-prev
+  prevText="Prev Text"
+  nextText="Next Text"
+/></xmp>`,
       props: {
         onlyNext: ['onlyNext', 'false', 'Boolean', 'Only next is shown'],
         onlyPrev: ['onlyPrev', 'false', 'Boolean', 'Only previous is shown'],

@@ -51,7 +51,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-footer title="Company" subtitle="Awesome company footer">
+      code: `<xmp><v-footer
+  title="Company"
+  subtitle="Awesome company footer"
+>
   <h1>Some awesome footerrish.</h1>
 </v-footer></xmp>`,
       props: {

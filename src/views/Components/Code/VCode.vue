@@ -68,7 +68,10 @@ export default {
 if (myBool) {
   console.log("Bool is true!");
 }</v-code></xmp>`,
-      darkCode: `<xmp><v-code lang="JavaScript" dark>const myBool = true;
+      darkCode: `<xmp><v-code
+  lang="JavaScript"
+  dark
+>const myBool = true;
 if (myBool) {
   console.log("Bool is true!");
 }</v-code></xmp>`,

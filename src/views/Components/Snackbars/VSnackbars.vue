@@ -46,7 +46,10 @@ export default {
   data() {
     return {
       snackbar: false,
-      code: `<xmp><v-snackbar bottomCenter v-model="snackbar">
+      code: `<xmp><v-snackbar
+  bottomCenter
+  v-model="snackbar"
+>
   Awesome Snackbar!
 </v-snackbar>
 </xmp>`,

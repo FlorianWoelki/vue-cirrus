@@ -41,7 +41,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-navbar title="Logo" fixed>
+      code: `<xmp><v-navbar
+  title="Logo"
+  fixed
+>
   <div class="nav-left">
     <v-nav-dropdown>
       <template v-slot:title><i>Dropdown</i></template>
@@ -59,7 +62,10 @@ export default {
       <v-nav-dropdown-item><b>Test 2</b></v-nav-dropdown-item>
       <v-nav-dropdown-item>Test 3</v-nav-dropdown-item>
     </v-nav-dropdown>
-    <v-nav-dropdown clickable dropdownId="clickable-dropdown">
+    <v-nav-dropdown 
+      clickable
+      dropdownId="clickable-dropdown"
+    >
       <template v-slot:title><u>Dropdown</u></template>
       <v-nav-dropdown-item>Test 3</v-nav-dropdown-item>
       <v-nav-dropdown-item>Test 4</v-nav-dropdown-item>

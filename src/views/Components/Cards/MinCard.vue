@@ -23,7 +23,10 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-min-card title="Google Chrome" imgId="image">
+      code: `<xmp><v-min-card
+  title="Google Chrome"
+  imgId="image"
+>
   <p>Here is some basic card text for the minimized card</p>
 </v-min-card></xmp>`,
     };

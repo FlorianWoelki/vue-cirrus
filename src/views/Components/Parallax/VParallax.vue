@@ -51,7 +51,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-parallax src="background.jpg" style="height: 500px;">
+      code: `<xmp><v-parallax
+  src="background.jpg"
+  style="height: 500px;"
+>
   <h1>Hello World</h1>
 </v-parallax></xmp>`,
       props: {
