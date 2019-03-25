@@ -10,13 +10,61 @@
         </v-code>
       </v-col>
       <v-col
-        center
         c6
-        style="margin-top: 50px;"
+        style="margin-top: 25px;"
       >
-        <v-btn :onClick="() => { snackbar = !snackbar; }">Show!</v-btn>
+        <v-row center style="margin-bottom: 25px;">
+          <v-col c6>
+            <input type="radio" v-model=position name="position" value="0" checked> Bottom Center
+          </v-col>
+          <v-col c6>
+            <input type="radio" v-model=position name="position" value="1"> Bottom Left
+          </v-col>
+          <v-col c6>
+            <input type="radio" v-model=position  name="position" value="2"> Bottom Right
+          </v-col>
+          <v-col c6>
+            <input type="radio" v-model=position  name="position" value="3"> Top Left
+          </v-col>
+          <v-col c6>
+            <input type="radio" v-model=position  name="position" value="4"> Top Center
+          </v-col>
+          <v-col c6>
+            <input type="radio" v-model=position  name="position" value="5"> Top Right
+          </v-col>
+        </v-row>
+        <v-row center>
+          <v-btn :onClick="() => { snackbar = !snackbar; }">Show!</v-btn>
+        </v-row>
+        <!-- Sloppy solution.. TODO: Fix -->
         <v-snackbar
+          v-if="position == 0"
           bottomCenter
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          v-if="position == 1"
+          bottomLeft
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          v-if="position == 2"
+          bottomRight
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          v-if="position == 3"
+          topLeft
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          v-if="position == 4"
+          topCenter
+          v-model="snackbar"
+        >Awesome Snackbar!</v-snackbar>
+        <v-snackbar
+          v-if="position == 5"
+          topRight
           v-model="snackbar"
         >Awesome Snackbar!</v-snackbar>
       </v-col>
@@ -45,6 +93,7 @@ export default {
 
   data() {
     return {
+      position: 0,
       snackbar: false,
       code: `<xmp><v-snackbar
   bottomCenter
