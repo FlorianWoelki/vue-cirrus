@@ -1,5 +1,9 @@
 <template>
   <div class="demo">
+    <v-navbar
+      title="Hello"
+    />
+
     <v-container>
       <v-row>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.

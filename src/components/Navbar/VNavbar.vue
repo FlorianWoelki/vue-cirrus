@@ -55,19 +55,21 @@ export default {
   },
 
   mounted() {
-    const headerBtn = document.getElementById('header-btn');
+    if (!this.disableMobileNavbar) {
+      const headerBtn = document.getElementById('header-btn');
 
-    headerBtn.addEventListener('click', () => {
-      if (document.getElementById('header-menu').classList.contains('active')) {
-        document.getElementById('header-menu').classList.remove('active');
-        document.querySelector('.nav-btn').classList.remove('active');
-        document.querySelector('#header').classList.remove('translucent');
-      } else {
-        document.getElementById('header-menu').classList.add('active');
-        document.querySelector('.nav-btn').classList.add('active');
-        document.querySelector('#header').classList.add('translucent');
-      }
-    });
+      headerBtn.addEventListener('click', () => {
+        if (document.getElementById('header-menu').classList.contains('active')) {
+          document.getElementById('header-menu').classList.remove('active');
+          document.querySelector('.nav-btn').classList.remove('active');
+          // document.querySelector('#header').classList.remove('translucent');
+        } else {
+          document.getElementById('header-menu').classList.add('active');
+          document.querySelector('.nav-btn').classList.add('active');
+          // document.querySelector('#header').classList.add('translucent');
+        }
+      });
+    }
   },
 
   computed: {
