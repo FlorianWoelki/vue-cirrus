@@ -9,7 +9,7 @@
         c3
         center
       >
-        <v-btn tooltipText="Standard Tooltip">Btn</v-btn>
+        <v-btn tooltipText="Standard Tooltip">Standard</v-btn>
       </v-col>
       <v-col
         c3
@@ -18,7 +18,7 @@
         <v-btn
           tooltipText="Bottom Tooltip"
           tooltipBottom
-        >Btn</v-btn>
+        >Bottom</v-btn>
       </v-col>
       <v-col
         c3
@@ -27,7 +27,7 @@
         <v-btn
           tooltipText="Left Tooltip"
           tooltipLeft
-        >Btn</v-btn>
+        >Left</v-btn>
       </v-col>
       <v-col
         c3
@@ -36,8 +36,20 @@
         <v-btn
           tooltipText="Right Tooltip"
           tooltipRight
-        >Btn</v-btn>
+        >Right</v-btn>
       </v-col>
+    </v-row>
+
+    <v-space xlarge />
+
+    <v-row>
+      <span>Code example</span>
+      <v-code
+        lang="Vue"
+        dark
+      >
+        <span v-html=code></span>
+      </v-code>
     </v-row>
 
     <v-space xlarge />
@@ -57,6 +69,10 @@ export default {
 
   data() {
     return {
+      code: `<xmp><v-btn
+  tooltipText="Right Tooltip"
+  tooltipRight
+>Btn</v-btn></xmp>`,
       props: {
         tooltipText: ['tooltipText', 'Empty', 'String', 'Set the text of the tooltip'],
         tooltipTopLeft: ['tooltipTopLeft', 'false', 'Boolean', 'Position of tooltip will be top left'],
