@@ -11,13 +11,8 @@
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
           totam dignissimos?
         </p>
-        <v-code dark lang="html">
-          <h1>test</h1><br />
-          <h6
-            class="test-title"
-            name="Title"
-          >tiel</h6> <br />
-          <v-btn accent>test</v-btn>
+        <v-code dark lang="vue">
+          <xmp v-html=vueCode></xmp>
         </v-code>
         <v-drop-caps letterColor="purple">
           Lorem ipsum dolor sit,
@@ -66,6 +61,12 @@ export default {
   name: 'Demo',
   data() {
     return {
+      vueCode: `<h1>test</h1><br />
+<h6
+  class="test-title"
+  name="Title"
+>tiel</h6> <br />
+<v-btn accent>test</v-btn>`,
       snackbar: false,
       code: `<xmp><div>Helo World</div>
 <h1 class="Hello World">Hello World</h1></xmp>`,

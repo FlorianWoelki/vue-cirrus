@@ -76,6 +76,12 @@ export default {
       Object.keys(css).forEach((key) => {
         codeElements = codeElements.replace(css[key].exp, `<span class="${css[key].class}">$&</span>`);
       });
+    } else if (this.lang.toLowerCase() === 'vue') {
+      codeElements = codeElements.replace('<xmp>', '').replace('</xmp>', '');
+      codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
+      Object.keys(html).forEach((key) => {
+        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
+      });
     }
 
     document.getElementById(this.codeId).innerHTML = codeElements;
