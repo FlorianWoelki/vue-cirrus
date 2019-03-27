@@ -5,17 +5,38 @@
     <p>Short Demo</p>
 
     <v-row>
-      <v-col c3 center>
+      <v-col
+        c3
+        center
+      >
         <v-btn tooltipText="Standard Tooltip">Btn</v-btn>
       </v-col>
-      <v-col c3 center>
-        <v-btn tooltipText="Bottom Tooltip" tooltipBottom>Btn</v-btn>
+      <v-col
+        c3
+        center
+      >
+        <v-btn
+          tooltipText="Bottom Tooltip"
+          tooltipBottom
+        >Btn</v-btn>
       </v-col>
-      <v-col c3 center>
-        <v-btn tooltipText="Left Tooltip" tooltipLeft>Btn</v-btn>
+      <v-col
+        c3
+        center
+      >
+        <v-btn
+          tooltipText="Left Tooltip"
+          tooltipLeft
+        >Btn</v-btn>
       </v-col>
-      <v-col c3 center>
-        <v-btn tooltipText="Right Tooltip" tooltipRight>Btn</v-btn>
+      <v-col
+        c3
+        center
+      >
+        <v-btn
+          tooltipText="Right Tooltip"
+          tooltipRight
+        >Btn</v-btn>
       </v-col>
     </v-row>
 
