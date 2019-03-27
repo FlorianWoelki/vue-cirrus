@@ -2,6 +2,46 @@
   <section class="animations-mixin">
     <p>This mixin can almost applied to any Vue Cirrus component!</p>
 
+    <p>Short Demo</p>
+
+    <v-row>
+      <v-col c4 center>Fade In</v-col>
+      <v-col c4 center>Bounce In</v-col>
+      <v-col c4 center>Bounce</v-col>
+    </v-row>
+    <v-row>
+      <v-col c4 center>
+        <v-btn fadeIn infinite>Btn</v-btn>
+      </v-col>
+      <v-col c4 center>
+        <v-btn bounceIn infinite>Btn</v-btn>
+      </v-col>
+      <v-col c4 center>
+        <v-btn bounce infinite>Btn</v-btn>
+      </v-col>
+    </v-row>
+
+    <v-space xlarge />
+
+    <v-row>
+      <v-col c4 center>Pulse</v-col>
+      <v-col c4 center>Hover Grow</v-col>
+      <v-col c4 center>Loading Left/Right</v-col>
+    </v-row>
+    <v-row>
+      <v-col c4 center>
+        <v-btn pulse infinite>Btn</v-btn>
+      </v-col>
+      <v-col c4 center>
+        <v-btn hoverGrow infinite>Btn</v-btn>
+      </v-col>
+      <v-col c4 center>
+        <v-btn loadingLeft infinite>Btn</v-btn>
+      </v-col>
+    </v-row>
+
+    <v-space xlarge />
+
     <h6>API (props)</h6>
     <API :data=props />
   </section>
