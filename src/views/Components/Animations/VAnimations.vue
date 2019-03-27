@@ -96,6 +96,18 @@
 
     <v-space xlarge />
 
+    <v-row>
+      <span>Code example</span>
+      <v-code
+        lang="Vue"
+        dark
+      >
+        <span v-html=code></span>
+      </v-code>
+    </v-row>
+
+    <v-space xlarge />
+
     <h6>API (props)</h6>
     <API :data=props />
   </section>
@@ -111,6 +123,10 @@ export default {
 
   data() {
     return {
+      code: `<xmp><v-btn
+  pulse
+  infinite
+>Btn</v-btn></xmp>`,
       props: {
         infinite: ['infinite', 'false', 'Boolean', 'Animation will be infinite'],
         fadeIn: ['fadeIn', 'false', 'Boolean', 'Enable fade in animation'],
