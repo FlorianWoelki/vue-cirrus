@@ -2,6 +2,25 @@
   <section class="tooltips-mixin">
     <p>This mixin can almost applied to any Vue Cirrus component!</p>
 
+    <p>Short Demo</p>
+
+    <v-row>
+      <v-col c3 center>
+        <v-btn tooltipText="Standard Tooltip">Btn</v-btn>
+      </v-col>
+      <v-col c3 center>
+        <v-btn tooltipText="Bottom Tooltip" tooltipBottom>Btn</v-btn>
+      </v-col>
+      <v-col c3 center>
+        <v-btn tooltipText="Left Tooltip" tooltipLeft>Btn</v-btn>
+      </v-col>
+      <v-col c3 center>
+        <v-btn tooltipText="Right Tooltip" tooltipRight>Btn</v-btn>
+      </v-col>
+    </v-row>
+
+    <v-space xlarge />
+
     <h6>API (props)</h6>
     <API :data=props />
   </section>
