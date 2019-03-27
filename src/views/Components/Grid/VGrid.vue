@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="grid-component">
     <h5>Grid</h5>
     <p>The layout is really simple. There are different types of layouts in Cirrus.</p>
 

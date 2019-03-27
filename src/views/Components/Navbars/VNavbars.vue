@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="navbars-component">
     <h5>Navbars</h5>
     <p>There is a really easy way to create Navbars in Vue-Cirrus!</p>
 

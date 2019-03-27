@@ -1,5 +1,5 @@
 <template>
-  <section class="avatars">
+  <section class="avatars-component">
     <h5>Easy Avatars</h5>
     <p>Easily create avatars with Vue-Cirrus! It is so simple!</p>
 

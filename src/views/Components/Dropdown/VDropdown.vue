@@ -1,5 +1,5 @@
 <template>
-  <section class="dropdown">
+  <section class="dropdown-component">
     <h5>Dropdown made simple</h5>
     <p>It is that easy! Simply create dropdown buttons!</p>
 

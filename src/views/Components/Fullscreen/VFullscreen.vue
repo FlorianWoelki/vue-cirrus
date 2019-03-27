@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="fullscreen-component">
     <h5>Fullscreen</h5>
     <p>With this component you can easily create fullscreens on your page!</p>
 

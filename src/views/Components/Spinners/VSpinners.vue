@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="spinners-component">
     <h5>Spinners for loading</h5>
     <p>Easily create spinners for a loading effect!</p>
 

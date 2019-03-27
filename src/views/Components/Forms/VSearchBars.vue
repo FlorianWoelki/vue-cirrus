@@ -1,5 +1,5 @@
 <template>
-  <section class="input-fields">
+  <section class="search-bars-component">
     <h5>Search Bars</h5>
 
     <v-row>

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="code-component">
     <h5>Easy Code components</h5>
     <p>You can create easily colored code preview components!</p>
 

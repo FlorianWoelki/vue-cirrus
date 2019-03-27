@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="cards-component">
     <h5>Simple Cards</h5>
     <p>Create easy card layouts with this SimpleCard component.</p>
     <SimpleCard />

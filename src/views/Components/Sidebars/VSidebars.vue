@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="sidebars-component">
     <h5>Sidebars</h5>
     <p>Easily create full responsive sidebars!</p>
 

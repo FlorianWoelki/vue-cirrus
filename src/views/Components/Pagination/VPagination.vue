@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="pagination-component">
     <h5>Pagination</h5>
     <p>There is an easy pagination component in Vue-Cirrus.</p>
 

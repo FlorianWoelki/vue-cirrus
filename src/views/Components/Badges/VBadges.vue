@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="badges-component">
     <h5>Custom badges</h5>
     <p>The badges functionality is a Vue-Cirrus original and it is so easy to create one!</p>
 

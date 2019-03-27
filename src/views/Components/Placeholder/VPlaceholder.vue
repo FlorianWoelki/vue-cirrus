@@ -1,5 +1,5 @@
 <template>
-  <section class="toasts">
+  <section class="placeholder-component">
     <h5>Easy Placeholders</h5>
     <p>You can create placeholders for easy prototyping.</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="tiles-component">
     <h5>Tiles</h5>
     <p>Create simple tiles with Vue-Cirrus.</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="frames-component">
     <h5>Frames</h5>
     <p>You can simply create basic layouts with frames!</p>
 

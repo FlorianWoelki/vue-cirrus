@@ -1,5 +1,5 @@
 <template>
-  <section class="toasts">
+  <section class="toasts-component">
     <h5>Creating Snackbars</h5>
     <p>Snackbars are a new invented thing in Vue Cirrus and it is not present in Cirrus.</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="parallax-component">
     <h5>Parallax</h5>
     <p>
       You do not need to code anything with CSS!

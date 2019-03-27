@@ -1,5 +1,5 @@
 <template>
-  <section class="input-fields">
+  <section class="text-areas-component">
     <h5>Text Areas</h5>
 
     <v-row>

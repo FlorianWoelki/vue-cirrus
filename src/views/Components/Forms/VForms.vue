@@ -1,5 +1,5 @@
 <template>
-  <section class="toasts">
+  <section class="forms-component">
     <InputFields />
 
     <v-space xlarge />

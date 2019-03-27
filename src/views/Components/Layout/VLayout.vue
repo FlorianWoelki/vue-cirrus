@@ -1,5 +1,5 @@
 <template>
-  <section class="layout">
+  <section class="layout-mixin">
     <p>This mixin can almost applied to any Vue Cirrus component!</p>
 
     <h6>API (props)</h6>

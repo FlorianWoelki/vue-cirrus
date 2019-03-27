@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="dividers-component">
     <h5>Dividers</h5>
     <p>Easily split up your layout with dividers!</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="links-component">
     <h5>Links</h5>
     <p>You can set just one property in the link component and it will animate automatically!</p>
 

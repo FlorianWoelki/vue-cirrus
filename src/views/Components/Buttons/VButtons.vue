@@ -1,5 +1,5 @@
 <template>
-  <section class="buttons-section">
+  <section class="buttons-component">
     <h5>Creating simple buttons</h5>
     <p>You can easily create normal buttons with the awesome v-btn component!</p>
     <SimpleButtons />

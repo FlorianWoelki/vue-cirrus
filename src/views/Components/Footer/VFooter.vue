@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="footer-component">
     <h5>Footer</h5>
     <p>
       There are many styles for footers!

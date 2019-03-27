@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="spaces-component">
     <h5>Spaces</h5>
     <p>You can create dynamic spaces in your layout. So easy!</p>
 

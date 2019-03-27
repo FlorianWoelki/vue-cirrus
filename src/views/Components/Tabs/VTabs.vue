@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="tabs-component">
     <h5>Tabs</h5>
     <p>So easy to create Tabs in Vue Cirrus!</p>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="badges">
+  <section class="nextprev-component">
     <h5>NextPrev</h5>
     <p>It is so easy to create stylus next and previous buttons!</p>
 
