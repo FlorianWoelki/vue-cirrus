@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.86] - 2019-03-28
+
+### 🔨 Added
+- Code component: Added true, false to special words
+- Added datepicker form
+- Added Vue syntax highlighting
+
+### ⚡️ Changed
+- Code component: Changed color of special words
+- Fixed error in NavBar
+
 ## [0.1.85] - 2019-03-24
 
 ### 🔨 Added
@@ -191,3 +202,4 @@ All notable changes to this project will be documented in this file.
 [0.1.83]: https://www.npmjs.com/package/vue-cirrus/v/0.1.83
 [0.1.84]: https://www.npmjs.com/package/vue-cirrus/v/0.1.84
 [0.1.85]: https://www.npmjs.com/package/vue-cirrus/v/0.1.85
+[0.1.86]: https://www.npmjs.com/package/vue-cirrus/v/0.1.86
