@@ -9,11 +9,11 @@ export default {
   },
   classes: {
     exp: /\.\w*/g,
-    class: 'special-js',
+    class: 'special-colored',
   },
   attributes: {
     exp: /.+?(?=:)/g,
-    class: 'special-sql',
+    class: 'special-attributes',
   },
   css: {
     exp: /.+?(?={)/g,

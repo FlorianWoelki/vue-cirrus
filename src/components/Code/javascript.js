@@ -17,7 +17,7 @@ export default {
   },
   specialJs: {
     exp: /\b(getElementsBy(TagName|ClassName|Name)|getElementById|function|async|var|const|let)(?=[^\w])/g,
-    class: 'special-js',
+    class: 'special-colored',
   },
   specialMethods: {
     exp: /\b(indexOf|match|replace|toString|length)(?=[^\w])/g,
@@ -33,7 +33,7 @@ export default {
   },
   sql: {
     exp: /\b(CREATE|ALL|DATABASE|TABLE|GRANT|PRIVILEGES|IDENTIFIED|FLUSH|SELECT|UPDATE|DELETE|INSERT|FROM|WHERE|ORDER|BY|GROUP|LIMIT|INNER|OUTER|AS|ON|COUNT|CASE|TO|IF|WHEN|BETWEEN|AND|OR)(?=[^\w])/g,
-    class: 'special-sql',
+    class: 'special-attributes',
   },
   html: {
     exp: /(&lt;[^&]*&gt;)/g,

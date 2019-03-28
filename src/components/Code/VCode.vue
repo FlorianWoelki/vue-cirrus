@@ -67,7 +67,8 @@ export default {
       Object.keys(javascript).forEach((key) => {
         codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$&</span>`);
       });
-    } else if (this.lang.toLowerCase() === 'html') {
+    } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
+      codeElements = codeElements.replace('<xmp>', '').replace('</xmp>', '');
       codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
       Object.keys(html).forEach((key) => {
         codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
@@ -75,12 +76,6 @@ export default {
     } else if (this.lang.toLowerCase() === 'css') {
       Object.keys(css).forEach((key) => {
         codeElements = codeElements.replace(css[key].exp, `<span class="${css[key].class}">$&</span>`);
-      });
-    } else if (this.lang.toLowerCase() === 'vue') {
-      codeElements = codeElements.replace('<xmp>', '').replace('</xmp>', '');
-      codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
-      Object.keys(html).forEach((key) => {
-        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
       });
     }
 
@@ -152,10 +147,10 @@ code.dark .html {
   color: #e2777a;
 }
 
-code .special-js {
+code .special-colored {
   color: #2980b9;
 }
-code.dark .special-js {
+code.dark .special-colored {
   color: #e2777a;
 }
 
@@ -182,7 +177,7 @@ code.dark .special-html {
   color: #E4D95F;
 }
 
-code .special-sql {
+code .special-attributes {
   color: #1D968C;
 }
 
