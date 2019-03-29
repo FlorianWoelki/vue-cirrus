@@ -127,7 +127,7 @@ code {
   border-radius: 3px;
 }
 code.dark {
-  color: white;
+  color: rgb(185, 184, 184);
   background: #2d2d2d !important;
 }
 
