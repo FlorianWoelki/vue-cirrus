@@ -11,6 +11,7 @@
 import javascript from './javascript';
 import html from './html';
 import css from './css';
+import bash from './bash';
 
 export default {
   props: {
@@ -77,6 +78,10 @@ export default {
       Object.keys(css).forEach((key) => {
         codeElements = codeElements.replace(css[key].exp, `<span class="${css[key].class}">$&</span>`);
       });
+    } else if (this.lang.toLowerCase() === 'bash') {
+      Object.keys(bash).forEach((key) => {
+        codeElements = codeElements.replace(bash[key].exp, `<span class="${bash[key].class}">$&</span>`);
+      });
     }
 
     document.getElementById(this.codeId).innerHTML = codeElements;
@@ -124,6 +129,13 @@ code {
 code.dark {
   color: white;
   background: #2d2d2d !important;
+}
+
+code .bash-keyword {
+  color: #f08d49;
+}
+code.dark .bash-keyword {
+  color: #f08d49;
 }
 
 code .string {

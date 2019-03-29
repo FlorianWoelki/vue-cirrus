@@ -11,6 +11,7 @@
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
           totam dignissimos?
         </p>
+        <v-code dark lang="Bash">npm install vue-cirrus</v-code>
         <v-code dark lang="vue">
           <xmp v-html=vueCode></xmp>
         </v-code>
