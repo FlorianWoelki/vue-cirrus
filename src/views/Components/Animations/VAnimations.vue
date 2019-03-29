@@ -102,7 +102,7 @@
         lang="Vue"
         dark
       >
-        <span v-html=code></span>
+        <xmp v-html=code></xmp>
       </v-code>
     </v-row>
 
@@ -123,10 +123,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-btn
+      code: `<v-btn
   pulse
   infinite
->Btn</v-btn></xmp>`,
+>Btn</v-btn>`,
       props: {
         infinite: ['infinite', 'false', 'Boolean', 'Animation will be infinite'],
         fadeIn: ['fadeIn', 'false', 'Boolean', 'Enable fade in animation'],

@@ -48,7 +48,7 @@
         lang="Vue"
         dark
       >
-        <span v-html=code></span>
+        <xmp v-html=code></xmp>
       </v-code>
     </v-row>
 
@@ -69,10 +69,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-btn
+      code: `<v-btn
   tooltipText="Right Tooltip"
   tooltipRight
->Btn</v-btn></xmp>`,
+>Btn</v-btn>`,
       props: {
         tooltipText: ['tooltipText', 'Empty', 'String', 'Set the text of the tooltip'],
         tooltipTopLeft: ['tooltipTopLeft', 'false', 'Boolean', 'Position of tooltip will be top left'],
