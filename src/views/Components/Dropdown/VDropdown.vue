@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -54,14 +54,14 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-dropdown>
+      code: `<v-dropdown>
   <template v-slot:dropdownBtn>
     <v-dropdown-btn>Dropdown</v-dropdown-btn>
   </template>
   <v-dropdown-item>Chrome</v-dropdown-item>
   <v-dropdown-item>Firefox</v-dropdown-item>
   <v-dropdown-item>IE</v-dropdown-item>
-</v-dropdown></xmp>`,
+</v-dropdown>`,
       props: {
         right: ['right', 'false', 'Boolean', 'Right aligned dropdown'],
         left: ['left', 'false', 'Boolean', 'Left aligned dropdown'],

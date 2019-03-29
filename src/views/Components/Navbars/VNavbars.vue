@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -41,7 +41,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-navbar
+      code: `<v-navbar
   title="Logo"
   fixed
 >
@@ -72,7 +72,7 @@ export default {
       <v-nav-dropdown-item>Test 5</v-nav-dropdown-item>
     </v-nav-dropdown>
   </div>
-</v-navbar></xmp>`,
+</v-navbar>`,
       props: {
         title: ['title', 'empty', 'String', '(Navbar) Title of navbar'],
         brandLink: ['brandLink', '!#', 'String', '(Navbar) Link for the brand name'],

@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -54,7 +54,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-tile>
+      code: `<v-tile>
 <v-tile-icon>
   <v-avatar text="FW" />
 </v-tile-icon>
@@ -68,7 +68,7 @@ export default {
 <v-tile-buttons>
   <v-btn btnStyle="transparent">XXX</v-btn>
 </v-tile-buttons>
-</v-tile></xmp>`,
+</v-tile>`,
       props: {
         title: ['title', 'empty', 'String', 'Title of the tile content'],
         subtitle: ['subtitle', 'empty', 'String', 'Subtitle of the tile content'],

@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -42,11 +42,11 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-tabs fill>
+      code: `<v-tabs fill>
   <v-tab>Tab One</v-tab>
   <v-tab selected>Tab Two</v-tab>
   <v-tab>Tab Three</v-tab>
-</v-tabs></xmp>`,
+</v-tabs>`,
       props: {
         fadeOut: ['fadeOut', '40', 'Number', 'How long the fade out effect is'],
         delay: ['delay', '1000', 'Number', 'How long the delay is, when it will fade out'],

@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -44,11 +44,11 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-tabs fill>
+      code: `<v-tabs fill>
   <v-tab>Tab One</v-tab>
   <v-tab selected>Tab Two</v-tab>
   <v-tab>Tab Three</v-tab>
-</v-tabs></xmp>`,
+</v-tabs>`,
       props: {
         xsmall: ['xsmall', 'false', 'Boolean', 'XSmall tab size'],
         small: ['small', 'false', 'Boolean', 'Small tab size'],

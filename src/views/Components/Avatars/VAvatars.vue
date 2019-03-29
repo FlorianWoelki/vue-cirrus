@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -41,7 +41,7 @@ export default {
 
   data() {
     return {
-      code: '<xmp><v-avatar text="FW"></v-avatar></xmp>',
+      code: '<v-avatar text="FW"></v-avatar>',
       props: {
         src: ['src', 'Empty', 'String', 'Avatar image source'],
         text: ['text', 'Empty', 'String', 'Avatar text'],

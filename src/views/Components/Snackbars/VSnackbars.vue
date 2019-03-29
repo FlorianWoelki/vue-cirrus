@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -81,13 +81,12 @@ export default {
         'Top Right',
       ],
       snackbar: false,
-      code: `<xmp><v-snackbar
+      code: `<v-snackbar
   bottomCenter
   v-model="snackbar"
 >
   Awesome Snackbar!
-</v-snackbar>
-</xmp>`,
+</v-snackbar>`,
       props: {
         accent: ['accent', 'false', 'Boolean', 'Accent fill color'],
         gray: ['gray', 'false', 'Boolean', 'Gray fill color'],

@@ -5,7 +5,7 @@
         lang="Vue"
         style="margin-top: 50px;"
       >
-        <span v-html="code"></span>
+        <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
     <v-col
@@ -30,7 +30,7 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-card
+      code: `<v-card
   animated
   title="Title"
   subtitle="Subtitle"
@@ -39,7 +39,7 @@ export default {
   <v-card-content>
     <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
   </v-card-content>
-</v-card></xmp>`,
+</v-card>`,
     };
   },
 };

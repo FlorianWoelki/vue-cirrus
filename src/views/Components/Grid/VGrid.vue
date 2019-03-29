@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -44,11 +44,11 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-row>
+      code: `<v-row>
   <v-col c4>Column 1</v-col>
   <v-col c4>Column 2</v-col>
   <v-col c4>Column 3</v-col>
-</v-row></xmp>`,
+</v-row>`,
       props: {
         fluid: ['fluid', 'false', 'Boolean', '(Row) Fluid container'],
         wrap: ['wrap', 'false', 'Boolean', '(Row) Wrap container'],

@@ -2,7 +2,7 @@
   <v-row>
     <v-col c6>
       <v-code lang="Vue">
-        <span v-html="code"></span>
+        <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
     <v-col
@@ -23,12 +23,12 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-min-card
+      code: `<v-min-card
   title="Google Chrome"
   imgId="image"
 >
   <p>Here is some basic card text for the minimized card</p>
-</v-min-card></xmp>`,
+</v-min-card>`,
     };
   },
 };

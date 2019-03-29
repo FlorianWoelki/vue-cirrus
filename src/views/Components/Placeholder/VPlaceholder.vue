@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -39,7 +39,7 @@ export default {
   },
   data() {
     return {
-      code: '<xmp><v-placeholder /></xmp>',
+      code: '<v-placeholder />',
       props: {
         title: ['title', 'Coming Soon', 'String', 'Title for placeholder'],
         subtitle: ['subtitle', 'We are currently working on this segment! :)', 'String', 'Subtitle for placeholder'],

@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -41,9 +41,9 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-fullscreen link="image.png">
+      code: `<v-fullscreen link="image.png">
   <h1>Hello World</h1>
-</v-fullscreen></xmp>`,
+</v-fullscreen>`,
       props: {
         link: ['link', 'empty', 'String', 'href for the image'],
       },

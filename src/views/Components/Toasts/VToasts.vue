@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      code: '<xmp><v-toast>My Toast!</v-toast></xmp>',
+      code: '<v-toast>My Toast!</v-toast>',
       props: {
         success: ['success', 'false', 'Boolean', 'Success colored toast'],
         warning: ['warning', 'false', 'Boolean', 'Warning colored toast'],

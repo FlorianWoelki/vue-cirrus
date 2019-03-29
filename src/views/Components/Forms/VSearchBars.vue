@@ -5,7 +5,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -33,10 +33,10 @@ export default {
   data() {
     return {
       searchingWord: '',
-      code: `<xmp><v-search-bar
+      code: `<v-search-bar
   v-model=searchingWord
   :searchAction=click
->Search Me!</v-search-bar></xmp>`,
+>Search Me!</v-search-bar>`,
     };
   },
   methods: {

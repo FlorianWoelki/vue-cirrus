@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -46,12 +46,12 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-pagination>
+      code: `<v-pagination>
   <v-pagination-item disabled>Prev</v-pagination-item>
   <v-pagination-item selected>1</v-pagination-item>
   <v-pagination-item>2</v-pagination-item>
   <v-pagination-item>Next</v-pagination-item>
-</v-pagination></xmp>`,
+</v-pagination>`,
       props: {
         link: ['link', '#', 'String', 'PaginationItem href'],
         selected: ['selected', 'false', 'Boolean', 'PaginationItem is selected'],

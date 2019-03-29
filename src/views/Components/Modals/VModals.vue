@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -58,7 +58,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><a href="#modal">
+      code: `<a href="#modal">
   <v-btn btnStyle="accent">Open Modal</v-btn>
 </a>
 <v-modal
@@ -75,7 +75,7 @@ export default {
       btnStyle="accent"
     >Share</v-btn>
   </v-modal-footer>
-</v-modal></xmp>`,
+</v-modal>`,
       props: {
         title: ['title', 'Modal Dialog', 'String', 'Modal title'],
         closeTarget: ['closeTarget', '#target', 'String', 'Close target in url'],

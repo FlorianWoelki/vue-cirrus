@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -42,9 +42,9 @@ export default {
 
   data() {
     return {
-      code: `<xmp><p>Paragraph Text 1</p>
+      code: `<p>Paragraph Text 1</p>
 <v-space />
-<p>Paragraph Text 2</p></xmp>`,
+<p>Paragraph Text 2</p>`,
       props: {
         large: ['large', 'true', 'Boolean', 'Large spacer'],
         xlarge: ['xlarge', 'false', 'Boolean', 'XLarge spacer'],

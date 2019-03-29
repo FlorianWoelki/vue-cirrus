@@ -2,7 +2,7 @@
   <v-row>
     <v-col c6>
       <v-code lang="Vue">
-        <span v-html="code"></span>
+        <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
     <v-col
@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-simple-card title="Card Title">
+      code: `<v-simple-card title="Card Title">
   <v-card-content>
     <p>This is some basic simple card text</p>
     <a href="#">#vue-cirrus</a>
@@ -43,7 +43,7 @@ export default {
     <v-btn>Save</v-btn>
     <v-btn>Post</v-btn>
   </v-card-buttons>
-</v-simple-card></xmp>`,
+</v-simple-card>`,
     };
   },
 };

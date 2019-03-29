@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -42,10 +42,10 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-next-prev
+      code: `<v-next-prev
   prevText="Prev Text"
   nextText="Next Text"
-/></xmp>`,
+/>`,
       props: {
         onlyNext: ['onlyNext', 'false', 'Boolean', 'Only next is shown'],
         onlyPrev: ['onlyPrev', 'false', 'Boolean', 'Only previous is shown'],

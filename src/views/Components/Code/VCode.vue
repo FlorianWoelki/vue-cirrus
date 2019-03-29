@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -27,7 +27,7 @@ if (myBool) {
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="darkCode"></span>
+          <xmp v-html="darkCode"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -64,17 +64,17 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-code lang="JavaScript">const myBool = true;
+      code: `<v-code lang="JavaScript">const myBool = true;
 if (myBool) {
   console.log("Bool is true!");
-}</v-code></xmp>`,
-      darkCode: `<xmp><v-code
+}</v-code>`,
+      darkCode: `<v-code
   lang="JavaScript"
   dark
 >const myBool = true;
 if (myBool) {
   console.log("Bool is true!");
-}</v-code></xmp>`,
+}</v-code>`,
       props: {
         lang: ['lang', 'empty', 'String', 'Language for this code segment (Supported languages: html, javascript, css)'],
         copyable: ['copyable', 'false', 'Boolean', 'If code segment is copyable'],

@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -76,7 +76,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-row center>
+      code: `<v-row center>
   <v-col c1><v-link ltr>Link</v-link></v-col>
   <v-col c1><v-link rtl>Link</v-link></v-col>
   <v-col c1><v-link c>Link</v-link></v-col>
@@ -90,7 +90,7 @@ export default {
   <v-col c1><v-link orl>Link</v-link></v-col>
   <v-col c1><v-link squared>Link</v-link></v-col>
   <v-col c1><v-link dSquared>Link</v-link></v-col>
-</v-row></xmp>`,
+</v-row>`,
       props: {
         href: ['href', '#', 'String', 'href of the link'],
         ltr: ['ltr', 'false', 'Boolean', 'Left to Right'],

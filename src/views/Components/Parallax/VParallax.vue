@@ -12,7 +12,7 @@
           lang="Vue"
           style="margin-top: 100px;"
         >
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -51,12 +51,12 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-parallax
+      code: `<v-parallax
   src="background.jpg"
   style="height: 500px;"
 >
   <h1>Hello World</h1>
-</v-parallax></xmp>`,
+</v-parallax>`,
       props: {
         splashId: ['splashId', 'splash-id', 'String', 'Id for the splash image'],
         src: ['src', 'empty', 'String', 'href for the image'],

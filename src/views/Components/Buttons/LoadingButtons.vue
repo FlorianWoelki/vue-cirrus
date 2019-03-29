@@ -2,7 +2,7 @@
   <v-row>
     <v-col c6>
       <v-code lang="Vue">
-        <span v-html="code"></span>
+        <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
     <v-col
@@ -31,8 +31,8 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-btn loadingLeft>Loading Left Button</v-btn>
-<v-btn loadingRight>Loading Right Button</v-btn></xmp>`,
+      code: `<v-btn loadingLeft>Loading Left Button</v-btn>
+<v-btn loadingRight>Loading Right Button</v-btn>`,
     };
   },
 };

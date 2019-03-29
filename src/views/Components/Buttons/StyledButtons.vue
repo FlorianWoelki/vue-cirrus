@@ -2,7 +2,7 @@
   <v-row>
     <v-col c6>
       <v-code lang="Vue">
-        <span v-html="code"></span>
+        <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
     <v-col
@@ -59,12 +59,12 @@
 export default {
   data() {
     return {
-      code: `<xmp><v-btn accent>Button</v-btn>
+      code: `<v-btn accent>Button</v-btn>
 <v-btn outlineInverted>Button</v-btn>
 <v-btn transparent>Button</v-btn>
 <v-btn light>Button</v-btn>
 <v-btn dark>Button</v-btn>
-<v-btn black>Button</v-btn></xmp>`,
+<v-btn black>Button</v-btn>`,
     };
   },
 };

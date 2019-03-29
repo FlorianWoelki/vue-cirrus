@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -41,7 +41,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-sidebar>
+      code: `<v-sidebar>
   <v-sidebar-items title="Components" hoverEffect>
     <v-sidebar-item></v-sidebar-item>
     <v-sidebar-item link="html">HTML</v-sidebar-item>
@@ -59,7 +59,7 @@ export default {
   <v-sidebar-content>
     <div class="content">...</div>
   </v-sidebar-content>
-</v-sidebar></xmp>`,
+</v-sidebar>`,
       props: {
         title: ['title', 'empty', 'String', '(SidebarItems/SidebarDropdown) Title for this component'],
         hoverEffect: ['hoverEffect', 'false', 'Boolean', '(SidebarItems) Apply hover effect'],

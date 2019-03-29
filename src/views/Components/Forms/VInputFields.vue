@@ -5,7 +5,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="normalInputFieldCode"></span>
+          <xmp v-html="normalInputFieldCode"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -23,7 +23,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="titleInputFieldCode"></span>
+          <xmp v-html="titleInputFieldCode"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -48,18 +48,18 @@
 export default {
   data() {
     return {
-      normalInputFieldCode: `<xmp><v-input-field
+      normalInputFieldCode: `<v-input-field
   large
   placeholder="Search ..."
-></v-input-field></xmp>`,
-      titleInputFieldCode: `<xmp><v-input-field
+></v-input-field>`,
+      titleInputFieldCode: `<v-input-field
   title="Title"
   subtitle="Subtitle"
   infoText="Information text"
   large
   placeholder="Search ..."
 >
-</v-input-field></xmp>`,
+</v-input-field>`,
     };
   },
 };

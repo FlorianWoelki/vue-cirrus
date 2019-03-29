@@ -5,7 +5,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -24,7 +24,7 @@
 export default {
   data() {
     return {
-      code: '<xmp><v-text-area placeholder="Type your text here ..."></v-text-area></xmp>',
+      code: '<v-text-area placeholder="Type your text here ..."></v-text-area>',
     };
   },
 };

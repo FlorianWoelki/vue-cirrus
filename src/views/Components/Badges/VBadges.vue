@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -43,9 +43,9 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-badge content="3">
+      code: `<v-badge content="3">
   <p>Paragraph Text</p>
-</v-badge></xmp>`,
+</v-badge>`,
       props: {
         content: ['content', 'Empty', 'String', 'Badge Text'],
         left: ['left', 'false', 'Boolean', 'Left positioned badge'],

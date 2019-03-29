@@ -6,7 +6,7 @@
     <v-row>
       <v-col c6>
         <v-code lang="Vue">
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -61,7 +61,7 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-frame>
+      code: `<v-frame>
   <v-frame-header>
     <v-avatar text="FW"></v-avatar>
     <p class="text-center frame-title">Florian Woelki</p>
@@ -82,7 +82,7 @@ export default {
     <v-divider />
     <p>~ Something like a footer</p>
   </v-frame-footer>
-</v-frame></xmp>`,
+</v-frame>`,
       props: {
         height: ['height', 'empty', 'String', 'Height of this frame (e.g. 30px)'],
       },

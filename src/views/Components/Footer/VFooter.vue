@@ -12,7 +12,7 @@
           lang="Vue"
           style="margin-top: 125px;"
         >
-          <span v-html="code"></span>
+          <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
       <v-col
@@ -51,12 +51,12 @@ export default {
 
   data() {
     return {
-      code: `<xmp><v-footer
+      code: `<v-footer
   title="Company"
   subtitle="Awesome company footer"
 >
   <h1>Some awesome footerrish.</h1>
-</v-footer></xmp>`,
+</v-footer>`,
       props: {
         fixed: ['fixed', 'false', 'Boolean', 'If footer is fixed on the bottom'],
         title: ['title', 'empty', 'String', 'Title for the footer'],
