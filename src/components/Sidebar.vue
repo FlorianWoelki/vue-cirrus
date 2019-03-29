@@ -16,16 +16,16 @@
         <v-sidebar-dropdown title="Mixins">
           <v-sidebar-item
             dropdown
+            link="#/components/Animations"
+          >Animations</v-sidebar-item>
+          <v-sidebar-item
+            dropdown
             link="#/components/Layout"
           >Layout</v-sidebar-item>
           <v-sidebar-item
             dropdown
             link="#/components/Tooltips"
           >Tooltips</v-sidebar-item>
-          <v-sidebar-item
-            dropdown
-            link="#/components/Animations"
-          >Animations</v-sidebar-item>
         </v-sidebar-dropdown>
       </v-sidebar-item>
     </v-sidebar-items>
