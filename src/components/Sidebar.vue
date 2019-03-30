@@ -30,13 +30,20 @@
       </v-sidebar-item>
     </v-sidebar-items>
     <v-sidebar-content>
+      <ChangeMode />
       <slot></slot>
     </v-sidebar-content>
   </v-sidebar>
 </template>
 
 <script>
+import ChangeMode from '@/components/ChangeMode.vue';
+
 export default {
+  components: {
+    ChangeMode,
+  },
+
   data() {
     return {
       components: ['Buttons', 'Cards', 'Dropdown', 'Frames', 'Grid',
