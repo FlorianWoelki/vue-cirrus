@@ -176,7 +176,7 @@ code.dark .special-js-glob {
 }
 
 code .special-comment{
-  color: #aaa;
+  color: #63a35c;
 }
 code .special-js-meth {
   color: #E46D8A;
