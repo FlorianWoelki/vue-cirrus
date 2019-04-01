@@ -1,8 +1,10 @@
 <template>
   <div class="date-picker">
     <label v-if=title class="font-normal">{{title}}</label>
+    <span v-if=subtitle class="info">{{subtitle}}</span>
     <input v-if="date === ''" type="date" :value=currentDate>
     <input v-else type="date" :value=date>
+    <span v-if=information class="info text-center">{{information}}</span>
   </div>
 </template>
 
@@ -14,6 +16,14 @@ export default {
       default: '',
     },
     title: {
+      type: String,
+      default: '',
+    },
+    subtitle: {
+      type: String,
+      default: '',
+    },
+    information: {
       type: String,
       default: '',
     },
