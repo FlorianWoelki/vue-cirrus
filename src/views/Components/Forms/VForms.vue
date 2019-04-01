@@ -12,6 +12,9 @@
 
     <v-space xlarge />
 
+    <VDatePickers />
+    <v-space xlarge />
+
     <h6>API (props)</h6>
     <API :data=props />
 
@@ -27,6 +30,7 @@
 import InputFields from './VInputFields.vue';
 import TextAreas from './VTextAreas.vue';
 import VSearchBars from './VSearchBars.vue';
+import VDatePickers from './VDatePickers.vue';
 import API from '@/views/Components/API.vue';
 
 export default {
@@ -35,6 +39,7 @@ export default {
     InputFields,
     TextAreas,
     VSearchBars,
+    VDatePickers,
   },
   data() {
     return {
