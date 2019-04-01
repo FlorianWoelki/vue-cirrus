@@ -51,7 +51,7 @@
   cursor: pointer;
   font-family: 'Arial';
 }</v-code>
-        <v-date-picker></v-date-picker>
+        <v-date-picker title="Awesome title!!"></v-date-picker>
       </v-row>
     </v-container>
   </div>

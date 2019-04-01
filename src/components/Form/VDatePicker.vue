@@ -1,12 +1,19 @@
 <template>
-  <input v-if="date === ''" type="date" :value=currentDate>
-  <input v-else type="date" :value=date>
+  <div class="date-picker">
+    <label v-if=title class="font-normal">{{title}}</label>
+    <input v-if="date === ''" type="date" :value=currentDate>
+    <input v-else type="date" :value=date>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     date: {
+      type: String,
+      default: '',
+    },
+    title: {
       type: String,
       default: '',
     },
