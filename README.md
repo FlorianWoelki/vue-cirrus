@@ -56,7 +56,7 @@ import 'vue-cirrus';
 - [Modals](https://florianwoelki.github.io/vue-cirrus/#/components/Modals)
 - [Navbar](https://florianwoelki.github.io/vue-cirrus/#/components/Navbars)
 - [Pagination](https://florianwoelki.github.io/vue-cirrus/#/components/Pagination)
-- [Forms](https://florianwoelki.github.io/vue-cirrus/#/components/Forms)
+- [Forms(SearchBar, DatePicker, Text)](https://florianwoelki.github.io/vue-cirrus/#/components/Forms)
 - [Placeholder](https://florianwoelki.github.io/vue-cirrus/#/components/Placeholder)
 - [Sidebar](https://florianwoelki.github.io/vue-cirrus/#/components/Sidebars)
 - [Tabs](https://florianwoelki.github.io/vue-cirrus/#/components/Tabs)
