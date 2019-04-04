@@ -8,10 +8,7 @@
     <p>A container will container the child components or views.</p>
     <v-row>
       <v-col c6>
-        <v-code
-          dark
-          lang="Vue"
-        >
+        <v-code lang="Vue">
           <xmp v-html=containerCode></xmp>
         </v-code>
       </v-col>
