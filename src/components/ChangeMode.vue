@@ -19,6 +19,12 @@ export default {
   methods: {
     onChangeModeClick() {
       this.darkMode = !this.darkMode;
+      this.$store.dispatch({
+        type: 'setDarkMode',
+        darkMode: this.darkMode,
+      });
+
+      console.log(this.$store.getters.isDarkMode);
     },
   },
 };
