@@ -28,6 +28,10 @@
           >Tooltips</v-sidebar-item>
         </v-sidebar-dropdown>
       </v-sidebar-item>
+      <v-divider />
+      <v-sidebar-item link="#/components/Util">
+        Util
+      </v-sidebar-item>
     </v-sidebar-items>
     <v-sidebar-content>
       <ChangeMode />
