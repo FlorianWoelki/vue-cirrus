@@ -76,7 +76,7 @@ if (myBool) {
   console.log("Bool is true!");
 }</v-code>`,
       props: {
-        lang: ['lang', 'empty', 'String', 'Language for this code segment (Supported languages: html, javascript, css)'],
+        lang: ['lang', 'empty', 'String', 'Language for this code segment (Supported languages: html, javascript, css, bash, vue)'],
         copyable: ['copyable', 'false', 'Boolean', 'If code segment is copyable'],
         dark: ['dark', 'false', 'Boolean', 'Dark mode for code component'],
       },
