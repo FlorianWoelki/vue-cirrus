@@ -12,7 +12,7 @@
       <h6>Install with NPM</h6>
       <p>You can use npm to install Vue Cirrus</p>
       <v-code
-        lang="Console"
+        lang="Bash"
         copyable
       >npm install --save vue-cirrus</v-code>
     </v-row>
