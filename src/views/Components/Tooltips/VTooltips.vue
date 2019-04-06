@@ -44,10 +44,7 @@
 
     <v-row>
       <span>Code example</span>
-      <v-code
-        lang="Vue"
-        dark
-      >
+      <v-code lang="Vue">
         <xmp v-html=code></xmp>
       </v-code>
     </v-row>
