@@ -20,6 +20,7 @@
         <td>{{prop[3]}}</td>
       </tr>
     </tbody>
+    <p>Mixins included: <a href="#/components/Animations">Click Me</a></p>
   </table>
 </template>
 
