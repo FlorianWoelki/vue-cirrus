@@ -17,7 +17,11 @@
 
         <p>
           Code is licensed with
-          <a class="white" href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>. Everything is <span class="white">free</span> to use!
+          <a
+            class="white"
+            href="https://opensource.org/licenses/MIT"
+            target="_blank"
+          >MIT</a>. Everything is <span class="white">free</span> to use!
         </p>
 
         <p>
