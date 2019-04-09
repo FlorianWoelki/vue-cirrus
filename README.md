@@ -74,6 +74,7 @@ import 'vue-cirrus';
 - [Badges](https://florianwoelki.github.io/vue-cirrus/#/components/Badges)
 - [Fullscreen](https://florianwoelki.github.io/vue-cirrus/#/components/Fullscreen)
 - [Spinners](https://florianwoelki.github.io/vue-cirrus/#/components/Spinners)
+- [Util](https://florianwoelki.github.io/vue-cirrus/#/components/Util)
 
 ## Acknowledgements
 
