@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.9] - 2019-04-03
+
+### 🔨 Added
+- Added bash language - code component
+- Added title, subtitle and information property to date picker
+
+### ⚡️ Changed
+- Updated readme
+- Updated color of comment - code component
+- Updated color of normal text - code component 
+
+
 ## [0.1.86] - 2019-03-28
 
 ### 🔨 Added
