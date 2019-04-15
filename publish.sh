@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm -rf img/ &&
 rm -rf css/ &&
 rm -rf js/ &&
