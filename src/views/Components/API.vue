@@ -9,7 +9,6 @@
       </tr>
     </thead>
     <tbody>
-      <!-- TODO: Add mixins -->
       <tr
         v-for="prop in props"
         :key=prop[0]
