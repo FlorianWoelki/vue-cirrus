@@ -76,6 +76,11 @@ import 'vue-cirrus';
 - [Toasts](https://florianwoelki.github.io/vue-cirrus/#/components/Toasts)
 - [Util](https://florianwoelki.github.io/vue-cirrus/#/components/Util)
 
+## Be a part of vue-cirrus
+If you want to be a part of vue-cirrus, you can make pull requests and add/edit components.
+
+[Here](https://github.com/FlorianWoelki/vue-cirrus/blob/master/PULL_REQUEST_TEMPLATE.md) is the pull request template.
+
 ## Changelog
 
 If you have fun looking at some changelogs then you can go [here](https://github.com/FlorianWoelki/vue-cirrus/blob/master/CHANGELOG.md).
