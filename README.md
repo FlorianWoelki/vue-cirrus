@@ -76,6 +76,10 @@ import 'vue-cirrus';
 - [Toasts](https://florianwoelki.github.io/vue-cirrus/#/components/Toasts)
 - [Util](https://florianwoelki.github.io/vue-cirrus/#/components/Util)
 
+## Changelog
+
+If you have fun looking at some changelogs then you can go [here](https://github.com/FlorianWoelki/vue-cirrus/blob/master/CHANGELOG.md).
+
 ## Acknowledgements
 
 Thank you to the following libraries for making this library possible.
