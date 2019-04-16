@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.91] - 2019-04-16
+
+### 🔨 Added
+- Added mixins for card component
+- Added mixins for date picker
+- Added bottom badge option
+
+### ⚡️ Changed
+- Updated readme
+- Updated colors of code components
+
 ## [0.1.9] - 2019-04-03
 
 ### 🔨 Added
