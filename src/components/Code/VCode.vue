@@ -190,7 +190,7 @@ code.dark .special-html {
 }
 
 code .special-attributes {
-  color: #1D968C;
+  color: rgb(190, 74, 74);
 }
 
 .copy-feedback {
