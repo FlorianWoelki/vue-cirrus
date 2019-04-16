@@ -19,6 +19,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    bottom: {
+      type: Boolean,
+      default: false,
+    },
     color: {
       type: String,
       default: 'gray',
@@ -51,6 +55,10 @@ export default {
         spanChild.classList.add('left');
       } else if (this.right) {
         spanChild.classList.add('right');
+      }
+
+      if (this.bottom) {
+        spanChild.classList.add('bottom');
       }
 
       if (this.accent) {
@@ -105,12 +113,22 @@ export default {
   background: #000;
   color: #fff;
 }
+
 .badge.right[data-badge]:after {
   top: -10px;
   right: -20px;
 }
+
 .badge.left[data-badge]:after {
   top: -10px;
   left: -20px;
+}
+.badge.left.bottom[data-badge]:after {
+  top: 10px;
+  left: -20px;
+}
+.badge.right.bottom[data-badge]:after {
+  top: 10px;
+  right: -20px;
 }
 </style>

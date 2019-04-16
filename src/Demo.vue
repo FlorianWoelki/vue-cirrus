@@ -6,6 +6,9 @@
 
     <v-container>
       <v-row>
+        <v-badge right bottom content="3">
+          <span>Paragraph Text</span>
+        </v-badge>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Ea delectus ullam aut? Veritatis cum earum eaque atque quam inventore,
           praesentium accusamus quibusdam laborum veniam odio, amet unde. Quod,
