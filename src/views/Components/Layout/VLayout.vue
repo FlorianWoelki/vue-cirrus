@@ -3,7 +3,7 @@
     <p>This mixin can almost applied to any Vue Cirrus component!</p>
 
     <h6>API (props)</h6>
-    <API :data=props />
+    <API :data=props hideMixins=true />
   </section>
 </template>
 

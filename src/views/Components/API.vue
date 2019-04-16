@@ -19,13 +19,13 @@
         <td>{{prop[3]}}</td>
       </tr>
     </tbody>
-    <p>Mixins included: <a href="#/components/Animations">Click Me</a></p>
+    <p v-if=!hideMixins>Mixins included: <a href="#/components/Animations">Click Me</a></p>
   </table>
 </template>
 
 <script>
 export default {
-  props: ['data'],
+  props: ['data', 'hideMixins'],
   data() {
     return {
       headers: ['Name', 'Default', 'Type', 'Description'],
