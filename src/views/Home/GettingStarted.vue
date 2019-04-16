@@ -47,8 +47,8 @@
       >import 'vue-cirrus/dist/vue-cirrus.css';
 import 'vue-cirrus';</v-code>
       <p>
-        That's it. I recommend that you look up some examples in the documentation. If you feel comfortable, you can start
-        exploring the world of Vue Cirrus. :P
+        That's it. I recommend that you look up some examples in the documentation.
+        If you feel comfortable, you can start exploring the world of Vue Cirrus. :P
       </p>
     </v-row>
   </section>
