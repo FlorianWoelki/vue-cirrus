@@ -1,5 +1,8 @@
 <template>
-  <div class="date-picker">
+  <div
+    :class=datePickerClasses
+    :data-tooltip=tooltipData
+  >
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if=subtitle class="info">{{subtitle}}</span>
     <input v-if="date === ''" type="date" :value=currentDate>
@@ -9,7 +12,17 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+    Tooltip,
+  ],
+
   props: {
     date: {
       type: String,
@@ -30,6 +43,16 @@ export default {
   },
 
   computed: {
+    datePickerClasses() {
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        this.tooltipMixins,
+        {
+          'date-picker': true,
+        },
+      );
+    },
     currentDate() {
       const today = new Date();
       let dd = today.getDate();
