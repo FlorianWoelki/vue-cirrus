@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!animated" class="card">
+  <div v-if="!animated" :class=cardClasses>
     <div class="card-container">
       <div
         class="card-image"
@@ -44,7 +44,15 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
   props: {
     animated: {
       type: Boolean,
@@ -65,6 +73,18 @@ export default {
     image: {
       type: String,
       default: 'background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);',
+    },
+  },
+
+  computed: {
+    cardClasses() {
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          card: true,
+        },
+      );
     },
   },
 };
