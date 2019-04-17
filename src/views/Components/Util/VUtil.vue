@@ -1,6 +1,6 @@
 <template>
   <section class="util-component">
-    <p>This view will reveal, what utils Vue-Cirrus has.</p>
+    <p>This view will reveal, what utils Vue Cirrus has.</p>
 
     <v-space xlarge />
 

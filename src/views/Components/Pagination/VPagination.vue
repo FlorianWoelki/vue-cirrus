@@ -1,7 +1,7 @@
 <template>
   <section class="pagination-component">
     <h5>Pagination</h5>
-    <p>There is an easy pagination component in Vue-Cirrus.</p>
+    <p>There is an easy pagination component in Vue Cirrus.</p>
 
     <v-row>
       <v-col c6>

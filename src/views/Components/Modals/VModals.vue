@@ -1,7 +1,7 @@
 <template>
   <section class="modals-component">
     <h5>Modals</h5>
-    <p>It is so easy to create modals with Vue-Cirrus</p>
+    <p>It is so easy to create modals with VueCirrus</p>
 
     <v-row>
       <v-col c6>

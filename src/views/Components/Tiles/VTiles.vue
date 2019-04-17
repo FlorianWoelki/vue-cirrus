@@ -1,7 +1,7 @@
 <template>
   <section class="tiles-component">
     <h5>Tiles</h5>
-    <p>Create simple tiles with Vue-Cirrus.</p>
+    <p>Create simple tiles with Vue Cirrus.</p>
 
     <v-row>
       <v-col c6>
