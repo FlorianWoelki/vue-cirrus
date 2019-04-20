@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar>
+  <v-sidebar :class="isDarkMode ? 'dark' : ''">
     <v-sidebar-items
       title="Components"
       hoverEffect
@@ -62,6 +62,26 @@ export default {
     sortedComponentList() {
       return this.components.slice().sort();
     },
+    isDarkMode() {
+      return this.$store.getters.isDarkMode.darkMode;
+    },
   },
 };
 </script>
+
+<style lang="scss">
+.tree-nav-body.dark {
+  color: #fafafa;
+  background: #373737;
+}
+.tree-nav-body.dark #sidebar {
+  background: #303030 !important;
+
+  .sidebar-link {
+    color: #fafafa;
+  }
+  .sidebar-link:hover {
+    color: black;
+  }
+}
+</style>
