@@ -17,7 +17,7 @@
           <v-col
             c6
             v-for="(p, index) in positions"
-            :key=p
+            :key="p"
           >
             <input
               type="radio"
@@ -51,12 +51,12 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API :data=props />
+    <API :data="props" />
 
     <v-space
       xlarge
       v-for="i in 2"
-      :key=i
+      :key="i"
     />
   </section>
 </template>
