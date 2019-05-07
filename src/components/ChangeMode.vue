@@ -32,7 +32,7 @@ export default {
 #change-mode {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 25px;
   z-index: 1000;
 }
 </style>
