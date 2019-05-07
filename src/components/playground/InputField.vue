@@ -1,7 +1,7 @@
 <template>
   <section class="input-field">
     <v-text-area></v-text-area>
-    <v-btn :onClick=onPlayClick>Play!</v-btn>
+    <v-btn :onClick="onPlayClick">Play!</v-btn>
   </section>
 </template>
 

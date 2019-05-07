@@ -52,7 +52,7 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API :data=props hideMixins=true />
+    <API :data="props" hideMixins=true />
   </section>
 </template>
 

@@ -5,7 +5,10 @@
 
     <v-row>
       <v-col c6>
-        <v-code lang="Vue">
+        <v-code
+          lang="Vue"
+          :dark="isDarkMode"
+        >
           <xmp v-html="code"></xmp>
         </v-code>
       </v-col>
@@ -21,12 +24,12 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API :data=props />
+    <API :data="props" />
 
     <v-space
       xlarge
       v-for="i in 2"
-      :key=i
+      :key="i"
     />
   </section>
 </template>
@@ -52,6 +55,12 @@ export default {
         xlarge: ['xlarge', 'false', 'Boolean', 'Avatar xlarge size'],
       },
     };
+  },
+
+  computed: {
+    isDarkMode() {
+      return this.$store.getters.isDarkMode.darkMode;
+    },
   },
 };
 </script>

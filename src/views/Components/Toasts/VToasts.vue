@@ -26,7 +26,7 @@
     <v-space
       xlarge
       v-for="i in 2"
-      :key=i
+      :key="i"
     />
   </section>
 </template>

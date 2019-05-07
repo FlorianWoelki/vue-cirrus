@@ -23,8 +23,6 @@ export default {
         type: 'setDarkMode',
         darkMode: this.darkMode,
       });
-
-      console.log(this.$store.getters.isDarkMode);
     },
   },
 };

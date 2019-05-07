@@ -25,9 +25,9 @@
     <v-space xlarge />
 
     <h6>API (props)</h6>
-    <API :data=props />
+    <API :data="props" />
 
-    <v-space xlarge v-for="i in 2" :key=i />
+    <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
 

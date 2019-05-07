@@ -14,6 +14,7 @@
       <v-code
         lang="Bash"
         copyable
+        :dark="isDarkMode"
       >npm install --save vue-cirrus</v-code>
     </v-row>
     <v-row>
@@ -25,6 +26,7 @@
       <v-code
         lang="HTML"
         copyable
+        :dark="isDarkMode"
       >
         <link
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
@@ -44,6 +46,7 @@
       <v-code
         lang="JavaScript"
         copyable
+        :dark="isDarkMode"
       >import 'vue-cirrus/dist/vue-cirrus.css';
 import 'vue-cirrus';</v-code>
       <p>
@@ -53,3 +56,13 @@ import 'vue-cirrus';</v-code>
     </v-row>
   </section>
 </template>
+
+<script>
+export default {
+  computed: {
+    isDarkMode() {
+      return this.$store.getters.isDarkMode.darkMode;
+    },
+  },
+};
+</script>
