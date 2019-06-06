@@ -9,7 +9,7 @@
   <div v-else-if=!select :data-tooltip=tooltipData class="input-control">
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
-    <input :type=type :class=inputClasses :placeholder=placeholder />
+    <input :type=type :class=inputClasses :placeholder=placeholder :value=value />
     <span v-if=infoText class="info text-center">{{infoText}}</span>
   </div>
   <div v-else class="input-control">
@@ -45,6 +45,10 @@ export default {
       default: 'text',
     },
     placeholder: {
+      type: String,
+      default: '',
+    },
+    value: {
       type: String,
       default: '',
     },

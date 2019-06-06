@@ -13,6 +13,8 @@
     </v-navbar>
 
     <v-container>
+      <v-input-field value="test" placeholder="test2"></v-input-field>
+
       <p class="center">centered text</p>
       <v-row>
         <v-badge right bottom content="3">
