@@ -1,10 +1,19 @@
 <template>
   <div class="demo">
     <v-navbar
-      title="Hello"
-    />
+      dark
+    >
+      <div class="nav-center">
+        <v-navbar-item>hello</v-navbar-item>
+        <v-navbar-item>world</v-navbar-item>
+        <v-navbar-item>without</v-navbar-item>
+        <v-navbar-item>knowing</v-navbar-item>
+        <v-navbar-item>it</v-navbar-item>
+      </div>
+    </v-navbar>
 
     <v-container>
+      <p class="center">centered text</p>
       <v-row>
         <v-badge right bottom content="3">
           <span>Paragraph Text</span>

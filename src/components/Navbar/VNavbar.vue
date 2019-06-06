@@ -1,7 +1,7 @@
 <template>
   <div :class=classes>
     <div class="header-brand">
-      <div class="nav-item no-hover">
+      <div v-if="title != ''" class="nav-item no-hover">
         <a :href=brandLink>
           <h6 class="title">{{title}}</h6>
         </a>
