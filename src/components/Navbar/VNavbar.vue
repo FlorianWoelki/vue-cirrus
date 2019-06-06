@@ -1,9 +1,9 @@
 <template>
   <div :class=classes>
     <div class="header-brand">
-      <div v-if="title != ''" class="nav-item no-hover">
+      <div v-if="brandTitle != ''" class="nav-item no-hover">
         <a :href=brandLink>
-          <h6 class="title">{{title}}</h6>
+          <h6 class="title">{{brandTitle}}</h6>
         </a>
       </div>
       <div
@@ -28,7 +28,7 @@
 <script>
 export default {
   props: {
-    title: {
+    brandTitle: {
       type: String,
       default: '',
     },
