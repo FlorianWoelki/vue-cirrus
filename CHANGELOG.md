@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.92] - 2019-06-07
+
+### 🔨 Added
+- Added value property for input field
+
+### ⚡️ Changed
+- Fixed security issues
+- Fixed navbar centering items, if there is no title
+- Renamed title to brandTitle
+
+
 ## [0.1.91] - 2019-04-16
 
 ### 🔨 Added
