@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       code: `<v-navbar
-  title="Logo"
+  brandTitle="Logo"
   fixed
 >
   <div class="nav-left">
@@ -74,7 +74,7 @@ export default {
   </div>
 </v-navbar>`,
       props: {
-        title: ['title', 'empty', 'String', '(Navbar) Title of navbar'],
+        brandTitle: ['brandTitle', 'empty', 'String', '(Navbar) Title of navbar'],
         brandLink: ['brandLink', '!#', 'String', '(Navbar) Link for the brand name'],
         fixed: ['fixed', 'false', 'Boolean', '(Navbar) If the navbar is fixed on top'],
         dark: ['dark', 'false', 'Boolean', '(Navbar) If the navbar has the dark style'],

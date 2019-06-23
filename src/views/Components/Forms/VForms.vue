@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       props: {
+        value: ['value', 'empty', 'String', '(InputField) Value for the input field'],
         noControl: ['noControl', 'false', 'Boolean', '(InputField) NoControl for this input field'],
         select: ['select', 'false', 'Boolean', '(InputField) Selectable input field'],
         type: ['type', 'text', 'String', '(InputField) Type of the input field'],

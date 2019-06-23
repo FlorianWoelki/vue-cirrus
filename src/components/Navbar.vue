@@ -2,7 +2,7 @@
   <v-navbar
     dark
     :fixed=fixed
-    title="Vue Cirrus"
+    brandTitle="Vue Cirrus"
   >
     <div class="nav-left">
       <v-navbar-item link="https://github.com/FlorianWoelki/vue-cirrus">
