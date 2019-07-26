@@ -5,11 +5,18 @@
     :type=type
     :class=inputClasses
     :placeholder=placeholder
+    @input=handleInput($event)
   />
   <div v-else-if=!select :data-tooltip=tooltipData class="input-control">
     <label v-if=title class="font-normal">{{title}}</label>
     <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
-    <input :type=type :class=inputClasses :placeholder=placeholder :value=value />
+    <input
+      :type=type
+      :class=inputClasses
+      :placeholder=placeholder
+      :value=value
+      @input=handleInput($event)
+    />
     <span v-if=infoText class="info text-center">{{infoText}}</span>
   </div>
   <div v-else class="input-control">
@@ -95,6 +102,12 @@ export default {
     xlarge: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleInput(event) {
+      this.$emit('input', event);
     },
   },
 

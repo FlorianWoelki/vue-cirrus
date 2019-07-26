@@ -13,7 +13,7 @@
     </v-navbar>
 
     <v-container>
-      <v-input-field value="test" placeholder="test2"></v-input-field>
+      <v-input-field placeholder="test2" @input="test($event)"></v-input-field>
 
       <p class="center">centered text</p>
       <v-row>
@@ -91,6 +91,9 @@ export default {
   methods: {
     click() {
       console.log('Searching...', this.searchingWord);
+    },
+    test(event) {
+      console.log(event);
     },
   },
 };
