@@ -1,5 +1,8 @@
 <template>
-  <div id="spinner" class="loader-wrapper">
+  <div
+    id="spinner"
+    class="loader-wrapper"
+  >
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
 </template>

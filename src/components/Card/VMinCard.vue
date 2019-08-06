@@ -2,8 +2,15 @@
   <div class="card">
     <div class="content">
       <div class="row">
-        <img :src=imgSrc class="level" :id=imgId />
-        <p :id=projectName class="title level">{{title}}</p>
+        <img
+          :src=imgSrc
+          class="level"
+          :id=imgId
+        />
+        <p
+          :id=projectName
+          class="title level"
+        >{{title}}</p>
         <slot></slot>
       </div>
     </div>

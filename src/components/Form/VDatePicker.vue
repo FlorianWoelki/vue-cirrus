@@ -3,11 +3,28 @@
     :class=datePickerClasses
     :data-tooltip=tooltipData
   >
-    <label v-if=title class="font-normal">{{title}}</label>
-    <span v-if=subtitle class="info">{{subtitle}}</span>
-    <input v-if="date === ''" type="date" :value=currentDate>
-    <input v-else type="date" :value=date>
-    <span v-if=information class="info text-center">{{information}}</span>
+    <label
+      v-if=title
+      class="font-normal"
+    >{{title}}</label>
+    <span
+      v-if=subtitle
+      class="info"
+    >{{subtitle}}</span>
+    <input
+      v-if="date === ''"
+      type="date"
+      :value=currentDate
+    >
+    <input
+      v-else
+      type="date"
+      :value=date
+    >
+    <span
+      v-if=information
+      class="info text-center"
+    >{{information}}</span>
   </div>
 </template>
 

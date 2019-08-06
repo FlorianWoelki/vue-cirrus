@@ -1,6 +1,10 @@
 <template>
   <span>
-    <div id="sidebar" class="tree-nav" style="background: #f7f7f7;">
+    <div
+      id="sidebar"
+      class="tree-nav"
+      style="background: #f7f7f7;"
+    >
       <div class="content">
         <h6>{{title}}</h6>
       </div>
@@ -10,7 +14,11 @@
         </div>
       </div>
     </div>
-    <a href="#sidebar-close" id="sidebar-close" class="tree-nav-close"></a>
+    <a
+      href="#sidebar-close"
+      id="sidebar-close"
+      class="tree-nav-close"
+    ></a>
   </span>
 </template>
 

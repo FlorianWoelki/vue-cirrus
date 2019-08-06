@@ -1,7 +1,10 @@
 <template>
   <div :class=classes>
     <div class="tree-nav-header">
-      <a href="#sidebar" class="hide-desktop">
+      <a
+        href="#sidebar"
+        class="hide-desktop"
+      >
         <span class="icon">
           <p>Sidebar</p>
         </span>

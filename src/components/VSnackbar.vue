@@ -1,5 +1,8 @@
 <template>
-  <div id="snackbar" :class=classes>
+  <div
+    id="snackbar"
+    :class=classes
+  >
     <slot></slot>
   </div>
 </template>

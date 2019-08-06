@@ -1,9 +1,23 @@
 <template>
-  <div :class=modalClasses :id=mId>
-    <a :href=closeTarget class="modal-overlay close-btn" aria-label="Close"></a>
-    <div class="modal-content" role="document">
+  <div
+    :class=modalClasses
+    :id=mId
+  >
+    <a
+      :href=closeTarget
+      class="modal-overlay close-btn"
+      aria-label="Close"
+    ></a>
+    <div
+      class="modal-content"
+      role="document"
+    >
       <div class="modal-header">
-        <a :href=closeTarget class="pull-right" aria-label="Close">X</a>
+        <a
+          :href=closeTarget
+          class="pull-right"
+          aria-label="Close"
+        >X</a>
         <div class="modal-title">{{title}}</div>
       </div>
       <slot></slot>

@@ -7,9 +7,19 @@
     :placeholder=placeholder
     @input=handleInput($event)
   />
-  <div v-else-if=!select :data-tooltip=tooltipData class="input-control">
-    <label v-if=title class="font-normal">{{title}}</label>
-    <span v-if="subtitle" :class=infoClasses>{{subtitle}}</span>
+  <div
+    v-else-if=!select
+    :data-tooltip=tooltipData
+    class="input-control"
+  >
+    <label
+      v-if=title
+      class="font-normal"
+    >{{title}}</label>
+    <span
+      v-if="subtitle"
+      :class=infoClasses
+    >{{subtitle}}</span>
     <input
       :type=type
       :class=inputClasses
@@ -17,10 +27,19 @@
       :value=value
       @input=handleInput($event)
     />
-    <span v-if=infoText class="info text-center">{{infoText}}</span>
+    <span
+      v-if=infoText
+      class="info text-center"
+    >{{infoText}}</span>
   </div>
-  <div v-else class="input-control">
-    <select :class=inputClasses :data-tooltip=tooltipData>
+  <div
+    v-else
+    class="input-control"
+  >
+    <select
+      :class=inputClasses
+      :data-tooltip=tooltipData
+    >
       <slot></slot>
     </select>
   </div>

@@ -1,5 +1,8 @@
 <template>
-  <div :class=classes :data-tooltip=tooltipData>
+  <div
+    :class=classes
+    :data-tooltip=tooltipData
+  >
     <a :href=link>
       <slot></slot>
     </a>

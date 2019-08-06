@@ -1,5 +1,9 @@
 <template>
-  <li :class=classes role="menu-item" :data-tooltip=tooltipData>
+  <li
+    :class=classes
+    role="menu-item"
+    :data-tooltip=tooltipData
+  >
     <a :href=link>
       <slot></slot>
     </a>

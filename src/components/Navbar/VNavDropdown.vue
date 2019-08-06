@@ -1,9 +1,17 @@
 <template>
-  <div :class=dropdownClasses :id=dropdownId @click="handleDropdownClick">
+  <div
+    :class=dropdownClasses
+    :id=dropdownId
+    @click="handleDropdownClick"
+  >
     <a class="nav-dropdown-link">
       <slot name="title"></slot>
     </a>
-    <ul :class=ulClasses :id="dropdownId + '-list'" role="menu">
+    <ul
+      :class=ulClasses
+      :id="dropdownId + '-list'"
+      role="menu"
+    >
       <slot></slot>
     </ul>
   </div>

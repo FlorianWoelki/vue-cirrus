@@ -1,8 +1,14 @@
 <template>
   <footer :class=classes>
-    <h6 v-if="title != ''" class="white uppercase">{{title}}</h6>
+    <h6
+      v-if="title != ''"
+      class="white uppercase"
+    >{{title}}</h6>
     <slot></slot>
-    <p v-if="subtitle != ''" class="subtitle">{{subtitle}}</p>
+    <p
+      v-if="subtitle != ''"
+      class="subtitle"
+    >{{subtitle}}</p>
   </footer>
 </template>
 

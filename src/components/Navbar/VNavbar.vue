@@ -1,7 +1,10 @@
 <template>
   <div :class=classes>
     <div class="header-brand">
-      <div v-if="brandTitle != ''" class="nav-item no-hover">
+      <div
+        v-if="brandTitle != ''"
+        class="nav-item no-hover"
+      >
         <a :href=brandLink>
           <h6 class="title">{{brandTitle}}</h6>
         </a>

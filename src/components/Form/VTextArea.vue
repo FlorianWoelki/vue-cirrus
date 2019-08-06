@@ -1,5 +1,8 @@
 <template>
-  <textarea :placeholder=placeholder :data-tooltip=tooltipData></textarea>
+  <textarea
+    :placeholder=placeholder
+    :data-tooltip=tooltipData
+  ></textarea>
 </template>
 
 <script>

@@ -1,6 +1,12 @@
 <template>
-  <figure :class=avatarClasses :data-text=text>
-    <img :src=src :class=imgClasses />
+  <figure
+    :class=avatarClasses
+    :data-text=text
+  >
+    <img
+      :src=src
+      :class=imgClasses
+    />
   </figure>
 </template>
 

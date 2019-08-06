@@ -1,5 +1,8 @@
 <template>
-  <div :id=splashId class="hero fullscreen hero-img parallax-img">
+  <div
+    :id=splashId
+    class="hero fullscreen hero-img parallax-img"
+  >
     <div class="hero-body">
       <slot></slot>
     </div>

@@ -1,7 +1,13 @@
 <template>
-  <div :class=classes :data-tooltip=tooltipData>
+  <div
+    :class=classes
+    :data-tooltip=tooltipData
+  >
     <slot></slot>
-    <button v-if="closable" class="btn-close"></button>
+    <button
+      v-if="closable"
+      class="btn-close"
+    ></button>
   </div>
 </template>
 

@@ -1,7 +1,16 @@
 <template>
-  <div v-if="!dropdown" :class=classes>
-    <a class="sidebar-link" :href=link>
-      <label :for=forId class="tree-item-header">
+  <div
+    v-if="!dropdown"
+    :class=classes
+  >
+    <a
+      class="sidebar-link"
+      :href=link
+    >
+      <label
+        :for=forId
+        class="tree-item-header"
+      >
         <slot></slot>
       </label>
     </a>

@@ -1,15 +1,32 @@
 <template>
-  <span v-if="squared" class="usquare">
-    <a :href=href :class=classes :data-tooltip=tooltipData>
+  <span
+    v-if="squared"
+    class="usquare"
+  >
+    <a
+      :href=href
+      :class=classes
+      :data-tooltip=tooltipData
+    >
       <slot></slot>
     </a>
   </span>
-  <span v-else-if="dSquared" class="usquare delay">
-    <a :href=href :class=classes>
+  <span
+    v-else-if="dSquared"
+    class="usquare delay"
+  >
+    <a
+      :href=href
+      :class=classes
+    >
       <slot></slot>
     </a>
   </span>
-  <a v-else :href=href :class=classes>
+  <a
+    v-else
+    :href=href
+    :class=classes
+  >
     <slot></slot>
   </a>
 </template>

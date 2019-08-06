@@ -1,7 +1,15 @@
 <template>
   <div class="sidebar-dropdown">
-    <input type="checkbox" id="mixins" class="hide" name="mixinsTree">
-    <label for="mixins" class="tree-item-header">
+    <input
+      type="checkbox"
+      id="mixins"
+      class="hide"
+      name="mixinsTree"
+    >
+    <label
+      for="mixins"
+      class="tree-item-header"
+    >
       {{title}}
     </label>
     <div class="tree-item-body">

@@ -1,6 +1,10 @@
 <template>
   <div :class=classes>
-    <a :disabled=disabled :href=link class="btn-link">
+    <a
+      :disabled=disabled
+      :href=link
+      class="btn-link"
+    >
       <slot></slot>
     </a>
   </div>

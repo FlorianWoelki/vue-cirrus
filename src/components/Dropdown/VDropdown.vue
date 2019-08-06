@@ -1,5 +1,8 @@
 <template>
-  <div :class=dropdownClasses :data-tooltip=tooltipData>
+  <div
+    :class=dropdownClasses
+    :data-tooltip=tooltipData
+  >
     <slot name="dropdownBtn"></slot>
     <ul class="menu">
       <slot></slot>

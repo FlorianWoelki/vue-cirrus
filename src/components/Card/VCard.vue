@@ -1,5 +1,8 @@
 <template>
-  <div v-if="!animated" :class=cardClasses>
+  <div
+    v-if="!animated"
+    :class=cardClasses
+  >
     <div class="card-container">
       <div
         class="card-image"
@@ -20,9 +23,15 @@
       </div>
     </div>
   </div>
-  <div v-else class="card slide-up">
+  <div
+    v-else
+    class="card slide-up"
+  >
     <div class="card-container">
-      <div class="card-image" :style=image></div>
+      <div
+        class="card-image"
+        :style=image
+      ></div>
     </div>
     <div class="mobile-title">
       <div class="content">
