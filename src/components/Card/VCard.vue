@@ -3,7 +3,10 @@
     v-if="!animated"
     :class=cardClasses
   >
-    <div class="card-container">
+    <div
+      :id="title + subtitle"
+      class="card-container"
+    >
       <div
         class="card-image"
         :style=image
@@ -27,7 +30,10 @@
     v-else
     class="card slide-up"
   >
-    <div class="card-container">
+    <div
+      :id="title + subtitle"
+      class="card-container"
+    >
       <div
         class="card-image"
         :style=image
@@ -83,6 +89,10 @@ export default {
       type: String,
       default: 'background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);',
     },
+    height: {
+      type: String,
+      default: '332',
+    },
   },
 
   computed: {
@@ -95,6 +105,10 @@ export default {
         },
       );
     },
+  },
+
+  mounted() {
+    document.getElementById(this.title + this.subtitle).style.minHeight = `${this.height}px`;
   },
 };
 </script>
