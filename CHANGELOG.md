@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.93] - 2019-08-08
+
+### 🔨 Added
+- Added input event for input fields
+- Added height property for card
+- Added level property for row
+
+### ⚡️ Changed
+- Formatted code
+- Updated readme
+
+
 ## [0.1.92] - 2019-06-07
 
 ### 🔨 Added
