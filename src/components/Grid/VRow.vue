@@ -21,6 +21,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    level: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -31,9 +35,18 @@ export default {
           row: true,
           'fluid-container': this.fluid,
           wrap: this.wrap,
+          level: this.level,
         },
       );
     },
   },
 };
 </script>
+
+<style>
+.level {
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+</style>

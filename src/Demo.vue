@@ -13,7 +13,7 @@
     </v-navbar>
 
     <v-container>
-      <v-row>
+      <v-row level>
         <v-col c6>
           <v-card
             animated
@@ -28,6 +28,9 @@
               </p>
             </v-card-content>
           </v-card>
+        </v-col>
+        <v-col c6>
+          <h5>test</h5>
         </v-col>
       </v-row>
     </v-container>
