@@ -51,6 +51,7 @@ export default {
 </v-row>`,
       props: {
         fluid: ['fluid', 'false', 'Boolean', '(Row) Fluid container'],
+        level: ['level', 'false', 'Boolean', '(Row) Center everything in one row'],
         wrap: ['wrap', 'false', 'Boolean', '(Row) Wrap container'],
         c1c12: ['c1-c12', 'false', 'Boolean', '(Col) Columns from c1 to c12'],
         o1o12: ['o1-o12', 'false', 'Boolean', '(Col) Columns offset from o1 to o12'],

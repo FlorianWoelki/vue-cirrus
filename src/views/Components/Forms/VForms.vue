@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       props: {
+        input: ['@input', 'no event', 'Event', '(InputField) @input is a event, for checking if something is typed in the input field'],
         value: ['value', 'empty', 'String', '(InputField) Value for the input field'],
         noControl: ['noControl', 'false', 'Boolean', '(InputField) NoControl for this input field'],
         select: ['select', 'false', 'Boolean', '(InputField) Selectable input field'],

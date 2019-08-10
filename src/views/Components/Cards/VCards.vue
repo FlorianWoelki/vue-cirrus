@@ -44,6 +44,7 @@ export default {
     return {
       props: {
         title: ['title', 'empty', 'String', '(All cards) Title of card'],
+        height: ['height', '332px', 'String', '(All cards) Specify height for the image in card'],
         imgSrc: ['imgSrc', 'empty', 'String', '(MinCard) Image source'],
         imgId: ['imgId', 'projectLogo', 'String', '(MinCard) Image Id'],
         projectName: ['projectName', 'projectname', 'String', '(MinCard) Project name'],
