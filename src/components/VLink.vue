@@ -6,6 +6,7 @@
     <a
       :href=href
       :class=classes
+      :target="blank ? '_blank' : ''"
       :data-tooltip=tooltipData
     >
       <slot></slot>
@@ -17,7 +18,9 @@
   >
     <a
       :href=href
+      :target="blank ? '_blank' : ''"
       :class=classes
+      :data-tooltip=tooltipData
     >
       <slot></slot>
     </a>
@@ -25,7 +28,9 @@
   <a
     v-else
     :href=href
+    :target="blank ? '_blank' : ''"
     :class=classes
+    :data-tooltip=tooltipData
   >
     <slot></slot>
   </a>
@@ -47,6 +52,10 @@ export default {
     href: {
       type: String,
       default: '#',
+    },
+    blank: {
+      type: Boolean,
+      default: false,
     },
     ltr: {
       type: Boolean,
