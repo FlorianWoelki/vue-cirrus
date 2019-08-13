@@ -1,11 +1,25 @@
 <template>
   <button
+    v-if="href === ''"
     :class=classes
     :data-tooltip=tooltipData
     @click="onClick"
   >
     <slot></slot>
   </button>
+  <a
+    v-else
+    :href="href"
+    :target="blank ? '_blank' : ''"
+  >
+    <button
+      :class=classes
+      :data-tooltip=tooltipData
+      @click="onClick"
+    >
+      <slot></slot>
+    </button>
+  </a>
 </template>
 
 <script>
@@ -24,6 +38,14 @@ export default {
     onClick: {
       type: Function,
       default: () => 1,
+    },
+    href: {
+      type: String,
+      default: '',
+    },
+    blank: {
+      type: Boolean,
+      default: false,
     },
     animated: {
       type: Boolean,

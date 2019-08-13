@@ -13,7 +13,7 @@
     </v-navbar>
 
     <v-container center>
-      <v-btn>test</v-btn>
+      <v-btn href="https://google.com" blank>test</v-btn>
     </v-container>
   </div>
 </template>
