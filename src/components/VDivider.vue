@@ -3,7 +3,15 @@
 </template>
 
 <script>
+import Layout from '@/mixins/layout';
+import Animations from '@/mixins/animations';
+
 export default {
+  mixins: [
+    Layout,
+    Animations,
+  ],
+
   props: {
     short: {
       type: Boolean,
@@ -13,10 +21,14 @@ export default {
 
   computed: {
     classes() {
-      return {
-        divider: true,
-        'divider-short': this.short,
-      };
+      return Object.assign(
+        this.layoutMixins,
+        this.animationsMixins,
+        {
+          divider: true,
+          'divider-short': this.short,
+        },
+      );
     },
   },
 };
