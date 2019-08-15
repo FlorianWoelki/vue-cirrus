@@ -12,11 +12,12 @@
       </div>
     </v-navbar>
 
-    <v-container center>
-      <v-btn href="https://google.com" blank>test</v-btn>
-      <v-link c @click="test">Hello World</v-link>
-    </v-container>
-    <v-divider center short />
+    <v-row fluid>
+      <v-col fluid>test</v-col>
+      <v-col fluid>test</v-col>
+      <v-col fluid>test</v-col>
+      <v-col fluid>test</v-col>
+    </v-row>
   </div>
 </template>
 
