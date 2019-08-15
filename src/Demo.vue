@@ -14,8 +14,18 @@
 
     <v-container center>
       <v-btn href="https://google.com" blank>test</v-btn>
-      <v-link c blank href="https://google.com">Hello World</v-link>
+      <v-link c @click="test">Hello World</v-link>
     </v-container>
     <v-divider center short />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    test() {
+      console.log(1);
+    },
+  },
+};
+</script>

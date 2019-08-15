@@ -8,6 +8,7 @@
       :class=classes
       :target="blank ? '_blank' : ''"
       :data-tooltip=tooltipData
+      @click="handleClick($event)"
     >
       <slot></slot>
     </a>
@@ -21,6 +22,7 @@
       :target="blank ? '_blank' : ''"
       :class=classes
       :data-tooltip=tooltipData
+      @click="handleClick($event)"
     >
       <slot></slot>
     </a>
@@ -31,6 +33,7 @@
     :target="blank ? '_blank' : ''"
     :class=classes
     :data-tooltip=tooltipData
+    @click="handleClick($event)"
   >
     <slot></slot>
   </a>
@@ -100,6 +103,12 @@ export default {
     underlined: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
