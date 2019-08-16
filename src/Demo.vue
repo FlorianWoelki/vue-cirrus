@@ -4,7 +4,7 @@
       dark
     >
       <div class="nav-center">
-        <v-navbar-item>hello</v-navbar-item>
+        <v-navbar-item href="#" @click="console.log(1)">hello</v-navbar-item>
         <v-navbar-item>world</v-navbar-item>
         <v-navbar-item>without</v-navbar-item>
         <v-navbar-item>knowing</v-navbar-item>

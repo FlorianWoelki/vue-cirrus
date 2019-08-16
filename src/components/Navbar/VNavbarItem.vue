@@ -3,7 +3,7 @@
     :class=classes
     :data-tooltip=tooltipData
   >
-    <a :href=link>
+    <a :href=href>
       <slot></slot>
     </a>
   </div>
@@ -26,7 +26,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    link: {
+    href: {
       type: String,
       default: '',
     },
