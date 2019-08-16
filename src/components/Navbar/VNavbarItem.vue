@@ -3,7 +3,10 @@
     :class=classes
     :data-tooltip=tooltipData
   >
-    <a :href=href>
+    <a
+      :href=href
+      @click="handleClick($event)"
+    >
       <slot></slot>
     </a>
   </div>
@@ -29,6 +32,12 @@ export default {
     href: {
       type: String,
       default: '',
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
