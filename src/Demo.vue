@@ -12,11 +12,24 @@
       </div>
     </v-navbar>
 
-    <v-row fluid>
-      <v-col fluid>test</v-col>
-      <v-col fluid>test</v-col>
-      <v-col fluid>test</v-col>
-      <v-col fluid>test</v-col>
+    <v-row center>
+      <v-image-card
+        title="Card Title"
+        subtitle="by Elton John"
+        imageUrl="https://placeimg.com/640/480/nature"
+      >
+        <v-card-content>
+          <p>This is some basic simple card text</p>
+          <a href="#">#vue-cirrus</a>
+          <a href="#">#cirrus</a>
+        </v-card-content>
+        <div class="card-footer level content">6:32 PM - 3 Jul 19</div>
+        <v-card-buttons>
+          <v-btn>Cancel</v-btn>
+          <v-btn>Save</v-btn>
+          <v-btn>Post</v-btn>
+        </v-card-buttons>
+      </v-image-card>
     </v-row>
   </div>
 </template>
