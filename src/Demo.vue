@@ -16,7 +16,7 @@
       <v-image-card
         title="Card Title"
         subtitle="by Elton John"
-        imageUrl="https://placeimg.com/640/480/nature"
+        image="assets/logo.png"
       >
         <v-card-content>
           <p>This is some basic simple card text</p>

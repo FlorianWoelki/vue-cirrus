@@ -3,7 +3,7 @@
     <div class="card-container">
       <div
         class="card-image"
-        :style="'background-image: url(' + imageUrl + ')'"
+        :style="{ backgroundImage: `url(${require(`@/${image}`)})` }"
       ></div>
       <div class="title-container">
         <p class="title">{{ title }}</p>
@@ -25,7 +25,7 @@ export default {
       type: String,
       default: 'undefined',
     },
-    imageUrl: {
+    image: {
       type: String,
       default: '',
     },
