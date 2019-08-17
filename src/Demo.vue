@@ -13,6 +13,12 @@
     </v-navbar>
 
     <v-row center>
+        <v-min-card
+          title="Google Chrome"
+          imgId="image"
+        >
+          <p>Here is some basic card text for the minimized card</p>
+        </v-min-card>
       <v-image-card
         title="Card Title"
         subtitle="by Elton John"

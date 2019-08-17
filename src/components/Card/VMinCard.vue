@@ -3,12 +3,23 @@
     <div class="content">
       <div class="row">
         <img
-          :src=image
+          v-if="image.startsWith('http://') || image.startsWith('https://')"
+          :src="image"
           class="level"
-          :id=imgId
+          :id="imgId"
+          :width="width"
+          :height="height"
+        />
+        <img
+          v-else
+          :src="`${require(`@/${image}`)}`"
+          class="level"
+          :id="imgId"
+          :width="width"
+          :height="height"
         />
         <p
-          :id=projectName
+          :id="projectName"
           class="title level"
         >{{title}}</p>
         <slot></slot>
@@ -35,6 +46,14 @@ export default {
     title: {
       type: String,
       default: '',
+    },
+    width: {
+      type: String,
+      default: '300px',
+    },
+    height: {
+      type: String,
+      default: '300px',
     },
   },
 };
