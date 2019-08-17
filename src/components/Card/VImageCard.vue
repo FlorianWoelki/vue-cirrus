@@ -2,6 +2,12 @@
   <div class="card">
     <div class="card-container">
       <div
+        v-if="image.startsWith('http://') || image.startsWith('https://')"
+        class="card-image"
+        :style="{ backgroundImage: `url(${image})` }"
+      ></div>
+      <div
+        v-else
         class="card-image"
         :style="{ backgroundImage: `url(${require(`@/${image}`)})` }"
       ></div>
