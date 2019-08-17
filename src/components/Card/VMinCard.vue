@@ -3,7 +3,7 @@
     <div class="content">
       <div class="row">
         <img
-          :src=imgSrc
+          :src=image
           class="level"
           :id=imgId
         />
@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    imgSrc: {
+    image: {
       type: String,
       default: 'https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png',
     },
