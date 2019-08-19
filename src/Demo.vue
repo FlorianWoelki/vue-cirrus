@@ -13,13 +13,20 @@
     </v-navbar>
 
     <v-row center>
-        <v-min-card
-          title="Google Chrome"
-          imgId="image"
-        >
-          <p>Here is some basic card text for the minimized card</p>
-        </v-min-card>
-      <v-image-card
+      <v-simple-card title="Card Title">
+        <v-card-content>
+          <p>This is some basic simple card text</p>
+          <a href="#">#vue-cirrus</a>
+          <a href="#">#cirrus</a>
+        </v-card-content>
+        <div class="card-footer level content">6:32 PM - 3 Jul 19</div>
+        <v-card-buttons>
+          <v-btn>Cancel</v-btn>
+          <v-btn>Save</v-btn>
+          <v-btn>Post</v-btn>
+        </v-card-buttons>
+      </v-simple-card>
+      <v-simple-card
         title="Card Title"
         subtitle="by Elton John"
         image="assets/logo.png"
@@ -35,7 +42,7 @@
           <v-btn>Save</v-btn>
           <v-btn>Post</v-btn>
         </v-card-buttons>
-      </v-image-card>
+      </v-simple-card>
     </v-row>
   </div>
 </template>
