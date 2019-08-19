@@ -13,6 +13,20 @@
     </v-navbar>
 
     <v-row center>
+      <v-card
+        animated
+        title="Title"
+        subtitle="Subtitle"
+        footerText="Footer text"
+        height="300px"
+      >
+        <v-card-content>
+          <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+        </v-card-content>
+      </v-card>
+    </v-row>
+
+    <v-row center>
       <v-simple-card title="Card Title">
         <v-card-content>
           <p>This is some basic simple card text</p>

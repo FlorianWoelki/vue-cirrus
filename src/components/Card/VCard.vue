@@ -4,8 +4,8 @@
     :class=cardClasses
   >
     <div
-      :id="title + subtitle"
       class="card-container"
+      :style="{ 'min-height': `${height}` }"
     >
       <div
         class="card-image"
@@ -31,8 +31,8 @@
     class="card slide-up"
   >
     <div
-      :id="title + subtitle"
       class="card-container"
+      :style="{ 'min-height': `${height}` }"
     >
       <div
         class="card-image"
@@ -91,7 +91,7 @@ export default {
     },
     height: {
       type: String,
-      default: '332',
+      default: '332px',
     },
   },
 
@@ -105,10 +105,6 @@ export default {
         },
       );
     },
-  },
-
-  mounted() {
-    document.getElementById(this.title + this.subtitle).style.minHeight = `${this.height}px`;
   },
 };
 </script>
