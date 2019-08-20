@@ -13,6 +13,8 @@
     </v-navbar>
 
     <v-row center>
+      <v-input-color></v-input-color>
+
       <v-card
         animated
         title="Title"
