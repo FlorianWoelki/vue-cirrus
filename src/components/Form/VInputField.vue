@@ -31,6 +31,7 @@
       v-if=infoText
       class="info text-center"
     >{{infoText}}</span>
+    <slot></slot>
   </div>
   <div
     v-else
@@ -122,6 +123,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    icon: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -145,6 +150,7 @@ export default {
           'input-focused': this.focused,
           'text-success input-success': this.success,
           'text-error input-error': this.error,
+          'input-contains-icon': this.icon,
         },
       );
     },

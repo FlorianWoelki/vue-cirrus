@@ -13,19 +13,9 @@
     </v-navbar>
 
     <v-row center>
-      <v-input-color></v-input-color>
-
-      <v-card
-        animated
-        title="Title"
-        subtitle="Subtitle"
-        footerText="Footer text"
-        height="300px"
-      >
-        <v-card-content>
-          <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-        </v-card-content>
-      </v-card>
+      <v-input-field icon>
+        <span class="icon">1</span>
+      </v-input-field>
     </v-row>
 
     <v-row center>
