@@ -13,6 +13,10 @@
     </v-navbar>
 
     <v-row center>
+      <v-btn @click="test">Click me</v-btn>
+    </v-row>
+
+    <v-row center>
       <v-input-field icon>
         <span class="icon">1</span>
       </v-input-field>

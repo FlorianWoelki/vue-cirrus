@@ -3,7 +3,7 @@
     v-if="href === ''"
     :class=classes
     :data-tooltip=tooltipData
-    @click="onClick"
+    @click="handleClick($event)"
   >
     <slot></slot>
   </button>
@@ -15,7 +15,7 @@
     <button
       :class=classes
       :data-tooltip=tooltipData
-      @click="onClick"
+      @click="handleClick($event)"
     >
       <slot></slot>
     </button>
@@ -35,10 +35,6 @@ export default {
   ],
 
   props: {
-    onClick: {
-      type: Function,
-      default: () => 1,
-    },
     href: {
       type: String,
       default: '',
@@ -102,6 +98,12 @@ export default {
     loadingRight: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
