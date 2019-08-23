@@ -168,7 +168,9 @@ export default {
 .snackbar.bottom-left.show,
 .snackbar.bottom-right.show {
   visibility: visible;
-  /* TODO: Add other animation */
+  -webkit-animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
+  -moz-animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
+  -o-animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
   animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
 }
 
@@ -176,7 +178,9 @@ export default {
 .snackbar.top-left.show,
 .snackbar.top-right.show {
   visibility: visible;
-  /* TODO: Add other animation */
+  -webkit-animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
+  -moz-animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
+  -o-animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
   animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
 }
 
