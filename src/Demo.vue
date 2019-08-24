@@ -3,10 +3,10 @@
     <v-sidebar>
       <v-sidebar-items title="Components" hoverEffect>
         <v-sidebar-item></v-sidebar-item>
-        <v-sidebar-item link="html">HTML</v-sidebar-item>
-        <v-sidebar-item link="css">CSS</v-sidebar-item>
-        <v-sidebar-item link="js">JS</v-sidebar-item>
-        <v-sidebar-item link="c">C</v-sidebar-item>
+        <v-sidebar-item>HTML</v-sidebar-item>
+        <v-sidebar-item>CSS</v-sidebar-item>
+        <v-sidebar-item>JS</v-sidebar-item>
+        <v-sidebar-item @click="test">C</v-sidebar-item>
         <v-sidebar-item>
           <v-sidebar-dropdown title="Mixins" showArrow>
             <v-sidebar-item dropdown>a</v-sidebar-item>

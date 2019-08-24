@@ -6,6 +6,7 @@
     <a
       class="sidebar-link"
       :href=href
+      @click="handleClick"
     >
       <label
         :for=forId
@@ -17,7 +18,10 @@
   </div>
   <div v-else>
     <li class="menu-item">
-      <a :href=href>
+      <a
+        :href=href
+        @click="handleClick"
+      >
         <slot></slot>
       </a>
     </li>
@@ -38,6 +42,12 @@ export default {
     dropdown: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
