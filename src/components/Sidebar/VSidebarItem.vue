@@ -5,7 +5,7 @@
   >
     <a
       class="sidebar-link"
-      :href=link
+      :href=href
     >
       <label
         :for=forId
@@ -17,7 +17,7 @@
   </div>
   <div v-else>
     <li class="menu-item">
-      <a :href=link>
+      <a :href=href>
         <slot></slot>
       </a>
     </li>
@@ -27,7 +27,7 @@
 <script>
 export default {
   props: {
-    link: {
+    href: {
       type: String,
       default: '#',
     },
