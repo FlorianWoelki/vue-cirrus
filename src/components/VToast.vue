@@ -7,6 +7,7 @@
     <button
       v-if="closable"
       class="btn-close"
+      @click="handleClose($event)"
     ></button>
   </div>
 </template>
@@ -39,6 +40,13 @@ export default {
     closable: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleClose(event) {
+      const buttonElement = event.srcElement;
+      buttonElement.parentNode.style.visibility = 'hidden';
     },
   },
 

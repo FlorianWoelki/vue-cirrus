@@ -13,6 +13,12 @@
     </v-navbar>
 
     <v-row center>
+      <v-col c4>
+        <v-toast closable>Hello World</v-toast>
+      </v-col>
+    </v-row>
+
+    <v-row center>
       <v-btn @click="test">Click me</v-btn>
     </v-row>
 
