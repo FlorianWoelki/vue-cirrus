@@ -5,12 +5,17 @@
       id="mixins"
       class="hide"
       name="mixinsTree"
+      @click="handleClick"
     >
     <label
       for="mixins"
       class="tree-item-header"
     >
       {{title}}
+      <span v-if="showArrow">
+        <span v-if="!dropdownClicked">▶</span>
+        <span v-else>▼</span>
+      </span>
     </label>
     <div class="tree-item-body">
       <ul class="menu">
@@ -22,10 +27,26 @@
 
 <script>
 export default {
+  data() {
+    return {
+      dropdownClicked: false,
+    };
+  },
+
   props: {
+    showArrow: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: '',
+    },
+  },
+
+  methods: {
+    handleClick() {
+      this.dropdownClicked = !this.dropdownClicked;
     },
   },
 };
