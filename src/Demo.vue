@@ -14,7 +14,7 @@
 
     <v-row center>
       <v-col c4>
-        <v-toast closable>Hello World</v-toast>
+        <v-toast closable disableCloseFunction @click="test">Hello World</v-toast>
       </v-col>
     </v-row>
 

@@ -5,10 +5,16 @@
   >
     <slot></slot>
     <button
-      v-if="closable"
+      v-if="closable && !disableCloseFunction"
       class="btn-close"
       @click="handleClose($event)"
     ></button>
+    <button
+      v-else-if="closable"
+      class="btn-close"
+      @click="handleClick($event)"
+    >
+    </button>
   </div>
 </template>
 
@@ -25,6 +31,10 @@ export default {
   ],
 
   props: {
+    disableCloseFunction: {
+      type: Boolean,
+      default: false,
+    },
     success: {
       type: Boolean,
       default: false,
@@ -44,6 +54,9 @@ export default {
   },
 
   methods: {
+    handleClick(event) {
+      this.$emit('click', event);
+    },
     handleClose(event) {
       const buttonElement = event.srcElement;
       buttonElement.parentNode.style.visibility = 'hidden';
