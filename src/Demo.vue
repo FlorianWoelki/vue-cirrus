@@ -24,6 +24,13 @@
           </v-row>
 
           <v-row center>
+            <v-pagination>
+              <v-pagination-item selected>1</v-pagination-item>
+              <v-pagination-item @click="test">2</v-pagination-item>
+            </v-pagination>
+          </v-row>
+
+          <v-row center>
             <v-btn @click="test">Click me</v-btn>
           </v-row>
 

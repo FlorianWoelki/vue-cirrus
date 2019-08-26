@@ -3,6 +3,7 @@
     <a
       :disabled=disabled
       :href=link
+      @click="handleClick($event)"
       class="btn-link"
     >
       <slot></slot>
@@ -24,6 +25,12 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
