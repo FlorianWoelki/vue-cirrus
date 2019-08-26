@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style>
+#sidebar {
+  border-right: 1px solid rgb(220, 220, 220);
+}
+
 #sidebar .content {
   margin: 0 0.4em 1.5em;
 }
