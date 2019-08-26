@@ -24,10 +24,11 @@
           </v-row>
 
           <v-row center>
-            <v-pagination>
-              <v-pagination-item selected>1</v-pagination-item>
-              <v-pagination-item @click="test">2</v-pagination-item>
-            </v-pagination>
+            <v-code copyable lang="JavaScript">const test = true;
+for (let i = 0; i &lt; 10; i++) {
+  console.log("Hello World" + i);
+}
+            </v-code>
           </v-row>
 
           <v-row center>

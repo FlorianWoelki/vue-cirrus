@@ -2,7 +2,7 @@
   <pre>
     <div :id=feedbackId class="copy-feedback">Copied!</div>
     <pre>
-      <code :data-lang=lang :id=codeId :class=classes @click="copy"><slot></slot></code>
+      <code :data-lang="dataLang" :id="codeId" :class="classes" @click="copy"><slot></slot></code>
     </pre>
   </pre>
 </template>
