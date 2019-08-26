@@ -1,6 +1,6 @@
 <template>
   <pre>
-    <div :id=feedbackId class="copy-feedback">Copied!</div>
+    <!--<div :id=feedbackId class="copy-feedback">Copied!</div>-->
     <pre>
       <code :data-lang="dataLang" :id="codeId" :class="classes" @click="copy"><slot></slot></code>
     </pre>
@@ -12,8 +12,15 @@ import javascript from './javascript';
 import html from './html';
 import css from './css';
 import bash from './bash';
+// import { version } from 'punycode';
 
 export default {
+  data() {
+    return {
+      copied: false,
+    };
+  },
+
   props: {
     lang: {
       type: String,
@@ -50,6 +57,7 @@ export default {
         window.getSelection().removeAllRanges();
 
         // Display feedback
+        /*
         const feedback = document.getElementById(this.feedbackId);
         feedback.style.opacity = 1;
         copyText.style.filter = 'blur(2px)';
@@ -57,6 +65,8 @@ export default {
           feedback.style.opacity = 0;
           copyText.style.filter = 'blur(0)';
         }, 800);
+        */
+        this.copied = true;
       }
     },
   },
@@ -99,7 +109,8 @@ export default {
       return `${this.lang}-feedback-${Math.random() * (10 - 1) + 1}`;
     },
     dataLang() {
-      return `${this.lang} ${this.copyable ? '(Copy)' : ''}`;
+      const isCopied = this.copied ? '(Copied)' : '(Copy)';
+      return `${this.lang} ${this.copyable ? isCopied : ''}`;
     },
     classes() {
       return {
