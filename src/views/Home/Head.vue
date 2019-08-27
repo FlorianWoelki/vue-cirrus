@@ -5,14 +5,14 @@
       class="hero fullscreen hero-img parallax-img"
     >
       <div class="hero-body white">
-        <div class="content text-center">
+        <div class="content u-text-center">
           <img
             id="logo"
             src="@/assets/vue-cirrus.png"
             alt="vue-cirrus-logo"
           >
           <h1>Vue Cirrus</h1>
-          <h6 class="light">The Vue library for the modern Cirrus CSS framework.</h6>
+          <h6 class="font-light">The Vue library for the modern Cirrus CSS framework.</h6>
           <v-row>
             <v-col c6>
               <router-link to='/components'>

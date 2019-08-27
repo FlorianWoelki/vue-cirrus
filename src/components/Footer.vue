@@ -13,7 +13,7 @@
           Vue Cirrus
         </p>
 
-        <v-divider />
+        <div class="divider"></div>
 
         <p>
           Code is licensed with

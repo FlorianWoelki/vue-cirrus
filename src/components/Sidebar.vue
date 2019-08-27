@@ -7,29 +7,29 @@
       <v-sidebar-item
         v-for="component in sortedComponentList"
         :key=component
-        :link="'#/components/' + component"
+        :href="'#/components/' + component"
       >
         {{component}}
       </v-sidebar-item>
-      <v-divider />
+      <div class="divider"></div>
       <v-sidebar-item>
-        <v-sidebar-dropdown title="Mixins">
+        <v-sidebar-dropdown showArrow title="Mixins">
           <v-sidebar-item
             dropdown
-            link="#/components/Animations"
+            href="#/components/Animations"
           >Animations</v-sidebar-item>
           <v-sidebar-item
             dropdown
-            link="#/components/Layout"
+            href="#/components/Layout"
           >Layout</v-sidebar-item>
           <v-sidebar-item
             dropdown
-            link="#/components/Tooltips"
+            href="#/components/Tooltips"
           >Tooltips</v-sidebar-item>
         </v-sidebar-dropdown>
       </v-sidebar-item>
-      <v-divider />
-      <v-sidebar-item link="#/components/Util">
+      <div class="divider"></div>
+      <v-sidebar-item href="#/components/Util">
         Util
       </v-sidebar-item>
     </v-sidebar-items>

@@ -16,7 +16,7 @@
     <div class="nav-right">
       <v-navbar-item>
         <router-link to="/components">
-          <i class="fas fa-file-alt fa-lg"></i>
+          <i class="fas fa-file-alt fa-lg" style="margin-right:10px;"></i>
           Docs
         </router-link>
       </v-navbar-item>
