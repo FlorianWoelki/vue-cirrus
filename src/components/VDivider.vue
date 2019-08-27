@@ -1,5 +1,8 @@
 <template>
-  <div :class=classes></div>
+  <div v-if="divider" :class=classes></div>
+  <div v-else style="position:relative; height:300px">
+    <div :class=classes style="height: 100%;" :data-content="content"></div>
+  </div>
 </template>
 
 <script>
@@ -17,6 +20,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
+    content: {
+      type: String,
+      default: '',
+    },
   },
 
   computed: {
@@ -25,8 +36,9 @@ export default {
         this.layoutMixins,
         this.animationsMixins,
         {
-          divider: true,
+          divider: !this.vertical,
           'divider-short': this.short,
+          'divider--v': this.vertical,
         },
       );
     },

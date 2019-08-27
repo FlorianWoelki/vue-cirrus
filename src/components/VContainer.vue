@@ -5,22 +5,25 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
-import Animations from '@/mixins/animations';
-
 export default {
-  mixins: [
-    Layout,
-    Animations,
-  ],
+  props: {
+    noPadding: {
+      type: Boolean,
+      default: false,
+    },
+    fluid: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
   computed: {
     classes() {
       return Object.assign(
-        this.layoutMixins,
-        this.animationsMixins,
         {
-          content: true,
+          content: !this.noPadding && !this.fluid,
+          'content-no-padding': this.noPadding && !this.fluid,
+          'content-fluid': this.fluid,
         },
       );
     },

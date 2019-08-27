@@ -6,7 +6,7 @@
       style="background: #f7f7f7;"
     >
       <div class="content">
-        <h6>{{title}}</h6>
+        <h6>{{ title }}</h6>
       </div>
       <div class="tree-nav-container">
         <div class="tree">

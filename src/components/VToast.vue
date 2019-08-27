@@ -3,7 +3,6 @@
     :class=classes
     :data-tooltip=tooltipData
   >
-    <slot></slot>
     <button
       v-if="closable && !disableCloseFunction"
       class="btn-close"
@@ -15,6 +14,8 @@
       @click="handleClick($event)"
     >
     </button>
+    <h4 v-if="title !== ''" class="toast__title">{{ title }}</h4>
+    <slot></slot>
   </div>
 </template>
 
@@ -35,6 +36,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    title: {
+      type: String,
+      default: '',
+    },
     success: {
       type: Boolean,
       default: false,
@@ -44,6 +49,18 @@ export default {
       default: false,
     },
     error: {
+      type: Boolean,
+      default: false,
+    },
+    info: {
+      type: Boolean,
+      default: false,
+    },
+    link: {
+      type: Boolean,
+      default: false,
+    },
+    primary: {
       type: Boolean,
       default: false,
     },
@@ -71,9 +88,12 @@ export default {
         this.animationsMixins,
         {
           toast: true,
-          success: this.success,
-          warning: this.warning,
-          error: this.error,
+          'toast--success': this.success,
+          'toast--warning': this.warning,
+          'toast--error': this.error,
+          'toast--info': this.info,
+          'toast--link': this.link,
+          'toast--primary': this.primary,
         },
       );
     },

@@ -3,7 +3,7 @@
     <div class="tree-nav-header">
       <a
         href="#sidebar"
-        class="hide-desktop"
+        class="u-hide-tablet"
       >
         <span class="icon">
           <div class="sidebar-icon-container">

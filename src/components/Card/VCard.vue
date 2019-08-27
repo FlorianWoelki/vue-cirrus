@@ -93,6 +93,10 @@ export default {
       type: String,
       default: '332px',
     },
+    equalHeight: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -102,6 +106,7 @@ export default {
         this.animationsMixins,
         {
           card: true,
+          'u-flex u-flex-column h-100': this.equalHeight,
         },
       );
     },

@@ -149,7 +149,7 @@ export default {
           'input-xlarge': this.xlarge,
           'input-focused': this.focused,
           'text-success input-success': this.success,
-          'text-error input-error': this.error,
+          'text-danger input-error': this.error,
           'input-contains-icon': this.icon,
         },
       );

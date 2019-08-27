@@ -3,7 +3,7 @@
     <input
       type="checkbox"
       id="mixins"
-      class="hide"
+      class="u-hide"
       name="mixinsTree"
       @click="handleClick"
     >
@@ -11,7 +11,7 @@
       for="mixins"
       class="tree-item-header"
     >
-      {{title}}
+      {{ title }}
       <span v-if="showArrow" style="font-size: 11px; color: gray">
         <span v-if="!dropdownClicked">▶</span>
         <span v-else>▼</span>

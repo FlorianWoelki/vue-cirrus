@@ -173,6 +173,46 @@ export default {
       type: Boolean,
       default: false,
     },
+    h10: {
+      type: Boolean,
+      default: false,
+    },
+    h20: {
+      type: Boolean,
+      default: false,
+    },
+    h30: {
+      type: Boolean,
+      default: false,
+    },
+    h40: {
+      type: Boolean,
+      default: false,
+    },
+    h50: {
+      type: Boolean,
+      default: false,
+    },
+    h60: {
+      type: Boolean,
+      default: false,
+    },
+    h70: {
+      type: Boolean,
+      default: false,
+    },
+    h80: {
+      type: Boolean,
+      default: false,
+    },
+    h90: {
+      type: Boolean,
+      default: false,
+    },
+    h100: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -220,6 +260,16 @@ export default {
           'w-80': this.w80,
           'w-90': this.w90,
           'w-100': this.w100,
+          'h-10': this.h10,
+          'h-20': this.h20,
+          'h-30': this.h30,
+          'h-40': this.h40,
+          'h-50': this.h50,
+          'h-60': this.h60,
+          'h-70': this.h70,
+          'h-80': this.h80,
+          'h-90': this.h90,
+          'h-100': this.h100,
         },
       );
     },

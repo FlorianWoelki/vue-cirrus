@@ -1,25 +1,50 @@
 <template>
-  <button
-    v-if="href === ''"
-    :class=classes
-    :data-tooltip=tooltipData
-    @click="handleClick($event)"
-  >
-    <slot></slot>
-  </button>
-  <a
-    v-else
-    :href="href"
-    :target="blank ? '_blank' : ''"
-  >
+  <div v-if="outline" style="margin: 0 0.5rem">
     <button
+      v-if="href === ''"
       :class=classes
       :data-tooltip=tooltipData
       @click="handleClick($event)"
     >
       <slot></slot>
     </button>
-  </a>
+    <a
+      v-else
+      :href="href"
+      :target="blank ? '_blank' : ''"
+    >
+      <button
+        :class=classes
+        :data-tooltip=tooltipData
+        @click="handleClick($event)"
+      >
+        <slot></slot>
+      </button>
+    </a>
+  </div>
+  <div v-else>
+    <button
+      v-if="href === ''"
+      :class=classes
+      :data-tooltip=tooltipData
+      @click="handleClick($event)"
+    >
+      <slot></slot>
+    </button>
+    <a
+      v-else
+      :href="href"
+      :target="blank ? '_blank' : ''"
+    >
+      <button
+        :class=classes
+        :data-tooltip=tooltipData
+        @click="handleClick($event)"
+      >
+        <slot></slot>
+      </button>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -47,15 +72,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    accent: {
-      type: Boolean,
-      default: false,
-    },
-    outline: {
-      type: Boolean,
-      default: false,
-    },
-    outlineInverted: {
+    primary: {
       type: Boolean,
       default: false,
     },
@@ -72,6 +89,26 @@ export default {
       default: false,
     },
     black: {
+      type: Boolean,
+      default: false,
+    },
+    info: {
+      type: Boolean,
+      default: false,
+    },
+    link: {
+      type: Boolean,
+      default: false,
+    },
+    success: {
+      type: Boolean,
+      default: false,
+    },
+    warning: {
+      type: Boolean,
+      default: false,
+    },
+    danger: {
       type: Boolean,
       default: false,
     },
@@ -99,6 +136,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -111,19 +152,23 @@ export default {
     classes() {
       const classes = {
         'btn-animated': this.animated,
-        'btn-accent': this.accent,
-        'btn-outline': this.outline,
-        'btn-outline-inverted': this.outlineInverted,
+        'btn-primary': this.primary,
         'btn-transparent': this.transparent,
         'btn-light': this.light,
         'btn-dark': this.dark,
         'btn-black': this.black,
+        'btn-info': this.info,
+        'btn-link': this.link,
+        'btn-success': this.success,
+        'btn-warning': this.warning,
+        'btn-danger': this.danger,
         'btn-tiny': this.xsmall,
         'btn-small': this.small,
         'btn-large': this.large,
         'btn-xlarge': this.xlarge,
         'animated loading loading-left': this.loadingLeft,
         'animated loading loading-right': this.loadingRight,
+        outline: this.outline,
       };
 
       return Object.assign(
