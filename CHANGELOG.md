@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1] - 2019-08-27
+
+### ⚡️ Changed
+- Fixed crucial divider bug
+
+
 ## [0.2.0] - 2019-08-27
 
 ### 🔨 Added
