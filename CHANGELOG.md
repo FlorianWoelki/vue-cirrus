@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2019-08-27
+
+### 🔨 Added
+- Added mixins to container component
+- Added href to buttons
+- Added blank attribute for links
+- Added mixins to divider
+- Added @click event for a lot of components
+- Added image card component
+- Added local images binding support
+- Added a way to add height to card
+- Added input color component
+- Added icon to input field
+- Added handle close to toast component
+- Added arrow for dropdown on sidebar item
+
+### ⚡️ Changed
+- Updated all components to Cirrus version 0.5.5
+- Changed link attribute to href
+- Removed sidebar spacing
+- Updated button :onClick to @click event
+- Updated sidebar icon on mobile view
+- Fixed data language in code component
+- Updated animation for code copying
+
+
+
 ## [0.1.93] - 2019-08-08
 
 ### 🔨 Added
@@ -253,3 +280,4 @@ All notable changes to this project will be documented in this file.
 [0.1.91]: https://www.npmjs.com/package/vue-cirrus/v/0.1.91
 [0.1.92]: https://www.npmjs.com/package/vue-cirrus/v/0.1.92
 [0.1.93]: https://www.npmjs.com/package/vue-cirrus/v/0.1.93
+[0.2.0]: https://www.npmjs.com/package/vue-cirrus/v/0.2.0
