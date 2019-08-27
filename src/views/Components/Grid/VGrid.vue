@@ -61,6 +61,7 @@ export default {
         oLeft: ['oLeft', 'false', 'Boolean', '(Col) Columns offset left'],
         oRight: ['oRight', 'false', 'Boolean', '(Col) Columns offset right'],
         w10w100: ['w10-w100', 'false', 'Boolean', '(Col) Columns 10 grid from w10 to w100'],
+        h10h100: ['h10-h100', 'false', 'Boolean', '(Col) Horizontal Columns from h10 to h100'],
       },
     };
   },

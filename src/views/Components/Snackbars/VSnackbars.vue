@@ -28,7 +28,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-btn :onClick="() => { snackbar = !snackbar; }">Show!</v-btn>
+          <v-btn @click="() => { snackbar = !snackbar; }">Show!</v-btn>
         </v-row>
         <div
           v-for="i in 5"

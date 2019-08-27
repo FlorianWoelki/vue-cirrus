@@ -26,7 +26,7 @@
           center
           c4
         >
-          <v-btn :onClick="alertMe">Click Button</v-btn>
+          <v-btn @click="alertMe">Click Button</v-btn>
         </v-col>
       </v-row>
     </v-col>
@@ -39,7 +39,7 @@ export default {
     return {
       code: `<v-btn>Normal Button</v-btn>
 <v-btn animated>Animated Button</v-btn>
-<v-btn :onClick="alertMe">Click Button</v-btn>`,
+<v-btn @click="alertMe">Click Button</v-btn>`,
     };
   },
 

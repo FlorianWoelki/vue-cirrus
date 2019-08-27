@@ -47,6 +47,8 @@ export default {
 <p>Paragraph Text 2</p>`,
       props: {
         short: ['short', 'false', 'Boolean', 'Short divider'],
+        vertical: ['vertical', 'false', 'Boolean', 'Vertical Divider with optional content'],
+        content: ['content', 'Empty', 'String', 'Content for the vertical divider'],
       },
     };
   },

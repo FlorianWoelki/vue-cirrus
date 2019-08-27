@@ -50,9 +50,9 @@ export default {
 
   data() {
     return {
-      components: ['Buttons', 'Cards', 'Dropdown', 'Frames', 'Grid',
+      components: ['Buttons', 'Cards', 'Frames', 'Grid', 'Headlines',
         'Modals', 'Navbars', 'Pagination', 'Forms', 'Placeholder', 'Sidebars',
-        'Tabs', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
+        'Tabs', 'Tags', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
         'Badges', 'Fullscreen', 'Spinners'],
     };

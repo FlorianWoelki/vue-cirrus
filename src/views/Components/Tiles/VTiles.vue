@@ -11,7 +11,7 @@
       </v-col>
       <v-col
         c6
-        style="margin-top: 175px;"
+        center
       >
         <v-tile>
           <v-tile-icon>

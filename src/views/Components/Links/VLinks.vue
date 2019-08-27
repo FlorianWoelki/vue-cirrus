@@ -14,39 +14,39 @@
         style="margin-top: 155px;"
       >
         <v-row center>
-          <v-col c1>
+          <v-col c2>
             <v-link ltr>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link rtl>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link c>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link oltr>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link ortl>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link oc>Link</v-link>
           </v-col>
         </v-row>
         <v-row center>
-          <v-col c1>
+          <v-col c2>
             <v-link underlined>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link olr>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link orl>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link squared>Link</v-link>
           </v-col>
-          <v-col c1>
+          <v-col c2>
             <v-link dSquared>Link</v-link>
           </v-col>
         </v-row>

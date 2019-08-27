@@ -50,15 +50,11 @@ export default {
   data() {
     return {
       props: {
-        onClick: ['onClick', 'null', 'Function', 'Button click event'],
+        click: ['@click', 'null', 'Function', 'Button click event'],
         animated: ['animated', 'false', 'Boolean', 'Button click animation'],
-        btnStyle: ['btnStyle', 'Empty', 'String', 'Button color'],
-        xsmall: ['xsmall', 'false', 'Boolean', 'Button xsmall size'],
-        small: ['small', 'false', 'Boolean', 'Button small size'],
-        large: ['large', 'false', 'Boolean', 'Button large size'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'Button xlarge size'],
-        loadingLeft: ['loadingLeft', 'false', 'Boolean', 'Loading left animation'],
-        loadingRight: ['loadingRight', 'false', 'Boolean', 'Loading right animation'],
+        outline: ['outline', 'false', 'Boolean', 'Only show the outline of the button'],
+        href: ['href', 'Empty', 'String', 'Link will show up, when clicked'],
+        blank: ['blank', 'false', 'Boolean', 'Link will pop up in a new tab'],
       },
     };
   },

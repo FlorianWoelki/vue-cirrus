@@ -1,7 +1,7 @@
 <template>
   <section id="getting-started">
     <h3>Getting Started</h3>
-    <div class="divider"></div>
+    <v-divider></v-divider>
     <v-row>
       <p>
         Getting started with Vue Cirrus is really simple. There will be more options on
