@@ -1,5 +1,5 @@
 <template>
-  <div v-if="divider" :class=classes></div>
+  <div v-if="!vertical" :class=classes></div>
   <div v-else style="position:relative; height:300px">
     <div :class=classes style="height: 100%;" :data-content="content"></div>
   </div>
