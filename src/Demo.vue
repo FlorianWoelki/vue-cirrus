@@ -1,12 +1,16 @@
 <template>
   <div class="demo">
-    <h1>test</h1>
-    <v-divider></v-divider>
-    <v-tag-container>
-      <v-tag black>Version</v-tag>
-      <v-tag info>0.5.5</v-tag>
-      <v-tag closable warning></v-tag>
-    </v-tag-container>
+    <v-row center>
+      <v-col>
+        <h1>Hello World Cirrus</h1>
+        <v-divider short></v-divider>
+        <v-tag-container>
+          <v-tag black>Version</v-tag>
+          <v-tag info>0.5.5</v-tag>
+          <v-tag closable warning></v-tag>
+        </v-tag-container>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

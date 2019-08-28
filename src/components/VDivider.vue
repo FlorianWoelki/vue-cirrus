@@ -45,3 +45,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.divider-short {
+  max-width: 15rem;
+  width: 100%;
+}
+</style>
