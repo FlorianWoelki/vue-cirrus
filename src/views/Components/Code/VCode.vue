@@ -3,7 +3,7 @@
     <h5>Easy Code components</h5>
     <p>You can create easily colored code preview components!</p>
 
-    <v-row>
+    <v-row level>
       <v-col c6>
         <v-code lang="Vue">
           <xmp v-html="code"></xmp>
@@ -24,7 +24,7 @@ if (myBool) {
 
     <v-space xlarge />
 
-    <v-row>
+    <v-row level>
       <v-col c6>
         <v-code lang="Vue">
           <xmp v-html="darkCode"></xmp>
@@ -34,7 +34,7 @@ if (myBool) {
         c4
         o1
       >
-        <v-code lang="JavaScript" dark>const myBool = true;
+        <v-code lang="JavaScript" copyable dark>const myBool = true;
 if (myBool) {
   console.log("Bool is true!");
 }</v-code>

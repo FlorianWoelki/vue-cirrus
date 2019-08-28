@@ -1,14 +1,11 @@
 <template>
-  <v-row>
+  <v-row level>
     <v-col c6>
       <v-code lang="Vue">
         <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
-    <v-col
-      c6
-      style="margin-top: 30px;"
-    >
+    <v-col c6>
       <v-row>
         <v-col>
           <v-row>

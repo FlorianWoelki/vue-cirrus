@@ -43,10 +43,12 @@
     <v-space xlarge />
 
     <v-row>
-      <span>Code example</span>
-      <v-code lang="Vue">
-        <xmp v-html=code></xmp>
-      </v-code>
+      <v-col>
+        <span>Code example</span>
+        <v-code lang="Vue">
+          <xmp v-html=code></xmp>
+        </v-code>
+      </v-col>
     </v-row>
 
     <v-space xlarge />

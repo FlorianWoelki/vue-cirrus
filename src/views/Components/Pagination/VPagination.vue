@@ -12,9 +12,8 @@
       <v-col
         center
         c6
-        style="margin-top: 80px;"
       >
-        <v-pagination>
+        <v-pagination bordered>
           <v-pagination-item disabled>Prev</v-pagination-item>
           <v-pagination-item selected>1</v-pagination-item>
           <v-pagination-item>2</v-pagination-item>
@@ -46,7 +45,7 @@ export default {
 
   data() {
     return {
-      code: `<v-pagination>
+      code: `<v-pagination bordered>
   <v-pagination-item disabled>Prev</v-pagination-item>
   <v-pagination-item selected>1</v-pagination-item>
   <v-pagination-item>2</v-pagination-item>

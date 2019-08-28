@@ -15,7 +15,6 @@
       <v-col
         center
         c6
-        style="margin-top: 30px;"
       >
         <v-avatar text="FW"></v-avatar>
       </v-col>

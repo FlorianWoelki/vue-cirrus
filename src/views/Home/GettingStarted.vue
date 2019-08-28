@@ -17,6 +17,10 @@
           copyable
           :dark="isDarkMode"
         >npm install --save vue-cirrus</v-code>
+        <p>
+          In addition, you can use yarn to install Vue-Cirrus. Make sure to install
+          the latest version, to get the most out of this framework.
+        </p>
       </v-col>
     </v-row>
     <v-row>

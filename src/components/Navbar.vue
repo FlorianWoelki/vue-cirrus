@@ -5,10 +5,10 @@
     brandTitle="Vue Cirrus"
   >
     <div class="nav-left">
-      <v-navbar-item link="https://github.com/FlorianWoelki/vue-cirrus">
+      <v-navbar-item href="https://github.com/FlorianWoelki/vue-cirrus" blank>
         <i class="nav-icon fab fa-github fa-lg"></i>
       </v-navbar-item>
-      <v-navbar-item link="https://www.npmjs.com/package/vue-cirrus">
+      <v-navbar-item href="https://www.npmjs.com/package/vue-cirrus" blank>
         <i class="nav-icon fab fa-npm fa-lg"></i>
       </v-navbar-item>
     </div>

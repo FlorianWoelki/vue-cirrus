@@ -13,7 +13,7 @@
         c6
         center
       >
-        <v-tile>
+        <v-tile enableBoxShadow>
           <v-tile-icon>
             <v-avatar text="FW" />
           </v-tile-icon>
@@ -25,7 +25,7 @@
           />
 
           <v-tile-buttons>
-            <v-btn btnStyle="transparent">Share</v-btn>
+            <v-btn link>Share</v-btn>
           </v-tile-buttons>
         </v-tile>
       </v-col>
@@ -54,20 +54,20 @@ export default {
 
   data() {
     return {
-      code: `<v-tile>
-<v-tile-icon>
-  <v-avatar text="FW" />
-</v-tile-icon>
+      code: `<v-tile enableBoxShadow>
+  <v-tile-icon>
+    <v-avatar text="FW" />
+  </v-tile-icon>
 
-<v-tile-content
-  title="Robert Downey Jr just poked you."
-  subtitle="Poke him back or view on facebook."
-  info="6 seconds ago"
-/>
+  <v-tile-content
+    title="Robert Downey Jr just poked you."
+    subtitle="Poke him back or view on facebook."
+    info="6 seconds ago"
+  />
 
-<v-tile-buttons>
-  <v-btn btnStyle="transparent">XXX</v-btn>
-</v-tile-buttons>
+  <v-tile-buttons>
+    <v-btn link>Share</v-btn>
+  </v-tile-buttons>
 </v-tile>`,
       props: {
         title: ['title', 'empty', 'String', 'Title of the tile content'],

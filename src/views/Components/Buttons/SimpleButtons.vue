@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row level>
     <v-col c6>
       <v-code lang="Vue">
         <xmp v-html="code"></xmp>
@@ -7,7 +7,6 @@
     </v-col>
     <v-col
       c6
-      style="margin-top: 45px;"
     >
       <v-row>
         <v-col

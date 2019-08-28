@@ -11,13 +11,14 @@
       </v-col>
       <v-col
         c6
-        style="margin-top: 25px;"
       >
         <v-tabs fill>
           <v-tab>Tab One</v-tab>
           <v-tab selected>Tab Two</v-tab>
           <v-tab>Tab Three</v-tab>
         </v-tabs>
+
+        <p class="u-text-center">Something good is happening.</p>
       </v-col>
     </v-row>
 

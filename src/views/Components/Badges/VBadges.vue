@@ -12,9 +12,8 @@
       <v-col
         center
         c6
-        style="margin-top: 50px;"
       >
-        <v-badge content="3">
+        <v-badge accent content="3">
           <p>Paragraph Text</p>
         </v-badge>
       </v-col>
@@ -43,7 +42,7 @@ export default {
 
   data() {
     return {
-      code: `<v-badge content="3">
+      code: `<v-badge accent content="3">
   <p>Paragraph Text</p>
 </v-badge>`,
       props: {
