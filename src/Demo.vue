@@ -18,27 +18,23 @@
           <v-pagination-item>Next</v-pagination-item>
         </v-pagination>
 
-        <a href="#modal">
-          <v-btn primary>Open Modal</v-btn>
-        </a>
+        <v-tile enableBoxShadow>
+          <v-tile-icon>
+            <v-avatar text="FW" />
+          </v-tile-icon>
+
+          <v-tile-content
+            title="Robert Downey Jr just poked you."
+            subtitle="Poke him back or view on facebook."
+            info="6 seconds ago"
+          />
+
+          <v-tile-buttons>
+            <v-btn btnStyle="transparent">XXX</v-btn>
+          </v-tile-buttons>
+        </v-tile>
       </v-col>
     </v-row>
-
-    <v-modal
-      large
-      zoomOut
-    >
-      <v-modal-body>
-        <h6>Hello Modal Dialog</h6>
-      </v-modal-body>
-      <v-modal-footer style="padding-bottom: 80px;">
-        <v-btn pullLeft>Close</v-btn>
-        <v-btn
-          pullRight
-          btnStyle="accent"
-        >Share</v-btn>
-      </v-modal-footer>
-    </v-modal>
   </div>
 </template>
 

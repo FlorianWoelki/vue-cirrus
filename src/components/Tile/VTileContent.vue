@@ -1,7 +1,7 @@
 <template>
-  <div class="tile-container">
-    <p class="tile-title no-margin">{{title}}</p>
-    <p class="tile-subtitle no-margin">{{subtitle}}</p>
+  <div class="tile__container">
+    <p class="tile__title u-no-margin">{{title}}</p>
+    <p class="tile__subtitle u-no-margin">{{subtitle}}</p>
     <span class="info">{{info}}</span>
   </div>
 </template>

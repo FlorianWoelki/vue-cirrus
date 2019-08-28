@@ -1,5 +1,5 @@
 <template>
-  <div class="tile-icon">
+  <div class="tile__icon">
     <slot></slot>
   </div>
 </template>
