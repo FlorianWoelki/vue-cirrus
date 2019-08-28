@@ -33,6 +33,8 @@
             <v-btn btnStyle="transparent">XXX</v-btn>
           </v-tile-buttons>
         </v-tile>
+
+        <v-input-field title="Test" subtitle="Hello" infoText="Test"></v-input-field>
       </v-col>
     </v-row>
   </div>

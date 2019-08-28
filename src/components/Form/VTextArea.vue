@@ -2,6 +2,7 @@
   <textarea
     :placeholder=placeholder
     :data-tooltip=tooltipData
+    :disabled="disabled"
   ></textarea>
 </template>
 
@@ -21,6 +22,10 @@ export default {
     placeholder: {
       type: String,
       default: '',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

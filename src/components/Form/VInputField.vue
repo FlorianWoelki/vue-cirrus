@@ -29,7 +29,7 @@
     />
     <span
       v-if=infoText
-      class="info text-center"
+      class="info u-text-center"
     >{{infoText}}</span>
     <slot></slot>
   </div>
