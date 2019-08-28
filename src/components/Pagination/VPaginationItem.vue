@@ -4,7 +4,6 @@
       :disabled=disabled
       :href=link
       @click="handleClick($event)"
-      class="btn-link"
     >
       <slot></slot>
     </a>

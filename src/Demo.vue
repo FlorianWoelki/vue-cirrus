@@ -10,6 +10,13 @@
           <v-tag info>0.5.5</v-tag>
           <v-tag closable warning></v-tag>
         </v-tag-container>
+
+        <v-pagination bordered>
+          <v-pagination-item disabled>Prev</v-pagination-item>
+          <v-pagination-item selected>1</v-pagination-item>
+          <v-pagination-item>2</v-pagination-item>
+          <v-pagination-item>Next</v-pagination-item>
+        </v-pagination>
       </v-col>
     </v-row>
   </div>
