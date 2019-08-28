@@ -17,8 +17,28 @@
           <v-pagination-item>2</v-pagination-item>
           <v-pagination-item>Next</v-pagination-item>
         </v-pagination>
+
+        <a href="#modal">
+          <v-btn primary>Open Modal</v-btn>
+        </a>
       </v-col>
     </v-row>
+
+    <v-modal
+      large
+      zoomOut
+    >
+      <v-modal-body>
+        <h6>Hello Modal Dialog</h6>
+      </v-modal-body>
+      <v-modal-footer style="padding-bottom: 80px;">
+        <v-btn pullLeft>Close</v-btn>
+        <v-btn
+          pullRight
+          btnStyle="accent"
+        >Share</v-btn>
+      </v-modal-footer>
+    </v-modal>
   </div>
 </template>
 

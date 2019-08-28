@@ -15,8 +15,9 @@
       <div class="modal-header">
         <a
           :href=closeTarget
-          class="pull-right"
+          class="u-pull-right"
           aria-label="Close"
+          style="font-size: 20px;"
         >X</a>
         <div class="modal-title">{{title}}</div>
       </div>
