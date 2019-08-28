@@ -38,13 +38,13 @@ export default {
     tooltipMixins() {
       return {
         tooltip: this.tooltipText !== '',
-        'tooltip-top-left': this.tooltipTopLeft,
-        'tooltip-top-right': this.tooltipTopRight,
-        'tooltip-bottom': this.tooltipBottom,
-        'tooltip-bottom-left': this.tooltipBottomLeft,
-        'tooltip-bottom-right': this.tooltipBottomRight,
-        'tooltip-left': this.tooltipLeft,
-        'tooltip-right': this.tooltipRight,
+        'tooltip--top-left': this.tooltipTopLeft,
+        'tooltip--top-right': this.tooltipTopRight,
+        'tooltip--bottom': this.tooltipBottom,
+        'tooltip--bottom-left': this.tooltipBottomLeft,
+        'tooltip--bottom-right': this.tooltipBottomRight,
+        'tooltip--left': this.tooltipLeft,
+        'tooltip--right': this.tooltipRight,
       };
     },
     tooltipData() {

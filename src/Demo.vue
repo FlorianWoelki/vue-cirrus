@@ -4,6 +4,7 @@
       <v-col>
         <h1>Hello World Cirrus</h1>
         <v-divider short></v-divider>
+        <v-btn link tooltipText="Hi">Testing</v-btn>
         <v-tag-container>
           <v-tag black>Version</v-tag>
           <v-tag info>0.5.5</v-tag>
