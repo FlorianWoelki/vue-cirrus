@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2] - 2019-08-27
+
+### 🔨 Added
+- Added style for short divider
+- Added bordered property for pagination
+- Added enableBoxShadow property to tiles
+- Added disabled property to textarea
+
+### ⚡️ Changed
+- Fixed tooltips
+- Fixed pagination
+- Fixed modal style
+- Changed modal close button size
+- Fixed tile style
+- Fixed form style
+
+
 ## [0.2.1] - 2019-08-27
 
 ### ⚡️ Changed
@@ -287,3 +304,5 @@ All notable changes to this project will be documented in this file.
 [0.1.92]: https://www.npmjs.com/package/vue-cirrus/v/0.1.92
 [0.1.93]: https://www.npmjs.com/package/vue-cirrus/v/0.1.93
 [0.2.0]: https://www.npmjs.com/package/vue-cirrus/v/0.2.0
+[0.2.1]: https://www.npmjs.com/package/vue-cirrus/v/0.2.1
+[0.2.2]: https://www.npmjs.com/package/vue-cirrus/v/0.2.2

@@ -13,7 +13,7 @@
     "cirrus",
     "framework"
   ],
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "./dist/vue-cirrus.common.js",
   "private": false,
