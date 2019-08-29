@@ -1,10 +1,18 @@
 <template>
   <div
-    :id=splashId
-    class="hero fullscreen hero-img parallax-img"
+    id="splash-img"
+    :class="classes"
+    :style="image.startsWith('http://') || image.startsWith('https://')
+      ? { background: `url(${image})` }
+      : { background: `url(${require(`@/${image}`)})` }"
   >
-    <div class="hero-body">
-      <slot></slot>
+    <div id="hero-body" class="u-center">
+      <v-row>
+        <v-col>
+          <h1 class="white">Hello World</h1>
+          <v-divider />
+        </v-col>
+      </v-row>
     </div>
   </div>
 </template>
@@ -12,21 +20,36 @@
 <script>
 export default {
   props: {
-    splashId: {
-      type: String,
-      default: 'splash-img',
-    },
-    src: {
+    image: {
       type: String,
       default: '',
     },
+    fullscreen: {
+      type: Boolean,
+      default: false,
+    },
+    disableParallax: {
+      type: Boolean,
+      default: false,
+    },
   },
 
-  mounted() {
-    const splashDiv = document.getElementById(this.splashId);
-
-    splashDiv.style.background = `url(${this.src})`;
-    splashDiv.style.backgroundSize = 'cover';
+  computed: {
+    classes() {
+      return {
+        hero: true,
+        'hero-img': true,
+        'parallax-img': !this.disableParallax,
+        fullscreen: this.fullscreen,
+      };
+    },
   },
 };
 </script>
+
+<style>
+#splash-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>

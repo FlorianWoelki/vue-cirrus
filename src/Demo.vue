@@ -1,15 +1,13 @@
 <template>
   <div class="demo">
-    <div id="splash-img" class="hero fullscreen hero-img parallax-img">
-      <div id="hero-body" class="u-center">
-        <v-row>
-          <v-col>
-            <h1 class="white">Hello World</h1>
-            <v-divider />
-          </v-col>
-        </v-row>
-      </div>
-    </div>
+    <v-parallax
+      fullscreen
+      link="image.png"
+      image="https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100"
+    >
+      <h1 class="white">Hello World</h1>
+      <v-divider />
+    </v-parallax>
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
@@ -56,11 +54,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#splash-img {
-  background: url('https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-</style>
