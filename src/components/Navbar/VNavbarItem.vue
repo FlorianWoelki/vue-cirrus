@@ -6,6 +6,7 @@
     <a
       :href=href
       @click="handleClick($event)"
+      :target="blank ? '_blank' : ''"
     >
       <slot></slot>
     </a>
@@ -25,6 +26,10 @@ export default {
   ],
 
   props: {
+    blank: {
+      type: Boolean,
+      default: false,
+    },
     active: {
       type: Boolean,
       default: false,

@@ -4,7 +4,10 @@
     role="menu-item"
     :data-tooltip=tooltipData
   >
-    <a :href=link>
+    <a
+      :href=href
+      :target="blank ? '_blank' : ''"
+    >
       <slot></slot>
     </a>
   </li>
@@ -21,7 +24,11 @@ export default {
   ],
 
   props: {
-    link: {
+    blank: {
+      type: Boolean,
+      default: false,
+    },
+    href: {
       type: String,
       default: '#',
     },
