@@ -27,21 +27,37 @@ export default {
       type: String,
       default: 'gray',
     },
-    accent: {
+    primary: {
       type: Boolean,
       default: false,
     },
-    lightgray: {
+    info: {
       type: Boolean,
       default: false,
     },
-    darkgray: {
+    link: {
       type: Boolean,
       default: false,
     },
-    black: {
+    dark: {
       type: Boolean,
       default: false,
+    },
+    success: {
+      type: Boolean,
+      default: false,
+    },
+    warning: {
+      type: Boolean,
+      default: false,
+    },
+    danger: {
+      type: Boolean,
+      default: false,
+    },
+    light: {
+      type: Boolean,
+      default: true,
     },
   },
 
@@ -61,14 +77,22 @@ export default {
         spanChild.classList.add('bottom');
       }
 
-      if (this.accent) {
-        spanChild.classList.add('accent-badge');
-      } else if (this.lightgray) {
-        spanChild.classList.add('lightgray-badge');
-      } else if (this.darkgray) {
-        spanChild.classList.add('darkgray-badge');
-      } else if (this.black) {
-        spanChild.classList.add('black-badge');
+      if (this.primary) {
+        spanChild.classList.add('primary-badge');
+      } else if (this.info) {
+        spanChild.classList.add('info-badge');
+      } else if (this.link) {
+        spanChild.classList.add('link-badge');
+      } else if (this.dark) {
+        spanChild.classList.add('dark-badge');
+      } else if (this.success) {
+        spanChild.classList.add('success-badge');
+      } else if (this.warning) {
+        spanChild.classList.add('warning-badge');
+      } else if (this.danger) {
+        spanChild.classList.add('danger-badge');
+      } else if (this.light) {
+        spanChild.classList.add('light-badge');
       }
 
       spanChild.setAttribute('data-badge', this.content);
@@ -96,22 +120,45 @@ export default {
   border-radius: 50%;
   box-shadow: 0 0 1px #333;
 }
-.badge.accent-badge[data-badge]:after {
+.badge.primary-badge[data-badge]:after {
   background: #f03d4d;
   color: #fff;
   border-color: #c21b2b;
 }
-.badge.lightgray-badge[data-badge]:after {
-  background: #eee;
-  color: #333;
-}
-.badge.darkgray-badge[data-badge]:after {
-  background: #444;
+.badge.info-badge[data-badge]:after {
+  background: #2972fa;
   color: #fff;
+  border-color: #205BC8;
 }
-.badge.black-badge[data-badge]:after {
-  background: #000;
+.badge.link-badge[data-badge]:after {
+  background: #5e5cc7;
   color: #fff;
+  border-color: #4B499F;
+}
+.badge.dark-badge[data-badge]:after {
+  background: #363636;
+  color: #fff;
+  border-color: #2B2B2B;
+}
+.badge.success-badge[data-badge]:after {
+  background: #0dd157;
+  color: #fff;
+  border-color: #0AA746;
+}
+.badge.warning-badge[data-badge]:after {
+  background: #fab633;
+  color: #fff;
+  border-color: #C89028;
+}
+.badge.danger-badge[data-badge]:after {
+  background: #fb4143;
+  color: #fff;
+  border-color: #C83436;
+}
+.badge.light-badge[data-badge]:after {
+  background: #f6f9fc;
+  color: #000;
+  border-color: #C4C7C9;
 }
 
 .badge.right[data-badge]:after {

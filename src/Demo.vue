@@ -13,6 +13,9 @@
         <v-parallax-element :factor="1">
           <v-simple-card title="Card Title">
             <v-card-content>
+              <v-badge content="35">
+                <span>test</span>
+              </v-badge>
               <p>This is some basic simple card text</p>
               <a href="#">#vue-cirrus</a>
               <a href="#">#cirrus</a>
