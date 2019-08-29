@@ -33,6 +33,18 @@
           </v-simple-card>
         </v-parallax-element>
 
+        <v-row center>
+          <v-col fluid textCenter>
+            <v-headline h3>A</v-headline>
+          </v-col>
+          <v-col fluid textCenter>
+            <v-headline h3>B</v-headline>
+          </v-col>
+          <v-col fluid textCenter>
+            <v-headline h3>C</v-headline>
+          </v-col>
+        </v-row>
+
         <h3>Some testing</h3>
         <p v-for="i in 9" :key="i+9">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.

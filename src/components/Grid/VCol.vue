@@ -220,7 +220,7 @@ export default {
       return Object.assign(
         this.layoutMixins,
         {
-          'col-fluid': this.fluid,
+          col: this.fluid,
           'col-1': this.c1,
           'col-2': this.c2,
           'col-3': this.c3,
