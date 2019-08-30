@@ -112,7 +112,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    xsmall: {
+    tiny: {
       type: Boolean,
       default: false,
     },
@@ -162,7 +162,7 @@ export default {
         'btn-success': this.success,
         'btn-warning': this.warning,
         'btn-danger': this.danger,
-        'btn-tiny': this.xsmall,
+        'btn-tiny': this.tiny,
         'btn-small': this.small,
         'btn-large': this.large,
         'btn-xlarge': this.xlarge,
