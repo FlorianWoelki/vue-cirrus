@@ -11,11 +11,11 @@
       for="mixins"
       class="tree-item-header"
     >
-      {{ title }}
       <span v-if="showArrow" style="font-size: 11px; color: gray">
         <span v-if="!dropdownClicked">▶</span>
         <span v-else>▼</span>
       </span>
+      {{ title }}
     </label>
     <div class="tree-item-body">
       <ul class="menu">
