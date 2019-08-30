@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.3] - 2019-08-30
+
+### 🔨 Added
+- Added v-parallax-element to get a good parallax experience
+- Added colors for badges
+- Added checkbox component
+- Added toggler input component
+- Added checkbox component
+
+### ⚡️ Changed
+- Changed arrow position on sidebar dropdown
+- Combined parallax and fullscreen component
+- Fixed column fluid
+- Updated link to href and added blank property to navbaritem
+- Changed xsmall property to tiny
+
+
 ## [0.2.2] - 2019-08-27
 
 ### 🔨 Added
@@ -306,3 +323,4 @@ All notable changes to this project will be documented in this file.
 [0.2.0]: https://www.npmjs.com/package/vue-cirrus/v/0.2.0
 [0.2.1]: https://www.npmjs.com/package/vue-cirrus/v/0.2.1
 [0.2.2]: https://www.npmjs.com/package/vue-cirrus/v/0.2.2
+[0.2.3]: https://www.npmjs.com/package/vue-cirrus/v/0.2.3
