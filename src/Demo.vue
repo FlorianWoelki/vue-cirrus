@@ -13,7 +13,8 @@
         <v-parallax-element :factor="1">
           <v-simple-card title="Card Title">
             <v-card-content>
-              <v-checkbox error>Das ist ein Test</v-checkbox>
+              <v-radio-btn>Test</v-radio-btn>
+              <v-radio-btn id="radio-2">Test 2</v-radio-btn>
               <v-badge content="35">
                 <span>test</span>
               </v-badge>
