@@ -3,13 +3,15 @@
     <h3>Getting Started</h3>
     <v-divider></v-divider>
     <v-row>
-      <p>
-        Getting started with Vue Cirrus is really simple. There will be more options on
-        getting started with Vue Cirrus!
-      </p>
+      <v-col c12>
+        <p>
+          Getting started with Vue Cirrus is really simple. There will be more options on
+          getting started with Vue Cirrus!
+        </p>
+      </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col c12>
         <h6>Install with NPM</h6>
         <p>You can use npm to install Vue Cirrus</p>
         <v-code
@@ -17,14 +19,10 @@
           copyable
           :dark="isDarkMode"
         >npm install --save vue-cirrus</v-code>
-        <p>
-          In addition, you can use yarn to install Vue-Cirrus. Make sure to install
-          the latest version, to get the most out of this framework.
-        </p>
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col c12>
         <h6>Setting Up</h6>
         <p>
           Setting up Vue Cirrus for any project is very simple and will only
