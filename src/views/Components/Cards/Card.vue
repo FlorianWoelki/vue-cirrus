@@ -1,22 +1,16 @@
 <template>
-  <v-row>
+  <v-row level>
     <v-col c6>
-      <v-code
-        lang="Vue"
-        style="margin-top: 50px;"
-      >
+      <v-code lang="Vue">
         <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
-    <v-col
-      center
-      c6
-    >
+    <v-col center c6>
       <v-card
-        animated
         title="Title"
         subtitle="Subtitle"
         footerText="Footer text"
+        height="240px"
       >
         <v-card-content>
           <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
@@ -31,10 +25,10 @@ export default {
   data() {
     return {
       code: `<v-card
-  animated
   title="Title"
   subtitle="Subtitle"
   footerText="Footer text"
+  height="240px"
 >
   <v-card-content>
     <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>

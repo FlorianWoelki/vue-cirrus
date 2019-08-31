@@ -1,16 +1,12 @@
 <template>
-  <v-row>
+  <v-row level>
     <v-col c6>
       <v-code lang="Vue">
         <xmp v-html="code"></xmp>
       </v-code>
     </v-col>
-    <v-col
-      center
-      c6
-      style="margin-top: 30px;"
-    >
-      <v-simple-card title="Card Title">
+    <v-col c6 center style="margin-top: 30px;">
+      <v-simple-card style="min-width:100%;" title="Card Title">
         <v-card-content>
           <p>This is some basic simple card text</p>
           <a href="#">#vue-cirrus</a>
@@ -31,7 +27,7 @@
 export default {
   data() {
     return {
-      code: `<v-simple-card title="Card Title">
+      code: `<v-simple-card title="Card Title" style="min-width:100%;">
   <v-card-content>
     <p>This is some basic simple card text</p>
     <a href="#">#vue-cirrus</a>
