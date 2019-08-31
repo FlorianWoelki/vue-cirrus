@@ -1,6 +1,12 @@
 <template>
   <div class="form-ext-control form-ext-radio">
-    <input :id="id" :class="classes" :name="name" type="radio">
+    <input
+      :id="id"
+      :class="classes"
+      :name="name"
+      type="radio"
+      @change="handleRadioChange"
+    >
     <label :for="id" class="form-ext-label">
       <slot />
     </label>
@@ -33,6 +39,12 @@ export default {
     error: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleRadioChange(event) {
+      this.$emit('change', event);
     },
   },
 
