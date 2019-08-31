@@ -13,7 +13,7 @@
         <v-parallax-element :factor="1">
           <v-simple-card title="Card Title">
             <v-card-content>
-              <v-toggler dataCheckIcon="Y" dataUncheckIcon="N" error>test</v-toggler>
+              <v-toggler @change="test" dataCheckIcon="Y" dataUncheckIcon="N" error>test</v-toggler>
               <v-badge content="35">
                 <span>test</span>
               </v-badge>

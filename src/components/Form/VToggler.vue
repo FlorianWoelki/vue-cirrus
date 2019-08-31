@@ -9,6 +9,7 @@
           class="form-ext-input"
           :checked="checked"
           :disabled="disabled"
+          @change="handleToggleChange"
         >
         <div class="form-ext-toggle__toggler">
           <i :data-check-icon="dataCheckIcon" :data-uncheck-icon="dataUncheckIcon"></i>
@@ -48,6 +49,12 @@ export default {
     error: {
       type: Boolean,
       default: false,
+    },
+  },
+
+  methods: {
+    handleToggleChange(event) {
+      this.$emit('change', event);
     },
   },
 
