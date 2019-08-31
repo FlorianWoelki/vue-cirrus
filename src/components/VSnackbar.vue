@@ -24,19 +24,35 @@ export default {
   },
 
   props: {
-    accent: {
+    success: {
       type: Boolean,
       default: false,
     },
-    gray: {
+    warning: {
       type: Boolean,
       default: false,
     },
-    black: {
+    danger: {
       type: Boolean,
       default: false,
     },
-    value: {
+    info: {
+      type: Boolean,
+      default: false,
+    },
+    link: {
+      type: Boolean,
+      default: false,
+    },
+    primary: {
+      type: Boolean,
+      default: false,
+    },
+    light: {
+      type: Boolean,
+      default: false,
+    },
+    dark: {
       type: Boolean,
       default: false,
     },
@@ -100,9 +116,14 @@ export default {
           'top-left': this.topLeft,
           'top-right': this.topRight,
           'top-center': this.topCenter,
-          'accent-snackbar': this.accent,
-          'darkgray-snackbar': this.darkgray,
-          'black-snackbar': this.black,
+          'success-snackbar': this.success,
+          'warning-snackbar': this.warning,
+          'danger-snackbar': this.danger,
+          'info-snackbar': this.info,
+          'link-snackbar': this.link,
+          'primary-snackbar': this.primary,
+          'light-snackbar': this.light,
+          'dark-snackbar': this.dark,
         },
       );
     },
@@ -124,18 +145,45 @@ export default {
   z-index: 1;
 }
 
-.snackbar.accent-snackbar {
+.snackbar.primary-snackbar {
   background: #f03d4d;
   color: #fff;
   border-color: #c21b2b;
 }
-.snackbar.darkgray-snackbar {
-  background: #444;
+.snackbar.info-snackbar {
+  background: #2972fa;
   color: #fff;
+  border-color: #205BC8;
 }
-.snackbar.black-snackbar {
-  background: #000;
+.snackbar.link-snackbar {
+  background: #5e5cc7;
   color: #fff;
+  border-color: #4B499F;
+}
+.snackbar.dark-snackbar {
+  background: #363636;
+  color: #fff;
+  border-color: #2B2B2B;
+}
+.snackbar.success-snackbar {
+  background: #0dd157;
+  color: #fff;
+  border-color: #0AA746;
+}
+.snackbar.warning-snackbar {
+  background: #fab633;
+  color: #fff;
+  border-color: #C89028;
+}
+.snackbar.danger-snackbar {
+  background: #fb4143;
+  color: #fff;
+  border-color: #C83436;
+}
+.snackbar.light-snackbar {
+  background: #f6f9fc;
+  color: #000;
+  border-color: #C4C7C9;
 }
 
 .snackbar.top-center {
