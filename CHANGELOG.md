@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4] - 2019-09-01
+
+### 🔨 Added
+- Added change event for radio, toggler and checkbox component
+
+### ⚡️ Changed
+- Updated colors of snackbar
+
+
 ## [0.2.3] - 2019-08-30
 
 ### 🔨 Added
@@ -324,3 +333,4 @@ All notable changes to this project will be documented in this file.
 [0.2.1]: https://www.npmjs.com/package/vue-cirrus/v/0.2.1
 [0.2.2]: https://www.npmjs.com/package/vue-cirrus/v/0.2.2
 [0.2.3]: https://www.npmjs.com/package/vue-cirrus/v/0.2.3
+[0.2.4]: https://www.npmjs.com/package/vue-cirrus/v/0.2.4
