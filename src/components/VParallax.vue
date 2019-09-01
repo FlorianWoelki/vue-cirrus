@@ -6,13 +6,11 @@
       ? { background: `url(${image})` }
       : { background: `url(${require(`@/${image}`)})` }"
   >
-    <div id="hero-body" class="u-center">
-      <v-row>
-        <v-col>
-          <h1 class="white">Hello World</h1>
-          <v-divider />
-        </v-col>
-      </v-row>
+    <div v-if="!customBody" id="hero-body" class="u-center">
+      <slot />
+    </div>
+    <div v-else>
+      <slot />
     </div>
   </div>
 </template>
@@ -20,6 +18,10 @@
 <script>
 export default {
   props: {
+    customBody: {
+      type: Boolean,
+      default: false,
+    },
     image: {
       type: String,
       default: '',
