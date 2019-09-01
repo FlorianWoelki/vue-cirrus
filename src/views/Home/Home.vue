@@ -32,7 +32,7 @@ export default {
     Footer,
     Head,
     GettingStarted,
-    WhatIsVueCirrus,
+    FeaturesExplained,
   },
 };
 </script>

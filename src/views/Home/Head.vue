@@ -14,7 +14,7 @@
           <h1>Vue Cirrus</h1>
           <h6 class="font-light">The Vue library for the modern Cirrus CSS framework.</h6>
           <v-row>
-            <v-col c6>
+            <v-col c12>
               <router-link to='/components'>
                 <v-btn
                   animated
@@ -25,6 +25,7 @@
                 </v-btn>
               </router-link>
             </v-col>
+            <!--
             <v-col c6>
               <router-link to='/playground'>
                 <v-btn
@@ -37,6 +38,7 @@
                 </v-btn>
               </router-link>
             </v-col>
+            -->
           </v-row>
         </div>
       </div>
