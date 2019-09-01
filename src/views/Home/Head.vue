@@ -45,12 +45,8 @@
 </template>
 
 <style>
-.head {
-  height: 100vh;
-}
 .head #splash-img {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-              url('../../assets/head-background.jpg');
+  background: url('https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

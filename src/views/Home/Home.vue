@@ -3,8 +3,10 @@
     <Navbar fixed />
     <Head />
 
+    <FeaturesExplained />
+
     <div class="content">
-      <GettingStarted style="margin-top: 100px;" />
+      <GettingStarted />
 
       <a href="#/components">
         <v-btn animated accent>
@@ -22,6 +24,7 @@ import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import Head from '@/views/Home/Head.vue';
 import GettingStarted from '@/views/Home/GettingStarted.vue';
+import FeaturesExplained from '@/components/FeaturesExplained.vue';
 
 export default {
   components: {
@@ -29,6 +32,7 @@ export default {
     Footer,
     Head,
     GettingStarted,
+    WhatIsVueCirrus,
   },
 };
 </script>
