@@ -4,7 +4,7 @@
       v-if="image === ''"
       class="card-head"
     >
-      <p class="card-head-title">{{title}}</p>
+      <p v-if="title !== ''" class="card-head-title">{{title}}</p>
     </div>
     <div
       v-else

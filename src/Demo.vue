@@ -11,7 +11,7 @@
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
-          <v-simple-card title="Card Title">
+          <v-simple-card>
             <v-card-content>
               <v-toggler @change="test" dataCheckIcon="Y" dataUncheckIcon="N" error>test</v-toggler>
               <v-badge content="35">
@@ -27,13 +27,13 @@
               </v-tag-container>
             </v-card-content>
             <div class="card-footer level content">6:32 PM - 3 Jul 19</div>
-            <v-card-buttons>
+            <v-card-actions>
               <v-row center>
                 <v-btn primary>Cancel</v-btn>
                 <v-btn success>Save</v-btn>
                 <v-btn link>Post</v-btn>
               </v-row>
-            </v-card-buttons>
+            </v-card-actions>
           </v-simple-card>
         </v-parallax-element>
 
