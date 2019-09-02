@@ -7,7 +7,9 @@
       </h6>
     </div>
 
-    <v-row style="margin-top:50px;" level>
+    <v-space />
+
+    <v-row level>
       <v-col c6>
         <h5>Step 1</h5>
         <v-divider short />
