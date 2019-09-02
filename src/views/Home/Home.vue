@@ -7,12 +7,6 @@
 
     <div class="content">
       <GettingStarted />
-
-      <a href="#/components">
-        <v-btn animated accent>
-          <i class="fas fa-arrow-circle-right fa-lg"></i> Check out the Components
-        </v-btn>
-      </a>
     </div>
 
     <Footer />
