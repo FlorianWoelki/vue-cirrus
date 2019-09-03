@@ -11,12 +11,12 @@
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
-          <v-card>
+          <v-card
+            title="Test"
+            subtitle="Subtest"
+            image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
+          >
             <v-card-content>
-              <v-toggler @change="test" dataCheckIcon="Y" dataUncheckIcon="N" error>test</v-toggler>
-              <v-badge content="35">
-                <span>test</span>
-              </v-badge>
               <p>This is some basic simple card text</p>
               <a href="#">#vue-cirrus</a>
               <a href="#">#cirrus</a>
@@ -26,7 +26,9 @@
                 <v-tag black>World</v-tag>
               </v-tag-container>
             </v-card-content>
-            <div class="card-footer level content">6:32 PM - 3 Jul 19</div>
+
+            <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
+
             <v-card-actions>
               <v-row center>
                 <v-btn primary>Cancel</v-btn>

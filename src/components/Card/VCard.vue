@@ -1,11 +1,14 @@
 <template>
   <div v-if="!animated" :class="cardClasses">
-    <div class="card-container" :style="{ 'min-height': `${image === '' ? 0 : height}` }">
-      <div v-if="image" class="card-image" :style="image"></div>
+    <div v-if="image" class="card-container" :style="{ 'min-height': `${height}` }">
+      <div class="card-image" :style="image"></div>
       <div class="title-container">
         <p class="title">{{ title }}</p>
         <span class="subtitle">{{ subtitle }}</span>
       </div>
+    </div>
+    <div v-else class="card-head">
+      <p class="card-head-title">{{ title }}</p>
     </div>
 
     <slot></slot>
@@ -17,9 +20,9 @@
     <div class="mobile-title">
       <div class="content">
         <div class="tile">
-          <div class="tile-container">
-            <p class="tile-title">{{ title }}</p>
-            <p class="tile-subtitle">{{ subtitle }}</p>
+          <div class="tile__container">
+            <p class="tile__title">{{ title }}</p>
+            <p class="tile__subtitle">{{ subtitle }}</p>
           </div>
         </div>
       </div>
