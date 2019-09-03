@@ -1,60 +1,31 @@
 <template>
-  <div
-    v-if="!animated"
-    :class=cardClasses
-  >
-    <div
-      class="card-container"
-      :style="{ 'min-height': `${height}` }"
-    >
-      <div
-        class="card-image"
-        :style=image
-      >
-      </div>
+  <div v-if="!animated" :class="cardClasses">
+    <div class="card-container" :style="{ 'min-height': `${image === '' ? 0 : height}` }">
+      <div v-if="image" class="card-image" :style="image"></div>
       <div class="title-container">
-        <p class="title">{{title}}</p>
-        <span class="subtitle">{{subtitle}}</span>
+        <p class="title">{{ title }}</p>
+        <span class="subtitle">{{ subtitle }}</span>
       </div>
     </div>
 
     <slot></slot>
-
-    <div class="card-footer content-fluid">
-      <div class="text-center">
-        <span>{{footerText}}</span>
-      </div>
-    </div>
   </div>
-  <div
-    v-else
-    class="card slide-up"
-  >
-    <div
-      class="card-container"
-      :style="{ 'min-height': `${height}` }"
-    >
-      <div
-        class="card-image"
-        :style=image
-      ></div>
+  <div v-else class="card slide-up">
+    <div v-if="image" class="card-container" :style="{ 'min-height': `${height}` }">
+      <div class="card-image" :style="image"></div>
     </div>
     <div class="mobile-title">
       <div class="content">
         <div class="tile">
           <div class="tile-container">
-            <p class="tile-title">{{title}}</p>
-            <p class="tile-subtitle">{{subtitle}}</p>
+            <p class="tile-title">{{ title }}</p>
+            <p class="tile-subtitle">{{ subtitle }}</p>
           </div>
         </div>
       </div>
     </div>
 
     <slot></slot>
-
-    <div class="card-footer content">
-      <span>{{footerText}}</span>
-    </div>
   </div>
 </template>
 
@@ -87,7 +58,8 @@ export default {
     },
     image: {
       type: String,
-      default: 'background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);',
+      default: '',
+      // default: 'background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);',
     },
     height: {
       type: String,

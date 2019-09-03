@@ -11,7 +11,7 @@
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
-          <v-simple-card>
+          <v-card>
             <v-card-content>
               <v-toggler @change="test" dataCheckIcon="Y" dataUncheckIcon="N" error>test</v-toggler>
               <v-badge content="35">
@@ -34,7 +34,7 @@
                 <v-btn link>Post</v-btn>
               </v-row>
             </v-card-actions>
-          </v-simple-card>
+          </v-card>
         </v-parallax-element>
 
         <v-row center>
