@@ -1,18 +1,11 @@
 <template>
   <div v-if="!animated" :class="cardClasses">
-    <div v-if="image" class="card-container" :style="{ 'min-height': `${height}` }">
-      <div class="card-image" :style="image"></div>
-      <div class="title-container">
-        <p class="title">{{ title }}</p>
-        <span class="subtitle">{{ subtitle }}</span>
-      </div>
-    </div>
-    <div v-else class="card-head">
-      <p class="card-head-title">{{ title }}</p>
-    </div>
-
-    <slot></slot>
+    <slot />
   </div>
+  <div v-else class="card slide-up">
+    <slot />
+  </div>
+  <!--
   <div v-else class="card slide-up">
     <div v-if="image" class="card-container" :style="{ 'min-height': `${height}` }">
       <div class="card-image" :style="image"></div>
@@ -30,6 +23,7 @@
 
     <slot></slot>
   </div>
+  -->
 </template>
 
 <script>
@@ -41,6 +35,12 @@ export default {
     Layout,
     Animations,
   ],
+
+  provide() {
+    return {
+      animated: this.animated,
+    };
+  },
 
   props: {
     animated: {
@@ -58,15 +58,6 @@ export default {
     footerText: {
       type: String,
       default: '',
-    },
-    image: {
-      type: String,
-      default: '',
-      // default: 'background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);',
-    },
-    height: {
-      type: String,
-      default: '332px',
     },
     equalHeight: {
       type: Boolean,

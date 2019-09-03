@@ -11,20 +11,23 @@
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
-          <v-card
-            title="Test"
-            subtitle="Subtest"
-            image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
-          >
+          <v-card animated>
+            <v-card-image
+              image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
+            >
+              <v-card-title>test</v-card-title>
+              <v-card-subtitle>
+                <v-tag-container grouped>
+                  <v-tag primary>Hello</v-tag>
+                  <v-tag warning>My</v-tag>
+                  <v-tag black>World</v-tag>
+                </v-tag-container>
+              </v-card-subtitle>
+            </v-card-image>
             <v-card-content>
               <p>This is some basic simple card text</p>
               <a href="#">#vue-cirrus</a>
               <a href="#">#cirrus</a>
-              <v-tag-container grouped>
-                <v-tag primary>Hello</v-tag>
-                <v-tag warning>My</v-tag>
-                <v-tag black>World</v-tag>
-              </v-tag-container>
             </v-card-content>
 
             <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
