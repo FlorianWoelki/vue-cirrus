@@ -2,7 +2,7 @@
   <div v-if="!animated" :class="cardClasses">
     <slot />
   </div>
-  <div v-else class="card slide-up">
+  <div v-else :class="cardClasses">
     <slot />
   </div>
   <!--
@@ -72,6 +72,7 @@ export default {
         this.animationsMixins,
         {
           card: true,
+          'slide-up': this.animated,
           'u-flex u-flex-column h-100': this.equalHeight,
         },
       );
