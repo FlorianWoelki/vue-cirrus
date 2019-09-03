@@ -1,11 +1,10 @@
 <template>
-  <figure
-    :class=avatarClasses
-    :data-text=text
-  >
+  <figure :class=avatarClasses :data-text="text">
     <img
-      :src=src
-      :class=imgClasses
+      v-if="src"
+      :src="src.startsWith('http://') || src.startsWith('https://')
+        ? src : require(`@/${src}`)"
+      :class="imgClasses"
     />
   </figure>
 </template>
@@ -61,10 +60,10 @@ export default {
         this.animationsMixins,
         {
           avatar: true,
-          'img-xsmall': this.xsmall,
-          'img-small': this.small,
-          'img-large': this.large,
-          'img-xlarge': this.xlarge,
+          'avatar--xsmall': this.xsmall,
+          'avatar--small': this.small,
+          'avatar--large': this.large,
+          'avatar--xlarge': this.xlarge,
         },
       );
     },

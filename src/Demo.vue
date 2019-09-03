@@ -11,7 +11,7 @@
     <v-row center>
       <v-col c6>
         <v-parallax-element :factor="1">
-          <v-card animated>
+          <v-card>
             <v-card-image
               image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
             >
@@ -25,6 +25,7 @@
               </v-card-subtitle>
             </v-card-image>
             <v-card-content>
+              <v-avatar src="assets/logo.png"></v-avatar>
               <p>This is some basic simple card text</p>
               <a href="#">#vue-cirrus</a>
               <a href="#">#cirrus</a>
