@@ -10,9 +10,9 @@
 <script>
 export default {
   props: {
-    factor: {
+    speed: {
       type: Number,
-      default: 0.25,
+      default: 0.5,
     },
     margin: {
       type: Number,
@@ -20,13 +20,11 @@ export default {
     },
     stopValue: {
       type: Number,
-      default: 200,
+      default: 600,
     },
   },
   data() {
     return {
-      height: 0,
-      scrollFactor: 0,
       currentOffset: 0,
     };
   },
@@ -47,23 +45,13 @@ export default {
 
   methods: {
     calculateParallax() {
-      const containerRect = this.$el.getBoundingClientRect();
-
-      this.height = containerRect.height;
-
-      const viewportOffsetTop = containerRect.top;
-      const viewportOffsetBottom = window.innerHeight - viewportOffsetTop;
-
-      this.scrollFactor = viewportOffsetBottom / (window.innerHeight + this.height);
+      if (window.pageYOffset <= this.stopValue) {
+        this.currentOffset = window.pageYOffset * this.speed;
+      }
     },
 
     offset() {
-      if (this.currentOffset >= -this.stopValue) {
-        this.currentOffset = this.scrollFactor * this.height * -this.factor;
-      } else if (this.scrollFactor * this.height * -this.factor >= -this.stopValue) {
-        this.currentOffset = this.scrollFactor * this.height * -this.factor;
-      }
-      return this.currentOffset;
+      return -this.currentOffset;
     },
   },
 };

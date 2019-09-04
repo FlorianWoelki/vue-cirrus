@@ -10,7 +10,7 @@
     </v-parallax>
     <v-row center>
       <v-col c6>
-        <v-parallax-element :factor="1">
+        <v-parallax-element>
           <v-card>
             <v-card-image
               image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
