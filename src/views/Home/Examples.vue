@@ -12,26 +12,25 @@
     <v-row>
       <v-col c4>
         <ExampleCard
-          title="Showdown"
-          subtitle="test"
-          description="Hello World"
+          title="Register Process"
+          subtitleTags="Forms,Layout,Buttons"
+          description="A dynamic, beautiful register process page."
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
         />
       </v-col>
       <v-col c4>
         <ExampleCard
-          title="Showdown"
-          subtitle="test"
-          description="Hello World"
+          title="Blog Page"
+          subtitleTags="Layout,NavBar"
+          description="This is a blog preview."
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
         />
       </v-col>
       <v-col c4>
         <ExampleCard
-          title="Showdown"
-          subtitle="test"
-          description="Hello World Hello World Hello World Hello World
-            Hello World Hello World Hello World"
+          title="Contact Page"
+          subtitleTags="Forms,Layout,Animations"
+          description="A dynamic and animated contact page."
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
         />
       </v-col>

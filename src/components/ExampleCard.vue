@@ -2,7 +2,11 @@
   <v-card equalHeight>
     <v-card-image :image="`backgroundImage: url(${image})`">
       <v-card-title>{{ title }}</v-card-title>
-      <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
+      <v-card-subtitle>
+        <v-tag-container>
+          <v-tag info v-for="tag in getTagsAsString" :key="tag">{{ tag }}</v-tag>
+        </v-tag-container>
+      </v-card-subtitle>
     </v-card-image>
 
     <v-card-content>
@@ -28,13 +32,24 @@ export default {
       type: String,
       default: '',
     },
-    subtitle: {
+    subtitleTags: {
       type: String,
       default: '',
     },
     description: {
       type: String,
       default: '',
+    },
+  },
+
+  computed: {
+    getTagsAsString() {
+      const tags = [];
+      this.subtitleTags.split(',').forEach((str) => {
+        tags.push(str);
+      });
+
+      return tags;
     },
   },
 };
