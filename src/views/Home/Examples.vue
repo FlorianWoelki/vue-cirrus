@@ -13,7 +13,7 @@
       <v-col c4>
         <ExampleCard
           title="Showdown"
-          subtitle="afdler"
+          subtitle="test"
           description="Hello World"
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
         />
@@ -21,7 +21,7 @@
       <v-col c4>
         <ExampleCard
           title="Showdown"
-          subtitle="afdler"
+          subtitle="test"
           description="Hello World"
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
         />
@@ -29,7 +29,7 @@
       <v-col c4>
         <ExampleCard
           title="Showdown"
-          subtitle="afdler"
+          subtitle="test"
           description="Hello World Hello World Hello World Hello World
             Hello World Hello World Hello World"
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"

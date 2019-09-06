@@ -1,21 +1,20 @@
 <template>
-  <div class="card h-100 u-flex u-flex-column">
-    <div class="card-container">
-      <div class="card-image" :style="'background-image: url(' + image + ')'"></div>
-      <div class="title-container">
-        <p class="title">{{ title }}</p>
-        <p class="subtitle">{{ subtitle }}</p>
-      </div>
-    </div>
-    <div class="content">
+  <v-card equalHeight>
+    <v-card-image :image="`backgroundImage: url(${image})`">
+      <v-card-title>{{ title }}</v-card-title>
+      <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
+    </v-card-image>
+
+    <v-card-content>
       <p>{{ description }}</p>
-    </div>
-    <div class="action-bar">
+    </v-card-content>
+
+    <v-card-actions>
       <v-row center>
         <v-btn primary>Preview</v-btn>
       </v-row>
-    </div>
-  </div>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
