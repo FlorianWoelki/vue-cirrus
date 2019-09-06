@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.5] - 2019-09-06
+
+### 🔨 Added
+- Added equal height property to animated cards
+
+### ⚡️ Changed
+- Fixed and updated performance for parallax component
+- Updated card to all in one card
+- Updated sizes of avatar image
+
+
 ## [0.2.4] - 2019-09-01
 
 ### 🔨 Added
