@@ -1,7 +1,7 @@
 <template>
   <v-row center>
     <v-col c9>
-      <v-parallax-element :factor="1">
+      <v-parallax-element :speed="0.5" :stopValue="450">
         <div class="card">
           <v-container>
             <h3 class="u-text-center" style="margin-top:25px;">Why Vue Cirrus?</h3>
