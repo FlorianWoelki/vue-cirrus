@@ -1,14 +1,8 @@
 <template>
   <footer class="footer-section">
     <v-row class="level">
-      <v-col
-        c4
-        o4
-      >
-        <p
-          class="white font-bold"
-          style="letter-spacing: 0; font-size: 1.3rem;"
-        >
+      <v-col c4 o4>
+        <p class="white font-bold" style="letter-spacing: 0; font-size: 1.3rem;">
           <span class="faded">&copy; 2019</span>
           Vue Cirrus
         </p>
@@ -17,18 +11,13 @@
 
         <p>
           Code is licensed with
-          <a
-            class="white"
-            href="https://opensource.org/licenses/MIT"
-            target="_blank"
-          >MIT</a>. Everything is <span class="white">free</span> to use!
+          <v-link href="https://opensource.org/licenses/MIT" blank>MIT</v-link>.
+          Everything is <span class="white">free</span> and <v-link href="https://github.com/FlorianWoelki/vue-cirrus" blank>open source</v-link>!
         </p>
 
         <p>
-          Made with <i
-            class="fa fa-heart animated pulse"
-            aria-hidden="true"
-          ></i> by <span class="white">Florian Woelki</span>
+          Made with <i class="fa fa-heart animated pulse" aria-hidden="true"></i>
+          by <span class="white"><v-link href="http://florianwoelki.com" blank>Florian Woelki</v-link></span>
         </p>
       </v-col>
     </v-row>
