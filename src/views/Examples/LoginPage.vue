@@ -8,9 +8,11 @@
       <v-divider short />
       <v-space />
 
-      <v-input-field title="Email">
+      <v-input-field placeholder="Email" title="Email" icon>
+        <span class="icon"><i class="far fa-wrapper fa-envelope-open"></i></span>
       </v-input-field>
-      <v-input-field title="Password">
+      <v-input-field placeholder="Password" title="Password" type="password" icon>
+        <span class="icon"><i class="fas fa-wrapper fa-key"></i></span>
       </v-input-field>
       <v-row>
         <v-col c6>
