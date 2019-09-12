@@ -43,6 +43,10 @@
           </v-card>
         </v-parallax-element>
 
+        <v-input-field placeholder="Hello World" title="Testing Title" subtitle="test" icon>
+          <span class="icon">123</span>
+        </v-input-field>
+
         <v-row center>
           <v-col fluid textCenter>
             <v-headline h3>A</v-headline>

@@ -20,18 +20,20 @@
       v-if="subtitle"
       :class=infoClasses
     >{{subtitle}}</span>
-    <input
-      :type=type
-      :class=inputClasses
-      :placeholder=placeholder
-      :value=value
-      @input=handleInput($event)
-    />
+    <div :class="icon ? 'input-control' : ''">
+      <input
+        :type=type
+        :class=inputClasses
+        :placeholder=placeholder
+        :value=value
+        @input=handleInput($event)
+      />
+      <slot></slot>
+    </div>
     <span
       v-if=infoText
       class="info u-text-center"
     >{{infoText}}</span>
-    <slot></slot>
   </div>
   <div
     v-else
