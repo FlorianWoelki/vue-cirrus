@@ -4,6 +4,7 @@ import Home from './views/Home/Home.vue';
 import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
 import Playground from './views/Playground.vue';
+import LoginPage from './views/Examples/LoginPage.vue';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
     {
       path: '/playground',
       component: Playground,
+    },
+    {
+      path: '/examples/loginPage',
+      name: 'loginPage',
+      component: LoginPage,
     },
   ],
 });

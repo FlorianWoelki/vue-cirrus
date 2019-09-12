@@ -15,7 +15,7 @@
 
     <v-card-actions>
       <v-row center>
-        <v-btn primary>Preview</v-btn>
+        <v-btn primary :href="href" blank>Preview</v-btn>
       </v-row>
     </v-card-actions>
   </v-card>
@@ -24,6 +24,10 @@
 <script>
 export default {
   props: {
+    href: {
+      type: String,
+      default: '',
+    },
     image: {
       type: String,
       default: '',
