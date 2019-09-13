@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.51] - 2019-09-13
+
+### 🔨 Added
+- Added v-model ability to input field
+
+
+### ⚡️ Changed
+- Fixed icon alignment on input field
+
+
 ## [0.2.5] - 2019-09-06
 
 ### 🔨 Added
@@ -345,3 +355,5 @@ All notable changes to this project will be documented in this file.
 [0.2.2]: https://www.npmjs.com/package/vue-cirrus/v/0.2.2
 [0.2.3]: https://www.npmjs.com/package/vue-cirrus/v/0.2.3
 [0.2.4]: https://www.npmjs.com/package/vue-cirrus/v/0.2.4
+[0.2.5]: https://www.npmjs.com/package/vue-cirrus/v/0.2.5
+[0.2.51]: https://www.npmjs.com/package/vue-cirrus/v/0.2.51
