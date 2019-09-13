@@ -8,14 +8,14 @@
       <v-divider short />
       <v-space />
 
-      <v-input-field placeholder="Email" title="Email" @input="updateEmail($event)" icon>
+      <v-input-field v-model="email" placeholder="Email" title="Email" icon>
         <span class="icon"><i class="far fa-wrapper fa-envelope-open"></i></span>
       </v-input-field>
       <v-input-field
+        v-model="password"
         placeholder="Password"
         title="Password"
         type="password"
-        @input="updatePassword($event)"
         icon
       >
         <span class="icon"><i class="fas fa-wrapper fa-key"></i></span>
@@ -30,15 +30,22 @@
       </v-row>
       <v-row center>
         <v-col>
-          <v-btn :disabled="disabled" link style="margin-right:12px;">Login</v-btn>
+          <v-btn
+            link
+            style="margin-right:12px;"
+            @click="showFeedback"
+          >Login</v-btn>
         </v-col>
         <v-col>
           <v-btn light>Cancel</v-btn>
         </v-col>
       </v-row>
 
-      <v-row>
-        email: {{email}}
+      <v-row center>
+        <v-toast id="feedback" style="visibility:hidden;">
+          Email: {{ email }} <br />
+          Password: {{ password }}
+        </v-toast>
       </v-row>
     </v-container>
   </div>
@@ -47,17 +54,13 @@
 <script>
 export default {
   data: () => ({
-    disabled: true,
-    email: 'undefined',
-    password: 'undefined',
+    email: '',
+    password: '',
   }),
 
   methods: {
-    updateEmail(event) {
-      this.email = event.target.value;
-    },
-    updatePassword(event) {
-      this.password = event.target.value;
+    showFeedback() {
+      document.getElementById('feedback').style.visibility = 'visible';
     },
   },
 };
