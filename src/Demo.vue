@@ -35,7 +35,7 @@
 
             <v-card-actions>
               <v-row center>
-                <v-btn primary>Cancel</v-btn>
+                <v-btn primary @click="() => { snackbar = !snackbar; }">Cancel</v-btn>
                 <v-btn success>Save</v-btn>
                 <v-btn link>Post</v-btn>
               </v-row>
@@ -74,6 +74,8 @@
         </p>
       </v-col>
     </v-row>
+
+    <v-snackbar v-model="snackbar">Show Me</v-snackbar>
   </div>
 </template>
 
@@ -82,6 +84,7 @@ export default {
   data() {
     return {
       modelTest: '',
+      snackbar: false,
     };
   },
   methods: {

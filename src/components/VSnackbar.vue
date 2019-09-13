@@ -78,6 +78,10 @@ export default {
     },
     topCenter: {
       type: Boolean,
+      default: true,
+    },
+    value: {
+      type: Boolean,
       default: false,
     },
   },
