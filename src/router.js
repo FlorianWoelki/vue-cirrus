@@ -4,7 +4,7 @@ import Home from './views/Home/Home.vue';
 import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
 import Playground from './views/Playground.vue';
-import LoginPage from './views/Examples/LoginPage.vue';
+import LoginPage from './views/Examples/LoginPage/LoginPage.vue';
 
 Vue.use(Router);
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="register-process">
+  <div class="right-view">
     <v-container>
       <v-space xlarge />
       <h3>Login to your account!</h3>
@@ -35,9 +35,6 @@
             style="margin-right:12px;"
             @click="showFeedback"
           >Login</v-btn>
-        </v-col>
-        <v-col>
-          <v-btn light>Cancel</v-btn>
         </v-col>
       </v-row>
 
