@@ -43,7 +43,13 @@
           </v-card>
         </v-parallax-element>
 
-        <v-input-field placeholder="Hello World" title="Testing Title" subtitle="test" icon>
+        <v-input-field
+          v-model="modelTest"
+          placeholder="Hello World"
+          title="Testing Title"
+          :subtitle="modelTest"
+          icon
+        >
           <span class="icon">123</span>
         </v-input-field>
 
@@ -73,6 +79,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      modelTest: '',
+    };
+  },
   methods: {
     test() {
       console.log(1);

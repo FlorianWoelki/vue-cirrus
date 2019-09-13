@@ -5,7 +5,8 @@
     :type=type
     :class=inputClasses
     :placeholder=placeholder
-    @input=handleInput($event)
+    :value="value"
+    @input="$emit('input', $event.target.value)"
   />
   <div
     v-else-if=!select
@@ -25,8 +26,8 @@
         :type=type
         :class=inputClasses
         :placeholder=placeholder
-        :value=value
-        @input=handleInput($event)
+        :value="value"
+        @input="$emit('input', $event.target.value)"
       />
       <slot></slot>
     </div>
@@ -128,12 +129,6 @@ export default {
     icon: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  methods: {
-    handleInput(event) {
-      this.$emit('input', event);
     },
   },
 
