@@ -39,10 +39,10 @@
       </v-row>
 
       <v-row center>
-        <v-toast id="feedback" style="visibility:hidden;">
-          Email: {{ email }} <br />
-          Password: {{ password }}
-        </v-toast>
+        <div id="feedback" style="visibility: hidden;">
+          <p class="u-text-center">Entered Email: {{ email }}</p>
+          <p class="u-text-center">Entered Password: {{ password }}</p>
+        </div>
       </v-row>
     </v-container>
   </div>
@@ -62,3 +62,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.login-page #feedback p {
+  margin-top: -20px;
+}
+</style>
