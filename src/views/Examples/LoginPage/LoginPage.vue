@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-button {
+.login-page button {
   border-radius: 2.1rem;
 }
 </style>
