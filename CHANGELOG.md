@@ -2,11 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.52] - 2019-09-15
+
+### ⚡️ Changed
+- Fixed snackbar functionality
+
+
 ## [0.2.51] - 2019-09-13
 
 ### 🔨 Added
 - Added v-model ability to input field
-
 
 ### ⚡️ Changed
 - Fixed icon alignment on input field
@@ -357,3 +362,4 @@ All notable changes to this project will be documented in this file.
 [0.2.4]: https://www.npmjs.com/package/vue-cirrus/v/0.2.4
 [0.2.5]: https://www.npmjs.com/package/vue-cirrus/v/0.2.5
 [0.2.51]: https://www.npmjs.com/package/vue-cirrus/v/0.2.51
+[0.2.52]: https://www.npmjs.com/package/vue-cirrus/v/0.2.52
