@@ -16,6 +16,7 @@
           subtitleTags="Forms,Layout,Buttons"
           description="A dynamic, beautiful login process page."
           image="https://i.imgur.com/sV4Mc0R.png"
+          github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/LoginPage"
           href="#/examples/loginPage"
         />
       </v-col>

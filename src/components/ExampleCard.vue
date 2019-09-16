@@ -15,7 +15,12 @@
 
     <v-card-actions>
       <v-row center>
-        <v-btn primary :href="href" blank>Preview</v-btn>
+        <v-col c6>
+          <v-btn primary :href="href" blank>Preview</v-btn>
+        </v-col>
+        <v-col c6>
+          <v-btn link :href="github" blank>Code</v-btn>
+        </v-col>
       </v-row>
     </v-card-actions>
   </v-card>
@@ -25,6 +30,10 @@
 export default {
   props: {
     href: {
+      type: String,
+      default: '',
+    },
+    github: {
       type: String,
       default: '',
     },
