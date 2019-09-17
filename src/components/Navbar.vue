@@ -34,10 +34,3 @@ export default {
   },
 };
 </script>
-
-
-<style>
-.nav-icon {
-  margin-top: 10px;
-}
-</style>
