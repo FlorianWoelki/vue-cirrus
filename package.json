@@ -3,6 +3,7 @@
   "author": "Florian Woelki",
   "license": "MIT",
   "repository": "git+https://github.com/FlorianWoelki/vue-cirrus.git",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@FlorianWoelki" },
   "bugs": {
     "url": "https://github.com/FlorianWoelki/vue-cirrus/issues"
   },
