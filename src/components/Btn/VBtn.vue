@@ -140,11 +140,17 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
     handleClick(event) {
-      this.$emit('click', event);
+      if (!this.disabled) {
+        this.$emit('click', event);
+      }
     },
   },
 
