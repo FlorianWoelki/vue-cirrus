@@ -5,6 +5,7 @@ import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
 import Playground from './views/Playground.vue';
 import LoginPage from './views/Examples/LoginPage/LoginPage.vue';
+import ContactPage from './views/Examples/ContactPage/ContactPage.vue';
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/examples/loginPage',
       name: 'loginPage',
       component: LoginPage,
+    },
+    {
+      path: '/examples/contactPage',
+      name: 'contactPage',
+      component: ContactPage,
     },
   ],
 });
