@@ -35,6 +35,7 @@
           subtitleTags="Forms,Layout,Animations"
           description="A dynamic and animated contact page."
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
+          github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/ContactPage"
           href="#/examples/contactPage"
         />
       </v-col>
