@@ -7,16 +7,16 @@
         We're really looking forward to answer you!
       </p>
       <div class="u-center">
-        <v-input-field large placeholder="Name..."></v-input-field>
+        <v-input-field placeholder="Name..."></v-input-field>
       </div>
       <div class="u-center">
-        <v-input-field large placeholder="Email..."></v-input-field>
+        <v-input-field placeholder="Email..."></v-input-field>
       </div>
       <div class="u-center">
-        <v-input-field large placeholder="Regarding..."></v-input-field>
+        <v-input-field placeholder="Regarding..."></v-input-field>
       </div>
       <div class="u-center">
-        <v-text-area large placeholder="Message... (10 character minimum)"></v-text-area>
+        <v-text-area placeholder="Message... (10 character minimum)"></v-text-area>
       </div>
       <div id="send-updates-checkbox">
         <v-checkbox class="font-light">
@@ -33,14 +33,6 @@
   #send-updates-checkbox {
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-
-  .content {
-    margin-top: 125px;
-  }
-
-  textarea {
-    font-size: 1.5rem;
   }
 
   p {
