@@ -6,8 +6,8 @@
           <v-container>
             <h3 class="u-text-center" style="margin-top:25px;">Why Vue Cirrus?</h3>
             <v-divider center short />
-            <v-row center style="margin-top:50px;">
-              <v-col textCenter c4 level>
+            <v-row style="margin-top:50px;">
+              <v-col textCenter c4>
                 <i class="fas fa-terminal fa-3x"></i>
                 <h6>Easy to install</h6>
                 <p class="font-light">
