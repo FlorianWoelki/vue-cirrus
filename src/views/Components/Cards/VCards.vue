@@ -1,14 +1,12 @@
 <template>
   <section class="cards-component">
-    <h5>Simple Cards</h5>
+    <h5>Card With Image</h5>
     <p>Create easy card layouts with this SimpleCard component.</p>
-    <SimpleCard />
+    <CardWithImage />
 
     <v-space xlarge />
 
-    <h5>Minimum Cards</h5>
-    <p>An easier way is to create a minimized card.</p>
-    <MinCard />
+    <CardAnimatedImage />
 
     <v-space xlarge />
 
@@ -29,15 +27,15 @@
 
 <script>
 import API from '@/views/Components/API.vue';
-import SimpleCard from './SimpleCard.vue';
-import MinCard from './MinCard.vue';
+import CardWithImage from './CardWithImage.vue';
+import CardAnimatedImage from './CardAnimatedImage.vue';
 import Card from './Card.vue';
 
 export default {
   components: {
-    SimpleCard,
+    CardWithImage,
+    CardAnimatedImage,
     API,
-    MinCard,
     Card,
   },
   data() {

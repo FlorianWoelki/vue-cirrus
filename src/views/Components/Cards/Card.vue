@@ -6,15 +6,12 @@
       </v-code>
     </v-col>
     <v-col center c6>
-      <v-card
-        title="Title"
-        subtitle="Subtitle"
-        footerText="Footer text"
-        height="240px"
-      >
+      <v-card>
+        <v-card-title>Title</v-card-title>
         <v-card-content>
           <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
         </v-card-content>
+        <v-card-footer>Footer text</v-card-footer>
       </v-card>
     </v-col>
   </v-row>
@@ -24,15 +21,12 @@
 export default {
   data() {
     return {
-      code: `<v-card
-  title="Title"
-  subtitle="Subtitle"
-  footerText="Footer text"
-  height="240px"
->
+      code: `<v-card>
+  <v-card-title>Title</v-card-title>
   <v-card-content>
     <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
   </v-card-content>
+  <v-card-footer>Footer text</v-card-footer>
 </v-card>`,
     };
   },
