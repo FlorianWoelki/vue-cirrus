@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home/Home.vue';
 import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
+import TestPlayground from './views/TestPlayground.vue';
 import LoginPage from './views/Examples/LoginPage/LoginPage.vue';
 import ContactPage from './views/Examples/ContactPage/ContactPage.vue';
 import BlogPage from './views/Examples/BlogPage/BlogPage.vue';
@@ -23,6 +24,11 @@ export default new Router({
       path: '/components',
       name: 'components',
       component: Components,
+    },
+    {
+      path: '/testPlayground',
+      name: 'playground',
+      component: TestPlayground,
     },
     {
       path: '/components/:name',
