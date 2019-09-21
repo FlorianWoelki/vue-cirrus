@@ -1,7 +1,8 @@
-<template>
+<template v-slot:button>
   <button
     :class=classes
     :data-tooltip=tooltipData
+    :disabled=disabled
     @click="onClick"
   >
     <slot></slot>
@@ -29,10 +30,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    btnStyle: {
-      type: String,
-      default: '',
-    },
     tiny: {
       type: Boolean,
       default: false,
@@ -57,23 +54,79 @@ export default {
       type: Boolean,
       default: false,
     },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    primary: {
+      type: Boolean,
+      default: false,
+    },
+    transparent: {
+      type: Boolean,
+      default: false,
+    },
+    light: {
+      type: Boolean,
+      default: false,
+    },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+    black: {
+      type: Boolean,
+      default: false,
+    },
+    info: {
+      type: Boolean,
+      default: false,
+    },
+    link: {
+      type: Boolean,
+      default: false,
+    },
+    success: {
+      type: Boolean,
+      default: false,
+    },
+    warning: {
+      type: Boolean,
+      default: false,
+    },
+    danger: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
     classes() {
-      const buttonStyles = ['accent', 'outline', 'outline-inverted', 'transparent', 'light', 'dark', 'black'];
-      const btnStyle = buttonStyles.includes(this.btnStyle) ? this.btnStyle : null;
-
       const classes = {
         'btn-dropdown': true,
+        'u-no-margin': true,
         'btn-animated': this.animated,
-        [`btn-${this.btnStyle}`]: btnStyle != null,
+        'btn-primary': this.primary,
+        'btn-transparent': this.transparent,
+        'btn-light': this.light,
+        'btn-dark': this.dark,
+        'btn-black': this.black,
+        'btn-info': this.info,
+        'btn-link': this.link,
+        'btn-success': this.success,
+        'btn-warning': this.warning,
+        'btn-danger': this.danger,
         'btn-tiny': this.tiny,
         'btn-small': this.small,
         'btn-large': this.large,
         'btn-xlarge': this.extraLarge,
         'animated loading loading-left': this.loadingLeft,
         'animated loading loading-right': this.loadingRight,
+        outline: this.outline,
       };
 
       return Object.assign(

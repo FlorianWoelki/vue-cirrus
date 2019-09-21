@@ -1,9 +1,9 @@
 <template>
   <li
-    :class=classes
-    :data-tooltip=tooltipData
+    :class="classes"
+    :data-tooltip="tooltipData"
   >
-    <a :href=link>
+    <a :href="href">
       <slot></slot>
     </a>
   </li>
@@ -22,7 +22,7 @@ export default {
   ],
 
   props: {
-    link: {
+    href: {
       type: String,
       default: '#',
     },

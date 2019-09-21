@@ -43,6 +43,13 @@
           </v-card>
         </v-parallax-element>
 
+        <v-dropdown>
+          <template v-slot:button><v-dropdown-btn primary>Test</v-dropdown-btn></template>
+          <v-dropdown-item>Hello</v-dropdown-item>
+          <v-dropdown-item>my</v-dropdown-item>
+          <v-dropdown-item>World</v-dropdown-item>
+        </v-dropdown>
+
         <v-input-field
           v-model="modelTest"
           placeholder="Hello World"

@@ -3,7 +3,7 @@
     :class=dropdownClasses
     :data-tooltip=tooltipData
   >
-    <slot name="dropdownBtn"></slot>
+    <slot name="button"></slot>
     <ul class="menu">
       <slot></slot>
     </ul>
@@ -40,7 +40,7 @@ export default {
         this.animationsMixins,
         this.tooltipMixins,
         {
-          'menu-dropdown': true,
+          'list-dropdown': true,
           'dropdown-right': this.right,
           'dropdown-left': this.left,
         },
