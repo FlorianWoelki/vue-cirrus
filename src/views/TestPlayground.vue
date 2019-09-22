@@ -1,5 +1,5 @@
 <template>
-  <Playground />  
+  <Playground />
 </template>
 
 <script>
