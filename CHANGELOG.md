@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.53] - 2019-09-22
+
+### ⚡️ Changed
+- Fixed Dropdown Menu
+- Fixed clickable on disabled buttons
+
+
 ## [0.2.52] - 2019-09-15
 
 ### ⚡️ Changed
@@ -363,3 +370,4 @@ All notable changes to this project will be documented in this file.
 [0.2.5]: https://www.npmjs.com/package/vue-cirrus/v/0.2.5
 [0.2.51]: https://www.npmjs.com/package/vue-cirrus/v/0.2.51
 [0.2.52]: https://www.npmjs.com/package/vue-cirrus/v/0.2.52
+[0.2.53]: https://www.npmjs.com/package/vue-cirrus/v/0.2.53
