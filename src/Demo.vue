@@ -45,7 +45,7 @@
 
         <v-dropdown>
           <template v-slot:button><v-dropdown-btn primary>Test</v-dropdown-btn></template>
-          <v-dropdown-item>Hello</v-dropdown-item>
+          <v-dropdown-item @click="test">Hello</v-dropdown-item>
           <v-dropdown-item>my</v-dropdown-item>
           <v-dropdown-item>World</v-dropdown-item>
         </v-dropdown>

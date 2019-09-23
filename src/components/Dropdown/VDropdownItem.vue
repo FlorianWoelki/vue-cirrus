@@ -3,7 +3,10 @@
     :class="classes"
     :data-tooltip="tooltipData"
   >
-    <a :href="href">
+    <a v-if="href" :href="href">
+      <slot></slot>
+    </a>
+    <a v-else @click="$emit('click', $event)">
       <slot></slot>
     </a>
   </li>
@@ -24,7 +27,7 @@ export default {
   props: {
     href: {
       type: String,
-      default: '#',
+      default: '',
     },
   },
 
