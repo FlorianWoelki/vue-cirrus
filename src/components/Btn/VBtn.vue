@@ -4,6 +4,7 @@
       v-if="href === ''"
       :class=classes
       :data-tooltip=tooltipData
+      :disabled=disabled
       @click="handleClick($event)"
     >
       <slot></slot>
@@ -16,6 +17,7 @@
       <button
         :class=classes
         :data-tooltip=tooltipData
+        :disabled=disabled
         @click="handleClick($event)"
       >
         <slot></slot>
@@ -27,6 +29,7 @@
       v-if="href === ''"
       :class=classes
       :data-tooltip=tooltipData
+      :disabled=disabled
       @click="handleClick($event)"
     >
       <slot></slot>
@@ -39,6 +42,7 @@
       <button
         :class=classes
         :data-tooltip=tooltipData
+        :disabled=disabled
         @click="handleClick($event)"
       >
         <slot></slot>

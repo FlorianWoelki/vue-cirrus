@@ -35,7 +35,7 @@
 
             <v-card-actions>
               <v-row center>
-                <v-btn primary @click="test">Cancel</v-btn>
+                <v-btn disabled primary @click="test">Cancel</v-btn>
                 <v-btn success>Save</v-btn>
                 <v-btn link>Post</v-btn>
               </v-row>
