@@ -8,9 +8,11 @@
           Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
         </v-dropdown-btn>
       </template>
-      <v-dropdown-item>Test1</v-dropdown-item>
-      <v-dropdown-item>Test2</v-dropdown-item>
-      <v-dropdown-item>Test3</v-dropdown-item>
+      <v-dropdown-item>xSmall</v-dropdown-item>
+      <v-dropdown-item>Small</v-dropdown-item>
+      <v-dropdown-item>Normal</v-dropdown-item>
+      <v-dropdown-item>Large</v-dropdown-item>
+      <v-dropdown-item>xLarge</v-dropdown-item>
     </v-dropdown>
   </v-container>
 </template>
