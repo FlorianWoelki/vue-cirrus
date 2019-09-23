@@ -33,6 +33,9 @@
 </template>
 
 <style>
+.head {
+  margin-bottom: 120px;
+}
 .head #splash-img {
   background: url('https://www.ubackground.com/_ph/17/56501308.jpg');
   -webkit-background-size: cover;
