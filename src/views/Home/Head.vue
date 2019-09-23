@@ -25,20 +25,6 @@
                 </v-btn>
               </router-link>
             </v-col>
-            <!--
-            <v-col c6>
-              <router-link to='/playground'>
-                <v-btn
-                  animated
-                  center
-                  outline
-                  id="btn-playground"
-                >
-                  Check Playground
-                </v-btn>
-              </router-link>
-            </v-col>
-            -->
           </v-row>
         </div>
       </div>
@@ -48,7 +34,7 @@
 
 <style>
 .head #splash-img {
-  background: url('https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+  background: url('https://www.ubackground.com/_ph/17/56501308.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
