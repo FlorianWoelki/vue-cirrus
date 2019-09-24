@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <h3>Playground</h3>
+    <v-space xlarge />
     <v-btn center>Customize Me</v-btn>
 
     <v-space />
