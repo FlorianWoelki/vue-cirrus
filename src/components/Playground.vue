@@ -42,6 +42,10 @@
           <v-dropdown-item>xLarge</v-dropdown-item>
         </v-dropdown>
       </v-col>
+      <v-col c4>
+        <v-radio-btn id="loading-left">Loading Left</v-radio-btn>
+        <v-radio-btn id="loading-right">Loading Right</v-radio-btn>
+      </v-col>
     </v-row>
   </v-container>
 </template>
