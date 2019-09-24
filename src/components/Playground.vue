@@ -2,7 +2,10 @@
   <v-container>
     <h3>Playground</h3>
     <v-space xlarge />
-    <v-btn center>Customize Me</v-btn>
+
+    <div class="playground-card">
+      <v-btn center>Customize Me</v-btn>
+    </div>
 
     <v-space />
     <v-divider center short />
@@ -50,3 +53,17 @@
     </v-row>
   </v-container>
 </template>
+
+<style>
+.playground-card {
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 12px 0 rgba(42, 51, 83, .12), 0 0 5px rgba(0, 0, 0, .06);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+</style>
