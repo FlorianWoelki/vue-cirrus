@@ -4,7 +4,10 @@
     <v-space xlarge />
 
     <div class="playground-card">
-      <v-btn center>Customize Me</v-btn>
+      <v-btn
+        center
+        :outline="outline"
+      >Customize Me</v-btn>
     </div>
 
     <v-space />
@@ -30,7 +33,7 @@
           <v-dropdown-item>Warning</v-dropdown-item>
           <v-dropdown-item>Danger</v-dropdown-item>
         </v-dropdown>
-        <v-checkbox>Outline</v-checkbox>
+        <v-checkbox @change="changeOutline">Outline</v-checkbox>
       </v-col>
       <v-col c4 center>
         <v-dropdown>
@@ -53,6 +56,22 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      outline: false,
+    };
+  },
+
+  methods: {
+    changeOutline() {
+      this.outline = !this.outline;
+    },
+  },
+};
+</script>
 
 <style>
 .playground-card {
