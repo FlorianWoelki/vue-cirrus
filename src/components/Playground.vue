@@ -12,7 +12,7 @@
     <v-space />
 
     <v-row>
-      <v-col c4>
+      <v-col c4 center>
         <v-dropdown>
           <template v-slot:button>
             <v-dropdown-btn>
@@ -32,7 +32,7 @@
         </v-dropdown>
         <v-checkbox>Outline</v-checkbox>
       </v-col>
-      <v-col c4>
+      <v-col c4 center>
         <v-dropdown>
           <template v-slot:button>
             <v-dropdown-btn>
@@ -46,7 +46,7 @@
           <v-dropdown-item>xLarge</v-dropdown-item>
         </v-dropdown>
       </v-col>
-      <v-col c4>
+      <v-col c4 center>
         <v-radio-btn id="loading-left">Loading Left</v-radio-btn>
         <v-radio-btn id="loading-right">Loading Right</v-radio-btn>
       </v-col>
