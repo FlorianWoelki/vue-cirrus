@@ -42,11 +42,11 @@
               Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
             </v-dropdown-btn>
           </template>
-          <v-dropdown-item>xSmall</v-dropdown-item>
-          <v-dropdown-item>Small</v-dropdown-item>
-          <v-dropdown-item>Normal</v-dropdown-item>
-          <v-dropdown-item>Large</v-dropdown-item>
-          <v-dropdown-item>xLarge</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">xSmall</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">Small</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">Normal</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">Large</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">xLarge</v-dropdown-item>
         </v-dropdown>
       </v-col>
       <v-col c4 center>
@@ -68,6 +68,9 @@ export default {
   methods: {
     changeOutline() {
       this.outline = !this.outline;
+    },
+    changeSize(event) {
+      console.log(event);
     },
   },
 };
