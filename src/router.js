@@ -5,7 +5,7 @@ import Components from './views/Components.vue';
 import ComponentsRouter from './views/ComponentsRouter.vue';
 import LoginPage from './views/Examples/LoginPage/LoginPage.vue';
 import ContactPage from './views/Examples/ContactPage/ContactPage.vue';
-import BlogPage from './views/Examples/BlogPage/BlogPage.vue';
+import OnePage from './views/Examples/OnePage/OnePage.vue';
 import TestPlayground from './views/TestPlayground.vue';
 
 Vue.use(Router);
@@ -45,9 +45,9 @@ export default new Router({
       component: ContactPage,
     },
     {
-      path: '/examples/blogPage',
-      name: 'blogPage',
-      component: BlogPage,
+      path: '/examples/onePage',
+      name: 'onePage',
+      component: OnePage,
     },
   ],
 });
