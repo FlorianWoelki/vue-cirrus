@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.54] - 2019-09-30
+
+### 🔨 Added
+- Added click event to dropdown item
+
+### ⚡️ Changed
+- Fixed disabled button style
+
+
 ## [0.2.53] - 2019-09-22
 
 ### ⚡️ Changed
@@ -371,3 +380,4 @@ All notable changes to this project will be documented in this file.
 [0.2.51]: https://www.npmjs.com/package/vue-cirrus/v/0.2.51
 [0.2.52]: https://www.npmjs.com/package/vue-cirrus/v/0.2.52
 [0.2.53]: https://www.npmjs.com/package/vue-cirrus/v/0.2.53
+[0.2.54]: https://www.npmjs.com/package/vue-cirrus/v/0.2.54
