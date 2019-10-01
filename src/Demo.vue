@@ -50,15 +50,14 @@
           <v-dropdown-item>World</v-dropdown-item>
         </v-dropdown>
 
-        <v-input-field
-          v-model="modelTest"
-          placeholder="Hello World"
-          title="Testing Title"
-          :subtitle="modelTest"
-          icon
-        >
-          <span class="icon">123</span>
-        </v-input-field>
+        <v-form-group>
+          <v-input-field
+            noControl
+            placeholder="Hello World"
+          >
+          </v-input-field>
+          <button>test</button>
+        </v-form-group>
 
         <v-row center>
           <v-col fluid textCenter>
