@@ -50,13 +50,15 @@
           <v-dropdown-item>World</v-dropdown-item>
         </v-dropdown>
 
+        <v-btn outline primary>test</v-btn>
+
         <v-form-group>
           <v-input-field
             noControl
             placeholder="Hello World"
           >
           </v-input-field>
-          <button>test</button>
+          <v-btn primary outline>test</v-btn>
         </v-form-group>
 
         <v-row center>

@@ -1,7 +1,19 @@
 <template>
-  <div v-if="outline" style="margin: 0 0.5rem">
+  <button
+    v-if="href === ''"
+    :class=classes
+    :data-tooltip=tooltipData
+    :disabled=disabled
+    @click="handleClick($event)"
+  >
+    <slot></slot>
+  </button>
+  <a
+    v-else
+    :href="href"
+    :target="blank ? '_blank' : ''"
+  >
     <button
-      v-if="href === ''"
       :class=classes
       :data-tooltip=tooltipData
       :disabled=disabled
@@ -9,46 +21,7 @@
     >
       <slot></slot>
     </button>
-    <a
-      v-else
-      :href="href"
-      :target="blank ? '_blank' : ''"
-    >
-      <button
-        :class=classes
-        :data-tooltip=tooltipData
-        :disabled=disabled
-        @click="handleClick($event)"
-      >
-        <slot></slot>
-      </button>
-    </a>
-  </div>
-  <div v-else>
-    <button
-      v-if="href === ''"
-      :class=classes
-      :data-tooltip=tooltipData
-      :disabled=disabled
-      @click="handleClick($event)"
-    >
-      <slot></slot>
-    </button>
-    <a
-      v-else
-      :href="href"
-      :target="blank ? '_blank' : ''"
-    >
-      <button
-        :class=classes
-        :data-tooltip=tooltipData
-        :disabled=disabled
-        @click="handleClick($event)"
-      >
-        <slot></slot>
-      </button>
-    </a>
-  </div>
+  </a>
 </template>
 
 <script>
