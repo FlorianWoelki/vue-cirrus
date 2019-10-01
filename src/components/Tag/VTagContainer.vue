@@ -21,6 +21,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -32,9 +36,19 @@ export default {
         {
           'tag-container': true,
           'group-tags': this.grouped,
+          'tag-container-rounded': this.rounded,
         },
       );
     },
   },
 };
 </script>
+
+<style>
+.tag-container.group-tags.tag-container-rounded .tag:first-child {
+  border-radius: 290486px 0 0 290486px;
+}
+.tag-container.group-tags.tag-container-rounded .tag:last-child {
+  border-radius: 0 290486px 290486px 0;
+}
+</style>

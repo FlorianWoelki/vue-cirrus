@@ -17,10 +17,10 @@
             >
               <v-card-title>test</v-card-title>
               <v-card-subtitle>
-                <v-tag-container grouped>
-                  <v-tag primary>Hello</v-tag>
-                  <v-tag warning>My</v-tag>
-                  <v-tag black>World</v-tag>
+                <v-tag-container grouped rounded>
+                  <v-tag primary xlarge>Hello</v-tag>
+                  <v-tag warning xlarge>My</v-tag>
+                  <v-tag black xlarge>World</v-tag>
                 </v-tag-container>
               </v-card-subtitle>
             </v-card-image>
