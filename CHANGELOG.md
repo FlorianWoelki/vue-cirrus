@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.55] - 2019-10-02
+
+### 🔨 Added
+- Added pilled property to input field
+- Added pilled and circle property to button
+- Added rounded property to tag container
+
+### ⚡️ Changed
+- Cleaned up button component
+
+
 ## [0.2.54] - 2019-09-30
 
 ### 🔨 Added
@@ -381,3 +392,4 @@ All notable changes to this project will be documented in this file.
 [0.2.52]: https://www.npmjs.com/package/vue-cirrus/v/0.2.52
 [0.2.53]: https://www.npmjs.com/package/vue-cirrus/v/0.2.53
 [0.2.54]: https://www.npmjs.com/package/vue-cirrus/v/0.2.54
+[0.2.55]: https://www.npmjs.com/package/vue-cirrus/v/0.2.55
