@@ -37,6 +37,14 @@ export default {
   ],
 
   props: {
+    pilled: {
+      type: Boolean,
+      default: false,
+    },
+    circle: {
+      type: Boolean,
+      default: false,
+    },
     href: {
       type: String,
       default: '',
@@ -152,6 +160,8 @@ export default {
         'animated loading loading-left': this.loadingLeft,
         'animated loading loading-right': this.loadingRight,
         outline: this.outline,
+        'btn--pilled': this.pilled,
+        'btn--circle': this.circle,
       };
 
       return Object.assign(

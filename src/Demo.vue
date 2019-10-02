@@ -50,7 +50,7 @@
           <v-dropdown-item>World</v-dropdown-item>
         </v-dropdown>
 
-        <v-btn outline primary>test</v-btn>
+        <v-btn outline primary pilled>test</v-btn>
 
         <v-form-group>
           <v-input-field
