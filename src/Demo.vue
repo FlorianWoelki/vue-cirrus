@@ -54,6 +54,7 @@
 
         <v-form-group>
           <v-input-field
+            pilled
             noControl
             placeholder="Hello World"
           >

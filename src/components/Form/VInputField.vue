@@ -62,6 +62,10 @@ export default {
   ],
 
   props: {
+    pilled: {
+      type: Boolean,
+      default: false,
+    },
     noControl: {
       type: Boolean,
       default: false,
@@ -148,6 +152,7 @@ export default {
           'text-success input-success': this.success,
           'text-danger input-error': this.error,
           'input-contains-icon': this.icon,
+          'input-control--pilled': this.pilled,
         },
       );
     },
