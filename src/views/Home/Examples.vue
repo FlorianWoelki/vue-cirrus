@@ -22,9 +22,9 @@
       </v-col>
       <v-col c4>
         <ExampleCard
-          title="Blog Page"
+          title="One Page"
           subtitleTags="Layout,NavBar"
-          description="This is a blog preview."
+          description="This is a one page preview."
           image="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
           github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/OnePage"
           href="#/examples/onePage"
