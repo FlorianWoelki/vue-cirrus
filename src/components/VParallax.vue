@@ -9,9 +9,7 @@
     <div v-if="!customBody" id="hero-body" class="u-center">
       <slot />
     </div>
-    <div v-else>
-      <slot />
-    </div>
+    <slot v-else />
   </div>
 </template>
 
