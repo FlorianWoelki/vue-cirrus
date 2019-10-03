@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    selected: {
+      type: Boolean,
+      default: false,
+    },
     href: {
       type: String,
       default: '',
@@ -55,6 +59,7 @@ export default {
         {
           'nav-item': true,
           active: this.active,
+          selected: this.selected,
         },
       );
     },
