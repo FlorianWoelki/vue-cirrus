@@ -2,7 +2,7 @@
   <div id="one-page">
     <v-navbar brandTitle="OnePage" dark fixed>
       <div class="nav-right">
-        <v-navbar-item selected>Home</v-navbar-item>
+        <v-navbar-item selected>Features</v-navbar-item>
         <v-navbar-item>Pricing</v-navbar-item>
       </div>
     </v-navbar>
@@ -22,9 +22,23 @@
     </v-parallax>
 
     <v-space xlarge />
-    <v-container>
-      <h2>Headline 2</h2>
-      <v-divider short />
-    </v-container>
+
+    <OnePageFeatures />
+
+    <v-space xlarge />
+
+    <OnePagePricing />
   </div>
 </template>
+
+<script>
+import OnePageFeatures from '@/views/Examples/OnePage/OnePageFeatures.vue';
+import OnePagePricing from '@/views/Examples/OnePage/OnePagePricing.vue';
+
+export default {
+  components: {
+    OnePageFeatures,
+    OnePagePricing,
+  },
+};
+</script>
