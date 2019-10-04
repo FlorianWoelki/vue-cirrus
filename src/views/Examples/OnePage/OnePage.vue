@@ -12,6 +12,11 @@
         <v-col>
           <h1 class="white uppercase u-text-center">One Page</h1>
           <p class="white u-text-center">A One Page product made with Vue Cirrus</p>
+          <v-btn light outline center>Checkout the Demo!</v-btn>
+          <v-space xlarge />
+          <div class="animated pulse infinite u-center white">
+            <i class="fas fa-arrow-down fa-2x"></i>
+          </div>
         </v-col>
       </v-row>
     </v-parallax>
