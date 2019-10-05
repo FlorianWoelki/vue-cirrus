@@ -28,17 +28,21 @@
     <v-space xlarge />
 
     <OnePagePricing />
+
+    <OnePageFooter />
   </div>
 </template>
 
 <script>
 import OnePageFeatures from '@/views/Examples/OnePage/OnePageFeatures.vue';
 import OnePagePricing from '@/views/Examples/OnePage/OnePagePricing.vue';
+import OnePageFooter from '@/views/Examples/OnePage/OnePageFooter.vue';
 
 export default {
   components: {
     OnePageFeatures,
     OnePagePricing,
+    OnePageFooter,
   },
 };
 </script>
