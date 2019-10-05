@@ -1,7 +1,11 @@
 <template>
   <v-container>
-    <h2>Pricing</h2>
-    <v-divider short />
+    <div class="u-text-center">
+      <h2>Pricing</h2>
+      <v-divider center short />
+    </div>
+
+    <v-space />
 
     <v-row>
       <v-col c6>
