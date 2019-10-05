@@ -85,6 +85,38 @@
     </v-row>
 
     <v-snackbar v-model="snackbar">Show Me</v-snackbar>
+
+    <v-footer title="Logo" subtitle="Florian Woelki 2019">
+      <v-divider short center />
+      <v-container>
+        <v-row>
+          <v-col c4>
+            <v-footer-list>
+              <v-footer-list-item title>Test Title</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+            </v-footer-list>
+          </v-col>
+          <v-col c4>
+            <v-footer-list>
+              <v-footer-list-item title>Test Title</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+            </v-footer-list>
+          </v-col>
+          <v-col c4>
+            <v-footer-list>
+              <v-footer-list-item title>Test Title</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+              <v-footer-list-item>Test</v-footer-list-item>
+            </v-footer-list>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-footer>
   </div>
 </template>
 
