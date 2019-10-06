@@ -11,6 +11,16 @@
         :small="size === 'small'"
         :large="size === 'large'"
         :xlarge="size === 'xlarge'"
+        :primary="color === 'primary'"
+        :transparent="color === 'transparent'"
+        :light="color === 'light'"
+        :dark="color === 'dark'"
+        :black="color === 'black'"
+        :info="color === 'info'"
+        :link="color === 'link'"
+        :success="color === 'success'"
+        :warning="color === 'warning'"
+        :danger="color === 'danger'"
       >Customize Me</v-btn>
     </div>
 
@@ -26,16 +36,16 @@
               Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
             </v-dropdown-btn>
           </template>
-          <v-dropdown-item>Primary</v-dropdown-item>
-          <v-dropdown-item>Transparent</v-dropdown-item>
-          <v-dropdown-item>Light</v-dropdown-item>
-          <v-dropdown-item>Dark</v-dropdown-item>
-          <v-dropdown-item>Black</v-dropdown-item>
-          <v-dropdown-item>Info</v-dropdown-item>
-          <v-dropdown-item>Link</v-dropdown-item>
-          <v-dropdown-item>Success</v-dropdown-item>
-          <v-dropdown-item>Warning</v-dropdown-item>
-          <v-dropdown-item>Danger</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Primary</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Transparent</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Light</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Dark</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Black</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Info</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Link</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Success</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Warning</v-dropdown-item>
+          <v-dropdown-item @click="changeColor($event)">Danger</v-dropdown-item>
         </v-dropdown>
         <v-checkbox @change="changeOutline">Outline</v-checkbox>
       </v-col>
@@ -66,6 +76,7 @@ export default {
   data() {
     return {
       outline: false,
+      color: 'none',
       size: 'normal',
     };
   },
@@ -76,6 +87,9 @@ export default {
     },
     changeSize(event) {
       this.size = event.srcElement.innerHTML.toLowerCase();
+    },
+    changeColor(event) {
+      this.color = event.srcElement.innerHTML.toLowerCase();
     },
   },
 };
