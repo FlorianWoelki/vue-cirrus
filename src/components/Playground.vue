@@ -7,6 +7,10 @@
       <v-btn
         center
         :outline="outline"
+        :tiny="size === 'tiny'"
+        :small="size === 'small'"
+        :large="size === 'large'"
+        :xlarge="size === 'xlarge'"
       >Customize Me</v-btn>
     </div>
 
@@ -42,7 +46,7 @@
               Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
             </v-dropdown-btn>
           </template>
-          <v-dropdown-item @click="changeSize($event)">xSmall</v-dropdown-item>
+          <v-dropdown-item @click="changeSize($event)">Tiny</v-dropdown-item>
           <v-dropdown-item @click="changeSize($event)">Small</v-dropdown-item>
           <v-dropdown-item @click="changeSize($event)">Normal</v-dropdown-item>
           <v-dropdown-item @click="changeSize($event)">Large</v-dropdown-item>
@@ -62,6 +66,7 @@ export default {
   data() {
     return {
       outline: false,
+      size: 'normal',
     };
   },
 
@@ -70,7 +75,7 @@ export default {
       this.outline = !this.outline;
     },
     changeSize(event) {
-      console.log(event);
+      this.size = event.srcElement.innerHTML.toLowerCase();
     },
   },
 };
