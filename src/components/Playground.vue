@@ -21,6 +21,8 @@
         :success="color === 'success'"
         :warning="color === 'warning'"
         :danger="color === 'danger'"
+        :loadingLeft="loading === 'loading-left'"
+        :loadingRight="loading === 'loading-right'"
       >Customize Me</v-btn>
     </div>
 
@@ -64,8 +66,8 @@
         </v-dropdown>
       </v-col>
       <v-col c4 center>
-        <v-radio-btn id="loading-left">Loading Left</v-radio-btn>
-        <v-radio-btn id="loading-right">Loading Right</v-radio-btn>
+        <v-radio-btn id="loading-left" @change="changeLoading($event)">Loading Left</v-radio-btn>
+        <v-radio-btn id="loading-right" @change="changeLoading($event)">Loading Right</v-radio-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -78,6 +80,7 @@ export default {
       outline: false,
       color: 'none',
       size: 'normal',
+      loading: 'none',
     };
   },
 
@@ -90,6 +93,9 @@ export default {
     },
     changeColor(event) {
       this.color = event.srcElement.innerHTML.toLowerCase();
+    },
+    changeLoading(event) {
+      this.loading = event.srcElement.id;
     },
   },
 };
