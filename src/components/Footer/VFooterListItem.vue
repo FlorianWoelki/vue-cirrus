@@ -1,10 +1,10 @@
 <template>
   <a v-if="!title" :href="href" :target="blank ? 'blank' : ''">
-    <li :class="classes" :data-text="text">
+    <li :class="classes" :data-tooltip="tooltipData">
       <slot />
     </li>
   </a>
-  <li v-else :class="classes" :data-text="text">
+  <li v-else :class="classes" :data-tooltip="tooltipData">
     <slot />
   </li>
 </template>
