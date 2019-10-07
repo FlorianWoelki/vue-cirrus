@@ -1,6 +1,9 @@
 <template>
   <li :class="classes">
-    <a :href="href">
+    <a
+      :href="href"
+      @click="handleClick($event)"
+    >
       <slot></slot>
     </a>
   </li>
@@ -23,7 +26,13 @@ export default {
     },
     href: {
       type: String,
-      default: '',
+      default: '#!',
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event);
     },
   },
 
