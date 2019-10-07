@@ -1,6 +1,6 @@
 <template>
-  <li :class=classes>
-    <a :href=link>
+  <li :class="classes">
+    <a :href="href">
       <slot></slot>
     </a>
   </li>
@@ -21,7 +21,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    link: {
+    href: {
       type: String,
       default: '',
     },

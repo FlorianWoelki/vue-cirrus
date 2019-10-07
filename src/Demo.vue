@@ -84,6 +84,11 @@
       </v-col>
     </v-row>
 
+    <v-tabs fill>
+      <v-tab>test 1</v-tab>
+      <v-tab>test 2</v-tab>
+    </v-tabs>
+
     <v-snackbar v-model="snackbar">Show Me</v-snackbar>
 
     <v-footer title="Logo" subtitle="Florian Woelki 2019">
