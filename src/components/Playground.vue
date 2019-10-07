@@ -4,26 +4,37 @@
     <v-space xlarge />
 
     <div class="playground-card">
-      <v-btn
-        center
-        :outline="outline"
-        :tiny="size === 'tiny'"
-        :small="size === 'small'"
-        :large="size === 'large'"
-        :xlarge="size === 'xlarge'"
-        :primary="color === 'primary'"
-        :transparent="color === 'transparent'"
-        :light="color === 'light'"
-        :dark="color === 'dark'"
-        :black="color === 'black'"
-        :info="color === 'info'"
-        :link="color === 'link'"
-        :success="color === 'success'"
-        :warning="color === 'warning'"
-        :danger="color === 'danger'"
-        :loadingLeft="loading === 'loading-left'"
-        :loadingRight="loading === 'loading-right'"
-      >Customize Me</v-btn>
+      <v-tabs fill style="margin-bottom: 25px; margin-top: 5px;">
+        <v-tab selected>
+          <i class="fas fa-globe fa-lg"></i>
+        </v-tab>
+        <v-tab>
+          <i class="fas fa-code fa-lg"></i>
+        </v-tab>
+      </v-tabs>
+
+      <div class="card-content">
+        <v-btn
+          center
+          :outline="outline"
+          :tiny="size === 'tiny'"
+          :small="size === 'small'"
+          :large="size === 'large'"
+          :xlarge="size === 'xlarge'"
+          :primary="color === 'primary'"
+          :transparent="color === 'transparent'"
+          :light="color === 'light'"
+          :dark="color === 'dark'"
+          :black="color === 'black'"
+          :info="color === 'info'"
+          :link="color === 'link'"
+          :success="color === 'success'"
+          :warning="color === 'warning'"
+          :danger="color === 'danger'"
+          :loadingLeft="loading === 'loading-left'"
+          :loadingRight="loading === 'loading-right'"
+        >Customize Me</v-btn>
+      </div>
     </div>
 
     <v-space />
@@ -111,6 +122,9 @@ export default {
   backface-visibility: hidden;
   box-shadow: 0 5px 12px 0 rgba(42, 51, 83, .12), 0 0 5px rgba(0, 0, 0, .06);
   margin-bottom: 1rem;
+}
+
+.playground-card .card-content {
   padding: 1.5rem;
 }
 </style>
