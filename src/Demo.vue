@@ -43,6 +43,11 @@
           </v-card>
         </v-parallax-element>
 
+        <v-next-prev>
+          <v-prev-btn prevText="Prev">Previous</v-prev-btn>
+          <v-next-btn nextText="Next" @click="test">NEEXT</v-next-btn>
+        </v-next-prev>
+
         <v-row center>
           <v-col c6>
             <v-frame>
