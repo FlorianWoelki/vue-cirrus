@@ -1,8 +1,14 @@
 <template>
   <pre>
-    <!--<div :id=feedbackId class="copy-feedback">Copied!</div>-->
     <pre>
-      <code :data-lang="dataLang" :id="codeId" :class="classes" @click="copy"><slot></slot></code>
+      <code
+        :data-lang="dataLang"
+        :id="codeId"
+        :class="classes"
+        @click="copy($event)"
+      >
+        <slot></slot>
+      </code>
     </pre>
   </pre>
 </template>
@@ -12,7 +18,6 @@ import javascript from './javascript';
 import html from './html';
 import css from './css';
 import bash from './bash';
-// import { version } from 'punycode';
 
 export default {
   data() {
@@ -37,7 +42,9 @@ export default {
   },
 
   methods: {
-    copy() {
+    copy(event) {
+      this.$emit('click', event);
+
       if (this.copyable) {
         const copyText = document.getElementById(this.codeId);
 
@@ -56,16 +63,6 @@ export default {
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
 
-        // Display feedback
-        /*
-        const feedback = document.getElementById(this.feedbackId);
-        feedback.style.opacity = 1;
-        copyText.style.filter = 'blur(2px)';
-        setTimeout(() => {
-          feedback.style.opacity = 0;
-          copyText.style.filter = 'blur(0)';
-        }, 800);
-        */
         this.copied = true;
       }
     },
