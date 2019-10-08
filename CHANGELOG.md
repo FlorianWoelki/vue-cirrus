@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.6] - 2019-10-08
+
+### 🔨 Added
+- Added selected property to navbar item
+- Added more flexible way to create a footer
+- Added click event to tab
+- Added click event for code component
+- Added v-next-btn and v-prev-btn for the v-next-prev component
+
+### ⚡️ Changed
+- Fixed parallax unused div element
+- Renamed link to href in tab
+- Fixed error with tooltip in footer list item
+- Fixed frame component
+
+
 ## [0.2.55] - 2019-10-02
 
 ### 🔨 Added
