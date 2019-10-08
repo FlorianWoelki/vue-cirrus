@@ -43,6 +43,40 @@
           </v-card>
         </v-parallax-element>
 
+        <v-row center>
+          <v-col c6>
+            <v-frame>
+              <v-frame-header textCenter>
+                <v-avatar text="FW" />
+                <v-frame-title>Florian Woelki</v-frame-title>
+                <v-frame-subtitle>Creator</v-frame-subtitle>
+              </v-frame-header>
+
+              <v-divider noMargin />
+
+              <v-frame-body>
+                <v-container noPadding>
+                  <p class="u-text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Porro maiores molestiae, blanditiis maxime perspiciatis error
+                  nisi consectetur quasi nemo impedit numquam eligendi ratione
+                  nobis qui voluptatum et quod minus aut.</p>
+                </v-container>
+              </v-frame-body>
+
+              <v-divider noMargin />
+
+              <v-frame-footer>
+                <v-frame-subtitle textCenter>
+                  <i>
+                    Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </i>
+                </v-frame-subtitle>
+              </v-frame-footer>
+            </v-frame>
+          </v-col>
+        </v-row>
+
         <v-dropdown>
           <template v-slot:button><v-dropdown-btn primary>Test</v-dropdown-btn></template>
           <v-dropdown-item @click="test">Hello</v-dropdown-item>

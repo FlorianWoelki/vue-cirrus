@@ -20,7 +20,7 @@ export default {
         this.layoutMixins,
         this.animationsMixins,
         {
-          'frame-header': true,
+          frame__header: true,
         },
       );
     },
