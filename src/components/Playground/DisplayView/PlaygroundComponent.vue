@@ -16,8 +16,8 @@
     :success="color === 'success'"
     :warning="color === 'warning'"
     :danger="color === 'danger'"
-    :loadingLeft="loading === 'loading-left'"
-    :loadingRight="loading === 'loading-right'"
+    :loadingLeft="loading === 'loadingLeft'"
+    :loadingRight="loading === 'loadingRight'"
   >Customize Me</v-btn>
 </template>
 

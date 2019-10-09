@@ -29,7 +29,13 @@
           :size="size"
           :loading="loading"
         />
-        <CodeComponent v-if="codeSelected" />
+        <CodeComponent
+          v-if="codeSelected"
+          :outline="outline"
+          :color="color"
+          :size="size"
+          :loading="loading"
+        />
       </div>
     </div>
 
@@ -73,8 +79,8 @@
         </v-dropdown>
       </v-col>
       <v-col c4 center>
-        <v-radio-btn id="loading-left" @change="changeLoading($event)">Loading Left</v-radio-btn>
-        <v-radio-btn id="loading-right" @change="changeLoading($event)">Loading Right</v-radio-btn>
+        <v-radio-btn id="loadingLeft" @change="changeLoading($event)">Loading Left</v-radio-btn>
+        <v-radio-btn id="loadingRight" @change="changeLoading($event)">Loading Right</v-radio-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -90,7 +96,7 @@ export default {
       codeSelected: false,
       outline: false,
       color: 'none',
-      size: 'normal',
+      size: 'none',
       loading: 'none',
     };
   },
