@@ -23,28 +23,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      outline: false,
-      color: 'none',
-      size: 'normal',
-      loading: 'none',
-    };
-  },
-
-  methods: {
-    changeOutline() {
-      this.outline = !this.outline;
-    },
-    changeSize(event) {
-      this.size = event.srcElement.innerHTML.toLowerCase();
-    },
-    changeColor(event) {
-      this.color = event.srcElement.innerHTML.toLowerCase();
-    },
-    changeLoading(event) {
-      this.loading = event.srcElement.id;
-    },
-  },
+  props: ['outline', 'color', 'size', 'loading'],
 };
 </script>
