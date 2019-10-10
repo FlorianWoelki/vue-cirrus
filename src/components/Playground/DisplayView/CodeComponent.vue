@@ -21,9 +21,3 @@ Customize Me
   },
 };
 </script>
-
-<style>
-.code-component code {
-  padding-top: 0;
-}
-</style>

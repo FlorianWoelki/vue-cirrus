@@ -18,7 +18,7 @@
         </h6>
       </v-col>
       <v-col c6>
-        <v-code lang="Bash" copyable>npm install --save vue-cirrus</v-code>
+        <v-code lang="Bash" copyable><br />npm install --save vue-cirrus</v-code>
       </v-col>
     </v-row>
 
@@ -32,6 +32,7 @@
       </v-col>
       <v-col c6>
         <v-code lang="HTML" copyable>
+          <br />
           <link
             href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
             rel="stylesheet"
@@ -57,7 +58,7 @@
         </h6>
       </v-col>
       <v-col c6>
-        <v-code lang="JavaScript" copyable>import 'vue-cirrus/dist/vue-cirrus.css';
+        <v-code lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
 import 'vue-cirrus';</v-code>
       </v-col>
     </v-row>
