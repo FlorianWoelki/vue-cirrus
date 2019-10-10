@@ -1,7 +1,9 @@
 <template>
-  <v-code lang="Vue" copyable>
-    <xmp v-html="code"></xmp>
-  </v-code>
+  <div class="code-component">
+    <v-code lang="Vue" copyable>
+      <xmp v-html="code"></xmp>
+    </v-code>
+  </div>
 </template>
 
 <script>
@@ -19,3 +21,9 @@ Customize Me
   },
 };
 </script>
+
+<style>
+.code-component code {
+  padding-top: 0;
+}
+</style>
