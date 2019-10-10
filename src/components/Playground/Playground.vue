@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="display-view" v-if="!codeSelected">
+    <div class="display-view">
       <v-space />
       <v-divider center short />
       <v-space />
