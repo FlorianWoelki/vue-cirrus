@@ -1,15 +1,13 @@
 <template>
   <pre>
-    <pre>
-      <code
-        :data-lang="dataLang"
-        :id="codeId"
-        :class="classes"
-        @click="copy($event)"
-      >
-        <slot></slot>
-      </code>
-    </pre>
+    <code
+      :data-lang="dataLang"
+      :id="codeId"
+      :class="classes"
+      @click="copy($event)"
+    >
+      <slot></slot>
+    </code>
   </pre>
 </template>
 
@@ -121,6 +119,10 @@ export default {
 </script>
 
 <style>
+code {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 pre {
   margin-top: -1.5rem;
   margin-bottom: -1.5rem;
