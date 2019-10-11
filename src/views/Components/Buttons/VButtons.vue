@@ -28,6 +28,14 @@
     </p>
     <BtnOutline />
 
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Loading</h5>
+    <p class="no-upper-margin">
+      You can add a loading state for buttons. We do have a left and right
+      loading animation for all buttons.
+    </p>
+    <BtnLoading />
+
     <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
@@ -35,11 +43,13 @@
 <script>
 import Playground from '@/components/Playground/Playground.vue';
 import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
+import BtnLoading from '@/views/Components/Buttons/Examples/BtnLoading.vue';
 
 export default {
   components: {
     Playground,
     BtnOutline,
+    BtnLoading,
   },
 };
 </script>
