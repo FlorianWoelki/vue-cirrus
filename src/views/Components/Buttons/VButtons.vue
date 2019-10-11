@@ -36,6 +36,14 @@
     </p>
     <BtnLoading />
 
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Types</h5>
+    <p class="no-upper-margin">
+      In Vue Cirrus we have 3 different types of buttons. You have the option
+      to have a pilled, circle or normal button.
+    </p>
+    <BtnTypes />
+
     <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
@@ -44,12 +52,14 @@
 import Playground from '@/components/Playground/Playground.vue';
 import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
 import BtnLoading from '@/views/Components/Buttons/Examples/BtnLoading.vue';
+import BtnTypes from '@/views/Components/Buttons/Examples/BtnTypes.vue';
 
 export default {
   components: {
     Playground,
     BtnOutline,
     BtnLoading,
+    BtnTypes,
   },
 };
 </script>
