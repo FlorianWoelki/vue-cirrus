@@ -29,6 +29,14 @@
     <BtnOutline />
 
     <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Animated</h5>
+    <p class="no-upper-margin">
+      There is a option, where you can enable animated state, if someone has
+      clicked on the button.
+    </p>
+    <BtnAnimated />
+
+    <v-space xlarge />
     <h5 class="font-light no-upper-margin">Loading</h5>
     <p class="no-upper-margin">
       You can add a loading state for buttons. We do have a left and right
@@ -53,6 +61,7 @@ import Playground from '@/components/Playground/Playground.vue';
 import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
 import BtnLoading from '@/views/Components/Buttons/Examples/BtnLoading.vue';
 import BtnTypes from '@/views/Components/Buttons/Examples/BtnTypes.vue';
+import BtnAnimated from '@/views/Components/Buttons/Examples/BtnAnimated.vue';
 
 export default {
   components: {
@@ -60,6 +69,7 @@ export default {
     BtnOutline,
     BtnLoading,
     BtnTypes,
+    BtnAnimated,
   },
 };
 </script>
