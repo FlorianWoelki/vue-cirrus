@@ -15,3 +15,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.no-upper-margin {
+  margin-top: 5px;
+}
+</style>

@@ -1,69 +1,43 @@
 <template>
   <section class="buttons-component">
-    <h5>Creating simple buttons</h5>
-    <p>You can easily create normal buttons with the awesome v-btn component!</p>
-    <SimpleButtons />
+    <p class="no-upper-margin">
+      The <kbd>v-btn</kbd> component replaces the standard html button with a custom made
+      Cirrus theme with a lot of options.
+    </p>
 
     <v-space xlarge />
 
-    <h5>Size your Buttons</h5>
-    <p>Easily size your buttons, however you want</p>
-    <ButtonSizes />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Buttons in their simplest form contain uppercase text
+    </p>
+
+    <v-space />
+    <Playground noTitle href="/#/components/Buttons/#!" />
+    <v-space xlarge />
+
+    <h3>API</h3>
 
     <v-space xlarge />
 
-    <h5>Give some style to your buttons</h5>
-    <p>Easy styles with Vue Cirrus is now possible!</p>
-    <StyledButtons />
-
-    <v-space xlarge />
-
-    <h5>Loading Buttons</h5>
-    <p>If you want to display some loading activity. This is the way to go!</p>
-    <LoadingButtons />
-
-    <v-space xlarge />
-
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Outline</h5>
+    <p class="no-upper-margin">
+      Outline buttons have only the borders and no background. Only on hover
+      they show there background color.
+    </p>
+    <v-btn outline primary>Testing</v-btn>
 
     <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
 
 <script>
-import SimpleButtons from '@/views/Components/Buttons/SimpleButtons.vue';
-import StyledButtons from '@/views/Components/Buttons/StyledButtons.vue';
-import ButtonSizes from '@/views/Components/Buttons/ButtonSizes.vue';
-import LoadingButtons from '@/views/Components/Buttons/LoadingButtons.vue';
-import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
-    SimpleButtons,
-    StyledButtons,
-    ButtonSizes,
-    LoadingButtons,
-    API,
-  },
-
-  data() {
-    return {
-      props: {
-        click: ['@click', 'null', 'Function', 'Button click event'],
-        animated: ['animated', 'false', 'Boolean', 'Button click animation'],
-        outline: ['outline', 'false', 'Boolean', 'Only show the outline of the button'],
-        href: ['href', 'Empty', 'String', 'Link will show up, when clicked'],
-        blank: ['blank', 'false', 'Boolean', 'Link will pop up in a new tab'],
-      },
-    };
-  },
-
-  mounted() {
-    const classes = document.getElementsByClassName('copy-feedback');
-    while (classes[0]) {
-      classes[0].parentNode.removeChild(classes[0]);
-    }
+    Playground,
   },
 };
 </script>

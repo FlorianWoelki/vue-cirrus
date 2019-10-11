@@ -1,8 +1,6 @@
 <template>
   <Sidebar>
-    <h3>{{$route.params.name}}</h3>
-
-    <v-divider></v-divider>
+    <h1 class="font-thin">{{$route.params.name}}</h1>
 
     <component :is="currentView"></component>
   </Sidebar>

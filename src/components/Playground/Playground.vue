@@ -1,19 +1,21 @@
 <template>
   <v-container>
-    <h3>Playground</h3>
-    <v-space xlarge />
+    <div class="title-section" v-if="!noTitle">
+      <h3>Playground</h3>
+      <v-space xlarge />
+    </div>
 
     <div class="playground-card">
       <v-tabs fill style="margin-bottom: 25px; margin-top: 5px;">
         <v-tab
-          href="/#/testplayground/#!"
+          :href="href"
           :selected="!codeSelected"
           @click="() => { codeSelected = false }"
         >
           <i class="fas fa-globe fa-lg"></i>
         </v-tab>
         <v-tab
-          href="/#/testplayground/#!"
+          :href="href"
           :selected="codeSelected"
           @click="() => { codeSelected = true }"
         >
@@ -40,8 +42,6 @@
     </div>
 
     <div class="display-view">
-      <v-space />
-      <v-divider center short />
       <v-space />
 
       <v-row>
@@ -101,6 +101,17 @@ export default {
       size: 'none',
       loading: 'none',
     };
+  },
+
+  props: {
+    noTitle: {
+      type: Boolean,
+      default: false,
+    },
+    href: {
+      type: String,
+      default: '/#/testplayground/#!',
+    },
   },
 
   components: {
