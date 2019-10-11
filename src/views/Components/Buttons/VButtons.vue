@@ -26,7 +26,7 @@
       Outline buttons have only the borders and no background. Only on hover
       they show there background color.
     </p>
-    <v-btn outline primary>Testing</v-btn>
+    <BtnOutline />
 
     <v-space xlarge v-for="i in 2" :key="i" />
   </section>
@@ -34,10 +34,18 @@
 
 <script>
 import Playground from '@/components/Playground/Playground.vue';
+import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
 
 export default {
   components: {
     Playground,
+    BtnOutline,
   },
 };
 </script>
+
+<style>
+.btn-example-section button {
+  margin-top: 10px;
+}
+</style>
