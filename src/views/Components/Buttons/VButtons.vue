@@ -16,9 +16,11 @@
     <Playground noTitle href="/#/components/Buttons/#!" />
 
     <v-space xlarge />
+    <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
     <API :data="props" />
 
+    <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
     <h5 class="font-light no-upper-margin">Outline</h5>
