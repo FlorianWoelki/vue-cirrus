@@ -14,12 +14,12 @@
 
     <v-space />
     <Playground noTitle href="/#/components/Buttons/#!" />
-    <v-space xlarge />
-
-    <h3>API</h3>
 
     <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" />
 
+    <v-space xlarge />
     <h3>Examples</h3>
     <h5 class="font-light no-upper-margin">Outline</h5>
     <p class="no-upper-margin">
@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
 import BtnLoading from '@/views/Components/Buttons/Examples/BtnLoading.vue';
@@ -74,12 +75,21 @@ import BtnGroup from '@/views/Components/Buttons/Examples/BtnGroup.vue';
 
 export default {
   components: {
+    API,
     Playground,
     BtnOutline,
     BtnLoading,
     BtnTypes,
     BtnAnimated,
     BtnGroup,
+  },
+  data() {
+    return {
+      props: {
+        animated: ['animated', 'boolean', 'false', 'This is a onclick effect and it will animate the button, if a user clicked on the button.'],
+        disabled: ['disabled', 'boolean', 'false', 'With this property the button will be disabled.'],
+      },
+    };
   },
 };
 </script>
