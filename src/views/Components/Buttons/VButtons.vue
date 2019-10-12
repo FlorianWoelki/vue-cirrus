@@ -52,6 +52,14 @@
     </p>
     <BtnTypes />
 
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Groups</h5>
+    <p class="no-upper-margin">
+      There is a extra component for buttons, where you can group multiple
+      buttons together to one huge compromised button.
+    </p>
+    <BtnGroup />
+
     <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
@@ -62,6 +70,7 @@ import BtnOutline from '@/views/Components/Buttons/Examples/BtnOutline.vue';
 import BtnLoading from '@/views/Components/Buttons/Examples/BtnLoading.vue';
 import BtnTypes from '@/views/Components/Buttons/Examples/BtnTypes.vue';
 import BtnAnimated from '@/views/Components/Buttons/Examples/BtnAnimated.vue';
+import BtnGroup from '@/views/Components/Buttons/Examples/BtnGroup.vue';
 
 export default {
   components: {
@@ -70,6 +79,7 @@ export default {
     BtnLoading,
     BtnTypes,
     BtnAnimated,
+    BtnGroup,
   },
 };
 </script>
