@@ -90,6 +90,8 @@ export default {
       props: {
         animated: ['animated', 'boolean', 'false', 'This is a onclick effect and it will animate the button, if a user clicked on the button.'],
         disabled: ['disabled', 'boolean', 'false', 'With this property the button will be disabled.'],
+        loadingLeft: ['loadingLeft', 'boolean', 'false', 'This will add a loading circle on the left of the button.'],
+        loadingRight: ['loadingRight', 'boolean', 'false', 'This will add a loading circle on the right of the button.'],
       },
     };
   },
