@@ -10,6 +10,7 @@
       <v-dropdown-item>v-btn-group</v-dropdown-item>
     </v-dropdown>
 
+    <v-space style="margin: 0; padding: 5px;" />
     <div v-for="prop in props" :key="prop[0]">
       <v-row>
         <v-col c4>
