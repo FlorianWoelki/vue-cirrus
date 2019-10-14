@@ -1,13 +1,16 @@
 <template>
   <div class="api">
-    <v-dropdown>
+    <v-btn v-if="dropdownItems.length === 1" link>{{dropdownItems[0]}}</v-btn>
+    <v-dropdown v-else>
       <template v-slot:button>
         <v-dropdown-btn link>
           v-btn <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
         </v-dropdown-btn>
       </template>
-      <v-dropdown-item>v-btn</v-dropdown-item>
-      <v-dropdown-item>v-btn-group</v-dropdown-item>
+      <v-dropdown-item
+        v-for="dropdownItem in dropdownItems"
+        :key="dropdownItem"
+      >{{dropdownItem}}</v-dropdown-item>
     </v-dropdown>
 
     <v-space style="margin: 0; padding: 5px;" />
@@ -41,7 +44,7 @@
 
 <script>
 export default {
-  props: ['data'],
+  props: ['data', 'dropdownItems'],
   data() {
     return {
       props: this.data,
@@ -56,6 +59,10 @@ export default {
   max-height: 750px;
   border: 1px solid #d1d5da;
   border-radius: 3px;
+}
+
+.api button {
+  margin-bottom: 0;
 }
 
 .api .prop-subtitle {

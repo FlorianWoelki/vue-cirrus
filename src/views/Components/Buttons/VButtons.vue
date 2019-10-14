@@ -18,7 +18,7 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
-    <API :data="props" />
+    <API :data="props" :dropdownItems="['v-btn', 'v-btn-group']" />
 
     <v-space xlarge />
     <v-space xlarge />
