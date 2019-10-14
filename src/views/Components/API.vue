@@ -12,7 +12,7 @@
 
     <v-space style="margin: 0; padding: 5px;" />
     <div class="api-props-section">
-      <div class="api-prop" v-for="prop in props" :key="prop[0]">
+      <div class="api-prop" v-for="(prop, index) in props" :key="index">
         <v-row>
           <v-col c4>
             <span class="u-no-margin prop-subtitle">Name</span>
@@ -33,7 +33,7 @@
             <p class="u-no-margin prop-title">{{prop[3]}}</p>
           </v-col>
         </v-row>
-        <v-divider />
+        <v-divider v-if="index !== props.length - 1" />
       </div>
     </div>
   </div>
