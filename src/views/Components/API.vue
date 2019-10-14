@@ -11,28 +11,30 @@
     </v-dropdown>
 
     <v-space style="margin: 0; padding: 5px;" />
-    <div v-for="prop in props" :key="prop[0]">
-      <v-row>
-        <v-col c4>
-          <span class="u-no-margin prop-subtitle">Name</span>
-          <p class="font-bold text-primary u-no-margin prop-title">{{prop[0]}}</p>
-        </v-col>
-        <v-col c4>
-          <span class="u-no-margin prop-subtitle">Type</span>
-          <p class="font-bold u-no-margin prop-title">{{prop[1]}}</p>
-        </v-col>
-        <v-col c4>
-          <span class="u-no-margin prop-subtitle">Default</span>
-          <p class="font-bold u-no-margin prop-title">{{prop[2]}}</p>
-        </v-col>
-      </v-row>
-      <v-row class="prop-description">
-        <v-col c12>
-          <span class="u-no-margin prop-subtitle">Description</span>
-          <p class="u-no-margin prop-title">{{prop[3]}}</p>
-        </v-col>
-      </v-row>
-      <v-divider />
+    <div class="api-props-section">
+      <div class="api-prop" v-for="prop in props" :key="prop[0]">
+        <v-row>
+          <v-col c4>
+            <span class="u-no-margin prop-subtitle">Name</span>
+            <p class="font-bold text-primary u-no-margin prop-title">{{prop[0]}}</p>
+          </v-col>
+          <v-col c4>
+            <span class="u-no-margin prop-subtitle">Type</span>
+            <p class="font-bold u-no-margin prop-title">{{prop[1]}}</p>
+          </v-col>
+          <v-col c4>
+            <span class="u-no-margin prop-subtitle">Default</span>
+            <p class="font-bold u-no-margin prop-title">{{prop[2]}}</p>
+          </v-col>
+        </v-row>
+        <v-row class="prop-description">
+          <v-col c12>
+            <span class="u-no-margin prop-subtitle">Description</span>
+            <p class="u-no-margin prop-title">{{prop[3]}}</p>
+          </v-col>
+        </v-row>
+        <v-divider />
+      </div>
     </div>
   </div>
 </template>
@@ -49,6 +51,13 @@ export default {
 </script>
 
 <style>
+.api .api-props-section {
+  overflow: auto;
+  max-height: 750px;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+}
+
 .api .prop-subtitle {
   font-size: 12px;
 }
