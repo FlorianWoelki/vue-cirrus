@@ -15,7 +15,7 @@
           title="Login Page"
           subtitleTags="Forms,Layout,Buttons"
           description="A dynamic, beautiful login process page."
-          image="https://i.imgur.com/sV4Mc0R.png"
+          image="login-page.png"
           github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/LoginPage"
           href="#/examples/loginPage"
         />
@@ -25,7 +25,7 @@
           title="One Page"
           subtitleTags="Layout,NavBar"
           description="This is a one page preview."
-          image="https://i.imgur.com/aGhSQJn.png"
+          image="one-page.png"
           github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/OnePage"
           href="#/examples/onePage"
         />
@@ -35,7 +35,7 @@
           title="Contact Page"
           subtitleTags="Forms,Layout,Animations"
           description="A dynamic and animated contact page."
-          image="https://i.imgur.com/Hgw5YM1.png"
+          image="contact-page.png"
           github="https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Examples/ContactPage"
           href="#/examples/contactPage"
         />
