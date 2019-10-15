@@ -10,6 +10,7 @@
       <v-dropdown-item
         v-for="dropdownItem in dropdownItems"
         :key="dropdownItem"
+        @click="changeProperties($event)"
       >{{dropdownItem}}</v-dropdown-item>
     </v-dropdown>
 
@@ -48,7 +49,14 @@ export default {
   data() {
     return {
       props: this.data,
+      currentDropdownItem: this.dropdownItems[0],
     };
+  },
+
+  methods: {
+    changeProperties(event) {
+      this.currentDropdownItem = event.srcElement.innerHTML;
+    },
   },
 };
 </script>
