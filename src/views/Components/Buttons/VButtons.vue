@@ -111,6 +111,7 @@ export default {
         ['v-btn', 'small', 'boolean', 'false', 'This size is smaller than the normal one, but still larger than tiny.'],
         ['v-btn', 'large', 'boolean', 'false', 'This size is larger than the normal button size.'],
         ['v-btn', 'xlarge', 'boolean', 'false', 'This is the largest size for a button.'],
+        ['v-btn-group', 'filled', 'boolean', 'false', 'Fill all the buttons equally on one line.'],
       ],
     };
   },
