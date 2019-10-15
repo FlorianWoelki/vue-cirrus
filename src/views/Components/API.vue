@@ -4,7 +4,8 @@
     <v-dropdown v-else>
       <template v-slot:button>
         <v-dropdown-btn link>
-          v-btn <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+          {{ currentDropdownItem }}
+          <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
         </v-dropdown-btn>
       </template>
       <v-dropdown-item
