@@ -26,17 +26,17 @@
       <div class="card-content">
         <PlaygroundComponent
           v-if="!codeSelected"
-          :outline="outline"
-          :color="color"
-          :size="size"
-          :loading="loading"
+          :outline="propsData.outline"
+          :color="propsData.color"
+          :size="propsData.size"
+          :loading="propsData.loading"
         />
         <CodeComponent
           v-if="codeSelected"
-          :outline="outline"
-          :color="color"
-          :size="size"
-          :loading="loading"
+          :outline="propsData.outline"
+          :color="propsData.color"
+          :size="propsData.size"
+          :loading="propsData.loading"
         />
       </div>
     </div>
@@ -53,37 +53,39 @@
               </v-dropdown-btn>
             </template>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Primary</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Transparent</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Light</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Dark</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Black</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Info</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Link</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Success</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Warning</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Danger</v-dropdown-item>
           </v-dropdown>
-          <v-checkbox @change="() => { outline = !outline }">Outline</v-checkbox>
+          <v-checkbox
+            @change="() => { propsData.outline = !propsData.outline }"
+          >Outline</v-checkbox>
         </v-col>
         <v-col c4 center>
           <v-dropdown>
@@ -93,30 +95,30 @@
               </v-dropdown-btn>
             </template>
             <v-dropdown-item
-              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
             >Tiny</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
             >Small</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
             >Normal</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
             >Large</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
             >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
         <v-col c4 center>
           <v-radio-btn
             id="loadingLeft"
-            @change="(event) => { loading = event.srcElement.id }"
+            @change="(event) => { propsData.loading = event.srcElement.id }"
           >Loading Left</v-radio-btn>
           <v-radio-btn
             id="loadingRight"
-            @change="(event) => { loading = event.srcElement.id }"
+            @change="(event) => { propsData.loading = event.srcElement.id }"
           >Loading Right</v-radio-btn>
         </v-col>
       </v-row>
@@ -132,14 +134,14 @@ export default {
   data() {
     return {
       codeSelected: false,
-      outline: false,
-      color: 'none',
-      size: 'none',
-      loading: 'none',
+      propsData: this.componentProps,
     };
   },
 
   props: {
+    componentProps: {
+      type: Object,
+    },
     noTitle: {
       type: Boolean,
       default: false,

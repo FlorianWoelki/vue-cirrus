@@ -13,7 +13,16 @@
     </p>
 
     <v-space />
-    <Playground noTitle href="/#/components/Buttons/#!">
+    <Playground
+      noTitle
+      href="/#/components/Buttons/#!"
+      :componentProps="{
+        outline: false,
+        color: '',
+        size: '',
+        loading: ''
+      }"
+    >
     </Playground>
 
     <v-space xlarge />
