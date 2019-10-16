@@ -43,6 +43,10 @@
           </v-card>
         </v-parallax-element>
 
+        <v-code lang="JavaScript" copyable><br />import gui
+import asdfmovie
+        </v-code>
+
         <v-next-prev>
           <v-prev-btn prevText="Prev">Previous</v-prev-btn>
           <v-next-btn nextText="Next" @click="test">NEEXT</v-next-btn>

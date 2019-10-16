@@ -7,7 +7,11 @@
 </p>
 
 <p align="center">
-A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh. These are the Vue Components for this CSS framework. The official Cirrus framework can be found <a href="https://github.com/Spiderpig86/Cirrus">here</a>.
+Vue-Cirrus is a component framework for Vue. The goal of Vue-Cirrus is to provide clean, readable and reusable components
+that make building your application easier.<br/>
+You can build your amazing applications with the Power of Vue, Cirrus and a massive library of beautifully crafted components
+and features.<br/><br/>
+This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling.
 </p>
 <p align="center">Documentation: <a href="https://florianwoelki.github.io/vue-cirrus/#/">click</a></p>
 
