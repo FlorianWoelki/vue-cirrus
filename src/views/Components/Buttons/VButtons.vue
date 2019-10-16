@@ -16,13 +16,86 @@
     <Playground
       noTitle
       href="/#/components/Buttons/#!"
-      :componentProps="{
-        outline: false,
-        color: '',
-        size: '',
-        loading: ''
-      }"
+      :componentProps="propsData"
     >
+      <v-row>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Primary</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Transparent</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Light</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Dark</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Black</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Info</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Link</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Success</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Warning</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Danger</v-dropdown-item>
+          </v-dropdown>
+          <v-checkbox
+            @change="() => { propsData.outline = !propsData.outline }"
+          >Outline</v-checkbox>
+        </v-col>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Tiny</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Small</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Large</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xLarge</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+        <v-col c4 center>
+          <v-radio-btn
+            id="loadingLeft"
+            @change="(event) => { propsData.loading = event.srcElement.id }"
+          >Loading Left</v-radio-btn>
+          <v-radio-btn
+            id="loadingRight"
+            @change="(event) => { propsData.loading = event.srcElement.id }"
+          >Loading Right</v-radio-btn>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space xlarge />
@@ -97,6 +170,12 @@ export default {
   },
   data() {
     return {
+      propsData: {
+        outline: false,
+        color: '',
+        size: '',
+        loading: '',
+      },
       props: [
         ['v-btn', 'animated', 'boolean', 'false', 'This is a onclick effect and it will animate the button, if a user clicked on the button.'],
         ['v-btn', 'disabled', 'boolean', 'false', 'With this property the button will be disabled.'],
