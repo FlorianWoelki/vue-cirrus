@@ -52,18 +52,38 @@
                 Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
               </v-dropdown-btn>
             </template>
-            <v-dropdown-item @click="changeColor($event)">Primary</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Transparent</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Light</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Dark</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Black</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Info</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Link</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Success</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Warning</v-dropdown-item>
-            <v-dropdown-item @click="changeColor($event)">Danger</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Primary</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Transparent</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Light</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Dark</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Black</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Info</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Link</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Success</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Warning</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { color = event.srcElement.innerHTML.toLowerCase() }"
+            >Danger</v-dropdown-item>
           </v-dropdown>
-          <v-checkbox @change="changeOutline">Outline</v-checkbox>
+          <v-checkbox @change="() => { outline = !outline }">Outline</v-checkbox>
         </v-col>
         <v-col c4 center>
           <v-dropdown>
@@ -72,16 +92,32 @@
                 Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
               </v-dropdown-btn>
             </template>
-            <v-dropdown-item @click="changeSize($event)">Tiny</v-dropdown-item>
-            <v-dropdown-item @click="changeSize($event)">Small</v-dropdown-item>
-            <v-dropdown-item @click="changeSize($event)">Normal</v-dropdown-item>
-            <v-dropdown-item @click="changeSize($event)">Large</v-dropdown-item>
-            <v-dropdown-item @click="changeSize($event)">xLarge</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+            >Tiny</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+            >Small</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+            >Large</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { size = event.srcElement.innerHTML.toLowerCase() }"
+            >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
         <v-col c4 center>
-          <v-radio-btn id="loadingLeft" @change="changeLoading($event)">Loading Left</v-radio-btn>
-          <v-radio-btn id="loadingRight" @change="changeLoading($event)">Loading Right</v-radio-btn>
+          <v-radio-btn
+            id="loadingLeft"
+            @change="(event) => { loading = event.srcElement.id }"
+          >Loading Left</v-radio-btn>
+          <v-radio-btn
+            id="loadingRight"
+            @change="(event) => { loading = event.srcElement.id }"
+          >Loading Right</v-radio-btn>
         </v-col>
       </v-row>
     </div>
@@ -117,21 +153,6 @@ export default {
   components: {
     PlaygroundComponent,
     CodeComponent,
-  },
-
-  methods: {
-    changeOutline() {
-      this.outline = !this.outline;
-    },
-    changeSize(event) {
-      this.size = event.srcElement.innerHTML.toLowerCase();
-    },
-    changeColor(event) {
-      this.color = event.srcElement.innerHTML.toLowerCase();
-    },
-    changeLoading(event) {
-      this.loading = event.srcElement.id;
-    },
   },
 };
 </script>

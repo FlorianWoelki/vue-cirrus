@@ -13,7 +13,8 @@
     </p>
 
     <v-space />
-    <Playground noTitle href="/#/components/Buttons/#!" />
+    <Playground noTitle href="/#/components/Buttons/#!">
+    </Playground>
 
     <v-space xlarge />
     <v-space xlarge />
