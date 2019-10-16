@@ -34,19 +34,21 @@
       </v-sidebar-item>
     </v-sidebar-items>
     <v-sidebar-content>
-      <ChangeMode />
+      <!--<ChangeMode />-->
       <slot></slot>
     </v-sidebar-content>
   </v-sidebar>
 </template>
 
 <script>
-import ChangeMode from '@/components/ChangeMode.vue';
+// import ChangeMode from '@/components/ChangeMode.vue';
 
 export default {
+  /*
   components: {
     ChangeMode,
   },
+  */
 
   data() {
     return {
