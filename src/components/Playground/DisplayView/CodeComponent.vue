@@ -3,6 +3,7 @@
     <v-code lang="Vue" copyable>
       <xmp v-html="code"></xmp>
     </v-code>
+    <p>{{color}}</p>
   </div>
 </template>
 
@@ -12,9 +13,9 @@ export default {
   data() {
     return {
       code: `
-<v-btn ${(this.outline ? '\n  outline' : '')}${(this.color !== 'none' ? `\n  ${this.color}` : '')}${(this.size !== 'none' ? `\n  ${this.size}` : '')}${(this.loading !== 'none' ? `\n  ${this.loading}` : '')}
+<v-btn ${(this.outline ? '\n  outline' : '')}${(this.color !== '' ? `\n  ${this.color}` : '')}${(this.size !== '' ? `\n  ${this.size}` : '')}${(this.loading !== '' ? `\n  ${this.loading}` : '')}
 >
-Customize Me
+  Customize Me
 </v-btn>`,
     };
   },
