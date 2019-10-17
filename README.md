@@ -1,19 +1,22 @@
 <p align="center"><img src="https://i.imgur.com/Jwu0XrO.png" width="200"></p>
-<h1 align="center">Vue Cirrus</h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/FlorianWoelki/vue-cirrus.svg"></a>
+  <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://img.shields.io/npm/dt/vue-cirrus.svg"></a>
+  <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://img.shields.io/npm/dm/vue-cirrus.svg"></a>
 </p>
 
-<p align="center">
+## 🧐 Introduction
+
 Vue-Cirrus is a component framework for Vue. The goal of Vue-Cirrus is to provide clean, readable and reusable components
-that make building your application easier.<br/>
-You can build your amazing applications with the Power of Vue, Cirrus and a massive library of beautifully crafted components
-and features.<br/><br/>
+that make building your application easier.
+
+You can build your amazing applications with the Power of Vue, Cirrus and a massive library of beautifully crafted components and features.
+
 This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling.
-</p>
-<p align="center">Documentation: <a href="https://florianwoelki.github.io/vue-cirrus/#/">click</a></p>
+
+Documentation: <a href="https://florianwoelki.github.io/vue-cirrus/#/">click</a>
 
 ## 🔨 Quick Install
 
