@@ -3,21 +3,42 @@
     <v-code lang="Vue" copyable>
       <xmp v-html="code"></xmp>
     </v-code>
-    <p>{{color}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['outline', 'color', 'size', 'loading'],
+  props: ['propsData'],
   data() {
     return {
-      code: `
-<v-btn ${(this.outline ? '\n  outline' : '')}${(this.color !== '' ? `\n  ${this.color}` : '')}${(this.size !== '' ? `\n  ${this.size}` : '')}${(this.loading !== '' ? `\n  ${this.loading}` : '')}
+      code: this.getCode(),
+    };
+  },
+
+  methods: {
+    getCode() {
+      let validProps = '';
+      Object.entries(this.propsData).forEach((entry) => {
+        if (entry[1] === true) {
+          validProps += `\n  ${entry[0]}`;
+        } else if (entry[1] !== '' && entry[1] !== false) {
+          validProps += `\n  ${entry[1]}`;
+        }
+      });
+
+      return `
+<v-btn ${validProps}
 >
   Customize Me
-</v-btn>`,
-    };
+</v-btn>
+`;
+    },
   },
 };
 </script>
+
+<style>
+.code-component code {
+  padding-bottom: 0;
+}
+</style>

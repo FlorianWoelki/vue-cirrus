@@ -33,10 +33,7 @@
         />
         <CodeComponent
           v-if="codeSelected"
-          :outline="propsData.outline"
-          :color="propsData.color"
-          :size="propsData.size"
-          :loading="propsData.loading"
+          :propsData="propsData"
         />
       </div>
     </div>
