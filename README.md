@@ -9,8 +9,7 @@
 
 ## 🧐 Introduction
 
-Vue-Cirrus is a component framework for Vue. The goal of Vue-Cirrus is to provide clean, readable and reusable components
-that make building your application easier.
+Vue-Cirrus is a component framework for Vue. The goal of Vue-Cirrus is to provide clean readable and reusable components that make building your application easier.
 
 You can build your amazing applications with the Power of Vue, Cirrus and a massive library of beautifully crafted components and features.
 
