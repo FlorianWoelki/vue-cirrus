@@ -4,7 +4,7 @@
       type="search"
       :class=inputClasses
       :data-tooltip=tooltipData
-      :placeholder=inputPlaceholder
+      :placeholder=placeholder
       @input="$emit('input', $event.target.value)"
     >
     <button
@@ -29,7 +29,7 @@ export default {
   ],
 
   props: {
-    inputPlaceholder: {
+    placeholder: {
       type: String,
       default: 'Search',
     },
