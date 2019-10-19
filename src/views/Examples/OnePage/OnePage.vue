@@ -7,7 +7,7 @@
       </div>
     </v-navbar>
 
-    <v-parallax fullscreen image="https://www.ubackground.com/_ph/17/56501308.jpg">
+    <v-parallax fullscreen image="@/assets/head-bg.jpg">
       <v-row>
         <v-col>
           <h1 class="white uppercase u-text-center">One Page</h1>
