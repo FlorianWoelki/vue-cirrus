@@ -2,8 +2,7 @@
   <div class="demo">
     <v-parallax
       fullscreen
-      link="image.png"
-      image="https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100"
+      image="logo.png"
     >
       <h1 class="white">Hello World</h1>
       <v-divider />
