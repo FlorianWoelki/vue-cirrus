@@ -8,6 +8,7 @@
       @input="$emit('input', $event.target.value)"
     >
     <button
+      v-if="!noButton"
       class="form-group-btn"
       @click=searchAction
     >
@@ -32,6 +33,10 @@ export default {
     placeholder: {
       type: String,
       default: 'Search',
+    },
+    noButton: {
+      type: Boolean,
+      default: false,
     },
     searchAction: {
       type: Function,
