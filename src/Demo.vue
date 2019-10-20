@@ -89,6 +89,7 @@ import asdfmovie
 
         <v-form-group>
           <v-input-field
+            dark
             pilled
             noControl
             placeholder="Hello World"

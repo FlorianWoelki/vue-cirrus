@@ -134,6 +134,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -153,6 +157,7 @@ export default {
           'text-danger input-error': this.error,
           'input-contains-icon': this.icon,
           'input-control--pilled': this.pilled,
+          dark: this.dark,
         },
       );
     },
@@ -165,3 +170,10 @@ export default {
   },
 };
 </script>
+
+<style>
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).dark, select.dark {
+  background-color: #272727;
+  border-color: #272727;
+}
+</style>
