@@ -122,7 +122,7 @@ import asdfmovie
       </v-col>
     </v-row>
 
-    <v-tabs fill>
+    <v-tabs fill dark>
       <v-tab @click="test">test 1</v-tab>
       <v-tab @click="test">test 2</v-tab>
     </v-tabs>

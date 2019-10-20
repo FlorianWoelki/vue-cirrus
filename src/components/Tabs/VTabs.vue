@@ -45,6 +45,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -60,8 +64,17 @@ export default {
         'tabs-fill': this.fill,
         'tabs-depth': this.depth,
         'tabs-classic': this.classic,
+        dark: this.dark,
       };
     },
   },
 };
 </script>
+
+<style>
+.tab-container.dark li a {
+  color: white;
+  background-color: #272727;
+}
+.tab-container.dark li a {}
+</style>
