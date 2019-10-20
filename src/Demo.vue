@@ -98,7 +98,7 @@ import asdfmovie
           <v-btn primary outline>test</v-btn>
         </v-form-group>
 
-        <v-search-bar placeholder="Suchen ..."></v-search-bar>
+        <v-search-bar dark placeholder="Suchen ...">test</v-search-bar>
 
         <v-row center>
           <v-col fluid textCenter>
