@@ -1,12 +1,5 @@
 <template>
   <div class="demo">
-    <v-parallax
-      fullscreen
-      image="logo.png"
-    >
-      <h1 class="white">Hello World</h1>
-      <v-divider />
-    </v-parallax>
     <v-row center>
       <v-col c6>
         <v-parallax-element>
@@ -42,7 +35,7 @@
           </v-card>
         </v-parallax-element>
 
-        <v-code lang="JavaScript" copyable><br />import gui
+        <v-code dark lang="JavaScript" copyable><br />import gui
 import asdfmovie
         </v-code>
 
@@ -184,3 +177,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.demo {
+  background-color: #121212;
+}
+</style>

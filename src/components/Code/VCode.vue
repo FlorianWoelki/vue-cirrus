@@ -138,7 +138,7 @@ code {
 }
 code.dark {
   color: rgb(185, 184, 184);
-  background: #2d2d2d !important;
+  background: #272727 !important;
 }
 
 code .bash-keyword {
