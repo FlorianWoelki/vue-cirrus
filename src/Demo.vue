@@ -53,7 +53,7 @@ import asdfmovie
                 <v-frame-subtitle>Creator</v-frame-subtitle>
               </v-frame-header>
 
-              <v-divider noMargin />
+              <v-divider dark noMargin />
 
               <v-frame-body>
                 <v-container noPadding>
@@ -64,7 +64,7 @@ import asdfmovie
                 </v-container>
               </v-frame-body>
 
-              <v-divider noMargin />
+              <v-divider dark noMargin />
 
               <v-frame-footer>
                 <v-frame-subtitle textCenter>

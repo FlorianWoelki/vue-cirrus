@@ -28,6 +28,10 @@ export default {
       type: String,
       default: '',
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -39,6 +43,7 @@ export default {
           divider: !this.vertical,
           'divider-short': this.short,
           'divider--v': this.vertical,
+          dark: this.dark,
         },
       );
     },
@@ -47,6 +52,9 @@ export default {
 </script>
 
 <style>
+.divider.dark {
+  border-color: #272727;
+}
 .divider-short {
   max-width: 15rem;
   width: 100%;
