@@ -46,7 +46,7 @@ import asdfmovie
 
         <v-row center>
           <v-col c6>
-            <v-frame>
+            <v-frame dark>
               <v-frame-header textCenter>
                 <v-avatar text="FW" />
                 <v-frame-title>Florian Woelki</v-frame-title>
