@@ -5,25 +5,6 @@
   <div v-else :class="cardClasses">
     <slot />
   </div>
-  <!--
-  <div v-else class="card slide-up">
-    <div v-if="image" class="card-container" :style="{ 'min-height': `${height}` }">
-      <div class="card-image" :style="image"></div>
-    </div>
-    <div class="mobile-title">
-      <div class="content">
-        <div class="tile">
-          <div class="tile__container">
-            <p class="tile__title">{{ title }}</p>
-            <p class="tile__subtitle">{{ subtitle }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <slot></slot>
-  </div>
-  -->
 </template>
 
 <script>
