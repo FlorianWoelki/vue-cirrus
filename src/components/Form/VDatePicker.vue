@@ -1,7 +1,7 @@
 <template>
   <div
-    :class=datePickerClasses
-    :data-tooltip=tooltipData
+    :class="datePickerClasses"
+    :data-tooltip="tooltipData"
   >
     <label
       v-if=title
@@ -57,6 +57,10 @@ export default {
       type: String,
       default: '',
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -67,6 +71,7 @@ export default {
         this.tooltipMixins,
         {
           'date-picker': true,
+          dark: this.dark,
         },
       );
     },
@@ -89,3 +94,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.date-picker.dark input[type="date"] {
+  background-color: #272727;
+  border-color: #272727;
+  color: white;
+}
+</style>
