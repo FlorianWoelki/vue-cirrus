@@ -67,6 +67,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -78,6 +82,7 @@ export default {
         'modal-animated--zoom-in': this.zoomIn,
         'modal-animated--zoom-out': this.zoomOut,
         'modal-animated--dropdown': this.dropdown,
+        dark: this.dark,
       };
 
       return Object.assign(
@@ -88,3 +93,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.modal.dark .modal-content {
+  background-color: #272727;
+  color: white;
+}
+</style>

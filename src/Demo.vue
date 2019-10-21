@@ -35,6 +35,19 @@
           </v-card>
         </v-parallax-element>
 
+        <a href="#modal">
+          <v-btn primary>Open Modal</v-btn>
+        </a>
+        <v-modal dark large zoomOut>
+          <v-modal-body>
+            <p>Hello Modal Dialog Hello Modal Dialog</p>
+          </v-modal-body>
+          <v-modal-footer style="padding-bottom: 80px">
+            <v-btn pullLeft>Close</v-btn>
+            <v-btn pullRight primary>Share</v-btn>
+          </v-modal-footer>
+        </v-modal>
+
         <v-code dark lang="JavaScript" copyable><br />import gui
 import asdfmovie
         </v-code>
