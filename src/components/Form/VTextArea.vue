@@ -3,6 +3,7 @@
     :placeholder=placeholder
     :data-tooltip=tooltipData
     :disabled="disabled"
+    :class="classes"
   ></textarea>
 </template>
 
@@ -27,11 +28,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
     classes() {
       return Object.assign(
+        {
+          dark: this.dark,
+        },
         this.layoutMixins,
         this.tooltipMixins,
         this.animationsMixins,
@@ -40,3 +48,11 @@ export default {
   },
 };
 </script>
+
+<style>
+textarea.dark, textarea[type=text].dark {
+  background-color: #272727;
+  border-color: #272727;
+  color: white;
+}
+</style>

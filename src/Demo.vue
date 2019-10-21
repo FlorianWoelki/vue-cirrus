@@ -14,6 +14,8 @@
           <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
         </v-card>
 
+        <v-text-area dark placeholder="Type your text here ..."></v-text-area>
+
         <v-input-field
           dark
           title="Title"
