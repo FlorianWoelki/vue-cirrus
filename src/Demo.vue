@@ -2,38 +2,17 @@
   <div class="demo">
     <v-row center>
       <v-col c6>
-        <v-parallax-element>
-          <v-card dark>
-            <v-card-image
-              image="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"
-            >
-              <v-card-title>test</v-card-title>
-              <v-card-subtitle>
-                <v-tag-container grouped rounded>
-                  <v-tag primary xlarge>Hello</v-tag>
-                  <v-tag warning xlarge>My</v-tag>
-                  <v-tag black xlarge>World</v-tag>
-                </v-tag-container>
-              </v-card-subtitle>
-            </v-card-image>
-            <v-card-content>
-              <v-avatar src="assets/logo.png"></v-avatar>
-              <p>This is some basic simple card text</p>
-              <a href="#">#vue-cirrus</a>
-              <a href="#">#cirrus</a>
-            </v-card-content>
+        <v-card dark>
+          <v-card-title>test</v-card-title>
+          <v-card-content>
+            <v-avatar src="assets/logo.png"></v-avatar>
+            <p>This is some basic simple card text</p>
+            <a href="#">#vue-cirrus</a>
+            <a href="#">#cirrus</a>
+          </v-card-content>
 
-            <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
-
-            <v-card-actions>
-              <v-row center>
-                <v-btn disabled primary @click="test">Cancel</v-btn>
-                <v-btn success>Save</v-btn>
-                <v-btn link>Post</v-btn>
-              </v-row>
-            </v-card-actions>
-          </v-card>
-        </v-parallax-element>
+          <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
+        </v-card>
 
         <a href="#modal">
           <v-btn primary>Open Modal</v-btn>

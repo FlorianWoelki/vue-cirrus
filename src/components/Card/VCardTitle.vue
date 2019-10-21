@@ -20,3 +20,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.card.dark .card-head {
+  border-bottom: 1px solid #404040;
+}
+</style>
