@@ -14,6 +14,12 @@
           <v-card-footer>6:32 PM - 3 Jul 19</v-card-footer>
         </v-card>
 
+        <v-input-field
+          dark
+          placeholder="Hello World"
+        >
+        </v-input-field>
+
         <a href="#modal">
           <v-btn primary>Open Modal</v-btn>
         </a>

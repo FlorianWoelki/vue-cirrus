@@ -175,5 +175,6 @@ export default {
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).dark, select.dark {
   background-color: #272727;
   border-color: #272727;
+  color: white;
 }
 </style>
