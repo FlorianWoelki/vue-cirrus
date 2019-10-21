@@ -16,6 +16,9 @@
 
         <v-input-field
           dark
+          title="Title"
+          subtitle="Subtitle"
+          infoText="Info text"
           placeholder="Hello World"
         >
         </v-input-field>

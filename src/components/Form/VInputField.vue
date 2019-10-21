@@ -15,7 +15,7 @@
   >
     <label
       v-if=title
-      class="font-normal"
+      :class="'font-normal' + (dark ? ' text-light' : '')"
     >{{title}}</label>
     <span
       v-if="subtitle"
