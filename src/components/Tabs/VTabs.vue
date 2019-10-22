@@ -76,5 +76,4 @@ export default {
   color: white;
   background-color: #272727;
 }
-.tab-container.dark li a {}
 </style>
