@@ -44,6 +44,13 @@
 import asdfmovie
         </v-code>
 
+        <v-pagination bordered dark>
+          <v-pagination-item disabled>prev</v-pagination-item>
+          <v-pagination-item selected>1</v-pagination-item>
+          <v-pagination-item>2</v-pagination-item>
+          <v-pagination-item>next</v-pagination-item>
+        </v-pagination>
+
         <v-next-prev>
           <v-prev-btn prevText="Prev">Previous</v-prev-btn>
           <v-next-btn nextText="Next" @click="test">NEEXT</v-next-btn>
@@ -107,13 +114,13 @@ import asdfmovie
 
         <v-row center>
           <v-col fluid textCenter>
-            <v-headline h3>A</v-headline>
+            <v-headline dark h3>A</v-headline>
           </v-col>
           <v-col fluid textCenter>
-            <v-headline h3>B</v-headline>
+            <v-headline dark h3>B</v-headline>
           </v-col>
           <v-col fluid textCenter>
-            <v-headline h3>C</v-headline>
+            <v-headline dark h3>C</v-headline>
           </v-col>
         </v-row>
 

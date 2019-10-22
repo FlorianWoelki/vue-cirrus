@@ -11,6 +11,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -18,8 +22,15 @@ export default {
       return {
         pagination: true,
         'pagination-bordered': this.bordered,
+        dark: this.dark,
       };
     },
   },
 };
 </script>
+
+<style>
+.pagination.pagination-bordered.dark .pagination-item.short a {
+  border-color: #272727;
+}
+</style>
