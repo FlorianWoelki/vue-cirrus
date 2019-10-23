@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3] - 2019-10-23
+## [0.3.0] - 2019-10-23
 
 ### 🔨 Added
 - Added nobutton property to v-searchbar
