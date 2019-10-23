@@ -61,24 +61,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#sidebar .hover-effect.tree-item:hover {
-  -moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-  background-color: #efefef;
-  border-radius: 5px;
-}
-#sidebar .sidebar-link {
-  backface-visibility: initial;
-  text-decoration: initial;
-  transition: none;
-  color: initial;
-  padding: 0;
-  font-weight: 600;
-  font-size: .95rem;
-  color: #374054;
-}
-</style>

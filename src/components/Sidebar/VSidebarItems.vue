@@ -3,7 +3,6 @@
     <div
       id="sidebar"
       class="tree-nav"
-      style="background: #f7f7f7;"
     >
       <div class="content">
         <h6>{{ title }}</h6>
@@ -36,13 +35,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#sidebar {
-  border-right: 1px solid rgb(220, 220, 220);
-}
-
-#sidebar .content {
-  margin: 0 0.4em 1.5em;
-}
-</style>
