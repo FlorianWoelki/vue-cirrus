@@ -13,9 +13,9 @@ Vue-Cirrus is a component framework for Vue. The goal of Vue-Cirrus is to provid
 
 You can build your amazing applications with the Power of Vue, Cirrus and a massive library of beautifully crafted components and features.
 
-This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling.
+This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling and it is an adaption of vue components.
 
-Documentation: <a href="https://florianwoelki.github.io/vue-cirrus/#/">click</a>
+If you want to see the documentation <a href="https://florianwoelki.github.io/vue-cirrus/#/">click here</a>
 
 ## 🔨 Quick Install
 
