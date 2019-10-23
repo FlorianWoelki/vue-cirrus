@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3] - 2019-10-23
+
+### 🔨 Added
+- Added nobutton property to v-searchbar
+- Added darkmode 😃
+
+### ⚡️ Changed
+- Fixed code component
+- Updated readme file
+- Fixed local image on parallax component
+- Renamed placeholder input to placeholder
+
+
 ## [0.2.6] - 2019-10-08
 
 ### 🔨 Added
