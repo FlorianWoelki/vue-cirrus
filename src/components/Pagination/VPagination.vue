@@ -32,5 +32,6 @@ export default {
 <style>
 .pagination.pagination-bordered.dark .pagination-item.short a {
   border-color: #272727;
+  color: rgb(200, 200, 200);
 }
 </style>
