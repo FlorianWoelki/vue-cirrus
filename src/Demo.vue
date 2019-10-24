@@ -88,6 +88,8 @@
               <v-pagination-item>next</v-pagination-item>
             </v-pagination>
 
+            <v-checkbox dark>test</v-checkbox>
+
             <v-dropdown dark>
               <template v-slot:button>
                 <v-dropdown-btn>Test</v-dropdown-btn>
