@@ -1,17 +1,73 @@
 <template>
   <Sidebar>
-    <GettingStarted />
+    <h1 class="font-thin">Quick Start</h1>
+    <p class="no-upper-margin">
+      You can start really easily with vue-cirrus.
+    </p>
+
+    <v-space />
+
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      To include Vue-Cirrus into your existing or new project, you must
+      install its <kbd>npm package</kbd>. You can use either <kbd>npm</kbd>
+      or <kbd>yarn</kbd> to accomplish this task.
+    </p>
+    <p class="no-upper-margin">
+      For detailed explanation of how to get <kbd>npm</kbd> running in your
+      environment, check out the <v-link>official npm documentation</v-link>
+      In addition, you can use <kbd>yarn</kbd> as an alternative to install
+      Vue-Cirrus. You can find more information on the <v-link>official yarn documentation</v-link>.
+      If you are good to go, you can run either command from the cli.
+    </p>
+    <v-code dark lang="Bash"><br />npm install vue-cirrus
+// OR
+yarn add vue-cirrus
+    </v-code>
+
+    <v-space />
+    <p class="no-upper-margin">
+      This additional step is optional, but if you want to use our official used
+      fonts, you can simply include them in your <kbd>index.html</kbd> file of
+      your vue project.
+    </p>
+    <v-code dark lang="HTML" copyable>
+      <br />
+      <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+        rel="stylesheet"
+      > <br />
+      <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet"
+      > <br />
+      <link
+        href="https://unpkg.com/cirrus-ui"
+        type="text/css"
+        rel="stylesheet"
+      />
+    </v-code>
+
+    <v-space />
+    <p class="no-upper-margin">
+      If you have done those steps, you can now include the Vue-Cirrus package
+      in your <kbd>main.js</kbd> file. Just copy the code and import it easily.
+    </p>
+    <v-code dark lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
+import 'vue-cirrus';
+    </v-code>
+
+    <v-space />
+    <h3 class="font-thin">Now you are ready to go! Keep hacking!</h3>
   </Sidebar>
 </template>
 
 <script>
-import GettingStarted from '@/views/Home/GettingStarted.vue';
 import Sidebar from '@/components/Sidebar.vue';
 
 export default {
   components: {
     Sidebar,
-    GettingStarted,
   },
 };
 </script>
