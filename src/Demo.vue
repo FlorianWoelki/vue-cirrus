@@ -88,6 +88,15 @@
               <v-pagination-item>next</v-pagination-item>
             </v-pagination>
 
+            <v-dropdown dark>
+              <template v-slot:button>
+                <v-dropdown-btn>Test</v-dropdown-btn>
+              </template>
+              <v-dropdown-item>111</v-dropdown-item>
+              <v-dropdown-item>222</v-dropdown-item>
+              <v-dropdown-item>333</v-dropdown-item>
+            </v-dropdown>
+
             <v-next-prev>
               <v-prev-btn prevText="Prev">Previous</v-prev-btn>
               <v-next-btn nextText="Next" @click="test">NEEXT</v-next-btn>

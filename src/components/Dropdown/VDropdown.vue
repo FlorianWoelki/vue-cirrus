@@ -31,6 +31,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -43,9 +47,16 @@ export default {
           'list-dropdown': true,
           'dropdown-right': this.right,
           'dropdown-left': this.left,
+          dark: this.dark,
         },
       );
     },
   },
 };
 </script>
+
+<style>
+.list-dropdown.dark .menu {
+  background-color: #272727;
+}
+</style>
