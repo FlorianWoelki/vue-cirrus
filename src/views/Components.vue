@@ -22,7 +22,7 @@
       Vue-Cirrus. You can find more information on the <v-link href="https://yarnpkg.com/lang/en/docs/" blank>official yarn documentation</v-link>.
       If you are good to go, you can run either command from the cli.
     </p>
-    <v-code dark lang="Bash"><br />npm install vue-cirrus
+    <v-code lang="Bash"><br />npm install vue-cirrus
 // OR
 yarn add vue-cirrus
     </v-code>
@@ -35,7 +35,7 @@ yarn add vue-cirrus
       In addition we are adding the Cirrus UI to get some styling
       from Cirrus.
     </p>
-    <v-code dark lang="HTML" copyable>
+    <v-code lang="HTML" copyable>
       <br />
       <xmp v-html="indexHtmlCode"></xmp>
     </v-code>
@@ -45,7 +45,7 @@ yarn add vue-cirrus
       If you have done those steps, you can now include the Vue-Cirrus package
       in your <kbd>main.js</kbd> file. Just copy the code and import it easily.
     </p>
-    <v-code dark lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
+    <v-code lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
 import 'vue-cirrus';
     </v-code>
 
