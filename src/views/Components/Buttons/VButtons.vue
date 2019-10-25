@@ -99,7 +99,6 @@
     </Playground>
 
     <v-space xlarge />
-    <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
     <API :data="props" :dropdownItems="['v-btn', 'v-btn-group']" />
 
@@ -113,7 +112,7 @@
     </p>
     <BtnOutline />
 
-    <v-space xlarge />
+    <v-space />
     <h5 class="font-light no-upper-margin">Animated</h5>
     <p class="no-upper-margin">
       There is a option, where you can enable animated state, if someone has
@@ -121,7 +120,7 @@
     </p>
     <BtnAnimated />
 
-    <v-space xlarge />
+    <v-space />
     <h5 class="font-light no-upper-margin">Loading</h5>
     <p class="no-upper-margin">
       You can add a loading state for buttons. We do have a left and right
@@ -129,7 +128,7 @@
     </p>
     <BtnLoading />
 
-    <v-space xlarge />
+    <v-space />
     <h5 class="font-light no-upper-margin">Types</h5>
     <p class="no-upper-margin">
       In Vue Cirrus we have 3 different types of buttons. You have the option
@@ -137,15 +136,13 @@
     </p>
     <BtnTypes />
 
-    <v-space xlarge />
+    <v-space />
     <h5 class="font-light no-upper-margin">Groups</h5>
     <p class="no-upper-margin">
       There is a extra component for buttons, where you can group multiple
       buttons together to one huge compromised button.
     </p>
     <BtnGroup />
-
-    <v-space xlarge v-for="i in 2" :key="i" />
   </section>
 </template>
 
