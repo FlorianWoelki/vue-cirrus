@@ -2,7 +2,9 @@
   <Sidebar>
     <h1 class="font-thin">Quick Start</h1>
     <p class="no-upper-margin">
-      You can start really easily with vue-cirrus.
+      You can start really easily with vue-cirrus. Just follow
+      the steps below to install Vue-Cirrus for your existing or
+      new Vue project.
     </p>
 
     <v-space />
@@ -15,9 +17,9 @@
     </p>
     <p class="no-upper-margin">
       For detailed explanation of how to get <kbd>npm</kbd> running in your
-      environment, check out the <v-link>official npm documentation</v-link>
+      environment, check out the <v-link href="https://docs.npmjs.com/" blank>official npm documentation</v-link>
       In addition, you can use <kbd>yarn</kbd> as an alternative to install
-      Vue-Cirrus. You can find more information on the <v-link>official yarn documentation</v-link>.
+      Vue-Cirrus. You can find more information on the <v-link href="https://yarnpkg.com/lang/en/docs/" blank>official yarn documentation</v-link>.
       If you are good to go, you can run either command from the cli.
     </p>
     <v-code dark lang="Bash"><br />npm install vue-cirrus
@@ -29,23 +31,13 @@ yarn add vue-cirrus
     <p class="no-upper-margin">
       This additional step is optional, but if you want to use our official used
       fonts, you can simply include them in your <kbd>index.html</kbd> file of
-      your vue project.
+      your vue project. <br />
+      In addition we are adding the Cirrus UI to get some styling
+      from Cirrus.
     </p>
     <v-code dark lang="HTML" copyable>
       <br />
-      <link
-        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
-        rel="stylesheet"
-      > <br />
-      <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-        rel="stylesheet"
-      > <br />
-      <link
-        href="https://unpkg.com/cirrus-ui"
-        type="text/css"
-        rel="stylesheet"
-      />
+      <xmp v-html="indexHtmlCode"></xmp>
     </v-code>
 
     <v-space />
@@ -58,7 +50,7 @@ import 'vue-cirrus';
     </v-code>
 
     <v-space />
-    <h3 class="font-thin">Now you are ready to go! Keep hacking!</h3>
+    <h5 class="font-thin">Now you are ready to go! Keep hacking!</h5>
   </Sidebar>
 </template>
 
@@ -68,6 +60,24 @@ import Sidebar from '@/components/Sidebar.vue';
 export default {
   components: {
     Sidebar,
+  },
+
+  data() {
+    return {
+      indexHtmlCode: `<link
+  href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+  rel="stylesheet"
+>
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+  rel="stylesheet"
+>
+<link
+  href="https://unpkg.com/cirrus-ui"
+  type="text/css"
+  rel="stylesheet"
+/>`,
+    };
   },
 };
 </script>
