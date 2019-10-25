@@ -17,6 +17,7 @@
         </v-sidebar-item>
       </v-sidebar-items>
       <v-sidebar-content>
+        <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
         <v-row center>
           <v-col c6>
             <v-card dark>
