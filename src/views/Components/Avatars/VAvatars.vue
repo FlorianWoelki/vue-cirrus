@@ -1,65 +1,63 @@
 <template>
   <section class="avatars-component">
-    <h5>Easy Avatars</h5>
-    <p>Easily create avatars with Vue Cirrus! It is so simple!</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code
-          lang="Vue"
-          :dark="isDarkMode"
-        >
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        center
-        c6
-      >
-        <v-avatar text="FW"></v-avatar>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      The <kbd>v-avatar</kbd> component is used for replacing circular profile
+      images. This component will allow you to dynamically size the avatar and
+      set a default text, if there is no image.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Avatars in their simplest form display a red circle with custom text in it.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Avatars/#!"
+      :componentProps="propsData"
+    >
+    </Playground>
+
+    <v-space />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-avatar']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: '<v-avatar text="FW"></v-avatar>',
-      props: {
-        src: ['src', 'Empty', 'String', 'Avatar image source'],
-        text: ['text', 'Empty', 'String', 'Avatar text'],
-        padded: ['padded', 'false', 'Boolean', 'Enable padding around avatar'],
-        xsmall: ['xsmall', 'false', 'Boolean', 'Avatar xsmall size'],
-        small: ['small', 'false', 'Boolean', 'Avatar small size'],
-        large: ['large', 'false', 'Boolean', 'Avatar large size'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'Avatar xlarge size'],
+      propsData: {
+        src: '',
+        text: '',
+        padded: false,
+        size: '',
       },
+      props: [
+        ['v-avatar', 'src', 'string', 'empty', 'This is the image source of the avatar.'],
+        ['v-avatar', 'text', 'string', 'empty', 'A placeholder text which will be placed in the avatar.'],
+        ['v-avatar', 'padded', 'boolean', 'false', 'Enable padding around avatar.'],
+        ['v-avatar', 'xsmall', 'boolean', 'false', 'This size is for xsmall avatars.'],
+        ['v-avatar', 'small', 'boolean', 'false', 'This size is for small avatars.'],
+        ['v-avatar', 'large', 'boolean', 'false', 'This size is for large avatars.'],
+        ['v-avatar', 'xlarge', 'boolean', 'false', 'This size is for xlarge avatars.'],
+      ],
     };
-  },
-
-  computed: {
-    isDarkMode() {
-      return this.$store.getters.isDarkMode.darkMode;
-    },
   },
 };
 </script>
