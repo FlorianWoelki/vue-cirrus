@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2019-11-02
+
+### 🔨 Added
+- Added darkmode to dropdown
+- Added darkmode to checkbox
+- Added yarn to bash code coloring
+- Added value property to search bar
+
+### ⚡️ Changed
+- Refactored link to href in pagination item
+
+
 ## [0.3.0] - 2019-10-23
 
 ### 🔨 Added
