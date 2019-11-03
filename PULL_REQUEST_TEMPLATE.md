@@ -36,3 +36,13 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
+
+# Note:
+
+You can follow the following checkpoints for better commit messages:
+* Subject line:
+  * Use 50 characters maximum
+  * Do not use a sentence-ending period
+* For the body text:
+  * Use as many lines as you like
+  * Use 72 characters maximum per line for typical word wrap text
