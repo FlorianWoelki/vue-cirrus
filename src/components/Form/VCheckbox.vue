@@ -1,5 +1,5 @@
 <template>
-  <div class="form-ext-control form-ext-checkbox">
+  <div :class="`form-ext-control form-ext-checkbox${dark ? ' dark' : ''}`">
     <input
       type="checkbox"
       :id="id"
@@ -36,6 +36,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -55,3 +59,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.form-ext-control.form-ext-checkbox.dark label {
+  color: white;
+}
+
+.form-ext-control.form-ext-checkbox.dark .form-ext-label:before {
+  background: #404040;
+  border-color: #404040;
+}
+</style>

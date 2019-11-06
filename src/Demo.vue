@@ -17,6 +17,7 @@
         </v-sidebar-item>
       </v-sidebar-items>
       <v-sidebar-content>
+        <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
         <v-row center>
           <v-col c6>
             <v-card dark>
@@ -87,6 +88,17 @@
               <v-pagination-item>2</v-pagination-item>
               <v-pagination-item>next</v-pagination-item>
             </v-pagination>
+
+            <v-checkbox dark>test</v-checkbox>
+
+            <v-dropdown dark>
+              <template v-slot:button>
+                <v-dropdown-btn>Test</v-dropdown-btn>
+              </template>
+              <v-dropdown-item>111</v-dropdown-item>
+              <v-dropdown-item>222</v-dropdown-item>
+              <v-dropdown-item>333</v-dropdown-item>
+            </v-dropdown>
 
             <v-next-prev>
               <v-prev-btn prevText="Prev">Previous</v-prev-btn>

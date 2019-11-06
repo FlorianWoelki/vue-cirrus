@@ -2,9 +2,10 @@
   <div class="form-group">
     <input
       type="search"
-      :class=inputClasses
-      :data-tooltip=tooltipData
-      :placeholder=placeholder
+      :class="inputClasses"
+      :data-tooltip="tooltipData"
+      :placeholder="placeholder"
+      :value="value"
       @input="$emit('input', $event.target.value)"
     >
     <v-btn
@@ -46,6 +47,10 @@ export default {
     dark: {
       type: Boolean,
       default: false,
+    },
+    value: {
+      type: String,
+      default: '',
     },
   },
 

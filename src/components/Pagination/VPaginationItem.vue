@@ -1,8 +1,8 @@
 <template>
-  <div :class=classes>
+  <div :class="classes">
     <a
-      :disabled=disabled
-      :href=link
+      :disabled="disabled"
+      :href="href"
       @click="handleClick($event)"
     >
       <slot></slot>
@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    link: {
+    href: {
       type: String,
       default: '#',
     },
