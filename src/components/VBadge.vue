@@ -23,10 +23,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    color: {
-      type: String,
-      default: 'gray',
-    },
     primary: {
       type: Boolean,
       default: false,
