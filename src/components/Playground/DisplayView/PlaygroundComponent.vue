@@ -1,24 +1,7 @@
 <template>
-  <v-btn
-    center
-    :outline="outline"
-    :tiny="size === 'tiny'"
-    :small="size === 'small'"
-    :large="size === 'large'"
-    :xlarge="size === 'xlarge'"
-    :primary="color === 'primary'"
-    :transparent="color === 'transparent'"
-    :light="color === 'light'"
-    :dark="color === 'dark'"
-    :black="color === 'black'"
-    :info="color === 'info'"
-    :link="color === 'link'"
-    :success="color === 'success'"
-    :warning="color === 'warning'"
-    :danger="color === 'danger'"
-    :loadingLeft="loading === 'loadingLeft'"
-    :loadingRight="loading === 'loadingRight'"
-  >Customize Me</v-btn>
+  <div class="playground-component">
+    <slot></slot>
+  </div>
 </template>
 
 <script>

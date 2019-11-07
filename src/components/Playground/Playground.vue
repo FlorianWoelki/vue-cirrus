@@ -30,7 +30,9 @@
           :color="propsData.color"
           :size="propsData.size"
           :loading="propsData.loading"
-        />
+        >
+          <slot name="component"></slot>
+        </PlaygroundComponent>
         <CodeComponent
           v-if="codeSelected"
           :component="component"
@@ -38,7 +40,6 @@
         />
       </div>
     </div>
-
     <div class="display-view">
       <v-space />
 

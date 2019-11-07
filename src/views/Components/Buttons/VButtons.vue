@@ -19,6 +19,28 @@
       component="v-btn"
       :componentProps="propsData"
     >
+      <template v-slot:component>
+        <v-btn
+          center
+          :outline="propsData.outline"
+          :tiny="propsData.size === 'tiny'"
+          :small="propsData.size === 'small'"
+          :large="propsData.size === 'large'"
+          :xlarge="propsData.size === 'xlarge'"
+          :primary="propsData.color === 'primary'"
+          :transparent="propsData.color === 'transparent'"
+          :light="propsData.color === 'light'"
+          :dark="propsData.color === 'dark'"
+          :black="propsData.color === 'black'"
+          :info="propsData.color === 'info'"
+          :link="propsData.color === 'link'"
+          :success="propsData.color === 'success'"
+          :warning="propsData.color === 'warning'"
+          :danger="propsData.color === 'danger'"
+          :loadingLeft="propsData.loading === 'loadingLeft'"
+          :loadingRight="propsData.loading === 'loadingRight'"
+        >Customize Me</v-btn>
+      </template>
       <v-row>
         <v-col c4 center>
           <v-dropdown>
