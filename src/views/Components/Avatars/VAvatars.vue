@@ -20,6 +20,16 @@
       component="v-avatar"
       :componentProps="propsData"
     >
+      <template v-slot:component>
+        <v-avatar
+          :text="propsData.text"
+          :padded="propsData.padded"
+          :xsmall="propsData.size === 'xsmall'"
+          :small="propsData.size === 'small'"
+          :large="propsData.size === 'large'"
+          :xlarge="propsData.size === 'xlarge'"
+        />
+      </template>
     </Playground>
 
     <v-space />
@@ -44,8 +54,7 @@ export default {
   data() {
     return {
       propsData: {
-        src: '',
-        text: '',
+        text: 'FW',
         padded: false,
         size: '',
       },
