@@ -17,6 +17,7 @@
     <Playground
       noTitle
       href="/#/components/Avatars/#!"
+      component="v-avatar"
       :componentProps="propsData"
     >
     </Playground>

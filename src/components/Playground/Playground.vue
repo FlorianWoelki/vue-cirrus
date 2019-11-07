@@ -33,6 +33,7 @@
         />
         <CodeComponent
           v-if="codeSelected"
+          :component="component"
           :propsData="propsData"
         />
       </div>
@@ -59,6 +60,10 @@ export default {
   },
 
   props: {
+    component: {
+      type: String,
+      default: '',
+    },
     componentProps: {
       type: Object,
     },

@@ -16,6 +16,7 @@
     <Playground
       noTitle
       href="/#/components/Buttons/#!"
+      component="v-btn"
       :componentProps="propsData"
     >
       <v-row>

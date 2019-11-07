@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['propsData'],
+  props: ['propsData', 'component'],
   data() {
     return {
       code: this.getCode(),
@@ -27,10 +27,10 @@ export default {
       });
 
       return `
-<v-btn ${validProps}
+<${this.component} ${validProps}
 >
   Customize Me
-</v-btn>
+</${this.component}>
 `;
     },
   },
