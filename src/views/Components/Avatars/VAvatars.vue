@@ -30,6 +30,38 @@
           :xlarge="propsData.size === 'xlarge'"
         />
       </template>
+      <v-row>
+        <v-col c6 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xSmall</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Small</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Large</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xLarge</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+        <v-col c6 center>
+          <v-input-field
+            placeholder="Text ..."
+            v-model="propsData.text"
+          ></v-input-field>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space />
