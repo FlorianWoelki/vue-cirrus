@@ -50,6 +50,9 @@
               </v-dropdown-btn>
             </template>
             <v-dropdown-item
+              @click="(event) => { propsData.color = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
               @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
             >Primary</v-dropdown-item>
             <v-dropdown-item
