@@ -98,7 +98,7 @@
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
             >Small</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.size = '' }"
             >Normal</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
