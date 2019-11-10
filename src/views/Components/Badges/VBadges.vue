@@ -16,7 +16,29 @@
     <Playground
       noTitle
       href="/#/components/Badges/#!"
-      :componentProps="propsData">
+      component="v-badge"
+      :componentProps="propsData"
+    >
+      <template v-slot:component>
+        <div class="u-center">
+          <v-badge
+            :content="propsData.content"
+            :left="propsData.position === 'left'"
+            :right="propsData.position === 'right'"
+            :bottom="propsData.position === 'bottom'"
+            :primary="propsData.color === 'primary'"
+            :info="propsData.color === 'info'"
+            :link="propsData.color === 'link'"
+            :dark="propsData.color === 'dark'"
+            :success="propsData.color === 'success'"
+            :warning="propsData.color === 'warning'"
+            :danger="propsData.color === 'danger'"
+            :light="propsData.color === 'light'"
+          >
+            <span>Customize Me</span>
+          </v-badge>
+        </div>
+      </template>
     </Playground>
 
     <v-space />
@@ -41,7 +63,7 @@ export default {
   data() {
     return {
       propsData: {
-        content: '',
+        content: '5',
         position: '',
         color: '',
       },
