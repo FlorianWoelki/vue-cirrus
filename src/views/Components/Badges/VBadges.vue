@@ -39,6 +39,68 @@
           </v-badge>
         </div>
       </template>
+      <v-row>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Primary</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Info</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Link</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Dark</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Success</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Warning</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Danger</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Light</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+        <v-col c4 center>
+          <v-input-field
+            placeholder="Content ..."
+            v-model="propsData.content"
+          ></v-input-field>
+        </v-col>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Position <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Bottom</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space />
