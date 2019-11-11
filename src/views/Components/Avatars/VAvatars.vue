@@ -70,17 +70,28 @@
 
     <v-space xlarge />
     <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Size</h5>
+    <p class="no-upper-margin">
+      To define the <kbd>size</kbd> of a avatar, you have 4 options
+      to define the size of the avatar.
+    </p>
+    <AvatarSize />
+
+    <v-space />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import AvatarSize from '@/views/Components/Avatars/Examples/AvatarSize.vue';
 
 export default {
   components: {
     API,
     Playground,
+    AvatarSize,
   },
 
   data() {
