@@ -79,6 +79,12 @@
     <AvatarSize />
 
     <v-space />
+    <h5 class="font-light no-upper-margin">Src</h5>
+    <p class="no-upper-margin">
+      The <kbd>src</kbd> property is there, because you can use
+      your own custom images for displaying on a avatar!
+    </p>
+    <AvatarImage />
   </section>
 </template>
 
@@ -86,12 +92,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import AvatarSize from '@/views/Components/Avatars/Examples/AvatarSize.vue';
+import AvatarImage from '@/views/Components/Avatars/Examples/AvatarImage.vue';
 
 export default {
   components: {
     API,
     Playground,
     AvatarSize,
+    AvatarImage,
   },
 
   data() {
