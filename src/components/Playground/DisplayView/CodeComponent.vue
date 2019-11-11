@@ -19,7 +19,7 @@ export default {
     getCode() {
       let validProps = '';
       Object.entries(this.propsData).forEach((entry) => {
-        if ((entry[0] === 'text' || entry[0] === 'content') && entry[1] !== '') {
+        if ((entry[0] === 'text' || entry[0] === 'content' || entry[0] === 'src') && entry[1] !== '') {
           validProps += `\n  ${entry[0]}="${entry[1]}"`;
         } else if (entry[1] === true) {
           validProps += `\n  ${entry[0]}`;

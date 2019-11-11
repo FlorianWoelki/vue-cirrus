@@ -23,6 +23,7 @@
       <template v-slot:component>
         <v-avatar
           :text="propsData.text"
+          :src="propsData.src"
           :padded="propsData.padded"
           :xsmall="propsData.size === 'xsmall'"
           :small="propsData.size === 'small'"
@@ -31,7 +32,7 @@
         />
       </template>
       <v-row>
-        <v-col c6 center>
+        <v-col c4 center>
           <v-dropdown>
             <template v-slot:button>
               <v-dropdown-btn>
@@ -55,10 +56,16 @@
             >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c6 center>
+        <v-col c4 center>
           <v-input-field
             placeholder="Text ..."
             v-model="propsData.text"
+          ></v-input-field>
+        </v-col>
+        <v-col c4 center>
+          <v-input-field
+            placeholder="Src (only link) ..."
+            v-model="propsData.src"
           ></v-input-field>
         </v-col>
       </v-row>
@@ -108,6 +115,7 @@ export default {
         text: 'FW',
         padded: false,
         size: '',
+        src: '',
       },
       props: [
         ['v-avatar', 'src', 'string', 'empty', 'This is the image source of the avatar.'],
