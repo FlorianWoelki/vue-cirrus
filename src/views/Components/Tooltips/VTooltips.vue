@@ -1,87 +1,119 @@
 <template>
   <section class="tooltips-mixin">
-    <p>This mixin can almost applied to any Vue Cirrus component!</p>
-
-    <p>Short Demo</p>
-
-    <v-row>
-      <v-col
-        c3
-        center
-      >
-        <v-btn tooltipText="Standard Tooltip">Standard</v-btn>
-      </v-col>
-      <v-col
-        c3
-        center
-      >
-        <v-btn
-          tooltipText="Bottom Tooltip"
-          tooltipBottom
-        >Bottom</v-btn>
-      </v-col>
-      <v-col
-        c3
-        center
-      >
-        <v-btn
-          tooltipText="Left Tooltip"
-          tooltipLeft
-        >Left</v-btn>
-      </v-col>
-      <v-col
-        c3
-        center
-      >
-        <v-btn
-          tooltipText="Right Tooltip"
-          tooltipRight
-        >Right</v-btn>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      You can use <kbd>tooltips</kbd> for conveying information when a
+      user hovers over an element.
+      You can apply this mixin to almost every Vue-Cirrus component.
+    </p>
 
     <v-space xlarge />
 
-    <v-row>
-      <v-col>
-        <span>Code example</span>
-        <v-code lang="Vue">
-          <xmp v-html=code></xmp>
-        </v-code>
-      </v-col>
-    </v-row>
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Tooltips in their simplest form are just text which will pop up, when
+      you hover over the component.
+    </p>
+
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Tooltips/#!"
+      component="v-btn"
+      :componentProps="propsData"
+    >
+      <template v-slot:component>
+        <div class="u-center">
+          <v-btn
+            primary
+            :tooltipText="propsData.text"
+            :tooltipTopLeft="propsData.position === 'top left'"
+            :tooltipTopRight="propsData.position === 'top right'"
+            :tooltipBottom="propsData.position === 'bottom'"
+            :tooltipBottomLeft="propsData.position === 'bottom left'"
+            :tooltipBottomRight="propsData.position === 'bottom right'"
+            :tooltipLeft="propsData.position === 'left'"
+            :tooltipRight="propsData.position === 'right'"
+          >Hover Me</v-btn>
+        </div>
+      </template>
+      <v-row>
+        <v-col c6 center>
+          <v-input-field
+            placeholder="Tooltip Text ..."
+            v-model="propsData.text"
+          ></v-input-field>
+        </v-col>
+        <v-col c6 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Position <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Top</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Top Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Top Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Bottom</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Bottom Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Bottom Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
+            >Right</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['tooltip mixin']" />
 
     <v-space xlarge />
-
-    <h6>API (props)</h6>
-    <API :data="props" hideMixins=true />
+    <v-space xlarge />
   </section>
 </template>
 
 <script>
-import API from '../API.vue';
+import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-btn
-  tooltipText="Right Tooltip"
-  tooltipRight
->Btn</v-btn>`,
-      props: {
-        tooltipText: ['tooltipText', 'Empty', 'String', 'Set the text of the tooltip'],
-        tooltipTopLeft: ['tooltipTopLeft', 'false', 'Boolean', 'Position of tooltip will be top left'],
-        tooltipTopRight: ['tooltipTopRight', 'false', 'Boolean', 'Position of tooltip will be top right'],
-        tooltipBottom: ['tooltipBottom', 'false', 'Boolean', 'Position of tooltip will be bottom'],
-        tooltipBottomLeft: ['tooltipBottomLeft', 'false', 'Boolean', 'Position of tooltip will be bottom left'],
-        tooltipBottomRight: ['tooltipBottomRight', 'false', 'Boolean', 'Position of tooltip will be bottom right'],
-        tooltipLeft: ['tooltipLeft', 'false', 'Boolean', 'Position of tooltip will be on the left'],
-        tooltipRight: ['tooltipRight', 'false', 'Boolean', 'Position of tooltip will be on the right'],
+      propsData: {
+        text: 'Hello World',
+        position: '',
       },
+      props: [
+        ['tooltip mixin', 'tooltipText', 'string', 'empty', 'This will be the text displayed in the text.'],
+        ['tooltip mixin', 'tooltipTopLeft', 'boolean', 'false', 'Position of the tooltip will be on the top left.'],
+        ['tooltip mixin', 'tooltipTopRight', 'boolean', 'false', 'Position of the tooltip will be on the top right.'],
+        ['tooltip mixin', 'tooltipBottom', 'boolean', 'false', 'Position of the tooltip will be on the bottom.'],
+        ['tooltip mixin', 'tooltipBottomLeft', 'boolean', 'false', 'Position of the tooltip will be on the bottom left.'],
+        ['tooltip mixin', 'tooltipBottomRight', 'boolean', 'false', 'Position of the tooltip will be on the bottom right.'],
+        ['tooltip mixin', 'tooltipLeft', 'boolean', 'false', 'Position of the tooltip will be on the left.'],
+        ['tooltip mixin', 'tooltipRight', 'boolean', 'false', 'Position of the tooltip will be on the right.'],
+      ],
     };
   },
 };
