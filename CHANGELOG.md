@@ -434,3 +434,6 @@ All notable changes to this project will be documented in this file.
 [0.2.53]: https://www.npmjs.com/package/vue-cirrus/v/0.2.53
 [0.2.54]: https://www.npmjs.com/package/vue-cirrus/v/0.2.54
 [0.2.55]: https://www.npmjs.com/package/vue-cirrus/v/0.2.55
+[0.2.6]: https://www.npmjs.com/package/vue-cirrus/v/0.2.6
+[0.3.0]: https://www.npmjs.com/package/vue-cirrus/v/0.3.0
+[0.3.1]: https://www.npmjs.com/package/vue-cirrus/v/0.3.1
