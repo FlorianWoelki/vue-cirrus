@@ -25,7 +25,7 @@
         <div class="u-center">
           <v-btn
             primary
-            :tooltipText="propsData.text"
+            :tooltipText="propsData.tooltipText"
             :tooltipTopLeft="propsData.position === 'top left'"
             :tooltipTopRight="propsData.position === 'top right'"
             :tooltipBottom="propsData.position === 'bottom'"
@@ -101,7 +101,7 @@ export default {
   data() {
     return {
       propsData: {
-        text: 'Hello World',
+        tooltipText: 'Hello World',
         position: '',
       },
       props: [
