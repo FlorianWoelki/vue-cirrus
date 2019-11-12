@@ -85,17 +85,25 @@
 
     <v-space xlarge />
     <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Alignment</h5>
+    <p class="no-upper-margin">
+      You can align pretty simply the tooltip in every single corner.
+    </p>
+    <TooltipsAlignment />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import TooltipsAlignment from '@/views/Components/Tooltips/Examples/TooltipsAlignment.vue';
 
 export default {
   components: {
     API,
     Playground,
+    TooltipsAlignment,
   },
 
   data() {
