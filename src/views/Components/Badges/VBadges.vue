@@ -21,86 +21,11 @@
     >
       <template v-slot:component>
         <div class="u-center">
-          <v-badge
-            :content="propsData.content"
-            :left="propsData.position === 'left'"
-            :right="propsData.position === 'right'"
-            :bottom="propsData.position === 'bottom'"
-            :primary="propsData.color === 'primary'"
-            :info="propsData.color === 'info'"
-            :link="propsData.color === 'link'"
-            :dark="propsData.color === 'dark'"
-            :success="propsData.color === 'success'"
-            :warning="propsData.color === 'warning'"
-            :danger="propsData.color === 'danger'"
-            :light="propsData.color === 'light'"
-          >
+          <v-badge content="5">
             <span>Customize Me</span>
           </v-badge>
         </div>
       </template>
-      <v-row>
-        <v-col c4 center>
-          <v-dropdown>
-            <template v-slot:button>
-              <v-dropdown-btn>
-                Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
-            </template>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = '' }"
-            >Normal</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Primary</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Info</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Link</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Dark</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Success</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Warning</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Danger</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
-            >Light</v-dropdown-item>
-          </v-dropdown>
-        </v-col>
-        <v-col c4 center>
-          <v-input-field
-            placeholder="Content ..."
-            v-model="propsData.content"
-          ></v-input-field>
-        </v-col>
-        <v-col c4 center>
-          <v-dropdown>
-            <template v-slot:button>
-              <v-dropdown-btn>
-                Position <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
-            </template>
-            <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Right</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Left</v-dropdown-item>
-            <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Bottom</v-dropdown-item>
-          </v-dropdown>
-        </v-col>
-      </v-row>
     </Playground>
 
     <v-space />
@@ -109,17 +34,26 @@
 
     <v-space xlarge />
     <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Alignment</h5>
+    <p class="no-upper-margin">
+      You can align the badge by applying different <kbd>positions</kbd> to
+      this badge component.
+    </p>
+    <BadgeAlignment />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import BadgeAlignment from '@/views/Components/Badges/Examples/BadgeAlignment.vue';
 
 export default {
   components: {
     API,
     Playground,
+    BadgeAlignment,
   },
 
   data() {
