@@ -41,6 +41,13 @@
       this badge component.
     </p>
     <BadgeAlignment />
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">Color</h5>
+    <p class="no-upper-margin">
+      There are all kind of <kbd>colors</kbd> you can apply for badges.
+    </p>
+    <BadgeColors />
   </section>
 </template>
 
@@ -48,12 +55,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import BadgeAlignment from '@/views/Components/Badges/Examples/BadgeAlignment.vue';
+import BadgeColors from '@/views/Components/Badges/Examples/BadgeColors.vue';
 
 export default {
   components: {
     API,
     Playground,
     BadgeAlignment,
+    BadgeColors,
   },
 
   data() {
