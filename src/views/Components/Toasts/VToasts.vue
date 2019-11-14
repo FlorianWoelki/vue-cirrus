@@ -84,16 +84,17 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
-    <h5 class="font-light no-upper-margin">Languages</h5>
+    <h5 class="font-light no-upper-margin">Color</h5>
     <p class="no-upper-margin">
-      The <kbd>v-code</kbd> component supports different code languages.
+      You can apply different colors to the toast component.
     </p>
 
     <v-space />
-    <h5 class="font-light no-upper-margin">Copyable code</h5>
+    <h5 class="font-light no-upper-margin">Closable</h5>
     <p class="no-upper-margin">
-      It is possible, to apply the <kbd>copyable</kbd> property, whenever
-      you want to let the user copy something.
+      With the <kbd>closable</kbd> property it is possible to activate
+      a functionality to close the toast. Furthermore there is a property
+      called <kbd>disableCloseFunction</kbd> to disable the close functionality.
     </p>
   </section>
 </template>
