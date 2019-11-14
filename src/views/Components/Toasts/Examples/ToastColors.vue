@@ -1,5 +1,5 @@
 <template>
-  <v-row center class="btn-example-section">
+  <v-row center class="toast-example-section">
     <v-col c4>
       <v-toast primary>Primary Color</v-toast>
       <v-toast success>Success Color</v-toast>

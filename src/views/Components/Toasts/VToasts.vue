@@ -1,5 +1,5 @@
 <template>
-  <section class="code-component">
+  <section class="toast-component">
     <p class="no-upper-margin">
       With the <kbd>v-toast</kbd> component, you can display information or
       simple meta data to notify the user.
