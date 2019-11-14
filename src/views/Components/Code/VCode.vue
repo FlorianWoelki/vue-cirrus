@@ -1,85 +1,52 @@
 <template>
   <section class="code-component">
-    <h5>Easy Code components</h5>
-    <p>You can create easily colored code preview components!</p>
-
-    <v-row level>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c4
-        o1
-      >
-        <v-code
-          lang="JavaScript"
-        >const myBool = true;
-if (myBool) {
-  console.log("Bool is true!");
-}</v-code>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      With the <kbd>v-code</kbd> component, you can easily create code inside your
+      pages. It allows you to display code on your websites.
+    </p>
 
     <v-space xlarge />
 
-    <v-row level>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="darkCode"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c4
-        o1
-      >
-        <v-code lang="JavaScript" copyable dark>const myBool = true;
-if (myBool) {
-  console.log("Bool is true!");
-}</v-code>
-      </v-col>
-    </v-row>
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Buttons in their simplest form contain uppercase text
+    </p>
+
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Code/#!"
+      component="v-code"
+    >
+    </Playground>
 
     <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-code']" />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
-
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-code lang="JavaScript">const myBool = true;
-if (myBool) {
-  console.log("Bool is true!");
-}</v-code>`,
-      darkCode: `<v-code
-  lang="JavaScript"
-  dark
->const myBool = true;
-if (myBool) {
-  console.log("Bool is true!");
-}</v-code>`,
-      props: {
-        lang: ['lang', 'empty', 'String', 'Language for this code segment (Supported languages: html, javascript, css, bash, vue)'],
-        copyable: ['copyable', 'false', 'Boolean', 'If code segment is copyable'],
-        dark: ['dark', 'false', 'Boolean', 'Dark mode for code component'],
-      },
+      props: [
+        ['v-code', 'lang', 'string', 'empty', 'Language for this code segment (Supported languages: html, javascript, css, bash, vue)'],
+        ['v-code', 'copyable', 'boolean', 'false', 'Adds a functionality to copy the code inside the code component.'],
+        ['v-code', 'dark', 'boolean', 'false', 'Enables the dark mode for this code component.'],
+      ],
     };
   },
 };
