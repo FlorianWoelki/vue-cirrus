@@ -17,7 +17,13 @@
       noTitle
       href="/#/components/Code/#!"
       component="v-code"
+      :componentProps="propsData"
     >
+      <template v-slot:component>
+        <v-code lang="JavaScript" copyable>
+Customize Me
+        </v-code>
+      </template>
     </Playground>
 
     <v-space xlarge />
@@ -59,6 +65,10 @@ export default {
 
   data() {
     return {
+      propsData: {
+        lang: 'JavaScript',
+        copyable: true,
+      },
       props: [
         ['v-code', 'lang', 'string', 'empty', 'Language for this code segment (Supported languages: html, javascript, css, bash, vue)'],
         ['v-code', 'copyable', 'boolean', 'false', 'Adds a functionality to copy the code inside the code component.'],
