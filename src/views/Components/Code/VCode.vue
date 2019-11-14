@@ -32,6 +32,14 @@
       The <kbd>v-code</kbd> component supports different code languages.
     </p>
     <CodeLanguages />
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">Copyable code</h5>
+    <p class="no-upper-margin">
+      It is possible, to apply the <kbd>copyable</kbd> property, whenever
+      you want to let the user copy something.
+    </p>
+    <CodeCopyable />
   </section>
 </template>
 
@@ -39,12 +47,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import CodeLanguages from '@/views/Components/Code/Examples/CodeLanguages.vue';
+import CodeCopyable from '@/views/Components/Code/Examples/CodeCopyable.vue';
 
 export default {
   components: {
     API,
     Playground,
     CodeLanguages,
+    CodeCopyable,
   },
 
   data() {
