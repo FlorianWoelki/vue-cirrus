@@ -79,7 +79,7 @@
 
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
-    <API :data="props" :dropdownItems="['v-code']" />
+    <API :data="props" :dropdownItems="['v-toast']" />
 
     <v-space xlarge />
     <v-space xlarge />
@@ -117,6 +117,15 @@ export default {
         color: '',
       },
       props: [
+        ['v-toast', 'title', 'string', 'empty', 'Customize the title of this toast component.'],
+        ['v-toast', 'closable', 'boolean', 'false', 'Displays the close button in the top right corner.'],
+        ['v-toast', 'disableCloseFunction', 'boolean', 'false', 'Disables the close functionality of the close button.'],
+        ['v-toast', 'primary', 'boolean', 'false', 'The primary color is a red background color.'],
+        ['v-toast', 'success', 'boolean', 'false', 'The success color is a green background color.'],
+        ['v-toast', 'warning', 'boolean', 'false', 'The warning color is a orange background color.'],
+        ['v-toast', 'error', 'boolean', 'false', 'The error color is a red background color.'],
+        ['v-toast', 'info', 'boolean', 'false', 'The info color is a blue background color.'],
+        ['v-toast', 'link', 'boolean', 'false', 'The link color is a purple background color.'],
       ],
     };
   },
