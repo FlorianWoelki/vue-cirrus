@@ -97,6 +97,7 @@
       a functionality to close the toast. Furthermore there is a property
       called <kbd>disableCloseFunction</kbd> to disable the close functionality.
     </p>
+    <ToastClosable />
   </section>
 </template>
 
@@ -104,12 +105,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import ToastColors from '@/views/Components/Toasts/Examples/ToastColors.vue';
+import ToastClosable from '@/views/Components/Toasts/Examples/ToastClosable.vue';
 
 export default {
   components: {
     API,
     Playground,
     ToastColors,
+    ToastClosable,
   },
 
   data() {
