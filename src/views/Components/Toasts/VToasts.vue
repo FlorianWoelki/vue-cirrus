@@ -1,53 +1,79 @@
 <template>
-  <section class="toasts-component">
-    <h5>Creating Snackbars</h5>
-    <p>Snackbars are a new invented thing in Vue Cirrus and it is not present in Cirrus.</p>
-
-    <v-row level>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col center c6>
-        <v-toast title="Awesome title!" closable disableCloseFunction>
-          My Toast!
-        </v-toast>
-      </v-col>
-    </v-row>
+  <section class="code-component">
+    <p class="no-upper-margin">
+      With the <kbd>v-toast</kbd> component, you can display information or
+      simple meta data to notify the user.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data=props />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Toasts in their simples form just contain the title and some text.
+    </p>
 
-    <v-space xlarge v-for="i in 2" :key="i" />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Toasts/#!"
+      component="v-toast"
+      :componentProps="propsData"
+    >
+      <template v-slot:component>
+        <v-toast
+          :title="propsData.title"
+          :closable="propsData.closable"
+          :primary="propsData.color === 'primary'"
+          :success="propsData.color === 'success'"
+          :warning="propsData.color === 'warning'"
+          :error="propsData.color === 'error'"
+          :info="propsData.color === 'info'"
+          :link="propsData.color === 'link'"
+        >{{ propsData.text }}</v-toast>
+      </template>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-code']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Languages</h5>
+    <p class="no-upper-margin">
+      The <kbd>v-code</kbd> component supports different code languages.
+    </p>
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">Copyable code</h5>
+    <p class="no-upper-margin">
+      It is possible, to apply the <kbd>copyable</kbd> property, whenever
+      you want to let the user copy something.
+    </p>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
+
   data() {
     return {
-      code: `<v-toast title="Awesome title!" closable disableCloseFunction>
-  My Toast!
-</v-toast>`,
-      props: {
-        disableCloseFunction: ['disableCloseFunction', 'false', 'Boolean', 'Disable the pre coded close function'],
-        title: ['title', 'Empty', 'String', 'Title for the toast component'],
-        success: ['success', 'false', 'Boolean', 'Success colored toast'],
-        warning: ['warning', 'false', 'Boolean', 'Warning colored toast'],
-        error: ['error', 'false', 'Boolean', 'Error colored toast'],
-        info: ['info', 'false', 'Boolean', 'Info colored toast'],
-        link: ['link', 'false', 'Boolean', 'Link colored toast'],
-        primary: ['primary', 'false', 'Boolean', 'Primary colored toast'],
-        closable: ['closable', 'false', 'Boolean', 'Closable icon in the top right'],
+      propsData: {
+        title: 'Customize Me',
+        text: 'This is some example toast text to display.',
+        closable: false,
+        color: '',
       },
+      props: [
+      ],
     };
   },
 };
