@@ -29,7 +29,7 @@
           :error="propsData.color === 'error'"
           :info="propsData.color === 'info'"
           :link="propsData.color === 'link'"
-        >{{ propsData.text }}</v-toast>
+        >Customize Me</v-toast>
       </template>
     </Playground>
 
@@ -68,7 +68,6 @@ export default {
     return {
       propsData: {
         title: 'Customize Me',
-        text: 'This is some example toast text to display.',
         closable: false,
         color: '',
       },
