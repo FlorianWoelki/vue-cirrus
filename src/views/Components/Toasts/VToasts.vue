@@ -86,8 +86,9 @@
     <h3>Examples</h3>
     <h5 class="font-light no-upper-margin">Color</h5>
     <p class="no-upper-margin">
-      You can apply different colors to the toast component.
+      You can apply different colors to the default one to the toast component.
     </p>
+    <ToastColors />
 
     <v-space />
     <h5 class="font-light no-upper-margin">Closable</h5>
@@ -102,11 +103,13 @@
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import ToastColors from '@/views/Components/Toasts/Examples/ToastColors.vue';
 
 export default {
   components: {
     API,
     Playground,
+    ToastColors,
   },
 
   data() {
