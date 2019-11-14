@@ -27,17 +27,24 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Languages</h5>
+    <p class="no-upper-margin">
+      The <kbd>v-code</kbd> component supports different code languages.
+    </p>
+    <CodeLanguages />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import CodeLanguages from '@/views/Components/Code/Examples/CodeLanguages.vue';
 
 export default {
   components: {
     API,
     Playground,
+    CodeLanguages,
   },
 
   data() {
