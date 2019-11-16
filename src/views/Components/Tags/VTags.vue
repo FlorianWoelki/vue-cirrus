@@ -1,122 +1,67 @@
 <template>
-  <section class="headlines-component">
-    <h5>Tags with beautiful colors</h5>
-    <p>Tags can be simple and useful as well.</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code
-          lang="Vue"
-          :dark="isDarkMode"
-        >
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        center
-        c6
-      >
-        <v-tag white large>White large</v-tag>
-        <v-tag black>Black</v-tag>
-        <v-tag primary xlarge>Primary xlarge</v-tag>
-        <v-tag link>Link</v-tag>
-        <v-tag info>Info</v-tag>
-        <v-tag success>Success</v-tag>
-        <v-tag warning>Warning</v-tag>
-        <v-tag danger>Danger</v-tag>
-      </v-col>
-    </v-row>
-
-    <v-space />
-
-    <v-row>
-      <v-col c6>
-        <v-code
-          lang="Vue"
-          :dark="isDarkMode"
-        >
-          <xmp v-html="containerCode"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        center
-        c6
-      >
-        <v-row>
-          <v-col center>
-            <v-tag-container>
-              <v-tag success>Can</v-tag>
-              <v-tag warning>Be</v-tag>
-              <v-tag danger>Containerized</v-tag>
-            </v-tag-container>
-          </v-col>
-          <v-col center>
-            <v-tag-container grouped>
-              <v-tag black>Can</v-tag>
-              <v-tag info>Be</v-tag>
-              <v-tag link>Grouped</v-tag>
-            </v-tag-container>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+  <section class="tags-component">
+    <p class="no-upper-margin">
+      With the <kbd>v-tag</kbd> component, you can display some colorful
+      simple messages on your website. For example, this could be a version tag.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Tags in their simples form just contain the text and the default color.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Tags/#!"
+      component="v-tag"
+      :componentProps="propsData"
+    >
+      <template v-slot:component>
+        <div class="u-center">
+          <v-tag
+          >Customize Me</v-tag>
+        </div>
+      </template>
+      <v-row>
+        <v-col c4 center>
+        </v-col>
+        <v-col c4 center>
+        </v-col>
+        <v-col c4 center>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-tag']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      containerCode: `<v-tag-container>
-  <v-tag success>Can</v-tag>
-  <v-tag warning>Be</v-tag>
-  <v-tag danger>Containerized</v-tag>
-</v-tag-container>
-
-<v-tag-container grouped>
-  <v-tag black>Can</v-tag>
-  <v-tag info>Be</v-tag>
-  <v-tag link>Grouped</v-tag>
-</v-tag-container>`,
-      code: `<v-tag white large>White large</v-tag>
-<v-tag black>Black</v-tag>
-<v-tag primary xlarge>Primary xlarge</v-tag>
-<v-tag link>Link</v-tag>
-<v-tag info>Info</v-tag>
-<v-tag success>Success</v-tag>
-<v-tag warning>Warning</v-tag>
-<v-tag danger>Danger</v-tag>`,
-      props: {
-        rounded: ['rounded', 'false', 'Boolean', 'Round the tag'],
-        large: ['large', 'false', 'Boolean', 'Tag gets large'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'Tag gets really large'],
-        closable: ['closable', 'false', 'Boolean', 'Adds a close button for the tag'],
-        deletable: ['deletable', 'false', 'Boolean', 'Make a delete tag'],
+      propsData: {
       },
+      props: [
+      ],
     };
-  },
-
-  computed: {
-    isDarkMode() {
-      return this.$store.getters.isDarkMode.darkMode;
-    },
   },
 };
 </script>
