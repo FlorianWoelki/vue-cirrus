@@ -22,6 +22,18 @@
       <template v-slot:component>
         <div class="u-center">
           <v-tag
+            :closable="propsData.closable"
+            :rounded="propsData.rounded"
+            :large="propsData.size === 'large'"
+            :xlarge="propsData.size === 'xlarge'"
+            :white="propsData.color === 'white'"
+            :black="propsData.color === 'black'"
+            :primary="propsData.color === 'primary'"
+            :link="propsData.color === 'link'"
+            :info="propsData.color === 'info'"
+            :success="propsData.color === 'success'"
+            :warning="propsData.color === 'warning'"
+            :danger="propsData.color === 'danger'"
           >Customize Me</v-tag>
         </div>
       </template>
@@ -58,6 +70,10 @@ export default {
   data() {
     return {
       propsData: {
+        closable: false,
+        rounded: false,
+        color: '',
+        size: '',
       },
       props: [
       ],
