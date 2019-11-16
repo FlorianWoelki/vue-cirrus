@@ -39,10 +39,67 @@
       </template>
       <v-row>
         <v-col c4 center>
+          <v-checkbox
+            @change="() => { propsData.closable = !propsData.closable }"
+          >Closable</v-checkbox>
+          <v-checkbox
+            id="rounded-checkbox"
+            @change="() => { propsData.rounded = !propsData.rounded }"
+          >Rounded</v-checkbox>
         </v-col>
         <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >large</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xLarge</v-dropdown-item>
+          </v-dropdown>
         </v-col>
         <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >White</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Black</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Primary</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Success</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Warning</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Danger</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Info</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.color = event.srcElement.innerHTML.toLowerCase() }"
+            >Link</v-dropdown-item>
+          </v-dropdown>
         </v-col>
       </v-row>
     </Playground>
