@@ -106,7 +106,7 @@
 
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
-    <API :data="props" :dropdownItems="['v-tag']" />
+    <API :data="props" :dropdownItems="['v-tag', 'v-tag-container']" />
 
     <v-space xlarge />
     <v-space xlarge />
@@ -133,6 +133,20 @@ export default {
         size: '',
       },
       props: [
+        ['v-tag', 'closable', 'boolean', 'false', 'Displays just an "X" in the tag.'],
+        ['v-tag', 'large', 'boolean', 'false', 'Set the size of the tag to large.'],
+        ['v-tag', 'xlarge', 'boolean', 'false', 'Set the size of the tag to xlarge.'],
+        ['v-tag', 'rounded', 'boolean', 'false', 'Set the form of the tag to round.'],
+        ['v-tag', 'white', 'boolean', 'false', 'The color of the tag will be white.'],
+        ['v-tag', 'black', 'boolean', 'false', 'The color of the tag will be black.'],
+        ['v-tag', 'primary', 'boolean', 'false', 'The color of the tag will be red.'],
+        ['v-tag', 'link', 'boolean', 'false', 'The color of the tag will be purple.'],
+        ['v-tag', 'info', 'boolean', 'false', 'The color of the tag will be blue.'],
+        ['v-tag', 'success', 'boolean', 'false', 'The color of the tag will be green.'],
+        ['v-tag', 'warning', 'boolean', 'false', 'The color of the tag will be orange.'],
+        ['v-tag', 'danger', 'boolean', 'false', 'The color of the tag will be red.'],
+        ['v-tag-container', 'grouped', 'boolean', 'false', 'Simply group all tags in the container together.'],
+        ['v-tag-container', 'rounded', 'boolean', 'false', 'This container will have rounded edges.'],
       ],
     };
   },
