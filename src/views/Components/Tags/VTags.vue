@@ -117,6 +117,14 @@
       a tag on your page.
     </p>
     <TagColors />
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">Rounded</h5>
+    <p class="no-upper-margin">
+      It is possible to use the <kbd>rounded</kbd> property to round
+      the tag.
+    </p>
+    <TagRounded />
   </section>
 </template>
 
@@ -124,12 +132,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import TagColors from '@/views/Components/Tags/Examples/TagColors.vue';
+import TagRounded from '@/views/Components/Tags/Examples/TagRounded.vue';
 
 export default {
   components: {
     API,
     Playground,
     TagColors,
+    TagRounded,
   },
 
   data() {
