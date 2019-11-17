@@ -111,17 +111,25 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Color</h5>
+    <p class="no-upper-margin">
+      There are a lot of colors you can use by default, when using
+      a tag on your page.
+    </p>
+    <TagColors />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import TagColors from '@/views/Components/Tags/Examples/TagColors.vue';
 
 export default {
   components: {
     API,
     Playground,
+    TagColors,
   },
 
   data() {
