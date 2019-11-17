@@ -125,6 +125,14 @@
       the tag.
     </p>
     <TagRounded />
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">Tag Container Grouped</h5>
+    <p class="no-upper-margin">
+      With the <kbd>tag-container</kbd> component you can group many
+      tags together to one group.
+    </p>
+    <TagContainerGrouped />
   </section>
 </template>
 
@@ -133,6 +141,7 @@ import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import TagColors from '@/views/Components/Tags/Examples/TagColors.vue';
 import TagRounded from '@/views/Components/Tags/Examples/TagRounded.vue';
+import TagContainerGrouped from '@/views/Components/Tags/Examples/TagContainerGrouped.vue';
 
 export default {
   components: {
@@ -140,6 +149,7 @@ export default {
     Playground,
     TagColors,
     TagRounded,
+    TagContainerGrouped,
   },
 
   data() {
