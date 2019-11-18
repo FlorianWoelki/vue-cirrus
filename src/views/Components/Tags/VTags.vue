@@ -149,8 +149,8 @@ import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import TagColors from '@/views/Components/Tags/Examples/TagColors.vue';
 import TagRounded from '@/views/Components/Tags/Examples/TagRounded.vue';
-import TagContainerGrouped from '@/views/Components/Tags/Examples/TagContainerGrouped.vue';
 import TagContainerRounded from '@/views/Components/Tags/Examples/TagContainerRounded.vue';
+import TagContainerGrouped from '@/views/Components/Tags/Examples/TagContainerGrouped.vue';
 
 export default {
   components: {
