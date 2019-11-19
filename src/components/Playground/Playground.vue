@@ -37,6 +37,7 @@
           v-if="codeSelected"
           :component="component"
           :propsData="propsData"
+          :disableMessage="disableMessage"
         />
       </div>
     </div>
@@ -75,6 +76,10 @@ export default {
     href: {
       type: String,
       default: '/#/testplayground/#!',
+    },
+    disableMessage: {
+      type: Boolean,
+      default: false,
     },
   },
 

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['propsData', 'component'],
+  props: ['propsData', 'component', 'disableMessage'],
   data() {
     return {
       code: this.getCode(),
@@ -30,8 +30,7 @@ export default {
 
       return `
 <${this.component} ${validProps}
->
-  Customize Me
+>${!this.disableMessage ? '\n  Customize Me' : ''}
 </${this.component}>
 `;
     },
