@@ -26,10 +26,6 @@
       <div class="card-content">
         <PlaygroundComponent
           v-if="!codeSelected"
-          :outline="propsData.outline"
-          :color="propsData.color"
-          :size="propsData.size"
-          :loading="propsData.loading"
         >
           <slot name="component"></slot>
         </PlaygroundComponent>
