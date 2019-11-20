@@ -7,7 +7,10 @@
       </div>
     </v-navbar>
 
-    <v-parallax fullscreen image="@/assets/head-bg.jpg">
+    <v-parallax
+      fullscreen
+      image="https://cdn.clipart.email/98b8348023d6a9d2eb28c346bea1c468_28-collection-of-midnight-sky-clipart-high-quality-free-_2560-1600.jpeg"
+    >
       <v-row>
         <v-col>
           <h1 class="white uppercase u-text-center">One Page</h1>
