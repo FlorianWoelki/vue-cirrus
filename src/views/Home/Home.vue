@@ -36,5 +36,9 @@ export default {
     GettingStarted,
     FeaturesExplained,
   },
+
+  mounted() {
+    document.getElementsByTagName('body')[0].classList.remove('sidebar');
+  },
 };
 </script>
