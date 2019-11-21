@@ -14,7 +14,7 @@
     </p>
 
     <v-container>
-      <v-row center>
+      <v-row>
         <v-col c3>
           <v-link href="#/components/Avatars">Avatars</v-link>
           <v-link href="#/components/Badges">Badges</v-link>
