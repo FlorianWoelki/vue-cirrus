@@ -2,11 +2,12 @@
   <div :class=classes>
     <div class="header-brand">
       <div
-        v-if="brandTitle != ''"
         class="nav-item no-hover"
       >
-        <a :href=brandLink>
-          <h6 class="title">{{brandTitle}}</h6>
+        <a :href="brandLink">
+          <h6 class="title">
+            <slot name="brandTitle"></slot>
+          </h6>
         </a>
       </div>
       <div
@@ -31,10 +32,6 @@
 <script>
 export default {
   props: {
-    brandTitle: {
-      type: String,
-      default: '',
-    },
     brandLink: {
       type: String,
       default: '!#',

@@ -1,6 +1,7 @@
 <template>
   <div class="demo">
     <v-navbar>
+      <template v-slot:brandTitle>Hello World</template>
       <v-navbar-item right>test</v-navbar-item>
     </v-navbar>
     <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
