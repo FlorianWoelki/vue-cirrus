@@ -5,7 +5,7 @@
       class="tree-nav"
     >
       <div class="content">
-        <h6>{{ title }}</h6>
+        <slot name="title"></slot>
       </div>
       <div class="tree-nav-container">
         <div class="tree">

@@ -1,7 +1,8 @@
 <template>
   <div class="demo">
     <v-sidebar dark>
-      <v-sidebar-items title="Testing" hoverEffect>
+      <v-sidebar-items hoverEffect>
+        <template v-slot:title><h6>Tetsing</h6></template>
         <v-sidebar-item></v-sidebar-item>
         <v-sidebar-item>Test 1</v-sidebar-item>
         <v-sidebar-item>Test 2</v-sidebar-item>
