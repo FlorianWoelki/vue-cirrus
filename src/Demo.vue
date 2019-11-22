@@ -2,7 +2,10 @@
   <div class="demo">
     <v-navbar>
       <template v-slot:brandTitle>Hello World</template>
-      <v-navbar-item right>test</v-navbar-item>
+      <v-nav-region left>
+        <v-navbar-item>test</v-navbar-item>
+        <v-navbar-item>test</v-navbar-item>
+      </v-nav-region>
     </v-navbar>
     <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
     <v-row center>
