@@ -24,10 +24,6 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: '',
-    },
     hoverEffect: {
       type: Boolean,
       default: false,
