@@ -1,7 +1,7 @@
 <template>
   <div
-    :class=classes
-    :data-tooltip=tooltipData
+    :class="classes"
+    :data-tooltip="tooltipData"
   >
     <button
       v-if="closable && !disableCloseFunction"

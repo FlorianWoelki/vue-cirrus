@@ -7,6 +7,9 @@
         <v-navbar-item>test</v-navbar-item>
       </v-nav-region>
     </v-navbar>
+    <v-space></v-space>
+    <v-divider></v-divider>
+    <v-space></v-space>
     <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
     <v-row center>
       <v-col c6>
@@ -232,7 +235,9 @@ export default {
 </script>
 
 <style>
+/*
 .demo {
   background-color: #121212;
 }
+*/
 </style>
