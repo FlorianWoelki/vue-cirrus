@@ -51,17 +51,29 @@
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
     <API :data="props" :dropdownItems="['v-divider']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Vertical</h5>
+    <p class="no-upper-margin">
+      With the <kbd>vertical</kbd> and <kbd>content</kbd> property you can easily
+      set up a vertical aligned divider with content in the center of the divider.
+    </p>
+    <VerticalDivider />
   </section>
 </template>
 
 <script>
 import API from '../API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import VerticalDivider from '@/views/Components/Dividers/Examples/VerticalDivider.vue';
 
 export default {
   components: {
     API,
     Playground,
+    VerticalDivider,
   },
 
   data() {
