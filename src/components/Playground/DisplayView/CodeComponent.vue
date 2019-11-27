@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['propsData', 'component', 'disableMessage'],
+  props: ['propsData', 'component', 'disableMessage', 'customCode'],
   data() {
     return {
       code: this.getCode(),
@@ -17,6 +17,10 @@ export default {
 
   methods: {
     getCode() {
+      if (this.customCode) {
+        return this.customCode;
+      }
+
       let validProps = '';
       Object.entries(this.propsData).forEach((entry) => {
         if ((entry[0] === 'title' || entry[0] === 'lang' || entry[0] === 'text' || entry[0] === 'tooltipText' || entry[0] === 'content' || entry[0] === 'src') && entry[1] !== '') {

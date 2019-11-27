@@ -34,6 +34,7 @@
           :component="component"
           :propsData="propsData"
           :disableMessage="disableMessage"
+          :customCode="customCode"
         />
       </div>
     </div>
@@ -58,6 +59,10 @@ export default {
   },
 
   props: {
+    customCode: {
+      type: String,
+      default: '',
+    },
     component: {
       type: String,
       default: '',
