@@ -1,69 +1,166 @@
 <template>
   <section class="tabs-component">
-    <h5>Tabs</h5>
-    <p>So easy to create Tabs in Vue Cirrus!</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c6
-      >
-        <v-tabs fill>
-          <v-tab>Tab One</v-tab>
-          <v-tab selected>Tab Two</v-tab>
-          <v-tab>Tab Three</v-tab>
-        </v-tabs>
-
-        <p class="u-text-center">Something good is happening.</p>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      You can use tabs with the <kbd>v-tab</kbd> component. Simply specify how many
+      tabs you want to have and Vue-Cirrus fill in it for you.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Tabs are so clean and easy to see by their default appearance.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Tabs/#!"
+      component="v-tab"
+      :componentProps="propsData"
+      :customCode="customCode"
+    >
+      <template v-slot:component>
+        <v-tabs
+          :xsmall="propsData.size === 'xsmall'"
+          :small="propsData.size === 'small'"
+          :large="propsData.size === 'large'"
+          :xlarge="propsData.size === 'xlarge'"
+          :center="propsData.position === 'center'"
+          :right="propsData.position === 'right'"
+          :fill="propsData.style === 'fill'"
+          :depth="propsData.style === 'depth'"
+          :classic="propsData.style === 'classic'"
+        >
+          <v-tab href="/#/components/Tabs/#!">Tab 1</v-tab>
+          <v-tab href="/#/components/Tabs/#!">Tab 2</v-tab>
+          <v-tab href="/#/components/Tabs/#!">Tab 3</v-tab>
+        </v-tabs>
+      </template>
+      <v-row>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Style <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.style = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+            >Fill</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+            >Depth</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+            >Classic</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+        <v-col c4 center>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xSmall</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Small</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = '' }"
+            >Normal</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >Large</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
+            >xLarge</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+        <v-col c4 center>
+          <v-radio-btn
+            id="left"
+            @change="(event) => { propsData.position = '' }"
+          >Left</v-radio-btn>
+          <v-radio-btn
+            id="center"
+            @change="(event) => { propsData.position = event.srcElement.id }"
+          >Center</v-radio-btn>
+          <v-radio-btn
+            id="right"
+            @change="(event) => { propsData.position = event.srcElement.id }"
+          >Right</v-radio-btn>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-tabs', 'v-tab']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-tabs fill>
-  <v-tab>Tab One</v-tab>
-  <v-tab selected>Tab Two</v-tab>
-  <v-tab>Tab Three</v-tab>
-</v-tabs>`,
-      props: {
-        xsmall: ['xsmall', 'false', 'Boolean', 'XSmall tab size'],
-        small: ['small', 'false', 'Boolean', 'Small tab size'],
-        large: ['large', 'false', 'Boolean', 'Large tab size'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'XLarge tab size'],
-        center: ['center', 'false', 'Boolean', 'Center the tabs'],
-        right: ['right', 'false', 'Boolean', 'Right align the tabs'],
-        fill: ['fill', 'false', 'Boolean', 'Fill the tabs full width'],
-        depth: ['depth', 'false', 'Boolean', 'Create depth with the tabs'],
-        classic: ['classic', 'false', 'Boolean', 'Create classic tabs'],
-        selected: ['selected', 'false', 'Boolean', '(TabItem) Tab is selected'],
-        link: ['link', 'false', 'Boolean', '(TabItem) Link of the tab item'],
+      propsData: {
+        size: '',
+        position: '',
+        style: '',
       },
+      props: [
+        ['v-tabs', 'xsmall', 'boolean', 'false', 'Set the tabs size to xsmall.'],
+        ['v-tabs', 'small', 'boolean', 'false', 'Set the tabs size to small.'],
+        ['v-tabs', 'large', 'boolean', 'false', 'Set the tabs size to large.'],
+        ['v-tabs', 'xlarge', 'boolean', 'false', 'Set the tabs size to xlarge.'],
+        ['v-tabs', 'center', 'boolean', 'false', 'Position the tabs to the center.'],
+        ['v-tabs', 'right', 'boolean', 'false', 'Position the tabs to the right side.'],
+        ['v-tabs', 'depth', 'boolean', 'false', 'Enable some depth in the tabs menu.'],
+        ['v-tabs', 'fill', 'boolean', 'false', 'The tabs will fill equally.'],
+        ['v-tabs', 'classic', 'boolean', 'false', 'Set the style of the tabs to classic.'],
+        ['v-tab', 'selected', 'boolean', 'false', 'This tab will have the selected color.'],
+        ['v-tab', 'href', 'string', '#!', 'Set the href, when clicked on a tab.'],
+        ['v-tab', '@click', 'function', '() => {}', 'This event will be fired, whenever someones clicks on the tab component.'],
+      ],
     };
+  },
+
+  computed: {
+    customCode() {
+      let validProps = '';
+      Object.entries(this.propsData).forEach((entry) => {
+        if (entry[1] !== '' && entry[1] !== false) {
+          validProps += `\n  ${entry[1]}`;
+        }
+      });
+      return `
+<v-tabs ${validProps}
+>
+  <v-tab>Tab 1</v-tab>
+  <v-tab>Tab 2</v-tab>
+  <v-tab>Tab 3</v-tab>
+</v-tabs>
+`;
+    },
   },
 };
 </script>
