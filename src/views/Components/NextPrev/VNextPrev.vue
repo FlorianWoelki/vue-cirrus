@@ -1,58 +1,114 @@
 <template>
-  <section class="nextprev-component">
-    <h5>NextPrev</h5>
-    <p>It is so easy to create stylus next and previous buttons!</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c6
-      >
-        <v-next-prev
-          prevText="Prev Text"
-          nextText="Next Text"
-        />
-      </v-col>
-    </v-row>
+  <section class="next-prev-component">
+    <p class="no-upper-margin">
+      To make really cool bottom navigation menus, you can use the
+      <kbd>v-next-prev</kbd> component.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Pagination in their simples form have no border and a hover color.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/NextPrev/#!"
+      component="v-next-prev"
+      :componentProps="propsData"
+      :customCode="customCode"
+    >
+      <template v-slot:component>
+        <v-next-prev>
+          <v-prev-btn :prevText="propsData.previousText">
+            {{ propsData.previousTitle }}
+          </v-prev-btn>
+          <v-next-btn :nextText="propsData.nextText">
+            {{ propsData.nextTitle }}
+          </v-next-btn>
+        </v-next-prev>
+      </template>
+      <v-row>
+        <v-col center c3>
+          <v-input-field
+            placeholder="Previous Title ..."
+            v-model="propsData.previousTitle"
+          ></v-input-field>
+        </v-col>
+        <v-col center c3>
+          <v-input-field
+            placeholder="Previous Text ..."
+            v-model="propsData.previousText"
+          ></v-input-field>
+        </v-col>
+        <v-col center c3>
+          <v-input-field
+            placeholder="Next Title ..."
+            v-model="propsData.nextTitle"
+          ></v-input-field>
+        </v-col>
+        <v-col center c3>
+          <v-input-field
+            placeholder="Next Text ..."
+            v-model="propsData.nextText"
+          ></v-input-field>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-next-btn', 'v-prev-btn']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-next-prev
-  prevText="Prev Text"
-  nextText="Next Text"
-/>`,
-      props: {
-        onlyNext: ['onlyNext', 'false', 'Boolean', 'Only next is shown'],
-        onlyPrev: ['onlyPrev', 'false', 'Boolean', 'Only previous is shown'],
-        nextText: ['nextText', 'Next', 'String', 'Next text'],
-        prevText: ['prevText', 'Previous', 'String', 'Previous text'],
+      propsData: {
+        previousTitle: 'Prev Title',
+        previousText: 'Prev',
+        nextTitle: 'Next Title',
+        nextText: 'Next',
       },
+      props: [
+        ['v-next-btn', 'href', 'string', '#!', 'Set the href, when someone clicks the next button.'],
+        ['v-next-btn', '@click', 'function', '() => {}', 'Get the event, when someone clicks the next button.'],
+        ['v-prev-btn', 'href', 'string', '#!', 'Set the href, when someone clicks the previous button.'],
+        ['v-prev-btn', '@click', 'function', '() => {}', 'Get the event, when someone clicks the previous button.'],
+      ],
     };
+  },
+
+
+  computed: {
+    customCode() {
+      return `
+<v-next-prev>
+  <v-prev-btn prevText="${this.propsData.previousText}">
+    ${this.propsData.previousTitle}
+  </v-prev-btn>
+  <v-next-btn nextText="${this.propsData.nextText}">
+    ${this.propsData.nextTitle}
+  </v-next-btn>
+</v-next-prev>
+`;
+    },
   },
 };
 </script>
