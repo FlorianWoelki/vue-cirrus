@@ -1,110 +1,124 @@
 <template>
   <section class="links-component">
-    <h5>Links</h5>
-    <p>You can set just one property in the link component and it will animate automatically!</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c6
-        style="margin-top: 155px;"
-      >
-        <v-row center>
-          <v-col c2>
-            <v-link ltr>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link rtl>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link c>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link oltr>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link ortl>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link oc>Link</v-link>
-          </v-col>
-        </v-row>
-        <v-row center>
-          <v-col c2>
-            <v-link underlined>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link olr>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link orl>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link squared>Link</v-link>
-          </v-col>
-          <v-col c2>
-            <v-link dSquared>Link</v-link>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      To make really cool bottom navigation menus, you can use the
+      <kbd>v-next-prev</kbd> component.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Pagination in their simples form have no border and a hover color.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Links/#!"
+      component="v-link"
+      :componentProps="propsData"
+    >
+      <template v-slot:component>
+        <div class="u-text-center">
+          <v-link
+            :ltr="propsData.animation === 'ltr'"
+            :rtl="propsData.animation === 'rtl'"
+            :c="propsData.animation === 'c'"
+            :oltr="propsData.animation === 'oltr'"
+            :ortl="propsData.animation === 'ortl'"
+            :oc="propsData.animation === 'oc'"
+            :olr="propsData.animation === 'olr'"
+            :orl="propsData.animation === 'orl'"
+            :squared="propsData.animation === 'squared'"
+            :dSquared="propsData.animation === 'dSquared'"
+          >Customize Me</v-link>
+        </div>
+      </template>
+      <v-row>
+        <v-col center c12>
+          <v-dropdown>
+            <template v-slot:button>
+              <v-dropdown-btn>
+                Animation <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+              </v-dropdown-btn>
+            </template>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'ltr' }"
+            >Left to Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'rtl' }"
+            >Right to Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'c' }"
+            >Center</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'oltr' }"
+            >Outline Left to Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'ortl' }"
+            >Outline Right to Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'oc' }"
+            >Outline Center</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'olr' }"
+            >Outline Left Right</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'orl' }"
+            >Outline Right Left</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'squared' }"
+            >Squared</v-dropdown-item>
+            <v-dropdown-item
+              @click="(event) => { propsData.animation = 'dSquared' }"
+            >Delayed Squared</v-dropdown-item>
+          </v-dropdown>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-link']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-row center>
-  <v-col c1><v-link ltr>Link</v-link></v-col>
-  <v-col c1><v-link rtl>Link</v-link></v-col>
-  <v-col c1><v-link c>Link</v-link></v-col>
-  <v-col c1><v-link oltr>Link</v-link></v-col>
-  <v-col c1><v-link ortl>Link</v-link></v-col>
-  <v-col c1><v-link oc>Link</v-link></v-col>
-</v-row>
-<v-row center>
-  <v-col c1><v-link underlined>Link</v-link></v-col>
-  <v-col c1><v-link olr>Link</v-link></v-col>
-  <v-col c1><v-link orl>Link</v-link></v-col>
-  <v-col c1><v-link squared>Link</v-link></v-col>
-  <v-col c1><v-link dSquared>Link</v-link></v-col>
-</v-row>`,
-      props: {
-        href: ['href', '#', 'String', 'href of the link'],
-        ltr: ['ltr', 'false', 'Boolean', 'Left to Right'],
-        rtl: ['rtl', 'false', 'Boolean', 'Right to Left'],
-        c: ['c', 'false', 'Boolean', 'Center'],
-        oltr: ['oltr', 'false', 'Boolean', 'Up and down left to right'],
-        ortl: ['ortl', 'false', 'Boolean', 'Up an down right to left'],
-        oc: ['oc', 'false', 'Boolean', 'Up and down center'],
-        olr: ['olr', 'false', 'Boolean', 'Left and right'],
-        orl: ['orl', 'false', 'Boolean', 'Right and Left'],
-        squared: ['squared', 'false', 'Boolean', 'Squared box'],
-        dSquared: ['dSquared', 'false', 'Boolean', 'Delayed squared box'],
-        underlined: ['underlined', 'false', 'Boolean', 'Underlined link'],
+      propsData: {
+        animation: '',
       },
+      props: [
+        ['v-link', 'href', 'string', '#', 'Set the href for the link.'],
+        ['v-link', 'blank', 'boolean', 'false', 'When someone clicks the link, the link will open in a new tab.'],
+        ['v-link', 'ltr', 'boolean', 'false', 'The link will have the left to right underline animation.'],
+        ['v-link', 'rtl', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'c', 'boolean', 'false', 'The link will have the center underline animation.'],
+        ['v-link', 'oltr', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'ortl', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'oc', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'olr', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'orl', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'squared', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'dSquared', 'boolean', 'false', 'The link will have the right to left underline animation.'],
+        ['v-link', 'underlined', 'boolean', 'false', 'Simply underline the link.'],
+        ['v-link', '@click', 'function', '() => {}', 'Catch the event, when someone clicks the link.'],
+      ],
     };
   },
 };
