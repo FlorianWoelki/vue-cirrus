@@ -1,55 +1,89 @@
 <template>
   <section class="spaces-component">
-    <h5>Spaces</h5>
-    <p>You can create dynamic spaces in your layout. So easy!</p>
-
-    <v-row>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        center
-        c6
-      >
-        <p>Paragraph Text 1</p>
-        <v-space />
-        <p>Paragraph Text 2</p>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      Simply use the <kbd>v-space</kbd> component to create some extra
+      space between your components on your website.
+    </p>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Spaces in their simplest form do has a height of 1rem.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Spaces/#!"
+      component="v-space"
+      :componentProps="propsData"
+      :customCode="customCode"
+    >
+      <template v-slot:component>
+        <div class="u-center">
+          <h6>Customize Me 1</h6>
+          <v-space :large="propsData.large" :xlarge="propsData.xlarge"></v-space>
+          <h6>Customize Me 2</h6>
+        </div>
+      </template>
+      <v-row>
+        <v-col center c6>
+          <v-checkbox
+            id="large-space"
+            @change="() => { propsData.large = !propsData.large }"
+          >Large</v-checkbox>
+        </v-col>
+        <v-col center c6>
+          <v-checkbox
+            @change="() => { propsData.xlarge = !propsData.xlarge }"
+          >xLarge</v-checkbox>
+        </v-col>
+      </v-row>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-space']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<p>Paragraph Text 1</p>
-<v-space />
-<p>Paragraph Text 2</p>`,
-      props: {
-        large: ['large', 'true', 'Boolean', 'Large spacer'],
-        xlarge: ['xlarge', 'false', 'Boolean', 'XLarge spacer'],
+      propsData: {
+        large: false,
+        xlarge: false,
       },
+      props: [
+        ['v-space', 'large', 'boolean', 'false', 'The size of the large space will be 1rem.'],
+        ['v-space', 'xlarge', 'boolean', 'false', 'The size of the xlarge space will be 2rem.'],
+      ],
     };
+  },
+
+
+  computed: {
+    customCode() {
+      return `
+<h6>Customize Me 1</h6>
+<v-space${this.propsData.xlarge ? ' xlarge' : ''}${this.propsData.large ? ' large' : ''}></v-space>
+<h6>Customize Me 2</h6>
+`;
+    },
   },
 };
 </script>
