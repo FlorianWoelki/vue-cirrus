@@ -28,18 +28,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    footerText: {
-      type: String,
-      default: '',
-    },
     equalHeight: {
       type: Boolean,
       default: false,
