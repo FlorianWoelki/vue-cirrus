@@ -15,19 +15,19 @@ export default {
   ],
 
   props: {
-    h1: {
+    xlarge: {
       type: Boolean,
       default: false,
     },
-    h2: {
+    large: {
       type: Boolean,
       default: false,
     },
-    h3: {
+    small: {
       type: Boolean,
       default: false,
     },
-    h4: {
+    xsmall: {
       type: Boolean,
       default: false,
     },
@@ -41,10 +41,10 @@ export default {
     classes() {
       const classes = {
         uppercase: this.uppercase,
-        'headline-1': this.h1,
-        'headline-2': this.h2,
-        'headline-3': this.h3,
-        'headline-4': this.h4,
+        'headline-1': this.xlarge,
+        'headline-2': this.large,
+        'headline-3': this.small,
+        'headline-4': this.xsmall,
       };
 
       return Object.assign(
