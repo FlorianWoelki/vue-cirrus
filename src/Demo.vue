@@ -9,6 +9,7 @@
     </v-navbar>
     <v-space></v-space>
     <v-divider></v-divider>
+    <v-headline>Hello</v-headline>
     <v-space></v-space>
     <v-code lang="bash"><br />yarn install vue-cirrus</v-code>
     <v-row center>

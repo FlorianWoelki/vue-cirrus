@@ -17,7 +17,7 @@ export default {
   props: {
     h1: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     h2: {
       type: Boolean,
