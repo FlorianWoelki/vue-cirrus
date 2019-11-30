@@ -20,10 +20,6 @@
           >Animations</v-sidebar-item>
           <v-sidebar-item
             dropdown
-            href="#/components/Layout"
-          >Layout</v-sidebar-item>
-          <v-sidebar-item
-            dropdown
             href="#/components/Tooltips"
           >Tooltips</v-sidebar-item>
         </v-sidebar-dropdown>
