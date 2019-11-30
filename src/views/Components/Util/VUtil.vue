@@ -1,26 +1,19 @@
 <template>
   <section class="util-component">
-    <p>This view will reveal, what utils Vue Cirrus has.</p>
+    <p class="no-upper-margin">
+      Here you can see some <kbd>util</kbd> functionalities, you can use
+      in your project.
+    </p>
 
     <v-space xlarge />
-
     <h5>Container</h5>
-    <p>A container will container the child components or views.</p>
-    <v-row>
-      <v-col c6>
-        <v-code lang="Vue">
-          <xmp v-html=containerCode></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        c6
-        style="margin-top: 45px;"
-      >
-        <v-container>
-          <v-btn>Testing Container</v-btn>
-        </v-container>
-      </v-col>
-    </v-row>
+    <p class="no-upper-margin">
+      You can simply use the <kbd>v-container</kbd> to containerize your content.
+      The black background color is the container.
+    </p>
+    <v-container style="background-color: #191919;">
+      <h3 class="white">Containerized Element</h3>
+    </v-container>
   </section>
 </template>
 
@@ -28,10 +21,37 @@
 export default {
   data() {
     return {
-      containerCode: `<v-container>
-  <v-btn>Testing Container</v-btn>
-</v-container>`,
+      propsData: {
+        title: 'Awesome Card Title',
+        content: 'Some basic content',
+        footer: '6:32 PM - 3 Jul 19',
+      },
+      props: [
+        ['v-card', 'animated', 'boolean', 'false', 'Set the card to a animated one.'],
+        ['v-card', 'equalHeight', 'boolean', 'false', 'For multiple cards set the height to the same one.'],
+        ['v-card-image', 'image', 'string', 'empty', 'Set the source for the card image.'],
+        ['v-card-image', 'height', 'string', '332px', 'Set the height of the image in the card.'],
+      ],
     };
+  },
+
+  computed: {
+    customCode() {
+      return `
+<v-card>
+  <v-card-title>${this.propsData.title}</v-card-title>
+  <v-card-content>
+    <v-space></v-space>
+    <v-avatar text="FW"></v-avatar>
+    <p>${this.propsData.content}</p>
+    <a href="#">#vue-cirrus</a>
+    <a href="#">#cirrus</a>
+  </v-card-content>
+
+  <v-card-footer>${this.propsData.footer}</v-card-footer>
+</v-card>
+`;
+    },
   },
 };
 </script>
