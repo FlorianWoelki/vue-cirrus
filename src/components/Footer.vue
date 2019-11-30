@@ -23,34 +23,44 @@
 
     <v-container>
       <v-row class="component-examples">
-        <v-col c3>
-          <v-row center><v-link href="#/components/Avatars">Avatars</v-link></v-row>
-          <v-row center><v-link href="#/components/Badges">Badges</v-link></v-row>
-          <v-row center><v-link href="#/components/Buttons">Buttons</v-link></v-row>
-          <v-row center><v-link href="#/components/Cards">Cards</v-link></v-row>
-        </v-col>
-        <v-col c3>
-          <v-row center><v-link href="#/components/Code">Code</v-link></v-row>
-          <v-row center><v-link href="#/components/Forms">Forms</v-link></v-row>
-          <v-row center><v-link href="#/components/Footer">Footer</v-link></v-row>
-          <v-row center><v-link href="#/components/Grid">Grid</v-link></v-row>
-        </v-col>
-        <v-col c3>
-          <v-row center><v-link href="#/components/Modals">Modals</v-link></v-row>
-          <v-row center><v-link href="#/components/Pagination">Pagination</v-link></v-row>
-          <v-row center><v-link href="#/components/Snackbars">Snackbars</v-link></v-row>
-          <v-row center><v-link href="#/components/Tabs">Tabs</v-link></v-row>
-        </v-col>
-        <v-col c3>
-          <v-row center><v-link href="#/components/Tags">Tags</v-link></v-row>
-          <v-row center><v-link href="#/components/Toasts">Toasts</v-link></v-row>
-          <v-row center><v-link href="#/components/Animations">Animations</v-link></v-row>
-          <v-row center><v-link href="#/components/Tooltips">Tooltips</v-link></v-row>
+        <v-col v-for="i in 4" :key="i" c3>
+          <v-row center v-for="j in 4" :key="j">
+            <v-link href="#/components/Avatars">
+              {{ components[(i - 1) * 4 + (j - 1)] }}
+            </v-link>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
   </v-footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      components: [
+        'Animations',
+        'Avatars',
+        'Badges',
+        'Buttons',
+        'Cards',
+        'Code',
+        'Forms',
+        'Footer',
+        'Grid',
+        'Modals',
+        'Pagination',
+        'Snackbars',
+        'Tabs',
+        'Tags',
+        'Toasts',
+        'Tooltips',
+      ],
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 .footer-section {
