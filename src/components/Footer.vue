@@ -22,30 +22,30 @@
     <v-space></v-space>
 
     <v-container>
-      <v-row>
+      <v-row class="component-examples">
         <v-col c3>
-          <v-link href="#/components/Avatars">Avatars</v-link>
-          <v-link href="#/components/Badges">Badges</v-link>
-          <v-link href="#/components/Buttons">Buttons</v-link>
-          <v-link href="#/components/Cards">Cards</v-link>
+          <v-row center><v-link href="#/components/Avatars">Avatars</v-link></v-row>
+          <v-row center><v-link href="#/components/Badges">Badges</v-link></v-row>
+          <v-row center><v-link href="#/components/Buttons">Buttons</v-link></v-row>
+          <v-row center><v-link href="#/components/Cards">Cards</v-link></v-row>
         </v-col>
         <v-col c3>
-          <v-link href="#/components/Code">Code</v-link>
-          <v-link href="#/components/Forms">Forms</v-link>
-          <v-link href="#/components/Footer">Footer</v-link>
-          <v-link href="#/components/Grid">Grid</v-link>
+          <v-row center><v-link href="#/components/Code">Code</v-link></v-row>
+          <v-row center><v-link href="#/components/Forms">Forms</v-link></v-row>
+          <v-row center><v-link href="#/components/Footer">Footer</v-link></v-row>
+          <v-row center><v-link href="#/components/Grid">Grid</v-link></v-row>
         </v-col>
         <v-col c3>
-          <v-link href="#/components/Modals">Modals</v-link>
-          <v-link href="#/components/Pagination">Pagination</v-link>
-          <v-link href="#/components/Snackbars">Snackbars</v-link>
-          <v-link href="#/components/Tabs">Tabs</v-link>
+          <v-row center><v-link href="#/components/Modals">Modals</v-link></v-row>
+          <v-row center><v-link href="#/components/Pagination">Pagination</v-link></v-row>
+          <v-row center><v-link href="#/components/Snackbars">Snackbars</v-link></v-row>
+          <v-row center><v-link href="#/components/Tabs">Tabs</v-link></v-row>
         </v-col>
         <v-col c3>
-          <v-link href="#/components/Tags">Tags</v-link>
-          <v-link href="#/components/Toasts">Toasts</v-link>
-          <v-link href="#/components/Animations">Animations</v-link>
-          <v-link href="#/components/Tooltips">Tooltips</v-link>
+          <v-row center><v-link href="#/components/Tags">Tags</v-link></v-row>
+          <v-row center><v-link href="#/components/Toasts">Toasts</v-link></v-row>
+          <v-row center><v-link href="#/components/Animations">Animations</v-link></v-row>
+          <v-row center><v-link href="#/components/Tooltips">Tooltips</v-link></v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -58,6 +58,10 @@
     color: #e90606;
     margin: 0 3px;
     font-size: 16px;
+  }
+
+  .component-examples .row {
+    padding: 0;
   }
 }
 </style>
