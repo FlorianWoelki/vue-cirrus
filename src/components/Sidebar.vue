@@ -1,9 +1,10 @@
 <template>
   <v-sidebar :class="isDarkMode ? 'dark' : ''">
-    <v-sidebar-items
-      title="Components"
-      hoverEffect
-    >
+    <v-sidebar-items hoverEffect>
+      <template slot:brandTitle>
+        <h5>Components</h5>
+        <v-space></v-space>
+      </template>
       <v-sidebar-item
         v-for="component in sortedComponentList"
         :key=component
