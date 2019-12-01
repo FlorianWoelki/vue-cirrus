@@ -16,13 +16,13 @@
     "cirrus",
     "framework"
   ],
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "./dist/vue-cirrus.common.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --name vue-cirrus ./src/components/_globals.js",
+    "build": "vue-cli-service build --target lib --name vue-cirrus ./src/main.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -47,7 +47,8 @@
     "node-sass": "^4.12.0",
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "webpack-bundle-analyzer": "^3.6.0"
   },
   "browsersList": [
     "> 1%",

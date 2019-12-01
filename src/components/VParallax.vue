@@ -2,9 +2,9 @@
   <div
     id="splash-img"
     :class="classes"
-    :style="image.startsWith('http://') || image.startsWith('https://')
+    style="/*image.startsWith('http://') || image.startsWith('https://')
       ? { background: `url(${image})` }
-      : { background: `url(${require(`@/assets/${image}`)})` }"
+      : { background: `url(${require(`@/assets/${image}`)})` }*/"
   >
     <div v-if="!customBody" id="hero-body" class="u-center">
       <slot />
