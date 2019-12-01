@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2019-12-01
+
+### 🔨 Added
+- Add keyword 'add' to bash code script
+- Optimize Sidebar title to have its own html
+- Add new nav-region component
+- Optimize prop names for headline component
+- Add a better way to install Vue-Cirrus and made some performance tweaks
+
+### ⚡️ Changed
+- Drop not useful properties in v-badge component
+- Drop title prop
+- Drop spinner component
+- Change default value in headline for h1 to false
+- Drop not useful props for v-card
+
+
 ## [0.3.1] - 2019-11-02
 
 ### 🔨 Added
