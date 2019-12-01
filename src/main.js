@@ -1,12 +1,14 @@
 import Vue from 'vue';
+import VueCirrus from 'vue-cirrus';
 import App from './App.vue';
 import router from './router';
 import store from './store/store';
 
 import 'vue-cirrus/dist/vue-cirrus.css';
-import 'vue-cirrus';
 
 Vue.config.productionTip = false;
+
+Vue.use(VueCirrus);
 
 new Vue({
   router,
