@@ -58,8 +58,10 @@
         </h6>
       </v-col>
       <v-col c6>
-        <v-code lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
-import 'vue-cirrus';</v-code>
+        <v-code lang="JavaScript" copyable><br />import VueCirrus from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VueCirrus);</v-code>
       </v-col>
     </v-row>
   </section>

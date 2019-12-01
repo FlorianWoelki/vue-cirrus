@@ -45,8 +45,10 @@ yarn add vue-cirrus
       If you have done those steps, you can now include the Vue-Cirrus package
       in your <kbd>main.js</kbd> file. Just copy the code and import it easily.
     </p>
-    <v-code lang="JavaScript" copyable><br />import 'vue-cirrus/dist/vue-cirrus.css';
-import 'vue-cirrus';
+    <v-code lang="JavaScript" copyable><br />import VueCirrus from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VueCirrus);
     </v-code>
 
     <v-space />
