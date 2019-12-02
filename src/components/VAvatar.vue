@@ -1,10 +1,23 @@
 <template>
-  <figure :class=avatarClasses :data-text="text">
+  <figure :class="[
+      layoutMixins,
+      tooltipMixins,
+      animationsMixins,
+      'avatar',
+      {
+        'avatar--xsmall': xsmall,
+        'avatar--small': small,
+        'avatar--large': large,
+        'avatar--xlarge': xlarge,
+      },
+    ]"
+    :data-text="text"
+  >
     <img
       v-if="src"
       :src="src.startsWith('http://') || src.startsWith('https://')
         ? src : require(`@/${src}`)"
-      :class="imgClasses"
+      :class="[{ padded }]"
     />
   </figure>
 </template>
@@ -49,28 +62,6 @@ export default {
     xlarge: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    avatarClasses() {
-      return Object.assign(
-        this.layoutMixins,
-        this.tooltipMixins,
-        this.animationsMixins,
-        {
-          avatar: true,
-          'avatar--xsmall': this.xsmall,
-          'avatar--small': this.small,
-          'avatar--large': this.large,
-          'avatar--xlarge': this.xlarge,
-        },
-      );
-    },
-    imgClasses() {
-      return {
-        padded: this.padded,
-      };
     },
   },
 };
