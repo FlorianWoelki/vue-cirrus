@@ -64,29 +64,29 @@ export default {
         this.copied = true;
       }
     },
+
+    replaceWithColoredCode(codeElements, lang) {
+      let newColoredElements = codeElements;
+      Object.keys(lang).forEach((key) => {
+        newColoredElements = newColoredElements.replace(lang[key].exp, `<span class="${lang[key].class}">$&</span>`);
+      });
+      return newColoredElements;
+    },
   },
 
   mounted() {
     let codeElements = document.getElementById(this.codeId).innerHTML;
 
     if (this.lang.toLowerCase() === 'javascript') {
-      Object.keys(javascript).forEach((key) => {
-        codeElements = codeElements.replace(javascript[key].exp, `<span class="${javascript[key].class}">$&</span>`);
-      });
+      codeElements = this.replaceWithColoredCode(codeElements, javascript);
     } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
       codeElements = codeElements.replace('<xmp>', '').replace('</xmp>', '');
       codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
-      Object.keys(html).forEach((key) => {
-        codeElements = codeElements.replace(html[key].exp, `<span class="${html[key].class}">$&</span>`);
-      });
+      codeElements = this.replaceWithColoredCode(codeElements, html);
     } else if (this.lang.toLowerCase() === 'css') {
-      Object.keys(css).forEach((key) => {
-        codeElements = codeElements.replace(css[key].exp, `<span class="${css[key].class}">$&</span>`);
-      });
+      codeElements = this.replaceWithColoredCode(codeElements, css);
     } else if (this.lang.toLowerCase() === 'bash') {
-      Object.keys(bash).forEach((key) => {
-        codeElements = codeElements.replace(bash[key].exp, `<span class="${bash[key].class}">$&</span>`);
-      });
+      codeElements = this.replaceWithColoredCode(codeElements, bash);
     }
 
     document.getElementById(this.codeId).innerHTML = codeElements;
@@ -110,7 +110,6 @@ export default {
     classes() {
       return {
         copyable: this.copyable,
-        'feedback-blur': this.copyable,
         dark: this.dark,
       };
     },
@@ -201,35 +200,5 @@ code.dark .special-html {
 
 code .special-attributes {
   color: rgb(190, 74, 74);
-}
-
-.copy-feedback {
-  font-family: Montserrat, sans-serif;
-  font-size: 24px;
-
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  z-index: 1;
-
-  opacity: 0;
-  -webkit-transition: all .8s ease-in-out;
-  -moz-transition: all .8s ease-in-out;
-  -ms-transition: all .8s ease-in-out;
-  -o-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
-}
-.feedback-blur {
-  -webkit-filter: blur(0);
-  -moz-filter: blur(0);
-  -ms-filter: blur(0);
-  -o-filter: blur(0);
-  filter: blur(0);
-
-  -webkit-transition: .8s ease-in-out;
-  -moz-transition: .8s ease-in-out;
-  -ms-transition: .8s ease-in-out;
-  -o-transition: .8s ease-in-out;
-  transition: .8s ease-in-out;
 }
 </style>
