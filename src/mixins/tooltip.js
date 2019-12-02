@@ -2,7 +2,7 @@ export default {
   props: {
     tooltipText: {
       type: String,
-      default: '',
+      default: null,
     },
     tooltipTopLeft: {
       type: Boolean,
