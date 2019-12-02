@@ -1,27 +1,12 @@
 <template>
   <button
-    v-if="href === ''"
-    :class=classes
-    :data-tooltip=tooltipData
-    :disabled=disabled
+    :class="classes"
+    :data-tooltip="tooltipData"
+    :disabled="disabled"
     @click="handleClick($event)"
   >
     <slot></slot>
   </button>
-  <a
-    v-else
-    :href="href"
-    :target="blank ? '_blank' : ''"
-  >
-    <button
-      :class=classes
-      :data-tooltip=tooltipData
-      :disabled=disabled
-      @click="handleClick($event)"
-    >
-      <slot></slot>
-    </button>
-  </a>
 </template>
 
 <script>
@@ -42,14 +27,6 @@ export default {
       default: false,
     },
     circle: {
-      type: Boolean,
-      default: false,
-    },
-    href: {
-      type: String,
-      default: '',
-    },
-    blank: {
       type: Boolean,
       default: false,
     },
