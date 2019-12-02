@@ -87,6 +87,11 @@ export default {
   color: #fff;
   border-color: #2B2B2B;
 }
+.badge.black[data-badge]:after {
+  background: #000;
+  color: #fff;
+  border-color: #2B2B2B;
+}
 .badge.success[data-badge]:after {
   background: #0dd157;
   color: #fff;
