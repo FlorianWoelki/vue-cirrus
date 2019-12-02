@@ -37,7 +37,7 @@ export default {
   computed: {
     tooltipMixins() {
       return {
-        tooltip: this.tooltipText !== '',
+        tooltip: this.tooltipText !== null,
         'tooltip--top-left': this.tooltipTopLeft,
         'tooltip--top-right': this.tooltipTopRight,
         'tooltip--bottom': this.tooltipBottom,
