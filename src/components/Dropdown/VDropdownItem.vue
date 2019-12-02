@@ -1,12 +1,13 @@
 <template>
   <li
-    :class="classes"
+    :class="[
+      this.animationsMixins,
+      this.tooltipMixins,
+      'menu-item',
+    ]"
     :data-tooltip="tooltipData"
   >
-    <a v-if="href" :href="href">
-      <slot></slot>
-    </a>
-    <a v-else @click="$emit('click', $event)">
+    <a :href="href" @click="$emit('click', $event)">
       <slot></slot>
     </a>
   </li>
@@ -25,19 +26,7 @@ export default {
   props: {
     href: {
       type: String,
-      default: '',
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.animationsMixins,
-        this.tooltipMixins,
-        {
-          'menu-item': true,
-        },
-      );
+      default: null,
     },
   },
 };
