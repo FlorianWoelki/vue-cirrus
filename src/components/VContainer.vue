@@ -1,5 +1,11 @@
 <template>
-  <div :class="classes">
+  <div :class="[
+    {
+      'content': !this.noPadding && !this.fluid,
+      'content-no-padding': this.noPadding && !this.fluid,
+      'content-fluid': this.fluid,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -14,18 +20,6 @@ export default {
     fluid: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        {
-          content: !this.noPadding && !this.fluid,
-          'content-no-padding': this.noPadding && !this.fluid,
-          'content-fluid': this.fluid,
-        },
-      );
     },
   },
 };
