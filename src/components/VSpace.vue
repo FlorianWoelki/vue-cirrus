@@ -1,5 +1,11 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'space',
+    {
+      'large': this.large && !this.xlarge,
+      'x-large': this.xlarge,
+    },
+  ]">
   </div>
 </template>
 
@@ -8,21 +14,11 @@ export default {
   props: {
     large: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     xlarge: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        space: true,
-        large: this.large && !this.xlarge,
-        'x-large': this.xlarge,
-      };
     },
   },
 };
