@@ -1,5 +1,13 @@
 <template>
-  <div :class="classes">
+  <div :class="[
+    this.tooltipMixins,
+    this.animationsMixins,
+    'tag-container',
+    {
+      'group-tags': this.grouped,
+      'tag-container-rounded': this.pilled,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -19,23 +27,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    rounded: {
+    pilled: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.tooltipMixins,
-        this.animationsMixins,
-        {
-          'tag-container': true,
-          'group-tags': this.grouped,
-          'tag-container-rounded': this.rounded,
-        },
-      );
     },
   },
 };
