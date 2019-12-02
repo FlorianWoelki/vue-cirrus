@@ -1,11 +1,10 @@
 <template>
   <span
-    v-if="squared"
-    class="usquare"
+    :class="squared ? 'usquare' : dSquared ? 'usquare delay' : null"
   >
     <a
-      :href=href
-      :class=classes
+      :href="href"
+      :class="classes"
       :target="blank ? '_blank' : ''"
       :data-tooltip=tooltipData
       @click="handleClick($event)"
@@ -13,30 +12,6 @@
       <slot></slot>
     </a>
   </span>
-  <span
-    v-else-if="dSquared"
-    class="usquare delay"
-  >
-    <a
-      :href=href
-      :target="blank ? '_blank' : ''"
-      :class=classes
-      :data-tooltip=tooltipData
-      @click="handleClick($event)"
-    >
-      <slot></slot>
-    </a>
-  </span>
-  <a
-    v-else
-    :href=href
-    :target="blank ? '_blank' : ''"
-    :class=classes
-    :data-tooltip=tooltipData
-    @click="handleClick($event)"
-  >
-    <slot></slot>
-  </a>
 </template>
 
 <script>
