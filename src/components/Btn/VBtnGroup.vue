@@ -1,5 +1,10 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'btn-group',
+    {
+      'btn-group-fill': filled,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -16,18 +21,6 @@ export default {
     filled: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.layoutMixins,
-        {
-          'btn-group': true,
-          'btn-group-fill': this.filled,
-        },
-      );
     },
   },
 };
