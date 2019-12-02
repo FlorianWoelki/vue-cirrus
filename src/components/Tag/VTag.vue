@@ -25,45 +25,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    large: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: null,
     },
-    xlarge: {
-      type: Boolean,
-      default: false,
-    },
-    white: {
-      type: Boolean,
-      default: false,
-    },
-    black: {
-      type: Boolean,
-      default: false,
-    },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    link: {
-      type: Boolean,
-      default: false,
-    },
-    info: {
-      type: Boolean,
-      default: false,
-    },
-    success: {
-      type: Boolean,
-      default: false,
-    },
-    warning: {
-      type: Boolean,
-      default: false,
-    },
-    danger: {
-      type: Boolean,
-      default: false,
+    color: {
+      type: String,
+      default: null,
     },
     rounded: {
       type: Boolean,
@@ -73,25 +41,17 @@ export default {
 
   computed: {
     classes() {
-      return Object.assign(
+      return [
         this.tooltipMixins,
         this.animationsMixins,
+        'tag',
+        `tag--${this.size}`,
+        `tag--${this.color}`,
         {
-          tag: true,
-          'tag--white': this.white,
-          'tag--black': this.black,
-          'tag--primary': this.primary,
-          'tag--link': this.link,
-          'tag--info': this.info,
-          'tag--success': this.success,
-          'tag--warning': this.warning,
-          'tag--danger': this.danger,
-          'tag--large': this.large,
-          'tag--xlarge': this.xlarge,
           'tag--rounded': this.rounded,
           'tag__close-btn': this.closable,
         },
-      );
+      ];
     },
   },
 };
