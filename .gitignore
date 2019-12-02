@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+# local dev files
+App.vue
+
 # local env files
 .env.local
 .env.*.local
