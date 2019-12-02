@@ -7,13 +7,11 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
 import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [
-    Layout,
     Tooltip,
     Animations,
   ],
@@ -21,7 +19,6 @@ export default {
   computed: {
     classes() {
       return Object.assign(
-        this.layoutMixins,
         this.animationsMixins,
         this.tooltipMixins,
         {

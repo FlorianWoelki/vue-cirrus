@@ -8,13 +8,11 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
 import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [
-    Layout,
     Animations,
     Tooltip,
   ],
@@ -40,7 +38,6 @@ export default {
         {
           dark: this.dark,
         },
-        this.layoutMixins,
         this.tooltipMixins,
         this.animationsMixins,
       );

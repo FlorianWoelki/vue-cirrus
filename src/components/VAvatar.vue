@@ -1,6 +1,5 @@
 <template>
   <figure :class="[
-      layoutMixins,
       tooltipMixins,
       animationsMixins,
       'avatar',
@@ -23,13 +22,11 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Tooltip from '@/mixins/tooltip';
 import Animations from '@/mixins/animations';
 
 export default {
   mixins: [
-    Layout,
     Tooltip,
     Animations,
   ],

@@ -2,7 +2,6 @@
   <div :style="vertical ? { position: 'relative', height: '300px' } : null">
     <div
       :class="[
-        layoutMixins,
         animationsMixins,
         {
           'divider': !vertical,
@@ -18,12 +17,10 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
 
 export default {
   mixins: [
-    Layout,
     Animations,
   ],
 

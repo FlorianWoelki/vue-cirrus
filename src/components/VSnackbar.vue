@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
 
 export default {
   mixins: [
-    Layout,
     Animations,
   ],
 

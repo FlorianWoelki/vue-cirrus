@@ -20,13 +20,7 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
-
 export default {
-  mixins: [
-    Layout,
-  ],
-
   props: {
     dark: {
       type: Boolean,
@@ -40,13 +34,10 @@ export default {
 
   computed: {
     classes() {
-      return Object.assign(
-        this.layoutMixins,
-        {
-          'tree-nav-body': true,
-          dark: this.dark,
-        },
-      );
+      return {
+        'tree-nav-body': true,
+        dark: this.dark,
+      };
     },
   },
 };

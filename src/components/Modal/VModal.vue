@@ -27,13 +27,7 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
-
 export default {
-  mixins: [
-    Layout,
-  ],
-
   props: {
     title: {
       type: String,
@@ -85,10 +79,7 @@ export default {
         dark: this.dark,
       };
 
-      return Object.assign(
-        this.layoutMixins,
-        modalClasses,
-      );
+      return modalClasses;
     },
   },
 };

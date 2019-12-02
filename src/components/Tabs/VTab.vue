@@ -10,12 +10,10 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Tooltip from '@/mixins/tooltip';
 
 export default {
   mixins: [
-    Layout,
     Tooltip,
   ],
 
@@ -39,7 +37,6 @@ export default {
   computed: {
     classes() {
       return Object.assign(
-        this.layoutMixins,
         this.tooltipMixins,
         {
           selected: this.selected,

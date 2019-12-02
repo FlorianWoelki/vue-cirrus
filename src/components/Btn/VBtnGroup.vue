@@ -10,13 +10,7 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
-
 export default {
-  mixins: [
-    Layout,
-  ],
-
   props: {
     filled: {
       type: Boolean,

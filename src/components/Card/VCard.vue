@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import Layout from '@/mixins/layout';
 import Animations from '@/mixins/animations';
 
 export default {
   mixins: [
-    Layout,
     Animations,
   ],
 
@@ -41,7 +39,6 @@ export default {
   computed: {
     cardClasses() {
       return Object.assign(
-        this.layoutMixins,
         this.animationsMixins,
         {
           card: true,
