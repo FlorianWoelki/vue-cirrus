@@ -10,6 +10,8 @@
         'outline': this.outline,
         'btn--pilled': this.pilled,
         'btn--circle': this.circle,
+        'btn-dropdown': this.dropdown,
+        'u-no-margin': this.dropdown,
       },
     ]"
     :data-tooltip="tooltipData"
@@ -31,6 +33,10 @@ export default {
   ],
 
   props: {
+    dropdown: {
+      type: Boolean,
+      default: false,
+    },
     pilled: {
       type: Boolean,
       default: false,
