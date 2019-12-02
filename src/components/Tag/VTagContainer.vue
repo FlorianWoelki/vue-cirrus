@@ -5,7 +5,7 @@
     'tag-container',
     {
       'group-tags': this.grouped,
-      'tag-container-rounded': this.pilled,
+      'tag-container-rounded': this.rounded,
     },
   ]">
     <slot></slot>
@@ -27,7 +27,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    pilled: {
+    rounded: {
       type: Boolean,
       default: false,
     },
