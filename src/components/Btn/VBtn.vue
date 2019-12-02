@@ -88,14 +88,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    loadingLeft: {
-      type: Boolean,
-      default: false,
-    },
-    loadingRight: {
-      type: Boolean,
-      default: false,
-    },
     outline: {
       type: Boolean,
       default: false,
@@ -132,8 +124,6 @@ export default {
         'btn-small': this.small,
         'btn-large': this.large,
         'btn-xlarge': this.xlarge,
-        'animated loading loading-left': this.loadingLeft,
-        'animated loading loading-right': this.loadingRight,
         outline: this.outline,
         'btn--pilled': this.pilled,
         'btn--circle': this.circle,
