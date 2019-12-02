@@ -1,7 +1,19 @@
 <template>
-  <div v-if="!vertical" :class=classes></div>
-  <div v-else style="position:relative; height:300px">
-    <div :class=classes style="height: 100%;" :data-content="content"></div>
+  <div :style="vertical ? { position: 'relative', height: '300px' } : null">
+    <div
+      :class="[
+        layoutMixins,
+        animationsMixins,
+        {
+          'divider': !vertical,
+          'divider-short': short,
+          'divider--v': vertical,
+          'dark': dark,
+        },
+      ]"
+      :style="vertical ? { height: '100%' } : null"
+      :data-content="vertical ? content : null"
+    ></div>
   </div>
 </template>
 
@@ -31,21 +43,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.layoutMixins,
-        this.animationsMixins,
-        {
-          divider: !this.vertical,
-          'divider-short': this.short,
-          'divider--v': this.vertical,
-          dark: this.dark,
-        },
-      );
     },
   },
 };
