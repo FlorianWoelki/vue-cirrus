@@ -1,5 +1,10 @@
 <template>
-  <li :class="classes">
+  <li :class="[
+    this.tooltipMixins,
+    {
+      selected: this.selected,
+    },
+  ]">
     <a
       :href="href"
       @click="handleClick($event)"
@@ -31,17 +36,6 @@ export default {
   methods: {
     handleClick(event) {
       this.$emit('click', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.tooltipMixins,
-        {
-          selected: this.selected,
-        },
-      );
     },
   },
 };

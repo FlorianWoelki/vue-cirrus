@@ -1,5 +1,13 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'tab-container',
+    `tabs-${this.size}`,
+    `tabs-${this.mode}`,
+    `tabs-${this.position}`,
+    {
+      'dark': this.dark,
+    },
+  ]">
     <ul>
       <slot></slot>
     </ul>
@@ -9,63 +17,21 @@
 <script>
 export default {
   props: {
-    xsmall: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: null,
     },
-    small: {
-      type: Boolean,
-      default: false,
+    position: {
+      type: String,
+      default: null,
     },
-    large: {
-      type: Boolean,
-      default: false,
-    },
-    xlarge: {
-      type: Boolean,
-      default: false,
-    },
-    center: {
-      type: Boolean,
-      default: false,
-    },
-    right: {
-      type: Boolean,
-      default: false,
-    },
-    fill: {
-      type: Boolean,
-      default: false,
-    },
-    depth: {
-      type: Boolean,
-      default: false,
-    },
-    classic: {
-      type: Boolean,
-      default: false,
+    mode: {
+      type: String,
+      default: null,
     },
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'tab-container': true,
-        'tabs-xsmall': this.xsmall,
-        'tabs-small': this.small,
-        'tabs-large': this.large,
-        'tabs-xlarge': this.xlarge,
-        'tabs-center': this.center,
-        'tabs-right': this.right,
-        'tabs-fill': this.fill,
-        'tabs-depth': this.depth,
-        'tabs-classic': this.classic,
-        dark: this.dark,
-      };
     },
   },
 };
