@@ -1,8 +1,11 @@
 <template>
   <div class="placeholder">
-    <h6 class="placeholder-title">{{this.title}}</h6>
-    <div class="placeholder-subtitle">{{this.subtitle}}</div>
+    <h6 class="placeholder-title">{{ title }}</h6>
+    <div class="placeholder-subtitle">{{ subtitle }}</div>
     <slot></slot>
+    <div class="placeholder-commands u-center">
+      <slot name="commands"></slot>
+    </div>
   </div>
 </template>
 

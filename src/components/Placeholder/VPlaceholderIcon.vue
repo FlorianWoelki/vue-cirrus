@@ -1,5 +1,9 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    this.animationsMixins,
+    this.tooltipMixins,
+    'placeholder-icon',
+  ]">
     <span class="icon">
       <slot></slot>
     </span>
@@ -15,17 +19,5 @@ export default {
     Tooltip,
     Animations,
   ],
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.animationsMixins,
-        this.tooltipMixins,
-        {
-          'placeholder-icon': true,
-        },
-      );
-    },
-  },
 };
 </script>
