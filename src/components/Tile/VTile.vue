@@ -1,13 +1,15 @@
 <template>
   <div
-    v-if="enableBoxShadow"
-    :class="classes"
-    style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03);
-      padding: 0.25rem 1rem;"
+    :class="[
+      'tile',
+      'tile--center',
+      {
+        'dark': this.dark,
+      },
+    ]"
+    :style="enableBoxShadow ? 'box-shadow: 0 3px 6px rgba(0,0,0,0.06)' +
+      ', 0 3px 6px rgba(0,0,0,0.03); padding: 0.25rem 1rem' : null"
   >
-    <slot></slot>
-  </div>
-  <div v-else class="tile tile--center">
     <slot></slot>
   </div>
 </template>
@@ -22,16 +24,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        tile: true,
-        'tile--center': true,
-        dark: this.dark,
-      };
     },
   },
 };
