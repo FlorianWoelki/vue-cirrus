@@ -1,5 +1,17 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'offset-center',
+    this.c !== null ? `col-${this.c}` : null,
+    this.o !== null ? `offset-${this.o}` : null,
+    this.dynamicOffset !== null ? `offset-${this.dynamicOffset}` : null,
+    this.w !== null ? `w-${this.w}` : null,
+    this.h !== null ? `h-${this.h}` : null,
+    {
+      'col': this.fluid,
+      'no-space': this.noSpace,
+      'ignore-screen': this.ignoreScreen,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -7,55 +19,27 @@
 <script>
 export default {
   props: {
+    c: {
+      type: String,
+      default: null,
+    },
+    o: {
+      type: String,
+      default: null,
+    },
+    w: {
+      type: String,
+      default: null,
+    },
+    h: {
+      type: String,
+      default: null,
+    },
+    dynamicOffset: {
+      type: String,
+      default: null,
+    },
     fluid: {
-      type: Boolean,
-      default: false,
-    },
-    c1: {
-      type: Boolean,
-      default: false,
-    },
-    c2: {
-      type: Boolean,
-      default: false,
-    },
-    c3: {
-      type: Boolean,
-      default: false,
-    },
-    c4: {
-      type: Boolean,
-      default: false,
-    },
-    c5: {
-      type: Boolean,
-      default: false,
-    },
-    c6: {
-      type: Boolean,
-      default: false,
-    },
-    c7: {
-      type: Boolean,
-      default: false,
-    },
-    c8: {
-      type: Boolean,
-      default: false,
-    },
-    c9: {
-      type: Boolean,
-      default: false,
-    },
-    c10: {
-      type: Boolean,
-      default: false,
-    },
-    c11: {
-      type: Boolean,
-      default: false,
-    },
-    c12: {
       type: Boolean,
       default: false,
     },
@@ -66,203 +50,6 @@ export default {
     ignoreScreen: {
       type: Boolean,
       default: false,
-    },
-    oCenter: {
-      type: Boolean,
-      default: false,
-    },
-    oLeft: {
-      type: Boolean,
-      default: false,
-    },
-    oRight: {
-      type: Boolean,
-      default: false,
-    },
-    o1: {
-      type: Boolean,
-      default: false,
-    },
-    o2: {
-      type: Boolean,
-      default: false,
-    },
-    o3: {
-      type: Boolean,
-      default: false,
-    },
-    o4: {
-      type: Boolean,
-      default: false,
-    },
-    o5: {
-      type: Boolean,
-      default: false,
-    },
-    o6: {
-      type: Boolean,
-      default: false,
-    },
-    o7: {
-      type: Boolean,
-      default: false,
-    },
-    o8: {
-      type: Boolean,
-      default: false,
-    },
-    o9: {
-      type: Boolean,
-      default: false,
-    },
-    o10: {
-      type: Boolean,
-      default: false,
-    },
-    o11: {
-      type: Boolean,
-      default: false,
-    },
-    o12: {
-      type: Boolean,
-      default: false,
-    },
-    w10: {
-      type: Boolean,
-      default: false,
-    },
-    w20: {
-      type: Boolean,
-      default: false,
-    },
-    w30: {
-      type: Boolean,
-      default: false,
-    },
-    w40: {
-      type: Boolean,
-      default: false,
-    },
-    w50: {
-      type: Boolean,
-      default: false,
-    },
-    w60: {
-      type: Boolean,
-      default: false,
-    },
-    w70: {
-      type: Boolean,
-      default: false,
-    },
-    w80: {
-      type: Boolean,
-      default: false,
-    },
-    w90: {
-      type: Boolean,
-      default: false,
-    },
-    w100: {
-      type: Boolean,
-      default: false,
-    },
-    h10: {
-      type: Boolean,
-      default: false,
-    },
-    h20: {
-      type: Boolean,
-      default: false,
-    },
-    h30: {
-      type: Boolean,
-      default: false,
-    },
-    h40: {
-      type: Boolean,
-      default: false,
-    },
-    h50: {
-      type: Boolean,
-      default: false,
-    },
-    h60: {
-      type: Boolean,
-      default: false,
-    },
-    h70: {
-      type: Boolean,
-      default: false,
-    },
-    h80: {
-      type: Boolean,
-      default: false,
-    },
-    h90: {
-      type: Boolean,
-      default: false,
-    },
-    h100: {
-      type: Boolean,
-      default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        col: this.fluid,
-        'col-1': this.c1,
-        'col-2': this.c2,
-        'col-3': this.c3,
-        'col-4': this.c4,
-        'col-5': this.c5,
-        'col-6': this.c6,
-        'col-7': this.c7,
-        'col-8': this.c8,
-        'col-9': this.c9,
-        'col-10': this.c10,
-        'col-11': this.c11,
-        'col-12': this.c12,
-        'no-space': this.noSpace,
-        'ignore-screen': this.ignoreScreen,
-        'offset-center': this.oCenter,
-        'offset-left': this.oLeft,
-        'offset-right': this.oRight,
-        'offset-1': this.o1,
-        'offset-2': this.o2,
-        'offset-3': this.o3,
-        'offset-4': this.o4,
-        'offset-5': this.o5,
-        'offset-6': this.o6,
-        'offset-7': this.o7,
-        'offset-8': this.o8,
-        'offset-9': this.o9,
-        'offset-10': this.o10,
-        'offset-11': this.o11,
-        'offset-12': this.o12,
-        'w-10': this.w10,
-        'w-20': this.w20,
-        'w-30': this.w30,
-        'w-40': this.w40,
-        'w-50': this.w50,
-        'w-60': this.w60,
-        'w-70': this.w70,
-        'w-80': this.w80,
-        'w-90': this.w90,
-        'w-100': this.w100,
-        'h-10': this.h10,
-        'h-20': this.h20,
-        'h-30': this.h30,
-        'h-40': this.h40,
-        'h-50': this.h50,
-        'h-60': this.h60,
-        'h-70': this.h70,
-        'h-80': this.h80,
-        'h-90': this.h90,
-        'h-100': this.h100,
-      };
     },
   },
 };
