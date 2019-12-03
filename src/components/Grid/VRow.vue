@@ -1,5 +1,12 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'row',
+    {
+      'fluid-container': this.fluid,
+      'wrap': this.wrap,
+      'level': this.level,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -18,17 +25,6 @@ export default {
     level: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        row: true,
-        'fluid-container': this.fluid,
-        wrap: this.wrap,
-        level: this.level,
-      };
     },
   },
 };
