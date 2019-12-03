@@ -11,17 +11,9 @@ export default {
       type: String,
       default: '0',
     },
-    left: {
-      type: Boolean,
-      default: false,
-    },
-    right: {
-      type: Boolean,
-      default: true,
-    },
-    bottom: {
-      type: Boolean,
-      default: false,
+    position: {
+      type: String,
+      default: 'right',
     },
     color: {
       type: String,
@@ -35,11 +27,7 @@ export default {
     const spanChild = node.children[0];
     if (spanChild) {
       spanChild.classList.add('badge');
-      spanChild.classList.add(this.left ? 'left' : 'right');
-
-      if (this.bottom) {
-        spanChild.classList.add('bottom');
-      }
+      spanChild.classList.add(this.position);
 
       spanChild.classList.add(this.color);
       spanChild.setAttribute('data-badge', this.content);
