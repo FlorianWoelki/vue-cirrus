@@ -1,7 +1,12 @@
 <template>
   <div
     id="snackbar"
-    :class=classes
+    :class="[
+      this.animationsMixins,
+      'snackbar',
+      color !== null ? `${this.color}-snackbar` : null,
+      position !== null ? getPosition : null,
+    ]"
   >
     <slot></slot>
   </div>
@@ -22,61 +27,13 @@ export default {
   },
 
   props: {
-    success: {
-      type: Boolean,
-      default: false,
+    color: {
+      type: String,
+      default: null,
     },
-    warning: {
-      type: Boolean,
-      default: false,
-    },
-    danger: {
-      type: Boolean,
-      default: false,
-    },
-    info: {
-      type: Boolean,
-      default: false,
-    },
-    link: {
-      type: Boolean,
-      default: false,
-    },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    light: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
-    bottomLeft: {
-      type: Boolean,
-      default: false,
-    },
-    bottomRight: {
-      type: Boolean,
-      default: false,
-    },
-    bottomCenter: {
-      type: Boolean,
-      default: false,
-    },
-    topLeft: {
-      type: Boolean,
-      default: false,
-    },
-    topRight: {
-      type: Boolean,
-      default: false,
-    },
-    topCenter: {
-      type: Boolean,
-      default: true,
+    position: {
+      type: String,
+      default: null,
     },
     value: {
       type: Boolean,
@@ -106,28 +63,9 @@ export default {
   },
 
   computed: {
-    classes() {
-      return Object.assign(
-        this.layoutMixins,
-        this.animationsMixins,
-        {
-          snackbar: true,
-          'bottom-left': this.bottomLeft,
-          'bottom-right': this.bottomRight,
-          'bottom-center': this.bottomCenter,
-          'top-left': this.topLeft,
-          'top-right': this.topRight,
-          'top-center': this.topCenter,
-          'success-snackbar': this.success,
-          'warning-snackbar': this.warning,
-          'danger-snackbar': this.danger,
-          'info-snackbar': this.info,
-          'link-snackbar': this.link,
-          'primary-snackbar': this.primary,
-          'light-snackbar': this.light,
-          'dark-snackbar': this.dark,
-        },
-      );
+    getPosition() {
+      const chars = this.position.split(/(?=[A-Z])/);
+      return `${chars[0]}-${chars[1].toLowerCase()}`;
     },
   },
 };
