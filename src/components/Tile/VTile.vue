@@ -10,9 +10,13 @@
     :style="enableBoxShadow ? 'box-shadow: 0 3px 6px rgba(0,0,0,0.06)' +
       ', 0 3px 6px rgba(0,0,0,0.03); padding: 0.25rem 1rem' : null"
   >
-    <slot name="icon"></slot>
+    <div class="tile__icon">
+      <slot name="icon"></slot>
+    </div>
     <slot></slot>
-    <slot name="buttons"></slot>
+    <div class="tile__buttons">
+      <slot name="buttons"></slot>
+    </div>
   </div>
 </template>
 
