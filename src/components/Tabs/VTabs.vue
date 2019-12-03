@@ -1,9 +1,9 @@
 <template>
   <div :class="[
     'tab-container',
-    `tabs-${this.size}`,
-    `tabs-${this.mode}`,
-    `tabs-${this.position}`,
+    this.size ? `tabs-${this.size}` : null,
+    this.mode ? `tabs-${this.mode}` : null,
+    this.position ? `tabs-${this.position}` : null,
     {
       'dark': this.dark,
     },
