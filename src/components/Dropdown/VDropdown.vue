@@ -1,6 +1,15 @@
 <template>
   <div
-    :class="dropdownClasses"
+    :class="[
+      this.animationsMixins,
+      this.tooltipMixins,
+      'list-dropdown',
+      {
+        'dropdown-right': this.right,
+        'dropdown-left': this.left,
+        'dark': this.dark,
+      },
+    ]"
     :data-tooltip="tooltipData"
   >
     <slot name="button"></slot>
@@ -32,21 +41,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    dropdownClasses() {
-      return Object.assign(
-        this.animationsMixins,
-        this.tooltipMixins,
-        {
-          'list-dropdown': true,
-          'dropdown-right': this.right,
-          'dropdown-left': this.left,
-          dark: this.dark,
-        },
-      );
     },
   },
 };
