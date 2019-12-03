@@ -1,5 +1,11 @@
 <template>
-  <div :class="classes">
+  <div :class="[
+    'pagination',
+    {
+      'pagination-bordered': this.bordered,
+      'dark': this.dark,
+    },
+  ]">
     <slot></slot>
   </div>
 </template>
@@ -14,16 +20,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        pagination: true,
-        'pagination-bordered': this.bordered,
-        dark: this.dark,
-      };
     },
   },
 };

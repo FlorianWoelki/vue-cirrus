@@ -1,5 +1,10 @@
 <template>
-  <div :class="classes">
+  <div :class="[
+    'pagination-item short',
+    {
+      selected: this.selected,
+    },
+  ]">
     <a
       :disabled="disabled"
       :href="href"
@@ -30,15 +35,6 @@ export default {
   methods: {
     handleClick(event) {
       this.$emit('click', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'pagination-item short': true,
-        selected: this.selected,
-      };
     },
   },
 };
