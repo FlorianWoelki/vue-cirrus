@@ -1,11 +1,11 @@
 <template>
   <div :class="[
     'offset-center',
-    this.c !== null ? `col-${this.c}` : null,
-    this.o !== null ? `offset-${this.o}` : null,
-    this.dynamicOffset !== null ? `offset-${this.dynamicOffset}` : null,
-    this.w !== null ? `w-${this.w}` : null,
-    this.h !== null ? `h-${this.h}` : null,
+    this.c ? `col-${this.c}` : null,
+    this.o ? `offset-${this.o}` : null,
+    this.dynamicOffset ? `offset-${this.dynamicOffset}` : null,
+    this.w ? `w-${this.w}` : null,
+    this.h ? `h-${this.h}` : null,
     {
       'col': this.fluid,
       'no-space': this.noSpace,

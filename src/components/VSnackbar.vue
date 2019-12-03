@@ -4,8 +4,8 @@
     :class="[
       this.animationsMixins,
       'snackbar',
-      color !== null ? `${this.color}-snackbar` : null,
-      position !== null ? getPosition : null,
+      this.color ? `${this.color}-snackbar` : null,
+      this.position ? this.getPosition : null,
     ]"
   >
     <slot></slot>

@@ -1,7 +1,7 @@
 <template>
   <h1 :class="[
     this.animationsMixins,
-    `headline-${size}`,
+    this.size ? `headline-${this.size}` : null,
     {
       'uppercase': this.uppercase,
     },

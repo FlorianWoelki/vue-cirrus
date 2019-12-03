@@ -4,7 +4,7 @@
       this.tooltipMixins,
       this.animationsMixins,
       'toast',
-      `toast--${this.color}`,
+      this.color ? `toast--${this.color}` : null,
     ]"
     :data-tooltip="tooltipData"
   >
