@@ -1,38 +1,41 @@
 <template>
   <input
-    v-if=noControl
-    :data-tooltip=tooltipData
-    :type=type
-    :class=inputClasses
-    :placeholder=placeholder
+    v-if="noControl"
+    :data-tooltip="tooltipData"
+    :type="type"
+    :class="inputClasses"
+    :placeholder="placeholder"
     :value="value"
     @input="$emit('input', $event.target.value)"
   />
   <div
-    v-else-if=!select
-    :data-tooltip=tooltipData
+    v-else-if="!select"
+    :data-tooltip="tooltipData"
     class="input-control"
   >
     <label
-      v-if=title
+      v-if="title"
       :class="'font-normal' + (dark ? ' text-light' : '')"
     >{{title}}</label>
     <span
       v-if="subtitle"
-      :class=infoClasses
+      :class="[
+        'info',
+        this.subtitleInline ? 'inline' : null,
+      ]"
     >{{subtitle}}</span>
     <div :class="icon ? 'input-control' : ''">
       <input
-        :type=type
-        :class=inputClasses
-        :placeholder=placeholder
+        :type="type"
+        :class="inputClasses"
+        :placeholder="placeholder"
         :value="value"
         @input="$emit('input', $event.target.value)"
       />
       <slot></slot>
     </div>
     <span
-      v-if=infoText
+      v-if="infoText"
       class="info u-text-center"
     >{{infoText}}</span>
   </div>
@@ -41,8 +44,8 @@
     class="input-control"
   >
     <select
-      :class=inputClasses
-      :data-tooltip=tooltipData
+      :class="inputClasses"
+      :data-tooltip="tooltipData"
     >
       <slot></slot>
     </select>
@@ -112,21 +115,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    xsmall: {
-      type: Boolean,
-      default: false,
-    },
-    small: {
-      type: Boolean,
-      default: false,
-    },
-    large: {
-      type: Boolean,
-      default: false,
-    },
-    xlarge: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: null,
     },
     icon: {
       type: Boolean,
@@ -140,15 +131,12 @@ export default {
 
   computed: {
     inputClasses() {
-      return Object.assign(
+      return [
         this.animationsMixins,
         this.tooltipMixins,
+        this.size ? `input-${this.size}` : null,
         {
           select: this.select,
-          'input-xsmall': this.xsmall,
-          'input-small': this.small,
-          'input-large': this.large,
-          'input-xlarge': this.xlarge,
           'input-focused': this.focused,
           'text-success input-success': this.success,
           'text-danger input-error': this.error,
@@ -156,13 +144,7 @@ export default {
           'input-control--pilled': this.pilled,
           dark: this.dark,
         },
-      );
-    },
-    infoClasses() {
-      return {
-        info: true,
-        inline: this.subtitleInline,
-      };
+      ];
     },
   },
 };
