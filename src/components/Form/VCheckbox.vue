@@ -3,7 +3,13 @@
     <input
       type="checkbox"
       :id="id"
-      :class="classes"
+      :class="[
+        'form-ext-input',
+        {
+          'form-ext-input--success': this.success,
+          'form-ext-input--error': this.error,
+        },
+      ]"
       :checked="checked"
       @change="handleCheckboxChange"
     >
@@ -45,16 +51,6 @@ export default {
   methods: {
     handleCheckboxChange(event) {
       this.$emit('change', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'form-ext-input': true,
-        'form-ext-input--success': this.success,
-        'form-ext-input--error': this.error,
-      };
     },
   },
 };
