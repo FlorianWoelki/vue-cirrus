@@ -1,8 +1,13 @@
 <template>
-  <div v-if="!animated" :class="cardClasses">
-    <slot />
-  </div>
-  <div v-else :class="cardClasses">
+  <div :class="[
+    this.animationsMixins,
+    'card',
+    {
+      'slide-up': this.animated,
+      'u-flex u-flex-column h-100': this.equalHeight,
+      dark: this.dark,
+    },
+  ]">
     <slot />
   </div>
 </template>
@@ -33,20 +38,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    cardClasses() {
-      return Object.assign(
-        this.animationsMixins,
-        {
-          card: true,
-          'slide-up': this.animated,
-          'u-flex u-flex-column h-100': this.equalHeight,
-          dark: this.dark,
-        },
-      );
     },
   },
 };

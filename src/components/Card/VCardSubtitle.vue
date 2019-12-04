@@ -1,10 +1,7 @@
 <template>
-  <span v-if="!animated" class="subtitle">
+  <span :class="!animated ? 'subtitle' : 'tile__subtitle'">
     <slot />
   </span>
-  <p v-else class="tile__subtitle">
-    <slot />
-  </p>
 </template>
 
 <script>
