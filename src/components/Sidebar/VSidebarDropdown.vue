@@ -1,19 +1,29 @@
 <template>
-  <div class="sidebar-dropdown">
+  <div :class="[
+    'tree-item',
+    {
+      'hover-effect': this.$parent.hoverEffect,
+    },
+  ]">
     <input
+      id="sb-dropdown"
       type="checkbox"
-      id="mixins"
       class="u-hide"
-      name="mixinsTree"
+      name="sbTree"
       @click="handleClick"
     >
     <label
-      for="mixins"
+      for="sb-dropdown"
       class="tree-item-header"
+      style="margin-left:0;"
     >
       <span v-if="showArrow" style="font-size: 11px; color: gray">
-        <span v-if="!dropdownClicked">▶</span>
-        <span v-else>▼</span>
+        <span v-if="!dropdownClicked">
+          <i class="fas fa-chevron-right"></i>
+        </span>
+        <span v-else>
+          <i class="fas fa-chevron-down"></i>
+        </span>
       </span>
       {{ title }}
     </label>
