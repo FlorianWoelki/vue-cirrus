@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/Jwu0XrO.png" width="200"></p>
+<p align="center"><img src="https://i.imgur.com/OETMeDC.png" width="200"></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
