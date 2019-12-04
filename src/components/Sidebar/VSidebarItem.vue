@@ -1,15 +1,20 @@
 <template>
   <div
     v-if="!dropdown"
-    :class=classes
+    :class="[
+      'tree-item',
+      {
+        'hover-effect': this.$parent.hoverEffect,
+      },
+    ]"
   >
     <a
       class="sidebar-link"
-      :href=href
+      :href="href"
       @click="handleClick"
     >
       <label
-        :for=forId
+        :for="forId"
         class="tree-item-header"
       >
         <slot></slot>
@@ -19,7 +24,7 @@
   <div v-else>
     <li class="menu-item">
       <a
-        :href=href
+        :href="href"
         @click="handleClick"
       >
         <slot></slot>
@@ -48,15 +53,6 @@ export default {
   methods: {
     handleClick(event) {
       this.$emit('click', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'hover-effect': this.$parent.hoverEffect,
-        'tree-item': true,
-      };
     },
   },
 };

@@ -1,5 +1,10 @@
 <template>
-  <div :class="classes">
+  <div :class="[
+    'tree-nav-body',
+    {
+      'dark': this.dark,
+    },
+  ]">
     <div class="tree-nav-header">
       <a
         href="#sidebar"
@@ -30,15 +35,6 @@ export default {
 
   beforeCreate() {
     document.body.className = 'sidebar';
-  },
-
-  computed: {
-    classes() {
-      return {
-        'tree-nav-body': true,
-        dark: this.dark,
-      };
-    },
   },
 };
 </script>
