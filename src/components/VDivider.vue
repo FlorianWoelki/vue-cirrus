@@ -2,7 +2,6 @@
   <div :style="vertical ? { position: 'relative', height: '300px' } : null">
     <div
       :class="[
-        animationsMixins,
         {
           'divider': !vertical,
           'divider-short': short,
@@ -17,13 +16,7 @@
 </template>
 
 <script>
-import Animations from '@/mixins/animations';
-
 export default {
-  mixins: [
-    Animations,
-  ],
-
   props: {
     short: {
       type: Boolean,
