@@ -1,10 +1,20 @@
 <template>
   <div
-    :class=modalClasses
-    :id=mId
+    :class="[
+      'modal',
+      {
+        'modal-large': this.large,
+        'modal-small': this.small,
+        'modal-animated--zoom-in': this.zoomIn,
+        'modal-animated--zoom-out': this.zoomOut,
+        'modal-animated--dropdown': this.dropdown,
+        'dark': this.dark,
+      },
+    ]"
+    :id="mId"
   >
     <a
-      :href=closeTarget
+      :href="closeTarget"
       class="modal-overlay close-btn"
       aria-label="Close"
     ></a>
@@ -14,7 +24,7 @@
     >
       <div class="modal-header">
         <a
-          :href=closeTarget
+          :href="closeTarget"
           class="u-pull-right"
           aria-label="Close"
           style="font-size: 20px;"
@@ -64,22 +74,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    modalClasses() {
-      const modalClasses = {
-        modal: true,
-        'modal-large': this.large,
-        'modal-small': this.small,
-        'modal-animated--zoom-in': this.zoomIn,
-        'modal-animated--zoom-out': this.zoomOut,
-        'modal-animated--dropdown': this.dropdown,
-        dark: this.dark,
-      };
-
-      return modalClasses;
     },
   },
 };
