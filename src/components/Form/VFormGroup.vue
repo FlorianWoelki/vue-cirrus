@@ -12,17 +12,6 @@ export default {
     Animations,
   ],
 
-  computed: {
-    classes() {
-      return Object.assign(
-        this.animationsMixins,
-        {
-          'form-group': true,
-        },
-      );
-    },
-  },
-
   mounted() {
     const nodes = document.getElementsByClassName('form-group');
     for (let i = 0; i < nodes.length; i += 1) {
