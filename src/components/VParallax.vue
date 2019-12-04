@@ -1,15 +1,17 @@
 <template>
   <div
     id="splash-img"
-    :class="classes"
-    style="/*image.startsWith('http://') || image.startsWith('https://')
-      ? { background: `url(${image})` }
-      : { background: `url(${require(`@/assets/${image}`)})` }*/"
+    :class="[
+      'hero',
+      'hero-img',
+      {
+        'parallax-img': !this.disableParallax,
+        'fullscreen': this.fullscreen,
+      },
+    ]"
+    :style="styleImage"
   >
-    <div v-if="!customBody" id="hero-body" class="u-center">
-      <slot />
-    </div>
-    <slot v-else />
+    <slot></slot>
   </div>
 </template>
 
@@ -20,9 +22,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    image: {
+    src: {
       type: String,
-      default: '',
+      default: null,
     },
     fullscreen: {
       type: Boolean,
@@ -35,12 +37,9 @@ export default {
   },
 
   computed: {
-    classes() {
+    styleImage() {
       return {
-        hero: true,
-        'hero-img': true,
-        'parallax-img': !this.disableParallax,
-        fullscreen: this.fullscreen,
+        backgroundImage: `url(${this.src})`,
       };
     },
   },
