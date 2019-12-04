@@ -1,9 +1,15 @@
 <template>
   <textarea
-    :placeholder=placeholder
-    :data-tooltip=tooltipData
+    :placeholder="placeholder"
+    :data-tooltip="tooltipData"
     :disabled="disabled"
-    :class="classes"
+    :class="[
+      this.tooltipMixins,
+      this.animationsMixins,
+      {
+        'dark': this.dark,
+      },
+    ]"
   ></textarea>
 </template>
 
@@ -29,18 +35,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        {
-          dark: this.dark,
-        },
-        this.tooltipMixins,
-        this.animationsMixins,
-      );
     },
   },
 };
