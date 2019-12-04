@@ -2,7 +2,14 @@
   <div class="form-group">
     <input
       type="search"
-      :class="inputClasses"
+      :class="[
+        this.animationsMixins,
+        this.tooltipMixins,
+        'form-group-input',
+        {
+          'dark': this.dark,
+        },
+      ]"
       :data-tooltip="tooltipData"
       :placeholder="placeholder"
       :value="value"
@@ -49,19 +56,6 @@ export default {
     value: {
       type: String,
       default: '',
-    },
-  },
-
-  computed: {
-    inputClasses() {
-      return Object.assign(
-        this.animationsMixins,
-        this.tooltipMixins,
-        {
-          'form-group-input': true,
-          dark: this.dark,
-        },
-      );
     },
   },
 };
