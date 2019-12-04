@@ -1,14 +1,25 @@
 <template>
   <div
-    :class=dropdownClasses
-    :id=dropdownId
+    :class="[
+      'nav-item',
+      'has-sub',
+      {
+        'toggle-hover': !this.clickable,
+      },
+    ]"
+    :id="dropdownId"
     @click="handleDropdownClick"
   >
     <a class="nav-dropdown-link">
       <slot name="title"></slot>
     </a>
     <ul
-      :class=ulClasses
+      :class="[
+        'dropdown-menu',
+        {
+          'dropdown-animated': this.animated,
+        },
+      ]"
       :id="dropdownId + '-list'"
       role="menu"
     >
@@ -51,22 +62,6 @@ export default {
           hasClicked = false;
         }
       }
-    },
-  },
-
-  computed: {
-    dropdownClasses() {
-      return {
-        'nav-item': true,
-        'has-sub': true,
-        'toggle-hover': !this.clickable,
-      };
-    },
-    ulClasses() {
-      return {
-        'dropdown-menu': true,
-        'dropdown-animated': this.animated,
-      };
     },
   },
 };

@@ -1,11 +1,9 @@
 <template>
   <li
-    :class=classes
     role="menu-item"
-    :data-tooltip=tooltipData
   >
     <a
-      :href=href
+      :href="href"
       :target="blank ? '_blank' : ''"
     >
       <slot></slot>
@@ -14,13 +12,7 @@
 </template>
 
 <script>
-import Tooltip from '@/mixins/tooltip';
-
 export default {
-  mixins: [
-    Tooltip,
-  ],
-
   props: {
     blank: {
       type: Boolean,
@@ -29,14 +21,6 @@ export default {
     href: {
       type: String,
       default: '#',
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.tooltipMixins,
-      );
     },
   },
 };
