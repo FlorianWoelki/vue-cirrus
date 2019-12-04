@@ -1,10 +1,18 @@
 <template>
   <div
-    :class=classes
-    :data-tooltip=tooltipData
+    :class="[
+      this.tooltipMixins,
+      this.animationsMixins,
+      'nav-item',
+      {
+        active: this.active,
+        selected: this.selected,
+      },
+    ]"
+    :data-tooltip="tooltipData"
   >
     <a
-      :href=href
+      :href="href"
       @click="handleClick($event)"
       :target="blank ? '_blank' : ''"
     >
@@ -45,20 +53,6 @@ export default {
   methods: {
     handleClick(event) {
       this.$emit('click', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.tooltipMixins,
-        this.animationsMixins,
-        {
-          'nav-item': true,
-          active: this.active,
-          selected: this.selected,
-        },
-      );
     },
   },
 };
