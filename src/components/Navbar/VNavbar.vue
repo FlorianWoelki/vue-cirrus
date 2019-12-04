@@ -1,17 +1,22 @@
 <template>
-  <div :class=classes>
+  <div :class="[
+    'header',
+    {
+      'header-fixed': this.fixed,
+      'header-dark': this.dark,
+      'header-clear': this.clear,
+    },
+  ]">
     <div class="header-brand">
       <div
         class="nav-item no-hover"
       >
         <a :href="brandLink">
-          <h6 class="title">
-            <slot name="brandTitle"></slot>
-          </h6>
+          <slot name="brandTitle"></slot>
         </a>
       </div>
       <div
-        v-if=!disableMobileNavbar
+        v-if="!disableMobileNavbar"
         class="nav-item nav-btn"
         id="header-btn"
       >
@@ -34,7 +39,7 @@ export default {
   props: {
     brandLink: {
       type: String,
-      default: '!#',
+      default: '#!',
     },
     fixed: {
       type: Boolean,
@@ -70,17 +75,6 @@ export default {
         }
       });
     }
-  },
-
-  computed: {
-    classes() {
-      return {
-        header: true,
-        'header-fixed': this.fixed,
-        'header-dark': this.dark,
-        'header-clear': this.clear,
-      };
-    },
   },
 };
 </script>
