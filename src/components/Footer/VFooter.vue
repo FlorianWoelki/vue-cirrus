@@ -1,5 +1,5 @@
 <template>
-  <footer :class=classes>
+  <footer :class="fixed ? 'footer-fixed' : null">
     <h6
       v-if="title != ''"
       class="white uppercase"
@@ -26,14 +26,6 @@ export default {
     subtitle: {
       type: String,
       default: '',
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'footer-fixed': this.fixed,
-      };
     },
   },
 };
