@@ -2,7 +2,13 @@
   <div class="form-ext-control form-ext-radio">
     <input
       :id="id"
-      :class="classes"
+      :class="[
+        'form-ext-input',
+        {
+          'form-ext-input--success': this.success,
+          'form-ext-input--error': this.error,
+        },
+      ]"
       :name="name"
       type="radio"
       @change="handleRadioChange"
@@ -45,16 +51,6 @@ export default {
   methods: {
     handleRadioChange(event) {
       this.$emit('change', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'form-ext-input': true,
-        'form-ext-input--success': this.success,
-        'form-ext-input--error': this.error,
-      };
     },
   },
 };
