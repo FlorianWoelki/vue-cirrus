@@ -2,7 +2,13 @@
   <div class="form-ext-control">
     <label class="form-ext-toggle__label">
       <span><slot /></span>
-      <div :class="classes">
+      <div :class="[
+        'form-ext-toggle',
+        {
+          'form-ext-toggle--success': this.success,
+          'form-ext-toggle--error': this.error,
+        },
+      ]">
         <input
           :name="name"
           type="checkbox"
@@ -55,16 +61,6 @@ export default {
   methods: {
     handleToggleChange(event) {
       this.$emit('change', event);
-    },
-  },
-
-  computed: {
-    classes() {
-      return {
-        'form-ext-toggle': true,
-        'form-ext-toggle--success': this.success,
-        'form-ext-toggle--error': this.error,
-      };
     },
   },
 };
