@@ -68,4 +68,7 @@ export default {
   color: #f03d4d;
   background-color: #efefef;
 }
+.dark .tree-item.selected label {
+  background-color: #272727;
+}
 </style>
