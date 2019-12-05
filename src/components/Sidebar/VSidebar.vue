@@ -23,6 +23,7 @@
     <div
       id="sidebar"
       class="tree-nav"
+      :style="styleSidebar()"
     >
       <div class="content">
         <slot name="title"></slot>
@@ -44,6 +45,10 @@
 <script>
 export default {
   props: {
+    noPadding: {
+      type: Boolean,
+      default: false,
+    },
     hoverEffect: {
       type: Boolean,
       default: false,
@@ -56,6 +61,14 @@ export default {
 
   beforeCreate() {
     document.body.className = 'sidebar';
+  },
+
+  methods: {
+    styleSidebar() {
+      return {
+        padding: this.noPadding ? 0 : null,
+      };
+    },
   },
 };
 </script>
