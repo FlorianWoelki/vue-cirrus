@@ -90,6 +90,7 @@ body.sidebar {
   -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
+  color: #f03d4d;
   background-color: #efefef;
 }
 .dark #sidebar .hover-effect.tree-item:hover {
@@ -97,6 +98,7 @@ body.sidebar {
   -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
+  color: #f03d4d;
   background-color: #272727;
 }
 
