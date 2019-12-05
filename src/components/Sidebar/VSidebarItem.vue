@@ -5,6 +5,7 @@
       'tree-item',
       {
         'hover-effect': this.$parent.hoverEffect,
+        'selected': this.selected,
       },
     ]"
   >
@@ -48,6 +49,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    selected: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -57,3 +62,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.tree-item.selected label {
+  color: #f03d4d;
+  background-color: #efefef;
+}
+</style>

@@ -78,7 +78,6 @@ body.sidebar {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   background-color: #efefef;
-  border-radius: 5px;
 }
 .dark #sidebar .hover-effect.tree-item:hover {
   -moz-transition: all .2s ease-in;
@@ -86,7 +85,6 @@ body.sidebar {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   background-color: #272727;
-  border-radius: 5px;
 }
 
 #sidebar .sidebar-link {
