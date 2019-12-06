@@ -25,7 +25,7 @@
           Send me updates about Vue Cirrus Products and services.
         </v-checkbox>
       </div>
-      <v-btn primary center large>Send it!</v-btn>
+      <v-btn color="primary" class="u-center" size="large">Send it!</v-btn>
     </v-container>
   </div>
 </template>

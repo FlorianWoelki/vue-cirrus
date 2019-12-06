@@ -2,20 +2,20 @@
   <v-container>
     <div class="u-text-center">
       <h2>Pricing</h2>
-      <v-divider center short />
+      <v-divider class="u-center" short />
     </div>
 
     <v-space />
 
     <v-row>
-      <v-col c6>
+      <v-col c="6">
         <v-card>
           <v-card-title>
             <v-row>
-              <v-col c6>
+              <v-col c="6">
                 <p>Package 1</p>
               </v-col>
-              <v-col c6>
+              <v-col c="6">
                 <h4 class="u-pull-right">$15.99</h4>
               </v-col>
             </v-row>
@@ -30,20 +30,20 @@
             </ul>
           </v-card-content>
           <v-card-actions>
-            <v-row center>
-              <v-btn link outline>Sign up for free</v-btn>
+            <v-row class="u-center">
+              <v-btn color="link" outline>Sign up for free</v-btn>
             </v-row>
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col c6>
+      <v-col c="6">
         <v-card>
           <v-card-title>
             <v-row>
-              <v-col c6>
+              <v-col c="6">
                 <p>Package 2</p>
               </v-col>
-              <v-col c6>
+              <v-col c="6">
                 <h4 class="u-pull-right">$25.99</h4>
               </v-col>
             </v-row>
@@ -58,8 +58,8 @@
             </ul>
           </v-card-content>
           <v-card-actions>
-            <v-row center>
-              <v-btn link>Sign up and buy</v-btn>
+            <v-row class="u-center">
+              <v-btn color="link">Sign up and buy</v-btn>
             </v-row>
           </v-card-actions>
         </v-card>

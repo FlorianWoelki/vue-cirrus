@@ -9,18 +9,18 @@
             Unlimited possibilities. Unlimited components. Unlimited projects.
           </h6>
           <v-space />
-          <v-btn link center>Go for it</v-btn>
+          <v-btn color="link" class="u-center">Go for it</v-btn>
 
           <div class="bottom-area">
             <p class="u-uppercase">Trusted by the best companies out there!</p>
             <v-row>
-              <v-col c4>
+              <v-col c="4">
                 <h5>cirrus</h5>
               </v-col>
-              <v-col c4>
+              <v-col c="4">
                 <h5>vue</h5>
               </v-col>
-              <v-col c4>
+              <v-col c="4">
                 <h5>js</h5>
               </v-col>
             </v-row>

@@ -28,26 +28,26 @@
         <span class="icon"><i class="fas fa-wrapper fa-key"></i></span>
       </v-input-field>
       <v-row>
-        <v-col c6>
+        <v-col c="6">
           <v-checkbox>Remember Me</v-checkbox>
         </v-col>
-        <v-col c6>
-          <v-link pullRight>Forgot Password?</v-link>
+        <v-col c="6">
+          <v-link class="u-pull-right">Forgot Password?</v-link>
         </v-col>
       </v-row>
-      <v-row center>
+      <v-row class="u-center">
         <v-col>
           <v-btn
             id="login-btn"
             :disabled="disabled"
-            link
+            color="link"
             style="margin-right:12px;"
             @click="showFeedback"
           >Login</v-btn>
         </v-col>
       </v-row>
 
-      <v-row center>
+      <v-row class="u-center">
         <div id="feedback" style="visibility: hidden;">
           <p class="u-text-center">Entered Email: {{ email }}</p>
           <p class="u-text-center">Entered Password: {{ password }}</p>

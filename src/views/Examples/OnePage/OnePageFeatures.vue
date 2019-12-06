@@ -2,10 +2,10 @@
   <v-container>
     <div class="u-text-center">
       <h2>Features</h2>
-      <v-divider center short />
+      <v-divider class="u-center" short />
     </div>
-    <v-row style="margin-top:50px;">
-      <v-col textCenter c4>
+    <v-row>
+      <v-col class="u-text-center" c="4">
         <i class="fas fa-terminal fa-3x"></i>
         <h6>Easy to install</h6>
         <p class="font-light">
@@ -13,7 +13,7 @@
           It just takes under one minute to setup everything up for your upcoming project.
         </p>
       </v-col>
-      <v-col textCenter c4>
+      <v-col class="u-text-center" c="4">
         <i class="fas fa-feather fa-3x"></i>
         <h6>Really lightweight</h6>
         <p class="font-light">
@@ -21,7 +21,7 @@
           You can easily change the style or behaviour of these components.
         </p>
       </v-col>
-      <v-col textCenter c4>
+      <v-col class="u-text-center" c="4">
         <i class="fas fa-door-open fa-3x"></i>
         <h6>Open Source</h6>
         <p class="font-light">

@@ -16,14 +16,18 @@
     <v-card-actions>
       <v-row>
         <v-col c="6" class="u-center">
-          <v-btn color="primary" :href="href" blank>
-            <i class="fas fa-globe fa-lg"></i>
-          </v-btn>
+          <a :href="href" target="_blank" class="white">
+            <v-btn color="primary">
+                <i class="fas fa-globe fa-lg"></i>
+            </v-btn>
+          </a>
         </v-col>
         <v-col c="6" class="u-center">
-          <v-btn color="link" :href="github" blank>
-            <i class="fab fa-github fa-lg"></i>
-          </v-btn>
+          <a :href="github" target="_blank">
+            <v-btn color="link">
+              <i class="fab fa-github fa-lg"></i>
+            </v-btn>
+          </a>
         </v-col>
       </v-row>
     </v-card-actions>

@@ -1,6 +1,7 @@
 <template>
   <div id="one-page">
-    <v-navbar brandTitle="OnePage" dark fixed>
+    <v-navbar dark fixed>
+      <template v-slot:brandTitle><h6>One Page</h6></template>
       <div class="nav-right">
         <v-navbar-item selected>Features</v-navbar-item>
         <v-navbar-item>Pricing</v-navbar-item>
