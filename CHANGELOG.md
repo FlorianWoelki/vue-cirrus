@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.1] - 2019-12-10
+
+### ⚡️ Changed
+- Hotfix for sidebar content
+
+
 ## [0.5.0] - 2019-12-10
 
 ### 🔨 Added
