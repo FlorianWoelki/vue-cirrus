@@ -35,19 +35,19 @@
         </v-card>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Title ..."
             v-model="propsData.title"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Content ..."
             v-model="propsData.content"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Footer ..."
             v-model="propsData.footer"
