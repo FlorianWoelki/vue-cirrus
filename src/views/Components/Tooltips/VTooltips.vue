@@ -25,7 +25,7 @@
         <div class="u-center">
           <v-btn
             color="primary"
-            :tooltipText="propsData.text"
+            :tooltipText="propsData.tooltipText"
             :tooltipTopLeft="propsData.position === 'top left'"
             :tooltipTopRight="propsData.position === 'top right'"
             :tooltipBottom="propsData.position === 'bottom'"
@@ -40,7 +40,7 @@
         <v-col c="6" class="u-center">
           <v-input-field
             placeholder="Tooltip Text ..."
-            v-model="propsData.text"
+            v-model="propsData.tooltipText"
           ></v-input-field>
         </v-col>
         <v-col c="6" class="u-center">
