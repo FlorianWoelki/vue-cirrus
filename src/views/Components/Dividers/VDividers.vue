@@ -21,25 +21,24 @@
     >
       <template v-slot:component>
         <v-divider
-          center
           :short="propsData.short"
           :vertical="propsData.vertical"
           :content="propsData.content"
         ></v-divider>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-checkbox
             @change="() => { propsData.short = !propsData.short }"
           >Short</v-checkbox>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-checkbox
             id="vertical-divider"
             @change="() => { propsData.vertical = !propsData.vertical }"
           >Vertical</v-checkbox>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Vertical Content ..."
             v-model="propsData.content"
