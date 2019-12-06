@@ -1,19 +1,19 @@
 <template>
-  <v-row center class="btn-example-section">
-    <v-col c4>
-      <v-btn center animated small>Normal</v-btn>
-      <v-btn center animated primary small>Primary</v-btn>
-      <v-btn center animated success small>Success</v-btn>
+  <v-row class="btn-example-section">
+    <v-col c="4">
+      <v-btn class="u-center" animated size="small">Normal</v-btn>
+      <v-btn class="u-center" animated color="primary" size="small">Primary</v-btn>
+      <v-btn class="u-center" animated color="success" size="small">Success</v-btn>
     </v-col>
-    <v-col c4>
-      <v-btn center animated>Normal</v-btn>
-      <v-btn center animated primary>Primary</v-btn>
-      <v-btn center animated success>Success</v-btn>
+    <v-col c="4">
+      <v-btn class="u-center" animated>Normal</v-btn>
+      <v-btn class="u-center" animated color="primary">Primary</v-btn>
+      <v-btn class="u-center" animated color="success">Success</v-btn>
     </v-col>
-    <v-col c4>
-      <v-btn center animated large>Normal</v-btn>
-      <v-btn center animated primary large>Primary</v-btn>
-      <v-btn center animated success large>Success</v-btn>
+    <v-col c="4">
+      <v-btn class="u-center" animated size="large">Normal</v-btn>
+      <v-btn class="u-center" animated color="primary" size="large">Primary</v-btn>
+      <v-btn class="u-center" animated color="success" size="large">Success</v-btn>
     </v-col>
   </v-row>
 </template>
