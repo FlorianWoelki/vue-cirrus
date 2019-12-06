@@ -25,9 +25,11 @@
       </v-sidebar-dropdown>
     </v-sidebar-item>
     <div class="divider"></div>
-    <v-sidebar-content>
-      <slot></slot>
-    </v-sidebar-content>
+    <template v-slot:content>
+      <v-sidebar-content>
+        <slot></slot>
+      </v-sidebar-content>
+    </template>
   </v-sidebar>
 </template>
 
