@@ -1,52 +1,38 @@
 <template>
-  <v-sidebar :class="isDarkMode ? 'dark' : ''">
-    <v-sidebar-items hoverEffect>
-      <template slot:brandTitle>
-        <h5>Components</h5>
-        <v-space></v-space>
-      </template>
-      <v-sidebar-item
-        v-for="component in sortedComponentList"
-        :key=component
-        :href="'#/components/' + component"
-      >
-        {{component}}
-      </v-sidebar-item>
-      <div class="divider"></div>
-      <v-sidebar-item>
-        <v-sidebar-dropdown showArrow title="Mixins">
-          <v-sidebar-item
-            dropdown
-            href="#/components/Animations"
-          >Animations</v-sidebar-item>
-          <v-sidebar-item
-            dropdown
-            href="#/components/Tooltips"
-          >Tooltips</v-sidebar-item>
-        </v-sidebar-dropdown>
-      </v-sidebar-item>
-      <div class="divider"></div>
-      <v-sidebar-item href="#/components/Util">
-        Util
-      </v-sidebar-item>
-    </v-sidebar-items>
+  <v-sidebar hoverEffect>
+    <template slot:brandTitle>
+      <h5>Components</h5>
+      <v-space></v-space>
+    </template>
+    <v-sidebar-item
+      v-for="component in sortedComponentList"
+      :key=component
+      :href="'#/components/' + component"
+    >
+      {{component}}
+    </v-sidebar-item>
+    <div class="divider"></div>
+    <v-sidebar-item>
+      <v-sidebar-dropdown showArrow title="Mixins">
+        <v-sidebar-item
+          dropdown
+          href="#/components/Animations"
+        >Animations</v-sidebar-item>
+        <v-sidebar-item
+          dropdown
+          href="#/components/Tooltips"
+        >Tooltips</v-sidebar-item>
+      </v-sidebar-dropdown>
+    </v-sidebar-item>
+    <div class="divider"></div>
     <v-sidebar-content>
-      <!--<ChangeMode />-->
       <slot></slot>
     </v-sidebar-content>
   </v-sidebar>
 </template>
 
 <script>
-// import ChangeMode from '@/components/ChangeMode.vue';
-
 export default {
-  /*
-  components: {
-    ChangeMode,
-  },
-  */
-
   data() {
     return {
       components: ['Buttons', 'Cards', 'Frames', 'Grid', 'Headlines',
