@@ -32,12 +32,12 @@
         />
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
@@ -56,13 +56,13 @@
             >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Text ..."
             v-model="propsData.text"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Src (only link) ..."
             v-model="propsData.src"

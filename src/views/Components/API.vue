@@ -1,12 +1,12 @@
 <template>
   <div class="api">
-    <v-btn v-if="dropdownItems.length === 1" link>{{dropdownItems[0]}}</v-btn>
+    <v-btn v-if="dropdownItems.length === 1" color="link">{{dropdownItems[0]}}</v-btn>
     <v-dropdown v-else>
       <template v-slot:button>
-        <v-dropdown-btn link>
+        <v-btn dropdown color="link">
           {{ currentDropdownItem }}
           <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-        </v-dropdown-btn>
+        </v-btn>
       </template>
       <v-dropdown-item
         v-for="dropdownItem in dropdownItems"
@@ -24,21 +24,21 @@
       >
         <div class="api-prop" v-if="prop[0] === currentDropdownItem">
           <v-row>
-            <v-col c4>
+            <v-col c="4">
               <span class="u-no-margin prop-subtitle">Name</span>
               <p class="font-bold text-primary u-no-margin prop-title">{{prop[1]}}</p>
             </v-col>
-            <v-col c4>
+            <v-col c="4">
               <span class="u-no-margin prop-subtitle">Type</span>
               <p class="font-bold u-no-margin prop-title">{{prop[2]}}</p>
             </v-col>
-            <v-col c4>
+            <v-col c="4">
               <span class="u-no-margin prop-subtitle">Default</span>
               <p class="font-bold u-no-margin prop-title">{{prop[3]}}</p>
             </v-col>
           </v-row>
           <v-row class="prop-description">
-            <v-col c12>
+            <v-col c="12">
               <span class="u-no-margin prop-subtitle">Description</span>
               <p class="u-no-margin prop-title">{{prop[4]}}</p>
             </v-col>

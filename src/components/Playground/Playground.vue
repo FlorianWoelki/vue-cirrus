@@ -6,7 +6,7 @@
     </div>
 
     <div class="playground-card">
-      <v-tabs fill style="margin-bottom: 25px; margin-top: 5px;">
+      <v-tabs mode="fill" style="margin-bottom: 25px; margin-top: 5px;">
         <v-tab
           :href="href"
           :selected="!codeSelected"

@@ -1,15 +1,15 @@
 <template>
   <v-row center class="avatar-example-size">
-    <v-col c3>
+    <v-col c="3">
       <v-avatar xsmall src="https://randomuser.me/api/portraits/men/30.jpg" />
     </v-col>
-    <v-col c3>
+    <v-col c="3">
       <v-avatar small src="https://randomuser.me/api/portraits/men/30.jpg" />
     </v-col>
-    <v-col c3>
+    <v-col c="3">
       <v-avatar large src="https://randomuser.me/api/portraits/men/30.jpg" />
     </v-col>
-    <v-col c3>
+    <v-col c="3">
       <v-avatar xlarge src="https://randomuser.me/api/portraits/men/30.jpg" />
     </v-col>
   </v-row>
