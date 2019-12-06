@@ -2,8 +2,8 @@
   <v-navbar
     dark
     :fixed=fixed
-    brandTitle="Vue Cirrus"
   >
+    <template v-slot:brandTitle><h6>Vue Cirrus</h6></template>
     <div class="nav-left">
       <v-navbar-item href="https://github.com/FlorianWoelki/vue-cirrus" blank>
         <i class="nav-icon fab fa-github fa-lg"></i>

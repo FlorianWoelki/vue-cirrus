@@ -1,6 +1,6 @@
 <template>
   <v-footer class="footer-section" title="© 2019 Vue Cirrus">
-    <v-divider short center style="margin-top: 25px; margin-bottom: 25px;" />
+    <v-divider short class="u-center"/>
 
     <p>
       Code is licensed with
@@ -23,8 +23,8 @@
 
     <v-container>
       <v-row class="component-examples">
-        <v-col v-for="i in 4" :key="i" c3>
-          <v-row center v-for="j in 4" :key="j">
+        <v-col v-for="i in 4" :key="i" c="3">
+          <v-row class="u-center" v-for="j in 4" :key="j">
             <v-link href="#/components/Avatars">
               {{ components[(i - 1) * 4 + (j - 1)] }}
             </v-link>

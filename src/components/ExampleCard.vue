@@ -4,7 +4,7 @@
       <v-card-title>{{ title }}</v-card-title>
       <v-card-subtitle>
         <v-tag-container>
-          <v-tag info v-for="tag in getTagsAsString" :key="tag">{{ tag }}</v-tag>
+          <v-tag color="info" v-for="tag in getTagsAsString" :key="tag">{{ tag }}</v-tag>
         </v-tag-container>
       </v-card-subtitle>
     </v-card-image>
@@ -14,14 +14,14 @@
     </v-card-content>
 
     <v-card-actions>
-      <v-row center>
-        <v-col c6 center>
-          <v-btn primary :href="href" blank>
+      <v-row>
+        <v-col c="6" class="u-center">
+          <v-btn color="primary" :href="href" blank>
             <i class="fas fa-globe fa-lg"></i>
           </v-btn>
         </v-col>
-        <v-col c6 center>
-          <v-btn link :href="github" blank>
+        <v-col c="6" class="u-center">
+          <v-btn color="link" :href="github" blank>
             <i class="fab fa-github fa-lg"></i>
           </v-btn>
         </v-col>

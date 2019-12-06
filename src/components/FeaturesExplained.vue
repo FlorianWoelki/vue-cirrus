@@ -6,9 +6,9 @@
           <div class="card u-center">
             <v-container>
               <h3 class="u-text-center" style="margin-top:25px;">Why Vue Cirrus?</h3>
-              <v-divider center short />
-              <v-row style="margin-top:50px;">
-                <v-col textCenter c4>
+              <v-divider short class="u-center" />
+              <v-row class="u-text-center">
+                <v-col c="4">
                   <i class="fas fa-terminal fa-3x"></i>
                   <h6>Easy to install</h6>
                   <p class="font-light">
@@ -16,7 +16,7 @@
                     It just takes under one minute to setup everything up for your upcoming project.
                   </p>
                 </v-col>
-                <v-col textCenter c4>
+                <v-col textCenter c="4">
                   <i class="fas fa-feather fa-3x"></i>
                   <h6>Really lightweight</h6>
                   <p class="font-light">
@@ -24,7 +24,7 @@
                     You can easily change the style or behaviour of these components.
                   </p>
                 </v-col>
-                <v-col textCenter c4>
+                <v-col textCenter c="4">
                   <i class="fas fa-door-open fa-3x"></i>
                   <h6>Open Source</h6>
                   <p class="font-light">

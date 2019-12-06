@@ -10,7 +10,7 @@
     <v-space />
 
     <v-row>
-      <v-col c4>
+      <v-col c="4">
         <ExampleCard
           title="Login Page"
           subtitleTags="Forms,Layout,Buttons"
@@ -20,7 +20,7 @@
           href="#/examples/loginPage"
         />
       </v-col>
-      <v-col c4>
+      <v-col c="4">
         <ExampleCard
           title="One Page"
           subtitleTags="Layout,NavBar"
@@ -30,7 +30,7 @@
           href="#/examples/onePage"
         />
       </v-col>
-      <v-col c4>
+      <v-col c="4">
         <ExampleCard
           title="Contact Page"
           subtitleTags="Forms,Layout,Animations"
