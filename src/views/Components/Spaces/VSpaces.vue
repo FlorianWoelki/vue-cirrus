@@ -28,13 +28,13 @@
         </div>
       </template>
       <v-row>
-        <v-col center c6>
+        <v-col class="u-center" c="6">
           <v-checkbox
             id="large-space"
             @change="() => { propsData.large = !propsData.large }"
           >Large</v-checkbox>
         </v-col>
-        <v-col center c6>
+        <v-col class="u-center" c="6">
           <v-checkbox
             @change="() => { propsData.xlarge = !propsData.xlarge }"
           >xLarge</v-checkbox>

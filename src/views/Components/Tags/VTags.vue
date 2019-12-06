@@ -24,21 +24,13 @@
           <v-tag
             :closable="propsData.closable"
             :rounded="propsData.rounded"
-            :large="propsData.size === 'large'"
-            :xlarge="propsData.size === 'xlarge'"
-            :white="propsData.color === 'white'"
-            :black="propsData.color === 'black'"
-            :primary="propsData.color === 'primary'"
-            :link="propsData.color === 'link'"
-            :info="propsData.color === 'info'"
-            :success="propsData.color === 'success'"
-            :warning="propsData.color === 'warning'"
-            :danger="propsData.color === 'danger'"
+            :size="propsData.size"
+            :color="propsData.color"
           >Customize Me</v-tag>
         </div>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-checkbox
             @change="() => { propsData.closable = !propsData.closable }"
           >Closable</v-checkbox>
@@ -47,12 +39,12 @@
             @change="() => { propsData.rounded = !propsData.rounded }"
           >Rounded</v-checkbox>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.size = '' }"
@@ -65,12 +57,12 @@
             >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.color = '' }"

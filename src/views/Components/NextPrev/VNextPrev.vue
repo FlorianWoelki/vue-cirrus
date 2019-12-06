@@ -31,25 +31,25 @@
         </v-next-prev>
       </template>
       <v-row>
-        <v-col center c3>
+        <v-col class="u-center" c="3">
           <v-input-field
             placeholder="Previous Title ..."
             v-model="propsData.previousTitle"
           ></v-input-field>
         </v-col>
-        <v-col center c3>
+        <v-col class="u-center" c="3">
           <v-input-field
             placeholder="Previous Text ..."
             v-model="propsData.previousText"
           ></v-input-field>
         </v-col>
-        <v-col center c3>
+        <v-col class="u-center" c="3">
           <v-input-field
             placeholder="Next Title ..."
             v-model="propsData.nextTitle"
           ></v-input-field>
         </v-col>
-        <v-col center c3>
+        <v-col class="u-center" c="3">
           <v-input-field
             placeholder="Next Text ..."
             v-model="propsData.nextText"

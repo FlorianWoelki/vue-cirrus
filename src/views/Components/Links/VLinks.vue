@@ -39,9 +39,9 @@
         <v-col center c12>
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Animation <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.animation = 'ltr' }"

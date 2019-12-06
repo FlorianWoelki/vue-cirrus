@@ -24,8 +24,8 @@
       <template v-slot:component>
         <div class="u-center">
           <v-btn
-            primary
-            :tooltipText="propsData.tooltipText"
+            color="primary"
+            :tooltipText="propsData.text"
             :tooltipTopLeft="propsData.position === 'top left'"
             :tooltipTopRight="propsData.position === 'top right'"
             :tooltipBottom="propsData.position === 'bottom'"
@@ -37,37 +37,37 @@
         </div>
       </template>
       <v-row>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-input-field
             placeholder="Tooltip Text ..."
             v-model="propsData.text"
           ></v-input-field>
         </v-col>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Position <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
             >Top</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Top Left</v-dropdown-item>
+            >TopLeft</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Top Right</v-dropdown-item>
+            >TopRight</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
             >Bottom</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Bottom Left</v-dropdown-item>
+            >BottomLeft</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Bottom Right</v-dropdown-item>
+            >BottomRight</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
             >Left</v-dropdown-item>

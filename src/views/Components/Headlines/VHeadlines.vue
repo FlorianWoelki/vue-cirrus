@@ -23,43 +23,40 @@
       <template v-slot:component>
         <v-headline
           class="u-text-center"
-          :h1="propsData.h1"
-          :h2="propsData.h2"
-          :h3="propsData.h3"
-          :h4="propsData.h4"
+          :size="propsData.size"
           :uppercase="propsData.uppercase"
         >
           Customize Me
         </v-headline>
       </template>
       <v-row>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-checkbox
             @change="() => { propsData.uppercase = !propsData.uppercase }"
           >Uppercase</v-checkbox>
         </v-col>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.size = '' }"
             >Normal</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
-            >H1</v-dropdown-item>
+            >1</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
-            >H2</v-dropdown-item>
+            >2</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
-            >H3</v-dropdown-item>
+            >3</v-dropdown-item>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
-            >H4</v-dropdown-item>
+            >4</v-dropdown-item>
           </v-dropdown>
         </v-col>
       </v-row>

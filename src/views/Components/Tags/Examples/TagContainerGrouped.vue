@@ -1,24 +1,24 @@
 <template>
-  <v-row center class="tag-example-section">
-    <v-col center c4>
+  <v-row class="tag-example-section">
+    <v-col class="u-center" c="4">
       <v-tag-container grouped>
-        <v-tag link>Normal Tag</v-tag>
-        <v-tag primary>White Tag</v-tag>
-        <v-tag black>Black Tag</v-tag>
+        <v-tag color="link">Normal Tag</v-tag>
+        <v-tag color="primary">White Tag</v-tag>
+        <v-tag color="black">Black Tag</v-tag>
       </v-tag-container>
     </v-col>
-    <v-col center c4>
+    <v-col class="u-center" c="4">
       <v-tag-container grouped>
-        <v-tag large link>Normal Tag</v-tag>
-        <v-tag large primary>White Tag</v-tag>
-        <v-tag large black>Black Tag</v-tag>
+        <v-tag size="large" color="link">Normal Tag</v-tag>
+        <v-tag size="large" color="primary">White Tag</v-tag>
+        <v-tag size="large" color="black">Black Tag</v-tag>
       </v-tag-container>
     </v-col>
-    <v-col center c4>
+    <v-col class="u-center" c="4">
       <v-tag-container grouped>
-        <v-tag xlarge link>Normal Tag</v-tag>
-        <v-tag xlarge primary>White Tag</v-tag>
-        <v-tag xlarge black>Black Tag</v-tag>
+        <v-tag size="xlarge" color="link">Normal Tag</v-tag>
+        <v-tag size="xlarge" color="primary">White Tag</v-tag>
+        <v-tag size="xlarge" color="black">Black Tag</v-tag>
       </v-tag-container>
     </v-col>
   </v-row>

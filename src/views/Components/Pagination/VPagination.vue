@@ -34,7 +34,7 @@
         </div>
       </template>
       <v-row>
-        <v-col center c12>
+        <v-col class="u-center" c="12">
           <v-checkbox
             @change="() => { propsData.bordered = !propsData.bordered }"
           >Bordered Pagination</v-checkbox>

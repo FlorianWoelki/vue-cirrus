@@ -22,15 +22,9 @@
     >
       <template v-slot:component>
         <v-tabs
-          :xsmall="propsData.size === 'xsmall'"
-          :small="propsData.size === 'small'"
-          :large="propsData.size === 'large'"
-          :xlarge="propsData.size === 'xlarge'"
-          :center="propsData.position === 'center'"
-          :right="propsData.position === 'right'"
-          :fill="propsData.style === 'fill'"
-          :depth="propsData.style === 'depth'"
-          :classic="propsData.style === 'classic'"
+          :size="propsData.size"
+          :position="propsData.position"
+          :mode="propsData.mode"
         >
           <v-tab href="/#/components/Tabs/#!">Tab 1</v-tab>
           <v-tab href="/#/components/Tabs/#!">Tab 2</v-tab>
@@ -38,33 +32,33 @@
         </v-tabs>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Style <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
-              @click="(event) => { propsData.style = '' }"
+              @click="(event) => { propsData.mode = '' }"
             >Normal</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.mode = event.srcElement.innerHTML.toLowerCase() }"
             >Fill</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.mode = event.srcElement.innerHTML.toLowerCase() }"
             >Depth</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.style = event.srcElement.innerHTML.toLowerCase() }"
+              @click="(event) => { propsData.mode = event.srcElement.innerHTML.toLowerCase() }"
             >Classic</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Size <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.size = event.srcElement.innerHTML.toLowerCase() }"
@@ -83,7 +77,7 @@
             >xLarge</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-radio-btn
             id="left"
             @change="(event) => { propsData.position = '' }"
@@ -125,7 +119,7 @@ export default {
       propsData: {
         size: '',
         position: '',
-        style: '',
+        mode: '',
       },
       props: [
         ['v-tabs', 'xsmall', 'boolean', 'false', 'Set the tabs size to xsmall.'],

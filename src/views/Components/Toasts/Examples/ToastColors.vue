@@ -1,16 +1,16 @@
 <template>
-  <v-row center class="toast-example-section">
-    <v-col c4>
-      <v-toast primary>Primary Color</v-toast>
-      <v-toast success>Success Color</v-toast>
+  <v-row class="u-center toast-example-section">
+    <v-col c="4">
+      <v-toast color="primary">Primary Color</v-toast>
+      <v-toast color="success">Success Color</v-toast>
     </v-col>
-    <v-col c4>
-      <v-toast warning>Normal Color</v-toast>
-      <v-toast info>Primary Color</v-toast>
+    <v-col c="4">
+      <v-toast color="warning">Normal Color</v-toast>
+      <v-toast color="info">Primary Color</v-toast>
     </v-col>
-    <v-col c4>
-      <v-toast error>Normal Color</v-toast>
-      <v-toast link>Success Color</v-toast>
+    <v-col c="4">
+      <v-toast color="error">Normal Color</v-toast>
+      <v-toast color="link">Success Color</v-toast>
     </v-col>
   </v-row>
 </template>

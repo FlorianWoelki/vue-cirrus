@@ -22,19 +22,19 @@
     >
       <template v-slot:component>
         <v-tile :enableBoxShadow="propsData.enableBoxShadow">
-          <v-tile-icon>
+          <template v-slot:icon>
             <v-avatar text="FW"></v-avatar>
-          </v-tile-icon>
+          </template>
           <v-tile-content
             :title="propsData.title"
             :subtitle="propsData.subtitle"
             :info="propsData.info"
           >
           </v-tile-content>
-          <v-tile-buttons>
+          <template v-slot:buttons>
             <v-btn primary small>View</v-btn>
             <v-btn small>Dismiss</v-btn>
-          </v-tile-buttons>
+          </template>
         </v-tile>
       </template>
       <v-row>

@@ -24,32 +24,27 @@
           disableCloseFunction
           :title="propsData.title"
           :closable="propsData.closable"
-          :primary="propsData.color === 'primary'"
-          :success="propsData.color === 'success'"
-          :warning="propsData.color === 'warning'"
-          :error="propsData.color === 'error'"
-          :info="propsData.color === 'info'"
-          :link="propsData.color === 'link'"
+          :color="propsData.color"
         >Customize Me</v-toast>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Title ..."
             v-model="propsData.title"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-checkbox
             @change="() => { propsData.closable = !propsData.closable }"
           >Closable</v-checkbox>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.color = '' }"

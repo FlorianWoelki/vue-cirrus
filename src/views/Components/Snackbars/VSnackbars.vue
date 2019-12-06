@@ -21,32 +21,20 @@
       :componentProps="propsData"
     >
       <template v-slot:component>
-        <v-btn center @click="() => { snackbar = !snackbar; }">Show</v-btn>
+        <v-btn class="u-center" @click="() => { snackbar = !snackbar; }">Show</v-btn>
         <v-snackbar
           v-model="snackbar"
-          :primary="propsData.color === 'primary'"
-          :success="propsData.color === 'success'"
-          :warning="propsData.color === 'warning'"
-          :light="propsData.color === 'light'"
-          :dark="propsData.color === 'dark'"
-          :danger="propsData.color === 'danger'"
-          :info="propsData.color === 'info'"
-          :link="propsData.color === 'link'"
-          :bottomLeft="propsData.position === 'bottomLeft'"
-          :bottomRight="propsData.position === 'bottomRight'"
-          :bottomCenter="propsData.position === 'bottomCenter'"
-          :topLeft="propsData.position === 'topLeft'"
-          :topRight="propsData.position === 'topRight'"
-          :topCenter="propsData.position === 'topCenter'"
+          :color="propsData.color"
+          :position="propsData.position"
         >Customize Me</v-snackbar>
       </template>
       <v-row>
         <v-col c6 center>
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Position <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.position = 'topCenter' }"
@@ -71,9 +59,9 @@
         <v-col c6 center>
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Color <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.color = '' }"

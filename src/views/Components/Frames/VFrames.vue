@@ -22,47 +22,46 @@
     >
       <template v-slot:component>
         <v-frame :height="propsData.height">
-          <v-frame-header textCenter>
-            <v-avatar text="FW"></v-avatar>
-            <v-frame-title>Florian Woelki</v-frame-title>
-            <v-frame-subtitle>Creator</v-frame-subtitle>
-          </v-frame-header>
+          <template v-slot:header>
+            <v-avatar class="u-text-center" text="FW"></v-avatar>
+          </template>
+          <template v-slot:title><div class="u-text-center">Florian Woelki</div></template>
+          <template v-slot:subtitle>
+            <div class="u-text-center">Creator</div>
+            <v-divider class="u-no-margin"></v-divider>
+          </template>
 
-          <v-divider noMargin></v-divider>
+          <v-container class="u-no-padding">
+            <p class="u-text-center">
+              {{ propsData.content }}
+            </p>
+          </v-container>
 
-          <v-frame-body>
-            <v-container noPadding>
-              <p class="u-text-center">
-                {{ propsData.content }}
-              </p>
-            </v-container>
-          </v-frame-body>
+          <v-divider class="u-no-margin" />
 
-          <v-divider noMargin />
-
-          <v-frame-footer>
-            <v-frame-subtitle textCenter>
+          <template v-slot:footer>
+            <div class="u-text-center">
               <i>
                 {{ propsData.footer }}
               </i>
-            </v-frame-subtitle>
-          </v-frame-footer>
+            </div>
+          </template>
         </v-frame>
       </template>
       <v-row>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Height ..."
             v-model="propsData.height"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Content ..."
             v-model="propsData.content"
           ></v-input-field>
         </v-col>
-        <v-col c4 center>
+        <v-col c="4" class="u-center">
           <v-input-field
             placeholder="Footer ..."
             v-model="propsData.footer"
@@ -108,31 +107,30 @@ export default {
     customCode() {
       return `
 <v-frame height="${this.propsData.height}">
-  <v-frame-header textCenter>
-    <v-avatar text="FW"></v-avatar>
-    <v-frame-title>Florian Woelki</v-frame-title>
-    <v-frame-subtitle>Creator</v-frame-subtitle>
-  </v-frame-header>
+  <template v-slot:header>
+    <v-avatar class="u-text-center" text="FW"></v-avatar>
+  </template>
+  <template v-slot:title><div class="u-text-center">Florian Woelki</div></template>
+  <template v-slot:subtitle>
+    <div class="u-text-center">Creator</div>
+    <v-divider class="u-no-margin"></v-divider>
+  </template>
 
-  <v-divider noMargin></v-divider>
+  <v-container class="u-no-padding">
+    <p class="u-text-center">
+      ${this.propsData.content}
+    </p>
+  </v-container>
 
-  <v-frame-body>
-    <v-container noPadding>
-      <p class="u-text-center">
-        ${this.propsData.content}
-      </p>
-    </v-container>
-  </v-frame-body>
+  <v-divider class="u-no-margin" />
 
-  <v-divider noMargin />
-
-  <v-frame-footer>
-    <v-frame-subtitle textCenter>
+  <template v-slot:footer>
+    <div class="u-text-center">
       <i>
         ${this.propsData.footer}
       </i>
-    </v-frame-subtitle>
-  </v-frame-footer>
+    </div>
+  </template>
 </v-frame>
 `;
     },
