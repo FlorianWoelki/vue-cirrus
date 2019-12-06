@@ -1,11 +1,11 @@
 <template>
-  <v-row center class="code-example-section">
-    <v-col c4>
+  <v-row class="code-example-section">
+    <v-col c="4">
       <v-code lang="HTML" copyable>
         <xmp v-html="htmlCodeExample"></xmp>
       </v-code>
     </v-col>
-    <v-col c4>
+    <v-col c="4">
       <v-code lang="JavaScript" copyable>
 var testVar = 34;
 let testLet = 34;
@@ -13,7 +13,7 @@ const testConst = 34;
 if (testLet === 34) console.log(1);
       </v-code>
     </v-col>
-    <v-col c4>
+    <v-col c="4">
       <v-code lang="CSS" copyable>
 h1 {
   display: none;
