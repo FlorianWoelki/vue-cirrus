@@ -20,8 +20,8 @@
     >
       <template v-slot:component>
         <v-btn
-          center
-          primary
+          class="u-center"
+          color="primary"
           :pulse="propsData.animation === 'pulse'"
           :fadeIn="propsData.animation === 'fadeIn'"
           :bounceIn="propsData.animation === 'bounceIn'"
@@ -33,12 +33,12 @@
         >Customize Me</v-btn>
       </template>
       <v-row>
-        <v-col c12 center>
+        <v-col c="12" class="u-center">
           <v-dropdown>
             <template v-slot:button>
-              <v-dropdown-btn>
+              <v-btn dropdown>
                 Animation <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
-              </v-dropdown-btn>
+              </v-btn>
             </template>
             <v-dropdown-item
               @click="(event) => { propsData.animation = 'fadeIn' }"
