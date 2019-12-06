@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2019-12-10
+
+### 🔨 Added
+- Added menu component
+- Added single import functionality for each component
+- Added new logo
+
+### ⚡️ Changed
+- Optimize all components
+
+
 ## [0.4.0] - 2019-12-01
 
 ### 🔨 Added
@@ -455,3 +466,4 @@ All notable changes to this project will be documented in this file.
 [0.3.0]: https://www.npmjs.com/package/vue-cirrus/v/0.3.0
 [0.3.1]: https://www.npmjs.com/package/vue-cirrus/v/0.3.1
 [0.4.0]: https://www.npmjs.com/package/vue-cirrus/v/0.4.0
+[0.5.0]: https://www.npmjs.com/package/vue-cirrus/v/0.5.0

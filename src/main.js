@@ -1,6 +1,3 @@
-import VueJs from 'vue';
-import App from './App.vue';
-
 const install = (Vue) => {
   const requireComponent = require.context('./components', true, /V[\w-]+.vue$/);
 
@@ -20,12 +17,6 @@ const install = (Vue) => {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
-
-install(VueJs);
-
-new VueJs({
-  render: h => h(App),
-}).$mount('#app');
 
 export default install;
 
