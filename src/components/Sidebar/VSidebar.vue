@@ -39,6 +39,7 @@
       id="sidebar-close"
       class="tree-nav-close"
     ></a>
+    <slot name="content"></slot>
   </div>
 </template>
 
