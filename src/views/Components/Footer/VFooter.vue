@@ -1,67 +1,102 @@
 <template>
   <section class="footer-component">
-    <h5>Footer</h5>
-    <p>
-      There are many styles for footers!
-      More styles can be found <a href="https://spiderpig86.github.io/Cirrus/docs/footer/">here</a>
+    <p class="no-upper-margin">
+      You can use the <kbd>v-footer</kbd> component to create simple but really
+      beautiful footer for your page.
     </p>
-
-    <v-row>
-      <v-col c6>
-        <v-code
-          lang="Vue"
-          style="margin-top: 125px;"
-        >
-          <xmp v-html="code"></xmp>
-        </v-code>
-      </v-col>
-      <v-col
-        center
-        c6
-      >
-        <v-footer
-          title="Company"
-          subtitle="Awesome company footer"
-        >
-          <h1>Some awesome footerrish.</h1>
-        </v-footer>
-      </v-col>
-    </v-row>
 
     <v-space xlarge />
 
-    <h6>API (props)</h6>
-    <API :data="props" />
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      Default dividers are horizontal and long.
+    </p>
 
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/Footer/#!"
+      component="v-footer"
+      :customCode="customCode"
+      :componentProps="propsData"
+      disableMessage
+    >
+      <template v-slot:component>
+        <v-footer style="margin-top: 0" title="v-footer" subtitle="Awesome footer component">
+          <v-row>
+            <v-col c="6">
+              <v-footer-list>
+                <v-footer-list-item title>About Us</v-footer-list-item>
+                <v-footer-list-item>Facebook</v-footer-list-item>
+                <v-footer-list-item>Instagram</v-footer-list-item>
+                <v-footer-list-item>WhatsApp</v-footer-list-item>
+              </v-footer-list>
+            </v-col>
+            <v-col c="6">
+              <v-footer-list>
+                <v-footer-list-item title>Misc</v-footer-list-item>
+                <v-footer-list-item>Contact Us</v-footer-list-item>
+                <v-footer-list-item>What is this?</v-footer-list-item>
+                <v-footer-list-item>Can you help me?</v-footer-list-item>
+              </v-footer-list>
+            </v-col>
+          </v-row>
+        </v-footer>
+      </template>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-footer', 'v-footer-list-item']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
-import API from '@/views/Components/API.vue';
+import API from '../API.vue';
+import Playground from '@/components/Playground/Playground.vue';
 
 export default {
   components: {
     API,
+    Playground,
   },
 
   data() {
     return {
-      code: `<v-footer
-  title="Company"
-  subtitle="Awesome company footer"
->
-  <h1>Some awesome footerrish.</h1>
-</v-footer>`,
-      props: {
-        fixed: ['fixed', 'false', 'Boolean', 'If footer is fixed on the bottom'],
-        title: ['title', 'empty', 'String', 'Title for the footer'],
-        subtitle: ['subtitle', 'empty', 'String', 'Subtitle for the footer'],
-      },
+      customCode: `
+<v-footer style="margin-top: 0" title="v-footer" subtitle="Awesome footer component">
+  <v-row>
+    <v-col c="6">
+      <v-footer-list>
+        <v-footer-list-item title>About Us</v-footer-list-item>
+        <v-footer-list-item>Facebook</v-footer-list-item>
+        <v-footer-list-item>Instagram</v-footer-list-item>
+        <v-footer-list-item>WhatsApp</v-footer-list-item>
+      </v-footer-list>
+    </v-col>
+    <v-col c="6">
+      <v-footer-list>
+        <v-footer-list-item title>Misc</v-footer-list-item>
+        <v-footer-list-item>Contact Us</v-footer-list-item>
+        <v-footer-list-item>What is this?</v-footer-list-item>
+        <v-footer-list-item>Can you help me?</v-footer-list-item>
+      </v-footer-list>
+    </v-col>
+  </v-row>
+</v-footer>
+`,
+      props: [
+        ['v-footer', 'fixed', 'boolean', 'false', 'Make the footer fixed on the bottom of the page.'],
+        ['v-footer', 'title', 'string', 'empty', 'Set the title for the v-footer component.'],
+        ['v-footer', 'subtitle', 'string', 'empty', 'Set the subtitle for the v-footer component.'],
+        ['v-footer-list-item', 'title', 'boolean', 'false', 'Set the list item to a non clickable title.'],
+        ['v-footer-list-item', 'href', 'string', '#', 'Set the href for footer item, if it is no title.'],
+        ['v-footer-list-item', 'blank', 'boolean', 'false', 'When set to true, the link of the item will open in a new tab.'],
+      ],
     };
   },
 };
