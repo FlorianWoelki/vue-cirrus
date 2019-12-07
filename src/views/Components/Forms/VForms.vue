@@ -1,70 +1,11 @@
 <template>
   <section class="forms-component">
-    <InputFields />
-
-    <v-space xlarge />
-
-    <TextAreas />
-
-    <v-space xlarge />
-
-    <VSearchBars />
-
-    <v-space xlarge />
-
-    <VDatePickers />
-    <v-space xlarge />
-
-    <h6>API (props)</h6>
-    <API :data="props" />
-
-    <v-space
-      xlarge
-      v-for="i in 2"
-      :key="i"
-    />
+    <h1 class="u-text-center">Coming soon</h1>
+    <p class="font-thin u-text-center">This site will become perfect really soon.</p>
   </section>
 </template>
 
 <script>
-import InputFields from './VInputFields.vue';
-import TextAreas from './VTextAreas.vue';
-import VSearchBars from './VSearchBars.vue';
-import VDatePickers from './VDatePickers.vue';
-import API from '@/views/Components/API.vue';
-
 export default {
-  components: {
-    API,
-    InputFields,
-    TextAreas,
-    VSearchBars,
-    VDatePickers,
-  },
-  data() {
-    return {
-      props: {
-        input: ['@input', 'no event', 'Event', '(InputField) @input is a event, for checking if something is typed in the input field'],
-        value: ['value', 'empty', 'String', '(InputField) Value for the input field'],
-        noControl: ['noControl', 'false', 'Boolean', '(InputField) NoControl for this input field'],
-        select: ['select', 'false', 'Boolean', '(InputField) Selectable input field'],
-        type: ['type', 'text', 'String', '(InputField) Type of the input field'],
-        placeholder: ['placeholder', 'empty', 'String', '(InputField/TextArea) Placeholder'],
-        title: ['title', 'empty', 'String', '(InputField) Title for the input field'],
-        subtitle: ['subtitle', 'empty', 'String', '(InputField) Subtitle for the input field'],
-        subtitleInline: ['subtitleInline', 'false', 'Boolean', '(InputField) Subtitle is inline with the input field'],
-        infoText: ['infoText', 'empty', 'String', '(InputField) Information text for the input field'],
-        focused: ['focused', 'false', 'Boolean', '(InputField) Input field is focused'],
-        success: ['success', 'false', 'Boolean', '(InputField) Success colored input field'],
-        error: ['error', 'false', 'Boolean', '(InputField) Error colored input field'],
-        xsmall: ['xsmall', 'false', 'Boolean', '(InputField) xsmall size'],
-        small: ['small', 'false', 'Boolean', '(InputField) small size'],
-        large: ['large', 'false', 'Boolean', '(InputField) large size'],
-        xlarge: ['xlarge', 'false', 'Boolean', '(InputField) xlarge size'],
-        inputPlaceholder: ['inputPlaceholder', 'Search', 'String', '(SearchBar) What the input placeholder will be'],
-        searchAction: ['searchAction', 'empty', 'Function', '(SearchBar) Function executed when clicking on the search button'],
-      },
-    };
-  },
 };
 </script>
