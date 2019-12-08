@@ -25,7 +25,7 @@
       <v-row class="component-examples">
         <v-col v-for="i in 4" :key="i" c="3">
           <v-row class="u-center" v-for="j in 4" :key="j">
-            <v-link href="#/components/Avatars">
+            <v-link :href="`#/components/${components[(i - 1) * 4 + (j - 1)]}`">
               {{ components[(i - 1) * 4 + (j - 1)] }}
             </v-link>
           </v-row>
