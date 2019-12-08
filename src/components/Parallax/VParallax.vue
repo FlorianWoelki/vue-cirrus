@@ -11,7 +11,10 @@
     ]"
     :style="styleImage"
   >
-    <slot></slot>
+    <div v-if="!customBody" id="hero-body" class="u-center">
+      <slot></slot>
+    </div>
+    <slot v-else></slot>
   </div>
 </template>
 
