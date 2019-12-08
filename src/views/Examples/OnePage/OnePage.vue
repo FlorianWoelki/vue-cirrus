@@ -10,19 +10,21 @@
 
     <v-parallax
       fullscreen
-      image="https://cdn.clipart.email/98b8348023d6a9d2eb28c346bea1c468_28-collection-of-midnight-sky-clipart-high-quality-free-_2560-1600.jpeg"
+      src="https://cdn.clipart.email/98b8348023d6a9d2eb28c346bea1c468_28-collection-of-midnight-sky-clipart-high-quality-free-_2560-1600.jpeg"
     >
-      <v-row>
-        <v-col>
-          <h1 class="white uppercase u-text-center">One Page</h1>
-          <p class="white u-text-center">A One Page product made with Vue Cirrus</p>
-          <v-btn light outline center>Checkout the Demo!</v-btn>
-          <v-space xlarge />
-          <div class="animated pulse infinite u-center white">
-            <i class="fas fa-arrow-down fa-2x"></i>
-          </div>
-        </v-col>
-      </v-row>
+      <div id="hero-body" class="u-center">
+        <v-row>
+          <v-col>
+            <h1 class="white uppercase u-text-center">One Page</h1>
+            <p class="white u-text-center">A One Page product made with Vue Cirrus</p>
+            <v-btn color="light" outline class="u-center">Checkout the Demo!</v-btn>
+            <v-space xlarge />
+            <div class="animated pulse infinite u-center white">
+              <i class="fas fa-arrow-down fa-2x"></i>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
     </v-parallax>
 
     <v-space xlarge />
