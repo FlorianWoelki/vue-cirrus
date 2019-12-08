@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/Jwu0XrO.png" width="200"></p>
+<p align="center"><img src="https://i.imgur.com/OETMeDC.png" width="200"></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
@@ -40,11 +40,13 @@ npm install vue-cirrus
 <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
 ```
 
-3. Import all vue cirrus components in your main.js file
+3. Import all vue cirrus components and install them in your main.js file
 
 ```javascript
+import VueCirrus from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
-import 'vue-cirrus';
+
+Vue.use(VueCirrus);
 ```
 
 4. Test, if it works by including the following in a vue file

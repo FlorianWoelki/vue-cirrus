@@ -1,5 +1,5 @@
 <template>
-  <section class="animations-mixin">
+  <section class="divider-component">
     <p class="no-upper-margin">
       You can use the <kbd>v-divider</kbd> component to seperate content from other content.
     </p>
