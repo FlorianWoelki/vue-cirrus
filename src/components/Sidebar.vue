@@ -1,7 +1,7 @@
 <template>
-  <v-sidebar hoverEffect>
+  <v-sidebar hoverEffect noPadding>
     <template slot:brandTitle>
-      <h5>Components</h5>
+      <h5 style="padding: .25rem 1.5rem;">Components</h5>
       <v-space></v-space>
     </template>
     <v-sidebar-item
@@ -10,7 +10,7 @@
       :href="'#/components/' + component"
       :selected="currentRouteName === component"
     >
-      {{component}}
+      <span style="padding: .25rem 1.5rem;">{{component}}</span>
     </v-sidebar-item>
     <div class="divider"></div>
     <v-sidebar-item>
