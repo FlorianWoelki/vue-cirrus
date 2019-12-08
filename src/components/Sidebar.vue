@@ -8,6 +8,7 @@
       v-for="component in sortedComponentList"
       :key=component
       :href="'#/components/' + component"
+      :selected="currentRouteName === component"
     >
       {{component}}
     </v-sidebar-item>
@@ -46,6 +47,9 @@ export default {
   },
 
   computed: {
+    currentRouteName() {
+      return this.$route.path.split('/')[2];
+    },
     sortedComponentList() {
       return this.components.slice().sort();
     },
