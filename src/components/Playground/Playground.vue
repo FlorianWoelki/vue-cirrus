@@ -8,16 +8,14 @@
     <div class="playground-card">
       <v-tabs mode="fill" style="margin-bottom: 25px; margin-top: 5px;">
         <v-tab
-          :href="href"
           :selected="!codeSelected"
-          @click="() => { codeSelected = false }"
+          @click="changeTab($event, false)"
         >
           <i class="fas fa-globe fa-lg"></i>
         </v-tab>
         <v-tab
-          :href="href"
           :selected="codeSelected"
-          @click="() => { codeSelected = true }"
+          @click="changeTab($event, true)"
         >
           <i class="fas fa-code fa-lg"></i>
         </v-tab>
@@ -56,6 +54,13 @@ export default {
       codeSelected: false,
       propsData: this.componentProps,
     };
+  },
+
+  methods: {
+    changeTab(event, codeSelected) {
+      event.preventDefault();
+      this.codeSelected = codeSelected;
+    },
   },
 
   props: {
