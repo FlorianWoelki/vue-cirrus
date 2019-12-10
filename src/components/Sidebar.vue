@@ -14,7 +14,7 @@
     </v-sidebar-item>
     <div class="divider"></div>
     <v-sidebar-item>
-      <v-sidebar-dropdown showArrow title="Mixins">
+      <v-sidebar-dropdown showArrow title="Mixins" style="padding: .25rem 1.25rem;">
         <v-sidebar-item
           dropdown
           href="#/components/Animations"
