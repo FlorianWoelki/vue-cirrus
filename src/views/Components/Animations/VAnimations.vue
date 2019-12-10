@@ -72,17 +72,28 @@
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
     <API :data="props" :dropdownItems="['animation']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Different Animations</h5>
+    <p class="no-upper-margin">
+      You can apply really simple some cool and easy animations.
+    </p>
+    <DifferentAnimations />
   </section>
 </template>
 
 <script>
 import API from '../API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import DifferentAnimations from './Examples/DifferentAnimations.vue';
 
 export default {
   components: {
     API,
     Playground,
+    DifferentAnimations,
   },
 
   data() {
