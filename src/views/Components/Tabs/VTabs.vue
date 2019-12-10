@@ -122,15 +122,9 @@ export default {
         mode: '',
       },
       props: [
-        ['v-tabs', 'xsmall', 'boolean', 'false', 'Set the tabs size to xsmall.'],
-        ['v-tabs', 'small', 'boolean', 'false', 'Set the tabs size to small.'],
-        ['v-tabs', 'large', 'boolean', 'false', 'Set the tabs size to large.'],
-        ['v-tabs', 'xlarge', 'boolean', 'false', 'Set the tabs size to xlarge.'],
-        ['v-tabs', 'center', 'boolean', 'false', 'Position the tabs to the center.'],
-        ['v-tabs', 'right', 'boolean', 'false', 'Position the tabs to the right side.'],
-        ['v-tabs', 'depth', 'boolean', 'false', 'Enable some depth in the tabs menu.'],
-        ['v-tabs', 'fill', 'boolean', 'false', 'The tabs will fill equally.'],
-        ['v-tabs', 'classic', 'boolean', 'false', 'Set the style of the tabs to classic.'],
+        ['v-tabs', 'size', 'string', 'null', 'Set the size of the tab component (xsmall, small, large, xlarge).'],
+        ['v-tabs', 'position', 'string', 'null', 'Position the tabs (center, right).'],
+        ['v-tabs', 'mode', 'string', 'null', 'Set the style mode of the tabs (depth, fill, classic).'],
         ['v-tab', 'selected', 'boolean', 'false', 'This tab will have the selected color.'],
         ['v-tab', 'href', 'string', '#!', 'Set the href, when clicked on a tab.'],
         ['v-tab', '@click', 'function', '() => {}', 'This event will be fired, whenever someones clicks on the tab component.'],
@@ -140,14 +134,10 @@ export default {
 
   computed: {
     customCode() {
-      let validProps = '';
-      Object.entries(this.propsData).forEach((entry) => {
-        if (entry[1] !== '' && entry[1] !== false) {
-          validProps += `\n  ${entry[1]}`;
-        }
-      });
       return `
-<v-tabs ${validProps}
+<v-tabs${this.propsData.position !== '' ? `\n  position="${this.propsData.position}"` : ''}
+${this.propsData.size !== '' ? `  size="${this.propsData.size}"` : ''}
+${this.propsData.mode !== '' ? `  mode="${this.propsData.mode}"` : ''}
 >
   <v-tab>Tab 1</v-tab>
   <v-tab>Tab 2</v-tab>
