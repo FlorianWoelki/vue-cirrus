@@ -135,9 +135,7 @@ export default {
   computed: {
     customCode() {
       return `
-<v-tabs${this.propsData.position !== '' ? `\n  position="${this.propsData.position}"` : ''}
-${this.propsData.size !== '' ? `  size="${this.propsData.size}"` : ''}
-${this.propsData.mode !== '' ? `  mode="${this.propsData.mode}"` : ''}
+<v-tabs${this.propsData.position !== '' ? `\n  position="${this.propsData.position}"` : ''}${this.propsData.size !== '' ? `\n  size="${this.propsData.size}"` : ''}${this.propsData.mode !== '' ? `\n  mode="${this.propsData.mode}"` : ''}
 >
   <v-tab>Tab 1</v-tab>
   <v-tab>Tab 2</v-tab>
