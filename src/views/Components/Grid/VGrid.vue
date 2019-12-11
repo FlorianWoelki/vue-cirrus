@@ -1,7 +1,7 @@
 <template>
   <section class="grid-component">
     <p class="no-upper-margin">
-      There are so many possible ways to use the <kbd>grid</kbd> functioanlity in
+      There are so many possible ways to use the <kbd>grid</kbd> functionality in
       Vue Cirrus. Furthermore, it is so easy to use.
     </p>
 
@@ -9,7 +9,7 @@
 
     <h3>Usage</h3>
     <p class="no-upper-margin">
-      Columns in their simplest form are just there.
+      Columns in their simplest form are just fluid.
     </p>
 
     <v-space />
