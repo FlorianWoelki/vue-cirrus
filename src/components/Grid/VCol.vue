@@ -1,6 +1,5 @@
 <template>
   <div :class="[
-    'offset-center',
     this.c ? `col-${this.c}` : null,
     this.o ? `offset-${this.o}` : null,
     this.dynamicOffset ? `offset-${this.dynamicOffset}` : null,
@@ -8,7 +7,6 @@
     this.h ? `h-${this.h}` : null,
     {
       'col': this.fluid,
-      'no-space': this.noSpace,
       'ignore-screen': this.ignoreScreen,
     },
   ]">
@@ -40,10 +38,6 @@ export default {
       default: null,
     },
     fluid: {
-      type: Boolean,
-      default: false,
-    },
-    noSpace: {
       type: Boolean,
       default: false,
     },

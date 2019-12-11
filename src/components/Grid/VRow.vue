@@ -2,8 +2,7 @@
   <div :class="[
     'row',
     {
-      'fluid-container': this.fluid,
-      'wrap': this.wrap,
+      'row--no-wrap': this.noWrap,
       'level': this.level,
     },
   ]">
@@ -14,11 +13,7 @@
 <script>
 export default {
   props: {
-    fluid: {
-      type: Boolean,
-      default: false,
-    },
-    wrap: {
+    noWrap: {
       type: Boolean,
       default: false,
     },
