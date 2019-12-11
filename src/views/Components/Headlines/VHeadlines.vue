@@ -89,10 +89,7 @@ export default {
         uppercase: false,
       },
       props: [
-        ['v-headline', 'h1', 'boolean', 'false', 'Set the headline size to 6.5rem.'],
-        ['v-headline', 'h2', 'boolean', 'false', 'Set the headline size to 5.5rem.'],
-        ['v-headline', 'h3', 'boolean', 'false', 'Set the headline size to 4.5rem.'],
-        ['v-headline', 'h4', 'boolean', 'false', 'Set the headline size to 3.5rem.'],
+        ['v-headline', 'size', 'string', 'null', 'Set the headline size (1, 2, 3, 4 => 1 is largest).'],
         ['v-headline', 'uppercase', 'boolean', 'false', 'Set the headline to uppercase.'],
       ],
     };
