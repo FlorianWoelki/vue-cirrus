@@ -22,14 +22,25 @@
       <template v-slot:component>
         <div class="grid-playground">
           <v-row>
-            <v-col>Column</v-col>
-            <v-col>Column</v-col>
-            <v-col>Column</v-col>
-            <v-col>Column</v-col>
+            <v-col v-for="i in amountOfColumns" :key="i">
+              Column
+            </v-col>
           </v-row>
         </div>
       </template>
     </Playground>
+    <v-row>
+      <v-col c12>
+        <v-btn-group>
+          <v-btn color="success" @click="addColumn()">
+            <i class="fas fa-plus"></i>
+          </v-btn>
+          <v-btn color="danger" @click="removeColumn()">
+            <i class="fas fa-minus"></i>
+          </v-btn>
+        </v-btn-group>
+      </v-col>
+    </v-row>
 
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
@@ -51,11 +62,23 @@ export default {
     Playground,
   },
 
+  methods: {
+    addColumn() {
+      if (this.amountOfColumns < 11) {
+        this.amountOfColumns += 1;
+      }
+    },
+    removeColumn() {
+      if (this.amountOfColumns > 1) {
+        this.amountOfColumns -= 1;
+      }
+    },
+  },
+
   data() {
     return {
+      amountOfColumns: 3,
       propsData: {
-        bordered: false,
-        xlarge: false,
       },
       props: [
         ['v-col', 'c', 'string', 'null', 'Set the column width (12 grid).'],
