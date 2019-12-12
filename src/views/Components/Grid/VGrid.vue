@@ -18,11 +18,12 @@
       href="/#/components/Grid/#!"
       component="v-grid"
       :componentProps="propsData"
+      :customCode="customCode"
     >
       <template v-slot:component>
         <div class="grid-playground">
           <v-row>
-            <v-col v-for="i in amountOfColumns" :key="i">
+            <v-col fluid v-for="i in amountOfColumns" :key="i">
               Column
             </v-col>
           </v-row>
@@ -72,6 +73,16 @@ export default {
       if (this.amountOfColumns > 1) {
         this.amountOfColumns -= 1;
       }
+    },
+  },
+
+  computed: {
+    customCode() {
+      let result = '\n<v-row>\n';
+      for (let i = 0; i < this.amountOfColumns; i += 1) {
+        result += '  <v-col fluid>Column</v-col>\n';
+      }
+      return `${result}</v-row>`;
     },
   },
 
