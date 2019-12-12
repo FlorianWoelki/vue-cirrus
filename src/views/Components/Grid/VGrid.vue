@@ -64,7 +64,9 @@ export default {
         ['v-col', 'h', 'string', 'null', 'Set the column width (12 grid).'],
         ['v-col', 'dynamicOffset', 'string', 'null', 'Set the column width (12 grid).'],
         ['v-col', 'fluid', 'boolean', 'false', 'Align the columns with equal amount of space.'],
+        ['v-col', 'ignoreScreen', 'boolean', 'false', 'Columns will ignore the screen width.'],
         ['v-row', 'level', 'boolean', 'false', 'Position the columns on one level.'],
+        ['v-row', 'noWrap', 'boolean', 'false', 'The given columns will not wrap to the next line.'],
       ],
     };
   },
