@@ -6,20 +6,10 @@
       </v-code>
     </v-col>
     <v-col c="4">
-      <v-code lang="JavaScript" copyable>
-var testVar = 34;
-let testLet = 34;
-const testConst = 34;
-if (testLet === 34) console.log(1);
-      </v-code>
+      <v-code lang="JavaScript" copyable>{{ jsCodeExample }}</v-code>
     </v-col>
     <v-col c="4">
-      <v-code lang="CSS" copyable>
-h1 {
-  display: none;
-  visibility: hidden;
-}
-      </v-code>
+      <v-code lang="CSS" copyable>{{ cssCodeExample }}</v-code>
     </v-col>
   </v-row>
 </template>
@@ -37,6 +27,18 @@ export default Vue.extend({
   <h1>This is a simple test</h1>
   <p>Testing something...</p>
 </div>
+`,
+      jsCodeExample: `
+var testVar = 34;
+let testLet = 34;
+const testConst = 34;
+if (testLet === 34) console.log(1);      
+`,
+      cssCodeExample: `
+h1 {
+  display: none;
+  visibility: hidden;
+}
 `,
     };
   },
