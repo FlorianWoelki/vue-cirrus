@@ -23,7 +23,11 @@
       <template v-slot:component>
         <div class="grid-playground">
           <v-row>
-            <v-col fluid v-for="i in amountOfColumns" :key="i">
+            <v-col
+              v-for="i in amountOfColumns"
+              :key="i"
+              :fluid="propsData.fluid"
+            >
               Column
             </v-col>
           </v-row>
@@ -31,7 +35,7 @@
       </template>
     </Playground>
     <v-row>
-      <v-col c12>
+      <v-col c="6" class="u-center">
         <v-btn-group>
           <v-btn color="success" @click="addColumn()">
             <i class="fas fa-plus"></i>
@@ -40,6 +44,12 @@
             <i class="fas fa-minus"></i>
           </v-btn>
         </v-btn-group>
+      </v-col>
+      <v-col c="6" class="u-center">
+        <v-checkbox
+          id="fluid-column"
+          @change="() => { propsData.fluid = !propsData.fluid }"
+        >Fluid</v-checkbox>
       </v-col>
     </v-row>
 
@@ -90,6 +100,7 @@ export default {
     return {
       amountOfColumns: 3,
       propsData: {
+        fluid: false,
       },
       props: [
         ['v-col', 'c', 'string', 'null', 'Set the column width (12 grid).'],
