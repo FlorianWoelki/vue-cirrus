@@ -28,6 +28,7 @@
               v-for="i in amountOfColumns"
               :key="i"
               :fluid="propsData.fluid"
+              :c="propsData.column"
             >
               Column
             </v-col>
@@ -36,7 +37,21 @@
       </template>
     </Playground>
     <v-row>
-      <v-col c="6" class="u-center">
+      <v-col c="4" class="u-center">
+        <v-dropdown>
+          <template v-slot:button>
+            <v-btn dropdown>
+              Column Width <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+            </v-btn>
+          </template>
+          <v-dropdown-item
+            v-for="i in 12"
+            :key="i"
+            @click="(event) => { propsData.column = event.srcElement.innerHTML.toLowerCase() }"
+          >{{ i }}</v-dropdown-item>
+        </v-dropdown>
+      </v-col>
+      <v-col c="4" class="u-center">
         <v-btn-group>
           <v-btn color="success" @click="addColumn()">
             <i class="fas fa-plus"></i>
@@ -46,7 +61,7 @@
           </v-btn>
         </v-btn-group>
       </v-col>
-      <v-col c="6" class="u-center">
+      <v-col c="4" class="u-center">
         <v-checkbox
           id="fluid-column"
           @change="() => { propsData.fluid = !propsData.fluid }"
@@ -102,6 +117,7 @@ export default {
       amountOfColumns: 3,
       propsData: {
         fluid: false,
+        column: null,
       },
       props: [
         ['v-col', 'c', 'string', 'null', 'Set the column width (12 grid).'],
