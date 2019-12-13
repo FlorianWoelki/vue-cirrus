@@ -29,7 +29,7 @@
         >Customize Me</v-snackbar>
       </template>
       <v-row>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-dropdown>
             <template v-slot:button>
               <v-btn dropdown>
@@ -56,7 +56,7 @@
             >BottomRight</v-dropdown-item>
           </v-dropdown>
         </v-col>
-        <v-col c6 center>
+        <v-col c="6" class="u-center">
           <v-dropdown>
             <template v-slot:button>
               <v-btn dropdown>
