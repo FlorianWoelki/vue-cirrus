@@ -62,11 +62,23 @@
         </h6>
       </v-col>
       <v-col c="6">
-        <v-code lang="JavaScript" copyable><br />import VueCirrus from 'vue-cirrus';
-import 'vue-cirrus/dist/vue-cirrus.css';
-
-Vue.use(VueCirrus);</v-code>
+        <v-code lang="JavaScript" copyable>{{ jsCode }}</v-code>
       </v-col>
     </v-row>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      jsCode: `
+import VueCirrus from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VueCirrus);
+`,
+    };
+  },
+};
+</script>
