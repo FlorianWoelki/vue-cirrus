@@ -9,7 +9,7 @@
 
     <h3>Usage</h3>
     <p class="no-upper-margin">
-      Columns in their simplest form are just fluid.
+      Columns in their simplest form are just empty div tags.
     </p>
 
     <v-space />
@@ -24,6 +24,7 @@
         <div class="grid-playground">
           <v-row>
             <v-col
+              class="column-showcase"
               v-for="i in amountOfColumns"
               :key="i"
               :fluid="propsData.fluid"
@@ -124,7 +125,7 @@ export default {
     .row {
       background-color: #2C3E50;
     }
-    .offset-center {
+    .column-showcase {
       background-color: #95A5A6;
       border-radius: 5px;
       padding: 10px;
