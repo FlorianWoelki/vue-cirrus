@@ -1,7 +1,7 @@
 <template>
   <div class="features-explained">
-    <v-row center>
-      <v-col c9>
+    <v-row class="u-center">
+      <v-col c="9">
         <v-parallax-element :speed="0.5" :stopValue="450">
           <div class="card u-center">
             <v-container>
