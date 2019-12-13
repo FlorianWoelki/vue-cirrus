@@ -38,25 +38,25 @@
         </v-tile>
       </template>
       <v-row>
-        <v-col c3 center>
+        <v-col c="c3" class="u-center">
           <v-input-field
             placeholder="Title ..."
             v-model="propsData.title"
           ></v-input-field>
         </v-col>
-        <v-col c3 center>
+        <v-col c="c3" class="u-center">
           <v-input-field
             placeholder="Subtitle ..."
             v-model="propsData.subtitle"
           ></v-input-field>
         </v-col>
-        <v-col c3 center>
+        <v-col c="c3" class="u-center">
           <v-input-field
             placeholder="Info ..."
             v-model="propsData.info"
           ></v-input-field>
         </v-col>
-        <v-col c3 center>
+        <v-col c="c3" class="u-center">
           <v-checkbox
             @change="() => { propsData.enableBoxShadow = !propsData.enableBoxShadow }"
           >Box Shadow</v-checkbox>
