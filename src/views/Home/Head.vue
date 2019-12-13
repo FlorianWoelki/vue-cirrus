@@ -14,12 +14,13 @@
           <h1>Vue Cirrus</h1>
           <h6 class="font-light">The Vue library for the modern Cirrus CSS framework.</h6>
           <v-row>
-            <v-col c12>
+            <v-col c="12">
               <router-link to='/components'>
                 <v-btn
                   animated
-                  center
+                  pulse
                   outline
+                  class="u-center"
                 >
                   Getting Started
                 </v-btn>
