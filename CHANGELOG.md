@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.11] - 2019-12-13
+
+### ⚡️ Changed
+- Hotfix for default column grid
+- Fix custom body issue in parallax component
+
+
 ## [0.5.1] - 2019-12-10
 
 ### ⚡️ Changed
