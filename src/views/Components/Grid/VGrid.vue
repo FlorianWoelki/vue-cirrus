@@ -83,7 +83,7 @@
     </p>
     <WidthGridLayout />
 
-    <v-space />
+    <v-space xlarge />
     <h5 class="font-light no-upper-margin">10 Grid Height Layout</h5>
     <p class="no-upper-margin">
       You can easily use a 10 grid layout for the height with the <kbd>h</kbd> prop in
