@@ -76,17 +76,35 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">10 Grid Width Layout</h5>
+    <p class="no-upper-margin">
+      You can easily use a 10 grid layout width the <kbd>w</kbd> prop in
+      each column.
+    </p>
+    <WidthGridLayout />
+
+    <v-space />
+    <h5 class="font-light no-upper-margin">10 Grid Height Layout</h5>
+    <p class="no-upper-margin">
+      You can easily use a 10 grid layout for the height with the <kbd>h</kbd> prop in
+      each column.
+    </p>
+    <HeightGridLayout />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import WidthGridLayout from './Examples/WidthGridLayout.vue';
+import HeightGridLayout from './Examples/HeightGridLayout.vue';
 
 export default {
   components: {
     API,
     Playground,
+    WidthGridLayout,
+    HeightGridLayout,
   },
 
   methods: {
@@ -141,11 +159,16 @@ export default {
     .row {
       background-color: #2C3E50;
     }
-    .column-showcase {
-      background-color: #95A5A6;
-      border-radius: 5px;
-      padding: 10px;
-    }
+  }
+
+  .column-showcase {
+    background-color: #eee;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding: 10px;
   }
 }
 </style>
