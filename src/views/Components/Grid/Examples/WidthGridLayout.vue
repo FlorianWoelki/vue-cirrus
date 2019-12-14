@@ -12,7 +12,7 @@ export default {
     range() {
       const result = [];
       for (let i = 10; i <= 100; i += 10) {
-        result.push(i);
+        result.push(`${i}`);
       }
       return result;
     },
