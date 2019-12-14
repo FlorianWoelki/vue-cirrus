@@ -22,10 +22,7 @@
       Vue-Cirrus. You can find more information on the <v-link href="https://yarnpkg.com/lang/en/docs/" blank>official yarn documentation</v-link>.
       If you are good to go, you can run either command from the cli.
     </p>
-    <v-code lang="Bash"><br />npm install vue-cirrus
-// OR
-yarn add vue-cirrus
-    </v-code>
+    <v-code lang="Bash" copyable>{{ bashCode }}</v-code>
 
     <v-space />
     <p class="no-upper-margin">
@@ -45,11 +42,7 @@ yarn add vue-cirrus
       If you have done those steps, you can now include the Vue-Cirrus package
       in your <kbd>main.js</kbd> file. Just copy the code and import it easily.
     </p>
-    <v-code lang="JavaScript" copyable><br />import VueCirrus from 'vue-cirrus';
-import 'vue-cirrus/dist/vue-cirrus.css';
-
-Vue.use(VueCirrus);
-    </v-code>
+    <v-code lang="JavaScript" copyable>{{ jsCode }}</v-code>
 
     <v-space />
     <h5 class="font-thin">Now you are ready to go! Keep hacking!</h5>
@@ -66,6 +59,10 @@ export default {
 
   data() {
     return {
+      bashCode: `
+npm install vue-cirrus
+// OR
+yarn add vue-cirrus`,
       indexHtmlCode: `<link
   href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
   rel="stylesheet"
@@ -79,6 +76,11 @@ export default {
   type="text/css"
   rel="stylesheet"
 />`,
+      jsCode: `
+import VueCirrus from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VueCirrus);`,
     };
   },
 };
