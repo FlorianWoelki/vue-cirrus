@@ -19,7 +19,7 @@
     <div class="api-props-section">
       <div
         class="api-props"
-        v-for="(prop, index) in props"
+        v-for="(prop, index) in dropdownItemProps"
         :key="index"
       >
         <div class="api-prop" v-if="prop[0] === currentDropdownItem">
@@ -43,7 +43,7 @@
               <p class="u-no-margin prop-title">{{prop[4]}}</p>
             </v-col>
           </v-row>
-          <v-divider v-if="index !== props.length - 1" />
+          <v-divider v-if="index !== dropdownItemProps.length - 1" />
         </div>
       </div>
     </div>
@@ -58,6 +58,12 @@ export default {
       props: this.data,
       currentDropdownItem: this.dropdownItems[0],
     };
+  },
+
+  computed: {
+    dropdownItemProps() {
+      return this.props.filter(item => item[0] === this.currentDropdownItem);
+    },
   },
 
   methods: {
