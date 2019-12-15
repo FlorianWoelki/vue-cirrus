@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-section">
-    <v-row class="level">
+    <v-row class="u-center">
       <v-col>
         <p class="white font-bold" style="letter-spacing: 0; font-size: 1.3rem;">
           <span class="faded">&copy; 2019</span>
