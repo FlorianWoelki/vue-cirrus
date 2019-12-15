@@ -7,6 +7,7 @@
         :h="i"
         fluid
         class="column-showcase"
+        style="margin-left: 10px;"
       >h="{{ i }}"</v-col>
     </v-row>
   </div>
