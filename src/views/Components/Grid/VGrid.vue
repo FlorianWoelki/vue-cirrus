@@ -21,6 +21,16 @@
       :customCode="customCode"
     >
       <template v-slot:component>
+        <v-row>
+          <v-btn-group class="u-center">
+            <v-btn color="success" @click="addColumn()">
+              <i class="fas fa-plus"></i>
+            </v-btn>
+            <v-btn color="danger" @click="removeColumn()">
+              <i class="fas fa-minus"></i>
+            </v-btn>
+          </v-btn-group>
+        </v-row>
         <div class="grid-playground">
           <v-row>
             <v-col
@@ -41,6 +51,30 @@
         <v-dropdown>
           <template v-slot:button>
             <v-btn dropdown>
+              Dynamic Offset <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
+            </v-btn>
+          </template>
+          <v-dropdown-item
+            @click="(event) => {
+              propsData.dynamicOffset = event.srcElement.innerHTML.toLowerCase()
+            }"
+          >Center</v-dropdown-item>
+          <v-dropdown-item
+            @click="(event) => {
+              propsData.dynamicOffset = event.srcElement.innerHTML.toLowerCase()
+            }"
+          >Left</v-dropdown-item>
+          <v-dropdown-item
+            @click="(event) => {
+              propsData.dynamicOffset = event.srcElement.innerHTML.toLowerCase()
+            }"
+          >Right</v-dropdown-item>
+        </v-dropdown>
+      </v-col>
+      <v-col c="4" class="u-center">
+        <v-dropdown>
+          <template v-slot:button>
+            <v-btn dropdown>
               Column Width <span class="icon"><i class="fa fa-wrapper fa-caret-down"></i></span>
             </v-btn>
           </template>
@@ -50,16 +84,6 @@
             @click="(event) => { propsData.column = event.srcElement.innerHTML.toLowerCase() }"
           >{{ i }}</v-dropdown-item>
         </v-dropdown>
-      </v-col>
-      <v-col c="4" class="u-center">
-        <v-btn-group>
-          <v-btn color="success" @click="addColumn()">
-            <i class="fas fa-plus"></i>
-          </v-btn>
-          <v-btn color="danger" @click="removeColumn()">
-            <i class="fas fa-minus"></i>
-          </v-btn>
-        </v-btn-group>
       </v-col>
       <v-col c="4" class="u-center">
         <v-checkbox
