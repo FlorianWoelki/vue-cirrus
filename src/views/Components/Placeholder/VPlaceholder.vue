@@ -41,7 +41,7 @@
 
     <v-space xlarge />
     <h3 style="margin-bottom: 10px">API</h3>
-    <API :data="props" :dropdownItems="['v-placeholder', 'v-placeholder-item']" />
+    <API :data="props" :dropdownItems="['v-placeholder']" />
 
     <v-space xlarge />
     <v-space xlarge />
