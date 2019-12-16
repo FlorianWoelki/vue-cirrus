@@ -39,6 +39,7 @@
               :key="i"
               :fluid="propsData.fluid"
               :c="propsData.column"
+              :dynamicOffset="propsData.dynamicOffset"
             >
               Column
             </v-col>
@@ -160,6 +161,7 @@ export default {
       propsData: {
         fluid: false,
         column: null,
+        dynamicOffset: null,
       },
       props: [
         ['v-col', 'c', 'string', 'null', 'Set the column width (12 grid layout).'],
