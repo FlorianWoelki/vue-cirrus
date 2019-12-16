@@ -66,7 +66,8 @@ export default {
         subtitle: 'We are currently working on this segment! :)',
       },
       props: [
-        ['v-frame', 'height', 'string', '30rem', 'Set the height for the frame.'],
+        ['v-placeholder', 'title', 'string', 'Coming Soon', 'Set the title of the placeholder.'],
+        ['v-placeholder', 'subtitle', 'string', 'We are currently working on this segment! :)', 'Set the subtitle of the placeholder.'],
       ],
     };
   },
