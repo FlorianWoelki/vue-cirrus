@@ -46,17 +46,24 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Icon</h5>
+    <p class="no-upper-margin">
+      You can combine the placeholder with some icons, if you want to.
+    </p>
+    <PlaceholderWithIcon />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import PlaceholderWithIcon from './Examples/PlaceholderWithIcon.vue';
 
 export default {
   components: {
     API,
     Playground,
+    PlaceholderWithIcon,
   },
 
   data() {
