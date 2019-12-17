@@ -1,6 +1,12 @@
 <template>
   <Sidebar>
-    <h1 class="font-thin">{{$route.params.name}}</h1>
+    <h1 class="font-thin">
+      <v-link
+        :href="`https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Components/${$route.params.name}`"
+        blank
+      >#</v-link>
+      {{$route.params.name}}
+    </h1>
 
     <component :is="currentView"></component>
   </Sidebar>
