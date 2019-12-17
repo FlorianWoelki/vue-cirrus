@@ -42,7 +42,7 @@ export default {
         'Modals', 'Navbars', 'Pagination', 'Forms', 'Placeholder', 'Sidebars',
         'Tabs', 'Tags', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
-        'Badges'],
+        'Badges', 'Menus'],
     };
   },
 
