@@ -71,11 +71,10 @@ export default {
         customBody: false,
       },
       props: [
-        ['v-pagination', 'bordered', 'boolean', 'false', 'Activate the border around the pagination.'],
-        ['v-pagination-item', 'selected', 'boolean', 'false', 'Set the pagination item in a selected red state.'],
-        ['v-pagination-item', 'disabled', 'boolean', 'false', 'Set the pagination item in a disabled state.'],
-        ['v-pagination-item', 'href', 'string', '#', 'Set the href, when someone clicks the pagination item.'],
-        ['v-pagination-item', '@click', 'function', '() => {}', 'Get the event, when someone clicks the pagination item.'],
+        ['v-parallax', 'src', 'string', 'null', 'Set the source url for the parallax component.'],
+        ['v-parallax', 'customBody', 'boolean', 'false', 'Deactivate the pre made body and create your own.'],
+        ['v-parallax', 'fullscreen', 'boolean', 'false', 'Enable fullscreen height and width of your parallax element.'],
+        ['v-parallax', 'disableParallax', 'boolean', 'false', 'Disable the parallax effect for this component.'],
       ],
     };
   },
