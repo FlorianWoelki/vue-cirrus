@@ -100,6 +100,7 @@ export default {
     return {
       propsData: {
         animation: '',
+        size: '',
       },
       props: [
         ['v-modal', 'title', 'string', 'Modal Dialog', 'Set the title of the modal.'],
@@ -121,8 +122,13 @@ export default {
 <a href="#modal">
   <v-btn class="u-center" color="success">Open Modal</v-btn>
 </a>
-<v-modal zoomIn large>
-  <p>testing</p>
+<v-modal${this.propsData.animation === '' ? '' : ` ${this.propsData.animation}`}${this.propsData.size === '' ? '' : ` ${this.propsData.size}`}>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    Explicabo ducimus dolorem excepturi facere architecto, quam commodi,
+    tenetur corrupti a eveniet laborum labore distinctio doloremque
+    eaque repellendus ab, culpa rem temporibus?
+  </p>
 </v-modal>
 `;
     },
