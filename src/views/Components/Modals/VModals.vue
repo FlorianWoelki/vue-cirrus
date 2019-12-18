@@ -22,7 +22,7 @@
     >
       <template v-slot:component>
         <a href="#modal">
-          <v-btn class="u-center" color="success">Open Modal</v-btn>
+          <v-btn class="u-center" color="primary">Open Modal</v-btn>
         </a>
         <v-modal
           :zoomIn="propsData.animation === 'zoomIn'"
