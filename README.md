@@ -76,12 +76,12 @@ Vue.use(VueCirrus);
   - Easily create a login form with these components or simply a search bar
 - [Frames](https://florianwoelki.github.io/vue-cirrus/#/components/Frames)
   - Simply generate a profile frame for easily displaying information
-- [Fullscreen](https://florianwoelki.github.io/vue-cirrus/#/components/Fullscreen)
-  - Create a fullscreen header with this component
 - [Grid](https://florianwoelki.github.io/vue-cirrus/#/components/Grid)
   - A grid is really important in the modern world
 - [Links](https://florianwoelki.github.io/vue-cirrus/#/components/Links)
   - Easily create nice animated links
+- [Menus](https://florianwoelki.github.io/vue-cirrus/#/components/Menus)
+  - Display really beautiful looking menus
 - [Modals](https://florianwoelki.github.io/vue-cirrus/#/components/Modals)
   - Simple modals for displaying further information
 - [Navbar](https://florianwoelki.github.io/vue-cirrus/#/components/Navbars)
@@ -92,6 +92,8 @@ Vue.use(VueCirrus);
   - Easily paginate your articles, blogs or pages with this component
 - [Parallax](https://florianwoelki.github.io/vue-cirrus/#/components/Parallax)
   - Create a parallax effect with this component
+- [ParallaxElement](https://florianwoelki.github.io/vue-cirrus/#/components/ParallaxElement)
+  - Create some really cool moving parallax elements
 - [Placeholder](https://florianwoelki.github.io/vue-cirrus/#/components/Placeholder)
   - If you do not know, what to insert, you can take this placeholder
 - [Snackbars](https://florianwoelki.github.io/vue-cirrus/#/components/Snackbars)
@@ -100,16 +102,12 @@ Vue.use(VueCirrus);
   - It has never been easier to create a sidebar
 - [Spaces](https://florianwoelki.github.io/vue-cirrus/#/components/Spaces)
   - Spaces can be really good to breath
-- [Spinners](https://florianwoelki.github.io/vue-cirrus/#/components/Spinners)
-  - This spinner component can be used for loading your website or a page
 - [Tabs](https://florianwoelki.github.io/vue-cirrus/#/components/Tabs)
   - Create tabs for seperating the content of your page
 - [Tiles](https://florianwoelki.github.io/vue-cirrus/#/components/Tiles)
   - Tiles are useful for creating easy small components, like tweets
 - [Toasts](https://florianwoelki.github.io/vue-cirrus/#/components/Toasts)
   - Toasts are so easy to create with different colored backgrounds. 
-- [Util](https://florianwoelki.github.io/vue-cirrus/#/components/Util)
-  - All the mixins and animations you can include in all your components
 
 ## 💎 Be a part of vue-cirrus
 If you want to be a part of vue-cirrus, you can make pull requests and add/edit components.
