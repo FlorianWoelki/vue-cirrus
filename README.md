@@ -82,6 +82,8 @@ Vue.use(VueCirrus);
   - A grid is really important in the modern world
 - [Links](https://florianwoelki.github.io/vue-cirrus/#/components/Links)
   - Easily create nice animated links
+- [Menus](https://florianwoelki.github.io/vue-cirrus/#/components/Menus)
+  - Display really beautiful looking menus
 - [Modals](https://florianwoelki.github.io/vue-cirrus/#/components/Modals)
   - Simple modals for displaying further information
 - [Navbar](https://florianwoelki.github.io/vue-cirrus/#/components/Navbars)
