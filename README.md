@@ -92,6 +92,8 @@ Vue.use(VueCirrus);
   - Easily paginate your articles, blogs or pages with this component
 - [Parallax](https://florianwoelki.github.io/vue-cirrus/#/components/Parallax)
   - Create a parallax effect with this component
+- [ParallaxElement](https://florianwoelki.github.io/vue-cirrus/#/components/ParallaxElement)
+  - Create some really cool moving parallax elements
 - [Placeholder](https://florianwoelki.github.io/vue-cirrus/#/components/Placeholder)
   - If you do not know, what to insert, you can take this placeholder
 - [Snackbars](https://florianwoelki.github.io/vue-cirrus/#/components/Snackbars)
