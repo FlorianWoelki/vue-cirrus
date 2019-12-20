@@ -71,6 +71,13 @@ export default {
   computed: {
     customCode() {
       return `
+<v-parallax-element :margin="0" :speed="7">
+  <v-card>
+    <v-card-content>
+      <h1>Some test title</h1>
+    </v-card-content>
+  </v-card>
+</v-parallax-element>
 `;
     },
   },
