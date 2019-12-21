@@ -33,21 +33,7 @@
         </h6>
       </v-col>
       <v-col c="6">
-        <v-code lang="HTML" copyable>
-          <br />
-          <link
-            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
-            rel="stylesheet"
-          > <br />
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-            rel="stylesheet"
-          > <br />
-          <link
-            href="https://unpkg.com/cirrus-ui"
-            type="text/css"
-            rel="stylesheet"
-          /></v-code>
+        <v-code lang="HTML" copyable>{{ htmlCode }}</v-code>
       </v-col>
     </v-row>
 
@@ -77,6 +63,21 @@ import VueCirrus from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
 
 Vue.use(VueCirrus);
+`,
+      htmlCode: `
+<link
+  href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+  rel="stylesheet"
+>
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+  rel="stylesheet"
+>
+<link
+  href="https://unpkg.com/cirrus-ui"
+  type="text/css"
+  rel="stylesheet"
+/>
 `,
     };
   },
