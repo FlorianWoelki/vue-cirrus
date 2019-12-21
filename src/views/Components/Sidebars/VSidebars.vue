@@ -21,6 +21,19 @@
       :customCode="customCode"
     >
       <template v-slot:component>
+        <v-sidebar>
+          <template v-slot:title>
+            <h5>Title</h5>
+          </template>
+          <v-sidebar-item>Item A</v-sidebar-item>
+          <v-sidebar-item>Item B</v-sidebar-item>
+          <v-sidebar-item>Item C</v-sidebar-item>
+          <template v-slot:content>
+            <v-sidebar-content>
+              <h4>Sidebar Content</h4>
+            </v-sidebar-content>
+          </template>
+        </v-sidebar>
       </template>
     </Playground>
 
@@ -68,6 +81,19 @@ export default {
   computed: {
     customCode() {
       return `
+<v-sidebar>
+  <template v-slot:title>
+    <h5>Title</h5>
+  </template>
+  <v-sidebar-item>Item A</v-sidebar-item>
+  <v-sidebar-item>Item B</v-sidebar-item>
+  <v-sidebar-item>Item C</v-sidebar-item>
+  <template v-slot:content>
+    <v-sidebar-content>
+      <h4>Sidebar Content</h4>
+    </v-sidebar-content>
+  </template>
+</v-sidebar>
 `;
     },
   },
