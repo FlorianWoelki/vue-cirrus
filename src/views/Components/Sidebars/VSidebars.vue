@@ -31,6 +31,14 @@
           <template v-slot:content>
             <v-sidebar-content>
               <h4>Sidebar Content</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Rem voluptatum ab tempora tempore voluptates laudantium ipsam
+                at perspiciatis magni mollitia nulla, temporibus adipisci veniam
+                delectus sed ad neque velit qui impedit dolor explicabo quisquam
+                maiores modi. Odit eius, magni a illo repudiandae mollitia maiores,
+                alias ea cupiditate, minus consectetur explicabo.
+              </p>
             </v-sidebar-content>
           </template>
         </v-sidebar>
@@ -91,6 +99,14 @@ export default {
   <template v-slot:content>
     <v-sidebar-content>
       <h4>Sidebar Content</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Rem voluptatum ab tempora tempore voluptates laudantium ipsam
+        at perspiciatis magni mollitia nulla, temporibus adipisci veniam
+        delectus sed ad neque velit qui impedit dolor explicabo quisquam
+        maiores modi. Odit eius, magni a illo repudiandae mollitia maiores,
+        alias ea cupiditate, minus consectetur explicabo.
+      </p>
     </v-sidebar-content>
   </template>
 </v-sidebar>
