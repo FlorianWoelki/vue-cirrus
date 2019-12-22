@@ -10,7 +10,13 @@
       :href="'#/components/' + component"
       :selected="currentRouteName === component"
     >
-      <span style="padding: .25rem 1.5rem;">{{component}}</span>
+      <span v-if="component !== 'Forms'" style="padding: .25rem 1.5rem;">{{component}}</span>
+      <v-sidebar-dropdown v-else showArrow title="Forms"  style="padding: .25rem 1.25rem;">
+        <v-sidebar-item
+          dropdown
+          href="#/components/Checkbox"
+        >Checkbox</v-sidebar-item>
+      </v-sidebar-dropdown>
     </v-sidebar-item>
     <div class="divider"></div>
     <v-sidebar-item>
