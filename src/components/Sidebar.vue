@@ -13,9 +13,11 @@
       <span v-if="component !== 'Forms'" style="padding: .25rem 1.5rem;">{{component}}</span>
       <v-sidebar-dropdown v-else showArrow title="Forms"  style="padding: .25rem 1.25rem;">
         <v-sidebar-item
+          v-for="formComponent in formComponents"
+          :key="formComponent"
           dropdown
-          href="#/components/Checkbox"
-        >Checkbox</v-sidebar-item>
+          :href="'#/components/' + formComponent"
+        >{{ formComponent }}</v-sidebar-item>
       </v-sidebar-dropdown>
     </v-sidebar-item>
     <div class="divider"></div>
@@ -49,6 +51,8 @@ export default {
         'Tabs', 'Tags', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
         'Badges', 'Menus', 'ParallaxElements'],
+      formComponents: ['Checkbox', 'DatePicker', 'FormGroup', 'InputColor',
+        'InputField', 'Label', 'RadioBtn', 'SearchBar', 'TextArea', 'Toggler'],
     };
   },
 
