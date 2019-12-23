@@ -23,8 +23,24 @@
       <template v-slot:component>
         <v-input-field
           class="u-center"
+          :pilled="propsData.pilled"
+          :placeholder="propsData.placeholder"
         ></v-input-field>
       </template>
+      <v-row level>
+        <v-col c="6">
+          <v-checkbox
+            id="pilled-input-field"
+            @change="() => { propsData.pilled = !propsData.pilled }"
+          >Pilled</v-checkbox>
+        </v-col>
+        <v-col c="6">
+          <v-input-field
+            placeholder="Placeholder ..."
+            v-model="propsData.placeholder"
+          ></v-input-field>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space xlarge />
@@ -49,7 +65,10 @@ export default {
 
   data() {
     return {
-      propsData: {},
+      propsData: {
+        pilled: false,
+        placeholder: null,
+      },
       props: [
         ['v-input-field', 'size', 'string', 'null', 'Set the size of the input field (xsmall, small, large, xlarge).'],
         ['v-input-field', 'icon', 'boolean', 'false', 'Enable a icon functionality in front of the input field.'],
@@ -67,9 +86,14 @@ export default {
         ['v-input-field', 'noControl', 'boolean', 'false', 'Input field will not be controlled.'],
         ['v-input-field', 'pilled', 'boolean', 'false', 'Set the form of the input field to a pilled one.'],
       ],
-      customCode: `
-<v-input-field></v-input-field>`,
     };
+  },
+
+  computed: {
+    customCode() {
+      return `
+<v-input-field${this.propsData.pilled ? ' pilled' : ''}${this.propsData.placeholder ? ` placeholder="${this.propsData.placeholder}"` : ''}></v-input-field>`;
+    },
   },
 };
 </script>
