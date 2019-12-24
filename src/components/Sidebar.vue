@@ -11,7 +11,7 @@
       :selected="currentRouteName === component"
     >
       <span v-if="component !== 'Forms'" style="padding: .25rem 1.5rem;">{{component}}</span>
-      <v-sidebar-dropdown v-else showArrow title="Forms"  style="padding: .25rem 1.25rem;">
+      <v-sidebar-dropdown v-else showArrow title="Forms" style="padding-left: 0.25rem;">
         <v-sidebar-item
           v-for="formComponent in formComponents"
           :key="formComponent"
@@ -22,7 +22,7 @@
     </v-sidebar-item>
     <div class="divider"></div>
     <v-sidebar-item>
-      <v-sidebar-dropdown showArrow title="Mixins" style="padding: .25rem 1.25rem;">
+      <v-sidebar-dropdown showArrow title="Mixins" style="padding-left: 0.25rem;">
         <v-sidebar-item
           dropdown
           href="#/components/Animations"
