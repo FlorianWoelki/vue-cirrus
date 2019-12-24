@@ -2,7 +2,7 @@
   <Sidebar>
     <h1 class="font-thin">
       <v-link
-        :href="`https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Components/${$route.params.name}`"
+        :href="`https://github.com/FlorianWoelki/vue-cirrus/tree/gh-pages/src/views/Components/${isComponentForm($route.params.name)}`"
         blank
       >#</v-link>
       {{$route.params.name}}
@@ -25,7 +25,15 @@ export default {
   data() {
     return {
       currentView: this.$route.params.name,
+      formComponents: ['Checkbox', 'DatePicker', 'FormGroup', 'InputColor',
+        'InputField', 'Label', 'RadioBtn', 'SearchBar', 'TextArea', 'Toggler'],
     };
+  },
+
+  methods: {
+    isComponentForm(component) {
+      return this.formComponents.filter(c => component === c).length !== 0 ? 'Forms/' : component;
+    },
   },
 
   watch: {
