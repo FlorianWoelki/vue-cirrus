@@ -75,12 +75,5 @@ export default {
       ],
     };
   },
-
-  computed: {
-    customCode() {
-      return `
-<v-search-bar${this.propsData.pilled ? ' pilled' : ''}${this.propsData.placeholder ? ` placeholder="${this.propsData.placeholder}"` : ''}></v-input-field>`;
-    },
-  },
 };
 </script>
