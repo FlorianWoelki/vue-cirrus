@@ -27,7 +27,8 @@ export default {
           || entry[0] === 'color' || entry[0] === 'title'
           || entry[0] === 'lang' || entry[0] === 'text'
           || entry[0] === 'tooltipText' || entry[0] === 'content'
-          || entry[0] === 'src' || entry[0] === 'subtitle') && entry[1] !== '') {
+          || entry[0] === 'src' || entry[0] === 'subtitle'
+          || entry[0] === 'placeholder') && entry[1] !== '') {
           validProps += `\n  ${entry[0]}="${entry[1]}"`;
         } else if (entry[1] === true) {
           validProps += `\n  ${entry[0]}`;
