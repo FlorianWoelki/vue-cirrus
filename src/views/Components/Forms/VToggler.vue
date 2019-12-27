@@ -65,7 +65,8 @@ export default {
 
   computed: {
     customCode() {
-      return '<v-toggler></v-toggler>';
+      return `
+<v-toggler></v-toggler>`;
     },
   },
 };
