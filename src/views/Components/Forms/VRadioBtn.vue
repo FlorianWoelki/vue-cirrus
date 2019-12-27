@@ -1,11 +1,68 @@
 <template>
-  <section class="radio-btn-component">
-    <h1 class="u-text-center">Coming soon</h1>
-    <p class="font-thin u-text-center">This site will become perfect really soon.</p>
+  <section class="checkbox-component">
+    <p class="no-upper-margin">
+      You can create multiple radio buttons to let the user choose what
+      option he will use.
+    </p>
+
+    <v-space xlarge />
+
+    <h3>Usage</h3>
+    <p class="no-upper-margin">
+      The default radio button is a unselected circle with a custom label
+    </p>
+
+    <v-space />
+    <Playground
+      noTitle
+      href="/#/components/RadioBtn/#!"
+      component="v-radio-btn"
+      :componentProps="propsData"
+      :customCode="customCode"
+    >
+      <template v-slot:component>
+        <div class="u-center">
+          <v-radio-btn id="male-option">Male</v-radio-btn>
+          <v-radio-btn id="female-option">Female</v-radio-btn>
+        </div>
+      </template>
+    </Playground>
+
+    <v-space xlarge />
+    <h3 style="margin-bottom: 10px">API</h3>
+    <API :data="props" :dropdownItems="['v-radio-btn']" />
+
+    <v-space xlarge />
+    <v-space xlarge />
+    <h3>Examples</h3>
   </section>
 </template>
 
 <script>
+import API from '../API.vue';
+import Playground from '@/components/Playground/Playground.vue';
+
 export default {
+  components: {
+    API,
+    Playground,
+  },
+
+  data() {
+    return {
+      propsData: {},
+      props: [
+        ['v-radio-btn', 'id', 'string', 'my-radio-btn', 'You need to set the id, if you want to have more radio buttons.'],
+      ],
+    };
+  },
+
+  computed: {
+    customCode() {
+      return `
+<v-radio-btn id="male-option">Male</v-radio-btn>
+<v-radio-btn id="female-option">Female</v-radio-btn>`;
+    },
+  },
 };
 </script>
