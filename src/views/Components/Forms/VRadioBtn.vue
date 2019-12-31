@@ -9,7 +9,7 @@
 
     <h3>Usage</h3>
     <p class="no-upper-margin">
-      The default radio button is a unselected circle with a custom label
+      The default radio button is a unselected circle with a custom label.
     </p>
 
     <v-space />
