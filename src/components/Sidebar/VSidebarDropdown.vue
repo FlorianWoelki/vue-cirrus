@@ -6,14 +6,14 @@
     },
   ]">
     <input
-      id="sb-dropdown"
+      :id="id"
       type="checkbox"
       class="u-hide"
       name="sbTree"
       @click="handleClick"
     >
     <label
-      for="sb-dropdown"
+      :for="id"
       class="tree-item-header"
       style="margin-left:0;"
     >
@@ -44,6 +44,10 @@ export default {
   },
 
   props: {
+    id: {
+      type: String,
+      default: 'sb-dropdown',
+    },
     showArrow: {
       type: Boolean,
       default: false,
