@@ -16,14 +16,27 @@
       noTitle
       href="/#/components/Toggler/#!"
       component="v-toggler"
-      :customCode="customCode"
       :componentProps="propsData"
     >
       <template v-slot:component>
         <v-toggler
           class="u-center"
+          :success="propsData.state === 'success'"
+          :error="propsData.state === 'error'"
         ></v-toggler>
       </template>
+      <v-row>
+        <v-col c="12" class="u-center">
+          <v-radio-btn
+            id="success"
+            @change="(event) => { propsData.state = 'success' }"
+          >Success Color</v-radio-btn>
+          <v-radio-btn
+            id="error"
+            @change="(event) => { propsData.state = 'error' }"
+          >Error Color</v-radio-btn>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space xlarge />
@@ -49,6 +62,7 @@ export default {
   data() {
     return {
       propsData: {
+        state: '',
       },
       props: [
         ['v-toggler', 'dataCheckIcon', 'string', 'empty', 'Set the icon, whenever the toggler is checked.'],
@@ -66,7 +80,7 @@ export default {
   computed: {
     customCode() {
       return `
-<v-toggler></v-toggler>`;
+<v-toggler :></v-toggler>`;
     },
   },
 };
