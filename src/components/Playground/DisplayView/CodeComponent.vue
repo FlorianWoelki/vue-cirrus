@@ -22,6 +22,7 @@ export default {
       }
 
       let validProps = '';
+      let length = 0;
       Object.entries(this.propsData).forEach((entry) => {
         if ((entry[0] === 'position' || entry[0] === 'size'
           || entry[0] === 'color' || entry[0] === 'title'
@@ -30,18 +31,24 @@ export default {
           || entry[0] === 'src' || entry[0] === 'subtitle'
           || entry[0] === 'placeholder') && entry[1] !== '') {
           validProps += `\n  ${entry[0]}="${entry[1]}"`;
+          length += 1;
         } else if (entry[1] === true) {
           validProps += `\n  ${entry[0]}`;
+          length += 1;
         } else if (entry[1] !== '' && entry[1] !== false) {
           validProps += `\n  ${entry[1]}`;
+          length += 1;
         }
       });
 
+      if (length > 0) {
+        validProps += '\n';
+      }
+
       return `
-<${this.component} ${validProps}
->${!this.disableMessage ? '\n  Customize Me' : ''}
-</${this.component}>
-`;
+<${this.component}${validProps}>
+${!this.disableMessage ? '  Customize Me' : ''}
+</${this.component}>`;
     },
   },
 };
