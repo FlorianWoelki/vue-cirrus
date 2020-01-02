@@ -62,8 +62,7 @@ export default {
 import VueCirrus from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
 
-Vue.use(VueCirrus);
-`,
+Vue.use(VueCirrus);`,
       htmlCode: `
 <link
   href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
@@ -77,8 +76,7 @@ Vue.use(VueCirrus);
   href="https://unpkg.com/cirrus-ui"
   type="text/css"
   rel="stylesheet"
-/>
-`,
+/>`,
     };
   },
 };
