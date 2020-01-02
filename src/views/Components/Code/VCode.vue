@@ -17,11 +17,12 @@
       noTitle
       href="/#/components/Code/#!"
       component="v-code"
+      :customCode="customCode"
       :componentProps="propsData"
     >
       <template v-slot:component>
-        <v-code lang="JavaScript" copyable>
-Customize Me
+        <v-code lang="JavaScript" copyable><br/>
+const customizeMe = "Hello World";
         </v-code>
       </template>
     </Playground>
@@ -75,6 +76,15 @@ export default {
         ['v-code', 'dark', 'boolean', 'false', 'Enables the dark mode for this code component.'],
       ],
     };
+  },
+
+  computed: {
+    customCode() {
+      return `
+<v-code lang="JavaScript" copyable><br/>
+const customizeMe = "Hello World";
+</v-code>`;
+    },
   },
 };
 </script>
