@@ -11,6 +11,7 @@
         },
       ]"
       :checked="checked"
+      :disabled="disabled"
       @change="handleCheckboxChange"
     >
     <label :for="id" class="form-ext-label">
