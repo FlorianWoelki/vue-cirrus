@@ -20,8 +20,24 @@
       :componentProps="propsData"
     >
       <template v-slot:component>
-        <v-checkbox class="u-center">Customize Me</v-checkbox>
+        <v-checkbox
+          class="u-center"
+          :success="propsData.state === 'success'"
+          :error="propsData.state === 'error'"
+        >Customize Me</v-checkbox>
       </template>
+      <v-row>
+        <v-col c="12" class="u-center">
+          <v-radio-btn
+            id="success"
+            @change="(event) => { propsData.state = 'success' }"
+          >Success Color</v-radio-btn>
+          <v-radio-btn
+            id="error"
+            @change="(event) => { propsData.state = 'error' }"
+          >Error Color</v-radio-btn>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space xlarge />
@@ -46,7 +62,9 @@ export default {
 
   data() {
     return {
-      propsData: {},
+      propsData: {
+        state: null,
+      },
       props: [
         ['v-checkbox', 'id', 'string', 'input-checkbox', 'You need to set the id, if you want to have more checkboxes.'],
         ['v-checkbox', 'checked', 'boolean', 'false', 'Set the checked state of the checkbox.'],
