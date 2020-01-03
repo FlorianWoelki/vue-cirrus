@@ -24,10 +24,12 @@
           class="u-center"
           :success="propsData.state === 'success'"
           :error="propsData.state === 'error'"
+          :checked="propsData.checked"
+          :disabled="propsData.disabled"
         >Customize Me</v-checkbox>
       </template>
       <v-row>
-        <v-col c="12" class="u-center">
+        <v-col c="6" class="u-center">
           <v-radio-btn
             id="success"
             @change="(event) => { propsData.state = 'success' }"
@@ -36,6 +38,16 @@
             id="error"
             @change="(event) => { propsData.state = 'error' }"
           >Error Color</v-radio-btn>
+        </v-col>
+        <v-col c="6" class="u-center">
+          <v-checkbox
+            id="checked-checkbox"
+            @change="() => { propsData.checked = !propsData.checked }"
+          >Checked</v-checkbox>
+          <v-checkbox
+            id="disabled-checkbox"
+            @change="() => { propsData.disabled = !propsData.disabled }"
+          >Disabled</v-checkbox>
         </v-col>
       </v-row>
     </Playground>
@@ -64,6 +76,8 @@ export default {
     return {
       propsData: {
         state: null,
+        disabled: false,
+        checked: false,
       },
       props: [
         ['v-checkbox', 'id', 'string', 'input-checkbox', 'You need to set the id, if you want to have more checkboxes.'],
