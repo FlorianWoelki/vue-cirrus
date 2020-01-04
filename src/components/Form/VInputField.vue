@@ -137,6 +137,7 @@ export default {
         this.size ? `input-${this.size}` : null,
         {
           select: this.select,
+          'form-group-input': this.noControl,
           'input-focused': this.focused,
           'text-success input-success': this.success,
           'text-danger input-error': this.error,
