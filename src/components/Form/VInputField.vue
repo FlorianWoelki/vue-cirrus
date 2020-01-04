@@ -81,7 +81,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: '',
+      default: null,
     },
     value: {
       type: String,
