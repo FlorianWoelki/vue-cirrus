@@ -67,6 +67,7 @@ export default {
 
   data() {
     return {
+      propsData: {},
       customCode: `
 <v-footer style="margin-top: 0" title="v-footer" subtitle="Awesome footer component">
   <v-row>
