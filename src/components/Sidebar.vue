@@ -4,14 +4,18 @@
       <h5 style="padding: .25rem 1.5rem;">Components</h5>
       <v-space></v-space>
     </template>
-    <v-sidebar-item
+    <div
       v-for="component in sortedComponentList"
       :key=component
-      :href="'#/components/' + component"
-      :selected="currentRouteName === component"
     >
-      <span v-if="component !== 'Forms'" style="padding: .25rem 1.5rem;">{{component}}</span>
-      <v-sidebar-dropdown v-else showArrow title="Forms" style="padding-left: 0.25rem;">
+      <v-sidebar-item
+        :href="'#/components/' + component"
+        :selected="currentRouteName === component"
+        v-if="component !== 'Forms'"
+      >
+        <span  style="padding: .25rem 1.5rem;">{{component}}</span>
+      </v-sidebar-item>
+      <v-sidebar-dropdown v-else showArrow title="Forms" style="padding-left: 0.8rem;">
         <v-sidebar-item
           v-for="formComponent in formComponents"
           :key="formComponent"
@@ -19,20 +23,18 @@
           :href="'#/components/' + formComponent"
         >{{ formComponent }}</v-sidebar-item>
       </v-sidebar-dropdown>
-    </v-sidebar-item>
+    </div>
     <div class="divider"></div>
-    <v-sidebar-item>
-      <v-sidebar-dropdown showArrow title="Mixins" style="padding-left: 0.25rem;">
-        <v-sidebar-item
-          dropdown
-          href="#/components/Animations"
-        >Animations</v-sidebar-item>
-        <v-sidebar-item
-          dropdown
-          href="#/components/Tooltips"
-        >Tooltips</v-sidebar-item>
-      </v-sidebar-dropdown>
-    </v-sidebar-item>
+    <v-sidebar-dropdown showArrow title="Mixins" style="padding-left: 0.25rem;">
+      <v-sidebar-item
+        dropdown
+        href="#/components/Animations"
+      >Animations</v-sidebar-item>
+      <v-sidebar-item
+        dropdown
+        href="#/components/Tooltips"
+      >Tooltips</v-sidebar-item>
+    </v-sidebar-dropdown>
     <div class="divider"></div>
     <template v-slot:content>
       <v-sidebar-content>
