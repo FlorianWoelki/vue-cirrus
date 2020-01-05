@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed '21 i \
-/* eslint-disable */ import Vue from "vue"; import App from "./App.vue";Vue.use(install);new Vue({render: h => h(App),}).$mount("#app");
+/* eslint-disable */ /* Remove this line, whenever you are ready to commit */ import Vue from "vue"; import App from "./App.vue";Vue.use(install);new Vue({render: h => h(App),}).$mount("#app");
 ' src/main.js > tmpfile.js;
 mv tmpfile.js src/main.js
 
