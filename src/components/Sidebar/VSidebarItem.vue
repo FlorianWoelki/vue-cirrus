@@ -23,7 +23,12 @@
     </a>
   </div>
   <div v-else>
-    <li class="menu-item">
+    <li :class="[
+      'menu-item',
+      {
+        'selected': this.selected,
+      },
+    ]">
       <a
         :href="href"
         @click="handleClick"
