@@ -15,7 +15,7 @@
 
     <div class="nav-right">
       <v-navbar-item>
-        <router-link to="/components">
+        <router-link to="/components/Avatars">
           <i class="fas fa-file-alt fa-lg" style="margin-right:10px;"></i>
           Docs
         </router-link>
