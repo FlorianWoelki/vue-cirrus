@@ -43,6 +43,18 @@
           </template>
         </v-sidebar>
       </template>
+      <v-row>
+        <v-col c="6" class="u-center">
+          <v-checkbox
+            @change="() => { propsData.noPadding = !propsData.noPadding }"
+          >No Padding</v-checkbox>
+        </v-col>
+        <v-col c="6" class="u-center">
+          <v-checkbox
+            @change="() => { propsData.hoverEffect = !propsData.hoverEffect }"
+          >Hover Effect</v-checkbox>
+        </v-col>
+      </v-row>
     </Playground>
 
     <v-space xlarge />
@@ -71,6 +83,8 @@ export default {
   data() {
     return {
       propsData: {
+        hoverEffect: false,
+        noPadding: false,
       },
       props: [
         ['v-sidebar', 'noPadding', 'boolean', 'false', 'Disable the padding of the content for the sidebar.'],
