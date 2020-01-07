@@ -105,7 +105,7 @@ export default {
   computed: {
     customCode() {
       return `
-<v-sidebar>
+<v-sidebar${this.propsData.noPadding ? ' noPadding' : ''}${this.propsData.hoverEffect ? ' hoverEffect' : ''}>
   <template v-slot:title>
     <h5>Title</h5>
   </template>
