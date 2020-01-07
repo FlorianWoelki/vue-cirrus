@@ -21,7 +21,7 @@
       :customCode="customCode"
     >
       <template v-slot:component>
-        <v-sidebar>
+        <v-sidebar :noPadding="propsData.noPadding" :hoverEffect="propsData.hoverEffect">
           <template v-slot:title>
             <h5>Title</h5>
           </template>
@@ -46,11 +46,13 @@
       <v-row>
         <v-col c="6" class="u-center">
           <v-checkbox
+            id="sidebar-no-padding"
             @change="() => { propsData.noPadding = !propsData.noPadding }"
           >No Padding</v-checkbox>
         </v-col>
         <v-col c="6" class="u-center">
           <v-checkbox
+            id="sidebar-hover-effect"
             @change="() => { propsData.hoverEffect = !propsData.hoverEffect }"
           >Hover Effect</v-checkbox>
         </v-col>
