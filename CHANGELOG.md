@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.2] - 2020-01-08
+
+### 🔨 Added
+- Add click event for dropdown item
+- Add menus, parallax link to readme file
+- Add id property for sidebar dropdown component
+- Add form group input as a class to input field
+- Add devmode script for easy dev setup
+- Add selected status to sidebar dropdown item
+
+### ⚡️ Changed
+- Drop not useful links in readme file
+- Fix usage of disabled prop for checkbox component
+- Fix placeholder empty in input field
+
+
 ## [0.5.11] - 2019-12-13
 
 ### ⚡️ Changed
@@ -480,3 +496,5 @@ All notable changes to this project will be documented in this file.
 [0.3.1]: https://www.npmjs.com/package/vue-cirrus/v/0.3.1
 [0.4.0]: https://www.npmjs.com/package/vue-cirrus/v/0.4.0
 [0.5.0]: https://www.npmjs.com/package/vue-cirrus/v/0.5.0
+[0.5.11]: https://www.npmjs.com/package/vue-cirrus/v/0.5.11
+[0.5.2]: https://www.npmjs.com/package/vue-cirrus/v/0.5.2
