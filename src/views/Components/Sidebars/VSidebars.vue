@@ -95,6 +95,7 @@ export default {
         ['v-sidebar-item', 'forId', 'string', 'treeitem', 'Set the for id for the sidebar item.'],
         ['v-sidebar-item', 'dropdown', 'boolean', 'false', 'Set this sidebar item to a dropdown item.'],
         ['v-sidebar-item', 'selected', 'boolean', 'false', 'Set the selected state of the sidebar item.'],
+        ['v-sidebar-dropdown', 'id', 'string', 'sb-dropdown', 'Set the id for the dropdown menu. You need to change this id, if you want to have multiple dropdown menus.'],
         ['v-sidebar-dropdown', 'showArrow', 'boolean', 'false', 'Shows the arrow for the dropdown menu.'],
         ['v-sidebar-dropdown', 'title', 'string', 'empty', 'Set the title of the dropdown item.'],
       ],
