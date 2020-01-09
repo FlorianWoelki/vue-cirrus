@@ -88,6 +88,7 @@ export default {
         ['v-nav-dropdown', 'animated', 'boolean', 'false', 'Give the dropdown menu a animated style, when opening.'],
         ['v-nav-dropdown-item', 'href', 'string', '#', 'Specify the link for the dropdown item.'],
         ['v-nav-dropdown-item', 'blank', 'boolean', 'false', 'The link will open in a new tab.'],
+        ['v-nav-dropdown-item', '@click', 'function', '() => {}', 'This event will fire, whenever someone clicks on the navbar dropdown item.'],
       ],
     };
   },
