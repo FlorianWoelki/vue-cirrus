@@ -19,13 +19,19 @@
         <v-sidebar-item
           v-for="formComponent in formComponents"
           :key="formComponent"
+          :selected="currentRouteName === formComponent"
           dropdown
           :href="'#/components/' + formComponent"
         >{{ formComponent }}</v-sidebar-item>
       </v-sidebar-dropdown>
     </div>
     <div class="divider"></div>
-    <v-sidebar-dropdown showArrow title="Mixins" style="padding-left: 0.25rem;">
+    <v-sidebar-dropdown
+      id="mixins-dropdown"
+      showArrow
+      title="Mixins"
+      style="padding-left: 0.25rem;"
+    >
       <v-sidebar-item
         dropdown
         href="#/components/Animations"
