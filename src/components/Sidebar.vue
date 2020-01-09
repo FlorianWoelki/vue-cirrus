@@ -35,10 +35,12 @@
       <v-sidebar-item
         dropdown
         href="#/components/Animations"
+        :selected="currentRouteName === 'Animations'"
       >Animations</v-sidebar-item>
       <v-sidebar-item
         dropdown
         href="#/components/Tooltips"
+        :selected="currentRouteName === 'Tooltips'"
       >Tooltips</v-sidebar-item>
     </v-sidebar-dropdown>
     <div class="divider"></div>
