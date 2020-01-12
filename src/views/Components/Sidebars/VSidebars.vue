@@ -28,6 +28,11 @@
           <v-sidebar-item>Item A</v-sidebar-item>
           <v-sidebar-item>Item B</v-sidebar-item>
           <v-sidebar-item>Item C</v-sidebar-item>
+          <v-sidebar-dropdown title="Dropdown" showArrow id="sidebar-demo-dropdown">
+            <v-sidebar-item dropdown>Item D</v-sidebar-item>
+            <v-sidebar-item dropdown>Item E</v-sidebar-item>
+            <v-sidebar-item dropdown>Item F</v-sidebar-item>
+          </v-sidebar-dropdown>
           <template v-slot:content>
             <v-sidebar-content>
               <h4>Sidebar Content</h4>
@@ -113,6 +118,11 @@ export default {
   <v-sidebar-item>Item A</v-sidebar-item>
   <v-sidebar-item>Item B</v-sidebar-item>
   <v-sidebar-item>Item C</v-sidebar-item>
+  <v-sidebar-dropdown title="Dropdown" showArrow id="sidebar-demo-dropdown">
+    <v-sidebar-item dropdown>Item D</v-sidebar-item>
+    <v-sidebar-item dropdown>Item E</v-sidebar-item>
+    <v-sidebar-item dropdown>Item F</v-sidebar-item>
+  </v-sidebar-dropdown>
   <template v-slot:content>
     <v-sidebar-content>
       <h4>Sidebar Content</h4>
