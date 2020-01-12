@@ -21,7 +21,11 @@
       :customCode="customCode"
     >
       <template v-slot:component>
-        <v-sidebar :noPadding="propsData.noPadding" :hoverEffect="propsData.hoverEffect">
+        <v-sidebar
+          style="height: 600px;"
+          :noPadding="propsData.noPadding"
+          :hoverEffect="propsData.hoverEffect"
+        >
           <template v-slot:title>
             <h5>Title</h5>
           </template>
