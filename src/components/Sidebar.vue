@@ -30,7 +30,7 @@
       id="mixins-dropdown"
       showArrow
       title="Mixins"
-      style="padding-left: 0.25rem;"
+      style="padding-left: 0.8rem;"
     >
       <v-sidebar-item
         dropdown
