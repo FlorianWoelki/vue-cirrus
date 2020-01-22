@@ -13,20 +13,16 @@
           >
           <h1>Vue Cirrus</h1>
           <h6 class="font-light">The Vue library for the modern Cirrus CSS framework.</h6>
-          <v-row>
-            <v-col c="12">
-              <router-link to='/components'>
-                <v-btn
-                  animated
-                  pulse
-                  outline
-                  class="u-center"
-                >
-                  Getting Started
-                </v-btn>
-              </router-link>
-            </v-col>
-          </v-row>
+          <v-space xlarge></v-space>
+          <router-link to='/components/Avatars'>
+            <v-btn
+              color="light"
+              outline
+              class="u-center"
+            >
+              Getting Started
+            </v-btn>
+          </router-link>
         </div>
       </div>
     </div>
@@ -46,8 +42,5 @@
 }
 #logo {
   max-width: 200px;
-}
-.head button {
-  margin-top: 100px;
 }
 </style>
