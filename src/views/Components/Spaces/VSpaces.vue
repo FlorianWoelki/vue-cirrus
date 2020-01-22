@@ -54,6 +54,13 @@
       The large space is a bit larger than the normal one.
     </p>
     <LargeSpace />
+
+    <v-space></v-space>
+    <h5 class="font-light no-upper-margin">xLarge Space</h5>
+    <p class="no-upper-margin">
+      The xlarge space is a bit larger than the large one.
+    </p>
+    <XLargeSpace />
   </section>
 </template>
 
@@ -61,12 +68,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import LargeSpace from './Examples/LargeSpace.vue';
+import XLargeSpace from './Examples/XLargeSpace.vue';
 
 export default {
   components: {
     API,
     Playground,
     LargeSpace,
+    XLargeSpace,
   },
 
   data() {
