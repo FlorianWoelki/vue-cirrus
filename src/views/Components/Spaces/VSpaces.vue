@@ -49,17 +49,24 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Large Space</h5>
+    <p class="no-upper-margin">
+      The large space is a bit larger than the normal one.
+    </p>
+    <LargeSpace />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import LargeSpace from './Examples/LargeSpace.vue';
 
 export default {
   components: {
     API,
     Playground,
+    LargeSpace,
   },
 
   data() {
