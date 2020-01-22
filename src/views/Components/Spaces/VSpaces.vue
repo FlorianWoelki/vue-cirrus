@@ -51,14 +51,14 @@
     <h3>Examples</h3>
     <h5 class="font-light no-upper-margin">Large Space</h5>
     <p class="no-upper-margin">
-      The large space is a bit larger than the normal one.
+      The large space is a bit larger than the normal one (top and bottom: 1rem).
     </p>
     <LargeSpace />
 
     <v-space></v-space>
     <h5 class="font-light no-upper-margin">xLarge Space</h5>
     <p class="no-upper-margin">
-      The xlarge space is a bit larger than the large one.
+      The xlarge space is a bit larger than the large one (top and bottom: 2rem).
     </p>
     <XLargeSpace />
   </section>
