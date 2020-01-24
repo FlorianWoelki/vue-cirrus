@@ -45,4 +45,8 @@
 .features-explained .card {
   max-width: 1250px;
 }
+
+.features-explained .divider {
+  margin-top: 5px;
+}
 </style>
