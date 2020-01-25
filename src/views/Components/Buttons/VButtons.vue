@@ -188,6 +188,7 @@ export default {
         loading: '',
       },
       props: [
+        ['v-btn', 'dropdown', 'boolean', 'false', 'Set this button to a dropdown button.'],
         ['v-btn', 'animated', 'boolean', 'false', 'This is a onclick effect and it will animate the button, if a user clicked on the button.'],
         ['v-btn', 'disabled', 'boolean', 'false', 'With this property the button will be disabled.'],
         ['v-btn', 'outline', 'boolean', 'false', 'Apply the outline styling with this property.'],
