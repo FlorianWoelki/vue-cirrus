@@ -53,17 +53,24 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Positions</h5>
+    <p class="no-upper-margin">
+      You can define the position of the dropdown items.
+    </p>
+    <DropdownPositions />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import DropdownPositions from './Examples/DropdownPositions.vue';
 
 export default {
   components: {
     API,
     Playground,
+    DropdownPositions,
   },
 
   data() {
