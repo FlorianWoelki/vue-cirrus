@@ -21,19 +21,21 @@
       :customCode="customCode"
     >
       <template v-slot:component>
-        <v-dropdown>
-          <template v-slot:button>
-            <v-btn dropdown>
-              My Dropdown
-            </v-btn>
-          </template>
-          <v-dropdown-item>Option A</v-dropdown-item>
-          <v-dropdown-item>Option B</v-dropdown-item>
-          <v-dropdown-item>Option C</v-dropdown-item>
-        </v-dropdown>
-        <v-space xlarge></v-space>
-        <v-space xlarge></v-space>
-        <v-space large></v-space>
+        <div class="u-center">
+          <v-dropdown>
+            <template v-slot:button>
+              <v-btn dropdown>
+                My Dropdown
+              </v-btn>
+            </template>
+            <v-dropdown-item>Option A</v-dropdown-item>
+            <v-dropdown-item>Option B</v-dropdown-item>
+            <v-dropdown-item>Option C</v-dropdown-item>
+          </v-dropdown>
+          <v-space xlarge></v-space>
+          <v-space xlarge></v-space>
+          <v-space large></v-space>
+        </div>
       </template>
       <v-row>
         <v-col class="u-center" c="12">
@@ -76,7 +78,6 @@ export default {
       ],
     };
   },
-
 
   computed: {
     customCode() {
