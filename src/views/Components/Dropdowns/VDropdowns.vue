@@ -58,6 +58,13 @@
       You can define the position of the dropdown items.
     </p>
     <DropdownPositions />
+
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Arrows</h5>
+    <p class="no-upper-margin">
+      You can add a dropdown item to the dropdown button text.
+    </p>
+    <DropdownArrows />
   </section>
 </template>
 
@@ -65,12 +72,14 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import DropdownPositions from './Examples/DropdownPositions.vue';
+import DropdownArrows from './Examples/DropdownArrows.vue';
 
 export default {
   components: {
     API,
     Playground,
     DropdownPositions,
+    DropdownArrows,
   },
 
   data() {
