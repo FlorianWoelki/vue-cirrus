@@ -41,9 +41,9 @@ export default {
 
   computed: {
     styleImage() {
-      return {
+      return this.src != null ? {
         backgroundImage: `url(${this.src})`,
-      };
+      } : {};
     },
   },
 };
