@@ -6,6 +6,10 @@
         blank
       >#</v-link>
       {{$route.params.name}}
+
+      <router-link to="/" style="float: right">
+        <i class="fas fa-home"></i>
+      </router-link>
     </h1>
 
     <component :is="currentView"></component>
