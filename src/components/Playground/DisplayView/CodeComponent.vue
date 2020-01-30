@@ -35,7 +35,7 @@ export default {
         } else if (entry[1] === true) {
           validProps += `\n  ${entry[0]}`;
           length += 1;
-        } else if (entry[1] !== '' && entry[1] !== false) {
+        } else if (entry[1] !== null && entry[1] !== '' && entry[1] !== false) {
           validProps += `\n  ${entry[1]}`;
           length += 1;
         }
