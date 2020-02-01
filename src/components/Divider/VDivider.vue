@@ -1,18 +1,25 @@
 <template>
-  <div :style="vertical ? { position: 'relative', height: '300px' } : null">
+  <div v-if="vertical" :style="{ position: 'relative', height: '300px' }">
     <div
       :class="[
         {
-          'divider': !vertical,
           'divider-short': short,
           'divider--v': vertical,
           'dark': dark,
         },
       ]"
-      :style="vertical ? { height: '100%' } : null"
-      :data-content="vertical ? content : null"
+      :style="{ height: '100%' }"
+      :data-content="content"
     ></div>
   </div>
+  <div v-else :class="[
+    'divider',
+    {
+      'divider-short': short,
+      'divider--v': vertical,
+      'dark': dark,
+    },
+  ]"></div>
 </template>
 
 <script>
