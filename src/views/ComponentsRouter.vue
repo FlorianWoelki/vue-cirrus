@@ -51,3 +51,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.fas.fa-home {
+  font-size: 34px;
+}
+</style>
