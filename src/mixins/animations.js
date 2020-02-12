@@ -4,6 +4,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    paused: {
+      type: Boolean,
+      default: false,
+    },
     fadeIn: {
       type: Boolean,
       default: false,
@@ -43,6 +47,7 @@ export default {
         bounceIn: this.bounceIn,
         bounce: this.bounce,
         pulse: this.pulse,
+        paused: this.paused,
         fadeIn: this.fadeIn,
         'hover-grow': this.hoverGrow,
         'loading loading-left': this.loadingLeft,
