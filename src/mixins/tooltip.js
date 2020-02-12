@@ -4,33 +4,9 @@ export default {
       type: String,
       default: null,
     },
-    tooltipTopLeft: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipTopRight: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipBottom: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipBottomLeft: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipBottomRight: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipLeft: {
-      type: Boolean,
-      default: false,
-    },
-    tooltipRight: {
-      type: Boolean,
-      default: false,
+    tooltipPosition: {
+      type: String,
+      default: null,
     },
   },
 
@@ -38,13 +14,13 @@ export default {
     tooltipMixins() {
       return {
         tooltip: this.tooltipText !== null,
-        'tooltip--top-left': this.tooltipTopLeft,
-        'tooltip--top-right': this.tooltipTopRight,
-        'tooltip--bottom': this.tooltipBottom,
-        'tooltip--bottom-left': this.tooltipBottomLeft,
-        'tooltip--bottom-right': this.tooltipBottomRight,
-        'tooltip--left': this.tooltipLeft,
-        'tooltip--right': this.tooltipRight,
+        'tooltip--top-left': this.tooltipPosition === 'topLeft',
+        'tooltip--top-right': this.tooltipPosition === 'topRight',
+        'tooltip--bottom': this.tooltipPosition === 'bottom',
+        'tooltip--bottom-left': this.tooltipPosition === 'bottomLeft',
+        'tooltip--bottom-right': this.tooltipPosition === 'bottomRight',
+        'tooltip--left': this.tooltipPosition === 'left',
+        'tooltip--right': this.tooltipPosition === 'right',
       };
     },
     tooltipData() {
