@@ -8,50 +8,26 @@ export default {
       type: Boolean,
       default: false,
     },
-    fadeIn: {
-      type: Boolean,
-      default: false,
-    },
-    bounceIn: {
-      type: Boolean,
-      default: false,
-    },
-    bounce: {
-      type: Boolean,
-      default: false,
-    },
-    pulse: {
-      type: Boolean,
-      default: false,
-    },
-    hoverGrow: {
-      type: Boolean,
-      default: false,
-    },
-    loadingLeft: {
-      type: Boolean,
-      default: false,
-    },
-    loadingRight: {
-      type: Boolean,
-      default: false,
+    animation: {
+      type: String,
+      default: null,
     },
   },
 
   computed: {
     animationsMixins() {
       return {
-        animated: this.fadeIn || this.bounceIn || this.bounce
-                || this.pulse || this.loadingLeft || this.loadingRight,
+        animated: this.animation === 'fadeIn' || this.animation === 'bounceIn' || this.animation === 'bounce'
+                || this.animation === 'pulse' || this.animation === 'loadingLeft' || this.animation === 'loadingRight',
         'infinite alternate': this.infinite,
-        bounceIn: this.bounceIn,
-        bounce: this.bounce,
-        pulse: this.pulse,
+        bounceIn: this.animation === 'bounceIn',
+        bounce: this.animation === 'bounce',
+        pulse: this.animation === 'pulse',
         paused: this.paused,
-        fadeIn: this.fadeIn,
-        'hover-grow': this.hoverGrow,
-        'loading loading-left': this.loadingLeft,
-        'loading loading-right': this.loadingRight,
+        fadeIn: this.animation === 'fadeIn',
+        'hover-grow': this.animation === 'hoverGrow',
+        'loading loading-left': this.animation === 'loadingLeft',
+        'loading loading-right': this.animation === 'loadingRight',
       };
     },
   },
