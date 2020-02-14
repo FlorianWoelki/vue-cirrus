@@ -22,13 +22,7 @@
         <v-btn
           class="u-center"
           color="primary"
-          :pulse="propsData.animation === 'pulse'"
-          :fadeIn="propsData.animation === 'fadeIn'"
-          :bounceIn="propsData.animation === 'bounceIn'"
-          :bounce="propsData.animation === 'bounce'"
-          :loadingLeft="propsData.animation === 'loadingLeft'"
-          :loadingRight="propsData.animation === 'loadingRight'"
-          :hoverGrow="propsData.animation === 'hoverGrow'"
+          :animation="propsData.animation"
           :infinite="propsData.infinite"
         >Customize Me</v-btn>
       </template>
@@ -104,13 +98,8 @@ export default {
       },
       props: [
         ['animation', 'infinite', 'boolean', 'false', 'The specified animation will be infinite.'],
-        ['animation', 'fadeIn', 'boolean', 'false', 'Enable fade in animation. It will go from 0 opacity to 100 opacity.'],
-        ['animation', 'bounceIn', 'boolean', 'false', 'Bounces in like a ball animation.'],
-        ['animation', 'bounce', 'boolean', 'false', 'Bounces like a ball animation.'],
-        ['animation', 'pulse', 'boolean', 'false', 'Heart pulsing animation'],
-        ['animation', 'hoverGrow', 'boolean', 'false', 'When a users hovers on the component it will grow.'],
-        ['animation', 'loadingLeft', 'boolean', 'false', 'Enable the loading circle on the left hand side.'],
-        ['animation', 'loadingRight', 'boolean', 'false', 'Enable the loading circle on the right hand side.'],
+        ['animation', 'paused', 'boolean', 'false', 'Pause the current running animation on the component.'],
+        ['animation', 'animation', 'boolean', 'false', 'Set the animation (fadeIn, bounceIn, bounce, pulse, loadingLeft, loadingRight, hoverGrow).'],
       ],
     };
   },
