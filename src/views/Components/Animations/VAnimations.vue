@@ -99,7 +99,7 @@ export default {
       props: [
         ['animation', 'infinite', 'boolean', 'false', 'The specified animation will be infinite.'],
         ['animation', 'paused', 'boolean', 'false', 'Pause the current running animation on the component.'],
-        ['animation', 'animation', 'boolean', 'false', 'Set the animation (fadeIn, bounceIn, bounce, pulse, loadingLeft, loadingRight, hoverGrow).'],
+        ['animation', 'animation', 'string', 'null', 'Set the animation (fadeIn, bounceIn, bounce, pulse, loadingLeft, loadingRight, hoverGrow).'],
       ],
     };
   },
