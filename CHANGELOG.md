@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.21] - 2020-02-14
+
+### 🔨 Added
+- Add paused prop to animations mixin
+
+### ⚡️ Changed
+- Fix null image in parallax component
+- Fix empty div in horizontal divider
+- Refactor tooltips & animations usage
+
+
 ## [0.5.2] - 2020-01-08
 
 ### 🔨 Added
@@ -498,3 +509,4 @@ All notable changes to this project will be documented in this file.
 [0.5.0]: https://www.npmjs.com/package/vue-cirrus/v/0.5.0
 [0.5.11]: https://www.npmjs.com/package/vue-cirrus/v/0.5.11
 [0.5.2]: https://www.npmjs.com/package/vue-cirrus/v/0.5.2
+[0.5.21]: https://www.npmjs.com/package/vue-cirrus/v/0.5.21
