@@ -26,13 +26,7 @@
           <v-btn
             color="primary"
             :tooltipText="propsData.tooltipText"
-            :tooltipTopLeft="propsData.position === 'top left'"
-            :tooltipTopRight="propsData.position === 'top right'"
-            :tooltipBottom="propsData.position === 'bottom'"
-            :tooltipBottomLeft="propsData.position === 'bottom left'"
-            :tooltipBottomRight="propsData.position === 'bottom right'"
-            :tooltipLeft="propsData.position === 'left'"
-            :tooltipRight="propsData.position === 'right'"
+            :tooltipPosition="propsData.position"
           >Hover Me</v-btn>
         </div>
       </template>
@@ -51,29 +45,29 @@
               </v-btn>
             </template>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Top</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >top</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >TopLeft</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >topLeft</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >TopRight</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >topRight</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Bottom</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >bottom</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >BottomLeft</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >bottomLeft</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >BottomRight</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >bottomRight</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Left</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >left</v-dropdown-item>
             <v-dropdown-item
-              @click="(event) => { propsData.position = event.srcElement.innerHTML.toLowerCase() }"
-            >Right</v-dropdown-item>
+              @click="(event) => { propsData.position = event.srcElement.innerHTML }"
+            >right</v-dropdown-item>
           </v-dropdown>
         </v-col>
       </v-row>
@@ -114,13 +108,7 @@ export default {
       },
       props: [
         ['tooltip mixin', 'tooltipText', 'string', 'empty', 'This will be the text displayed in the text.'],
-        ['tooltip mixin', 'tooltipTopLeft', 'boolean', 'false', 'Position of the tooltip will be on the top left.'],
-        ['tooltip mixin', 'tooltipTopRight', 'boolean', 'false', 'Position of the tooltip will be on the top right.'],
-        ['tooltip mixin', 'tooltipBottom', 'boolean', 'false', 'Position of the tooltip will be on the bottom.'],
-        ['tooltip mixin', 'tooltipBottomLeft', 'boolean', 'false', 'Position of the tooltip will be on the bottom left.'],
-        ['tooltip mixin', 'tooltipBottomRight', 'boolean', 'false', 'Position of the tooltip will be on the bottom right.'],
-        ['tooltip mixin', 'tooltipLeft', 'boolean', 'false', 'Position of the tooltip will be on the left.'],
-        ['tooltip mixin', 'tooltipRight', 'boolean', 'false', 'Position of the tooltip will be on the right.'],
+        ['tooltip mixin', 'tooltipPosition', 'string', 'null', 'Set the position of the tooltip (topLeft, topRight, bottom, right, left, bottomLeft, bottomRight).'],
       ],
     };
   },
