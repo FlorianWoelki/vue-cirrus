@@ -43,6 +43,8 @@
             color="link"
             style="margin-right:12px;"
             @click="showFeedback"
+            :animation="!disabled ? 'pulse' : null"
+            infinite
           >Login</v-btn>
         </v-col>
       </v-row>
@@ -71,21 +73,7 @@ export default {
     },
 
     checkInput() {
-      if (this.email.length > 0 && this.password.length > 0) {
-        document.getElementById('login-btn').classList.add('animated');
-        document.getElementById('login-btn').classList.add('infinite');
-        document.getElementById('login-btn').classList.add('alternate');
-        document.getElementById('login-btn').classList.add('pulse');
-
-        this.disabled = false;
-      } else {
-        document.getElementById('login-btn').classList.remove('animated');
-        document.getElementById('login-btn').classList.remove('infinite');
-        document.getElementById('login-btn').classList.remove('alternate');
-        document.getElementById('login-btn').classList.remove('pulse');
-
-        this.disabled = true;
-      }
+      this.disabled = this.email.length === 0 || this.password.length === 0;
     },
   },
 };
