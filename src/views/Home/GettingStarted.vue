@@ -41,14 +41,29 @@
 
     <v-row level>
       <v-col c="5">
-        <h5>Step 3</h5>
+        <h5>Step 3a</h5>
         <v-divider short />
         <h6 class="font-alt font-normal">
-          Import Vue Cirrus in your main.js file.
+          Import completely Vue Cirrus in your main.js file.
         </h6>
       </v-col>
       <v-col c="7">
         <v-code lang="JavaScript" copyable>{{ jsCode }}</v-code>
+      </v-col>
+    </v-row>
+
+    <v-space></v-space>
+
+    <v-row level>
+      <v-col c="5">
+        <h5>Step 3b</h5>
+        <v-divider short />
+        <h6 class="font-alt font-normal">
+          Just import your needed components.
+        </h6>
+      </v-col>
+      <v-col c="7">
+        <v-code lang="JavaScript" copyable>{{ importOneComponentCode }}</v-code>
       </v-col>
     </v-row>
   </section>
@@ -58,6 +73,11 @@
 export default {
   data() {
     return {
+      importOneComponentCode: `
+import { VNavbar } from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VNavbar);`,
       jsCode: `
 import VueCirrus from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
