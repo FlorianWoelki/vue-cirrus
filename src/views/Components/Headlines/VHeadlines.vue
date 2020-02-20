@@ -69,17 +69,24 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Sizes</h5>
+    <p class="no-upper-margin">
+      There are 4 different sizes of Headlines you can use.
+    </p>
+    <HeadlineSizes />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import HeadlineSizes from './Examples/HeadlineSizes.vue';
 
 export default {
   components: {
     API,
     Playground,
+    HeadlineSizes,
   },
 
   data() {
