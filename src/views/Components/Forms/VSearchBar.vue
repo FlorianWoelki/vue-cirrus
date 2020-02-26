@@ -15,8 +15,8 @@
     <v-space />
     <Playground
       noTitle
-      href="/#/components/InputField/#!"
-      component="v-input-field"
+      href="/#/components/SearchBar/#!"
+      component="v-search-bar"
       :componentProps="propsData"
     >
       <template v-slot:component>
