@@ -40,7 +40,7 @@ npm install vue-cirrus
 <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
 ```
 
-3. Import all vue cirrus components and install them in your main.js file
+3a. Import all Vue-Cirrus components by doing:
 
 ```javascript
 import VueCirrus from 'vue-cirrus';
@@ -49,10 +49,19 @@ import 'vue-cirrus/dist/vue-cirrus.css';
 Vue.use(VueCirrus);
 ```
 
+3b. Or simply import single components of Vue-Cirrus by doing:
+
+```javascript
+import { VNavbar } from 'vue-cirrus';
+import 'vue-cirrus/dist/vue-cirrus.css';
+
+Vue.use(VNavbar);
+```
+
 4. Test, if it works by including the following in a vue file
 
 ```html
-<v-btn animated loadingLeft>Button Test</v-btn>
+<v-btn animated animation="loadingLeft">Button Test</v-btn>
 ```
 
 ## 🔮 Framework Components
