@@ -5,8 +5,8 @@
       in your project.
     </p>
 
-    <v-space xlarge />
-    <h5>Container</h5>
+    <v-space large></v-space>
+    <h4>Container</h4>
     <p class="no-upper-margin">
       You can simply use the <kbd>v-container</kbd> to containerize your content.
       The black background color is the container.

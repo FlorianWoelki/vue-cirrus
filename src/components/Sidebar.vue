@@ -44,6 +44,13 @@
       >Tooltips</v-sidebar-item>
     </v-sidebar-dropdown>
     <div class="divider"></div>
+    <v-sidebar-item
+      href="#/components/Util"
+      :selected="currentRouteName === 'Util'"
+    >
+      <span style="padding: .25rem 1.5rem;">Util</span>
+    </v-sidebar-item>
+    <div class="divider"></div>
     <template v-slot:content>
       <v-sidebar-content>
         <slot></slot>
