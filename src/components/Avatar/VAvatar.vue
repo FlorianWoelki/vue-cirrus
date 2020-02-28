@@ -4,10 +4,10 @@
       animationsMixins,
       'avatar',
       {
-        'avatar--xsmall': xsmall,
-        'avatar--small': small,
-        'avatar--large': large,
-        'avatar--xlarge': xlarge,
+        'avatar--xsmall': size === 'xsmall',
+        'avatar--small': size === 'small',
+        'avatar--large': size === 'large',
+        'avatar--xlarge': size === 'xlarge',
       },
     ]"
     :data-text="text"
@@ -44,21 +44,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    xsmall: {
-      type: Boolean,
-      default: false,
-    },
-    small: {
-      type: Boolean,
-      default: false,
-    },
-    large: {
-      type: Boolean,
-      default: false,
-    },
-    xlarge: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: null,
     },
   },
 };
