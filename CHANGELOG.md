@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.22] - 2020-02-28
+
+### 🔨 Added
+- Add single way of installing components to readme
+
+### ⚡️ Changed
+- Avatar size property is now a single string
+- Fix Navbar disableMobileNavbar is now completly working
+
+
 ## [0.5.21] - 2020-02-14
 
 ### 🔨 Added
@@ -510,3 +520,4 @@ All notable changes to this project will be documented in this file.
 [0.5.11]: https://www.npmjs.com/package/vue-cirrus/v/0.5.11
 [0.5.2]: https://www.npmjs.com/package/vue-cirrus/v/0.5.2
 [0.5.21]: https://www.npmjs.com/package/vue-cirrus/v/0.5.21
+[0.5.22]: https://www.npmjs.com/package/vue-cirrus/v/0.5.22
