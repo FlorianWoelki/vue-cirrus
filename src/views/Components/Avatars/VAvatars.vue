@@ -25,10 +25,7 @@
           :text="propsData.text"
           :src="propsData.src"
           :padded="propsData.padded"
-          :xsmall="propsData.size === 'xsmall'"
-          :small="propsData.size === 'small'"
-          :large="propsData.size === 'large'"
-          :xlarge="propsData.size === 'xlarge'"
+          :size="propsData.size"
         />
       </template>
       <v-row>
@@ -121,10 +118,7 @@ export default {
         ['v-avatar', 'src', 'string', 'empty', 'This is the image source of the avatar.'],
         ['v-avatar', 'text', 'string', 'empty', 'A placeholder text which will be placed in the avatar.'],
         ['v-avatar', 'padded', 'boolean', 'false', 'Enable padding around avatar.'],
-        ['v-avatar', 'xsmall', 'boolean', 'false', 'This size is for xsmall avatars.'],
-        ['v-avatar', 'small', 'boolean', 'false', 'This size is for small avatars.'],
-        ['v-avatar', 'large', 'boolean', 'false', 'This size is for large avatars.'],
-        ['v-avatar', 'xlarge', 'boolean', 'false', 'This size is for xlarge avatars.'],
+        ['v-avatar', 'size', 'string', 'null', 'Set the size of the avatar (xsmall, small, large, xlarge).'],
       ],
     };
   },
