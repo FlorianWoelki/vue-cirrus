@@ -1,7 +1,7 @@
 <template>
   <section class="checkbox-component">
     <p class="no-upper-margin">
-      You can create multiple radio buttons to let the user choose what
+      You can create multiple <kbd>v-radio-button</kbd>s to let the user choose what
       option he will use.
     </p>
 
