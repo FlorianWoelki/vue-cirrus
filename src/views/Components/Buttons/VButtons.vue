@@ -207,4 +207,7 @@ export default {
 .btn-example-section button {
   margin-top: 10px;
 }
+button.outline-fix {
+  color: #737373 !important;
+}
 </style>
