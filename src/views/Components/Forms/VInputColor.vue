@@ -1,7 +1,7 @@
 <template>
   <section class="date-picker-component">
     <p class="no-upper-margin">
-      Use a custom input color form to let the user select the color he wants.
+      Use a custom <kbd>v-input-color</kbd> form to let the user select the color he wants.
     </p>
 
     <v-space xlarge />
