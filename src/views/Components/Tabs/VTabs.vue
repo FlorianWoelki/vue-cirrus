@@ -101,17 +101,27 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Mode</h5>
+    <p class="no-upper-margin">
+      You can adjust the style and therefore the mode of
+      the tabs by using the <kbd>mode</kbd> property.
+    </p>
+    <TabsModes />
+
+    <v-space />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import TabsModes from './Examples/TabsModes.vue';
 
 export default {
   components: {
     API,
     Playground,
+    TabsModes,
   },
 
   data() {
