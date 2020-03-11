@@ -1,6 +1,6 @@
 <template>
   <section class="tabs-component">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       You can use tabs with the <kbd>v-tab</kbd> component. Simply specify how many
       tabs you want to have and Vue-Cirrus fill in it for you.
     </p>

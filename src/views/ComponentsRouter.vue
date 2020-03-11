@@ -56,4 +56,8 @@ export default {
 .fas.fa-home {
   font-size: 34px;
 }
+
+.fix-text-overflow {
+  margin-right: 25%;
+}
 </style>

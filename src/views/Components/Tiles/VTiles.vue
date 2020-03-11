@@ -1,6 +1,6 @@
 <template>
   <section class="tile-component">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       With the <kbd>v-tile</kbd> component, you can create easy and minmizing
       cards for displaying the download progress or something else.
     </p>

@@ -1,6 +1,6 @@
 <template>
   <section class="tags-component">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       With the <kbd>v-tag</kbd> component, you can display some colorful
       simple messages on your website. For example, this could be a version tag.
     </p>

@@ -1,6 +1,6 @@
 <template>
   <section class="avatars-component">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       The <kbd>v-avatar</kbd> component is used for replacing circular profile
       images. This component will allow you to dynamically size the avatar and
       set a default text, if there is no image.

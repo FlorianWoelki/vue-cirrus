@@ -1,6 +1,6 @@
 <template>
   <section class="tooltips-mixin">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       You can use <kbd>tooltips</kbd> for conveying information when a
       user hovers over an element.
       You can apply this mixin to almost every Vue-Cirrus component.

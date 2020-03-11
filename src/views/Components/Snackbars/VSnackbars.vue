@@ -1,6 +1,6 @@
 <template>
   <section class="snackbar-component">
-    <p class="no-upper-margin">
+    <p class="no-upper-margin fix-text-overflow">
       With the <kbd>v-snackbar</kbd> you can notify the user for taking
       a action. For example, if someone does something successful, you can
       display that easily with a notify information.
