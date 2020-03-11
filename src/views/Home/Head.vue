@@ -13,7 +13,8 @@
           >
           <h1>Vue Cirrus</h1>
           <h6 class="font-light">The Vue library for the modern Cirrus CSS framework.</h6>
-          <v-space xlarge></v-space>
+          <a href="https://www.npmjs.com/package/vue-cirrus"><img src="https://badge.fury.io/js/vue-cirrus.svg"></a>
+          <v-space></v-space>
           <router-link to='/components/Avatars'>
             <v-btn
               color="light"
@@ -32,6 +33,10 @@
 <style>
 .head {
   margin-bottom: 120px;
+}
+iframe {
+  border: none;
+  box-shadow: none;
 }
 .head #splash-img {
   background: url('../../assets/head-bg.jpg');
