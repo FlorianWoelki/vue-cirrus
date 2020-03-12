@@ -60,4 +60,12 @@ export default {
 .fix-text-overflow {
   margin-right: 25%;
 }
+
+h5.font-light {
+  margin-top: 20px;
+}
+
+.no-upper-margin {
+  margin-top: 0;
+}
 </style>
