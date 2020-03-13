@@ -1,6 +1,6 @@
 <template>
   <input
-    v-if="noControl"
+    v-if="formGroup"
     :data-tooltip="tooltipData"
     :type="type"
     :class="inputClasses"
@@ -67,7 +67,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    noControl: {
+    formGroup: {
       type: Boolean,
       default: false,
     },
@@ -137,7 +137,7 @@ export default {
         this.size ? `input-${this.size}` : null,
         {
           select: this.select,
-          'form-group-input': this.noControl,
+          'form-group-input': this.formGroup,
           'input-focused': this.focused,
           'text-success input-success': this.success,
           'text-danger input-error': this.error,
