@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.23] - 2020-03-18
+
+### 🔨 Added
+- Add 'formGroup' property to button component
+
+### ⚡️ Changed
+- Rename noControl to formGroup in input field component
+
+
 ## [0.5.22] - 2020-02-28
 
 ### 🔨 Added
@@ -521,3 +530,4 @@ All notable changes to this project will be documented in this file.
 [0.5.2]: https://www.npmjs.com/package/vue-cirrus/v/0.5.2
 [0.5.21]: https://www.npmjs.com/package/vue-cirrus/v/0.5.21
 [0.5.22]: https://www.npmjs.com/package/vue-cirrus/v/0.5.22
+[0.5.23]: https://www.npmjs.com/package/vue-cirrus/v/0.5.23
