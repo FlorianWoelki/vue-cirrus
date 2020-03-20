@@ -83,7 +83,7 @@ export default {
         ['v-input-field', 'placeholder', 'string', 'empty', 'Set the placeholder of the input field.'],
         ['v-input-field', 'type', 'string', 'text', 'Set the type of the input field.'],
         ['v-input-field', 'select', 'boolean', 'false', 'Set the select state of the input field.'],
-        ['v-input-field', 'noControl', 'boolean', 'false', 'Input field will not be controlled.'],
+        ['v-input-field', 'formGroup', 'boolean', 'false', 'Input field will not be controlled.'],
         ['v-input-field', 'pilled', 'boolean', 'false', 'Set the form of the input field to a pilled one.'],
         ['v-input-field', 'input', 'function', '() => {}', 'Catch the input event of the given input field.'],
       ],
