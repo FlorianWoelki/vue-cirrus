@@ -12,7 +12,6 @@
         'btn--circle': this.circle,
         'btn-dropdown': this.dropdown,
         'u-no-margin': this.dropdown,
-        'form-group-btn': this.formGroup,
       },
     ]"
     :data-tooltip="tooltipData"
@@ -34,10 +33,6 @@ export default {
   ],
 
   props: {
-    formGroup: {
-      type: Boolean,
-      default: false,
-    },
     dropdown: {
       type: Boolean,
       default: false,
