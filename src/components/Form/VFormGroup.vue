@@ -17,10 +17,10 @@ export default {
     for (let i = 0; i < nodes.length; i += 1) {
       for (let j = 0; j < nodes[i].childNodes.length; j += 1) {
         const child = nodes[i].childNodes[j];
-        if (child.className.toLowerCase() === 'input-control') {
+        if (child.className && child.className.toLowerCase() === 'input-control') {
           child.className += ' form-group-input';
         }
-        if (child.nodeName.toLowerCase() === 'button') {
+        if (child.nodeName && child.nodeName.toLowerCase() === 'button') {
           child.className += ' form-group-btn';
         }
       }
