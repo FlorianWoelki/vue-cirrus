@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer-section" title="© 2019 Vue Cirrus">
+  <v-footer class="footer-section" title="© 2020 Vue Cirrus">
     <v-divider short class="u-center"/>
 
     <p>
