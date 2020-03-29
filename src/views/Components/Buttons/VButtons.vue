@@ -194,7 +194,6 @@ export default {
         ['v-btn', 'outline', 'boolean', 'false', 'Apply the outline styling with this property.'],
         ['v-btn', 'pilled', 'boolean', 'false', 'This will turn the button to a round shaped button.'],
         ['v-btn', 'circle', 'boolean', 'false', 'This will turn the button to a circle shaped button.'],
-        ['v-btn', 'formGroup', 'boolean', 'false', 'Combines with a input field in a form group.'],
         ['v-btn', 'color', 'string', 'null', 'Set the color of the button (primary, transparent, light, dark, black, info, link, success, warning, danger).'],
         ['v-btn', 'size', 'string', 'null', 'Set the size of the button (tiny, small, large, xlarge).'],
         ['v-btn-group', 'filled', 'boolean', 'false', 'Fill all the buttons equally on one line.'],
