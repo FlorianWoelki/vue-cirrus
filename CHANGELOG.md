@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.24] - 2020-03-29
+
+### ⚡️ Changed
+- Remove formGroup prop from v-button component
+- Fixed toLowerCase error on v-form-group component
+
 ## [0.5.23] - 2020-03-18
 
 ### 🔨 Added
@@ -531,3 +537,4 @@ All notable changes to this project will be documented in this file.
 [0.5.21]: https://www.npmjs.com/package/vue-cirrus/v/0.5.21
 [0.5.22]: https://www.npmjs.com/package/vue-cirrus/v/0.5.22
 [0.5.23]: https://www.npmjs.com/package/vue-cirrus/v/0.5.23
+[0.5.24]: https://www.npmjs.com/package/vue-cirrus/v/0.5.24
