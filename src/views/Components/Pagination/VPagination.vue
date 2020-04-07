@@ -70,6 +70,8 @@
       keyword.
     </p>
     <DisabledItems />
+
+    <v-space />
   </section>
 </template>
 
