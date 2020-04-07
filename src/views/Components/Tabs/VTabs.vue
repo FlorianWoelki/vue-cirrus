@@ -108,6 +108,20 @@
     </p>
     <TabsModes />
 
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Size</h5>
+    <p class="no-upper-margin">
+      Easily adjust the size of the tabs.
+    </p>
+    <TabsSize />
+
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Position</h5>
+    <p class="no-upper-margin">
+      You can set the <kbd>position</kbd> for the tab items.
+    </p>
+    <TabsPosition />
+
     <v-space />
   </section>
 </template>
@@ -116,12 +130,16 @@
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import TabsModes from './Examples/TabsModes.vue';
+import TabsSize from './Examples/TabsSize.vue';
+import TabsPosition from './Examples/TabsPosition.vue';
 
 export default {
   components: {
     API,
     Playground,
     TabsModes,
+    TabsSize,
+    TabsPosition,
   },
 
   data() {
