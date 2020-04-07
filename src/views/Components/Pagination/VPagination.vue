@@ -49,17 +49,44 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
+    <h5 class="font-light no-upper-margin">Bordered</h5>
+    <p class="no-upper-margin">
+      You can set the border of the pagination component.
+    </p>
+    <BorderedPagination />
+
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Selected Items</h5>
+    <p class="no-upper-margin">
+      You can simply apply the <kbd>selected</kbd> prop to select a pagination
+      item.
+    </p>
+    <SelectedItems />
+
+    <v-space xlarge />
+    <h5 class="font-light no-upper-margin">Disabled Items</h5>
+    <p class="no-upper-margin">
+      You can disable pagination items by simply applying the <kbd>disabled</kbd>
+      keyword.
+    </p>
+    <DisabledItems />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import BorderedPagination from './Examples/BorderedPagination.vue';
+import DisabledItems from './Examples/DisabledItems.vue';
+import SelectedItems from './Examples/SelectedItems.vue';
 
 export default {
   components: {
     API,
     Playground,
+    BorderedPagination,
+    DisabledItems,
+    SelectedItems,
   },
 
   data() {
