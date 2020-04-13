@@ -6,7 +6,7 @@
     :class="inputClasses"
     :placeholder="placeholder"
     :value="value"
-    @input="$emit('input', $event.target.value)"
+    @input="$emit('input', $event, $event.target.value)"
   />
   <div
     v-else-if="!select"
@@ -30,7 +30,7 @@
         :class="inputClasses"
         :placeholder="placeholder"
         :value="value"
-        @input="$emit('input', $event.target.value)"
+        @input="$emit('input', $event, $event.target.value)"
       />
       <slot></slot>
     </div>
