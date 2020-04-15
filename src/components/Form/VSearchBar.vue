@@ -13,7 +13,8 @@
       :data-tooltip="tooltipData"
       :placeholder="placeholder"
       :value="value"
-      @input="$emit('input', $event.target.value)"
+      @input="$emit('input', $event, $event.target.value)"
+      @keyup="$emit('keyup', $event)"
     >
     <v-btn
       v-if="!noButton"
