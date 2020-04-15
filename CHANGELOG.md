@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.26] - 2020-04-15
+
+### ⚡️ Changed
+- HOTFIX: input field v-model and input event
+- HOTFIX: search bar v-model and input event
+
 ## [0.5.25] - 2020-04-15
 
 ### 🔨 Added
@@ -547,3 +553,4 @@ All notable changes to this project will be documented in this file.
 [0.5.23]: https://www.npmjs.com/package/vue-cirrus/v/0.5.23
 [0.5.24]: https://www.npmjs.com/package/vue-cirrus/v/0.5.24
 [0.5.25]: https://www.npmjs.com/package/vue-cirrus/v/0.5.25
+[0.5.26]: https://www.npmjs.com/package/vue-cirrus/v/0.5.26
