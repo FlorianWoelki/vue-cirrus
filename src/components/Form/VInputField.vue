@@ -5,8 +5,7 @@
     :type="type"
     :class="inputClasses"
     :placeholder="placeholder"
-    :value="value"
-    @input="$emit('input', $event, $event.target.value)"
+    @input="emitInput"
     @keyup="$emit('keyup', $event)"
   />
   <div
@@ -30,8 +29,7 @@
         :type="type"
         :class="inputClasses"
         :placeholder="placeholder"
-        :value="value"
-        @input="$emit('input', $event, $event.target.value)"
+        @input="emitInput"
         @keyup="$emit('keyup', $event)"
       />
       <slot></slot>
@@ -64,6 +62,17 @@ export default {
     Tooltip,
   ],
 
+  model: {
+    event: 'model-change',
+  },
+
+  methods: {
+    emitInput(event) {
+      this.$emit('model-change', event.target.value);
+      this.$emit('input', event, event.target.value);
+    },
+  },
+
   props: {
     pilled: {
       type: Boolean,
@@ -84,10 +93,6 @@ export default {
     placeholder: {
       type: String,
       default: null,
-    },
-    value: {
-      type: String,
-      default: '',
     },
     title: {
       type: String,
