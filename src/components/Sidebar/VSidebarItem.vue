@@ -12,7 +12,7 @@
     <a
       class="sidebar-link"
       :href="href"
-      @click="handleClick"
+      @click="$emit('click', $event)"
     >
       <label
         :for="forId"
@@ -31,7 +31,7 @@
     ]">
       <a
         :href="href"
-        @click="handleClick"
+        @click="$emit('click', $event)"
       >
         <slot></slot>
       </a>
@@ -57,12 +57,6 @@ export default {
     selected: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      this.$emit('click', event);
     },
   },
 };

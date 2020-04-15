@@ -48,9 +48,6 @@ export default {
   },
 
   methods: {
-    handleClick(event) {
-      this.$emit('click', event);
-    },
     handleClose(event) {
       if (!this.disableCloseFunction) {
         const buttonElement = event.srcElement;

@@ -8,7 +8,7 @@
     <a
       :disabled="disabled"
       :href="href"
-      @click="handleClick($event)"
+      @click="$emit('click', $event)"
     >
       <slot></slot>
     </a>
@@ -29,12 +29,6 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      this.$emit('click', event);
     },
   },
 };

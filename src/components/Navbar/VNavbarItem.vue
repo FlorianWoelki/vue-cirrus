@@ -13,7 +13,7 @@
   >
     <a
       :href="href"
-      @click="handleClick($event)"
+      @click="$emit('click', $event)"
       :target="blank ? '_blank' : ''"
     >
       <slot></slot>
@@ -47,12 +47,6 @@ export default {
     href: {
       type: String,
       default: '',
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      this.$emit('click', event);
     },
   },
 };

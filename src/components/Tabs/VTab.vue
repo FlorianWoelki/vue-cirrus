@@ -7,7 +7,7 @@
   ]">
     <a
       :href="href"
-      @click="handleClick($event)"
+      @click="$emit('click', $event)"
     >
       <slot></slot>
     </a>
@@ -30,12 +30,6 @@ export default {
     href: {
       type: String,
       default: '#!',
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      this.$emit('click', event);
     },
   },
 };

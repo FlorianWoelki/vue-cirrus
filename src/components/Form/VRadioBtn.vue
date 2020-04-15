@@ -11,7 +11,7 @@
       ]"
       :name="name"
       type="radio"
-      @change="handleRadioChange"
+      @change="$emit('change', $event)"
     >
     <label :for="id" class="form-ext-label">
       <slot />
@@ -45,12 +45,6 @@ export default {
     error: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  methods: {
-    handleRadioChange(event) {
-      this.$emit('change', event);
     },
   },
 };

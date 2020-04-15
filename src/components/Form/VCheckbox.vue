@@ -12,7 +12,7 @@
       ]"
       :checked="checked"
       :disabled="disabled"
-      @change="handleCheckboxChange"
+      @change="$emit('change', $event)"
     >
     <label :for="id" class="form-ext-label">
       <slot />
@@ -46,12 +46,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-  },
-
-  methods: {
-    handleCheckboxChange(event) {
-      this.$emit('change', event);
     },
   },
 };

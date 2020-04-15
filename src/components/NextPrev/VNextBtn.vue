@@ -3,7 +3,7 @@
     <a
       :href="href"
       class="display-block"
-      @click="handleClick($event)"
+      @click="$emit('click', $event)"
     >
       <p class="pagination-item-subtitle">{{ nextText }}</p>
       <h5 class="light no-margin">
@@ -23,12 +23,6 @@ export default {
     href: {
       type: String,
       default: '#!',
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      this.$emit('click', event);
     },
   },
 };
