@@ -12,8 +12,7 @@
       ]"
       :data-tooltip="tooltipData"
       :placeholder="placeholder"
-      :value="value"
-      @input="$emit('input', $event, $event.target.value)"
+      @input="emitInput"
       @keyup="$emit('keyup', $event)"
     >
     <v-btn
@@ -37,6 +36,17 @@ export default {
     Tooltip,
   ],
 
+  model: {
+    event: 'model-change',
+  },
+
+  methods: {
+    emitInput(event) {
+      this.$emit('model-change', event.target.value);
+      this.$emit('input', event, event.target.value);
+    },
+  },
+
   props: {
     placeholder: {
       type: String,
@@ -53,10 +63,6 @@ export default {
     dark: {
       type: Boolean,
       default: false,
-    },
-    value: {
-      type: String,
-      default: '',
     },
   },
 };
