@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.25] - 2020-04-15
+
+### 🔨 Added
+- Add keyup event for search bar and input field
+
+### ⚡️ Changed
+- Clean up some event emitting for components
+
 ## [0.5.24] - 2020-03-29
 
 ### ⚡️ Changed
@@ -538,3 +546,4 @@ All notable changes to this project will be documented in this file.
 [0.5.22]: https://www.npmjs.com/package/vue-cirrus/v/0.5.22
 [0.5.23]: https://www.npmjs.com/package/vue-cirrus/v/0.5.23
 [0.5.24]: https://www.npmjs.com/package/vue-cirrus/v/0.5.24
+[0.5.25]: https://www.npmjs.com/package/vue-cirrus/v/0.5.25
