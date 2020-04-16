@@ -86,6 +86,8 @@ export default {
         ['v-input-field', 'formGroup', 'boolean', 'false', 'Input field will not be controlled.'],
         ['v-input-field', 'pilled', 'boolean', 'false', 'Set the form of the input field to a pilled one.'],
         ['v-input-field', 'input', 'function', '() => {}', 'Catch the input event of the given input field.'],
+        ['v-input-field', 'keyup', 'function', '() => {}', 'Catch the keyup event of the given input field.'],
+        ['v-input-field', 'v-model', 'model', 'empty', 'Set the v-model for the input.'],
       ],
     };
   },
