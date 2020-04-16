@@ -79,7 +79,6 @@ export default {
         ['v-input-field', 'subtitle', 'string', 'empty', 'Set the subtitle for the input field.'],
         ['v-input-field', 'title', 'string', 'empty', 'Set the title for the input field.'],
         ['v-input-field', 'subtitleInline', 'boolean', 'false', 'Set the subtitle of the input field inline.'],
-        ['v-input-field', 'value', 'string', 'empty', 'Set the value of the input field.'],
         ['v-input-field', 'placeholder', 'string', 'empty', 'Set the placeholder of the input field.'],
         ['v-input-field', 'type', 'string', 'text', 'Set the type of the input field.'],
         ['v-input-field', 'select', 'boolean', 'false', 'Set the select state of the input field.'],
