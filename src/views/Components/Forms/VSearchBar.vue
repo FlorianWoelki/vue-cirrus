@@ -69,9 +69,11 @@ export default {
       },
       props: [
         ['v-search-bar', 'placeholder', 'string', 'Search', 'Set the placeholder of the search bar.'],
-        ['v-search-bar', 'value', 'string', 'empty', 'Set the value of the search bar.'],
         ['v-search-bar', 'noButton', 'boolean', 'false', 'Disable the button on the search bar.'],
         ['v-search-bar', 'searchAction', 'function', '() => 1', 'Set the action, when someone clicks on the search button.'],
+        ['v-search-bar', 'input', 'function', '() => {}', 'Catch the input event of the given input field.'],
+        ['v-search-bar', 'keyup', 'function', '() => {}', 'Catch the keyup event of the given input field.'],
+        ['v-search-bar', 'v-model', 'model', 'empty', 'Set the v-model for the input.'],
       ],
     };
   },
