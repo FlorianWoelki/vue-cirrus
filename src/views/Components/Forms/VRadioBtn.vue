@@ -65,7 +65,7 @@ export default {
   computed: {
     customCode() {
       return `
-<v-radio-btn id="male-option">Male</v-radio-btn>
+<v-radio-btn succcess id="male-option">Male</v-radio-btn>
 <v-radio-btn id="female-option">Female</v-radio-btn>`;
     },
   },
