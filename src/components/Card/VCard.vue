@@ -1,13 +1,16 @@
 <template>
-  <div :class="[
-    this.animationsMixins,
-    'card',
-    {
-      'slide-up': this.animated,
-      'u-flex u-flex-column h-100': this.equalHeight,
-      dark: this.dark,
-    },
-  ]">
+  <div
+    :class="[
+      this.animationsMixins,
+      'card',
+      {
+        'slide-up': this.animated,
+        'u-flex u-flex-column h-100': this.equalHeight,
+        dark: this.dark,
+      },
+    ]"
+    @click="$emit('click', $event)"
+  >
     <slot />
   </div>
 </template>
