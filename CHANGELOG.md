@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.27] - 2020-04-28
+
+### 🔨 Added
+- Added click event for v-card component
+
+### ⚡️ Changed
+- Fix v-input-field model value not updating for dynamic component
+
 ## [0.5.26] - 2020-04-15
 
 ### ⚡️ Changed
@@ -554,3 +562,4 @@ All notable changes to this project will be documented in this file.
 [0.5.24]: https://www.npmjs.com/package/vue-cirrus/v/0.5.24
 [0.5.25]: https://www.npmjs.com/package/vue-cirrus/v/0.5.25
 [0.5.26]: https://www.npmjs.com/package/vue-cirrus/v/0.5.26
+[0.5.27]: https://www.npmjs.com/package/vue-cirrus/v/0.5.27
