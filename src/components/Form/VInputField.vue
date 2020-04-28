@@ -5,6 +5,7 @@
     :type="type"
     :class="inputClasses"
     :placeholder="placeholder"
+    :value="value"
     @input="emitInput"
     @keyup="$emit('keyup', $event)"
   />
@@ -29,6 +30,7 @@
         :type="type"
         :class="inputClasses"
         :placeholder="placeholder"
+        :value="value"
         @input="emitInput"
         @keyup="$emit('keyup', $event)"
       />
@@ -63,6 +65,7 @@ export default {
   ],
 
   model: {
+    prop: 'value',
     event: 'model-change',
   },
 
@@ -74,6 +77,10 @@ export default {
   },
 
   props: {
+    value: {
+      type: String,
+      default: '',
+    },
     pilled: {
       type: Boolean,
       default: false,
