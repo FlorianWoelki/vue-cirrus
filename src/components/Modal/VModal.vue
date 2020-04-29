@@ -3,8 +3,8 @@
     :class="[
       'modal',
       {
-        'modal-large': this.large,
-        'modal-small': this.small,
+        'modal-large': this.size === 'large',
+        'modal-small': this.size === 'small',
         'modal-animated--zoom-in': this.animation === 'zoomIn',
         'modal-animated--zoom-out': this.animation === 'zoomOut',
         'modal-animated--dropdown': this.animation === 'dropdown',
@@ -60,13 +60,9 @@ export default {
       type: String,
       default: '',
     },
-    small: {
-      type: Boolean,
-      default: false,
-    },
-    large: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: '',
     },
     dark: {
       type: Boolean,
