@@ -18,9 +18,10 @@
       href="/#/components/DatePicker/#!"
       component="v-date-picker"
       :componentProps="propsData"
+      :customCode="customCode"
     >
       <template v-slot:component>
-        <v-date-picker></v-date-picker>
+        <v-date-picker date="2020-04-29"></v-date-picker>
       </template>
     </Playground>
 
@@ -48,12 +49,19 @@ export default {
     return {
       propsData: {},
       props: [
-        ['v-date-picker', 'date', 'string', 'empty', 'Set the default date of the datepicker.'],
+        ['v-date-picker', 'date', 'string', 'empty', 'Set the default date of the datepicker (Format: yyyy-mm-dd).'],
         ['v-date-picker', 'title', 'string', 'empty', 'Set the title above the datepicker.'],
         ['v-date-picker', 'subtitle', 'string', 'empty', 'Set the subtitle above the datepicker.'],
         ['v-date-picker', 'information', 'string', 'empty', 'Set the information text below the datepicker.'],
       ],
     };
+  },
+
+  computed: {
+    customCode() {
+      return `
+<v-date-picker date="2020-04-29"></v-date-picker>`;
+    },
   },
 };
 </script>
