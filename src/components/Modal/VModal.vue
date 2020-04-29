@@ -5,9 +5,9 @@
       {
         'modal-large': this.large,
         'modal-small': this.small,
-        'modal-animated--zoom-in': this.zoomIn,
-        'modal-animated--zoom-out': this.zoomOut,
-        'modal-animated--dropdown': this.dropdown,
+        'modal-animated--zoom-in': this.animation === 'zoomIn',
+        'modal-animated--zoom-out': this.animation === 'zoomOut',
+        'modal-animated--dropdown': this.animation === 'dropdown',
         'dark': this.dark,
       },
     ]"
@@ -56,23 +56,15 @@ export default {
       type: String,
       default: 'modal',
     },
+    animation: {
+      type: String,
+      default: '',
+    },
     small: {
       type: Boolean,
       default: false,
     },
     large: {
-      type: Boolean,
-      default: false,
-    },
-    zoomIn: {
-      type: Boolean,
-      default: false,
-    },
-    zoomOut: {
-      type: Boolean,
-      default: false,
-    },
-    dropdown: {
       type: Boolean,
       default: false,
     },
