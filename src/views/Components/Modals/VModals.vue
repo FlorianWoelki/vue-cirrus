@@ -25,11 +25,8 @@
           <v-btn class="u-center" color="primary">Open Modal</v-btn>
         </a>
         <v-modal
-          :zoomIn="propsData.animation === 'zoomIn'"
-          :zoomOut="propsData.animation === 'zoomOut'"
-          :dropdown="propsData.animation === 'dropdown'"
-          :small="propsData.size === 'small'"
-          :large="propsData.size === 'large'"
+          :animation="propsData.animation"
+          :size="propsData.size"
         >
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -106,11 +103,8 @@ export default {
         ['v-modal', 'title', 'string', 'Modal Dialog', 'Set the title of the modal.'],
         ['v-modal', 'closeTarget', 'string', '#target', 'When the modal closes this will be the target link.'],
         ['v-modal', 'mId', 'string', 'modal', 'Set the original modal id for further reference.'],
-        ['v-modal', 'small', 'boolean', 'false', 'Set the size of the modal to small.'],
-        ['v-modal', 'large', 'boolean', 'false', 'Set the size of the modal to large.'],
-        ['v-modal', 'zoomIn', 'boolean', 'false', 'Set the animation to zoom in.'],
-        ['v-modal', 'zoomOut', 'boolean', 'false', 'Set the animation to zoom out.'],
-        ['v-modal', 'dropdown', 'boolean', 'false', 'Set the animation to a dropdown.'],
+        ['v-modal', 'size', 'string', 'empty', 'Set the size of the modal (small, large).'],
+        ['v-modal', 'animation', 'string', 'empty', 'Set the animation of the modal (zoomIn, zoomOut, dropdown).'],
       ],
     };
   },
@@ -122,7 +116,7 @@ export default {
 <a href="#modal">
   <v-btn class="u-center" color="success">Open Modal</v-btn>
 </a>
-<v-modal${this.propsData.animation === '' ? '' : ` ${this.propsData.animation}`}${this.propsData.size === '' ? '' : ` ${this.propsData.size}`}>
+<v-modal${this.propsData.animation === '' ? '' : ` animation="${this.propsData.animation}"`}${this.propsData.size === '' ? '' : ` size="${this.propsData.size}"`}>
   <p>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
     Explicabo ducimus dolorem excepturi facere architecto, quam commodi,
