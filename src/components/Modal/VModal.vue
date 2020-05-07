@@ -3,11 +3,11 @@
     :class="[
       'modal',
       {
-        'modal-large': this.large,
-        'modal-small': this.small,
-        'modal-animated--zoom-in': this.zoomIn,
-        'modal-animated--zoom-out': this.zoomOut,
-        'modal-animated--dropdown': this.dropdown,
+        'modal-large': this.size === 'large',
+        'modal-small': this.size === 'small',
+        'modal-animated--zoom-in': this.animation === 'zoomIn',
+        'modal-animated--zoom-out': this.animation === 'zoomOut',
+        'modal-animated--dropdown': this.animation === 'dropdown',
         'dark': this.dark,
       },
     ]"
@@ -31,11 +31,11 @@
         >X</a>
         <div class="modal-title">{{title}}</div>
       </div>
-      <div class="modal-footer">
-        <slot name="footer"></slot>
-      </div>
       <div class="modal-body">
         <slot></slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>
@@ -56,25 +56,13 @@ export default {
       type: String,
       default: 'modal',
     },
-    small: {
-      type: Boolean,
-      default: false,
+    animation: {
+      type: String,
+      default: '',
     },
-    large: {
-      type: Boolean,
-      default: false,
-    },
-    zoomIn: {
-      type: Boolean,
-      default: false,
-    },
-    zoomOut: {
-      type: Boolean,
-      default: false,
-    },
-    dropdown: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: '',
     },
     dark: {
       type: Boolean,
