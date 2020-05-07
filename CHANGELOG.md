@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.28] - 2020-05-07
+
+### ⚡️ Changed
+- Fix modal footer placement
+- Set modal sizes to one string
+- Set modal animations to one string
+
 ## [0.5.27] - 2020-04-28
 
 ### 🔨 Added
