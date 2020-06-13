@@ -25,16 +25,27 @@
           class="u-center"
           :pilled="propsData.pilled"
           :placeholder="propsData.placeholder"
-        ></v-input-field>
+          :icon="propsData.selectedIcon !== null && propsData.selectedIcon.length !== 0"
+        >
+          <span v-if="propsData.selectedIcon" class="icon">
+            <i :class="`fas fa-${propsData.selectedIcon}`"></i>
+          </span>
+        </v-input-field>
       </template>
       <v-row level>
-        <v-col c="6">
+        <v-col c="4">
           <v-checkbox
             id="pilled-input-field"
             @change="() => { propsData.pilled = !propsData.pilled }"
           >Pilled</v-checkbox>
         </v-col>
-        <v-col c="6">
+        <v-col c="4">
+          <v-input-field
+            placeholder="Icon (empty is no icon)"
+            v-model="propsData.selectedIcon"
+          ></v-input-field>
+        </v-col>
+        <v-col c="4">
           <v-input-field
             placeholder="Placeholder ..."
             v-model="propsData.placeholder"
@@ -68,6 +79,7 @@ export default {
       propsData: {
         pilled: false,
         placeholder: null,
+        selectedIcon: null,
       },
       props: [
         ['v-input-field', 'size', 'string', 'null', 'Set the size of the input field (xsmall, small, large, xlarge).'],
@@ -93,8 +105,13 @@ export default {
 
   computed: {
     customCode() {
-      return `
-<v-input-field${this.propsData.pilled ? ' pilled' : ''}${this.propsData.placeholder ? ` placeholder="${this.propsData.placeholder}"` : ''}></v-input-field>`;
+      return this.propsData.selectedIcon === null || this.propsData.selectedIcon.length === 0 ? `
+<v-input-field${this.propsData.pilled ? ' pilled' : ''}${this.propsData.placeholder ? ` placeholder="${this.propsData.placeholder}"` : ''}></v-input-field>`
+        : `
+<v-input-field icon${this.propsData.pilled ? ' pilled' : ''}${this.propsData.placeholder ? ` placeholder="${this.propsData.placeholder}"` : ''}>
+  <span class="icon"><i class="fas fa-${this.propsData.selectedIcon}"></i></span>
+</v-input-field>
+`;
     },
   },
 };
