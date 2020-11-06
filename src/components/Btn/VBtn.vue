@@ -11,7 +11,7 @@
         'btn--pilled': this.pilled,
         'btn--circle': this.circle,
         'btn-dropdown': this.dropdown,
-        'u-no-margin': this.dropdown,
+        'm-0': this.dropdown,
       },
     ]"
     :data-tooltip="tooltipData"
