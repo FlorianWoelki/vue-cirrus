@@ -3,7 +3,7 @@
     'space',
     {
       'large': this.large && !this.xlarge,
-      'x-large': this.xlarge,
+      'xlarge': this.xlarge,
     },
   ]">
   </div>
