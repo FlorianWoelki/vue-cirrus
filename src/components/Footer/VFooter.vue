@@ -2,7 +2,7 @@
   <footer :class="fixed ? 'footer--fixed' : null">
     <h6
       v-if="title != ''"
-      class="white uppercase"
+      class="uppercase footer__title"
     >{{title}}</h6>
     <slot></slot>
     <p
