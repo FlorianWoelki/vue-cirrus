@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import API from '../API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import API from '../API.vue';
 
 export default {
   components: {

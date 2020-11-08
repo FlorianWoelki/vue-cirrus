@@ -64,9 +64,9 @@
 </template>
 
 <script>
-import API from '../API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import VerticalDivider from '@/views/Components/Dividers/Examples/VerticalDivider.vue';
+import API from '../API.vue';
 
 export default {
   components: {

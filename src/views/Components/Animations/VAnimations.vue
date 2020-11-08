@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import API from '../API.vue';
 import Playground from '@/components/Playground/Playground.vue';
+import API from '../API.vue';
 import DifferentAnimations from './Examples/DifferentAnimations.vue';
 
 export default {
