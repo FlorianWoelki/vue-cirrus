@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.31] - 2020-11-08
+
+### ⚡️ Changed
+- HOTFIX: export install function for library
+
 ## [0.5.3] - 2020-11-08
 
 ### ⚡️ Changed
