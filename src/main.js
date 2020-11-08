@@ -18,6 +18,8 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
+export default install;
+
 export { default as vAvatar } from './components/Avatar';
 export { default as vBadge } from './components/Badge';
 export { default as vBtn } from './components/Btn';
