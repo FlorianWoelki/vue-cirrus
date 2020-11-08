@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.31] - 2020-11-08
+
+### ⚡️ Changed
+- HOTFIX: export install function for library
+
+## [0.5.3] - 2020-11-08
+
+### ⚡️ Changed
+- Bump version of Cirrus to 0.6.0
+- Fix Code component issues
+- Refactor classes for Cirrus 0.6.0
+
 ## [0.5.28] - 2020-05-07
 
 ### ⚡️ Changed

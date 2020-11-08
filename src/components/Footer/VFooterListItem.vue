@@ -40,8 +40,8 @@ export default {
         this.tooltipMixins,
         this.animationsMixins,
         {
-          'list-item': !this.title,
-          'footer-list-title': this.title,
+          'footer__list-item': !this.title,
+          'footer__list-title': this.title,
         },
       );
     },

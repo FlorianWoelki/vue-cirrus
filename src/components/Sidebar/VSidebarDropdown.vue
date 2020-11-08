@@ -8,7 +8,7 @@
     <input
       :id="id"
       type="checkbox"
-      class="u-hide"
+      class="u-none"
       name="sbTree"
       @click="handleClick"
     >
