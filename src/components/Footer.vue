@@ -1,12 +1,12 @@
 <template>
-  <v-footer class="footer-section" title="© 2020 Vue Cirrus">
+  <v-footer class="mt-16 mb-8 footer-section u-text-center" title="© 2020 Vue Cirrus">
     <v-divider short class="u-center"/>
 
     <p>
       Code is licensed with
       <v-link href="https://opensource.org/licenses/MIT" blank>MIT</v-link>.
       Everything is
-      <span class="white">free</span> and
+      <span class="text-link">free</span> and
       <v-link href="https://github.com/FlorianWoelki/vue-cirrus" blank>open source</v-link>!
     </p>
 
