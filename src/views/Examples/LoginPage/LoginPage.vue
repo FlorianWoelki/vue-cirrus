@@ -1,10 +1,10 @@
 <template>
   <div class="login-page">
-    <v-row level class="u-no-padding">
-      <v-col c="4" class="u-no-padding">
+    <v-row level class="p-0">
+      <v-col c="4" class="p-0">
         <LeftView />
       </v-col>
-      <v-col c="8" class="u-no-padding">
+      <v-col c="8" class="p-0">
         <RightView />
       </v-col>
     </v-row>

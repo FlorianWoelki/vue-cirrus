@@ -1,6 +1,6 @@
 <template>
   <div class="left-view">
-    <div class="h-100 u-vertical-center">
+    <div class="h-100">
       <div class="u-text-center white">
         <v-container>
           <p class="font-light">My Enterprise Edition</p>
