@@ -8,7 +8,9 @@ mv tmpfile.js src/main.js
 cat > src/App.vue << ENDOFFILE
 <template>
   <div id="app">
-    <v-btn>Dev</v-btn>
+    <v-container class="mt-8">
+      <v-btn>Dev</v-btn>
+    </v-container>
   </div>
 </template>
 ENDOFFILE
