@@ -25,7 +25,7 @@
         this.subtitleInline ? 'inline' : null,
       ]"
     >{{subtitle}}</span>
-    <div :class="icon ? 'input-control' : ''">
+    <div :class="icon ? 'input-control mt-0' : ''">
       <input
         :type="type"
         :class="inputClasses"
