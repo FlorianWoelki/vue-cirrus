@@ -1,15 +1,17 @@
 <template>
   <div class="left-view">
-    <div class="h-100">
-      <div class="u-text-center white">
-        <v-container>
-          <p class="font-light">My Enterprise Edition</p>
-          <h6>The framework for every team!</h6>
-          <h6 class="font-light">
-            Unlimited possibilities. Unlimited components. Unlimited projects.
-          </h6>
-          <v-space />
-          <v-btn color="link" class="u-center">Go for it</v-btn>
+    <div class="ch-100">
+      <div class="u-text-center white h-100">
+        <v-container class="h-100">
+          <div class="u-flex u-justify-center u-items-center u-flex-column h-100">
+            <p class="mb-0 font-light">My Enterprise Edition</p>
+            <h6 class="mb-0">The framework for every team!</h6>
+            <h6 class="font-light">
+              Unlimited possibilities. Unlimited components. Unlimited projects.
+            </h6>
+            <v-space />
+            <v-btn color="link" class="u-center">Go for it</v-btn>
+          </div>
 
           <div class="bottom-area">
             <p class="u-uppercase">Trusted by the best companies out there!</p>
@@ -35,7 +37,7 @@
 .left-view {
   height: 100vh;
 
-  .h-100 {
+  .ch-100 {
     height: 100%;
     min-height: 300px;
     background-image: linear-gradient(to bottom,
