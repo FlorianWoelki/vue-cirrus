@@ -2,8 +2,8 @@
   <div class="right-view">
     <v-container>
       <v-space xlarge />
-      <h3>Login to your account!</h3>
-      <h6 class="font-light">Everything is save and encrypted 🤩</h6>
+      <h3 class="mb-0">Login to your account!</h3>
+      <h6 class="mt-1 font-light">Everything is save and encrypted 🤩</h6>
 
       <v-divider short />
       <v-space />
