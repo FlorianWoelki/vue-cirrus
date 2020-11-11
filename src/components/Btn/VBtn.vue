@@ -1,5 +1,6 @@
 <template>
   <button
+    v-on="$listeners"
     :class="[
       this.tooltipMixins,
       this.animationsMixins,
@@ -15,8 +16,6 @@
       },
     ]"
     :data-tooltip="tooltipData"
-    :disabled="disabled"
-    @click="handleClick($event)"
   >
     <slot></slot>
   </button>
@@ -53,10 +52,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     color: {
       type: String,
       default: null,
@@ -64,14 +59,6 @@ export default {
     size: {
       type: String,
       default: null,
-    },
-  },
-
-  methods: {
-    handleClick(event) {
-      if (!this.disabled) {
-        this.$emit('click', event);
-      }
     },
   },
 };
