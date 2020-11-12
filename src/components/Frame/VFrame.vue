@@ -1,10 +1,5 @@
 <template>
-  <div :class="[
-    'frame',
-    {
-      'dark': this.dark,
-    },
-  ]" :style="styles">
+  <div class="frame" :style="styles">
     <div :class="[
       this.animationsMixins,
       'frame__header'
@@ -55,10 +50,6 @@ export default {
       type: String,
       default: '30rem',
     },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
   },
 
   computed: {
@@ -72,16 +63,4 @@ export default {
 </script>
 
 <style>
-.frame.dark {
-  box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .6);
-}
-.frame.dark .frame__body,
-.frame.dark .frame__subtitle,
-.frame.dark .frame__title {
-  color: white;
-}
-.frame.dark .frame__footer,
-.frame.dark .frame__footer .frame__subtitle {
-  color: rgba(255, 255, 255, .6);
-}
 </style>
