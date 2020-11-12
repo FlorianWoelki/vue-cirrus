@@ -1,13 +1,21 @@
 <template>
   <div v-if="!animated" class="card-container" :style="{ 'min-height': `${height}` }">
-    <div class="card-image" :style="image"></div>
+    <div
+      class="card-image"
+      :style="image.startsWith('http://') || image.startsWith('https://')
+        ? `background-image: ${image}` : `background-image: ${require(`@/${src}`)}`"
+    ></div>
     <div class="title-container">
       <slot />
     </div>
   </div>
   <div v-else>
     <div class="card-container" :style="{ 'min-height': `${height}` }">
-      <div class="card-image" :style="image"></div>
+      <div
+        class="card-image"
+        :style="image.startsWith('http://') || image.startsWith('https://')
+          ? `background-image: url(${image})` : `background-image: ${require(`@/${src}`)}`"
+      ></div>
     </div>
     <div class="mobile-title">
       <div class="content">

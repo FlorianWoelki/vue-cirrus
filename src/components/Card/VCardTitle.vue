@@ -1,5 +1,5 @@
 <template>
-  <p v-if="cardImage && !animated" class="title">
+  <p v-if="!animated" class="title">
     <slot />
   </p>
   <p v-else-if="cardImage && animated" class="tile__title">
@@ -20,9 +20,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.card.dark .card-head {
-  border-bottom: 1px solid #404040;
-}
-</style>

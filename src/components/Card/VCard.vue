@@ -6,10 +6,8 @@
       {
         'slide-up': this.animated,
         'u-flex u-flex-column h-100': this.equalHeight,
-        dark: this.dark,
       },
     ]"
-    @click="$emit('click', $event)"
   >
     <slot />
   </div>
@@ -38,17 +36,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
   },
 };
 </script>
-
-<style>
-.card.dark {
-  background-color: #272727;
-  color: white;
-}
-</style>

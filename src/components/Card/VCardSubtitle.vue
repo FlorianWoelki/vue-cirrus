@@ -1,7 +1,7 @@
 <template>
-  <span :class="!animated ? 'subtitle' : 'tile__subtitle'">
+  <p :class="!animated ? 'subtitle' : 'tile__subtitle'">
     <slot />
-  </span>
+  </p>
 </template>
 
 <script>
