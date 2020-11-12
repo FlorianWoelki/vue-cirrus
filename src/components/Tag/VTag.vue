@@ -1,7 +1,7 @@
 <template>
   <div v-if="!closable" :class="classes">
     <slot></slot>
-    <div v-if="deletable" class="tag tag--delete"></div>
+    <div v-if="deletable" class="tag tag__delete"></div>
   </div>
   <div v-else :class="classes"></div>
 </template>
