@@ -3,12 +3,7 @@
       tooltipMixins,
       animationsMixins,
       'avatar',
-      {
-        'avatar--xsmall': size === 'xsmall',
-        'avatar--small': size === 'small',
-        'avatar--large': size === 'large',
-        'avatar--xlarge': size === 'xlarge',
-      },
+      size !== null ? `avatar--${size}` : null,
     ]"
     :data-text="text"
   >
