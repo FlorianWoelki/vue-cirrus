@@ -5,7 +5,6 @@
         {
           'divider-short': short,
           'divider--v': vertical,
-          'dark': dark,
         },
       ]"
       :style="{ height: '100%' }"
@@ -17,7 +16,6 @@
     {
       'divider-short': short,
       'divider--v': vertical,
-      'dark': dark,
     },
   ]"></div>
 </template>
@@ -37,18 +35,11 @@ export default {
       type: String,
       default: '',
     },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
   },
 };
 </script>
 
 <style>
-.divider.dark {
-  border-color: #272727;
-}
 .divider-short {
   max-width: 15rem;
   width: 100%;
