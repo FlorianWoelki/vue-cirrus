@@ -1,5 +1,5 @@
 <template>
-  <div :id="'badge-' + content">
+  <div ref="badge">
     <slot></slot>
   </div>
 </template>
@@ -22,14 +22,16 @@ export default {
   },
 
   mounted() {
-    const node = document.getElementById(`badge-${this.content}`);
+    const node = this.$refs.badge;
 
     const spanChild = node.children[0];
     if (spanChild) {
       spanChild.classList.add('badge');
       spanChild.classList.add(this.position);
 
-      spanChild.classList.add(this.color);
+      if (this.color) {
+        spanChild.classList.add(this.color);
+      }
       spanChild.setAttribute('data-badge', this.content);
     }
   },
@@ -38,7 +40,7 @@ export default {
 
 <style>
 .badge {
-  position:relative;
+  position: relative;
 }
 
 .badge[data-badge]:after {
