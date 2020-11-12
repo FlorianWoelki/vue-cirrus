@@ -2,11 +2,11 @@
   <li class="pagination-item pagination-prev">
     <a
       :href="href"
-      class="display-block"
+      class="u-block"
       @click="$emit('click', $event)"
     >
       <p class="pagination-item-subtitle">{{ prevText }}</p>
-      <h5 class="light no-margin">
+      <h5 class="m-0">
         <slot />
       </h5>
     </a>
@@ -18,11 +18,11 @@ export default {
   props: {
     prevText: {
       type: String,
-      default: 'Next',
+      default: 'Prev',
     },
     href: {
       type: String,
-      default: '#!',
+      default: '!#',
     },
   },
 };

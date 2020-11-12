@@ -2,11 +2,11 @@
   <li class="pagination-item pagination-next">
     <a
       :href="href"
-      class="display-block"
+      class="u-block"
       @click="$emit('click', $event)"
     >
       <p class="pagination-item-subtitle">{{ nextText }}</p>
-      <h5 class="light no-margin">
+      <h5 class="m-0">
         <slot />
       </h5>
     </a>
@@ -22,7 +22,7 @@ export default {
     },
     href: {
       type: String,
-      default: '#!',
+      default: '!#',
     },
   },
 };
