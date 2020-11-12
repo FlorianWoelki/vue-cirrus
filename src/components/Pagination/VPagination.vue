@@ -3,7 +3,6 @@
     'pagination',
     {
       'pagination-bordered': this.bordered,
-      'dark': this.dark,
     },
   ]">
     <slot></slot>
@@ -17,17 +16,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
   },
 };
 </script>
-
-<style>
-.pagination.pagination-bordered.dark .pagination-item.short a {
-  border-color: #272727;
-  color: rgb(200, 200, 200);
-}
-</style>
