@@ -23,14 +23,8 @@ export default {
   ],
 
   props: {
-    grouped: {
-      type: Boolean,
-      default: false,
-    },
-    rounded: {
-      type: Boolean,
-      default: false,
-    },
+    grouped: Boolean,
+    rounded: Boolean,
   },
 };
 </script>

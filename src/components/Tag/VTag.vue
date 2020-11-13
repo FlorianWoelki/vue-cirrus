@@ -17,26 +17,11 @@ export default {
   ],
 
   props: {
-    closable: {
-      type: Boolean,
-      default: false,
-    },
-    deletable: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      default: null,
-    },
-    color: {
-      type: String,
-      default: null,
-    },
-    rounded: {
-      type: Boolean,
-      default: false,
-    },
+    closable: Boolean,
+    deletable: Boolean,
+    size: String,
+    color: String,
+    rounded: Boolean,
   },
 
   computed: {

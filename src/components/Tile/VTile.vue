@@ -14,10 +14,7 @@
 <script>
 export default {
   props: {
-    enableBoxShadow: {
-      type: Boolean,
-      default: false,
-    },
+    enableBoxShadow: Boolean,
   },
 };
 </script>

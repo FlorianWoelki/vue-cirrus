@@ -9,14 +9,8 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
+    title: String,
+    subtitle: String,
   },
 };
 </script>
