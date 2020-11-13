@@ -1,8 +1,8 @@
 <template>
   <div class="tile__container">
-    <p class="tile__title m-0">{{title}}</p>
-    <p class="tile__subtitle m-0">{{subtitle}}</p>
-    <span class="info">{{info}}</span>
+    <p v-if="title" class="m-0 tile__title">{{ title }}</p>
+    <p v-if="subtitle" class="m-0 tile__subtitle">{{ subtitle }}</p>
+    <slot></slot>
   </div>
 </template>
 
@@ -14,10 +14,6 @@ export default {
       default: '',
     },
     subtitle: {
-      type: String,
-      default: '',
-    },
-    info: {
       type: String,
       default: '',
     },
