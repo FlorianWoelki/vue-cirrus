@@ -1,17 +1,16 @@
 <template>
   <div class="form-ext-control form-ext-radio">
     <input
+      v-bind="$attrs"
+      v-on="$listeners"
       :id="id"
       :class="[
         'form-ext-input',
-        {
-          'form-ext-input--success': this.success,
-          'form-ext-input--error': this.error,
-        },
+        color ? `form-ext-input--${color}` : '',
       ]"
+      :checked="checked"
       :name="name"
       type="radio"
-      @change="$emit('change', $event)"
     >
     <label :for="id" class="form-ext-label">
       <slot />
@@ -30,22 +29,8 @@ export default {
       type: String,
       default: 'radio-btn',
     },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    checked: {
-      type: Boolean,
-      default: false,
-    },
-    success: {
-      type: Boolean,
-      default: false,
-    },
-    error: {
-      type: Boolean,
-      default: false,
-    },
+    checked: Boolean,
+    color: String,
   },
 };
 </script>
