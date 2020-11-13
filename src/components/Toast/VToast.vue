@@ -13,7 +13,7 @@
       class="btn-close"
       @click="handleClose($event)"
     ></button>
-    <h4 v-if="title !== ''" class="toast__title">{{ title }}</h4>
+    <h4 v-if="title" class="toast__title">{{ title }}</h4>
     <slot></slot>
   </div>
 </template>
@@ -29,22 +29,10 @@ export default {
   ],
 
   props: {
-    disableCloseFunction: {
-      type: Boolean,
-      default: false,
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-    color: {
-      type: String,
-      default: null,
-    },
-    closable: {
-      type: Boolean,
-      default: false,
-    },
+    title: String,
+    color: String,
+    disableCloseFunction: Boolean,
+    closable: Boolean,
   },
 
   methods: {
