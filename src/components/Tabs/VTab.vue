@@ -5,10 +5,7 @@
       selected: this.selected,
     },
   ]">
-    <a
-      :href="href"
-      @click="$emit('click', $event)"
-    >
+    <a v-bind="$attrs" v-on="$listeners">
       <slot></slot>
     </a>
   </li>
@@ -26,10 +23,6 @@ export default {
     selected: {
       type: Boolean,
       default: false,
-    },
-    href: {
-      type: String,
-      default: '!#',
     },
   },
 };
