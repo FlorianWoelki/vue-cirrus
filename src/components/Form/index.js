@@ -7,7 +7,7 @@ import component5 from './VLabel.vue';
 import component6 from './VRadioBtn.vue';
 import component7 from './VSearchBar.vue';
 import component8 from './VTextArea.vue';
-import component9 from './VToggler.vue';
+import component9 from './VToggle.vue';
 
 export default (Vue) => {
   Vue.component(component.name, component);
