@@ -23,17 +23,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.space {
-  display: block;
-  width: 100%;
-  height: 1rem;
-}
-.space.large {
-  padding: 1rem 0;
-}
-.space.x-large {
-  padding: 2rem 0;
-}
-</style>
