@@ -1,18 +1,15 @@
 <template>
-  <div :class="`form-ext-control form-ext-checkbox${dark ? ' dark' : ''}`">
+  <div class="form-ext-control form-ext-checkbox">
     <input
+      v-bind="$attrs"
+      v-on="$listeners"
       type="checkbox"
       :id="id"
+      :checked="checked"
       :class="[
         'form-ext-input',
-        {
-          'form-ext-input--success': this.success,
-          'form-ext-input--error': this.error,
-        },
+        this.color ? `form-ext-input--${this.color}` : '',
       ]"
-      :checked="checked"
-      :disabled="disabled"
-      @change="$emit('change', $event)"
     >
     <label :for="id" class="form-ext-label">
       <slot />
@@ -27,37 +24,8 @@ export default {
       type: String,
       default: 'input-checkbox',
     },
-    checked: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    success: {
-      type: Boolean,
-      default: false,
-    },
-    error: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    color: String,
+    checked: Boolean,
   },
 };
 </script>
-
-<style>
-.form-ext-control.form-ext-checkbox.dark label {
-  color: white;
-}
-
-.form-ext-control.form-ext-checkbox.dark .form-ext-label:before {
-  background: #404040;
-  border-color: #404040;
-}
-</style>
