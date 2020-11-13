@@ -30,8 +30,8 @@ export default {
         this.tooltipMixins,
         this.animationsMixins,
         'tag',
-        `tag--${this.size}`,
-        `tag--${this.color}`,
+        this.size ? `tag--${this.size}` : null,
+        this.color ? `tag--${this.color}` : null,
         {
           'tag--rounded': this.rounded,
           'tag__close-btn': this.closable,
