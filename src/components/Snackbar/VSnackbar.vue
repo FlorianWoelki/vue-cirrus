@@ -1,6 +1,6 @@
 <template>
   <div
-    id="snackbar"
+    ref="snackbar"
     :class="[
       this.animationsMixins,
       'snackbar',
@@ -27,31 +27,29 @@ export default {
   },
 
   props: {
-    color: {
-      type: String,
-      default: null,
-    },
+    value: Boolean,
+    color: String,
     position: {
       type: String,
-      default: null,
+      default: 'topCenter',
     },
-    value: {
-      type: Boolean,
-      default: false,
+    timeout: {
+      type: Number,
+      default: 3000,
     },
   },
 
   methods: {
     setTimeout() {
       if (!this.isActive) {
-        const snackbar = document.getElementById('snackbar');
+        const snackbar = this.$el;
         snackbar.classList.add('show');
         this.isActive = true;
 
         setTimeout(() => {
           this.isActive = false;
           snackbar.classList.remove('show');
-        }, 3000);
+        }, this.timeout);
       }
     },
   },
