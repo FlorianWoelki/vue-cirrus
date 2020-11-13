@@ -1,51 +1,36 @@
 <template>
-  <input
-    v-if="formGroup"
-    :data-tooltip="tooltipData"
-    :type="type"
-    :class="inputClasses"
-    :placeholder="placeholder"
-    :value="value"
-    @input="emitInput"
-    @keyup="$emit('keyup', $event)"
-  />
   <div
-    v-else-if="!select"
+    v-if="!select"
     :data-tooltip="tooltipData"
     class="input-control"
   >
-    <label
-      v-if="title"
-      :class="'font-normal' + (dark ? ' text-light' : '')"
-    >{{title}}</label>
-    <span
-      v-if="subtitle"
-      :class="[
-        'info',
-        this.subtitleInline ? 'inline' : null,
-      ]"
-    >{{subtitle}}</span>
+    <label>
+      <slot name="title" />
+    </label>
     <div :class="icon ? 'input-control mt-0' : ''">
       <input
-        :type="type"
+        v-bind="$attrs"
+        v-on="{
+          ...$listeners,
+          input: event => $emit('input', event.target.value)
+        }"
         :class="inputClasses"
-        :placeholder="placeholder"
-        :value="value"
-        @input="emitInput"
-        @keyup="$emit('keyup', $event)"
       />
-      <slot></slot>
+      <span class="icon">
+        <slot></slot>
+      </span>
     </div>
-    <span
-      v-if="infoText"
-      class="info u-text-center"
-    >{{infoText}}</span>
+    <span class="info u-text-center">
+      <slot name="info" />
+    </span>
   </div>
   <div
     v-else
     class="input-control"
   >
     <select
+      v-bind="$attrs"
+      v-on="$listeners"
       :class="inputClasses"
       :data-tooltip="tooltipData"
     >
@@ -64,83 +49,15 @@ export default {
     Tooltip,
   ],
 
-  model: {
-    prop: 'value',
-    event: 'model-change',
-  },
-
-  methods: {
-    emitInput(event) {
-      this.$emit('model-change', event.target.value);
-      this.$emit('input', event, event.target.value);
-    },
-  },
-
   props: {
-    value: {
-      type: String,
-      default: '',
-    },
-    pilled: {
-      type: Boolean,
-      default: false,
-    },
-    formGroup: {
-      type: Boolean,
-      default: false,
-    },
-    select: {
-      type: Boolean,
-      default: false,
-    },
-    type: {
-      type: String,
-      default: 'text',
-    },
-    placeholder: {
-      type: String,
-      default: null,
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    subtitleInline: {
-      type: Boolean,
-      default: false,
-    },
-    infoText: {
-      type: String,
-      default: '',
-    },
-    focused: {
-      type: Boolean,
-      default: false,
-    },
-    success: {
-      type: Boolean,
-      default: false,
-    },
-    error: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      default: null,
-    },
-    icon: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    pilled: Boolean,
+    select: Boolean,
+    title: String,
+    focused: Boolean,
+    success: Boolean,
+    error: Boolean,
+    size: String,
+    icon: Boolean,
   },
 
   computed: {
@@ -151,24 +68,14 @@ export default {
         this.size ? `input-${this.size}` : null,
         {
           select: this.select,
-          'form-group-input': this.formGroup,
           'input-focused': this.focused,
           'text-success input-success': this.success,
           'text-danger input-error': this.error,
           'input-contains-icon': this.icon,
           'input-control--pilled': this.pilled,
-          dark: this.dark,
         },
       ];
     },
   },
 };
 </script>
-
-<style>
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).dark, select.dark {
-  background-color: #272727;
-  border-color: #272727;
-  color: white;
-}
-</style>
