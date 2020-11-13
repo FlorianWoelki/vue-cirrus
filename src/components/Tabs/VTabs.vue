@@ -14,18 +14,9 @@
 <script>
 export default {
   props: {
-    size: {
-      type: String,
-      default: null,
-    },
-    position: {
-      type: String,
-      default: null,
-    },
-    mode: {
-      type: String,
-      default: null,
-    },
+    size: String,
+    position: String,
+    mode: String,
   },
 };
 </script>

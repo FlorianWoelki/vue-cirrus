@@ -33,14 +33,8 @@ let hasClicked = false;
 
 export default {
   props: {
-    animated: {
-      type: Boolean,
-      default: false,
-    },
-    clickable: {
-      type: Boolean,
-      default: false,
-    },
+    animated: Boolean,
+    clickable: Boolean,
     dropdownId: {
       type: String,
       default: 'dropdown',

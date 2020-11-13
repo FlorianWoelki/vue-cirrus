@@ -15,10 +15,7 @@ export default {
       type: String,
       default: 'right',
     },
-    color: {
-      type: String,
-      default: null,
-    },
+    color: String,
   },
 
   mounted() {

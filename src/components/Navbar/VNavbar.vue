@@ -43,22 +43,10 @@ export default {
       type: String,
       default: '#!',
     },
-    fixed: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
-    clear: {
-      type: Boolean,
-      default: false,
-    },
-    disableMobileNavbar: {
-      type: Boolean,
-      default: false,
-    },
+    fixed: Boolean,
+    dark: Boolean,
+    clear: Boolean,
+    disableMobileNavbar: Boolean,
   },
 
   mounted() {

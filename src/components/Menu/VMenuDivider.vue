@@ -5,10 +5,7 @@
 <script>
 export default {
   props: {
-    label: {
-      type: String,
-      default: null,
-    },
+    label: String,
   },
 };
 </script>

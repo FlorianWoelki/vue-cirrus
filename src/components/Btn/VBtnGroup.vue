@@ -12,10 +12,7 @@
 <script>
 export default {
   props: {
-    filled: {
-      type: Boolean,
-      default: false,
-    },
+    filled: Boolean,
   },
 };
 </script>

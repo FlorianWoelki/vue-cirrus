@@ -22,14 +22,8 @@ export default {
       type: String,
       default: '!#',
     },
-    selected: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
+    selected: Boolean,
+    disabled: Boolean,
   },
 };
 </script>

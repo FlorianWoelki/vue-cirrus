@@ -50,14 +50,8 @@ export default {
       type: String,
       default: 'treeitem',
     },
-    dropdown: {
-      type: Boolean,
-      default: false,
-    },
-    selected: {
-      type: Boolean,
-      default: false,
-    },
+    dropdown: Boolean,
+    selected: Boolean,
   },
 };
 </script>

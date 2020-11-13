@@ -23,18 +23,9 @@
 <script>
 export default {
   props: {
-    short: {
-      type: Boolean,
-      default: false,
-    },
-    vertical: {
-      type: Boolean,
-      default: false,
-    },
-    content: {
-      type: String,
-      default: '',
-    },
+    short: Boolean,
+    vertical: Boolean,
+    content: String,
   },
 };
 </script>

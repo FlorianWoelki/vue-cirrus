@@ -9,10 +9,7 @@
 <script>
 export default {
   props: {
-    position: {
-      type: String,
-      default: null,
-    },
+    position: String,
   },
 };
 </script>

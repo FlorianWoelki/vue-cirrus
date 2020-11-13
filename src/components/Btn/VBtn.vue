@@ -32,34 +32,13 @@ export default {
   ],
 
   props: {
-    dropdown: {
-      type: Boolean,
-      default: false,
-    },
-    pilled: {
-      type: Boolean,
-      default: false,
-    },
-    circle: {
-      type: Boolean,
-      default: false,
-    },
-    animated: {
-      type: Boolean,
-      default: false,
-    },
-    outline: {
-      type: Boolean,
-      default: false,
-    },
-    color: {
-      type: String,
-      default: null,
-    },
-    size: {
-      type: String,
-      default: null,
-    },
+    dropdown: Boolean,
+    pilled: Boolean,
+    circle: Boolean,
+    animated: Boolean,
+    outline: Boolean,
+    color: String,
+    size: String,
   },
 };
 </script>

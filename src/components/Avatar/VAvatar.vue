@@ -27,22 +27,10 @@ export default {
   ],
 
   props: {
-    src: {
-      type: String,
-      default: '',
-    },
-    text: {
-      type: String,
-      default: '',
-    },
-    padded: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      default: null,
-    },
+    src: String,
+    text: String,
+    padded: Boolean,
+    size: String,
   },
 };
 </script>

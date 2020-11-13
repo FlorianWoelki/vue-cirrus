@@ -13,14 +13,8 @@
 <script>
 export default {
   props: {
-    noWrap: {
-      type: Boolean,
-      default: false,
-    },
-    level: {
-      type: Boolean,
-      default: false,
-    },
+    noWrap: Boolean,
+    level: Boolean,
   },
 };
 </script>

@@ -20,18 +20,12 @@ export default {
   ],
 
   props: {
-    title: {
-      type: Boolean,
-      default: false,
-    },
+    title: Boolean,
     href: {
       type: String,
       default: '#',
     },
-    blank: {
-      type: Boolean,
-      default: false,
-    },
+    blank: Boolean,
   },
 
   computed: {

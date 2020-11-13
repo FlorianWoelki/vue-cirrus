@@ -19,14 +19,8 @@ export default {
   ],
 
   props: {
-    size: {
-      type: String,
-      default: null,
-    },
-    uppercase: {
-      type: Boolean,
-      default: false,
-    },
+    size: String,
+    uppercase: Boolean,
   },
 };
 </script>

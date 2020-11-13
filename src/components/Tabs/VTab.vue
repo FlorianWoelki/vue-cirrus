@@ -20,10 +20,7 @@ export default {
   ],
 
   props: {
-    selected: {
-      type: Boolean,
-      default: false,
-    },
+    selected: Boolean,
   },
 };
 </script>

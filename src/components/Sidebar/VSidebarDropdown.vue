@@ -48,14 +48,8 @@ export default {
       type: String,
       default: 'sb-dropdown',
     },
-    showArrow: {
-      type: Boolean,
-      default: false,
-    },
-    title: {
-      type: String,
-      default: '',
-    },
+    showArrow: Boolean,
+    title: String,
   },
 
   methods: {

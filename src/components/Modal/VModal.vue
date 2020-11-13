@@ -8,7 +8,6 @@
         'modal-animated--zoom-in': this.animation === 'zoomIn',
         'modal-animated--zoom-out': this.animation === 'zoomOut',
         'modal-animated--dropdown': this.animation === 'dropdown',
-        'dark': this.dark,
       },
     ]"
     :id="mId"
@@ -64,17 +63,6 @@ export default {
       type: String,
       default: '',
     },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
   },
 };
 </script>
-
-<style>
-.modal.dark .modal-content {
-  background-color: #272727;
-  color: white;
-}
-</style>

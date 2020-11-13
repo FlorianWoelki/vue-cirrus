@@ -12,10 +12,7 @@
 <script>
 export default {
   props: {
-    bordered: {
-      type: Boolean,
-      default: false,
-    },
+    bordered: Boolean,
   },
 };
 </script>

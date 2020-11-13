@@ -15,18 +15,9 @@
 <script>
 export default {
   props: {
-    fixed: {
-      type: Boolean,
-      default: false,
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
+    fixed: Boolean,
+    title: String,
+    subtitle: String,
   },
 };
 </script>

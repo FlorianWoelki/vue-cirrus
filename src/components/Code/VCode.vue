@@ -22,14 +22,8 @@ export default {
   },
 
   props: {
-    lang: {
-      type: String,
-      default: '',
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    lang: String,
+    dark: Boolean,
   },
 
   methods: {

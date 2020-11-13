@@ -32,22 +32,10 @@ export default {
   ],
 
   props: {
-    blank: {
-      type: Boolean,
-      default: false,
-    },
-    active: {
-      type: Boolean,
-      default: false,
-    },
-    selected: {
-      type: Boolean,
-      default: false,
-    },
-    href: {
-      type: String,
-      default: '',
-    },
+    blank: Boolean,
+    active: Boolean,
+    selected: Boolean,
+    href: String,
   },
 };
 </script>

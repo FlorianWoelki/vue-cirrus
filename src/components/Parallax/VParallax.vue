@@ -21,22 +21,10 @@
 <script>
 export default {
   props: {
-    customBody: {
-      type: Boolean,
-      default: false,
-    },
-    src: {
-      type: String,
-      default: null,
-    },
-    fullscreen: {
-      type: Boolean,
-      default: false,
-    },
-    disableParallax: {
-      type: Boolean,
-      default: false,
-    },
+    src: String,
+    customBody: Boolean,
+    fullscreen: Boolean,
+    disableParallax: Boolean,
   },
 
   computed: {

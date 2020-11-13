@@ -13,14 +13,8 @@
 <script>
 export default {
   props: {
-    noPadding: {
-      type: Boolean,
-      default: false,
-    },
-    fluid: {
-      type: Boolean,
-      default: false,
-    },
+    noPadding: Boolean,
+    fluid: Boolean,
   },
 };
 </script>

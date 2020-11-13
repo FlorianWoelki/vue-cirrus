@@ -7,7 +7,6 @@
       {
         'dropdown-right': this.right,
         'dropdown-left': this.left,
-        'dark': this.dark,
       },
     ]"
     :data-tooltip="tooltipData"
@@ -30,24 +29,8 @@ export default {
   ],
 
   props: {
-    right: {
-      type: Boolean,
-      default: false,
-    },
-    left: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    right: Boolean,
+    left: Boolean,
   },
 };
 </script>
-
-<style>
-.list-dropdown.dark .menu {
-  background-color: #272727;
-}
-</style>

@@ -1,10 +1,5 @@
 <template>
-  <div :class="[
-    'tree-nav-body',
-    {
-      'dark': this.dark,
-    },
-  ]">
+  <div class="tree-nav-body">
     <div class="tree-nav-header">
       <a
         href="#sidebar"
@@ -42,18 +37,8 @@
 <script>
 export default {
   props: {
-    noPadding: {
-      type: Boolean,
-      default: false,
-    },
-    hoverEffect: {
-      type: Boolean,
-      default: false,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    noPadding: Boolean,
+    hoverEffect: Boolean,
   },
 
   beforeCreate() {
@@ -90,14 +75,6 @@ body.sidebar {
   color: #f03d4d;
   background-color: #efefef;
 }
-.dark #sidebar .hover-effect.tree-item:hover {
-  -moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-  color: #f03d4d;
-  background-color: #272727;
-}
 
 #sidebar .sidebar-link {
   backface-visibility: initial;
@@ -112,16 +89,6 @@ body.sidebar {
 
 #sidebar .content {
   margin: 0 0.4em 1.5em;
-}
-
-.dark #sidebar {
-  background-color: #111;
-  border-right-color: #272727 !important;
-  color: white;
-}
-
-.dark #sidebar .tree-nav-container .tree .tree-item a {
-  color: white;
 }
 
 .hide-desktop .icon {

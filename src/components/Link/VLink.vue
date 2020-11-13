@@ -45,10 +45,7 @@ export default {
       type: String,
       default: '#',
     },
-    blank: {
-      type: Boolean,
-      default: false,
-    },
+    blank: Boolean,
     animation: {
       type: String,
       default: null,

@@ -17,34 +17,13 @@
 <script>
 export default {
   props: {
-    c: {
-      type: String,
-      default: null,
-    },
-    o: {
-      type: String,
-      default: null,
-    },
-    w: {
-      type: String,
-      default: null,
-    },
-    h: {
-      type: String,
-      default: null,
-    },
-    dynamicOffset: {
-      type: String,
-      default: null,
-    },
-    fluid: {
-      type: Boolean,
-      default: false,
-    },
-    ignoreScreen: {
-      type: Boolean,
-      default: false,
-    },
+    c: String,
+    o: String,
+    w: String,
+    h: String,
+    dynamicOffset: String,
+    fluid: Boolean,
+    ignoreScreen: Boolean,
   },
 };
 </script>

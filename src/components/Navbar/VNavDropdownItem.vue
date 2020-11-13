@@ -15,10 +15,7 @@
 <script>
 export default {
   props: {
-    blank: {
-      type: Boolean,
-      default: false,
-    },
+    blank: Boolean,
     href: {
       type: String,
       default: '#',

@@ -28,14 +28,8 @@ export default {
   },
 
   props: {
-    animated: {
-      type: Boolean,
-      default: false,
-    },
-    equalHeight: {
-      type: Boolean,
-      default: false,
-    },
+    animated: Boolean,
+    equalHeight: Boolean,
   },
 };
 </script>

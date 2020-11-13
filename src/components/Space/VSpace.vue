@@ -12,14 +12,8 @@
 <script>
 export default {
   props: {
-    large: {
-      type: Boolean,
-      default: false,
-    },
-    xlarge: {
-      type: Boolean,
-      default: false,
-    },
+    large: Boolean,
+    xlarge: Boolean,
   },
 };
 </script>
