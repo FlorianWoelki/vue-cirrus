@@ -2,13 +2,8 @@
   <div
     :class="[
       'modal',
-      {
-        'modal-large': this.size === 'large',
-        'modal-small': this.size === 'small',
-        'modal-animated--zoom-in': this.animation === 'zoomIn',
-        'modal-animated--zoom-out': this.animation === 'zoomOut',
-        'modal-animated--dropdown': this.animation === 'dropdown',
-      },
+      size ? `modal-${size}` : null,
+      animation ? `modal-animated--${animationString}` : null,
     ]"
     :id="mId"
   >
@@ -27,8 +22,13 @@
           class="u-pull-right"
           aria-label="Close"
           style="font-size: 20px;"
-        >X</a>
-        <div class="modal-title">{{title}}</div>
+        >
+          <slot v-if="!applyDefaultCloseIcon" name="closeIcon" />
+          <svg v-else class="text-link" style="width: 1.5rem; height: 1.5rem" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+        <div class="modal-title">
+          <slot name="title" />
+        </div>
       </div>
       <div class="modal-body">
         <slot></slot>
@@ -43,10 +43,6 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: 'Modal Dialog',
-    },
     closeTarget: {
       type: String,
       default: '#target',
@@ -55,13 +51,18 @@ export default {
       type: String,
       default: 'modal',
     },
-    animation: {
-      type: String,
-      default: '',
-    },
-    size: {
-      type: String,
-      default: '',
+    applyDefaultCloseIcon: Boolean,
+    animation: String,
+    size: String,
+  },
+
+  computed: {
+    animationString() {
+      const chars = this.animation.split(/(?=[A-Z])/);
+      if (chars.length < 2) {
+        return this.animation;
+      }
+      return `${chars[0]}-${chars[1].toLowerCase()}`;
     },
   },
 };
