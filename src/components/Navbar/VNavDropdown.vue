@@ -1,26 +1,26 @@
 <template>
   <div
+    :id="id"
     :class="[
       'nav-item',
       'has-sub',
       {
-        'toggle-hover': !this.clickable,
+        'toggle-hover': !clickable,
       },
     ]"
-    :id="dropdownId"
     @click="handleDropdownClick"
   >
     <a class="nav-dropdown-link">
       <slot name="title"></slot>
     </a>
     <ul
+      :id="id + '-list'"
       :class="[
         'dropdown-menu',
         {
-          'dropdown-animated': this.animated,
+          'dropdown-animated': animated,
         },
       ]"
-      :id="dropdownId + '-list'"
       role="menu"
     >
       <slot></slot>
@@ -35,23 +35,24 @@ export default {
   props: {
     animated: Boolean,
     clickable: Boolean,
-    dropdownId: {
+    id: {
       type: String,
       default: 'dropdown',
     },
   },
 
   methods: {
-    handleDropdownClick() {
+    handleDropdownClick(event) {
+      this.$emit('click-dropdown', event);
       if (this.clickable) {
         if (!hasClicked) {
-          document.getElementById(this.dropdownId).classList.add('active');
-          document.getElementById(`${this.dropdownId}-list`).classList.add('dropdown-shown');
+          document.getElementById(this.id).classList.add('active');
+          document.getElementById(`${this.id}-list`).classList.add('dropdown-shown');
 
           hasClicked = true;
         } else {
-          document.getElementById(this.dropdownId).classList.remove('active');
-          document.getElementById(`${this.dropdownId}-list`).classList.remove('dropdown-shown');
+          document.getElementById(this.id).classList.remove('active');
+          document.getElementById(`${this.id}-list`).classList.remove('dropdown-shown');
 
           hasClicked = false;
         }

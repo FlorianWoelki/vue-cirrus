@@ -1,21 +1,16 @@
 <template>
   <div
     :class="[
-      this.tooltipMixins,
-      this.animationsMixins,
+      tooltipMixins,
+      animationsMixins,
       'nav-item',
       {
-        active: this.active,
-        selected: this.selected,
+        active: active,
       },
     ]"
     :data-tooltip="tooltipData"
   >
-    <a
-      :href="href"
-      @click="$emit('click', $event)"
-      :target="blank ? '_blank' : ''"
-    >
+    <a v-bind="$attrs" v-on="$listeners">
       <slot></slot>
     </a>
   </div>
@@ -32,10 +27,7 @@ export default {
   ],
 
   props: {
-    blank: Boolean,
     active: Boolean,
-    selected: Boolean,
-    href: String,
   },
 };
 </script>
