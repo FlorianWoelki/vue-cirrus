@@ -4,20 +4,17 @@
     :class="[
       'tree-item',
       {
-        'hover-effect': this.$parent.hoverEffect,
-        'selected': this.selected,
+        'hover-effect': $parent.hoverEffect,
+        'selected': selected,
       },
     ]"
   >
     <a
+      v-bind="$attrs"
+      v-on="$listeners"
       class="sidebar-link"
-      :href="href"
-      @click="$emit('click', $event)"
     >
-      <label
-        :for="forId"
-        class="tree-item-header"
-      >
+      <label class="tree-item-header">
         <slot></slot>
       </label>
     </a>
@@ -26,13 +23,10 @@
     <li :class="[
       'menu-item',
       {
-        'selected': this.selected,
+        'selected': selected,
       },
     ]">
-      <a
-        :href="href"
-        @click="$emit('click', $event)"
-      >
+      <a v-bind="$attrs" v-on="$listeners">
         <slot></slot>
       </a>
     </li>
@@ -42,14 +36,6 @@
 <script>
 export default {
   props: {
-    href: {
-      type: String,
-      default: '#',
-    },
-    forId: {
-      type: String,
-      default: 'treeitem',
-    },
     dropdown: Boolean,
     selected: Boolean,
   },
@@ -60,8 +46,5 @@ export default {
 .tree-item.selected label {
   color: #fff;
   background-color: #f03d4d;
-}
-.dark .tree-item.selected label {
-  background-color: #272727;
 }
 </style>
