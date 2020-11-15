@@ -6,9 +6,9 @@
     },
   ]">
     <a
+      v-bind="$attrs"
+      v-on="$listeners"
       :disabled="disabled"
-      :href="href"
-      @click="$emit('click', $event)"
     >
       <slot></slot>
     </a>
@@ -18,10 +18,6 @@
 <script>
 export default {
   props: {
-    href: {
-      type: String,
-      default: '!#',
-    },
     selected: Boolean,
     disabled: Boolean,
   },
