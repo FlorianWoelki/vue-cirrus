@@ -1,9 +1,9 @@
 <template>
   <div :class="[
     'tab-container',
-    this.size ? `tabs-${this.size}` : null,
-    this.mode ? `tabs-${this.mode}` : null,
-    this.position ? `tabs-${this.position}` : null,
+    size ? `tabs-${size}` : null,
+    mode ? `tabs-${mode}` : null,
+    position ? `tabs-${position}` : null,
   ]">
     <ul>
       <slot></slot>

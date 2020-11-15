@@ -1,10 +1,10 @@
 <template>
   <div
     :class="[
-      this.tooltipMixins,
-      this.animationsMixins,
+      tooltipMixins,
+      animationsMixins,
       'toast',
-      this.color ? `toast--${this.color}` : null,
+      color ? `toast--${color}` : null,
     ]"
     :data-tooltip="tooltipData"
   >

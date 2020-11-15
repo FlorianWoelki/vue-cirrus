@@ -2,7 +2,7 @@
   <li :class="[
     'menu-item',
     {
-      'selected': this.selected,
+      'selected': selected,
     },
   ]">
     <div class="menu-addon">

@@ -2,10 +2,10 @@
   <div
     ref="snackbar"
     :class="[
-      this.animationsMixins,
+      animationsMixins,
       'snackbar',
-      this.color ? `${this.color}-snackbar` : null,
-      this.position ? this.getPosition : null,
+      color ? `${color}-snackbar` : null,
+      position ? getPosition : null,
     ]"
   >
     <slot></slot>

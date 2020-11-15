@@ -1,11 +1,11 @@
 <template>
   <div
     :class="[
-      this.animationsMixins,
+      animationsMixins,
       'card',
       {
-        'slide-up': this.animated,
-        'u-flex u-flex-column h-100': this.equalHeight,
+        'slide-up': animated,
+        'u-flex u-flex-column h-100': equalHeight,
       },
     ]"
   >

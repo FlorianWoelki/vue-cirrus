@@ -2,17 +2,17 @@
   <button
     v-on="$listeners"
     :class="[
-      this.tooltipMixins,
-      this.animationsMixins,
-      this.color ? `btn-${this.color}` : null,
-      this.size ? `btn-${this.size}` : null,
+      tooltipMixins,
+      animationsMixins,
+      color ? `btn-${color}` : null,
+      size ? `btn-${size}` : null,
       {
-        'btn-animated': this.animated,
-        'outline': this.outline,
-        'btn--pilled': this.pilled,
-        'btn--circle': this.circle,
-        'btn-dropdown': this.dropdown,
-        'm-0': this.dropdown,
+        'btn-animated': animated,
+        'outline': outline,
+        'btn--pilled': pilled,
+        'btn--circle': circle,
+        'btn-dropdown': dropdown,
+        'm-0': dropdown,
       },
     ]"
     :data-tooltip="tooltipData"

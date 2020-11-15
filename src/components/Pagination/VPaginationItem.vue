@@ -2,7 +2,7 @@
   <div :class="[
     'pagination-item short',
     {
-      selected: this.selected,
+      selected: selected,
     },
   ]">
     <a

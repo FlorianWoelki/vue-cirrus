@@ -1,12 +1,12 @@
 <template>
   <div
     :class="[
-      this.animationsMixins,
-      this.tooltipMixins,
+      animationsMixins,
+      tooltipMixins,
       'list-dropdown',
       {
-        'dropdown-right': this.right,
-        'dropdown-left': this.left,
+        'dropdown-right': right,
+        'dropdown-left': left,
       },
     ]"
     :data-tooltip="tooltipData"

@@ -2,7 +2,7 @@
   <div :class="[
     'pagination',
     {
-      'pagination-bordered': this.bordered,
+      'pagination-bordered': bordered,
     },
   ]">
     <slot></slot>

@@ -5,20 +5,20 @@
     <a
       :href="href"
       :class="[
-        this.tooltipMixins,
-        this.animationsMixins,
+        tooltipMixins,
+        animationsMixins,
         {
-          'u u-LR': this.animation === 'ltr',
-          'u u-RL': this.animation === 'rtl',
-          'u u-C': this.animation === 'c',
-          'utb utb-LR': this.animation === 'oltr',
-          'utb utb-RL': this.animation === 'ortl',
-          'utb utb-C': this.animation === 'oc',
-          'utb utb-OLR': this.animation === 'olr',
-          'utb utb-ORL': this.animation === 'orl',
-          'utb utb-OLR sq': this.animation === 'squared',
-          'utb utb-OLR delay': this.animation === 'dSquared',
-          underline: this.animation === 'underlined',
+          'u u-LR': animation === 'ltr',
+          'u u-RL': animation === 'rtl',
+          'u u-C': animation === 'c',
+          'utb utb-LR': animation === 'oltr',
+          'utb utb-RL': animation === 'ortl',
+          'utb utb-C': animation === 'oc',
+          'utb utb-OLR': animation === 'olr',
+          'utb utb-ORL': animation === 'orl',
+          'utb utb-OLR sq': animation === 'squared',
+          'utb utb-OLR delay': animation === 'dSquared',
+          underline: animation === 'underlined',
         },
       ]"
       :target="blank ? '_blank' : ''"

@@ -8,7 +8,7 @@
       :checked="checked"
       :class="[
         'form-ext-input',
-        this.color ? `form-ext-input--${this.color}` : '',
+        color ? `form-ext-input--${color}` : '',
       ]"
     >
     <label :for="id" class="form-ext-label">

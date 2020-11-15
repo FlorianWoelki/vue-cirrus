@@ -1,11 +1,11 @@
 <template>
   <div :class="[
-    this.tooltipMixins,
-    this.animationsMixins,
+    tooltipMixins,
+    animationsMixins,
     'tag-container',
     {
-      'group-tags': this.grouped,
-      'tag-container-rounded': this.rounded,
+      'group-tags': grouped,
+      'tag-container-rounded': rounded,
     },
   ]">
     <slot></slot>

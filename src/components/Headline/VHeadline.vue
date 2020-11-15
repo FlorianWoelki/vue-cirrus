@@ -1,9 +1,9 @@
 <template>
   <h1 :class="[
-    this.animationsMixins,
-    this.size ? `headline-${this.size}` : null,
+    animationsMixins,
+    size ? `headline-${size}` : null,
     {
-      'uppercase': this.uppercase,
+      'uppercase': uppercase,
     },
   ]">
     <b><slot></slot></b>

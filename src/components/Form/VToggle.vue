@@ -4,7 +4,7 @@
       <span><slot /></span>
       <div :class="[
         'form-ext-toggle',
-        this.color ? `form-ext-toggle--${this.color}` : '',
+        color ? `form-ext-toggle--${color}` : '',
       ]">
         <input
           v-bind="$attrs"

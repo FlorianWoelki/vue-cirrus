@@ -2,8 +2,8 @@
   <div :class="[
     'space',
     {
-      'large': this.large && !this.xlarge,
-      'xlarge': this.xlarge,
+      'large': large && !xlarge,
+      'xlarge': xlarge,
     },
   ]">
   </div>

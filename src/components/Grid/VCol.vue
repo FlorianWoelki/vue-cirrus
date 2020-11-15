@@ -1,13 +1,13 @@
 <template>
   <div :class="[
-    this.c ? `col-${this.c}` : null,
-    this.o ? `offset-${this.o}` : null,
-    this.dynamicOffset ? `offset-${this.dynamicOffset}` : null,
-    this.w ? `w-${this.w}` : null,
-    this.h ? `h-${this.h}` : null,
+    c ? `col-${c}` : null,
+    o ? `offset-${o}` : null,
+    dynamicOffset ? `offset-${dynamicOffset}` : null,
+    w ? `w-${w}` : null,
+    h ? `h-${h}` : null,
     {
-      'col': this.fluid,
-      'ignore-screen': this.ignoreScreen,
+      'col': fluid,
+      'ignore-screen': ignoreScreen,
     },
   ]">
     <slot></slot>

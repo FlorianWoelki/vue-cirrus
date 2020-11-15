@@ -5,8 +5,8 @@
       'hero',
       'hero-img',
       {
-        'parallax-img': !this.disableParallax,
-        'fullscreen': this.fullscreen,
+        'parallax-img': !disableParallax,
+        'fullscreen': fullscreen,
       },
     ]"
     :style="styleImage"

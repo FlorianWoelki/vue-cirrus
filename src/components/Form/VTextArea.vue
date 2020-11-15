@@ -2,8 +2,8 @@
   <textarea
     :data-tooltip="tooltipData"
     :class="[
-      this.tooltipMixins,
-      this.animationsMixins,
+      tooltipMixins,
+      animationsMixins,
     ]"
   ></textarea>
 </template>

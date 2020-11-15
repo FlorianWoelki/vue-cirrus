@@ -1,8 +1,8 @@
 <template>
   <li :class="[
-    this.tooltipMixins,
+    tooltipMixins,
     {
-      selected: this.selected,
+      selected: selected,
     },
   ]">
     <a v-bind="$attrs" v-on="$listeners">

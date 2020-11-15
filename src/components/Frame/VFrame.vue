@@ -1,19 +1,19 @@
 <template>
   <div class="frame" :style="styles">
     <div :class="[
-      this.animationsMixins,
+      animationsMixins,
       'frame__header'
     ]">
       <slot name="header"></slot>
 
       <div :class="[
-        this.animationsMixins,
+        animationsMixins,
         'frame__title',
       ]">
         <slot name="title"></slot>
       </div>
       <div :class="[
-        this.animationsMixins,
+        animationsMixins,
         'frame__subtitle'
       ]">
         <slot name="subtitle"></slot>
@@ -21,7 +21,7 @@
     </div>
 
     <div :class="[
-      this.animationsMixins,
+      animationsMixins,
       'frame__body'
     ]">
       <slot></slot>
@@ -29,7 +29,7 @@
 
 
     <div :class="[
-      this.animationsMixins,
+      animationsMixins,
       'frame__footer'
     ]">
       <slot name="footer"></slot>

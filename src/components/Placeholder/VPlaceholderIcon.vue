@@ -1,7 +1,7 @@
 <template>
   <div :class="[
-    this.animationsMixins,
-    this.tooltipMixins,
+    animationsMixins,
+    tooltipMixins,
     'placeholder-icon',
   ]">
     <span class="icon">

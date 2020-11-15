@@ -2,8 +2,8 @@
   <div :class="[
     'row',
     {
-      'row--no-wrap': this.noWrap,
-      'level': this.level,
+      'row--no-wrap': noWrap,
+      'level': level,
     },
   ]">
     <slot></slot>
