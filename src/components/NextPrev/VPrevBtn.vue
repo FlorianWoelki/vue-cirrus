@@ -1,9 +1,9 @@
 <template>
   <li class="pagination-item pagination-prev">
     <a
-      :href="href"
+      v-bind="$attrs"
+      v-on="$listeners"
       class="u-block"
-      @click="$emit('click', $event)"
     >
       <p class="pagination-item-subtitle">{{ prevText }}</p>
       <h5 class="m-0">
@@ -19,10 +19,6 @@ export default {
     prevText: {
       type: String,
       default: 'Prev',
-    },
-    href: {
-      type: String,
-      default: '!#',
     },
   },
 };
