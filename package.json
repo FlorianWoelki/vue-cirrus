@@ -21,6 +21,7 @@
   "main": "./dist/vue-cirrus.common.js",
   "private": false,
   "scripts": {
+    "serve": "vue-cli-service serve --open",
     "dev": "./scripts/devmode.sh && vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name vue-cirrus ./src/main.js",
     "lint": "vue-cli-service lint"
