@@ -1,37 +1,22 @@
 <template>
-  <div class="frame" :style="styles">
-    <div :class="[
-      animationsMixins,
-      'frame__header'
-    ]">
+  <div class="frame" :style="{ height: height }">
+    <div class="frame__header">
       <slot name="header"></slot>
 
-      <div :class="[
-        animationsMixins,
-        'frame__title',
-      ]">
+      <div class="frame__title">
         <slot name="title"></slot>
       </div>
-      <div :class="[
-        animationsMixins,
-        'frame__subtitle'
-      ]">
+      <div class="frame__subtitle">
         <slot name="subtitle"></slot>
       </div>
     </div>
 
-    <div :class="[
-      animationsMixins,
-      'frame__body'
-    ]">
+    <div class="frame__body">
       <slot></slot>
     </div>
 
 
-    <div :class="[
-      animationsMixins,
-      'frame__footer'
-    ]">
+    <div class="frame__footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -51,16 +36,5 @@ export default {
       default: '30rem',
     },
   },
-
-  computed: {
-    styles() {
-      return {
-        height: this.height,
-      };
-    },
-  },
 };
 </script>
-
-<style>
-</style>
