@@ -1,14 +1,14 @@
 <template>
-  <footer :class="fixed ? 'footer--fixed' : null">
-    <h6
-      v-if="title != ''"
-      class="uppercase footer__title"
-    >{{title}}</h6>
+  <footer :class="['footer', fixed ? 'footer--fixed' : null]">
+    <div class="footer__title">
+      <slot name="title" />
+    </div>
+
     <slot></slot>
-    <p
-      v-if="subtitle != ''"
-      class="subtitle"
-    >{{subtitle}}</p>
+
+    <div class="subtitle">
+      <slot name="subtitle" />
+    </div>
   </footer>
 </template>
 

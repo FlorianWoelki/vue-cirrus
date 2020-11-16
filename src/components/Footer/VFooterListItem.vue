@@ -1,5 +1,5 @@
 <template>
-  <a v-if="!title" :href="href" :target="blank ? 'blank' : ''">
+  <a v-if="!title">
     <li :class="classes" :data-tooltip="tooltipData">
       <slot />
     </li>
@@ -21,11 +21,6 @@ export default {
 
   props: {
     title: Boolean,
-    href: {
-      type: String,
-      default: '#',
-    },
-    blank: Boolean,
   },
 
   computed: {
