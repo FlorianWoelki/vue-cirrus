@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar hoverEffect noPadding>
+  <v-sidebar hoverEffect sidebarClass="p-0">
     <template slot:brandTitle>
       <h5 style="padding: .25rem 1.5rem;">Components</h5>
       <v-space></v-space>
@@ -15,7 +15,10 @@
       >
         <span  style="padding: .25rem 1.5rem;">{{component}}</span>
       </v-sidebar-item>
-      <v-sidebar-dropdown v-else showArrow title="Forms" style="padding-left: 0.8rem;">
+      <v-sidebar-dropdown v-else showArrow style="padding-left: 0.8rem;">
+        <template #title>
+          Forms
+        </template>
         <v-sidebar-item
           v-for="formComponent in formComponents"
           :key="formComponent"
@@ -29,9 +32,11 @@
     <v-sidebar-dropdown
       id="mixins-dropdown"
       showArrow
-      title="Mixins"
       style="padding-left: 0.8rem;"
     >
+      <template #title>
+        Mixins
+      </template>
       <v-sidebar-item
         dropdown
         href="#/components/Animations"
