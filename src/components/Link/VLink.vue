@@ -1,9 +1,11 @@
 <template>
   <span
-    :class="animation === 'squared' ? 'usquare' : animation === 'dSquared' ? 'usquare delay' : null"
+    :class="animation === 'square' ? 'usquare' : animation === 'dSquare' ? 'usquare delay' : null"
   >
     <a
-      :href="href"
+      v-bind="$attrs"
+      v-on="$listeners"
+      :data-tooltip=tooltipData
       :class="[
         tooltipMixins,
         animationsMixins,
@@ -16,14 +18,10 @@
           'utb utb-C': animation === 'oc',
           'utb utb-OLR': animation === 'olr',
           'utb utb-ORL': animation === 'orl',
-          'utb utb-OLR sq': animation === 'squared',
-          'utb utb-OLR delay': animation === 'dSquared',
-          underline: animation === 'underlined',
+          'utb utb-OLR': animation === 'dSquare' || animation === 'square',
+          underline: underlined,
         },
       ]"
-      :target="blank ? '_blank' : ''"
-      :data-tooltip=tooltipData
-      @click="$emit('click', $event)"
     >
       <slot></slot>
     </a>
@@ -35,23 +33,20 @@ import Tooltip from '@/mixins/tooltip';
 import Animations from '@/mixins/animations';
 
 export default {
+  inheritAttrs: false,
   mixins: [
     Tooltip,
     Animations,
   ],
 
   props: {
-    href: {
-      type: String,
-      default: '#',
-    },
-    blank: Boolean,
+    underlined: Boolean,
     animation: {
       type: String,
       default: null,
       validator: value => [
         'ltr', 'rtl', 'c', 'oltr', 'ortl', 'oc', 'olr',
-        'orl', 'underlined', 'squared', 'dSquared',
+        'orl', 'square', 'dSquare',
       ].indexOf(value) !== -1,
     },
   },
