@@ -35,6 +35,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     dropdown: Boolean,
     selected: Boolean,

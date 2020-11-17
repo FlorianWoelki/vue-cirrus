@@ -44,6 +44,7 @@ import Animations from '@/mixins/animations';
 import Tooltip from '@/mixins/tooltip';
 
 export default {
+  inheritAttrs: false,
   mixins: [
     Animations,
     Tooltip,

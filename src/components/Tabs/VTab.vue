@@ -15,6 +15,7 @@
 import Tooltip from '@/mixins/tooltip';
 
 export default {
+  inheritAttrs: false,
   mixins: [
     Tooltip,
   ],

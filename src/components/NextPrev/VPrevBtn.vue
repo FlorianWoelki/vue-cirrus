@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     prevText: {
       type: String,

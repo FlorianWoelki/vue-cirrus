@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     dataCheckIcon: String,
     dataUncheckIcon: String,

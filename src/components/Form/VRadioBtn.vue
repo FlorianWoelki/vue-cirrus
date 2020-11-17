@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     id: {
       type: String,

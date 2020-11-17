@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     selected: Boolean,
     disabled: Boolean,
