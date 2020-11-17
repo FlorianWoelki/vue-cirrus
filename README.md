@@ -19,24 +19,17 @@ If you want to see the documentation <a href="https://florianwoelki.github.io/vu
 
 ## 🔨 Quick Install
 
-1. Install with npm
+1. Install with npm/yarn
 
-```
+```shell
 npm install vue-cirrus
+# OR
+yarn add vue-cirrus
 ```
 
 2. Include the following in your public.html file
 
 ```html
-<link
-  href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-  rel="stylesheet"
-/>
-
 <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
 ```
 
