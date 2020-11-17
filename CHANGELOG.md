@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0] - 2020-11-17
+
+### 🔨 Added
+- Added more colorful components supported by Cirrus
+- Added attributes and listeners for mostly all components where it is useful
+
+### ⚡️ Changed
+- Fixed margin top with icon on input field (might be removed later, because future version of Cirrus it is already fixed)
+- Cleaned up a lot of components
+- Minor changes to props for all components
+- Null classes for some props
+
 ## [0.5.31] - 2020-11-08
 
 ### ⚡️ Changed
@@ -585,3 +597,4 @@ All notable changes to this project will be documented in this file.
 [0.5.28]: https://www.npmjs.com/package/vue-cirrus/v/0.5.28
 [0.5.3]: https://www.npmjs.com/package/vue-cirrus/v/0.5.3
 [0.5.31]: https://www.npmjs.com/package/vue-cirrus/v/0.5.31
+[0.6.0]: https://www.npmjs.com/package/vue-cirrus/v/0.6.0
