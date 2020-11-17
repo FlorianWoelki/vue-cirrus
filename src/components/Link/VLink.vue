@@ -9,16 +9,8 @@
       :class="[
         tooltipMixins,
         animationsMixins,
+        animationMap[animation],
         {
-          'u u-LR': animation === 'ltr',
-          'u u-RL': animation === 'rtl',
-          'u u-C': animation === 'c',
-          'utb utb-LR': animation === 'oltr',
-          'utb utb-RL': animation === 'ortl',
-          'utb utb-C': animation === 'oc',
-          'utb utb-OLR': animation === 'olr',
-          'utb utb-ORL': animation === 'orl',
-          'utb utb-OLR': animation === 'dSquare' || animation === 'square',
           underline: underlined,
         },
       ]"
@@ -34,10 +26,28 @@ import Animations from '@/mixins/animations';
 
 export default {
   inheritAttrs: false,
+
   mixins: [
     Tooltip,
     Animations,
   ],
+
+  data() {
+    return {
+      animationMap: {
+        ltr: 'u u-LR',
+        rtl: 'u u-RL',
+        c: 'u u-C',
+        oltr: 'utb utb-LR',
+        ortl: 'utb utb-RL',
+        oc: 'utb utb-C',
+        olr: 'utb utb-OLR',
+        orl: 'utb utb-ORL',
+        square: 'utb utb-OLR',
+        dSquare: 'utb utb-OLR',
+      },
+    };
+  },
 
   props: {
     underlined: Boolean,
