@@ -1,20 +1,20 @@
 <template>
-  <div v-if="!animated" class="card-container" :style="{ 'min-height': `${height}` }">
+  <div v-if="!animated" class="card-container">
     <div
       class="card-image"
       :style="image.startsWith('http://') || image.startsWith('https://')
-        ? `background-image: ${image}` : `background-image: ${require(`@/${src}`)}`"
+        ? `background-image: url(${image})` : `background-image: ${require(`@/${image}`)}`"
     ></div>
     <div class="title-container">
       <slot />
     </div>
   </div>
   <div v-else>
-    <div class="card-container" :style="{ 'min-height': `${height}` }">
+    <div class="card-container">
       <div
         class="card-image"
         :style="image.startsWith('http://') || image.startsWith('https://')
-          ? `background-image: url(${image})` : `background-image: ${require(`@/${src}`)}`"
+          ? `background-image: url(${image})` : `background-image: ${require(`@/${image}`)}`"
       ></div>
     </div>
     <div class="mobile-title">
@@ -41,10 +41,6 @@ export default {
 
   props: {
     image: String,
-    height: {
-      type: String,
-      default: '332px',
-    },
   },
 };
 </script>

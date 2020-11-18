@@ -4,6 +4,7 @@ import component3 from './VCardFooter.vue';
 import component4 from './VCardImage.vue';
 import component5 from './VCardSubtitle.vue';
 import component6 from './VCardTitle.vue';
+import component7 from './VCardBody.vue';
 
 export default (Vue) => {
   Vue.component(component.name, component);
@@ -12,4 +13,5 @@ export default (Vue) => {
   Vue.component(component4.name, component4);
   Vue.component(component5.name, component5);
   Vue.component(component6.name, component6);
+  Vue.component(component7.name, component7);
 };

@@ -33,3 +33,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.card.slide-up {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  max-height: 550px;
+}
+</style>
