@@ -3,7 +3,7 @@
     <div
       class="card-image"
       :style="image.startsWith('http://') || image.startsWith('https://')
-        ? `background-image: url(${image})` : `background-image: ${require(`@/${image}`)}`"
+        ? `background-image: url(${image})` : `background-image: url(${require(`@/${image}`)})`"
     ></div>
     <div class="title-container">
       <slot />
@@ -14,7 +14,7 @@
       <div
         class="card-image"
         :style="image.startsWith('http://') || image.startsWith('https://')
-          ? `background-image: url(${image})` : `background-image: ${require(`@/${image}`)}`"
+          ? `background-image: url(${image})` : `background-image: url(${require(`@/${image}`)})`"
       ></div>
     </div>
     <div class="mobile-title">
