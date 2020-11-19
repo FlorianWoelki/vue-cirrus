@@ -11,20 +11,24 @@
       <v-input-field
         v-model="email"
         placeholder="Email"
-        title="Email"
         @input="checkInput"
         icon
       >
+        <template #title>
+          Email
+        </template>
         <span class="icon"><i class="far fa-wrapper fa-envelope-open"></i></span>
       </v-input-field>
       <v-input-field
         v-model="password"
         placeholder="Password"
-        title="Password"
         type="password"
         @input="checkInput"
         icon
       >
+        <template #title>
+          Password
+        </template>
         <span class="icon"><i class="fas fa-wrapper fa-key"></i></span>
       </v-input-field>
       <v-row>
