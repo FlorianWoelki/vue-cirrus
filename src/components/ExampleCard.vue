@@ -1,6 +1,6 @@
 <template>
   <v-card equalHeight>
-    <v-card-image :image="`${require('@/assets/' + image)}`">
+    <v-card-image :image="require('@/assets/' + image)">
       <v-card-title>{{ title }}</v-card-title>
       <v-card-subtitle>
         <v-tag-container>
