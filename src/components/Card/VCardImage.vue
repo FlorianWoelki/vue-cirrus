@@ -2,8 +2,7 @@
   <div v-if="!animated" class="card-container">
     <div
       class="card-image"
-      :style="image.startsWith('http://') || image.startsWith('https://')
-        ? `background-image: url(${image})` : `background-image: url(${require(`@/${image}`)})`"
+      :style="`background-image: url(${image})`"
     ></div>
     <div class="title-container">
       <slot />
@@ -13,8 +12,7 @@
     <div class="card-container">
       <div
         class="card-image"
-        :style="image.startsWith('http://') || image.startsWith('https://')
-          ? `background-image: url(${image})` : `background-image: url(${require(`@/${image}`)})`"
+        :style="`background-image: url(${image})`"
       ></div>
     </div>
     <div class="mobile-title">
