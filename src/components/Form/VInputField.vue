@@ -53,7 +53,6 @@ export default {
   props: {
     pilled: Boolean,
     select: Boolean,
-    title: String,
     focused: Boolean,
     success: Boolean,
     error: Boolean,
