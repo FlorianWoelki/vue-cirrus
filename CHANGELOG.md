@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.1] - 2020-11-19
+
+### 🔨 Added
+- Added card body
+
+### ⚡️ Changed
+- Card image fixes
+
 ## [0.6.0] - 2020-11-17
 
 ### 🔨 Added
@@ -598,3 +606,4 @@ All notable changes to this project will be documented in this file.
 [0.5.3]: https://www.npmjs.com/package/vue-cirrus/v/0.5.3
 [0.5.31]: https://www.npmjs.com/package/vue-cirrus/v/0.5.31
 [0.6.0]: https://www.npmjs.com/package/vue-cirrus/v/0.6.0
+[0.6.1]: https://www.npmjs.com/package/vue-cirrus/v/0.6.1
