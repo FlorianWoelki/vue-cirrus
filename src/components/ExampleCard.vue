@@ -9,7 +9,9 @@
       </v-card-subtitle>
     </v-card-image>
 
-    <p>{{ description }}</p>
+    <v-container class="mb-0">
+      <p>{{ description }}</p>
+    </v-container>
 
     <v-card-actions>
       <v-row>
