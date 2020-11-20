@@ -25,8 +25,7 @@
           :outline="propsData.outline"
           :size="propsData.size"
           :color="propsData.color"
-          :loadingLeft="propsData.loading === 'loadingLeft'"
-          :loadingRight="propsData.loading === 'loadingRight'"
+          :animation="propsData.animation"
         >Customize Me</v-btn>
       </template>
       <v-row>
@@ -102,11 +101,11 @@
         <v-col c="4" class="u-center">
           <v-radio-btn
             id="loadingLeft"
-            @change="(event) => { propsData.loading = event.srcElement.id }"
+            @change="(event) => { propsData.animation = event.srcElement.id }"
           >Loading Left</v-radio-btn>
           <v-radio-btn
             id="loadingRight"
-            @change="(event) => { propsData.loading = event.srcElement.id }"
+            @change="(event) => { propsData.animation = event.srcElement.id }"
           >Loading Right</v-radio-btn>
         </v-col>
       </v-row>
@@ -185,12 +184,11 @@ export default {
         outline: false,
         color: '',
         size: '',
-        loading: '',
+        animation: '',
       },
       props: [
         ['v-btn', 'dropdown', 'boolean', 'false', 'Set this button to a dropdown button.'],
         ['v-btn', 'animated', 'boolean', 'false', 'This is a onclick effect and it will animate the button, if a user clicked on the button.'],
-        ['v-btn', 'disabled', 'boolean', 'false', 'With this property the button will be disabled.'],
         ['v-btn', 'outline', 'boolean', 'false', 'Apply the outline styling with this property.'],
         ['v-btn', 'pilled', 'boolean', 'false', 'This will turn the button to a round shaped button.'],
         ['v-btn', 'circle', 'boolean', 'false', 'This will turn the button to a circle shaped button.'],

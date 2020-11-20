@@ -24,12 +24,13 @@ export default {
       let validProps = '';
       let length = 0;
       Object.entries(this.propsData).forEach((entry) => {
+        console.log(entry[0]);
         if ((entry[0] === 'position' || entry[0] === 'size'
           || entry[0] === 'color' || entry[0] === 'title'
           || entry[0] === 'lang' || entry[0] === 'text'
           || entry[0] === 'tooltipText' || entry[0] === 'content'
           || entry[0] === 'src' || entry[0] === 'subtitle'
-          || entry[0] === 'placeholder') && entry[1] !== '') {
+          || entry[0] === 'placeholder' || entry[0] === 'animation') && entry[1] !== '') {
           validProps += `\n  ${entry[0]}="${entry[1]}"`;
           length += 1;
         } else if (entry[1] === true) {
