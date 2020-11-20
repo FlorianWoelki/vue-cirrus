@@ -4,7 +4,7 @@
     :data-tooltip="tooltipData"
     class="input-control"
   >
-    <label>
+    <label v-if="$slots['title']">
       <slot name="title" />
     </label>
     <div :class="icon ? 'input-control mt-0' : ''">
@@ -16,11 +16,11 @@
         }"
         :class="inputClasses"
       />
-      <span class="icon">
+      <span v-if="$slots.default" class="icon">
         <slot></slot>
       </span>
     </div>
-    <span class="info u-text-center">
+    <span v-if="$slots['info']" class="info u-text-center">
       <slot name="info" />
     </span>
   </div>
