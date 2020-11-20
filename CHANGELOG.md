@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.12] - 2020-11-20
+
+### ⚡️ Changed
+- Removed title prop for input field
+- Removed title and subtitle props for footer
+- Fixed slots and classes if they are not used
+
 ## [0.6.11] - 2020-11-19
 
 ### ⚡️ Changed
@@ -613,3 +620,4 @@ All notable changes to this project will be documented in this file.
 [0.6.0]: https://www.npmjs.com/package/vue-cirrus/v/0.6.0
 [0.6.1]: https://www.npmjs.com/package/vue-cirrus/v/0.6.1
 [0.6.11]: https://www.npmjs.com/package/vue-cirrus/v/0.6.11
+[0.6.12]: https://www.npmjs.com/package/vue-cirrus/v/0.6.12
