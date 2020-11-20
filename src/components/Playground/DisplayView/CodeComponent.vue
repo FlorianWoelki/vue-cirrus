@@ -45,8 +45,7 @@ export default {
         validProps += '\n';
       }
 
-      return `
-<${this.component}${validProps}>
+      return `<${this.component}${validProps}>
 ${!this.disableMessage ? '  Customize Me' : ''}
 </${this.component}>`;
     },
