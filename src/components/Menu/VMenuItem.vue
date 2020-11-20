@@ -5,7 +5,7 @@
       'selected': selected,
     },
   ]">
-    <div class="menu-addon">
+    <div v-if="$slots['addon']" class="menu-addon">
       <slot name="addon"></slot>
     </div>
     <slot></slot>

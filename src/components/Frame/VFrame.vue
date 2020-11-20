@@ -3,10 +3,10 @@
     <div class="frame__header">
       <slot name="header"></slot>
 
-      <div class="frame__title">
+      <div v-if="$slots['title']" class="frame__title">
         <slot name="title"></slot>
       </div>
-      <div class="frame__subtitle">
+      <div v-if="$slots['subtitle']" class="frame__subtitle">
         <slot name="subtitle"></slot>
       </div>
     </div>
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div class="frame__footer">
+    <div v-if="$slots['footer']" class="frame__footer">
       <slot name="footer"></slot>
     </div>
   </div>

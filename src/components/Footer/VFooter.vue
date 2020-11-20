@@ -1,12 +1,12 @@
 <template>
   <footer :class="['footer', fixed ? 'footer--fixed' : null]">
-    <div class="footer__title">
+    <div v-if="$slots['title']" class="footer__title">
       <slot name="title" />
     </div>
 
     <slot></slot>
 
-    <div class="subtitle">
+    <div v-if="$slots['subtitle']" class="subtitle">
       <slot name="subtitle" />
     </div>
   </footer>
