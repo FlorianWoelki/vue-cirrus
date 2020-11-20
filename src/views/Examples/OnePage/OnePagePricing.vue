@@ -11,16 +11,12 @@
       <v-col c="6">
         <v-card>
           <v-card-title>
-            <v-row>
-              <v-col c="6">
-                <p>Package 1</p>
-              </v-col>
-              <v-col c="6">
-                <h4 class="u-pull-right">$15.99</h4>
-              </v-col>
-            </v-row>
+            <v-container class="u-flex u-items-center u-justify-space-between">
+              <p>Package 1</p>
+              <h4>$15.99</h4>
+            </v-container>
           </v-card-title>
-          <v-card-content>
+          <v-container>
             <p>You will have the <b>following features:</b></p>
             <ul>
               <li>Feature 1</li>
@@ -28,27 +24,23 @@
               <li>Feature 3</li>
               <li>Feature 4</li>
             </ul>
-          </v-card-content>
+          </v-container>
           <v-card-actions>
-            <v-row class="u-center">
+            <div class="mt-1 mb-1 u-center">
               <v-btn color="link" outline>Sign up for free</v-btn>
-            </v-row>
+            </div>
           </v-card-actions>
         </v-card>
       </v-col>
       <v-col c="6">
         <v-card>
           <v-card-title>
-            <v-row>
-              <v-col c="6">
-                <p>Package 2</p>
-              </v-col>
-              <v-col c="6">
-                <h4 class="u-pull-right">$25.99</h4>
-              </v-col>
-            </v-row>
+            <v-container class="u-flex u-items-center u-justify-space-between">
+              <p>Package 2</p>
+              <h4>$25.99</h4>
+            </v-container>
           </v-card-title>
-          <v-card-content>
+          <v-container>
             <p>You will have the <b>following features:</b></p>
             <ul>
               <li>Feature 1</li>
@@ -56,11 +48,12 @@
               <li>Feature 3</li>
               <li>Feature 4</li>
             </ul>
-          </v-card-content>
+          </v-container>
+
           <v-card-actions>
-            <v-row class="u-center">
+            <div class="mt-1 mb-1 u-center">
               <v-btn color="link">Sign up and buy</v-btn>
-            </v-row>
+            </div>
           </v-card-actions>
         </v-card>
       </v-col>

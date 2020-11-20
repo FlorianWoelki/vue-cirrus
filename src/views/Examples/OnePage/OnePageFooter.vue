@@ -1,13 +1,12 @@
 <template>
-  <footer class="footer-section">
+  <v-footer class="footer-section">
+    <template #title>
+      <h6 class="white mb-0">&copy; 2020 One Page</h6>
+    </template>
+
     <v-row class="u-center">
       <v-col>
-        <p class="white font-bold" style="letter-spacing: 0; font-size: 1.3rem;">
-          <span class="faded">&copy; 2019</span>
-          One Page
-        </p>
-
-        <v-divider></v-divider>
+        <v-divider class="mt-1"></v-divider>
 
         <p>
           Code is licensed with
@@ -21,7 +20,7 @@
         </p>
       </v-col>
     </v-row>
-  </footer>
+  </v-footer>
 </template>
 
 <style lang="scss">
