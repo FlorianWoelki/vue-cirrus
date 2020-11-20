@@ -16,8 +16,6 @@
 export default {
   props: {
     fixed: Boolean,
-    title: String,
-    subtitle: String,
   },
 };
 </script>
