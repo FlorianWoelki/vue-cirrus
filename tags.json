@@ -1,0 +1,11 @@
+{
+  "v-avatar": {
+    "attributes": [
+      "src",
+      "text",
+      "padded",
+      "size"
+    ],
+    "description": "Avatar component"
+  }
+}

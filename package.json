@@ -36,6 +36,10 @@
     "*.json",
     "*.js"
   ],
+  "vetur": {
+    "tags": "tags.json",
+    "attributes": "attributes.json"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.0",
     "@vue/cli-plugin-eslint": "^4.3.0",

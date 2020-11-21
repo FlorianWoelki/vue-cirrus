@@ -1,0 +1,18 @@
+{
+  "v-avatar/src": {
+    "type": "string",
+    "description": "Source for the avatar image"
+  },
+  "v-avatar/text": {
+    "type": "string",
+    "description": "String that contains the text of the avatar"
+  },
+  "v-avatar/padded": {
+    "type": "boolean",
+    "description": "Padded for the avatar image"
+  },
+  "v-avatar/size": {
+    "type": "string",
+    "description": "Set the size of the avatar"
+  }
+}
