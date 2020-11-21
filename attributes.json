@@ -14,5 +14,33 @@
   "v-avatar/size": {
     "type": "string",
     "description": "Set the size of the avatar"
+  },
+  "v-btn/dropdown": {
+    "type": "boolean",
+    "description": "Set the type of the button to a dropdown"
+  },
+  "v-btn/pilled": {
+    "type": "boolean",
+    "description": "Set the button to a pilled shape"
+  },
+  "v-btn/circle": {
+    "type": "boolean",
+    "description": "Set the shape of the button to a circle"
+  },
+  "v-btn/animated": {
+    "type": "boolean",
+    "description": "Add a button animation whenever the user clicks on it"
+  },
+  "v-btn/outline": {
+    "type": "boolean",
+    "description": "Set the type of color of the button to outline"
+  },
+  "v-btn/color": {
+    "type": "string",
+    "description": "Set the color of the button"
+  },
+  "v-btn/size": {
+    "type": "string",
+    "description": "Set the size of the button"
   }
 }

@@ -7,5 +7,17 @@
       "size"
     ],
     "description": "Avatar component"
+  },
+  "v-btn": {
+    "attributes": [
+      "dropdown",
+      "pilled",
+      "circle",
+      "animated",
+      "outline",
+      "color",
+      "size"
+    ],
+    "description": "Button component"
   }
 }
