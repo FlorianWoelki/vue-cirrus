@@ -3,7 +3,7 @@
       tooltipMixins,
       animationsMixins,
       'avatar',
-      size !== null ? `avatar--${size}` : null,
+      size ? `avatar--${size}` : null,
     ]"
     :data-text="text"
   >
