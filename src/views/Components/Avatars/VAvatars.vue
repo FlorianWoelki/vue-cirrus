@@ -115,8 +115,8 @@ export default {
         src: '',
       },
       props: [
-        ['v-avatar', 'src', 'string', 'empty', 'This is the image source of the avatar.'],
-        ['v-avatar', 'text', 'string', 'empty', 'A placeholder text which will be placed in the avatar.'],
+        ['v-avatar', 'src', 'string', 'null', 'This is the image source of the avatar.'],
+        ['v-avatar', 'text', 'string', 'null', 'A placeholder text which will be placed in the avatar.'],
         ['v-avatar', 'padded', 'boolean', 'false', 'Enable padding around avatar.'],
         ['v-avatar', 'size', 'string', 'null', 'Set the size of the avatar (xsmall, small, large, xlarge).'],
       ],
