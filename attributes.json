@@ -58,5 +58,17 @@
   "v-badge/color": {
     "type": "string",
     "description": "Set the color of the badge"
+  },
+  "v-card/animated": {
+    "type": "boolean",
+    "description": "Set if the card will get animated through e.g. an image"
+  },
+  "v-card/equalHeight": {
+    "type": "boolean",
+    "description": "Set equal height of all other cards in the row"
+  },
+  "v-card-image/image": {
+    "type": "string",
+    "description": "Set the image source. Could be a URL or you need to require the imported image"
   }
 }

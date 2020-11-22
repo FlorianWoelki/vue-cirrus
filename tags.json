@@ -33,5 +33,33 @@
       "color"
     ],
     "description": "Badge for every element"
+  },
+  "v-card": {
+    "attributes": [
+      "animated",
+      "equalHeight"
+    ],
+    "description": "Component for a simple card wrapper"
+  },
+  "v-card-actions": {
+    "description": "Add a action bar to the card"
+  },
+  "v-card-body": {
+    "description": "Add a card body for the card"
+  },
+  "v-card-title": {
+    "description": "Add a card title for the card. Useful in the card image component"
+  },
+  "v-card-subtitle": {
+    "description": "Add a card subtitle for the card. Useful in the card image component"
+  },
+  "v-card-footer": {
+    "description": "Add a card footer for the card"
+  },
+  "v-card-image": {
+    "attributes": [
+      "image"
+    ],
+    "description": "Set the image of the card"
   }
 }
