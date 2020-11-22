@@ -21,7 +21,7 @@
       :componentProps="propsData"
     >
       <template v-slot:component>
-        <v-code lang="JavaScript" copyable><br/>
+        <v-code lang="JavaScript">
 const customizeMe = "Hello World";
         </v-code>
       </template>
@@ -39,14 +39,6 @@ const customizeMe = "Hello World";
       The <kbd>v-code</kbd> component supports different code languages.
     </p>
     <CodeLanguages />
-
-    <v-space />
-    <h5 class="font-light no-upper-margin">Copyable code</h5>
-    <p class="no-upper-margin">
-      It is possible, to apply the <kbd>copyable</kbd> property, whenever
-      you want to let the user copy something.
-    </p>
-    <CodeCopyable />
   </section>
 </template>
 
@@ -54,25 +46,21 @@ const customizeMe = "Hello World";
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
 import CodeLanguages from '@/views/Components/Code/Examples/CodeLanguages.vue';
-import CodeCopyable from '@/views/Components/Code/Examples/CodeCopyable.vue';
 
 export default {
   components: {
     API,
     Playground,
     CodeLanguages,
-    CodeCopyable,
   },
 
   data() {
     return {
       propsData: {
         lang: 'JavaScript',
-        copyable: true,
       },
       props: [
         ['v-code', 'lang', 'string', 'empty', 'Language for this code segment (Supported languages: html, javascript, css, bash, vue)'],
-        ['v-code', 'copyable', 'boolean', 'false', 'Adds a functionality to copy the code inside the code component.'],
         ['v-code', 'dark', 'boolean', 'false', 'Enables the dark mode for this code component.'],
       ],
     };
@@ -80,8 +68,7 @@ export default {
 
   computed: {
     customCode() {
-      return `
-<v-code lang="JavaScript" copyable><br/>
+      return `<v-code lang="JavaScript">
 const customizeMe = "Hello World";
 </v-code>`;
     },

@@ -22,18 +22,15 @@ export default Vue.extend({
 
   data() {
     return {
-      htmlCodeExample: `
-<div class="hello-world">
+      htmlCodeExample: `<div class="hello-world">
   <h1>This is a simple test</h1>
   <p>Testing something...</p>
 </div>`,
-      jsCodeExample: `
-var testVar = 34;
+      jsCodeExample: `var testVar = 34;
 let testLet = 34;
 const testConst = 34;
 if (testLet === 34) console.log(1);`,
-      cssCodeExample: `
-h1 {
+      cssCodeExample: `h1 {
   display: none;
   visibility: hidden;
 }`,
