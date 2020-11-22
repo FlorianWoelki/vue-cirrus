@@ -25,5 +25,13 @@
       "filled"
     ],
     "description": "Button group for multiple buttons"
+  },
+  "v-badge": {
+    "attributes": [
+      "content",
+      "position",
+      "color"
+    ],
+    "description": "Badge for every element"
   }
 }

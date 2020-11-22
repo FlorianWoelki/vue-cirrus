@@ -46,5 +46,17 @@
   "v-btn-group/filled": {
     "type": "boolean",
     "description": "Set the buttons group to fill"
+  },
+  "v-badge/content": {
+    "type": "string",
+    "description": "Set the content of the badge, default is 0"
+  },
+  "v-badge/position": {
+    "type": "string",
+    "description": "Set the position of the content"
+  },
+  "v-badge/color": {
+    "type": "string",
+    "description": "Set the color of the badge"
   }
 }
