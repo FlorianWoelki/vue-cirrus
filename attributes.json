@@ -42,5 +42,9 @@
   "v-btn/size": {
     "type": "string",
     "description": "Set the size of the button"
+  },
+  "v-btn-group/filled": {
+    "type": "boolean",
+    "description": "Set the buttons group to fill"
   }
 }

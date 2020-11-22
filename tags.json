@@ -19,5 +19,11 @@
       "size"
     ],
     "description": "Button component"
+  },
+  "v-btn-group": {
+    "attributes": [
+      "filled"
+    ],
+    "description": "Button group for multiple buttons"
   }
 }
