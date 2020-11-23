@@ -98,5 +98,13 @@
   "v-divider/content": {
     "type": "string",
     "description": "Displays a text between the divider"
+  },
+  "v-dropdown/right": {
+    "type": "boolean",
+    "description": "Displays the dropdown menu on the right side of the element"
+  },
+  "v-dropdown/left": {
+    "type": "boolean",
+    "description": "Displays the dropdown menu on the left side of the element"
   }
 }

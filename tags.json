@@ -83,5 +83,15 @@
       "content"
     ],
     "description": "Displays a simple horizontal line for dividing content"
+  },
+  "v-dropdown": {
+    "attributes": [
+      "right",
+      "left"
+    ],
+    "description": "Creates a simple dropdown menu"
+  },
+  "v-dropdown-item": {
+    "description": "Displays a dropdown item in a dropdown"
   }
 }
