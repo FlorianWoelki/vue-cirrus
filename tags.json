@@ -75,5 +75,13 @@
       "fluid"
     ],
     "description": "Containerize all Childcomponents"
+  },
+  "v-divider": {
+    "attributes": [
+      "short",
+      "vertical",
+      "content"
+    ],
+    "description": "Displays a simple horizontal line for dividing content"
   }
 }
