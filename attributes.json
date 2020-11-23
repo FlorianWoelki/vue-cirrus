@@ -78,5 +78,13 @@
   "v-code/dark": {
     "type": "boolean",
     "description": "Set the code component to dark mode"
+  },
+  "v-container/noPadding": {
+    "type": "boolean",
+    "description": "No padding for the container component"
+  },
+  "v-container/fluid": {
+    "type": "boolean",
+    "description": "Make the container fluid"
   }
 }

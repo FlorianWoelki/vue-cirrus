@@ -68,5 +68,12 @@
       "dark"
     ],
     "description": "Code component for displaying code"
+  },
+  "v-container": {
+    "attributes": [
+      "noPadding",
+      "fluid"
+    ],
+    "description": "Containerize all Childcomponents"
   }
 }
