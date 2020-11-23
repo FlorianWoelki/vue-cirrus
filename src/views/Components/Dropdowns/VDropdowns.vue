@@ -97,8 +97,7 @@ export default {
 
   computed: {
     customCode() {
-      return `
-<v-dropdown>
+      return `<v-dropdown>
   <template v-slot:button>
     <v-btn dropdown>
       My Dropdown
