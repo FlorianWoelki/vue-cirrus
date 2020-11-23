@@ -70,5 +70,13 @@
   "v-card-image/image": {
     "type": "string",
     "description": "Set the image source. Could be a URL or you need to require the imported image"
+  },
+  "v-code/lang": {
+    "type": "string",
+    "description": "Set the language of the code component (supported: bash, html, css, javascript)"
+  },
+  "v-code/dark": {
+    "type": "boolean",
+    "description": "Set the code component to dark mode"
   }
 }

@@ -61,5 +61,12 @@
       "image"
     ],
     "description": "Set the image of the card"
+  },
+  "v-code": {
+    "attributes": [
+      "lang",
+      "dark"
+    ],
+    "description": "Code component for displaying code"
   }
 }
