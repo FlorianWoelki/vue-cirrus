@@ -126,5 +126,85 @@
   "v-checkbox/checked": {
     "type": "boolean",
     "description": "Set the checked status of the checkbox"
+  },
+  "v-input-color/defaultValue": {
+    "type": "string",
+    "description": "Set the default value for the color picker"
+  },
+  "v-date-picker/date": {
+    "type": "string",
+    "description": "Set the default date of the date picker"
+  },
+  "v-date-picker/title": {
+    "type": "string",
+    "description": "Set the title of the date picker form"
+  },
+  "v-date-picker/information": {
+    "type": "string",
+    "description": "Set a small information label below the date picker"
+  },
+  "v-toggle/dataCheckIcon": {
+    "type": "string",
+    "description": "Set the check icon for the toggle component"
+  },
+  "v-toggle/dataUncheckIcon": {
+    "type": "string",
+    "description": "Set the uncheck icon for the toggle component"
+  },
+  "v-toggle/name": {
+    "type": "string",
+    "description": "Set the name of the input for the toggle component"
+  },
+  "v-toggle/checked": {
+    "type": "boolean",
+    "description": "Set if the toggle component is checked or not"
+  },
+  "v-toggle/color": {
+    "type": "string",
+    "description": "Set the color of the toggle component"
+  },
+  "v-radio-btn/id": {
+    "type": "string",
+    "description": "Set the id of the radio button for the label"
+  },
+  "v-radio-btn/name": {
+    "type": "string",
+    "description": "Set the name of the input field for the radio button"
+  },
+  "v-radio-btn/checked": {
+    "type": "boolean",
+    "description": "Set wether the radio button is checked or not"
+  },
+  "v-radio-btn/color": {
+    "type": "string",
+    "description": "Set the color of the radio button"
+  },
+  "v-input-field/pilled": {
+    "type": "boolean",
+    "description": "Set wether the input field is in a pilled shape"
+  },
+  "v-input-field/select": {
+    "type": "boolean",
+    "description": "Set wether the input field is a select html tag"
+  },
+  "v-input-field/focused": {
+    "type": "boolean",
+    "description": "Set wether the input field is focused by default"
+  },
+  "v-input-field/success": {
+    "type": "boolean",
+    "description": "Set the color for the input field to green"
+  },
+  "v-input-field/error": {
+    "type": "boolean",
+    "description": "Set the color for the input field to red"
+  },
+  "v-input-field/icon": {
+    "type": "boolean",
+    "description": "Add a icon for the input field that gets created by the slot of this component"
+  },
+  "v-input-field/size": {
+    "type": "string",
+    "description": "Set the size of the input field"
   }
 }

@@ -116,5 +116,62 @@
       "checked"
     ],
     "description": "Creates a checkbox item with a label described as a slot"
+  },
+  "v-input-color": {
+    "attributes": [
+      "defaultValue"
+    ],
+    "description": "Creates a simple color picker with a default value"
+  },
+  "v-form-group": {
+    "description": "Creates a form group for example a button and a input field"
+  },
+  "v-date-picker": {
+    "attributes": [
+      "date",
+      "title",
+      "information"
+    ],
+    "description": "Creates a date picker form"
+  },
+  "v-label": {
+    "description": "Creates a simple form group label"
+  },
+  "v-toggle": {
+    "attributes": [
+      "dataCheckIcon",
+      "dataUncheckIcon",
+      "name",
+      "checked",
+      "color"
+    ],
+    "description": "Creates a toggle form component"
+  },
+  "v-text-area": {
+    "description": "Creates a simple text area"
+  },
+  "v-search-bar": {
+    "description": "Creates a search bar with a optional button in a form group"
+  },
+  "v-radio-btn": {
+    "attributes": [
+      "id",
+      "name",
+      "checked",
+      "color"
+    ],
+    "description": "Creates a radio button"
+  },
+  "v-input-field": {
+    "attributes": [
+      "pilled",
+      "select",
+      "focused",
+      "success",
+      "error",
+      "size",
+      "icon"
+    ],
+    "description": "Creates a input field"
   }
 }
