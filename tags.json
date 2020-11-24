@@ -108,5 +108,13 @@
       "title"
     ],
     "description": "Creates a footer list item"
+  },
+  "v-checkbox": {
+    "attributes": [
+      "id",
+      "color",
+      "checked"
+    ],
+    "description": "Creates a checkbox item with a label described as a slot"
   }
 }

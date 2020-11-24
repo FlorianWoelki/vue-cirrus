@@ -114,5 +114,17 @@
   "v-footer-list-item/title": {
     "type": "boolean",
     "description": "Set the footer list item to a non clickable title footer list item"
+  },
+  "v-checkbox/id": {
+    "type": "string",
+    "description": "Set the id for the checkbox with its label"
+  },
+  "v-checkbox/color": {
+    "type": "string",
+    "description": "Set the color of the checkbox with the text"
+  },
+  "v-checkbox/checked": {
+    "type": "boolean",
+    "description": "Set the checked status of the checkbox"
   }
 }
