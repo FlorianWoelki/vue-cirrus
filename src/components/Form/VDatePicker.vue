@@ -4,25 +4,21 @@
     :data-tooltip="tooltipData"
   >
     <label
-      v-if=title
+      v-if="title"
       class="font-normal"
     >{{title}}</label>
-    <span
-      v-if=subtitle
-      class="info"
-    >{{subtitle}}</span>
     <input
-      v-if="date === ''"
+      v-if="date"
       type="date"
-      :value=currentDate
+      :value="currentDate"
     >
     <input
       v-else
       type="date"
-      :value=date
+      :value="date"
     >
     <span
-      v-if=information
+      v-if="information"
       class="info text-center"
     >{{information}}</span>
   </div>
@@ -39,26 +35,9 @@ export default {
   ],
 
   props: {
-    date: {
-      type: String,
-      default: '',
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    information: {
-      type: String,
-      default: '',
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
+    date: String,
+    title: String,
+    information: String,
   },
 
   computed: {
@@ -68,7 +47,6 @@ export default {
         this.tooltipMixins,
         {
           'date-picker': true,
-          dark: this.dark,
         },
       );
     },
@@ -91,11 +69,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.date-picker.dark input[type="date"] {
-  background-color: #272727;
-  border-color: #272727;
-  color: white;
-}
-</style>
