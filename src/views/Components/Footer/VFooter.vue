@@ -22,25 +22,31 @@
       disableMessage
     >
       <template v-slot:component>
-        <v-footer style="margin-top: 0" title="v-footer" subtitle="Awesome footer component">
+        <v-footer style="margin-top: 0">
+          <template #title>
+            <h6 class="white uppercase">Title</h6>
+          </template>
           <v-row>
             <v-col c="6">
               <v-footer-list>
                 <v-footer-list-item title>About Us</v-footer-list-item>
-                <v-footer-list-item>Facebook</v-footer-list-item>
-                <v-footer-list-item>Instagram</v-footer-list-item>
-                <v-footer-list-item>WhatsApp</v-footer-list-item>
+                <v-footer-list-item href="#">Facebook</v-footer-list-item>
+                <v-footer-list-item href="#">Instagram</v-footer-list-item>
+                <v-footer-list-item href="#">WhatsApp</v-footer-list-item>
               </v-footer-list>
             </v-col>
             <v-col c="6">
               <v-footer-list>
                 <v-footer-list-item title>Misc</v-footer-list-item>
-                <v-footer-list-item>Contact Us</v-footer-list-item>
-                <v-footer-list-item>What is this?</v-footer-list-item>
-                <v-footer-list-item>Can you help me?</v-footer-list-item>
+                <v-footer-list-item href="#">Contact Us</v-footer-list-item>
+                <v-footer-list-item href="#">What is this?</v-footer-list-item>
+                <v-footer-list-item href="#">Can you help me?</v-footer-list-item>
               </v-footer-list>
             </v-col>
           </v-row>
+          <template #subtitle>
+            <p>Subtitle</p>
+          </template>
         </v-footer>
       </template>
     </Playground>
@@ -68,35 +74,38 @@ export default {
   data() {
     return {
       propsData: {},
-      customCode: `
-<v-footer style="margin-top: 0" title="v-footer" subtitle="Awesome footer component">
+      customCode: `<v-footer style="margin-top: 0">
+  <template #title>
+    <h6 class="white uppercase">Title</h6>
+  </template>
   <v-row>
     <v-col c="6">
       <v-footer-list>
         <v-footer-list-item title>About Us</v-footer-list-item>
-        <v-footer-list-item>Facebook</v-footer-list-item>
-        <v-footer-list-item>Instagram</v-footer-list-item>
-        <v-footer-list-item>WhatsApp</v-footer-list-item>
+        <v-footer-list-item href="#">Facebook</v-footer-list-item>
+        <v-footer-list-item href="#">Instagram</v-footer-list-item>
+        <v-footer-list-item href="#">WhatsApp</v-footer-list-item>
       </v-footer-list>
     </v-col>
     <v-col c="6">
       <v-footer-list>
         <v-footer-list-item title>Misc</v-footer-list-item>
-        <v-footer-list-item>Contact Us</v-footer-list-item>
-        <v-footer-list-item>What is this?</v-footer-list-item>
-        <v-footer-list-item>Can you help me?</v-footer-list-item>
+        <v-footer-list-item href="#">Contact Us</v-footer-list-item>
+        <v-footer-list-item href="#">What is this?</v-footer-list-item>
+        <v-footer-list-item href="#">Can you help me?</v-footer-list-item>
       </v-footer-list>
     </v-col>
   </v-row>
+  <template #subtitle>
+    <p>Subtitle</p>
+  </template>
 </v-footer>
 `,
       props: [
         ['v-footer', 'fixed', 'boolean', 'false', 'Make the footer fixed on the bottom of the page.'],
-        ['v-footer', 'title', 'string', 'empty', 'Set the title for the v-footer component.'],
-        ['v-footer', 'subtitle', 'string', 'empty', 'Set the subtitle for the v-footer component.'],
+        ['v-footer', 'title', 'slot', 'null', 'Set the title for the v-footer component.'],
+        ['v-footer', 'subtitle', 'slot', 'null', 'Set the subtitle for the v-footer component.'],
         ['v-footer-list-item', 'title', 'boolean', 'false', 'Set the list item to a non clickable title.'],
-        ['v-footer-list-item', 'href', 'string', '#', 'Set the href for footer item, if it is no title.'],
-        ['v-footer-list-item', 'blank', 'boolean', 'false', 'When set to true, the link of the item will open in a new tab.'],
       ],
     };
   },
