@@ -106,5 +106,13 @@
   "v-dropdown/left": {
     "type": "boolean",
     "description": "Displays the dropdown menu on the left side of the element"
+  },
+  "v-footer/fixed": {
+    "type": "boolean",
+    "description": "Set the footer position to fixed"
+  },
+  "v-footer-list-item/title": {
+    "type": "boolean",
+    "description": "Set the footer list item to a non clickable title footer list item"
   }
 }

@@ -93,5 +93,20 @@
   },
   "v-dropdown-item": {
     "description": "Displays a dropdown item in a dropdown"
+  },
+  "v-footer": {
+    "attributes": [
+      "fixed"
+    ],
+    "description": "Displays a footer with a title and subtitle slot"
+  },
+  "v-footer-list": {
+    "description": "Creates a footer list for footer list items"
+  },
+  "v-footer-list-item": {
+    "attributes": [
+      "title"
+    ],
+    "description": "Creates a footer list item"
   }
 }
