@@ -198,5 +198,12 @@
       "ignoreScreen"
     ],
     "description": "Creates a column in a row"
+  },
+  "v-headline": {
+    "attributes": [
+      "size",
+      "uppercase"
+    ],
+    "description": "Creates a headline that is bigger than the normal HTML tags"
   }
 }

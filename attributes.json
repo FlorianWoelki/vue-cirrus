@@ -246,5 +246,13 @@
   "v-col/ignoreScreen": {
     "type": "boolean",
     "description": "Ignore the screen and let the column expand"
+  },
+  "v-headline/size": {
+    "type": "string",
+    "description": "Set the size of the headline"
+  },
+  "v-headline/uppercase": {
+    "type": "boolean",
+    "description": "Set the headline to uppercase"
   }
 }
