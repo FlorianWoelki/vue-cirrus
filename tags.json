@@ -173,5 +173,11 @@
       "icon"
     ],
     "description": "Creates a input field"
+  },
+  "v-frame": {
+    "attributes": [
+      "height"
+    ],
+    "description": "Creates a simple frame with a title, subtitle, footer and normal slot"
   }
 }

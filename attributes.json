@@ -206,5 +206,9 @@
   "v-input-field/size": {
     "type": "string",
     "description": "Set the size of the input field"
+  },
+  "v-frame/height": {
+    "type": "string",
+    "description": "Set the height of the frame"
   }
 }
