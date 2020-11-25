@@ -254,5 +254,13 @@
   "v-headline/uppercase": {
     "type": "boolean",
     "description": "Set the headline to uppercase"
+  },
+  "v-link/underlined": {
+    "type": "boolean",
+    "description": "Set the link to a underlined style"
+  },
+  "v-link/animation": {
+    "type": "boolean",
+    "description": "Set the animation of the link"
   }
 }

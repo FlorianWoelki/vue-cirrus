@@ -205,5 +205,12 @@
       "uppercase"
     ],
     "description": "Creates a headline that is bigger than the normal HTML tags"
+  },
+  "v-link": {
+    "attributes": [
+      "underlined",
+      "animation"
+    ],
+    "description": "Create a link in Cirrus style"
   }
 }
