@@ -9,7 +9,7 @@
       Code is licensed with
       <v-link href="https://opensource.org/licenses/MIT" blank>MIT</v-link>.
       Everything is
-      <span class="text-link">free</span> and
+      <span class="white">free</span> and
       <v-link href="https://github.com/FlorianWoelki/vue-cirrus" blank>open source</v-link>!
     </p>
 
