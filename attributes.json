@@ -210,5 +210,41 @@
   "v-frame/height": {
     "type": "string",
     "description": "Set the height of the frame"
+  },
+  "v-row/noWrap": {
+    "type": "boolean",
+    "description": "No wrap for the columns inside the row"
+  },
+  "v-row/level": {
+    "type": "boolean",
+    "description": "Align items in row to the same level"
+  },
+  "v-col/c": {
+    "type": "string",
+    "description": "Set the column in a 12-grid-system"
+  },
+  "v-col/o": {
+    "type": "string",
+    "description": "Define the offset for the column"
+  },
+  "v-col/w": {
+    "type": "string",
+    "description": "Set the width of the column in a 10-grid-system"
+  },
+  "v-col/h": {
+    "type": "string",
+    "description": "Set the height of the column in a 10-grid-system"
+  },
+  "v-col/dynamicOffset": {
+    "type": "string",
+    "description": "Defines the dynamic offset for the column (left, right, center)"
+  },
+  "v-col/fluid": {
+    "type": "boolean",
+    "description": ""
+  },
+  "v-col/ignoreScreen": {
+    "type": "boolean",
+    "description": "Ignore the screen and let the column expand"
   }
 }

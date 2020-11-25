@@ -179,5 +179,24 @@
       "height"
     ],
     "description": "Creates a simple frame with a title, subtitle, footer and normal slot"
+  },
+  "v-row": {
+    "attributes": [
+      "noWrap",
+      "level"
+    ],
+    "description": "Creates a row in a grid"
+  },
+  "v-col": {
+    "attributes": [
+      "c",
+      "o",
+      "w",
+      "h",
+      "dynamicOffset",
+      "fluid",
+      "ignoreScreen"
+    ],
+    "description": "Creates a column in a row"
   }
 }
