@@ -219,5 +219,20 @@
       "cols"
     ],
     "description": "Create a simple grid with cols and gaps"
+  },
+  "v-menu": {
+    "description": "Create a beautiful looking menu"
+  },
+  "v-menu-item": {
+    "attributes": [
+      "selected"
+    ],
+    "description": "Create a item in a menu"
+  },
+  "v-menu-divider": {
+    "attributes": [
+      "label"
+    ],
+    "description": "Create a menu divider"
   }
 }

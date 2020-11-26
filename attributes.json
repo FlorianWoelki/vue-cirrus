@@ -270,5 +270,13 @@
   "v-grid/cols": {
     "type": "string",
     "description": "Set the columns size of the grid"
+  },
+  "v-menu-item/selected": {
+    "type": "boolean",
+    "description": "Set the menu item as selected"
+  },
+  "v-menu-divider/label": {
+    "type": "string",
+    "description": "Set the label or the title for the divider"
   }
 }
