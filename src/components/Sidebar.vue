@@ -68,7 +68,7 @@
 export default {
   data() {
     return {
-      components: ['Buttons', 'Dropdowns', 'Cards', 'Frames', 'Grid', 'Headlines',
+      components: ['Buttons', 'Dropdowns', 'Cards', 'Frames', 'Column', 'Headlines',
         'Modals', 'Navbars', 'Pagination', 'Forms', 'Placeholder', 'Sidebars',
         'Tabs', 'Tags', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',

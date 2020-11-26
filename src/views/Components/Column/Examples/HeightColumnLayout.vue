@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-example-height u-text-center">
+  <div class="column-example-height u-text-center">
     <v-row style="height: 300px;">
       <v-col
         v-for="i in range()"

@@ -1,7 +1,7 @@
 <template>
-  <section class="grid-component">
+  <section class="column-component">
     <p class="no-upper-margin">
-      There are so many possible ways to use the <kbd>grid</kbd> functionality in
+      There are so many possible ways to use the <kbd>columns</kbd> functionality in
       Vue Cirrus. Furthermore, it is so easy to use.
     </p>
 
@@ -15,23 +15,13 @@
     <v-space />
     <Playground
       noTitle
-      href="/#/components/Grid/#!"
-      component="v-grid"
+      href="/#/components/Columns/#!"
+      component="v-column"
       :componentProps="propsData"
       :customCode="customCode"
     >
       <template v-slot:component>
-        <v-row>
-          <v-btn-group class="u-center">
-            <v-btn color="success" @click="addColumn()">
-              <i class="fas fa-plus"></i>
-            </v-btn>
-            <v-btn color="danger" @click="removeColumn()">
-              <i class="fas fa-minus"></i>
-            </v-btn>
-          </v-btn-group>
-        </v-row>
-        <div class="grid-playground">
+        <div class="column-playground">
           <v-row>
             <v-col
               class="column-showcase"
@@ -45,6 +35,16 @@
             </v-col>
           </v-row>
         </div>
+        <v-row>
+          <v-btn-group class="u-center">
+            <v-btn color="success" @click="addColumn()">
+              <i class="fas fa-plus"></i>
+            </v-btn>
+            <v-btn color="danger" @click="removeColumn()">
+              <i class="fas fa-minus"></i>
+            </v-btn>
+          </v-btn-group>
+        </v-row>
       </template>
     </Playground>
     <v-row>
@@ -101,35 +101,35 @@
     <v-space xlarge />
     <v-space xlarge />
     <h3>Examples</h3>
-    <h5 class="font-light no-upper-margin">10 Grid Width Layout</h5>
+    <h5 class="font-light no-upper-margin">10 Column Width Layout</h5>
     <p class="no-upper-margin">
-      You can easily use a 10 grid layout width the <kbd>w</kbd> prop in
+      You can easily use a 10 column layout width the <kbd>w</kbd> prop in
       each column.
     </p>
-    <WidthGridLayout />
+    <WidthColumnLayout />
 
     <v-space xlarge />
-    <h5 class="font-light no-upper-margin">10 Grid Height Layout</h5>
+    <h5 class="font-light no-upper-margin">10 Column Height Layout</h5>
     <p class="no-upper-margin">
-      You can easily use a 10 grid layout for the height with the <kbd>h</kbd> prop in
+      You can easily use a 10 column layout for the height with the <kbd>h</kbd> prop in
       each column.
     </p>
-    <HeightGridLayout />
+    <HeightColumnLayout />
   </section>
 </template>
 
 <script>
 import API from '@/views/Components/API.vue';
 import Playground from '@/components/Playground/Playground.vue';
-import WidthGridLayout from './Examples/WidthGridLayout.vue';
-import HeightGridLayout from './Examples/HeightGridLayout.vue';
+import WidthColumnLayout from './Examples/WidthColumnLayout.vue';
+import HeightColumnLayout from './Examples/HeightColumnLayout.vue';
 
 export default {
   components: {
     API,
     Playground,
-    WidthGridLayout,
-    HeightGridLayout,
+    WidthColumnLayout,
+    HeightColumnLayout,
   },
 
   methods: {
@@ -164,10 +164,10 @@ export default {
         dynamicOffset: null,
       },
       props: [
-        ['v-col', 'c', 'string', 'null', 'Set the column width (12 grid layout).'],
-        ['v-col', 'o', 'string', 'null', 'Set the offset for a column (12 grid layout).'],
-        ['v-col', 'w', 'string', 'null', 'Set the column width (10 grid layout (10, 20, ... 100)).'],
-        ['v-col', 'h', 'string', 'null', 'Set the height for a specific column (10 grid layout).'],
+        ['v-col', 'c', 'string', 'null', 'Set the column width (12 column layout).'],
+        ['v-col', 'o', 'string', 'null', 'Set the offset for a column (12 column layout).'],
+        ['v-col', 'w', 'string', 'null', 'Set the column width (10 column layout (10, 20, ... 100)).'],
+        ['v-col', 'h', 'string', 'null', 'Set the height for a specific column (10 column layout).'],
         ['v-col', 'dynamicOffset', 'string', 'null', 'Add a dynamic offset (left, right, center).'],
         ['v-col', 'fluid', 'boolean', 'false', 'Align the columns with equal amount of space.'],
         ['v-col', 'ignoreScreen', 'boolean', 'false', 'Columns will ignore the screen width.'],
@@ -180,8 +180,8 @@ export default {
 </script>
 
 <style lang="scss">
-.grid-component {
-  .grid-playground {
+.column-component {
+  .column-playground {
     .row {
       background-color: #2C3E50;
     }
