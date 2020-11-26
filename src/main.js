@@ -18,6 +18,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
+/* eslint-disable */ /* Remove this line, whenever you are ready to commit */ import Vue from "vue"; import App from "./App.vue";Vue.use(install);new Vue({render: h => h(App),}).$mount("#app");
 export default install;
 
 export { default as vAvatar } from './components/Avatar';
@@ -31,7 +32,7 @@ export { default as vDropdown } from './components/Dropdown';
 export { default as vFooter } from './components/Footer';
 export { default as vForm } from './components/Form';
 export { default as vFrame } from './components/Frame';
-export { default as vGrid } from './components/Grid';
+export { default as vColumn } from './components/Column';
 export { default as vHeadline } from './components/Headline';
 export { default as vLink } from './components/Link';
 export { default as vMenu } from './components/Menu';
