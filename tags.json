@@ -212,5 +212,12 @@
       "animation"
     ],
     "description": "Create a link in Cirrus style"
+  },
+  "v-grid": {
+    "attributes": [
+      "gap",
+      "cols"
+    ],
+    "description": "Create a simple grid with cols and gaps"
   }
 }
