@@ -298,5 +298,37 @@
   "v-modal/size": {
     "type": "string",
     "description": "Set the size of the modal"
+  },
+  "v-nav-region/position": {
+    "type": "string",
+    "description": "Set the position of a specific navbar region"
+  },
+  "v-nav-dropdown/animated": {
+    "type": "boolean",
+    "description": "Set the dropdown functionality to a animated style"
+  },
+  "v-nav-dropdown/clickable": {
+    "type": "boolean",
+    "description": "Set wether the dropdown is collapsed or not by default"
+  },
+  "v-nav-dropdown/id": {
+    "type": "string",
+    "description": "Set the id of the dropdown"
+  },
+  "v-navbar-item/active": {
+    "type": "boolean",
+    "description": "Set the active state of a navbar item"
+  },
+  "v-navbar/fixed": {
+    "type": "boolean",
+    "description": "Set wether the navbar should be fixed or not"
+  },
+  "v-navbar/dark": {
+    "type": "boolean",
+    "description": "Set the style of the navbar to a dark one"
+  },
+  "v-navbar/clear": {
+    "type": "boolean",
+    "description": "Set the style of the navbar to a clear one"
   }
 }

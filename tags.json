@@ -244,5 +244,36 @@
       "size"
     ],
     "description": "Create a simple modal"
+  },
+  "v-navbar": {
+    "attributes": [
+      "fixed",
+      "dark",
+      "clear"
+    ],
+    "description": "Navbar wrapper element for creating a navbar"
+  },
+  "v-navbar-item": {
+    "attributes": [
+      "active"
+    ],
+    "description": "Create a navbar item in a navbar"
+  },
+  "v-nav-dropdown": {
+    "attributes": [
+      "animated",
+      "clickable",
+      "id"
+    ],
+    "description": "Create a navbar dropdown menu"
+  },
+  "v-nav-dropdown-item": {
+    "description": "Create a navbar dropdown item in a navbar dropdown"
+  },
+  "v-nav-region": {
+    "attributes": [
+      "position"
+    ],
+    "description": "Set the nav region for specific navbar elements"
   }
 }
