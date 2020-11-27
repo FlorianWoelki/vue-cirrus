@@ -278,5 +278,25 @@
   "v-menu-divider/label": {
     "type": "string",
     "description": "Set the label or the title for the divider"
+  },
+  "v-modal/closeTarget": {
+    "type": "string",
+    "description": "Set the close target for the modal whenever you exit the modal"
+  },
+  "v-modal/mId": {
+    "type": "string",
+    "description": "Set the modal id"
+  },
+  "v-modal/applyDefaultCloseIcon": {
+    "type": "boolean",
+    "description": "Enable default close Icon for the modal"
+  },
+  "v-modal/animation": {
+    "type": "string",
+    "description": "Set the animation of the modal"
+  },
+  "v-modal/size": {
+    "type": "string",
+    "description": "Set the size of the modal"
   }
 }

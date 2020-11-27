@@ -234,5 +234,15 @@
       "label"
     ],
     "description": "Create a menu divider"
+  },
+  "v-modal": {
+    "attributes": [
+      "closeTarget",
+      "mId",
+      "applyDefaultCloseIcon",
+      "animation",
+      "size"
+    ],
+    "description": "Create a simple modal"
   }
 }
