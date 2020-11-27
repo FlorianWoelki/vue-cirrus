@@ -330,5 +330,37 @@
   "v-navbar/clear": {
     "type": "boolean",
     "description": "Set the style of the navbar to a clear one"
+  },
+  "v-prev-btn/prevText": {
+    "type": "string",
+    "description": "Set the previous text of the previous button"
+  },
+  "v-next-btn/nextText": {
+    "type": "string",
+    "description": "Set the next text of the next button"
+  },
+  "v-pagination/bordered": {
+    "type": "boolean",
+    "description": "Set the style of the pagination to bordered"
+  },
+  "v-pagination-item/selected": {
+    "type": "boolean",
+    "description": "Set the state of the item to selected"
+  },
+  "v-pagination-item/disabled": {
+    "type": "boolean",
+    "description": "Set the disabled state of the pagination item"
+  },
+  "v-parallax-element/speed": {
+    "type": "number",
+    "description": "Set the speed of the parallax effect for the element"
+  },
+  "v-parallax-element/margin": {
+    "type": "number",
+    "description": "Set the margin for the parallax element"
+  },
+  "v-parallax-element/stopValue": {
+    "type": "number",
+    "description": "Set the stop value for the parallax element"
   }
 }

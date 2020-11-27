@@ -275,5 +275,41 @@
       "position"
     ],
     "description": "Set the nav region for specific navbar elements"
+  },
+  "v-next-btn": {
+    "attributes": [
+      "nextText"
+    ],
+    "description": "Set the next button"
+  },
+  "v-next-prev": {
+    "description": "Wrapper component for the next prev button"
+  },
+  "v-prev-btn": {
+    "attributes": [
+      "prevText"
+    ],
+    "description": "Set the previous button"
+  },
+  "v-pagination": {
+    "attributes": [
+      "bordered"
+    ],
+    "description": "Wrapper component for the pagination component"
+  },
+  "v-pagination-item": {
+    "attributes": [
+      "selected",
+      "disabled"
+    ],
+    "description": "Creates a pagination item in a pagination component"
+  },
+  "v-parallax-element": {
+    "attributes": [
+      "speed",
+      "margin",
+      "stopValue"
+    ],
+    "description": "Creates a parallax wrapper element for displaying a parallax effect for a element"
   }
 }
