@@ -311,5 +311,39 @@
       "stopValue"
     ],
     "description": "Creates a parallax wrapper element for displaying a parallax effect for a element"
+  },
+  "v-placeholder": {
+    "attributes": [
+      "title",
+      "subtitle"
+    ],
+    "description": "Create a placeholder component"
+  },
+  "v-placeholder-icon": {
+    "description": "Create a placeholder icon for the placeholder component"
+  },
+  "v-sidebar-item": {
+    "attributes": [
+      "dropdown",
+      "selected"
+    ],
+    "description": "Create a sidebar item in a sidebar component"
+  },
+  "v-sidebar-dropdown": {
+    "attributes": [
+      "id",
+      "showArrow"
+    ],
+    "description": "Create a dropdown menu for the sidebar component"
+  },
+  "v-sidebar-content": {
+    "description": "Create the sidebar content"
+  },
+  "v-sidebar": {
+    "attributes": [
+      "hoverEffect",
+      "sidebarClass"
+    ],
+    "description": "Create a sidebar"
   }
 }

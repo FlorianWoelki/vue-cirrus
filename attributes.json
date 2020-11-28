@@ -362,5 +362,37 @@
   "v-parallax-element/stopValue": {
     "type": "number",
     "description": "Set the stop value for the parallax element"
+  },
+  "v-placeholder/title": {
+    "type": "string",
+    "description": "Set the title of the placeholder component"
+  },
+  "v-placeholder/subtitle": {
+    "type": "string",
+    "description": "Set the subtitle of the placeholder component"
+  },
+  "v-sidebar/hoverEffect": {
+    "type": "boolean",
+    "description": "Enable the hover effect of the sidebar"
+  },
+  "v-sidebar/sidebarClass": {
+    "type": "string",
+    "description": "Class prop for the sidebar"
+  },
+  "v-sidebar-dropdown/id": {
+    "type": "string",
+    "description": "Set the id of the sidebar dropdown"
+  },
+  "v-sidebar-dropdown/showArrow": {
+    "type": "boolean",
+    "description": "Enable a arrow in the sidebar dropdown menu"
+  },
+  "v-sidebar-item/dropdown": {
+    "type": "boolean",
+    "description": "Enable this sidebaritem as a dropdown item"
+  },
+  "v-sidebar-item/selected": {
+    "type": "boolean",
+    "description": "Enable the selected state of this dropdown item"
   }
 }
