@@ -345,5 +345,21 @@
       "sidebarClass"
     ],
     "description": "Create a sidebar"
+  },
+  "v-space": {
+    "attributes": [
+      "large",
+      "xlarge"
+    ],
+    "description": "Create a space between components, acts as a defined margin"
+  },
+  "v-snackbar": {
+    "attributes": [
+      "value",
+      "color",
+      "position",
+      "timeout"
+    ],
+    "description": "Create a simple snackbar"
   }
 }

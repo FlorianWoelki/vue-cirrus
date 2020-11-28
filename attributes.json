@@ -394,5 +394,29 @@
   "v-sidebar-item/selected": {
     "type": "boolean",
     "description": "Enable the selected state of this dropdown item"
+  },
+  "v-snackbar/value": {
+    "type": "boolean",
+    "description": "Show the snackbar with a v-model integration"
+  },
+  "v-snackbar/color": {
+    "type": "string",
+    "description": "Set the color of the snackbar"
+  },
+  "v-snackbar/position": {
+    "type": "string",
+    "description": "Set the position of the snackbar on the screen"
+  },
+  "v-snackbar/timeout": {
+    "type": "number",
+    "description": "Set the timeout for the snackbar when it will vanish"
+  },
+  "v-space/large": {
+    "type": "boolean",
+    "description": "Enable large spacing in this component"
+  },
+  "v-space/xlarge": {
+    "type": "boolean",
+    "description": "Enable extra large spacing in this component"
   }
 }
