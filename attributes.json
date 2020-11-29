@@ -418,5 +418,49 @@
   "v-space/xlarge": {
     "type": "boolean",
     "description": "Enable extra large spacing in this component"
+  },
+  "v-tabs/size": {
+    "type": "string",
+    "description": "Set the size of the tabs"
+  },
+  "v-tabs/position": {
+    "type": "string",
+    "description": "Set the position of the tabs (center, right, fill)"
+  },
+  "v-tabs/mode": {
+    "type": "string",
+    "description": "Set the mode of the tabs (depth, classic)"
+  },
+  "v-tab/selected": {
+    "type": "boolean",
+    "description": "Set the selected state of the tab item"
+  },
+  "v-tag-container/grouped": {
+    "type": "boolean",
+    "description": "Group all tags"
+  },
+  "v-tag-container/rounded": {
+    "type": "boolean",
+    "description": "Round all tags in this container"
+  },
+  "v-tag/closable": {
+    "type": "boolean",
+    "description": "Set the tag to a closable tag"
+  },
+  "v-tag/deletable": {
+    "type": "boolean",
+    "description": "Set the tag to a deletable tag"
+  },
+  "v-tag/rounded": {
+    "type": "boolean",
+    "description": "Round the tag"
+  },
+  "v-tag/size": {
+    "type": "string",
+    "description": "Set the size of the tag"
+  },
+  "v-tag/color": {
+    "type": "string",
+    "description": "Set the color of the tag"
   }
 }

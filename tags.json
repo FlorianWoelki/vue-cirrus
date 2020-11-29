@@ -361,5 +361,36 @@
       "timeout"
     ],
     "description": "Create a simple snackbar"
+  },
+  "v-tabs": {
+    "attributes": [
+      "size",
+      "position",
+      "mode"
+    ],
+    "description": "Create a tabs component wrapper for tab items"
+  },
+  "v-tab": {
+    "attributes": [
+      "selected"
+    ],
+    "description": "Create a tab item in a tabs component"
+  },
+  "v-tag": {
+    "attributes": [
+      "closable",
+      "deletable",
+      "size",
+      "color",
+      "rounded"
+    ],
+    "description": "Create a simple looking tag"
+  },
+  "v-tag-container": {
+    "attributes": [
+      "grouped",
+      "rounded"
+    ],
+    "description": "Create a tag container around tags for grouping"
   }
 }
