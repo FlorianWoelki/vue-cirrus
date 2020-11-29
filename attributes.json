@@ -462,5 +462,33 @@
   "v-tag/color": {
     "type": "string",
     "description": "Set the color of the tag"
+  },
+  "v-tile-content/title": {
+    "type": "string",
+    "description": "Set the title of the tile content"
+  },
+  "v-tile-content/subtitle": {
+    "type": "string",
+    "description": "Set the subtitle of the tile content"
+  },
+  "v-tile/enableBoxShadow": {
+    "type": "boolean",
+    "description": "Enable a box shadow for the tile component"
+  },
+  "v-toast/title": {
+    "type": "string",
+    "description": "Set the title of the toast component"
+  },
+  "v-toast/color": {
+    "type": "string",
+    "description": "Set the color of the toast component"
+  },
+  "v-toast/disableCloseFunction": {
+    "type": "boolean",
+    "description": "Disable the close functionality of the toast component"
+  },
+  "v-toast/closable": {
+    "type": "boolean",
+    "description": "Add a small close icon for the toast component"
   }
 }

@@ -392,5 +392,30 @@
       "rounded"
     ],
     "description": "Create a tag container around tags for grouping"
+  },
+  "v-tile": {
+    "attributes": [
+      "enableBoxShadow"
+    ],
+    "description": "Create a tile component"
+  },
+  "v-tile-buttons": {
+    "description": "Create a wrapper for tile buttons"
+  },
+  "v-tile-content": {
+    "attributes": [
+      "title",
+      "subtitle"
+    ],
+    "description": "Create the tile content for the tile component"
+  },
+  "v-toast": {
+    "attributes": [
+      "title",
+      "color",
+      "disableCloseFunction",
+      "closable"
+    ],
+    "description": "Create a toast component"
   }
 }
