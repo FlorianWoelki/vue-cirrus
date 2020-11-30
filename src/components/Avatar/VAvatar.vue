@@ -30,7 +30,10 @@ export default {
     src: String,
     text: String,
     padded: Boolean,
-    size: String,
+    size: {
+      type: String,
+      validator: value => ['xsmall', 'small', 'large', 'xlarge'].indexOf(value) !== -1,
+    },
   },
 };
 </script>
