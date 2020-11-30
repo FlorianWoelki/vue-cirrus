@@ -53,8 +53,14 @@ export default {
       default: 'modal',
     },
     applyDefaultCloseIcon: Boolean,
-    animation: String,
-    size: String,
+    animation: {
+      type: String,
+      validator: value => ['dropdown', 'zoom-in', 'zoom-out'].indexOf(value) !== -1,
+    },
+    size: {
+      type: String,
+      validator: value => ['small', 'normal', 'large'].indexOf(value) !== -1,
+    },
   },
 
   computed: {
