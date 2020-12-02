@@ -86,9 +86,7 @@ export default {
       props: [
         ['v-card', 'animated', 'boolean', 'false', 'Set the card to a animated one.'],
         ['v-card', 'equalHeight', 'boolean', 'false', 'For multiple cards set the height to the same one.'],
-        ['v-card', '@click', 'function', '() => {}', 'Catch a click event for this card.'],
         ['v-card-image', 'image', 'string', 'empty', 'Set the source for the card image.'],
-        ['v-card-image', 'height', 'string', '332px', 'Set the height of the image in the card.'],
       ],
     };
   },
