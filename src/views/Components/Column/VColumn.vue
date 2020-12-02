@@ -147,7 +147,7 @@ export default {
 
   computed: {
     customCode() {
-      let result = '\n<v-row>\n';
+      let result = '<v-row>\n';
       for (let i = 0; i < this.amountOfColumns; i += 1) {
         result += `  <v-col${this.propsData.fluid ? ' fluid' : ''}${this.propsData.dynamicOffset ? ` dynamicOffset="${this.propsData.dynamicOffset}"` : ''}>Column</v-col>\n`;
       }
