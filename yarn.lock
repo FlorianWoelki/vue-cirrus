@@ -8650,10 +8650,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-cirrus@^0.6.12:
-  version "0.6.12"
-  resolved "https://registry.yarnpkg.com/vue-cirrus/-/vue-cirrus-0.6.12.tgz#854df88c897a1408f60eb018f9551645df5beeae"
-  integrity sha512-5QFV1yGii5L/E+PJ+ItXIAvt0Y/evEXQ7YA8q5Y8UkRF9ZUtUWLND458uepC5CZSPT8ffPN0xxFE9TDwwt5ajg==
+vue-cirrus@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/vue-cirrus/-/vue-cirrus-0.6.2.tgz#2f6cd666c06dc00bd939d91e1253b2111ecc98f3"
+  integrity sha512-rGsh1QthjCGTQSYd2OyuRtxJGT4UMotdGd6uGDdYVxEEk0+0RROZAKIsZmqhshLCf51Rm9TDpAL6b62moSEhkg==
   dependencies:
     vue "^2.5.22"
 
