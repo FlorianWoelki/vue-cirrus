@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.2] - 2020-12-14
+
+### 🔨 Added
+- Add vetur recommendations
+- Add avatar size validator
+- Add size and animation validators for modal
+- Add new grid component
+
+### ⚡️ Changed
+- npmignore file for lowering package
+- Fix undefined size classes for avatar component
+- Change grid to column directory
+
 ## [0.6.12] - 2020-11-20
 
 ### ⚡️ Changed
