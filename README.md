@@ -68,6 +68,8 @@ Vue.use(VNavbar);
   - Simply create some good looking cards with some special effects, if needed
 - [Code](https://florianwoelki.github.io/vue-cirrus/#/components/Code)
   - Display your code on your website to demonstrate your framework or library
+- [Columns](https://florianwoelki.github.io/vue-cirrus/#/components/Columns)
+  - A easy to use and simple 12 grid system
 - [Dividers](https://florianwoelki.github.io/vue-cirrus/#/components/Dividers)
   - Divide your content for better structure
 - [Dropdown](https://florianwoelki.github.io/vue-cirrus/#/components/Dropdown)
@@ -78,8 +80,8 @@ Vue.use(VNavbar);
   - Easily create a login form with these components or simply a search bar
 - [Frames](https://florianwoelki.github.io/vue-cirrus/#/components/Frames)
   - Simply generate a profile frame for easily displaying information
-- [Grid](https://florianwoelki.github.io/vue-cirrus/#/components/Grid)
-  - A grid is really important in the modern world
+- [Grid](https://florianwoelki.github.io/vue-cirrus/#/components/Grids)
+  - A modern component for using the modern CSS grid system
 - [Links](https://florianwoelki.github.io/vue-cirrus/#/components/Links)
   - Easily create nice animated links
 - [Menus](https://florianwoelki.github.io/vue-cirrus/#/components/Menus)
