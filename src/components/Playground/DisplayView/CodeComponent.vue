@@ -24,7 +24,6 @@ export default {
       let validProps = '';
       let length = 0;
       Object.entries(this.propsData).forEach((entry) => {
-        console.log(entry[0]);
         if ((entry[0] === 'position' || entry[0] === 'size'
           || entry[0] === 'color' || entry[0] === 'title'
           || entry[0] === 'lang' || entry[0] === 'text'
