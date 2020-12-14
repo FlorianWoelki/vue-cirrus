@@ -68,11 +68,11 @@
 export default {
   data() {
     return {
-      components: ['Buttons', 'Dropdowns', 'Cards', 'Frames', 'Column', 'Headlines',
+      components: ['Buttons', 'Dropdowns', 'Cards', 'Frames', 'Columns', 'Headlines',
         'Modals', 'Navbars', 'Pagination', 'Forms', 'Placeholder', 'Sidebars',
         'Tabs', 'Tags', 'Tiles', 'Avatars', 'Code', 'Dividers', 'Footer',
         'Links', 'NextPrev', 'Parallax', 'Snackbars', 'Spaces', 'Toasts',
-        'Badges', 'Menus', 'ParallaxElements'],
+        'Badges', 'Menus', 'ParallaxElements', 'Grids'],
       formComponents: ['Checkbox', 'DatePicker', 'FormGroup', 'InputColor',
         'InputField', 'Label', 'RadioBtn', 'SearchBar', 'TextArea', 'Toggler'],
     };
