@@ -17,16 +17,13 @@
       href="/#/components/Grid/#!"
       component="v-grid"
       :componentProps="propsData"
-      :customCode="customCode"
     >
       <template v-slot:component>
-        <div class="grid-playground">
-          <v-grid cols="3" gap="6">
-            <p>Column 1</p>
-            <p>Column 2</p>
-            <p>Column 3</p>
-          </v-grid>
-        </div>
+        <v-grid gap="6" cols="3">
+          <p>Grid Column 1</p>
+          <p>Grid Column 2</p>
+          <p>Grid Column 3</p>
+        </v-grid>
       </template>
     </Playground>
     <v-space xlarge />
