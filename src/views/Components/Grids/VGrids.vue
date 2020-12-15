@@ -1,12 +1,14 @@
 <template>
   <section class="grid-component">
     <p class="no-upper-margin">
+      This component represents the beauty of the default CSS grid system.
     </p>
 
     <v-space xlarge />
 
     <h3>Usage</h3>
     <p class="no-upper-margin">
+      Simply use the <kbd>v-grid</kbd> component for creating a grid.
     </p>
 
     <v-space />
@@ -19,6 +21,11 @@
     >
       <template v-slot:component>
         <div class="grid-playground">
+          <v-grid cols="3" gap="6">
+            <p>Column 1</p>
+            <p>Column 2</p>
+            <p>Column 3</p>
+          </v-grid>
         </div>
       </template>
     </Playground>
