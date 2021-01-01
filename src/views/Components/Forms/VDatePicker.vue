@@ -21,7 +21,7 @@
       :customCode="customCode"
     >
       <template v-slot:component>
-        <v-date-picker date="2020-04-29"></v-date-picker>
+        <v-date-picker date="2021-01-01"></v-date-picker>
       </template>
     </Playground>
 
@@ -60,7 +60,7 @@ export default {
   computed: {
     customCode() {
       return `
-<v-date-picker date="2020-04-29"></v-date-picker>`;
+<v-date-picker date="2021-01-01"></v-date-picker>`;
     },
   },
 };
