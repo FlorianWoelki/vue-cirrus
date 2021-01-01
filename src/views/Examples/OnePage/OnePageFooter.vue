@@ -1,7 +1,7 @@
 <template>
   <v-footer class="footer-section">
     <template #title>
-      <h6 class="white mb-0">&copy; 2020 One Page</h6>
+      <h6 class="white mb-0">&copy; 2021 One Page</h6>
     </template>
 
     <v-row class="u-center">
