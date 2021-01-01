@@ -1,7 +1,7 @@
 <template>
   <v-footer class="mt-16 footer-section u-text-center">
     <template #title>
-      <h6 class="uppercase white">© 2020 Vue Cirrus</h6>
+      <h6 class="uppercase white">© 2021 Vue Cirrus</h6>
     </template>
     <v-divider short class="u-center"/>
 
