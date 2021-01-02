@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.21] - 2021-01-02
+
+### ⚡️ Changed
+- Fixed crucial bug for header menu button on small devices not clickable
+
 ## [0.6.2] - 2020-12-14
 
 ### 🔨 Added
@@ -634,3 +639,5 @@ All notable changes to this project will be documented in this file.
 [0.6.1]: https://www.npmjs.com/package/vue-cirrus/v/0.6.1
 [0.6.11]: https://www.npmjs.com/package/vue-cirrus/v/0.6.11
 [0.6.12]: https://www.npmjs.com/package/vue-cirrus/v/0.6.12
+[0.6.2]: https://www.npmjs.com/package/vue-cirrus/v/0.6.2
+[0.6.21]: https://www.npmjs.com/package/vue-cirrus/v/0.6.21
