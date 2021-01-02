@@ -11,13 +11,13 @@
       <div class="nav-item no-hover">
         <slot name="brandTitle"></slot>
       </div>
-      <div id="header-btn" class="nav-item nav-btn">
+      <div ref="navBtn" class="nav-item nav-btn" @click="toggleNavbarBtn">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
-    <div id="header-menu" class="header-nav">
+    <div ref="headerMenu" class="header-nav">
       <slot></slot>
     </div>
   </div>
@@ -29,6 +29,14 @@ export default {
     fixed: Boolean,
     dark: Boolean,
     clear: Boolean,
+  },
+
+  methods: {
+    toggleNavbarBtn() {
+      const { headerMenu, navBtn } = this.$refs;
+      navBtn.classList.toggle('active');
+      headerMenu.classList.toggle('active');
+    },
   },
 };
 </script>
