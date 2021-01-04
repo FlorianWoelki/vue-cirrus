@@ -66,9 +66,10 @@ export default {
 
   computed: {
     customCode() {
-      return `<v-code lang="JavaScript">
-const customizeMe = "Hello World";
-</v-code>`;
+      return `<v-code
+  lang="JavaScript"
+  value="const cutomizeMe = 'Hello World';"
+></v-code>`;
     },
   },
 };
