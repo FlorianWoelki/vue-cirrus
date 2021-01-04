@@ -1,10 +1,9 @@
 <template>
   <pre>
     <code
-      ref="codeElement"
       :data-lang="lang"
       :class="classes"
-    ><slot></slot></code>
+    >{{ value }}</code>
   </pre>
 </template>
 
@@ -22,8 +21,15 @@ export default {
   },
 
   props: {
+    value: String,
     lang: String,
     dark: Boolean,
+  },
+
+  watch: {
+    value(newVal) {
+      this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(newVal);
+    },
   },
 
   methods: {
@@ -34,24 +40,29 @@ export default {
       });
       return newColoredElements;
     },
+    colorizeValue(codeElements) {
+      let result = codeElements;
+
+      if (this.lang.toLowerCase() === 'javascript') {
+        result = this.replaceWithColoredCode(codeElements, javascript);
+      } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
+        console.log(codeElements);
+        result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
+        result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
+        result = this.replaceWithColoredCode(codeElements, html);
+      } else if (this.lang.toLowerCase() === 'css') {
+        result = this.replaceWithColoredCode(codeElements, css);
+      } else if (this.lang.toLowerCase() === 'bash') {
+        result = this.replaceWithColoredCode(codeElements, bash);
+      }
+
+      console.log(result);
+      return result;
+    },
   },
 
   mounted() {
-    let codeElements = this.$refs.codeElement.innerHTML;
-
-    if (this.lang.toLowerCase() === 'javascript') {
-      codeElements = this.replaceWithColoredCode(codeElements, javascript);
-    } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
-      codeElements = codeElements.replace('<xmp>', '').replace('</xmp>', '');
-      codeElements = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
-      codeElements = this.replaceWithColoredCode(codeElements, html);
-    } else if (this.lang.toLowerCase() === 'css') {
-      codeElements = this.replaceWithColoredCode(codeElements, css);
-    } else if (this.lang.toLowerCase() === 'bash') {
-      codeElements = this.replaceWithColoredCode(codeElements, bash);
-    }
-
-    this.$refs.codeElement.innerHTML = codeElements;
+    this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(this.$el.getElementsByTagName('code')[0].innerHTML);
   },
 
   computed: {
