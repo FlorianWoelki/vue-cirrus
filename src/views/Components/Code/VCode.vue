@@ -21,9 +21,7 @@
       :componentProps="propsData"
     >
       <template v-slot:component>
-        <v-code lang="JavaScript">
-const customizeMe = "Hello World";
-        </v-code>
+        <v-code lang="JavaScript" value="const cutomizeMe = 'Hello World';"></v-code>
       </template>
     </Playground>
 

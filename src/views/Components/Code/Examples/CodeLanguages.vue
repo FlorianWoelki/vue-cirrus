@@ -1,15 +1,13 @@
 <template>
   <v-row center class="code-example-section">
     <v-col c="4">
-      <v-code lang="HTML">
-        <xmp v-html="htmlCodeExample"></xmp>
-      </v-code>
+      <v-code lang="HTML" :value="htmlCodeExample"></v-code>
     </v-col>
     <v-col c="4">
-      <v-code lang="JavaScript">{{ jsCodeExample }}</v-code>
+      <v-code lang="JavaScript" :value="jsCodeExample"></v-code>
     </v-col>
     <v-col c="4">
-      <v-code lang="CSS">{{ cssCodeExample }}</v-code>
+      <v-code lang="CSS" :value="cssCodeExample"></v-code>
     </v-col>
   </v-row>
 </template>
@@ -29,7 +27,9 @@ export default Vue.extend({
       jsCodeExample: `var testVar = 34;
 let testLet = 34;
 const testConst = 34;
-if (testLet === 34) console.log(1);`,
+if (testLet === 34) {
+  console.log(1);
+}`,
       cssCodeExample: `h1 {
   display: none;
   visibility: hidden;
