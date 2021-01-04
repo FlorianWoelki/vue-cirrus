@@ -1,8 +1,6 @@
 <template>
   <div class="code-component">
-    <v-code lang="Vue" copyable>
-      <xmp v-html="code"></xmp>
-    </v-code>
+    <v-code lang="Vue" copyable :value="code"></v-code>
   </div>
 </template>
 
