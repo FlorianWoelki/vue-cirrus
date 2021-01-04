@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.6.21] - 2021-01-04
+## [0.6.23] - 2021-01-04
+
+### ⚡️ Changed
+- Removed console log statement and added value attribute to vetur config
+
+## [0.6.22] - 2021-01-04
 
 ### ⚡️ Changed
 - Fixed crucial bug with non reactivity for code component
