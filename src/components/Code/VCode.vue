@@ -46,10 +46,9 @@ export default {
       if (this.lang.toLowerCase() === 'javascript') {
         result = this.replaceWithColoredCode(codeElements, javascript);
       } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
-        console.log(codeElements);
         result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
         result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
-        result = this.replaceWithColoredCode(codeElements, html);
+        result = this.replaceWithColoredCode(result, html);
       } else if (this.lang.toLowerCase() === 'css') {
         result = this.replaceWithColoredCode(codeElements, css);
       } else if (this.lang.toLowerCase() === 'bash') {
