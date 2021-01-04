@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.21] - 2021-01-04
+
+### ⚡️ Changed
+- Fixed crucial bug with non reactivity for code component
+
 ## [0.6.21] - 2021-01-02
 
 ### ⚡️ Changed
@@ -641,3 +646,4 @@ All notable changes to this project will be documented in this file.
 [0.6.12]: https://www.npmjs.com/package/vue-cirrus/v/0.6.12
 [0.6.2]: https://www.npmjs.com/package/vue-cirrus/v/0.6.2
 [0.6.21]: https://www.npmjs.com/package/vue-cirrus/v/0.6.21
+[0.6.22]: https://www.npmjs.com/package/vue-cirrus/v/0.6.22
