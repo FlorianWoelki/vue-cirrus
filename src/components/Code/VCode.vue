@@ -55,7 +55,6 @@ export default {
         result = this.replaceWithColoredCode(codeElements, bash);
       }
 
-      console.log(result);
       return result;
     },
   },
