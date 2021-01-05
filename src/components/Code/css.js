@@ -12,11 +12,7 @@ export default {
     class: 'special-colored',
   },
   attributes: {
-    exp: /.+?(?=:)/g,
+    exp: /\S+?(?=:)/g,
     class: 'special-attributes',
-  },
-  css: {
-    exp: /.+?(?={)/g,
-    class: 'special-html',
   },
 };
