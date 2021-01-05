@@ -36,6 +36,7 @@ export default {
       const { headerMenu, navBtn } = this.$refs;
       navBtn.classList.toggle('active');
       headerMenu.classList.toggle('active');
+      this.$emit('open-mobile');
     },
   },
 };
