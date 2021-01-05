@@ -8,7 +8,7 @@ export default {
     class: 'string',
   },
   classes: {
-    exp: /\.\w*/g,
+    exp: /\.[^{]*/g,
     class: 'special-colored',
   },
   attributes: {
