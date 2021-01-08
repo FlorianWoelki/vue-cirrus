@@ -1,5 +1,7 @@
 <template>
   <div
+    v-bind="$attrs"
+    v-on="$listeners"
     :class="[
       animationsMixins,
       'card',
