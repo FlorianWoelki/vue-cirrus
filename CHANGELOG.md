@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.24] - 2021-01-08
+
+### 🔨 Added
+- Added attributes and listeners to card component
+- Added event for opening navbar on small devices
+
+### ⚡️ Changed
+- Fix code colored for dashed css classes
+- Fix code inline css attributes
+
 ## [0.6.23] - 2021-01-04
 
 ### ⚡️ Changed
@@ -652,3 +662,5 @@ All notable changes to this project will be documented in this file.
 [0.6.2]: https://www.npmjs.com/package/vue-cirrus/v/0.6.2
 [0.6.21]: https://www.npmjs.com/package/vue-cirrus/v/0.6.21
 [0.6.22]: https://www.npmjs.com/package/vue-cirrus/v/0.6.22
+[0.6.23]: https://www.npmjs.com/package/vue-cirrus/v/0.6.23
+[0.6.24]: https://www.npmjs.com/package/vue-cirrus/v/0.6.24
