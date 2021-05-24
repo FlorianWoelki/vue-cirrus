@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.27] - 2021-05-24
+
+### ⚡️ Changed
+- Fixed components import that are using slots or children elements
+
 ## [0.6.25] & [0.6.26] - 2021-05-24
 
 ### 🔨 Added
@@ -672,3 +677,4 @@ All notable changes to this project will be documented in this file.
 [0.6.24]: https://www.npmjs.com/package/vue-cirrus/v/0.6.24
 [0.6.25]: https://www.npmjs.com/package/vue-cirrus/v/0.6.25
 [0.6.26]: https://www.npmjs.com/package/vue-cirrus/v/0.6.26
+[0.6.27]: https://www.npmjs.com/package/vue-cirrus/v/0.6.27

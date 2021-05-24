@@ -1,12 +1,12 @@
 {
   "name": "vue-cirrus",
-  "version": "0.6.26",
+  "version": "0.6.27",
   "private": false,
   "description": "A Vue components library for the Cirrus CSS framework.",
   "author": "Florian Woelki",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --name vue-cirrus ./src/main.js",
+    "build": "vue-cli-service build --target lib --mode production --name vue-cirrus ./src/main.js",
     "lint": "vue-cli-service lint",
     "dev": "./scripts/devmode.sh && vue-cli-service serve --open"
   },
@@ -18,10 +18,12 @@
     "*.json",
     "*.js"
   ],
-  "dependencies": {
-    "vue": "^3.1.0-beta.3"
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "cirrus-ui": "^0.6.0"
   },
   "devDependencies": {
+    "vue": "^3.0.0",
     "@vue/cli-plugin-babel": "^4.3.0",
     "@vue/cli-plugin-eslint": "^4.3.0",
     "@vue/cli-service": "^4.3.0",
