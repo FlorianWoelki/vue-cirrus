@@ -1,6 +1,6 @@
 {
   "name": "vue-cirrus",
-  "version": "0.6.24",
+  "version": "0.6.25",
   "private": false,
   "description": "A Vue components library for the Cirrus CSS framework.",
   "author": "Florian Woelki",
@@ -56,9 +56,6 @@
   "pre-commit": [
     "lint"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": "git+https://github.com/FlorianWoelki/vue-cirrus.git",
   "vetur": {
     "tags": "tags.json",
