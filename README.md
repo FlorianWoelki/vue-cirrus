@@ -39,7 +39,7 @@ yarn add vue-cirrus@next
 import VueCirrus from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
 
-Vue.use(VueCirrus);
+createApp(App).use(VueCirrus).mount('#app');
 ```
 
 3b. Or simply import single components of Vue-Cirrus by doing:
@@ -48,7 +48,7 @@ Vue.use(VueCirrus);
 import { VNavbar } from 'vue-cirrus';
 import 'vue-cirrus/dist/vue-cirrus.css';
 
-Vue.use(VNavbar);
+createApp(App).use(VNavbar).mount('#app');
 ```
 
 4. Test, if it works by including the following in a vue file
