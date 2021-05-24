@@ -3,9 +3,6 @@
   "author": "Florian Woelki",
   "license": "MIT",
   "repository": "git+https://github.com/FlorianWoelki/vue-cirrus.git",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "bugs": {
     "url": "https://github.com/FlorianWoelki/vue-cirrus/issues"
   },
@@ -16,7 +13,7 @@
     "cirrus",
     "framework"
   ],
-  "version": "0.6.24",
+  "version": "0.6.25",
   "description": "A Vue components library for the Cirrus CSS framework.",
   "main": "./dist/vue-cirrus.common.js",
   "private": false,
