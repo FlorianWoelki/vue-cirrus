@@ -4,10 +4,10 @@ const install = (app: App) => {
   const requireComponent = require.context(
     './components',
     true,
-    /V[\w-]+.vue$/
+    /V[\w-]+.vue$/,
   );
 
-  requireComponent.keys().forEach(filename => {
+  requireComponent.keys().forEach((filename) => {
     const componentConfig = requireComponent(filename);
     const componentName = `${filename
       .replace(/^\.\//, '')

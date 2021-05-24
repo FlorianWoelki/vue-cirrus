@@ -1,5 +1,4 @@
-export default {
-  /* props: {
+export const withTooltipProps = () => ({
     tooltipText: {
       type: String,
       default: null,
@@ -8,23 +7,17 @@ export default {
       type: String,
       default: null,
     },
-  },
+});
 
-  computed: {
-    tooltipMixins() {
-      return {
-        tooltip: this.tooltipText !== null,
-        'tooltip--top-left': this.tooltipPosition === 'topLeft',
-        'tooltip--top-right': this.tooltipPosition === 'topRight',
-        'tooltip--bottom': this.tooltipPosition === 'bottom',
-        'tooltip--bottom-left': this.tooltipPosition === 'bottomLeft',
-        'tooltip--bottom-right': this.tooltipPosition === 'bottomRight',
-        'tooltip--left': this.tooltipPosition === 'left',
-        'tooltip--right': this.tooltipPosition === 'right',
-      };
-    },
-    tooltipData() {
-      return this.tooltipText;
-    },
-  }, */
-};
+export const withTooltipClasses = (props: Readonly<{ tooltipText: string, tooltipPosition: string }>) => ({
+  tooltipClasses: {
+    tooltip: props.tooltipText !== null,
+    'tooltip--top-left': props.tooltipPosition === 'topLeft',
+    'tooltip--top-right': props.tooltipPosition === 'topRight',
+    'tooltip--bottom': props.tooltipPosition === 'bottom',
+    'tooltip--bottom-left': props.tooltipPosition === 'bottomLeft',
+    'tooltip--bottom-right': props.tooltipPosition === 'bottomRight',
+    'tooltip--left': props.tooltipPosition === 'left',
+    'tooltip--right': props.tooltipPosition === 'right',
+  },
+});

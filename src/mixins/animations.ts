@@ -13,7 +13,7 @@ export const withAnimationsProps = () => ({
   },
 });
 
-export const withAnimations = (props: any) => ({
+export const withAnimationClasses = (props: Readonly<{ animation: string, paused: boolean, infinite: boolean }>) => ({
   animationClasses: {
     animated:
       props.animation === 'fadeIn'
