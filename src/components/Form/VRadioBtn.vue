@@ -2,16 +2,12 @@
   <div class="form-ext-control form-ext-radio">
     <input
       v-bind="$attrs"
-      v-on="$listeners"
       :id="id"
-      :class="[
-        'form-ext-input',
-        color ? `form-ext-input--${color}` : '',
-      ]"
+      :class="['form-ext-input', color ? `form-ext-input--${color}` : '']"
       :checked="checked"
       :name="name"
       type="radio"
-    >
+    />
     <label :for="id" class="form-ext-label">
       <slot />
     </label>
@@ -24,14 +20,14 @@ export default {
   props: {
     id: {
       type: String,
-      default: 'my-radio-btn',
+      default: "my-radio-btn"
     },
     name: {
       type: String,
-      default: 'radio-btn',
+      default: "radio-btn"
     },
     checked: Boolean,
-    color: String,
-  },
+    color: String
+  }
 };
 </script>

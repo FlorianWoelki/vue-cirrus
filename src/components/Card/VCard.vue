@@ -1,14 +1,13 @@
 <template>
   <div
     v-bind="$attrs"
-    v-on="$listeners"
     :class="[
       animationsMixins,
       'card',
       {
         'slide-up': animated,
-        'u-flex u-flex-column h-100': equalHeight,
-      },
+        'u-flex u-flex-column h-100': equalHeight
+      }
     ]"
   >
     <slot />
@@ -16,23 +15,21 @@
 </template>
 
 <script>
-import Animations from '@/mixins/animations';
+import Animations from "@/mixins/animations";
 
 export default {
-  mixins: [
-    Animations,
-  ],
+  mixins: [Animations],
 
   provide() {
     return {
-      animated: this.animated,
+      animated: this.animated
     };
   },
 
   props: {
     animated: Boolean,
-    equalHeight: Boolean,
-  },
+    equalHeight: Boolean
+  }
 };
 </script>
 

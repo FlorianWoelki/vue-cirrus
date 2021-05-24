@@ -1,6 +1,6 @@
 <template>
   <li role="menu-item">
-    <a v-bind="$attrs" v-on="$listeners">
+    <a v-bind="$attrs">
       <slot></slot>
     </a>
   </li>
@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>

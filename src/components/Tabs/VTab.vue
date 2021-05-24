@@ -1,27 +1,27 @@
 <template>
-  <li :class="[
-    tooltipMixins,
-    {
-      selected: selected,
-    },
-  ]">
-    <a v-bind="$attrs" v-on="$listeners">
+  <li
+    :class="[
+      tooltipMixins,
+      {
+        selected: selected
+      }
+    ]"
+  >
+    <a v-bind="$attrs">
       <slot></slot>
     </a>
   </li>
 </template>
 
 <script>
-import Tooltip from '@/mixins/tooltip';
+import Tooltip from "@/mixins/tooltip";
 
 export default {
   inheritAttrs: false,
-  mixins: [
-    Tooltip,
-  ],
+  mixins: [Tooltip],
 
   props: {
-    selected: Boolean,
-  },
+    selected: Boolean
+  }
 };
 </script>

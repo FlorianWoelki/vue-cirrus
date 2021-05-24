@@ -2,18 +2,14 @@
   <div class="form-ext-control">
     <label class="form-ext-toggle__label">
       <span><slot /></span>
-      <div :class="[
-        'form-ext-toggle',
-        color ? `form-ext-toggle--${color}` : '',
-      ]">
+      <div :class="['form-ext-toggle', color ? `form-ext-toggle--${color}` : '']">
         <input
           v-bind="$attrs"
-          v-on="$listeners"
           :name="name"
           type="checkbox"
           class="form-ext-input"
           :checked="checked"
-        >
+        />
         <div class="form-ext-toggle__toggler">
           <i :data-check-icon="dataCheckIcon" :data-uncheck-icon="dataUncheckIcon"></i>
         </div>
@@ -30,10 +26,10 @@ export default {
     dataUncheckIcon: String,
     name: {
       type: String,
-      default: 'toggleCheckbox',
+      default: "toggleCheckbox"
     },
     checked: Boolean,
-    color: String,
-  },
+    color: String
+  }
 };
 </script>

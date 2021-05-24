@@ -1,15 +1,13 @@
 <template>
-  <div :class="[
-    'pagination-item short',
-    {
-      selected: selected,
-    },
-  ]">
-    <a
-      v-bind="$attrs"
-      v-on="$listeners"
-      :disabled="disabled"
-    >
+  <div
+    :class="[
+      'pagination-item short',
+      {
+        selected: selected
+      }
+    ]"
+  >
+    <a v-bind="$attrs" :disabled="disabled">
       <slot></slot>
     </a>
   </div>
@@ -20,7 +18,7 @@ export default {
   inheritAttrs: false,
   props: {
     selected: Boolean,
-    disabled: Boolean,
-  },
+    disabled: Boolean
+  }
 };
 </script>

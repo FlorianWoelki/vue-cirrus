@@ -5,28 +5,26 @@
       'tree-item',
       {
         'hover-effect': $parent.hoverEffect,
-        'selected': selected,
-      },
+        selected: selected
+      }
     ]"
   >
-    <a
-      v-bind="$attrs"
-      v-on="$listeners"
-      class="sidebar-link"
-    >
+    <a v-bind="$attrs" class="sidebar-link">
       <label class="tree-item-header">
         <slot></slot>
       </label>
     </a>
   </div>
   <div v-else>
-    <li :class="[
-      'menu-item',
-      {
-        'selected': selected,
-      },
-    ]">
-      <a v-bind="$attrs" v-on="$listeners">
+    <li
+      :class="[
+        'menu-item',
+        {
+          selected: selected
+        }
+      ]"
+    >
+      <a v-bind="$attrs">
         <slot></slot>
       </a>
     </li>
@@ -38,8 +36,8 @@ export default {
   inheritAttrs: false,
   props: {
     dropdown: Boolean,
-    selected: Boolean,
-  },
+    selected: Boolean
+  }
 };
 </script>
 

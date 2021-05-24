@@ -1,6 +1,6 @@
 <template>
   <button
-    v-on="$listeners"
+    v-bind="$attrs"
     :class="[
       tooltipMixins,
       animationsMixins,
@@ -8,12 +8,12 @@
       size ? `btn-${size}` : null,
       {
         'btn-animated': animated,
-        'outline': outline,
+        outline: outline,
         'btn--pilled': pilled,
         'btn--circle': circle,
         'btn-dropdown': dropdown,
-        'm-0': dropdown,
-      },
+        'm-0': dropdown
+      }
     ]"
     :data-tooltip="tooltipData"
   >
@@ -22,14 +22,11 @@
 </template>
 
 <script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+import Tooltip from "@/mixins/tooltip";
+import Animations from "@/mixins/animations";
 
 export default {
-  mixins: [
-    Tooltip,
-    Animations,
-  ],
+  mixins: [Tooltip, Animations],
 
   props: {
     dropdown: Boolean,
@@ -38,7 +35,7 @@ export default {
     animated: Boolean,
     outline: Boolean,
     color: String,
-    size: String,
-  },
+    size: String
+  }
 };
 </script>
