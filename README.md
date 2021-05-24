@@ -22,9 +22,9 @@ If you want to see the documentation <a href="https://florianwoelki.github.io/vu
 1. Install with npm/yarn
 
 ```shell
-npm install vue-cirrus
+npm install vue-cirrus@next
 # OR
-yarn add vue-cirrus
+yarn add vue-cirrus@next
 ```
 
 2. Include the following in your public.html file
