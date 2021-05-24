@@ -36,8 +36,8 @@ export default {
   inheritAttrs: false,
   props: {
     dropdown: Boolean,
-    selected: Boolean
-  }
+    selected: Boolean,
+  },
 };
 </script>
 

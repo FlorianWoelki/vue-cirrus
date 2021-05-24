@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import Tooltip from "@/mixins/tooltip";
-import Animations from "@/mixins/animations";
+import Tooltip from '@/mixins/tooltip';
+import Animations from '@/mixins/animations';
 
 export default {
   mixins: [Tooltip, Animations],
@@ -35,7 +35,7 @@ export default {
     animated: Boolean,
     outline: Boolean,
     color: String,
-    size: String
-  }
+    size: String,
+  },
 };
 </script>

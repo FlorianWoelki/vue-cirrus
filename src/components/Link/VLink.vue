@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import Tooltip from "@/mixins/tooltip";
-import Animations from "@/mixins/animations";
+import Tooltip from '@/mixins/tooltip';
+import Animations from '@/mixins/animations';
 
 export default {
   inheritAttrs: false,
@@ -31,17 +31,17 @@ export default {
   data() {
     return {
       animationMap: {
-        ltr: "u u-LR",
-        rtl: "u u-RL",
-        c: "u u-C",
-        oltr: "utb utb-LR",
-        ortl: "utb utb-RL",
-        oc: "utb utb-C",
-        olr: "utb utb-OLR",
-        orl: "utb utb-ORL",
-        square: "utb utb-OLR",
-        dSquare: "utb utb-OLR"
-      }
+        ltr: 'u u-LR',
+        rtl: 'u u-RL',
+        c: 'u u-C',
+        oltr: 'utb utb-LR',
+        ortl: 'utb utb-RL',
+        oc: 'utb utb-C',
+        olr: 'utb utb-OLR',
+        orl: 'utb utb-ORL',
+        square: 'utb utb-OLR',
+        dSquare: 'utb utb-OLR',
+      },
     };
   },
 
@@ -50,11 +50,10 @@ export default {
     animation: {
       type: String,
       default: null,
-      validator: value =>
-        ["ltr", "rtl", "c", "oltr", "ortl", "oc", "olr", "orl", "square", "dSquare"].indexOf(
-          value
-        ) !== -1
-    }
-  }
+      validator: value => ['ltr', 'rtl', 'c', 'oltr', 'ortl', 'oc', 'olr', 'orl', 'square', 'dSquare'].indexOf(
+          value,
+        ) !== -1,
+    },
+  },
 };
 </script>

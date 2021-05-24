@@ -19,10 +19,10 @@ export default {
   props: {
     id: {
       type: String,
-      default: "input-checkbox"
+      default: 'input-checkbox',
     },
     color: String,
-    checked: Boolean
-  }
+    checked: Boolean,
+  },
 };
 </script>

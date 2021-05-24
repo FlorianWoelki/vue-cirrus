@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import Animations from "@/mixins/animations";
-import Tooltip from "@/mixins/tooltip";
+import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   inheritAttrs: false,
@@ -41,7 +41,7 @@ export default {
     success: Boolean,
     error: Boolean,
     size: String,
-    icon: Boolean
+    icon: Boolean,
   },
 
   computed: {
@@ -52,14 +52,14 @@ export default {
         this.size ? `input-${this.size}` : null,
         {
           select: this.select,
-          "input-focused": this.focused,
-          "text-success input-success": this.success,
-          "text-danger input-error": this.error,
-          "input-contains-icon": this.icon,
-          "input-control--pilled": this.pilled
-        }
+          'input-focused': this.focused,
+          'text-success input-success': this.success,
+          'text-danger input-error': this.error,
+          'input-contains-icon': this.icon,
+          'input-control--pilled': this.pilled,
+        },
       ];
-    }
-  }
+    },
+  },
 };
 </script>

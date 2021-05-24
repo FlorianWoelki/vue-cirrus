@@ -15,21 +15,21 @@
 </template>
 
 <script>
-import Animations from "@/mixins/animations";
+import Animations from '@/mixins/animations';
 
 export default {
   mixins: [Animations],
 
   provide() {
     return {
-      animated: this.animated
+      animated: this.animated,
     };
   },
 
   props: {
     animated: Boolean,
-    equalHeight: Boolean
-  }
+    equalHeight: Boolean,
+  },
 };
 </script>
 

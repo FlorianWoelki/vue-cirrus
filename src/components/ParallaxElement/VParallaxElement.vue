@@ -12,35 +12,36 @@ export default {
   props: {
     speed: {
       type: Number,
-      default: 0.5
+      default: 0.5,
     },
     margin: {
       type: Number,
-      default: 50
+      default: 50,
     },
     stopValue: {
       type: Number,
-      default: 600
-    }
+      default: 600,
+    },
   },
   data() {
     return {
-      currentOffset: 0
+      currentOffset: 0,
+      eventHandler: null,
     };
   },
 
   mounted() {
     this.calculateParallax();
 
-    const eventHandler = () => requestAnimationFrame(this.calculateParallax);
-    window.addEventListener("resize", eventHandler);
-    window.addEventListener("scroll", eventHandler);
-    window.addEventListener("load", eventHandler);
+    this.eventHandler = () => requestAnimationFrame(this.calculateParallax);
+    window.addEventListener('resize', this.eventHandler);
+    window.addEventListener('scroll', this.eventHandler);
+    window.addEventListener('load', this.eventHandler);
   },
 
   unmounted() {
-    window.removeEventListener("resize", eventHandler);
-    window.removeEventListener("scroll", eventHandler);
+    window.removeEventListener('resize', this.eventHandler);
+    window.removeEventListener('scroll', this.eventHandler);
   },
 
   methods: {
@@ -52,7 +53,7 @@ export default {
 
     offset() {
       return -this.currentOffset;
-    }
-  }
+    },
+  },
 };
 </script>

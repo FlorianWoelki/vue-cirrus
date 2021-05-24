@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import Animations from "@/mixins/animations";
-import Tooltip from "@/mixins/tooltip";
+import Animations from '@/mixins/animations';
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   inheritAttrs: false,
@@ -24,10 +24,10 @@ export default {
 
   mounted() {
     for (let i = 0; i < this.$el.children.length; i += 1) {
-      if (this.$el.children[i].tagName === "BUTTON") {
-        this.$el.children[i].classList.add("form-group-btn");
+      if (this.$el.children[i].tagName === 'BUTTON') {
+        this.$el.children[i].classList.add('form-group-btn');
       }
     }
-  }
+  },
 };
 </script>

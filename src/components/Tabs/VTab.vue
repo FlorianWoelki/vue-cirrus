@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import Tooltip from "@/mixins/tooltip";
+import Tooltip from '@/mixins/tooltip';
 
 export default {
   inheritAttrs: false,
   mixins: [Tooltip],
 
   props: {
-    selected: Boolean
-  }
+    selected: Boolean,
+  },
 };
 </script>

@@ -15,8 +15,8 @@ export default {
   props: {
     nextText: {
       type: String,
-      default: "Next"
-    }
-  }
+      default: 'Next',
+    },
+  },
 };
 </script>

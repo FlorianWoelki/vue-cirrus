@@ -20,14 +20,14 @@ export default {
   props: {
     id: {
       type: String,
-      default: "my-radio-btn"
+      default: 'my-radio-btn',
     },
     name: {
       type: String,
-      default: "radio-btn"
+      default: 'radio-btn',
     },
     checked: Boolean,
-    color: String
-  }
+    color: String,
+  },
 };
 </script>

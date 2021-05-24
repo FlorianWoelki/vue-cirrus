@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  inheritAttrs: false
+  inheritAttrs: false,
 };
 </script>

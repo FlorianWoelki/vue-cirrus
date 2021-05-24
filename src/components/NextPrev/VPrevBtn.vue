@@ -15,8 +15,8 @@ export default {
   props: {
     prevText: {
       type: String,
-      default: "Prev"
-    }
-  }
+      default: 'Prev',
+    },
+  },
 };
 </script>

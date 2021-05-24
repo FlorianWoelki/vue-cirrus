@@ -17,15 +17,15 @@
 </template>
 
 <script>
-import Tooltip from "@/mixins/tooltip";
-import Animations from "@/mixins/animations";
+import Tooltip from '@/mixins/tooltip';
+import Animations from '@/mixins/animations';
 
 export default {
   inheritAttrs: false,
   mixins: [Tooltip, Animations],
 
   props: {
-    active: Boolean
-  }
+    active: Boolean,
+  },
 };
 </script>

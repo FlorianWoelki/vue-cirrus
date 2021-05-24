@@ -26,10 +26,10 @@ export default {
     dataUncheckIcon: String,
     name: {
       type: String,
-      default: "toggleCheckbox"
+      default: 'toggleCheckbox',
     },
     checked: Boolean,
-    color: String
-  }
+    color: String,
+  },
 };
 </script>

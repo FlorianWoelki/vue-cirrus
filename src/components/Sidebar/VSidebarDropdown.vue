@@ -57,17 +57,17 @@ export default {
   inheritAttrs: false,
   data() {
     return {
-      dropdownClicked: false
+      dropdownClicked: false,
     };
   },
 
   props: {
     id: {
       type: String,
-      default: "sb-dropdown"
+      default: 'sb-dropdown',
     },
-    showArrow: Boolean
-  }
+    showArrow: Boolean,
+  },
 };
 </script>
 
