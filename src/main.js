@@ -3,7 +3,8 @@ const install = (Vue) => {
 
   requireComponent.keys().forEach((filename) => {
     const componentConfig = requireComponent(filename);
-    const componentName = `${filename.replace(/^\.\//, '')
+    const componentName = `${filename
+      .replace(/^\.\//, '')
       .replace(/\.\w+$/, '')
       .replace(/(.+)\//, '')
       .replace(/([a-z])([A-Z])/g, '$1-$2')

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.25] & [0.6.26] - 2021-05-24
+
+### 🔨 Added
+- Add Vue 3 support with `yarn add vue@next`
+
+
 ## [0.6.24] - 2021-01-08
 
 ### 🔨 Added
@@ -664,3 +670,5 @@ All notable changes to this project will be documented in this file.
 [0.6.22]: https://www.npmjs.com/package/vue-cirrus/v/0.6.22
 [0.6.23]: https://www.npmjs.com/package/vue-cirrus/v/0.6.23
 [0.6.24]: https://www.npmjs.com/package/vue-cirrus/v/0.6.24
+[0.6.25]: https://www.npmjs.com/package/vue-cirrus/v/0.6.25
+[0.6.26]: https://www.npmjs.com/package/vue-cirrus/v/0.6.26
