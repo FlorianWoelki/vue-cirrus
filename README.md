@@ -17,6 +17,8 @@ This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus C
 
 If you want to see the documentation <a href="https://florianwoelki.github.io/vue-cirrus/#/">click here</a>
 
+This version and readme requires Vue 2. For the newest Vue 3 version [click here](https://github.com/FlorianWoelki/vue-cirrus/tree/next)
+
 ## 🔨 Quick Install
 
 1. Install with npm/yarn
