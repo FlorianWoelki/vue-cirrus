@@ -18,17 +18,16 @@
     "*.json",
     "*.js"
   ],
-  "peerDependencies": {
-    "vue": "^3.0.0",
-    "cirrus-ui": "^0.6.0"
-  },
   "devDependencies": {
-    "vue": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "^4.3.0",
     "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "^4.3.0",
     "@vue/compiler-sfc": "^3.0.0-beta.1",
     "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "cirrus-ui": "^0.6.0",
     "eslint": "^5.8.0",
@@ -36,7 +35,13 @@
     "node-sass": "^4.13.1",
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
+    "typescript": "~4.1.5",
+    "vue": "^3.0.0",
     "webpack-bundle-analyzer": "^3.6.0"
+  },
+  "peerDependencies": {
+    "cirrus-ui": "^0.6.0",
+    "vue": "^3.0.0"
   },
   "browsersList": [
     "> 1%",
