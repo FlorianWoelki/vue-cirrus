@@ -34,7 +34,6 @@
     "node-sass": "^4.13.1",
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
-    "vue-cli-plugin-vue-next": "~0.1.4",
     "webpack-bundle-analyzer": "^3.6.0"
   },
   "browsersList": [
