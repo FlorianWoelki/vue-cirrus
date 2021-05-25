@@ -9,11 +9,13 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     large: Boolean,
     xlarge: Boolean,
   },
-};
+});
 </script>
