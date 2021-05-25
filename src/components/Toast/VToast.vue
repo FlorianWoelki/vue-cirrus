@@ -21,14 +21,14 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
-import { withAnimationClasses, withAnimationsProps } from '../../mixins/animations';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 import { withTooltipProps, withTooltipClasses } from '../../mixins/tooltip';
 
 export default defineComponent({
   emits: ['close'],
   props: {
     ...withTooltipProps(),
-    ...withAnimationsProps(),
+    ...withAnimationProps(),
     title: String,
     color: String,
     disableCloseFunction: Boolean,

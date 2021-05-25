@@ -1,4 +1,4 @@
-export const withAnimationsProps = () => ({
+export const withAnimationProps = () => ({
   infinite: {
     type: Boolean,
     default: false,
