@@ -2,8 +2,8 @@
   <button
     v-bind="$attrs"
     :class="[
-      tooltipMixins,
-      animationsMixins,
+      tooltipClasses,
+      animationClasses,
       color ? `btn-${color}` : null,
       size ? `btn-${size}` : null,
       {
@@ -15,20 +15,21 @@
         'm-0': dropdown
       }
     ]"
-    :data-tooltip="tooltipData"
+    :data-tooltip="tooltipText"
   >
     <slot></slot>
   </button>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
-  mixins: [Tooltip, Animations],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     dropdown: Boolean,
     pilled: Boolean,
     circle: Boolean,
@@ -37,5 +38,11 @@ export default {
     color: String,
     size: String,
   },
-};
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
+  },
+});
 </script>
