@@ -1,7 +1,7 @@
 <template>
   <li
     :class="[
-      tooltipMixins,
+      tooltipClasses,
       {
         selected: selected
       }
@@ -13,15 +13,20 @@
   </li>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
+export default defineComponent({
   inheritAttrs: false,
-  mixins: [Tooltip],
-
   props: {
+    ...withTooltipProps(),
     selected: Boolean,
   },
-};
+  setup(props) {
+    return {
+      ...withTooltipClasses(props),
+    };
+  },
+});
 </script>

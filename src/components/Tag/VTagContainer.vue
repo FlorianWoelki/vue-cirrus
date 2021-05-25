@@ -1,7 +1,7 @@
 <template>
   <div :class="[
-    tooltipMixins,
-    animationsMixins,
+    tooltipClasses,
+    animationClasses,
     'tag-container',
     {
       'group-tags': grouped,
@@ -12,19 +12,22 @@
   </div>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default {
-  mixins: [
-    Tooltip,
-    Animations,
-  ],
-
   props: {
+    ...withTooltipProps(),
+    ...withAnimationProps(),
     grouped: Boolean,
     rounded: Boolean,
+  },
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
   },
 };
 </script>

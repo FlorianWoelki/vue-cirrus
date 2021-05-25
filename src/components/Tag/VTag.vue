@@ -6,38 +6,37 @@
   <div v-else :class="classes"></div>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
-  mixins: [
-    Tooltip,
-    Animations,
-  ],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     closable: Boolean,
     deletable: Boolean,
     size: String,
     color: String,
     rounded: Boolean,
   },
-
-  computed: {
-    classes() {
-      return [
-        this.tooltipMixins,
-        this.animationsMixins,
+  setup(props) {
+    const classes = computed(() => [
+        withTooltipClasses(props).tooltipClasses,
+        withAnimationClasses(props).animationClasses,
         'tag',
-        this.size ? `tag--${this.size}` : null,
-        this.color ? `tag--${this.color}` : null,
+        props.size ? `tag--${props.size}` : null,
+        props.color ? `tag--${props.color}` : null,
         {
-          'tag--rounded': this.rounded,
-          'tag__close-btn': this.closable,
+          'tag--rounded': props.rounded,
+          'tag__close-btn': props.closable,
         },
-      ];
-    },
+      ]);
+
+    return {
+      classes,
+    };
   },
-};
+});
 </script>

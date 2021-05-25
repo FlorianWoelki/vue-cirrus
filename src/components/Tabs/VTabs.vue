@@ -11,12 +11,14 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     size: String,
     position: String,
     mode: String,
   },
-};
+});
 </script>
