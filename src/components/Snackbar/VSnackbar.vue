@@ -2,8 +2,8 @@
   <div
     ref="snackbar"
     :class="[
-      animationsMixins,
       'snackbar',
+      animationClasses,
       color ? `${color}-snackbar` : null,
       position ? getPosition : null,
     ]"
@@ -12,21 +12,13 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { ref, defineComponent, computed, watch } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
-export default {
-  mixins: [
-    Animations,
-  ],
-
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
     value: Boolean,
     color: String,
     position: {
@@ -38,35 +30,42 @@ export default {
       default: 3000,
     },
   },
+  setup(props) {
+    const isActive = ref<boolean>(false);
+    const snackbar = ref<HTMLElement | null>(null);
 
-  methods: {
-    setTimeout() {
-      if (!this.isActive) {
-        const snackbar = this.$el;
-        snackbar.classList.add('show');
-        this.isActive = true;
+    const startTimeout = (): void => {
+      if (!isActive.value && snackbar.value) {
+        snackbar.value.classList.add('show');
+        isActive.value = true;
 
         setTimeout(() => {
-          this.isActive = false;
-          snackbar.classList.remove('show');
-        }, this.timeout);
+          isActive.value = false;
+          if (snackbar.value) {
+            snackbar.value.classList.remove('show');
+          }
+        }, props.timeout);
       }
-    },
-  },
+    };
 
-  watch: {
-    value() {
-      this.setTimeout();
-    },
-  },
+    const value = ref(props.value);
+    watch(value, () => {
+      startTimeout();
+    });
 
-  computed: {
-    getPosition() {
-      const chars = this.position.split(/(?=[A-Z])/);
+    const getPosition = computed(() => {
+      const chars = props.position.split(/(?=[A-Z])/);
       return `${chars[0]}-${chars[1].toLowerCase()}`;
-    },
+    });
+
+    return {
+      ...withAnimationClasses(props),
+      getPosition,
+      isActive,
+      snackbar,
+    };
   },
-};
+});
 </script>
 
 <style>
