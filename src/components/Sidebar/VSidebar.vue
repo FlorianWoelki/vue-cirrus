@@ -33,17 +33,18 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     hoverEffect: Boolean,
     sidebarClass: String,
   },
-
-  beforeCreate() {
+  setup() {
     document.body.className = 'sidebar';
   },
-};
+});
 </script>
 
 <style>

@@ -52,15 +52,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  inheritAttrs: false,
-  data() {
-    return {
-      dropdownClicked: false,
-    };
-  },
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
 
+export default defineComponent({
+  inheritAttrs: false,
   props: {
     id: {
       type: String,
@@ -68,7 +64,14 @@ export default {
     },
     showArrow: Boolean,
   },
-};
+  setup() {
+    const dropdownClicked = ref<boolean>(false);
+
+    return {
+      dropdownClicked,
+    };
+  },
+});
 </script>
 
 <style>

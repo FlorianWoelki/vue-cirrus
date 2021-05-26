@@ -31,14 +31,16 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   inheritAttrs: false,
   props: {
     dropdown: Boolean,
     selected: Boolean,
   },
-};
+});
 </script>
 
 <style>
