@@ -13,7 +13,9 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, computed, watch } from 'vue';
+import {
+ ref, defineComponent, computed, watch,
+} from 'vue';
 import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
 export default defineComponent({

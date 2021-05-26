@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { withAnimationClasses, withAnimationProps } from "../../mixins/animations";
-import { withTooltipClasses, withTooltipProps } from "../../mixins/tooltip";
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({
   props: {
