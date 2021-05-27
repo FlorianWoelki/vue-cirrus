@@ -23,21 +23,33 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+
+export default defineComponent({
+  emits: ['open-mobile'],
   props: {
     fixed: Boolean,
     dark: Boolean,
     clear: Boolean,
   },
+  setup(_, { emit }) {
+    const headerMenu = ref<HTMLElement | null>(null);
+    const navBtn = ref<HTMLElement | null>(null);
 
-  methods: {
-    toggleNavbarBtn() {
-      const { headerMenu, navBtn } = this.$refs;
-      navBtn.classList.toggle('active');
-      headerMenu.classList.toggle('active');
-      this.$emit('open-mobile');
-    },
+    const toggleNavbarBtn = (): void => {
+      if (!headerMenu.value || !navBtn.value) {
+        return;
+      }
+
+      navBtn.value.classList.toggle('active');
+      headerMenu.value.classList.toggle('active');
+      emit('open-mobile');
+    };
+
+    return {
+      toggleNavbarBtn,
+    };
   },
-};
+});
 </script>

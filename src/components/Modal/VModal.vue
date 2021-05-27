@@ -41,8 +41,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     closeTarget: {
       type: String,
@@ -55,22 +57,27 @@ export default {
     applyDefaultCloseIcon: Boolean,
     animation: {
       type: String,
-      validator: value => ['dropdown', 'zoom-in', 'zoom-out'].indexOf(value) !== -1,
+      validator: (value: string) => ['dropdown', 'zoom-in', 'zoom-out'].indexOf(value) !== -1,
     },
     size: {
       type: String,
-      validator: value => ['small', 'normal', 'large'].indexOf(value) !== -1,
+      validator: (value: string) => ['small', 'normal', 'large'].indexOf(value) !== -1,
     },
   },
+  setup(props) {
+    const animationString = computed((): string => {
+      if (!props.animation) return '';
 
-  computed: {
-    animationString() {
-      const chars = this.animation.split(/(?=[A-Z])/);
+      const chars = props.animation.split(/(?=[A-Z])/);
       if (chars.length < 2) {
-        return this.animation;
+        return props.animation;
       }
       return `${chars[0]}-${chars[1].toLowerCase()}`;
-    },
+    });
+
+    return {
+      animationString,
+    };
   },
-};
+});
 </script>

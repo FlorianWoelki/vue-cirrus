@@ -28,10 +28,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
 let hasClicked = false;
 
-export default {
+export default defineComponent({
+  emits: ['click-dropdown'],
   props: {
     animated: Boolean,
     clickable: Boolean,
@@ -40,24 +43,33 @@ export default {
       default: 'dropdown',
     },
   },
+  setup(props, { emit }) {
+    const handleDropdownClick = (event: MouseEvent): void => {
+      emit('click-dropdown', event);
+      if (props.clickable) {
+        const dropdownEl = document.getElementById(props.id);
+        const listEl = document.getElementById(`${props.id}-list`);
+        if (!dropdownEl || !listEl) {
+          return;
+        }
 
-  methods: {
-    handleDropdownClick(event) {
-      this.$emit('click-dropdown', event);
-      if (this.clickable) {
         if (!hasClicked) {
-          document.getElementById(this.id).classList.add('active');
-          document.getElementById(`${this.id}-list`).classList.add('dropdown-shown');
+          dropdownEl.classList.add('active');
+          listEl.classList.add('dropdown-shown');
 
           hasClicked = true;
         } else {
-          document.getElementById(this.id).classList.remove('active');
-          document.getElementById(`${this.id}-list`).classList.remove('dropdown-shown');
+          dropdownEl.classList.remove('active');
+          listEl.classList.remove('dropdown-shown');
 
           hasClicked = false;
         }
       }
-    },
+    };
+
+    return {
+      handleDropdownClick,
+    };
   },
-};
+});
 </script>

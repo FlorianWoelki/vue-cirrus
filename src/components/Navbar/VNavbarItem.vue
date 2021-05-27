@@ -1,14 +1,14 @@
 <template>
   <div
     :class="[
-      tooltipMixins,
-      animationsMixins,
+      tooltipClasses,
+      animationClasses,
       'nav-item',
       {
         active: active
       }
     ]"
-    :data-tooltip="tooltipData"
+    :data-tooltip="tooltipText"
   >
     <a v-bind="$attrs">
       <slot></slot>
@@ -16,16 +16,23 @@
   </div>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
+export default defineComponent({
   inheritAttrs: false,
-  mixins: [Tooltip, Animations],
-
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     active: Boolean,
   },
-};
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
+  },
+});
 </script>
