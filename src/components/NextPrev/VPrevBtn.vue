@@ -9,8 +9,10 @@
   </li>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   inheritAttrs: false,
   props: {
     prevText: {
@@ -18,5 +20,5 @@ export default {
       default: 'Prev',
     },
   },
-};
+});
 </script>
