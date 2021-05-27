@@ -18,23 +18,26 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     src: String,
     customBody: Boolean,
     fullscreen: Boolean,
     disableParallax: Boolean,
   },
+  setup(props) {
+    const styleImage = computed(() => (props.src != null ? {
+        backgroundImage: `url(${props.src})`,
+      } : {}));
 
-  computed: {
-    styleImage() {
-      return this.src != null ? {
-        backgroundImage: `url(${this.src})`,
-      } : {};
-    },
+    return {
+      styleImage,
+    };
   },
-};
+});
 </script>
 
 <style>

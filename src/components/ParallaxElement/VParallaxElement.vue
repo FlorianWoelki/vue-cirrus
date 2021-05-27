@@ -7,8 +7,12 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {
+ defineComponent, onMounted, onUnmounted, ref,
+} from 'vue';
+
+export default defineComponent({
   props: {
     speed: {
       type: Number,
@@ -23,37 +27,39 @@ export default {
       default: 600,
     },
   },
-  data() {
+  setup(props) {
+    const currentOffset = ref<number>(0);
+    const eventHandler = ref<null |(() => number)>(null);
+
+    const calculateParallax = () => {
+      if (window.pageYOffset <= props.stopValue) {
+        currentOffset.value = window.pageYOffset * props.speed;
+      }
+    };
+
+    onMounted(() => {
+      calculateParallax();
+
+      eventHandler.value = () => requestAnimationFrame(calculateParallax);
+      window.addEventListener('resize', eventHandler.value);
+      window.addEventListener('scroll', eventHandler.value);
+      window.addEventListener('load', eventHandler.value);
+    });
+
+    onUnmounted(() => {
+      if (eventHandler.value) {
+        window.removeEventListener('resize', eventHandler.value);
+        window.removeEventListener('scroll', eventHandler.value);
+      }
+    });
+
+    const offset = (): number => -currentOffset.value;
+
     return {
-      currentOffset: 0,
-      eventHandler: null,
+      offset,
+      currentOffset,
+      eventHandler,
     };
   },
-
-  mounted() {
-    this.calculateParallax();
-
-    this.eventHandler = () => requestAnimationFrame(this.calculateParallax);
-    window.addEventListener('resize', this.eventHandler);
-    window.addEventListener('scroll', this.eventHandler);
-    window.addEventListener('load', this.eventHandler);
-  },
-
-  unmounted() {
-    window.removeEventListener('resize', this.eventHandler);
-    window.removeEventListener('scroll', this.eventHandler);
-  },
-
-  methods: {
-    calculateParallax() {
-      if (window.pageYOffset <= this.stopValue) {
-        this.currentOffset = window.pageYOffset * this.speed;
-      }
-    },
-
-    offset() {
-      return -this.currentOffset;
-    },
-  },
-};
+});
 </script>
