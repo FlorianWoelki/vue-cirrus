@@ -1,39 +1,38 @@
 <template>
   <a v-if="!title">
-    <li :class="classes" :data-tooltip="tooltipData">
+    <li :class="classes" :data-tooltip="tooltipText">
       <slot />
     </li>
   </a>
-  <li v-else :class="classes" :data-tooltip="tooltipData">
+  <li v-else :class="classes" :data-tooltip="tooltipText">
     <slot />
   </li>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
-  mixins: [
-    Tooltip,
-    Animations,
-  ],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     title: Boolean,
   },
-
-  computed: {
-    classes() {
-      return Object.assign(
-        this.tooltipMixins,
-        this.animationsMixins,
+  setup(props) {
+    const classes = computed(() => Object.assign(
         {
-          'footer__list-item': !this.title,
-          'footer__list-title': this.title,
+          ...withAnimationClasses(props).animationClasses,
+          ...withTooltipClasses(props).tooltipClasses,
+          'footer__list-item': !props.title,
+          'footer__list-title': props.title,
         },
-      );
-    },
+      ));
+
+    return {
+      classes,
+    };
   },
-};
+});
 </script>

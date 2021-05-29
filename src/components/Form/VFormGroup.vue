@@ -4,27 +4,25 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue';
 
-export default {
-  mixins: [
-    Animations,
-  ],
-
-  mounted() {
-    const nodes = document.getElementsByClassName('form-group');
-    for (let i = 0; i < nodes.length; i += 1) {
-      for (let j = 0; j < nodes[i].childNodes.length; j += 1) {
-        const child = nodes[i].childNodes[j];
-        if (child.className && child.className.toLowerCase() === 'input-control') {
-          child.className += ' form-group-input';
-        }
-        if (child.nodeName && child.nodeName.toLowerCase() === 'button') {
-          child.className += ' form-group-btn';
+export default defineComponent({
+  setup() {
+    onMounted(() => {
+      const nodes = document.getElementsByClassName('form-group');
+      for (let i = 0; i < nodes.length; i += 1) {
+        for (let j = 0; j < nodes[i].childNodes.length; j += 1) {
+          const child = nodes[i].childNodes[j] as Element;
+          if (child.className && child.className.toLowerCase() === 'input-control') {
+            child.className += ' form-group-input';
+          }
+          if (child.nodeName && child.nodeName.toLowerCase() === 'button') {
+            child.className += ' form-group-btn';
+          }
         }
       }
-    }
+    });
   },
-};
+});
 </script>

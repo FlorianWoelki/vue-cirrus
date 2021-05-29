@@ -1,7 +1,6 @@
 <template>
   <figure :class="[
-      tooltipMixins,
-      animationsMixins,
+      animationClasses,
       'avatar',
       size ? `avatar--${size}` : null,
     ]"
@@ -16,24 +15,25 @@
   </figure>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
-export default {
-  mixins: [
-    Tooltip,
-    Animations,
-  ],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
     src: String,
     text: String,
     padded: Boolean,
     size: {
       type: String,
-      validator: value => ['xsmall', 'small', 'large', 'xlarge'].indexOf(value) !== -1,
+      validator: (value: string) => ['xsmall', 'small', 'large', 'xlarge'].indexOf(value) !== -1,
     },
   },
-};
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+    };
+  },
+});
 </script>

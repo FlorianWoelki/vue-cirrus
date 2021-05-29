@@ -1,15 +1,15 @@
 <template>
   <div
     :class="[
-      animationsMixins,
-      tooltipMixins,
+      animationClasses,
+      tooltipClasses,
       'list-dropdown',
       {
         'dropdown-right': right,
         'dropdown-left': left,
       },
     ]"
-    :data-tooltip="tooltipData"
+    :data-tooltip="tooltipText"
   >
     <slot name="button"></slot>
     <ul class="menu">
@@ -18,19 +18,23 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { withAnimationClasses, withAnimationProps } from '@/mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '@/mixins/tooltip';
+import { defineComponent } from 'vue';
 
-export default {
-  mixins: [
-    Animations,
-    Tooltip,
-  ],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     right: Boolean,
     left: Boolean,
   },
-};
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
+  },
+});
 </script>

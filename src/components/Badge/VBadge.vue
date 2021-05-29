@@ -4,8 +4,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue';
+
+export default defineComponent({
   props: {
     content: {
       type: String,
@@ -17,22 +19,32 @@ export default {
     },
     color: String,
   },
+  setup(props) {
+    const badge = ref<null | HTMLElement>(null);
 
-  mounted() {
-    const node = this.$refs.badge;
+    onMounted(() => {
+    const node = badge.value;
+    if (!node) {
+      return;
+    }
 
     const spanChild = node.children[0];
     if (spanChild) {
       spanChild.classList.add('badge');
-      spanChild.classList.add(this.position);
+      spanChild.classList.add(props.position);
 
-      if (this.color) {
-        spanChild.classList.add(this.color);
+      if (props.color) {
+        spanChild.classList.add(props.color);
       }
-      spanChild.setAttribute('data-badge', this.content);
+      spanChild.setAttribute('data-badge', props.content);
     }
+    });
+
+    return {
+      badge,
+    };
   },
-};
+});
 </script>
 
 <style>

@@ -14,8 +14,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     c: String,
     o: String,
@@ -25,5 +27,5 @@ export default {
     fluid: Boolean,
     ignoreScreen: Boolean,
   },
-};
+});
 </script>

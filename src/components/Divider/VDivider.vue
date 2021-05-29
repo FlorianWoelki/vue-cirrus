@@ -20,14 +20,16 @@
   ]"></div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: {
     short: Boolean,
     vertical: Boolean,
     content: String,
   },
-};
+});
 </script>
 
 <style>

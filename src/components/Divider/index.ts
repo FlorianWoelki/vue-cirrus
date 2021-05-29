@@ -1,5 +1,6 @@
+import { App } from 'vue';
 import component from './VDivider.vue';
 
-export default (Vue: any) => {
-  Vue.component(component.name, component);
+export default (app: App) => {
+  app.component(component.name, component);
 };

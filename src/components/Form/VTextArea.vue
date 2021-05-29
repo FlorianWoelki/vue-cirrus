@@ -1,21 +1,28 @@
 <template>
   <textarea
-    :data-tooltip="tooltipData"
+    :data-tooltip="tooltipText"
     :class="[
-      tooltipMixins,
-      animationsMixins,
+      tooltipClasses,
+      animationClasses,
     ]"
   ></textarea>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
-  mixins: [
-    Animations,
-    Tooltip,
-  ],
-};
+export default defineComponent({
+  props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
+  },
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
+  },
+});
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!select" :data-tooltip="tooltipData" class="input-control">
+  <div v-if="!select" :data-tooltip="tooltipText" class="input-control">
     <label v-if="$slots['title']">
       <slot name="title" />
     </label>
@@ -20,21 +20,22 @@
     </span>
   </div>
   <div v-else class="input-control">
-    <select v-bind="$attrs" :class="inputClasses" :data-tooltip="tooltipData">
+    <select v-bind="$attrs" :class="inputClasses" :data-tooltip="tooltipText">
       <slot></slot>
     </select>
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
+export default defineComponent({
   inheritAttrs: false,
-  mixins: [Animations, Tooltip],
-
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     pilled: Boolean,
     select: Boolean,
     focused: Boolean,
@@ -43,23 +44,24 @@ export default {
     size: String,
     icon: Boolean,
   },
-
-  computed: {
-    inputClasses() {
-      return [
-        this.animationsMixins,
-        this.tooltipMixins,
-        this.size ? `input-${this.size}` : null,
+  setup(props) {
+    const inputClasses = computed(() => [
+        props.size ? `input-${props.size}` : null,
         {
-          select: this.select,
-          'input-focused': this.focused,
-          'text-success input-success': this.success,
-          'text-danger input-error': this.error,
-          'input-contains-icon': this.icon,
-          'input-control--pilled': this.pilled,
+          ...withAnimationClasses(props).animationClasses,
+          ...withTooltipClasses(props).tooltipClasses,
+          select: props.select,
+          'input-focused': props.focused,
+          'text-success input-success': props.success,
+          'text-danger input-error': props.error,
+          'input-contains-icon': props.icon,
+          'input-control--pilled': props.pilled,
         },
-      ];
-    },
+      ]);
+
+    return {
+      inputClasses,
+    };
   },
-};
+});
 </script>

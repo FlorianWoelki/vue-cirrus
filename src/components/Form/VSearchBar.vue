@@ -1,10 +1,10 @@
 <template>
-  <div class="form-group">
+  <div ref="el" class="form-group">
     <input
       v-bind="$attrs"
       type="search"
-      :class="[animationsMixins, tooltipMixins, 'form-group-input']"
-      :data-tooltip="tooltipData"
+      :class="[animationClasses, tooltipClasses, 'form-group-input']"
+      :data-tooltip="tooltipText"
       v-on="{
         input: event => $emit('input', event.target.value)
       }"
@@ -14,20 +14,37 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { onMounted, ref } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default {
   inheritAttrs: false,
-  mixins: [Animations, Tooltip],
+  props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
+  },
+  setup(props) {
+    const el = ref<null | HTMLElement>(null);
 
-  mounted() {
-    for (let i = 0; i < this.$el.children.length; i += 1) {
-      if (this.$el.children[i].tagName === 'BUTTON') {
-        this.$el.children[i].classList.add('form-group-btn');
+    onMounted(() => {
+      if (!el.value) {
+        return;
       }
-    }
+
+      for (let i = 0; i < el.value.children.length; i += 1) {
+        if (el.value.children[i].tagName === 'BUTTON') {
+          el.value.children[i].classList.add('form-group-btn');
+        }
+      }
+    });
+
+    return {
+      el,
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+    };
   },
 };
 </script>

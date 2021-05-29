@@ -1,7 +1,7 @@
 <template>
   <div
     :class="datePickerClasses"
-    :data-tooltip="tooltipData"
+    :data-tooltip="tooltipText"
   >
     <label
       v-if="title"
@@ -24,36 +24,32 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
-import Tooltip from '@/mixins/tooltip';
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
-  mixins: [
-    Animations,
-    Tooltip,
-  ],
-
+export default defineComponent({
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     date: String,
     title: String,
     information: String,
   },
-
-  computed: {
-    datePickerClasses() {
-      return Object.assign(
-        this.animationsMixins,
-        this.tooltipMixins,
+  setup(props) {
+    const datePickerClasses = computed(() => Object.assign(
         {
+          ...withAnimationClasses(props).animationClasses,
+          ...withTooltipClasses(props).tooltipClasses,
           'date-picker': true,
         },
-      );
-    },
-    currentDate() {
+      ));
+
+    const currentDate = computed((): string => {
       const today = new Date();
-      let dd = today.getDate();
-      let mm = today.getMonth() + 1;
+      let dd: number | string = today.getDate();
+      let mm: number | string = today.getMonth() + 1;
       const yyyy = today.getFullYear();
 
       if (dd < 10) {
@@ -65,7 +61,12 @@ export default {
 
       const todayDate = `${yyyy}-${mm}-${dd}`;
       return todayDate;
-    },
+    });
+
+    return {
+      datePickerClasses,
+      currentDate,
+    };
   },
-};
+});
 </script>

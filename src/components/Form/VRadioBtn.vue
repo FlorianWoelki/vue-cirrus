@@ -14,8 +14,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   inheritAttrs: false,
   props: {
     id: {
@@ -29,5 +31,5 @@ export default {
     checked: Boolean,
     color: String,
   },
-};
+});
 </script>
