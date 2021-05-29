@@ -22,19 +22,15 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-export default {
-  mixins: [
-    Animations,
-  ],
-
+export default defineComponent({
   props: {
     height: {
       type: String,
       default: '30rem',
     },
   },
-};
+});
 </script>
