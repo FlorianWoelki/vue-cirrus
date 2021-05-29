@@ -15,7 +15,7 @@ You can build your amazing applications with the Power of Vue, Cirrus and a mass
 
 This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling and it is an adaption of vue components.
 
-If you want to see the documentation <a href="https://florianwoelki.github.io/vue-cirrus/#/">click here</a>
+The UI library mainly supports Vue 3, but uses Vue Demi under the hood to translate the code to a Vue 2 code base as well. Vue 2 support is still experimental. 
 
 ## 🔨 Quick Install
 
