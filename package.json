@@ -1,6 +1,6 @@
 {
   "name": "vue-cirrus",
-  "version": "0.7.01",
+  "version": "0.7.02",
   "private": false,
   "description": "A Vue components library for the Cirrus CSS framework.",
   "author": "Florian Woelki",
@@ -41,7 +41,13 @@
   },
   "peerDependencies": {
     "cirrus-ui": "^0.6.0",
-    "vue": "^3.0.11"
+    "@vue/composition-api": "^1.0.0-beta.1",
+    "vue": "^2.0.0 || >=3.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   },
   "browsersList": [
     "> 1%",
@@ -66,5 +72,8 @@
   "vetur": {
     "tags": "tags.json",
     "attributes": "attributes.json"
+  },
+  "dependencies": {
+    "vue-demi": "^0.9.1"
   }
 }

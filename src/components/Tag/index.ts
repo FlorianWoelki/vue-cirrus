@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import { App } from 'vue-demi';
 import component from './VTag.vue';
 import component2 from './VTagContainer.vue';
 

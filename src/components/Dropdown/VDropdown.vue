@@ -21,7 +21,7 @@
 <script lang="ts">
 import { withAnimationClasses, withAnimationProps } from '@/mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '@/mixins/tooltip';
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue-demi';
 
 export default defineComponent({
   props: {

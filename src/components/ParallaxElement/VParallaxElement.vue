@@ -10,7 +10,7 @@
 <script lang="ts">
 import {
  defineComponent, onMounted, onUnmounted, ref,
-} from 'vue';
+} from 'vue-demi';
 
 export default defineComponent({
   props: {

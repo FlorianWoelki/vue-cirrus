@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import { App } from 'vue-demi';
 import component from './VDropdown.vue';
 import component1 from './VDropdownItem.vue';
 

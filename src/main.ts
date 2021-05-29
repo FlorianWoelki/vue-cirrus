@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import { App } from 'vue-demi';
 
 const install = (app: App) => {
   const requireComponent = require.context(

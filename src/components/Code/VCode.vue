@@ -10,7 +10,7 @@
 <script lang="ts">
 import {
  computed, defineComponent, onMounted, ref,
-} from 'vue';
+} from 'vue-demi';
 import javascript from './javascript';
 import html from './html';
 import css from './css';
@@ -46,7 +46,7 @@ export default defineComponent({
 
       if (props.lang.toLowerCase() === 'javascript') {
         result = replaceWithColoredCode(codeElements, javascript);
-      } else if (props.lang.toLowerCase() === 'html' || props.lang.toLowerCase() === 'vue') {
+      } else if (props.lang.toLowerCase() === 'html' || props.lang.toLowerCase() === 'vue-demi') {
         result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
         result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
         result = replaceWithColoredCode(result, html);

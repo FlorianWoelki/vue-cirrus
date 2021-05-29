@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue-demi';
 import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 import { withTooltipProps, withTooltipClasses } from '../../mixins/tooltip';
 

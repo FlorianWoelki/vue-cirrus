@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue-demi';
 import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
 export default defineComponent({
