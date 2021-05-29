@@ -1,3 +1,4 @@
+import { App } from 'vue';
 import component from './VCard.vue';
 import component1 from './VCardActions.vue';
 import component3 from './VCardFooter.vue';
@@ -6,12 +7,12 @@ import component5 from './VCardSubtitle.vue';
 import component6 from './VCardTitle.vue';
 import component7 from './VCardBody.vue';
 
-export default (Vue: any) => {
-  Vue.component(component.name, component);
-  Vue.component(component1.name, component1);
-  Vue.component(component3.name, component3);
-  Vue.component(component4.name, component4);
-  Vue.component(component5.name, component5);
-  Vue.component(component6.name, component6);
-  Vue.component(component7.name, component7);
+export default (app: App) => {
+  app.component(component.name, component);
+  app.component(component1.name, component1);
+  app.component(component3.name, component3);
+  app.component(component4.name, component4);
+  app.component(component5.name, component5);
+  app.component(component6.name, component6);
+  app.component(component7.name, component7);
 };

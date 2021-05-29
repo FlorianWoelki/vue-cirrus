@@ -27,8 +27,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   inject: ['animated'],
 
   provide() {
@@ -40,5 +42,5 @@ export default {
   props: {
     image: String,
   },
-};
+});
 </script>

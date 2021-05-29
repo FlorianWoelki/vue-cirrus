@@ -2,7 +2,7 @@
   <div
     v-bind="$attrs"
     :class="[
-      animationsMixins,
+      animationClasses,
       'card',
       {
         'slide-up': animated,
@@ -14,23 +14,27 @@
   </div>
 </template>
 
-<script>
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
-export default {
-  mixins: [Animations],
-
+export default defineComponent({
   provide() {
     return {
       animated: this.animated,
     };
   },
-
   props: {
+    ...withAnimationProps(),
     animated: Boolean,
     equalHeight: Boolean,
   },
-};
+  setup(props) {
+    return {
+      ...withAnimationClasses(props),
+    };
+  },
+});
 </script>
 
 <style>

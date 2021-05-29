@@ -7,23 +7,75 @@
   </pre>
 </template>
 
-<script>
+<script lang="ts">
+import {
+ computed, defineComponent, onMounted, ref,
+} from 'vue';
 import javascript from './javascript';
 import html from './html';
 import css from './css';
 import bash from './bash';
 
-export default {
+export default defineComponent({
   data() {
     return {
       copied: false,
     };
   },
-
   props: {
     value: String,
-    lang: String,
+    lang: {
+      type: String,
+      required: true,
+    },
     dark: Boolean,
+  },
+  setup(props) {
+    const el = ref<null | HTMLElement>(null);
+
+    const replaceWithColoredCode = (codeElements: any, lang: any): any => {
+      let newColoredElements = codeElements;
+      Object.keys(lang).forEach((key) => {
+        newColoredElements = newColoredElements.replace(lang[key].exp, `<span class="${lang[key].class}">$&</span>`);
+      });
+      return newColoredElements;
+    };
+
+    const colorizeValue = (codeElements: any): any => {
+      let result = codeElements;
+
+      if (props.lang.toLowerCase() === 'javascript') {
+        result = replaceWithColoredCode(codeElements, javascript);
+      } else if (props.lang.toLowerCase() === 'html' || props.lang.toLowerCase() === 'vue') {
+        result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
+        result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
+        result = replaceWithColoredCode(result, html);
+      } else if (props.lang.toLowerCase() === 'css') {
+        result = replaceWithColoredCode(codeElements, css);
+      } else if (props.lang.toLowerCase() === 'bash') {
+        result = replaceWithColoredCode(codeElements, bash);
+      }
+
+      return result;
+    };
+
+    onMounted(() => {
+      if (!el.value) {
+        return;
+      }
+
+      el.value.getElementsByTagName('code')[0].innerHTML = colorizeValue(el.value.getElementsByTagName('code')[0].innerHTML);
+    });
+
+    const classes = computed(() => ({
+        dark: props.dark,
+      }));
+
+    return {
+      classes,
+      colorizeValue,
+      replaceWithColoredCode,
+    };
   },
 
   watch: {
@@ -31,47 +83,7 @@ export default {
       this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(newVal);
     },
   },
-
-  methods: {
-    replaceWithColoredCode(codeElements, lang) {
-      let newColoredElements = codeElements;
-      Object.keys(lang).forEach((key) => {
-        newColoredElements = newColoredElements.replace(lang[key].exp, `<span class="${lang[key].class}">$&</span>`);
-      });
-      return newColoredElements;
-    },
-    colorizeValue(codeElements) {
-      let result = codeElements;
-
-      if (this.lang.toLowerCase() === 'javascript') {
-        result = this.replaceWithColoredCode(codeElements, javascript);
-      } else if (this.lang.toLowerCase() === 'html' || this.lang.toLowerCase() === 'vue') {
-        result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
-        result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
-        result = this.replaceWithColoredCode(result, html);
-      } else if (this.lang.toLowerCase() === 'css') {
-        result = this.replaceWithColoredCode(codeElements, css);
-      } else if (this.lang.toLowerCase() === 'bash') {
-        result = this.replaceWithColoredCode(codeElements, bash);
-      }
-
-      return result;
-    },
-  },
-
-  mounted() {
-    this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(this.$el.getElementsByTagName('code')[0].innerHTML);
-  },
-
-  computed: {
-    classes() {
-      return {
-        copyable: this.copyable,
-        dark: this.dark,
-      };
-    },
-  },
-};
+});
 </script>
 
 <style>

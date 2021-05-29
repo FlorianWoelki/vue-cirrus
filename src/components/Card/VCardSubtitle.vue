@@ -4,10 +4,12 @@
   </span>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   inject: {
     animated: { default: false },
   },
-};
+});
 </script>
