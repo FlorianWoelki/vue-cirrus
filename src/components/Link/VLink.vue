@@ -4,10 +4,10 @@
   >
     <a
       v-bind="$attrs"
-      :data-tooltip="tooltipData"
+      :data-tooltip="tooltipText"
       :class="[
-        tooltipMixins,
-        animationsMixins,
+        tooltipClasses,
+        animationClasses,
         animationMap[animation],
         {
           underline: underlined
@@ -19,41 +19,48 @@
   </span>
 </template>
 
-<script>
-import Tooltip from '@/mixins/tooltip';
-import Animations from '@/mixins/animations';
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+import { withAnimationClasses, withAnimationProps } from "../../mixins/animations";
+import { withTooltipClasses, withTooltipProps } from "../../mixins/tooltip";
 
-export default {
+export default defineComponent({
   inheritAttrs: false,
-
-  mixins: [Tooltip, Animations],
-
-  data() {
-    return {
-      animationMap: {
-        ltr: 'u u-LR',
-        rtl: 'u u-RL',
-        c: 'u u-C',
-        oltr: 'utb utb-LR',
-        ortl: 'utb utb-RL',
-        oc: 'utb utb-C',
-        olr: 'utb utb-OLR',
-        orl: 'utb utb-ORL',
-        square: 'utb utb-OLR',
-        dSquare: 'utb utb-OLR',
-      },
-    };
-  },
-
   props: {
+    ...withAnimationProps(),
+    ...withTooltipProps(),
     underlined: Boolean,
     animation: {
       type: String,
       default: null,
-      validator: value => ['ltr', 'rtl', 'c', 'oltr', 'ortl', 'oc', 'olr', 'orl', 'square', 'dSquare'].indexOf(
-          value,
-        ) !== -1,
+      validator: (value: string) => ['ltr', 'rtl', 'c', 'oltr', 'ortl', 'oc', 'olr', 'orl', 'square', 'dSquare'].indexOf(
+        value,
+      ) !== -1,
     },
   },
-};
+  setup(props) {
+    const animationMap = ref({
+      ltr: 'u u-LR',
+      rtl: 'u u-RL',
+      c: 'u u-C',
+      oltr: 'utb utb-LR',
+      ortl: 'utb utb-RL',
+      oc: 'utb utb-C',
+      olr: 'utb utb-OLR',
+      orl: 'utb utb-ORL',
+      square: 'utb utb-OLR',
+      dSquare: 'utb utb-OLR',
+    });
+
+    return {
+      ...withAnimationClasses(props),
+      ...withTooltipClasses(props),
+      animationMap,
+    };
+  },
+  data() {
+    return {
+    };
+  },
+});
 </script>
