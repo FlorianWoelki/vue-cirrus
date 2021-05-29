@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.01] - 2021-05-29
+
+### ⚡️ Changed
+- Revert back to old version
+- Fixed components declaration
+
+
 ## [0.6.27] - 2021-05-24
 
 ### ⚡️ Changed
