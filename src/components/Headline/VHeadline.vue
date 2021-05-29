@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { withAnimationClasses, withAnimationProps } from "../../mixins/animations";
+import { defineComponent } from 'vue';
+import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 
 export default defineComponent({
   props: {
@@ -24,6 +24,6 @@ export default defineComponent({
     return {
       ...withAnimationClasses(props),
     };
-  }
+  },
 });
 </script>
