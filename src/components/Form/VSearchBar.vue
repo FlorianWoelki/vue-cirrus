@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts">
-import { onMounted, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
-export default {
+export default defineComponent({
   inheritAttrs: false,
   props: {
     ...withAnimationProps(),
@@ -46,5 +46,5 @@ export default {
       ...withTooltipClasses(props),
     };
   },
-};
+});
 </script>

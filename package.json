@@ -6,7 +6,7 @@
   "author": "Florian Woelki",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --mode production --name vue-cirrus ./src/main.js",
+    "build": "vue-cli-service build --target lib --mode production --name vue-cirrus ./src/main.ts",
     "lint": "vue-cli-service lint",
     "dev": "./scripts/devmode.sh && vue-cli-service serve --open"
   },
@@ -36,12 +36,12 @@
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
     "typescript": "~4.1.5",
-    "vue": "^3.0.0",
+    "vue": "^3.0.11",
     "webpack-bundle-analyzer": "^3.6.0"
   },
   "peerDependencies": {
     "cirrus-ui": "^0.6.0",
-    "vue": "^3.0.0"
+    "vue": "^3.0.11"
   },
   "browsersList": [
     "> 1%",
