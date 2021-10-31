@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.7.1] - 2021-10-31
+## [0.7.3] - 2021-10-31
 
 ### ⚡️ Changed
 - Drop support for Vue 3
