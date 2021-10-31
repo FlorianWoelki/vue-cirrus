@@ -6,9 +6,7 @@
     <div :class="icon ? 'input-control mt-0' : ''">
       <input
         v-bind="$attrs"
-        v-on="{
-          input: event => $emit('input', event.target.value)
-        }"
+        @input="emitInputEvent"
         :class="inputClasses"
       />
       <span v-if="$slots.default" class="icon">
@@ -36,6 +34,7 @@ import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({
   inheritAttrs: false,
+  emits: ['update:modelValue'],
   props: {
     ...withAnimationProps(),
     ...withTooltipProps(),
@@ -46,8 +45,9 @@ export default defineComponent({
     error: Boolean,
     size: String,
     icon: Boolean,
+    modelValue: String,
   },
-  setup(props) {
+  setup(props, { emit }) {
     const inputClasses = computed(() => [
       props.size ? `input-${props.size}` : null,
       {
@@ -62,8 +62,13 @@ export default defineComponent({
       },
     ]);
 
+    const emitInputEvent = (event: Event) => {
+      emit('update:modelValue', (event.target! as HTMLInputElement).value);
+    };
+
     return {
       inputClasses,
+      emitInputEvent,
     };
   },
 });
