@@ -1,9 +1,5 @@
 <template>
-  <div :class="[
-    animationClasses,
-    tooltipClasses,
-    'placeholder-icon',
-  ]">
+  <div :class="[animationClasses, tooltipClasses, 'placeholder-icon']">
     <span class="icon">
       <slot></slot>
     </span>
@@ -11,8 +7,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { defineComponent } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue-demi';
+import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
   props: {
@@ -23,21 +23,21 @@ export default defineComponent({
     const badge = ref<null | HTMLElement>(null);
 
     onMounted(() => {
-    const node = badge.value;
-    if (!node) {
-      return;
-    }
-
-    const spanChild = node.children[0];
-    if (spanChild) {
-      spanChild.classList.add('badge');
-      spanChild.classList.add(props.position);
-
-      if (props.color) {
-        spanChild.classList.add(props.color);
+      const node = badge.value;
+      if (!node) {
+        return;
       }
-      spanChild.setAttribute('data-badge', props.content);
-    }
+
+      const spanChild = node.children[0];
+      if (spanChild) {
+        spanChild.classList.add('badge');
+        spanChild.classList.add(props.position);
+
+        if (props.color) {
+          spanChild.classList.add(props.color);
+        }
+        spanChild.setAttribute('data-badge', props.content);
+      }
     });
 
     return {
@@ -55,7 +55,7 @@ export default defineComponent({
 .badge[data-badge]:after {
   content: attr(data-badge);
   position: absolute;
-  font-size: .65em;
+  font-size: 0.65em;
   background: #fefefe;
   color: #737373;
   border-color: #d9d9d9;
@@ -74,42 +74,42 @@ export default defineComponent({
 .badge.info[data-badge]:after {
   background: #2972fa;
   color: #fff;
-  border-color: #205BC8;
+  border-color: #205bc8;
 }
 .badge.link[data-badge]:after {
   background: #5e5cc7;
   color: #fff;
-  border-color: #4B499F;
+  border-color: #4b499f;
 }
 .badge.dark[data-badge]:after {
   background: #363636;
   color: #fff;
-  border-color: #2B2B2B;
+  border-color: #2b2b2b;
 }
 .badge.black[data-badge]:after {
   background: #000;
   color: #fff;
-  border-color: #2B2B2B;
+  border-color: #2b2b2b;
 }
 .badge.success[data-badge]:after {
   background: #0dd157;
   color: #fff;
-  border-color: #0AA746;
+  border-color: #0aa746;
 }
 .badge.warning[data-badge]:after {
   background: #fab633;
   color: #fff;
-  border-color: #C89028;
+  border-color: #c89028;
 }
 .badge.danger[data-badge]:after {
   background: #fb4143;
   color: #fff;
-  border-color: #C83436;
+  border-color: #c83436;
 }
 .badge.light[data-badge]:after {
   background: #f6f9fc;
   color: #000;
-  border-color: #C4C7C9;
+  border-color: #c4c7c9;
 }
 
 .badge.right[data-badge]:after {

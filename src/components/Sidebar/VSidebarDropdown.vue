@@ -14,7 +14,11 @@
       name="sbTree"
       @click="dropdownClicked = !dropdownClicked"
     />
-    <label v-bind="$attrs" :for="id" class="tree-item-header ml-0 u-flex u-items-center pl-0">
+    <label
+      v-bind="$attrs"
+      :for="id"
+      class="tree-item-header ml-0 u-flex u-items-center pl-0"
+    >
       <svg
         v-if="showArrow && !dropdownClicked"
         style="width: 1.25rem; height: 1.25rem"
@@ -53,7 +57,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue-demi';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   inheritAttrs: false,

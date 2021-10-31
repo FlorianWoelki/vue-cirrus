@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VCheckbox.vue';
 import component1 from './VDatePicker.vue';
 import component2 from './VFormGroup.vue';

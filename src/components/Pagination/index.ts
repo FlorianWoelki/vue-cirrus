@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VPagination.vue';
 import component2 from './VPaginationItem.vue';
 

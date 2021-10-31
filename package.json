@@ -25,24 +25,18 @@
     "@vue/cli-plugin-eslint": "^4.3.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "^4.3.0",
-    "@vue/compiler-sfc": "^3.0.0-beta.1",
+    "@vue/compiler-sfc": "^3.2.20",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "cirrus-ui": "^0.6.0",
     "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^7.0.0-alpha.0",
+    "eslint-plugin-vue": "^8.0.3",
     "node-sass": "^4.13.1",
     "pre-commit": "^1.2.2",
     "sass-loader": "^7.1.0",
     "typescript": "~4.1.5",
-    "vue": "^3.0.11",
     "webpack-bundle-analyzer": "^3.6.0"
-  },
-  "peerDependencies": {
-    "cirrus-ui": "^0.6.0",
-    "@vue/composition-api": "^1.0.0-beta.1",
-    "vue": "^2.0.0 || >=3.0.4"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
@@ -74,6 +68,6 @@
     "attributes": "attributes.json"
   },
   "dependencies": {
-    "vue-demi": "^0.9.1"
+    "vue": "^3.2.20"
   }
 }

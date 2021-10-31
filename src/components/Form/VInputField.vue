@@ -27,8 +27,11 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { computed, defineComponent } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({
@@ -46,18 +49,18 @@ export default defineComponent({
   },
   setup(props) {
     const inputClasses = computed(() => [
-        props.size ? `input-${props.size}` : null,
-        {
-          ...withAnimationClasses(props).animationClasses,
-          ...withTooltipClasses(props).tooltipClasses,
-          select: props.select,
-          'input-focused': props.focused,
-          'text-success input-success': props.success,
-          'text-danger input-error': props.error,
-          'input-contains-icon': props.icon,
-          'input-control--pilled': props.pilled,
-        },
-      ]);
+      props.size ? `input-${props.size}` : null,
+      {
+        ...withAnimationClasses(props).animationClasses,
+        ...withTooltipClasses(props).tooltipClasses,
+        select: props.select,
+        'input-focused': props.focused,
+        'text-success input-success': props.success,
+        'text-danger input-error': props.error,
+        'input-contains-icon': props.icon,
+        'input-control--pilled': props.pilled,
+      },
+    ]);
 
     return {
       inputClasses,

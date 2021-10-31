@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VFrame.vue';
 
 export default (app: App) => {

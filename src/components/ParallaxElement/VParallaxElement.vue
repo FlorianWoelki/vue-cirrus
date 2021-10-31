@@ -1,6 +1,9 @@
 <template>
   <div
-    :style="{ transform: `translateY(${offset()}px)`, marginBottom: `${offset() + margin}px` }"
+    :style="{
+      transform: `translateY(${offset()}px)`,
+      marginBottom: `${offset() + margin}px`
+    }"
     class="parallax-element"
   >
     <slot />
@@ -10,7 +13,7 @@
 <script lang="ts">
 import {
  defineComponent, onMounted, onUnmounted, ref,
-} from 'vue-demi';
+} from 'vue';
 
 export default defineComponent({
   props: {

@@ -1,17 +1,19 @@
 <template>
-  <div :class="[
-    'row',
-    {
-      'row--no-wrap': noWrap,
-      'level': level,
-    },
-  ]">
+  <div
+    :class="[
+      'row',
+      {
+        'row--no-wrap': noWrap,
+        level: level
+      }
+    ]"
+  >
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {

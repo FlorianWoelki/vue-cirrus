@@ -1,12 +1,7 @@
 <template>
   <div
     v-if="!isClosed"
-    :class="[
-      'toast',
-      colorClass,
-      tooltipClasses,
-      animationClasses,
-    ]"
+    :class="['toast', colorClass, tooltipClasses, animationClasses]"
     :data-tooltip="tooltipText"
   >
     <button
@@ -20,8 +15,11 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { computed, defineComponent, ref } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipProps, withTooltipClasses } from '../../mixins/tooltip';
 
 export default defineComponent({

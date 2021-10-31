@@ -1,18 +1,23 @@
 <template>
   <div class="tree-nav-body">
     <div class="tree-nav-header u-flex">
-      <a
-        href="#sidebar"
-        class="u-none-sm text-gray-600 ml-1"
-      >
-        <svg style="width: 1.5em; height: 1.5em;" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      <a href="#sidebar" class="u-none-sm text-gray-600 ml-1">
+        <svg
+          style="width: 1.5em; height: 1.5em;"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
       </a>
     </div>
 
-    <div
-      id="sidebar"
-      :class="['tree-nav', sidebarClass]"
-    >
+    <div id="sidebar" :class="['tree-nav', sidebarClass]">
       <div class="content">
         <slot name="title"></slot>
       </div>
@@ -23,18 +28,14 @@
       </div>
     </div>
 
-    <a
-      id="sidebar-close"
-      class="tree-nav-close"
-      href="#sidebar-close"
-    ></a>
+    <a id="sidebar-close" class="tree-nav-close" href="#sidebar-close"></a>
 
     <slot name="content"></slot>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -60,10 +61,10 @@ body.sidebar {
 }
 
 #sidebar .hover-effect.tree-item:hover {
-  -moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   color: #f03d4d;
   background-color: #efefef;
 }
@@ -75,7 +76,7 @@ body.sidebar {
   color: initial;
   padding: 0;
   font-weight: 600;
-  font-size: .95rem;
+  font-size: 0.95rem;
   color: #374054;
 }
 

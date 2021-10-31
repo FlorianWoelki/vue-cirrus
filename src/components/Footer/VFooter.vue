@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -32,6 +32,6 @@ footer ul a {
 }
 footer ul a li:hover {
   color: #fff;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 </style>

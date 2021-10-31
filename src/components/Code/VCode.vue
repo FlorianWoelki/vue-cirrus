@@ -10,7 +10,7 @@
 <script lang="ts">
 import {
  computed, defineComponent, onMounted, ref,
-} from 'vue-demi';
+} from 'vue';
 import javascript from './javascript';
 import html from './html';
 import css from './css';
@@ -36,7 +36,10 @@ export default defineComponent({
     const replaceWithColoredCode = (codeElements: any, lang: any): any => {
       let newColoredElements = codeElements;
       Object.keys(lang).forEach((key) => {
-        newColoredElements = newColoredElements.replace(lang[key].exp, `<span class="${lang[key].class}">$&</span>`);
+        newColoredElements = newColoredElements.replace(
+          lang[key].exp,
+          `<span class="${lang[key].class}">$&</span>`,
+        );
       });
       return newColoredElements;
     };
@@ -46,9 +49,15 @@ export default defineComponent({
 
       if (props.lang.toLowerCase() === 'javascript') {
         result = replaceWithColoredCode(codeElements, javascript);
-      } else if (props.lang.toLowerCase() === 'html' || props.lang.toLowerCase() === 'vue-demi') {
+      } else if (
+        props.lang.toLowerCase() === 'html'
+        || props.lang.toLowerCase() === 'vue'
+      ) {
         result = codeElements.replace('<xmp>', '').replace('</xmp>', '');
-        result = codeElements.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&lt;br&gt;/g, '<br />');
+        result = codeElements
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/&lt;br&gt;/g, '<br />');
         result = replaceWithColoredCode(result, html);
       } else if (props.lang.toLowerCase() === 'css') {
         result = replaceWithColoredCode(codeElements, css);
@@ -64,12 +73,14 @@ export default defineComponent({
         return;
       }
 
-      el.value.getElementsByTagName('code')[0].innerHTML = colorizeValue(el.value.getElementsByTagName('code')[0].innerHTML);
+      el.value.getElementsByTagName('code')[0].innerHTML = colorizeValue(
+        el.value.getElementsByTagName('code')[0].innerHTML,
+      );
     });
 
     const classes = computed(() => ({
-        dark: props.dark,
-      }));
+      dark: props.dark,
+    }));
 
     return {
       classes,
@@ -80,7 +91,9 @@ export default defineComponent({
 
   watch: {
     value(newVal) {
-      this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(newVal);
+      this.$el.getElementsByTagName('code')[0].innerHTML = this.colorizeValue(
+        newVal,
+      );
     },
   },
 });
@@ -131,18 +144,18 @@ code.dark .special-js-glob {
   font-weight: bold;
 }
 
-code .special-comment{
+code .special-comment {
   color: #63a35c;
 }
 code .special-js-meth {
-  color: #E46D8A;
+  color: #e46d8a;
 }
 
 code .special-html {
   color: #9b901a;
 }
 code.dark .special-html {
-  color: #E4D95F;
+  color: #e4d95f;
 }
 
 code .special-attributes {

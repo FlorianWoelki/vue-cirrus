@@ -1,12 +1,14 @@
 <template>
-  <div :class="[
-    'header u-unselectable header-animated',
-    {
-      'header-fixed': fixed,
-      'header-dark': dark,
-      'header-clear': clear,
-    },
-  ]">
+  <div
+    :class="[
+      'header u-unselectable header-animated',
+      {
+        'header-fixed': fixed,
+        'header-dark': dark,
+        'header-clear': clear
+      }
+    ]"
+  >
     <div class="header-brand">
       <div class="nav-item no-hover">
         <slot name="brandTitle"></slot>
@@ -24,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue-demi';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   emits: ['open-mobile'],

@@ -5,7 +5,7 @@
       'snackbar',
       animationClasses,
       color ? `${color}-snackbar` : null,
-      position ? getPosition : null,
+      position ? getPosition : null
     ]"
   >
     <slot></slot>
@@ -15,8 +15,11 @@
 <script lang="ts">
 import {
  ref, defineComponent, computed, watch,
-} from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+} from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 
 export default defineComponent({
   props: {
@@ -92,37 +95,37 @@ export default defineComponent({
 .snackbar.info-snackbar {
   background: #2972fa;
   color: #fff;
-  border-color: #205BC8;
+  border-color: #205bc8;
 }
 .snackbar.link-snackbar {
   background: #5e5cc7;
   color: #fff;
-  border-color: #4B499F;
+  border-color: #4b499f;
 }
 .snackbar.dark-snackbar {
   background: #363636;
   color: #fff;
-  border-color: #2B2B2B;
+  border-color: #2b2b2b;
 }
 .snackbar.success-snackbar {
   background: #0dd157;
   color: #fff;
-  border-color: #0AA746;
+  border-color: #0aa746;
 }
 .snackbar.warning-snackbar {
   background: #fab633;
   color: #fff;
-  border-color: #C89028;
+  border-color: #c89028;
 }
 .snackbar.danger-snackbar {
   background: #fb4143;
   color: #fff;
-  border-color: #C83436;
+  border-color: #c83436;
 }
 .snackbar.light-snackbar {
   background: #f6f9fc;
   color: #000;
-  border-color: #C4C7C9;
+  border-color: #c4c7c9;
 }
 
 .snackbar.top-center {
@@ -172,38 +175,86 @@ export default defineComponent({
 }
 
 @-webkit-keyframes fadeinTop {
-  from {top: 0; opacity: 0;}
-  to {top: 15px; opacity: 1;}
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 15px;
+    opacity: 1;
+  }
 }
 @keyframes fadeinTop {
-  from {top: 0; opacity: 0;}
-  to {top: 15px; opacity: 1;}
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 15px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeoutTop {
-  from {top: 15px; opacity: 1;}
-  to {top: 0; opacity: 0;}
+  from {
+    top: 15px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }
 @keyframes fadeoutTop {
-  from {top: 15px; opacity: 1;}
-  to {top: 0; opacity: 0;}
+  from {
+    top: 15px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fadeinBottom {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 @keyframes fadeinBottom {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeoutBottom {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 @keyframes fadeoutBottom {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 </style>

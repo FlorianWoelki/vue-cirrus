@@ -4,24 +4,27 @@
       :class="[
         {
           'divider-short': short,
-          'divider--v': vertical,
-        },
+          'divider--v': vertical
+        }
       ]"
       :style="{ height: '100%' }"
       :data-content="content"
     ></div>
   </div>
-  <div v-else :class="[
-    'divider',
-    {
-      'divider-short': short,
-      'divider--v': vertical,
-    },
-  ]"></div>
+  <div
+    v-else
+    :class="[
+      'divider',
+      {
+        'divider-short': short,
+        'divider--v': vertical
+      }
+    ]"
+  ></div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {

@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VTile.vue';
 import component2 from './VTileContent.vue';
 import component3 from './VTileButtons.vue';

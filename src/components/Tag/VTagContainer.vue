@@ -1,20 +1,25 @@
 <template>
-  <div :class="[
-    tooltipClasses,
-    animationClasses,
-    'tag-container',
-    {
-      'group-tags': grouped,
-      'tag-container-rounded': rounded,
-    },
-  ]">
+  <div
+    :class="[
+      tooltipClasses,
+      animationClasses,
+      'tag-container',
+      {
+        'group-tags': grouped,
+        'tag-container-rounded': rounded
+      }
+    ]"
+  >
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { defineComponent } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({

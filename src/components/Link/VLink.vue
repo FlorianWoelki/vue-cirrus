@@ -1,6 +1,12 @@
 <template>
   <span
-    :class="animation === 'square' ? 'usquare' : animation === 'dSquare' ? 'usquare delay' : null"
+    :class="
+      animation === 'square'
+        ? 'usquare'
+        : animation === 'dSquare'
+        ? 'usquare delay'
+        : null
+    "
   >
     <a
       v-bind="$attrs"
@@ -20,8 +26,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { defineComponent, ref } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({
@@ -33,9 +42,18 @@ export default defineComponent({
     animation: {
       type: String,
       default: null,
-      validator: (value: string) => ['ltr', 'rtl', 'c', 'oltr', 'ortl', 'oc', 'olr', 'orl', 'square', 'dSquare'].indexOf(
-        value,
-      ) !== -1,
+      validator: (value: string) => [
+          'ltr',
+          'rtl',
+          'c',
+          'oltr',
+          'ortl',
+          'oc',
+          'olr',
+          'orl',
+          'square',
+          'dSquare',
+        ].indexOf(value) !== -1,
     },
   },
   setup(props) {
@@ -59,8 +77,7 @@ export default defineComponent({
     };
   },
   data() {
-    return {
-    };
+    return {};
   },
 });
 </script>

@@ -6,8 +6,8 @@
       'hero-img',
       {
         'parallax-img': !disableParallax,
-        'fullscreen': fullscreen,
-      },
+        fullscreen: fullscreen
+      }
     ]"
     :style="styleImage"
   >
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue-demi';
+import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -29,9 +29,11 @@ export default defineComponent({
     disableParallax: Boolean,
   },
   setup(props) {
-    const styleImage = computed(() => (props.src != null ? {
-        backgroundImage: `url(${props.src})`,
-      } : {}));
+    const styleImage = computed(() => (props.src != null
+        ? {
+            backgroundImage: `url(${props.src})`,
+          }
+        : {}));
 
     return {
       styleImage,

@@ -6,8 +6,8 @@
       'list-dropdown',
       {
         'dropdown-right': right,
-        'dropdown-left': left,
-      },
+        'dropdown-left': left
+      }
     ]"
     :data-tooltip="tooltipText"
   >
@@ -21,7 +21,7 @@
 <script lang="ts">
 import { withAnimationClasses, withAnimationProps } from '@/mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '@/mixins/tooltip';
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {

@@ -1,19 +1,13 @@
 <template>
   <div v-if="!animated" class="card-container">
-    <div
-      class="card-image"
-      :style="`background-image: url(${image})`"
-    ></div>
+    <div class="card-image" :style="`background-image: url(${image})`"></div>
     <div class="title-container">
       <slot />
     </div>
   </div>
   <div v-else>
     <div class="card-container">
-      <div
-        class="card-image"
-        :style="`background-image: url(${image})`"
-      ></div>
+      <div class="card-image" :style="`background-image: url(${image})`"></div>
     </div>
     <div class="mobile-title">
       <div class="content">
@@ -28,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   inject: ['animated'],

@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VNavbar.vue';
 import component2 from './VNavbarItem.vue';
 import component3 from './VNavDropdown.vue';

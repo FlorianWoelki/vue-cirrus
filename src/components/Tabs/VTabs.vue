@@ -1,10 +1,12 @@
 <template>
-  <div :class="[
-    'tab-container',
-    size ? `tabs-${size}` : null,
-    mode ? `tabs-${mode}` : null,
-    position ? `tabs-${position}` : null,
-  ]">
+  <div
+    :class="[
+      'tab-container',
+      size ? `tabs-${size}` : null,
+      mode ? `tabs-${mode}` : null,
+      position ? `tabs-${position}` : null
+    ]"
+  >
     <ul>
       <slot></slot>
     </ul>
@@ -12,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {

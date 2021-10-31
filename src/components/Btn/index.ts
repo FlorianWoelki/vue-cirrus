@@ -1,4 +1,4 @@
-import { App } from 'vue-demi';
+import { App } from 'vue';
 import component from './VBtn.vue';
 import component1 from './VBtnGroup.vue';
 

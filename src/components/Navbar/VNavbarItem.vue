@@ -17,8 +17,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
-import { withAnimationClasses, withAnimationProps } from '../../mixins/animations';
+import { defineComponent } from 'vue';
+import {
+  withAnimationClasses,
+  withAnimationProps,
+} from '../../mixins/animations';
 import { withTooltipClasses, withTooltipProps } from '../../mixins/tooltip';
 
 export default defineComponent({

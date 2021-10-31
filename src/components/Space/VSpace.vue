@@ -1,16 +1,17 @@
 <template>
-  <div :class="[
-    'space',
-    {
-      'large': large && !xlarge,
-      'xlarge': xlarge,
-    },
-  ]">
-  </div>
+  <div
+    :class="[
+      'space',
+      {
+        large: large && !xlarge,
+        xlarge: xlarge
+      }
+    ]"
+  ></div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {

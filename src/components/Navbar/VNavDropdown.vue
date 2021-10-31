@@ -5,8 +5,8 @@
       'nav-item',
       'has-sub',
       {
-        'toggle-hover': !clickable,
-      },
+        'toggle-hover': !clickable
+      }
     ]"
     @click="handleDropdownClick"
   >
@@ -18,8 +18,8 @@
       :class="[
         'dropdown-menu',
         {
-          'dropdown-animated': animated,
-        },
+          'dropdown-animated': animated
+        }
       ]"
       role="menu"
     >
@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 let hasClicked = false;
 

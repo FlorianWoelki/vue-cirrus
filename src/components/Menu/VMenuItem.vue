@@ -1,10 +1,12 @@
 <template>
-  <li :class="[
-    'menu-item',
-    {
-      'selected': selected,
-    },
-  ]">
+  <li
+    :class="[
+      'menu-item',
+      {
+        selected: selected
+      }
+    ]"
+  >
     <div v-if="$slots['addon']" class="menu-addon">
       <slot name="addon"></slot>
     </div>
@@ -13,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
