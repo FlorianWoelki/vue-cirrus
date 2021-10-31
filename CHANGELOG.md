@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.1] - 2021-10-31
+
+### ⚡️ Changed
+- Drop support for Vue 3
+- Fix issue with `v-model` in input field
+
+
 ## [0.7.01] - 2021-05-29
 
 ### ⚡️ Changed

@@ -1,6 +1,6 @@
 {
   "name": "vue-cirrus",
-  "version": "0.7.02",
+  "version": "0.7.1",
   "private": false,
   "description": "A Vue components library for the Cirrus CSS framework.",
   "author": "Florian Woelki",
