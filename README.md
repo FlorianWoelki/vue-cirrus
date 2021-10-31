@@ -15,16 +15,16 @@ You can build your amazing applications with the Power of Vue, Cirrus and a mass
 
 This framework uses the <a href="https://github.com/Spiderpig86/Cirrus">Cirrus CSS framework</a> for better styling and it is an adaption of vue components.
 
-The UI library mainly supports Vue 3, but uses Vue Demi under the hood to translate the code to a Vue 2 code base as well. Vue 2 support is still experimental. 
+The UI library only supports Vue 3. For Vue 2, please use an older version of Vue Cirrus.
 
 ## 🔨 Quick Install
 
 1. Install with npm/yarn
 
 ```shell
-npm install vue-cirrus@next
+npm install vue-cirrus@latest
 # OR
-yarn add vue-cirrus@next
+yarn add vue-cirrus@latest
 ```
 
 2. Include the following in your public.html file
