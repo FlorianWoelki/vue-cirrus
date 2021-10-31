@@ -1,4 +1,4 @@
-import { App, createApp } from 'vue';
+import { App } from 'vue';
 
 const install = (app: App) => {
   const requireComponent = require.context(
@@ -20,10 +20,6 @@ const install = (app: App) => {
     app.component(componentName, componentConfig.default || componentConfig);
   });
 };
-/* eslint-disable */ /* Remove this line, whenever you are ready to commit */ import AppComp from './App.vue';
-createApp(AppComp)
-  .use(install)
-  .mount('#app');
 
 export default install;
 
